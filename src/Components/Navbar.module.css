@@ -1,0 +1,32 @@
+nav {
+  height: 70px;
+  border: 1px solid black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  padding: 0 30px;
+}
+
+.profilLogInDetails {
+  display: flex;
+  align-items: center;
+}
+
+.profileAvatar {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 20px;
+}
