@@ -9,7 +9,7 @@ function FeaturesContainer() {
         features
       </div>
       <div className="featureLink">
-        <a href="">Link</a>
+        <a href="/slip">Link</a>
       </div>
     </section>
   );
