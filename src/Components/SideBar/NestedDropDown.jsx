@@ -17,8 +17,8 @@ function NestedDropdown({ title, subjects }) {
       {isOpen && (
         <div className="nested-menu">
           {subjects.map((subject, index) => (
-            <a key={index} href="#">
-              {subject}
+            <a key={index} href={subject.link}>
+              {subject.name}
             </a>
           ))}
         </div>
