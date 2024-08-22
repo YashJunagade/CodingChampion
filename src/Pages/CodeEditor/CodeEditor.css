@@ -1,10 +1,18 @@
+/* Ensure the container takes full height */
+.codeEditor {
+  height: 100vh; /* Full viewport height */
+}
+
+.splitContainer {
+  flex: 1; /* Allow SplitPane to take up remaining space */
+}
+
 .panel {
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
 .resizer {
-  background: #b7b7b7;
-  width: 10px;
-  cursor: col-resize;
+  background: #ccc;
+  width: 8px;
 }
