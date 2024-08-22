@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />}></Route>
         <Route path="/labbook" element={<Labbook />} />
+        <Route path="/codeEditor" element={<CodeEditor />} />
       </Routes>
     </Router>
   );
