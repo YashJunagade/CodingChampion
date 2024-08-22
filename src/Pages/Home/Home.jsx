@@ -7,7 +7,9 @@ function Home() {
     <>
       <Navbar />
       <div className="heroContainer">
-        <h1>what we provide you in this platform happy to help you</h1>
+        <h1 className="text-xl font-bold text-red-500">
+          what we provide you in this platform happy to help you
+        </h1>
         <div className="containers">
           <FeaturesContainer />
           <FeaturesContainer />
