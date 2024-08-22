@@ -4,6 +4,7 @@ import Labbook from "./Pages/Labbook/Labbook";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import SlipList from "../Solutions/Slips Solutions/SlipList";
+import CodeEditor from "./Pages/CodeEditor/CodeEditor";
 
 const App = () => {
   return (
