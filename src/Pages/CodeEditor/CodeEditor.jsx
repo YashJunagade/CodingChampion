@@ -1,27 +1,44 @@
-import SplitPane from "react-split-pane";
-import "./CodeEditor.css";
+import React, { useRef, useState } from "react";
 import Navbar from "../Home/Navbar";
+import "./CodeEditor.css";
 
-function CodeEditor() {
+const CodeEditor = () => {
+  const [width, setWidth] = useState(600);
+  const panelRef = useRef(null);
+
+  const handleMouseDown = (e) => {
+    e.preventDefault();
+    document.addEventListener("mousemove", handleMouseMove);
+    document.addEventListener("mouseup", handleMouseUp);
+  };
+
+  const handleMouseMove = (e) => {
+    setWidth(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    document.removeEventListener("mousemove", handleMouseMove);
+    document.removeEventListener("mouseup", handleMouseUp);
+  };
   return (
-    <div className="codeEditor">
-      <Navbar />
-      <SplitPane
-        className="splitContainer"
-        split="vertical"
-        resizerClassName="resizer"
-        defaultSize="40%" // Set the default size of the first panel to 40%
-        minSize={50}
-        onChange={(size) => localStorage.setItem("splitPos", size)}
-      >
-        <div className="panel panel1">this is elon musk</div>
-        <div className="panel panel2">
+    <div className="container">
+      <Navbar></Navbar>
+      <div className="codeEditor">
+        <div className="panel" style={{ width: width }}>
+          <h2>Panel 1</h2>
+          <p>Content for panel 1</p>
+        </div>
+        <div className="resizer" onMouseDown={handleMouseDown} />
+        <div
+          className="panel"
+          style={{ width: `calc(100% - ${width}px - 10px)` }}
+        >
           <h2>Panel 2</h2>
           <p>Content for panel 2</p>
         </div>
-      </SplitPane>
+      </div>
     </div>
   );
-}
+};
 
 export default CodeEditor;

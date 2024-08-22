@@ -1,18 +1,25 @@
-/* Ensure the container takes full height */
-.codeEditor {
-  height: 100vh; /* Full viewport height */
-}
-
-.splitContainer {
-  flex: 1; /* Allow SplitPane to take up remaining space */
+/* ResizablePanels.css */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 .panel {
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .resizer {
-  background: #ccc;
-  width: 8px;
+  background: #ddd;
+  width: 10px;
+  cursor: col-resize;
+  height: 100%;
+}
+
+.codeEditor {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
