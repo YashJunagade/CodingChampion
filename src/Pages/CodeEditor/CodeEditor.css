@@ -1,0 +1,10 @@
+.panel {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.resizer {
+  background: #b7b7b7;
+  width: 10px;
+  cursor: col-resize;
+}
