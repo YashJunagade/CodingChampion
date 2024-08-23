@@ -1,19 +1,73 @@
 import React, { useState } from "react";
 import googleLogo from "../../../assets/google.png";
+import {
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { auth, db } from "../../../config/firebase";
+import { setDoc, doc } from "firebase/firestore";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle registration logic here
-    console.log("First Name:", firstName);
-    console.log("Last Name:", lastName);
-    console.log("Email:", email);
-    console.log("Password:", password);
+    setLoading(true);
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      const user = auth.currentUser;
+      if (user) {
+        await setDoc(doc(db, "Users", user.uid), {
+          email: user.email,
+          fName: firstName,
+          lName: lastName,
+        });
+      }
+      toast.success("User Registered Successfully!! \n Now logging you in...", {
+        position: "bottom-right",
+      });
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+      toast.error(err.message, {
+        position: "bottom-center",
+      });
+      setLoading(false);
+    }
+  };
+  const handleSigninWithGoogle = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      if (user) {
+        await setDoc(doc(db, "Users", user.uid), {
+          email: user.email,
+          fName: user.displayName.split(" ")[0],
+          lName: user.displayName.split(" ")[1] || "",
+        });
+      }
+      toast.success("User Registered Successfully!! \n Now logging you in...", {
+        position: "bottom-right",
+      });
+      navigate("/");
+    } catch (err) {
+      console.error(err);
+      toast.error(err.message, {
+        position: "bottom-center",
+      });
+      setLoading(false);
+    }
   };
 
   return (
@@ -82,7 +136,7 @@ function Register() {
         </div>
 
         <button type="submit" style={styles.submitButton}>
-          Sign Up
+          {loading ? "Sign up..." : "Sign Up"}
         </button>
 
         <div style={styles.loginLink}>
@@ -91,7 +145,7 @@ function Register() {
 
         <div style={styles.orContinue}>--Or continue with--</div>
 
-        <button style={styles.googleButton}>
+        <button style={styles.googleButton} onClick={handleSigninWithGoogle}>
           <img src={googleLogo} alt="Google logo" style={styles.googleIcon} />
         </button>
       </form>
