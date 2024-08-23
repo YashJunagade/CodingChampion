@@ -1,18 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../src/Components/Navbar/Navbar";
 import SideBar from "../../src/Components/SideBar/SideBar";
-import SlipData from "./SlipData";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  getDoc,
+  doc,
+} from "firebase/firestore";
+import { db } from "../../src/config/firebase";
 import "./SlipList.css";
+import { uploadData } from "./SlipData";
 
 const SlipList = () => {
   const { subjectId } = useParams();
-  const subject = SlipData[subjectId];
+  const [subject, setSubject] = useState(null);
   const [filterMarks, setFilterMarks] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
+  useEffect(() => {
+    const fetchSubject = async () => {
+      const subjectDoc = await getDoc(doc(db, "slipSubjects", subjectId));
+      if (subjectDoc.exists()) {
+        setSubject(subjectDoc.data());
+      } else {
+        console.log("No such document!");
+      }
+    };
+
+    fetchSubject();
+  }, [subjectId]);
+
   if (!subject) {
-    return <div>Subject not found</div>;
+    return <div>Loading...</div>;
   }
 
   const filteredAndSortedSlips = subject.slips
@@ -62,7 +84,9 @@ const SlipList = () => {
                 {slip.questions.map((question, qIndex) => (
                   <li key={qIndex} className="question-item">
                     <Link
-                      to={`/${subjectId}/slipList/${slip.slipId}/${question.questionId}`}
+                      to={
+                        "/${subjectId}/slipList/${slip.slipId}/${question.questionId}"
+                      }
                       className="question-link"
                     >
                       {<p>{question.text}</p>}
