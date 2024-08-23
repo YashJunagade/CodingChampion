@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import FeaturesContainer from "./FeaturesContainer";
-import "./Home.css";
 
 function Home() {
   return (
@@ -10,7 +9,7 @@ function Home() {
         <h1 className="text-xl font-bold text-red-500">
           what we provide you in this platform happy to help you
         </h1>
-        <div className="containers">
+        <div className="containers flex flex-col md:grid md:grid-cols-2">
           <FeaturesContainer />
           <FeaturesContainer />
           <FeaturesContainer />
