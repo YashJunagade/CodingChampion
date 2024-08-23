@@ -40,10 +40,10 @@ function Menu() {
               {visibleSections.semI && (
                 <div className="subjects">
                   <div>
-                    <Link to="/0/slipList">C Programming </Link>
+                    <Link to="/C Programming/slipList">C Programming </Link>
                   </div>
                   <div>
-                    <Link to="/1/slipList">
+                    <Link to="/DBMS/slipList">
                       DataBase Management System (DBMS)
                     </Link>
                   </div>
@@ -61,9 +61,9 @@ function Menu() {
               {visibleSections.semII && (
                 <div className="subjects">
                   <div>
-                    <Link to="/2/slipList">Web Technology </Link>
+                    <Link to="/Web Technology/slipList">Web Technology </Link>
                   </div>
-                  <Link to="/3/slipList">Relational DataBase (RDBMS) </Link>
+                  <Link to="/RDBMS/slipList">Relational DataBase (RDBMS) </Link>
                 </div>
               )}
             </div>
@@ -85,10 +85,18 @@ function Menu() {
               Sem - III
               {visibleSections.semIII && (
                 <div className="subjects">
-                  <div>Data Structure</div>
-                  <div>Big Data</div>
-                  <div>Php</div>
-                  <div>AngularJS</div>
+                  <div>
+                    <Link to="/Data Structure/slipList">Data Structure</Link>
+                  </div>
+                  <div>
+                    <Link to="/Big Data/slipList">Big Data</Link>
+                  </div>
+                  <div>
+                    <Link to="/Php/slipList">Php</Link>
+                  </div>
+                  <div>
+                    <Link to="/Angular JS/slipList">AngularJS</Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -102,9 +110,15 @@ function Menu() {
               Sem - IV
               {visibleSections.semIV && (
                 <div className="subjects">
-                  <div>CPP</div>
-                  <div>Advace Php</div>
-                  <div>Node JS</div>
+                  <div>
+                    <Link to="/CPP/slipList">CPP</Link>
+                  </div>
+                  <div>
+                    <Link to="/Advace Php/slipList">Advace Php</Link>
+                  </div>
+                  <div>
+                    <Link to="/Node JS/slipList">Node JS</Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -126,9 +140,15 @@ function Menu() {
               Sem - V
               {visibleSections.semV && (
                 <div className="subjects">
-                  <div>Core Java</div>
-                  <div>Python</div>
-                  <div>MongoDB</div>
+                  <div>
+                    <Link to="/Core Java/slipList">Core Java</Link>
+                  </div>
+                  <div>
+                    <Link to="/Python/slipList">Python</Link>
+                  </div>
+                  <div>
+                    <Link to="/MongoDB/slipList">MongoDB</Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -142,9 +162,19 @@ function Menu() {
               Sem - VI
               {visibleSections.semVI && (
                 <div className="subjects">
-                  <div>Advance Java</div>
-                  <div>Android Programming</div>
-                  <div>dot Net Framework</div>
+                  <div>
+                    <Link to="/Advance Java/slipList">Advance Java</Link>
+                  </div>
+                  <div>
+                    <Link to="/Android Programming/slipList">
+                      Android Programming
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/Dot Net Framework/slipList">
+                      Dot Net Framework
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
