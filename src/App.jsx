@@ -6,6 +6,8 @@ import "./App.css";
 import "./index.css";
 import SlipList from "../Solutions/Slips Solutions/SlipList";
 import Solution from "./Pages/SolutionPage/Solution";
+import Login from "./Pages/Auth/LogIn/Login";
+import Register from "./Pages/Auth/Register/Register";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/:subjectId/slipList" element={<SlipList />}></Route>
         <Route path="/labbook" element={<Labbook />} />
         <Route path="/codeEditor" element={<Solution />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
