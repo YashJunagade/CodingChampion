@@ -23,7 +23,7 @@ function Navbar() {
       </div>
       <div className={style.profilLogInDetails}>
         <li>
-          <a href="">Login</a>
+          <a href="/login">Login</a>
         </li>
         <div className={style.profileAvatar}></div>
       </div>
