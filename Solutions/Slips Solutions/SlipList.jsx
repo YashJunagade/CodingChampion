@@ -87,7 +87,12 @@ const SlipList = () => {
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
                       className="question-link"
                     >
-                      {<p>{question.text}</p>}
+                      <div
+                        className="question-box"
+                        dangerouslySetInnerHTML={{
+                          __html: question.text,
+                        }}
+                      />
                       <span className="marks-badge">
                         {question.marks} Marks
                       </span>

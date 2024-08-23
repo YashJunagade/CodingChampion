@@ -91,3 +91,12 @@ h1 {
   border-radius: 20px;
   font-size: 0.875rem;
 }
+
+.question-box {
+  width: 900px;
+}
+
+span .qTag {
+  font-size: 20px;
+  font-weight: 900;
+}
