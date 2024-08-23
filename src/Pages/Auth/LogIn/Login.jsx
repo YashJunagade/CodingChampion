@@ -1,15 +1,50 @@
 import React, { useState } from "react";
 import googleLogo from "../../../assets/google.png";
+import {
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { auth } from "../../../config/firebase";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
+    setLoading(true);
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      toast.success("User Logged in Successfully", {
+        position: "bottom-right",
+      });
+      navigate("/");
+    } catch (err) {
+      toast.error(err.message, { position: "bottom-center" });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleSignIn = async () => {
+    setLoading(true);
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+      toast.success("User Logged in Successfully with Google", {
+        position: "top-center",
+      });
+      navigate("/");
+    } catch (err) {
+      toast.error(err.message, { position: "bottom-center" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -47,8 +82,8 @@ function Login() {
           />
         </div>
 
-        <button type="submit" style={styles.submitButton}>
-          Submit
+        <button type="submit" style={styles.submitButton} disabled={loading}>
+          {loading ? "Logging in..." : "Submit"}
         </button>
 
         <div style={styles.registerLink}>
@@ -57,7 +92,12 @@ function Login() {
 
         <div style={styles.orContinue}>--Or continue with--</div>
 
-        <button style={styles.googleButton}>
+        <button
+          type="button"
+          style={styles.googleButton}
+          onClick={handleGoogleSignIn}
+          disabled={loading}
+        >
           <img src={googleLogo} alt="Google logo" style={styles.googleIcon} />
         </button>
       </form>
