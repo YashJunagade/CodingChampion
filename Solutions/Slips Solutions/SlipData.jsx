@@ -631,6 +631,20 @@ const SlipData = [
   },
 ];
 
-export default SlipData;
-
 /* 0-c, 1-dbms, 2-web tech, 3-rdbms 4-data structure, 5-bigdata, 6-php, 7-angular js, 8-cpp, 9-advance php, 10-nodejs, 11-corejava, 12-python, 13-mongodb, 14-advance java, 15-android programming, 16-dotnot framework   */
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "../../src/config/firebase";
+
+export async function uploadData() {
+  const subjectsCollection = collection(db, "slipSubjects");
+
+  for (const subject of SlipData) {
+    const subjectDoc = doc(subjectsCollection, subject.subject);
+    await setDoc(subjectDoc, {
+      subject: subject.subject,
+      slips: subject.slips,
+    });
+  }
+
+  console.log("Data uploaded successfully");
+}
