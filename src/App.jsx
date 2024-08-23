@@ -25,10 +25,10 @@ const App = () => {
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />} />
         <Route path="/labbook" element={<Labbook />} />
-        <Route path="/codeEditor" element={<Solution />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<UserData />} />
+        <Route path="/:subjectId/:slipId/:questionId" element={<Solution />} />
       </Routes>
     </Router>
   );
