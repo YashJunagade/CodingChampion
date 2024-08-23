@@ -84,9 +84,7 @@ const SlipList = () => {
                 {slip.questions.map((question, qIndex) => (
                   <li key={qIndex} className="question-item">
                     <Link
-                      to={
-                        "/${subjectId}/slipList/${slip.slipId}/${question.questionId}"
-                      }
+                      to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
                       className="question-link"
                     >
                       {<p>{question.text}</p>}
