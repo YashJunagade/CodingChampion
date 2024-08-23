@@ -25,7 +25,30 @@ function Login() {
       });
       navigate("/");
     } catch (err) {
-      toast.error(err.message, { position: "bottom-center" });
+      switch (err.code) {
+        case "auth/user-not-found":
+          toast.error("No user found with this email. Please register first.", {
+            position: "bottom-center",
+          });
+          break;
+        case "auth/wrong-password":
+          toast.error("Incorrect password. Please try again.", {
+            position: "bottom-center",
+          });
+          break;
+        case "auth/invalid-email":
+          toast.error("Invalid email format. Please check your email.", {
+            position: "bottom-center",
+          });
+          break;
+        case "auth/invalid-credential":
+          toast.error("Invalid credentials. Please try again.", {
+            position: "bottom-center",
+          });
+          break;
+        default:
+          toast.error(err.message, { position: "bottom-center" });
+      }
     } finally {
       setLoading(false);
     }
@@ -82,8 +105,12 @@ function Login() {
           />
         </div>
 
-        <button type="submit" style={styles.submitButton} disabled={loading}>
-          {loading ? "Logging in..." : "Submit"}
+        <button
+          type="submit"
+          style={styles.submitButton}
+          disabled={loading ? true : false}
+        >
+          {loading ? "Logging in..." : "Login"}
         </button>
 
         <div style={styles.registerLink}>
