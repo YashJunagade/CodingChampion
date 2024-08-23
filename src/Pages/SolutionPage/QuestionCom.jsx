@@ -1,128 +1,4 @@
-import { marked } from "marked";
-import DOMPurify from "dompurify";
-
-function QuestionCom() {
-  const question = `
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-
-# Markdown Previewer
-## This is a H2
-### This is a H3
-
-**Bold Text**  
-*Italic Text*  
-~~Strikethrough~~
-
-\`Inline code\`
-
-\`\`\`javascript
-// Code block
-function hello() {
-  return "Hello World!";
-}
-\`\`\`
-`;
-
+function QuestionCom({ slipId, questionId, text, marks }) {
   return (
     <div
       className="preview-container"
@@ -132,11 +8,10 @@ function hello() {
         padding: "10px",
       }}
     >
-      <div
-        dangerouslySetInnerHTML={{
-          __html: DOMPurify.sanitize(marked(question, { breaks: true })),
-        }}
-      ></div>
+      <div>Slip No : {slipId}</div>
+      <div>Question No : {questionId}</div>
+      <div>Q.{text}</div>
+      <div>{marks} marks</div>
     </div>
   );
 }
