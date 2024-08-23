@@ -1,11 +1,5 @@
 .sidebarSection {
   border-right: 1px solid black;
-  height: 100vh;
-  min-width: 300px;
-}
-
-.myProfile {
-  text-align: center;
-  padding: 40px 0;
-  border-bottom: 1px solid black;
+  height: 93vh;
+  min-width: 14rem;
 }
