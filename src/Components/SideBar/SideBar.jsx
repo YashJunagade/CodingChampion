@@ -10,7 +10,7 @@ function SideBar() {
         "First Year": [
           { name: "C Programming", link: "/C Programming/slipList" },
           { name: "DBMS", link: "/DBMS/slipList" },
-          { name: "Web Technology", link: "/Web Technology/slipList" },
+          { name: "Web Technology", link: "/Web Techonology/slipList" },
           { name: "RDBMS", link: "/RDBMS/slipList" },
         ],
         "Second Year": [
@@ -19,7 +19,7 @@ function SideBar() {
           { name: "Php", link: "/Php/slipList" },
           { name: "Angular JS", link: "/Angular JS/slipList" },
           { name: "CPP", link: "/CPP/slipList" },
-          { name: "Advance Php", link: "/Advace Php/slipList" },
+          { name: "Advance Php", link: "/Advance Php/slipList" },
           { name: "Node JS", link: "/Node JS/slipList" },
         ],
         "Third Year": [
