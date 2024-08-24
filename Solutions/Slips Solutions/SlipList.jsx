@@ -22,11 +22,15 @@ const SlipList = () => {
 
   useEffect(() => {
     const fetchSubject = async () => {
-      const subjectDoc = await getDoc(doc(db, "slipSubjects", subjectId));
-      if (subjectDoc.exists()) {
-        setSubject(subjectDoc.data());
-      } else {
-        console.log("No such document!");
+      try {
+        const subjectDoc = await getDoc(doc(db, "slipSubjects", subjectId));
+        if (subjectDoc.exists()) {
+          setSubject(subjectDoc.data());
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching document:", error);
       }
     };
 
@@ -53,6 +57,12 @@ const SlipList = () => {
       }
     });
 
+  const uniqueMarks = [
+    ...new Set(
+      subject.slips.flatMap((slip) => slip.questions.map((q) => q.marks))
+    ),
+  ];
+
   return (
     <div className="slip-list-container">
       <Navbar />
@@ -67,8 +77,11 @@ const SlipList = () => {
               className="filter-select"
             >
               <option value="">All Marks</option>
-              <option value="15">15 Marks</option>
-              <option value="25">25 Marks</option>
+              {uniqueMarks.map((mark, index) => (
+                <option key={index} value={mark}>
+                  {mark} marks
+                </option>
+              ))}
             </select>
             <button
               onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
@@ -90,7 +103,7 @@ const SlipList = () => {
                       <div
                         className="question-box"
                         dangerouslySetInnerHTML={{
-                          __html: question.text,
+                          __html: `Q. ${question.text}`,
                         }}
                       />
                       <span className="marks-badge">
