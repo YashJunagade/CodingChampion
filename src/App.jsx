@@ -16,6 +16,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import "./index.css";
 import UserData from "./store/UserData";
+import Roadmaps from "./Pages/RoadMaps/Roadmaps";
+import Dsa from "./Pages/DataStructure/Dsa";
 const App = () => {
   return (
     <Router>
@@ -28,6 +30,8 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<UserData />} />
+        <Route path="/roadmaps" element={<Roadmaps />} />
+        <Route path="/dsa" element={<Dsa />} />
         <Route path="/:subjectId/:slipId/:questionId" element={<Solution />} />
       </Routes>
     </Router>
