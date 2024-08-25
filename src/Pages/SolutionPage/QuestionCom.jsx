@@ -9,8 +9,11 @@ function QuestionCom({ slipId, questionId, text, marks }) {
       }}
     >
       <div>Slip No : {slipId}</div>
-      <div>Question No : {questionId}</div>
-      <div>Q.{text}</div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `Q. ${text}`,
+        }}
+      />
       <div>{marks} marks</div>
     </div>
   );
