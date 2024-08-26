@@ -1,6 +1,21 @@
-button {
-  padding: 10px 20px;
-  color: #007bff;
-  border-radius: 4px;
-  border: 1px solid #007bff;
+.btn {
+  background-color: #6a0dad; /* Deep purple background */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #7e2fd1; /* Slightly lighter purple on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.btn:disabled {
+  background-color: #ccc; /* Grey background when disabled */
+  cursor: not-allowed; /* Disabled cursor when disabled */
 }
