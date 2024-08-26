@@ -912,7 +912,7 @@ const SlipData = [
     language: "sql",
   },
   {
-    subject: "Web Techonology",
+    subject: "Web Technology",
     slips: [
       {
         slipId: 1,
