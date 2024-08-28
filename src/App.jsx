@@ -8,7 +8,6 @@ import Home from "./Pages/Home/Home";
 import Slip from "./Pages/Slip/Slip";
 import Labbook from "./Pages/Labbook/Labbook";
 import SlipList from "../Solutions/Slips Solutions/SlipList";
-import Solution from "./Pages/SolutionPage/Solution";
 import Login from "./Pages/Auth/LogIn/Login";
 import Register from "./Pages/Auth/Register/Register";
 import { ToastContainer } from "react-toastify";
@@ -18,6 +17,9 @@ import "./index.css";
 import UserData from "./store/UserData";
 import Roadmaps from "./Pages/RoadMaps/Roadmaps";
 import Dsa from "./Pages/DataStructure/Dsa";
+import LabList from "../Solutions/Labbook Solutions/LabList";
+import SlipSolution from "./Pages/SolutionPage/SlipSolution/SlipSolution";
+import LabSolution from "./Pages/SolutionPage/LabSolution/LabSolution";
 const App = () => {
   return (
     <Router>
@@ -26,13 +28,21 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />} />
+        <Route path="/:subjectId/labList" element={<LabList />} />
         <Route path="/labbook" element={<Labbook />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<UserData />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/dsa" element={<Dsa />} />
-        <Route path="/:subjectId/:slipId/:questionId" element={<Solution />} />
+        <Route
+          path="/:subjectId/:slipId/:questionId"
+          element={<SlipSolution />}
+        />
+        <Route
+          path="/:subjectId/:assignment/:set/:question"
+          element={<LabSolution />}
+        />
       </Routes>
     </Router>
   );
