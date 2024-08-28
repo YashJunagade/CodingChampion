@@ -12,7 +12,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../../src/config/firebase";
 import "./SlipList.css";
-import { uploadData } from "./SlipData";
+import { uploadSlipData } from "./SlipData";
 
 const SlipList = () => {
   const { subjectId } = useParams();
