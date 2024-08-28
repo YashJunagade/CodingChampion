@@ -9691,7 +9691,7 @@ while($row = mysqli_fetch_assoc($result)) {
 import { collection, doc, setDoc } from "firebase/firestore";
 import { db } from "../../src/config/firebase";
 
-export async function uploadData() {
+export async function uploadSlipData() {
   const subjectsCollection = collection(db, "slipSubjects");
 
   for (const subject of SlipData) {
