@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Menu.css";
 
 function Menu() {
@@ -38,8 +39,14 @@ function Menu() {
               Sem - I
               {visibleSections.semI && (
                 <div className="subjects">
-                  <div>C Programming</div>
-                  <div>Database Management System</div>
+                  <div>
+                    <Link to="/C Programming/LabList">C Programming </Link>
+                  </div>
+                  <div>
+                    <Link to="/DBMS/labList">
+                      DataBase Management System (DBMS)
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -53,8 +60,10 @@ function Menu() {
               Sem - II
               {visibleSections.semII && (
                 <div className="subjects">
-                  <div>Web Technology</div>
-                  <div>Relational Database</div>
+                  <div>
+                    <Link to="/Web Technology/labList">Web Technology</Link>
+                  </div>
+                  <Link to="RDBMS/labList">Relation Database</Link>
                 </div>
               )}
             </div>
@@ -76,10 +85,22 @@ function Menu() {
               Sem - III
               {visibleSections.semIII && (
                 <div className="subjects">
-                  <div>Data Structure</div>
-                  <div>Big Data</div>
-                  <div>Php</div>
-                  <div>AngularJS</div>
+                  <div>
+                    {" "}
+                    <Link to="Data Structure/labList">Data Structure</Link>
+                  </div>
+                  <div>
+                    {" "}
+                    <Link to="/Big Data/labList">Big Data</Link>
+                  </div>
+                  <div>
+                    {" "}
+                    <Link to="/Php/labList">Php</Link>
+                  </div>
+                  <div>
+                    {" "}
+                    <Link to="/Angular JS/labList">Angular JS</Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -93,9 +114,16 @@ function Menu() {
               Sem - IV
               {visibleSections.semIV && (
                 <div className="subjects">
-                  <div>CPP</div>
-                  <div>Advace Php</div>
-                  <div>Node JS</div>
+                  <div>
+                    <Link to="/CPP/labList">CPP</Link>
+                  </div>
+                  <div>
+                    {" "}
+                    <Link to="/Advance Php/labList">Advance Php</Link>
+                  </div>
+                  <div>
+                    <Link to="/Node JS/labList">Node JS</Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -117,9 +145,15 @@ function Menu() {
               Sem - V
               {visibleSections.semV && (
                 <div className="subjects">
-                  <div>Core Java</div>
-                  <div>Python</div>
-                  <div>MongoDB</div>
+                  <div>
+                    <Link to="/Core Java/labList">Core Java</Link>
+                  </div>
+                  <div>
+                    <Link to="/Python/labList">Python</Link>
+                  </div>
+                  <div>
+                    <Link to="/MongoDB/labList">MongoDB</Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -133,9 +167,19 @@ function Menu() {
               Sem - VI
               {visibleSections.semVI && (
                 <div className="subjects">
-                  <div>Advance Java</div>
-                  <div>Android Programming</div>
-                  <div>dot Net Framework</div>
+                  <div>
+                    <Link to="/Advance Java/labList">Advance Java</Link>
+                  </div>
+                  <div>
+                    <Link to="/Android Programming/labList">
+                      Android Programming
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/Dot Net Framework/labList">
+                      Dot Net Framework
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
