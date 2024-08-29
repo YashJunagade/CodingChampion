@@ -21,5 +21,5 @@ uploadData().then(() => console.log("Data upload complete"));
 
 //config with Prettier
 npm install --save-dev prettier
-npm husky-init; npm install
+npx husky-init; npm install
 npm install --save-dev lint-staged
