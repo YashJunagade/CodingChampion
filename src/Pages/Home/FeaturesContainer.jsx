@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
   return (
-    <div className="w-[60%] sm:w-[80%] lg:w-[70%] max-w-[380px] mx-auto">
+    <div className="w-[60%] sm:w-[90%] lg:w-[70%] max-w-[380px] mx-auto">
       <div className=" flex flex-col min-h-[300px] rounded-custom shadow-even-shadow  hover:shadow-accent  hover:shadow-even-shadow transition duration-300  ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
         <div className=" rounded-t-custom bg-accent">
           <img
