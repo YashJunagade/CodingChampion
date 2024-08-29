@@ -1,19 +1,19 @@
 /* eslint-disable no-useless-escape */
 const SlipData = [
   {
-    subject: 'C Programming',
+    subject: "C Programming",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept dimensions of a cylinder and display the surface area and volume of the cylinder.',
+            text: "Write a C program to accept dimensions of a cylinder and display the surface area and volume of the cylinder.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a structure employee (id, name, salary). Accept details of n employees and write a menu-driven program to perform the following operations:<br>a) Search employee by id<br>b) Display all employees',
+            text: "Create a structure employee (id, name, salary). Accept details of n employees and write a menu-driven program to perform the following operations:<br>a) Search employee by id<br>b) Display all employees",
             marks: 25,
           },
         ],
@@ -23,12 +23,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept the radius of a circle and display the area and circumference of the circle.',
+            text: "Write a C program to accept the radius of a circle and display the area and circumference of the circle.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to calculate the sum of the following series up to n terms:<br>Sum = X + X^2 / 2! + X^3 / 3! + ……<br>(Note: Write separate user-defined functions to calculate power and factorial)',
+            text: "Write a program to calculate the sum of the following series up to n terms:<br>Sum = X + X^2 / 2! + X^3 / 3! + ……<br>(Note: Write separate user-defined functions to calculate power and factorial)",
             marks: 25,
           },
         ],
@@ -38,12 +38,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept temperatures in Fahrenheit (F) and display it in Celsius (C) and Kelvin (K). (Hint: C=5.0/9(F-32), K = C + 273.15)',
+            text: "Write a C program to accept temperatures in Fahrenheit (F) and display it in Celsius (C) and Kelvin (K). (Hint: C=5.0/9(F-32), K = C + 273.15)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program to perform the following operations on strings using standard library functions:<br>1. Length of String<br>2. Copy String<br>3. Concatenate Two Strings<br>4. Compare Two Strings',
+            text: "Write a menu-driven program to perform the following operations on strings using standard library functions:<br>1. Length of String<br>2. Copy String<br>3. Concatenate Two Strings<br>4. Compare Two Strings",
             marks: 25,
           },
         ],
@@ -53,12 +53,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept two numbers and print the arithmetic and harmonic mean of the two numbers. (Hint: AM = (a + b) / 2, HM = ab / (a + b))',
+            text: "Write a C program to accept two numbers and print the arithmetic and harmonic mean of the two numbers. (Hint: AM = (a + b) / 2, HM = ab / (a + b))",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a structure Student (id, name, marks). Accept details of n students and write a menu-driven program to perform the following operations:<br>a) Search student by id<br>b) Display all students',
+            text: "Create a structure Student (id, name, marks). Accept details of n students and write a menu-driven program to perform the following operations:<br>a) Search student by id<br>b) Display all students",
             marks: 25,
           },
         ],
@@ -68,12 +68,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept dimensions length (l), breadth (b), and height (h) of a cuboid and display surface area and volume. (Hint: Surface Area = 2(lb + lh + bh), Volume = lbh)',
+            text: "Write a C program to accept dimensions length (l), breadth (b), and height (h) of a cuboid and display surface area and volume. (Hint: Surface Area = 2(lb + lh + bh), Volume = lbh)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program which accepts a sentence from the user and alters it as follows: Every space is replaced by *, the case of all alphabets is reversed, and digits are replaced by ?.',
+            text: "Write a program which accepts a sentence from the user and alters it as follows: Every space is replaced by *, the case of all alphabets is reversed, and digits are replaced by ?.",
             marks: 25,
           },
         ],
@@ -88,7 +88,7 @@ const SlipData = [
           },
           {
             questionId: 2,
-            text: 'Write a program to accept a string and then count the occurrences of a specific character in the string.',
+            text: "Write a program to accept a string and then count the occurrences of a specific character in the string.",
             marks: 25,
           },
         ],
@@ -98,12 +98,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept the x and y coordinates of two points and compute the distance between the two points.',
+            text: "Write a C program to accept the x and y coordinates of two points and compute the distance between the two points.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to calculate the multiplication of two matrices of order m*n.',
+            text: "Write a program to calculate the multiplication of two matrices of order m*n.",
             marks: 25,
           },
         ],
@@ -113,12 +113,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'A cashier has currency notes of denomination 1, 5, and 10. Write a C program to accept the withdrawal amount from the user and display the total number of currency notes of each denomination the cashier will have to give.',
+            text: "A cashier has currency notes of denomination 1, 5, and 10. Write a C program to accept the withdrawal amount from the user and display the total number of currency notes of each denomination the cashier will have to give.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program to perform the following operations on an m*n matrix:<br>1. Calculate the sum of upper triangular matrix elements<br>2. Calculate the sum of diagonal elements',
+            text: "Write a menu-driven program to perform the following operations on an m*n matrix:<br>1. Calculate the sum of upper triangular matrix elements<br>2. Calculate the sum of diagonal elements",
             marks: 25,
           },
         ],
@@ -128,12 +128,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept a character from the user and check whether the character is a vowel or consonant.',
+            text: "Write a C program to accept a character from the user and check whether the character is a vowel or consonant.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to accept two numbers as a range and display the multiplication table of all numbers within that range.',
+            text: "Write a program to accept two numbers as a range and display the multiplication table of all numbers within that range.",
             marks: 25,
           },
         ],
@@ -143,7 +143,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept the x and y coordinates of a point and find the quadrant in which the point lies.',
+            text: "Write a C program to accept the x and y coordinates of a point and find the quadrant in which the point lies.",
             marks: 15,
           },
           {
@@ -158,12 +158,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept the cost price and selling price from the user. Find out if the seller has made a profit or loss and display how much profit or loss has been made.',
+            text: "Write a C program to accept the cost price and selling price from the user. Find out if the seller has made a profit or loss and display how much profit or loss has been made.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Accept radius from the user and write a program having a menu with the following options and corresponding actions:<br>1. Area of Circle - Compute area of the circle and print<br>2. Circumference of Circle - Compute the circumference of the circle and print<br>3. Volume of Sphere - Compute the volume of the sphere and print',
+            text: "Accept radius from the user and write a program having a menu with the following options and corresponding actions:<br>1. Area of Circle - Compute area of the circle and print<br>2. Circumference of Circle - Compute the circumference of the circle and print<br>3. Volume of Sphere - Compute the volume of the sphere and print",
             marks: 25,
           },
         ],
@@ -173,12 +173,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to calculate the sum of digits of a given input number.',
+            text: "Write a C program to calculate the sum of digits of a given input number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Accept two numbers from the user and write a menu-driven program to perform the following operations:<br>1. Swap the values of the two variables<br>2. Calculate arithmetic mean and harmonic mean of the two numbers',
+            text: "Accept two numbers from the user and write a menu-driven program to perform the following operations:<br>1. Swap the values of the two variables<br>2. Calculate arithmetic mean and harmonic mean of the two numbers",
             marks: 25,
           },
         ],
@@ -188,12 +188,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept the value of n and display the sum of all odd numbers up to n.',
+            text: "Write a C program to accept the value of n and display the sum of all odd numbers up to n.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to accept a decimal number and convert it to binary, octal, and hexadecimal numbers.',
+            text: "Write a program to accept a decimal number and convert it to binary, octal, and hexadecimal numbers.",
             marks: 25,
           },
         ],
@@ -203,12 +203,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to check whether an input number is an Armstrong number or not.',
+            text: "Write a C program to check whether an input number is an Armstrong number or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to accept a number and count the number of even, odd, and zero digits within that number.',
+            text: "Write a program to accept a number and count the number of even, odd, and zero digits within that number.",
             marks: 25,
           },
         ],
@@ -218,7 +218,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a program having a menu with the following options and corresponding actions:<br>1. Area of square - Accept length, compute area of square, and print<br>2. Area of Rectangle - Accept length and breadth, compute area of rectangle, and print<br>3. Area of triangle - Accept base and height, compute area of triangle, and print',
+            text: "Write a program having a menu with the following options and corresponding actions:<br>1. Area of square - Accept length, compute area of square, and print<br>2. Area of Rectangle - Accept length and breadth, compute area of rectangle, and print<br>3. Area of triangle - Accept base and height, compute area of triangle, and print",
             marks: 25,
           },
         ],
@@ -228,12 +228,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to calculate xy without using standard library functions.',
+            text: "Write a C program to calculate xy without using standard library functions.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to display the union and intersection of two 1D arrays.',
+            text: "Write a program to display the union and intersection of two 1D arrays.",
             marks: 25,
           },
         ],
@@ -243,12 +243,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to display the multiplication table of a given input number.',
+            text: "Write a C program to display the multiplication table of a given input number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program to perform the following operations on an m*n matrix:<br>1. Display the transpose of the matrix<br>2. Calculate the sum of all odd elements of the matrix',
+            text: "Write a menu-driven program to perform the following operations on an m*n matrix:<br>1. Display the transpose of the matrix<br>2. Calculate the sum of all odd elements of the matrix",
             marks: 25,
           },
         ],
@@ -258,12 +258,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to generate the following triangle up to n lines:<br>1<br>1 2<br>1 2 3',
+            text: "Write a C program to generate the following triangle up to n lines:<br>1<br>1 2<br>1 2 3",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to calculate the sum of the following series up to n terms:<br>Sum = X - X^2/2! + X^3/3! - ...<br>(Note: Write separate user-defined functions to calculate power and factorial)',
+            text: "Write a program to calculate the sum of the following series up to n terms:<br>Sum = X - X^2/2! + X^3/3! - ...<br>(Note: Write separate user-defined functions to calculate power and factorial)",
             marks: 25,
           },
         ],
@@ -273,12 +273,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to generate the following triangle up to n lines:<br>* * * *<br>* * *<br>* *<br>*',
+            text: "Write a C program to generate the following triangle up to n lines:<br>* * * *<br>* * *<br>* *<br>*",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program to perform the following operations on an m*n matrix:<br>1. Find the sum of diagonal elements of the matrix<br>2. Find the sum of all even numbers in the matrix',
+            text: "Write a menu-driven program to perform the following operations on an m*n matrix:<br>1. Find the sum of diagonal elements of the matrix<br>2. Find the sum of all even numbers in the matrix",
             marks: 25,
           },
         ],
@@ -288,12 +288,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to generate the following triangle up to n lines:<br>1<br>2 3<br>4 5 6',
+            text: "Write a C program to generate the following triangle up to n lines:<br>1<br>2 3<br>4 5 6",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to calculate the addition of two matrices.',
+            text: "Write a program to calculate the addition of two matrices.",
             marks: 25,
           },
         ],
@@ -303,12 +303,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to generate the following triangle up to n lines:<br>A<br>A B<br>A B C',
+            text: "Write a C program to generate the following triangle up to n lines:<br>A<br>A B<br>A B C",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a structure employee (eno, ename, salary). Accept details of n employees and write a menu-driven program to perform the following operations:\n1. Display all employees having salary > 5000\n2. Display all employees',
+            text: "Create a structure employee (eno, ename, salary). Accept details of n employees and write a menu-driven program to perform the following operations:\n1. Display all employees having salary > 5000\n2. Display all employees",
             marks: 25,
           },
         ],
@@ -318,12 +318,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to generate the following triangle up to n lines:<br>A B C<br>A B<br>A',
+            text: "Write a C program to generate the following triangle up to n lines:<br>A B C<br>A B<br>A",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program to perform the following operation on m*n Matrix:\n1. Find sum of non-diagonal elements of matrix\n2. Find sum of all odd numbers of matrix',
+            text: "Write a menu-driven program to perform the following operation on m*n Matrix:\n1. Find sum of non-diagonal elements of matrix\n2. Find sum of all odd numbers of matrix",
             marks: 25,
           },
         ],
@@ -333,12 +333,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to accept n elements of 1D array and then display the sum of all elements of the array.',
+            text: "Write a C program to accept n elements of 1D array and then display the sum of all elements of the array.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Accept n integers in an array. Copy only the non-zero elements to another array (allocated using dynamic memory allocation). Calculate the sum and average of non-zero elements.',
+            text: "Accept n integers in an array. Copy only the non-zero elements to another array (allocated using dynamic memory allocation). Calculate the sum and average of non-zero elements.",
             marks: 25,
           },
         ],
@@ -348,12 +348,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to find the maximum elements of a 1D array.',
+            text: "Write a C program to find the maximum elements of a 1D array.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a structure Book (Bno, Bname, Price). Accept details of n Books and write a menu-driven program to perform the following operations:\n1. Display all Books having price > 500\n2. Display Book having maximum price',
+            text: "Create a structure Book (Bno, Bname, Price). Accept details of n Books and write a menu-driven program to perform the following operations:\n1. Display all Books having price > 500\n2. Display Book having maximum price",
             marks: 25,
           },
         ],
@@ -363,12 +363,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to calculate the sum of all even elements of a matrix.',
+            text: "Write a C program to calculate the sum of all even elements of a matrix.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program for the following options:\n1. Check if an input number is an Armstrong number or not\n2. Check if an input number is a Perfect number or not',
+            text: "Write a menu-driven program for the following options:\n1. Check if an input number is an Armstrong number or not\n2. Check if an input number is a Perfect number or not",
             marks: 25,
           },
         ],
@@ -378,12 +378,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to calculate the length of a string without using standard functions.',
+            text: "Write a C program to calculate the length of a string without using standard functions.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to display the elements of an array containing n integers in the reverse order using a pointer to the array.',
+            text: "Write a program to display the elements of an array containing n integers in the reverse order using a pointer to the array.",
             marks: 25,
           },
         ],
@@ -393,12 +393,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a program to count the occurrences of vowels in an input string.',
+            text: "Write a program to count the occurrences of vowels in an input string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a structure Item (Ino, Iname, Price). Accept details of n Items and write a menu-driven program to perform the following operations:\n1. Display all Items having price > 800\n2. Display Item record with Ino=2',
+            text: "Create a structure Item (Ino, Iname, Price). Accept details of n Items and write a menu-driven program to perform the following operations:\n1. Display all Items having price > 800\n2. Display Item record with Ino=2",
             marks: 25,
           },
         ],
@@ -408,12 +408,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a program to accept a string and then count the occurrences of a specific character in the string.',
+            text: "Write a program to accept a string and then count the occurrences of a specific character in the string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to accept two numbers as a range and display the multiplication table of all numbers within that range.',
+            text: "Write a program to accept two numbers as a range and display the multiplication table of all numbers within that range.",
             marks: 25,
           },
         ],
@@ -423,12 +423,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a C program to calculate the factorial of a number using a user-defined function.',
+            text: "Write a C program to calculate the factorial of a number using a user-defined function.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program that accepts a number n and displays each digit separated by tabs. Example: 6702 Output = 6\t7\t0\t2',
+            text: "Write a program that accepts a number n and displays each digit separated by tabs. Example: 6702 Output = 6\t7\t0\t2",
             marks: 25,
           },
         ],
@@ -438,33 +438,33 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a program to find the sum of digits of a given input number using a user-defined function.',
+            text: "Write a program to find the sum of digits of a given input number using a user-defined function.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to accept a number and count the number of even, odd, and zero digits within that number.',
+            text: "Write a program to accept a number and count the number of even, odd, and zero digits within that number.",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'c',
+    language: "c",
   },
   {
-    subject: 'DBMS',
+    subject: "DBMS",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Emp(eno, ename, designation, salary, Date_Of_Joining)<br> Dept(dno, dname, loc)<br> The relationship between Dept & Emp is one-to-many.<br> Constraints: - Primary Key, ename should not be NULL, salary must be greater than 0.<br> Consider the above tables and Execute the following queries:<br> 1. Add column phone_No into Emp table with data type int.<br> 2. Delete the details of Employee whose designation is ‘Manager’.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Emp(eno, ename, designation, salary, Date_Of_Joining)<br> Dept(dno, dname, loc)<br> The relationship between Dept & Emp is one-to-many.<br> Constraints: - Primary Key, ename should not be NULL, salary must be greater than 0.<br> Consider the above tables and Execute the following queries:<br> 1. Add column phone_No into Emp table with data type int.<br> 2. Delete the details of Employee whose designation is ‘Manager’.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above database and execute the following queries: [25 Marks]<br> 1. Display the count of employees department wise.<br> 2. Display the name of employee who is ‘Manager’ of “Account Department”.<br> 3. Display the name of department whose location is “Pune” and “Mr. Advait” is working in it.<br> 4. Display the names of employees whose salary is greater than 50000 and department is “Quality”.<br> 5. Update Dateofjoining of employee to ‘15/06/2019’ whose department is ‘computer science’ and name is “Mr. Roy’.',
+            text: "Consider the above database and execute the following queries: [25 Marks]<br> 1. Display the count of employees department wise.<br> 2. Display the name of employee who is ‘Manager’ of “Account Department”.<br> 3. Display the name of department whose location is “Pune” and “Mr. Advait” is working in it.<br> 4. Display the names of employees whose salary is greater than 50000 and department is “Quality”.<br> 5. Update Dateofjoining of employee to ‘15/06/2019’ whose department is ‘computer science’ and name is “Mr. Roy’.",
             marks: 25,
           },
         ],
@@ -474,12 +474,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Sales_order (ordNo, ordDate)<br> Client (clientNo, ClientName, addr)<br> The relationship between Client & Sales_order is one-to-many.<br> Constraints: - Primary Key, ordDate should not be NULL.<br> Consider the above tables and execute the following queries:<br> 1. Add column amount into Sales_order table with data type int.<br> 2. Delete the details of the clients whose names start with ‘A’ character.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Sales_order (ordNo, ordDate)<br> Client (clientNo, ClientName, addr)<br> The relationship between Client & Sales_order is one-to-many.<br> Constraints: - Primary Key, ordDate should not be NULL.<br> Consider the above tables and execute the following queries:<br> 1. Add column amount into Sales_order table with data type int.<br> 2. Delete the details of the clients whose names start with ‘A’ character.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries: [25 Marks]<br> 1. Delete sales order details of client whose name is “Patil” and order date is “09/08/2019”.<br> 2. Change order date of client_No ‘CN001’ to ‘18/03/2019’.<br> 3. Delete all sales_record having order date is before ‘10/02/2018’.<br> 4. Display date wise sales_order given by clients.<br> 5. Update the address of client to “Pimpri” whose name is ‘Mr. Roy’.',
+            text: "Consider the above tables and execute the following queries: [25 Marks]<br> 1. Delete sales order details of client whose name is “Patil” and order date is “09/08/2019”.<br> 2. Change order date of client_No ‘CN001’ to ‘18/03/2019’.<br> 3. Delete all sales_record having order date is before ‘10/02/2018’.<br> 4. Display date wise sales_order given by clients.<br> 5. Update the address of client to “Pimpri” whose name is ‘Mr. Roy’.",
             marks: 25,
           },
         ],
@@ -489,12 +489,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Hospital (hno, hname, city, Est_year, addr)<br> Doctor (dno, dname, addr, Speciality)<br> The relationship between Hospital and Doctor is one - to – Many<br> Constraints: - Primary Key, Est_year should be greater than 1990.<br> Consider the above tables and execute the following queries:<br> 1. Delete addr column from Hospital table.<br> 2. Display doctor name, Hospital name and specialty of doctors from “Pune City”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Hospital (hno, hname, city, Est_year, addr)<br> Doctor (dno, dname, addr, Speciality)<br> The relationship between Hospital and Doctor is one - to – Many<br> Constraints: - Primary Key, Est_year should be greater than 1990.<br> Consider the above tables and execute the following queries:<br> 1. Delete addr column from Hospital table.<br> 2. Display doctor name, Hospital name and specialty of doctors from “Pune City”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries: [25 Marks]<br> 1. Display the names of the hospitals which are located at “Pimpri” city.<br> 2. Display the names of doctors who are working in “Birla” Hospital and city name is “Chinchwad”.<br> 3. Display the specialty of the doctors who are working in “Ruby” hospital.<br> 4. Give the count of doctor’s hospital wise which are located at “Pimple Gurav”.<br> 5. Update an address of Doctor to “Pimpri” whose hospital is “Ruby clinic”.',
+            text: "Consider the above tables and execute the following queries: [25 Marks]<br> 1. Display the names of the hospitals which are located at “Pimpri” city.<br> 2. Display the names of doctors who are working in “Birla” Hospital and city name is “Chinchwad”.<br> 3. Display the specialty of the doctors who are working in “Ruby” hospital.<br> 4. Give the count of doctor’s hospital wise which are located at “Pimple Gurav”.<br> 5. Update an address of Doctor to “Pimpri” whose hospital is “Ruby clinic”.",
             marks: 25,
           },
         ],
@@ -504,12 +504,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Patient (PCode, Name, Addr, Disease)<br> Bed (Bed_No, RoomNo, loc)<br> Relationship: - There is one-one relationship between patient and bed.<br> Constraints: - Primary key, RoomNo must be greater than Bed_No, Addr should not be null.<br> Consider the above tables and execute the following queries:<br> 1. Display the details of patients who are from “Pimple Gurav”.<br> 2. Delete the details of patient whose Bed_No is 1 and RoomNo is 105.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Patient (PCode, Name, Addr, Disease)<br> Bed (Bed_No, RoomNo, loc)<br> Relationship: - There is one-one relationship between patient and bed.<br> Constraints: - Primary key, RoomNo must be greater than Bed_No, Addr should not be null.<br> Consider the above tables and execute the following queries:<br> 1. Display the details of patients who are from “Pimple Gurav”.<br> 2. Delete the details of patient whose Bed_No is 1 and RoomNo is 105.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries: [25 Marks]<br> 1. Display the count of patient room wise.<br> 2. Display the names of patients who are admitted in room no 101.<br> 3. Display the disease of patient whose bed_No is 1.<br> 4. Display the room_no and bed_no of patient whose name is “Mr Roy”.<br> 5. Give the details of Patient who is admitted on 2nd flr in roomno 102.',
+            text: "Consider the above tables and execute the following queries: [25 Marks]<br> 1. Display the count of patient room wise.<br> 2. Display the names of patients who are admitted in room no 101.<br> 3. Display the disease of patient whose bed_No is 1.<br> 4. Display the room_no and bed_no of patient whose name is “Mr Roy”.<br> 5. Give the details of Patient who is admitted on 2nd flr in roomno 102.",
             marks: 25,
           },
         ],
@@ -519,7 +519,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Customer (cust_no, cust_name, address, city)<br> Loan (loan_no, loan_amt)<br> The relationship between Customer and Loan is Many to Many<br> Constraint: Primary key, loan_amt should be > 0.<br> Consider the above tables and execute the following queries:<br> 1. Add Phone_No column in customer table with data type int.<br> 2. Delete the details of customer whose loan_amt<1000.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with<br> appropriate data types and Constraints. [15 Marks]<br> Customer (cust_no, cust_name, address, city)<br> Loan (loan_no, loan_amt)<br> The relationship between Customer and Loan is Many to Many<br> Constraint: Primary key, loan_amt should be > 0.<br> Consider the above tables and execute the following queries:<br> 1. Add Phone_No column in customer table with data type int.<br> 2. Delete the details of customer whose loan_amt<1000.",
             marks: 15,
           },
         ],
@@ -529,7 +529,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Project (pno, pname, start_date, budget, status)<br>Department (dno, dname, HOD, loc)<br>The relationship between Project and Department is Many to One.<br>Constraint: Primary key.<br>Project Status Constraints: C – Completed, P - Progressive, I - Incomplete<br>Consider the above tables and execute the following queries:<br>1. Drop loc column from department table.<br>2. Display the details of project whose start_date is before one month and status is “Progressive”',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Project (pno, pname, start_date, budget, status)<br>Department (dno, dname, HOD, loc)<br>The relationship between Project and Department is Many to One.<br>Constraint: Primary key.<br>Project Status Constraints: C – Completed, P - Progressive, I - Incomplete<br>Consider the above tables and execute the following queries:<br>1. Drop loc column from department table.<br>2. Display the details of project whose start_date is before one month and status is “Progressive”",
             marks: 15,
           },
           {
@@ -544,12 +544,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Room (roomno, desc, rate)<br>Guest (gno, gname, no_of_days)<br>The relationship between Room and Guest is One to One.<br>Constraint: Primary key, no of days should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Update the rate of room to 5000 whose type is “AC”.<br>2. Display the name of guest who is staying 2 days in roomno 101.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Room (roomno, desc, rate)<br>Guest (gno, gname, no_of_days)<br>The relationship between Room and Guest is One to One.<br>Constraint: Primary key, no of days should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Update the rate of room to 5000 whose type is “AC”.<br>2. Display the name of guest who is staying 2 days in roomno 101.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display room details according to its rates in ascending order.<br>2. Display the roomno in which “Mr. Advait” is staying for 7 days.<br>3. Find no. of AC rooms.<br>4. Find names of guest with maximum room charges.<br>5. Display guest wise halt days.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display room details according to its rates in ascending order.<br>2. Display the roomno in which “Mr. Advait” is staying for 7 days.<br>3. Find no. of AC rooms.<br>4. Find names of guest with maximum room charges.<br>5. Display guest wise halt days.",
             marks: 25,
           },
         ],
@@ -559,7 +559,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Book (Book_no, title, author, price, year_published)<br>Customer (cid, cname, addr)<br>Relation between Book and Customer is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, price should be >0.<br>Consider the above tables and execute the following queries:<br>1. Display the name of book whose author is “Mr. Gadhave”.<br>2. Add column EMailId into customer table.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Book (Book_no, title, author, price, year_published)<br>Customer (cid, cname, addr)<br>Relation between Book and Customer is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, price should be >0.<br>Consider the above tables and execute the following queries:<br>1. Display the name of book whose author is “Mr. Gadhave”.<br>2. Add column EMailId into customer table.",
             marks: 15,
           },
           {
@@ -574,7 +574,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Property (pno, desc, area, rate)<br>Owner (owner_name, addr, phno)<br>The relationship between owner and Property is One to Many.<br>Constraint: Primary key, rate should be > 0<br>Consider the above tables and execute the following queries:<br>1. Display area of property whose rate is less than 100000.<br>2. Give the details of owner whose property is at “Pune”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Property (pno, desc, area, rate)<br>Owner (owner_name, addr, phno)<br>The relationship between owner and Property is One to Many.<br>Constraint: Primary key, rate should be > 0<br>Consider the above tables and execute the following queries:<br>1. Display area of property whose rate is less than 100000.<br>2. Give the details of owner whose property is at “Pune”.",
             marks: 15,
           },
           {
@@ -589,12 +589,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Employee (emp_no, name, skill, payrate)<br>Position (posting_no, skill)<br>The relationship between Employee and Position is Many to Many with day and shift as descriptive attribute.<br>Constraint: Primary key, payrate should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display skill of employees name wise.<br>2. Update the posting of employee to 220 whose skill is “Manager”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Employee (emp_no, name, skill, payrate)<br>Position (posting_no, skill)<br>The relationship between Employee and Position is Many to Many with day and shift as descriptive attribute.<br>Constraint: Primary key, payrate should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display skill of employees name wise.<br>2. Update the posting of employee to 220 whose skill is “Manager”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Find the names and rate of pay of all employees who has allocated a duty.<br>2. Give employee number who is working at posting_no. 201, but don’t have the skill of waiter.<br>3. Display a list of names of employees who have skill of chef and who has assigned a duty.<br>4. Display shift wise employee details.<br>5. Update payrate of employees to 20000 whose skill is waiter.',
+            text: "Consider the above tables and execute the following queries:<br>1. Find the names and rate of pay of all employees who has allocated a duty.<br>2. Give employee number who is working at posting_no. 201, but don’t have the skill of waiter.<br>3. Display a list of names of employees who have skill of chef and who has assigned a duty.<br>4. Display shift wise employee details.<br>5. Update payrate of employees to 20000 whose skill is waiter.",
             marks: 25,
           },
         ],
@@ -604,12 +604,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Bill (billno, day, tableno, total)<br>Menu (dish_no, dish_desc, price)<br>The relationship between Bill and Menu is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, price should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display the tableno whose dish_desc is “Veg”.<br>2. Display the special menu of Monday.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Bill (billno, day, tableno, total)<br>Menu (dish_no, dish_desc, price)<br>The relationship between Bill and Menu is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, price should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display the tableno whose dish_desc is “Veg”.<br>2. Display the special menu of Monday.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display receipt which includes bill_no with Dish description, price, quantity and total amount of each menu.<br>2. Find total amount collected by hotel on date 09/07/2019.<br>3. Count number of menus of billno 301.<br>4. Display menu details having price between 100 and 500.<br>5. Display the tableno and day whose bill amount is zero.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display receipt which includes bill_no with Dish description, price, quantity and total amount of each menu.<br>2. Find total amount collected by hotel on date 09/07/2019.<br>3. Count number of menus of billno 301.<br>4. Display menu details having price between 100 and 500.<br>5. Display the tableno and day whose bill amount is zero.",
             marks: 25,
           },
         ],
@@ -619,12 +619,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Movies (M_name, release_year, budget)<br>Actor (A_name, role, charges, A_address)<br>Producer (producer_id, name, P_address)<br>Relationship:- Each actor has acted in one or more movie. Each producer has produced many movies but each movie can be produced by more than one producers. Each movie has one or more actors acting in it, in different roles.<br>Constraint: Primary key, release_year > 2000, A_address and P_address should not be same.<br>Consider the above tables and execute the following queries:<br>1. List the names of movies with the highest budget.<br>2. Display the details of producer who have produced more than one movie in a year.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Movies (M_name, release_year, budget)<br>Actor (A_name, role, charges, A_address)<br>Producer (producer_id, name, P_address)<br>Relationship:- Each actor has acted in one or more movie. Each producer has produced many movies but each movie can be produced by more than one producers. Each movie has one or more actors acting in it, in different roles.<br>Constraint: Primary key, release_year > 2000, A_address and P_address should not be same.<br>Consider the above tables and execute the following queries:<br>1. List the names of movies with the highest budget.<br>2. Display the details of producer who have produced more than one movie in a year.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. List the names of movies with the second highest budget.<br>2. List the names of actors who have acted in the maximum number of movies.<br>3. List the names of movies, produced by more than one producer.<br>4. List the names of actors who are given with the maximum charges for their movie.<br>5. List the names of actors who have acted in at least one movie, in which ‘Akshay’ has acted.',
+            text: "Consider the above tables and execute the following queries:<br>1. List the names of movies with the second highest budget.<br>2. List the names of actors who have acted in the maximum number of movies.<br>3. List the names of movies, produced by more than one producer.<br>4. List the names of actors who are given with the maximum charges for their movie.<br>5. List the names of actors who have acted in at least one movie, in which ‘Akshay’ has acted.",
             marks: 25,
           },
         ],
@@ -634,12 +634,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Driver (driver_id, driver_name, address)<br>Car (license_no, model, year)<br>Relation between Driver and Car is Many to Many with date and time as descriptive attribute.<br>Constraint: Primary key, driver_name should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display the name of driver whose license no is “DPU123”.<br>2. Delete the details of car whose model is “swift”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Driver (driver_id, driver_name, address)<br>Car (license_no, model, year)<br>Relation between Driver and Car is Many to Many with date and time as descriptive attribute.<br>Constraint: Primary key, driver_name should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display the name of driver whose license no is “DPU123”.<br>2. Delete the details of car whose model is “swift”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display details of all persons who are driving ‘Alto’ car.<br>2. Update model of car to “SUV300” whose manufactured year is 2019.<br>3. Display car details manufactured before year 2000.<br>4. In which day ‘Mr. Ram’ drives maximum number of cars.<br>5. Display total number of drivers who drives car in each year.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display details of all persons who are driving ‘Alto’ car.<br>2. Update model of car to “SUV300” whose manufactured year is 2019.<br>3. Display car details manufactured before year 2000.<br>4. In which day ‘Mr. Ram’ drives maximum number of cars.<br>5. Display total number of drivers who drives car in each year.",
             marks: 25,
           },
         ],
@@ -650,7 +650,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Student (stud_reg_no, stud_name, class)<br>Competition (cno, cname, ctype)<br>Relation between Student and Competition is Many to Many with rank and year as descriptive attribute.<br>Constraint: Primary key, class must be (“FY”, “SY”, “TY”).<br>Consider the above tables and execute the following queries:<br>1. Count total no students class wise.<br>2. Delete the details of student who has participated in “Mehandi” competition.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Student (stud_reg_no, stud_name, class)<br>Competition (cno, cname, ctype)<br>Relation between Student and Competition is Many to Many with rank and year as descriptive attribute.<br>Constraint: Primary key, class must be (“FY”, “SY”, “TY”).<br>Consider the above tables and execute the following queries:<br>1. Count total no students class wise.<br>2. Delete the details of student who has participated in “Mehandi” competition.",
             marks: 15,
           },
           {
@@ -665,12 +665,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Plan (plan_no, plan_name, nooffreecalls, freecalltime, fix_amt)<br>Customer (cust_no, cust_name, mobile_no)<br>Relation between Plan and Customer is One to Many.<br>Constraint: Primary key, fix_amt should be greater than 0.<br>Consider the above tables and execute the following queries:<br>1. Display the details of plan who has taken by “Mr. Patil”.<br>2. Update the mobile No of customer to 7020079536 whose name is “Mr Roy” and plan is “Go Max”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Plan (plan_no, plan_name, nooffreecalls, freecalltime, fix_amt)<br>Customer (cust_no, cust_name, mobile_no)<br>Relation between Plan and Customer is One to Many.<br>Constraint: Primary key, fix_amt should be greater than 0.<br>Consider the above tables and execute the following queries:<br>1. Display the details of plan who has taken by “Mr. Patil”.<br>2. Update the mobile No of customer to 7020079536 whose name is “Mr Roy” and plan is “Go Max”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display the plan having minimum response.<br>2. Display customer details starting their mobile number with 98.<br>3. Display the customer details that are getting less number of free calls than that of the plan ‘Let’s Rock’.<br>4. Delete the details of ‘John’ who has stopped ‘Go Max’ plan.<br>5. Find the plan whose fixed amount is greater than 5000.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display the plan having minimum response.<br>2. Display customer details starting their mobile number with 98.<br>3. Display the customer details that are getting less number of free calls than that of the plan ‘Let’s Rock’.<br>4. Delete the details of ‘John’ who has stopped ‘Go Max’ plan.<br>5. Find the plan whose fixed amount is greater than 5000.",
             marks: 25,
           },
         ],
@@ -681,12 +681,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Employee (emp_id, emp_name, address)<br>Investment (inv_no, inv_name, inv_date, inv_amount)<br>Relation between Employee and Investment is One to Many.<br>Constraint: Primary key, inv_amount should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display the details of employee who has invested amount in “Mutual Fund”.<br>2. Add column Phone_No in Employee table.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Employee (emp_id, emp_name, address)<br>Investment (inv_no, inv_name, inv_date, inv_amount)<br>Relation between Employee and Investment is One to Many.<br>Constraint: Primary key, inv_amount should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display the details of employee who has invested amount in “Mutual Fund”.<br>2. Add column Phone_No in Employee table.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display employee details who have invested more than 100000.<br>2. Display employee wise total investment amount.<br>3. Display the employee names who invest on date 2nd Jan 2013.<br>4. Display employee whose investment are more than 3.<br>5. Find average investment of employees of Pune.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display employee details who have invested more than 100000.<br>2. Display employee wise total investment amount.<br>3. Display the employee names who invest on date 2nd Jan 2013.<br>4. Display employee whose investment are more than 3.<br>5. Find average investment of employees of Pune.",
             marks: 25,
           },
         ],
@@ -697,12 +697,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Politicians (pno, pname, telephone_no)<br>Party (party_code, party_name)<br>Relation between Politicians and Party is Many to One.<br>Constraint: Primary key, party_name should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display the name of party whose politician is “Mr. Patil”.<br>2. Update party name of politician whose name is “Mr. Pawar”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Politicians (pno, pname, telephone_no)<br>Party (party_code, party_name)<br>Relation between Politicians and Party is Many to One.<br>Constraint: Primary key, party_name should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display the name of party whose politician is “Mr. Patil”.<br>2. Update party name of politician whose name is “Mr. Pawar”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display party names in ascending order.<br>2. Find the party who is having less number of members than ‘Congress’ party.<br>3. Display party wise politician name with details.<br>4. Display the party name with the details of politicians whose name include “Rao”.<br>5. Which party has maximum politicians.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display party names in ascending order.<br>2. Find the party who is having less number of members than ‘Congress’ party.<br>3. Display party wise politician name with details.<br>4. Display the party name with the details of politicians whose name include “Rao”.<br>5. Which party has maximum politicians.",
             marks: 25,
           },
         ],
@@ -713,7 +713,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Game (game_name, no_of_players, coach_name)<br>Player (pid, pname, address, club_name)<br>Relation between Game and Player is Many to Many.<br>Constraint: Primary key, no_of_players should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display the name of club whose coach is “Mr. Sehwag”.<br>2. Update the game name of player to cricket whose name is “Mr Rahane”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Game (game_name, no_of_players, coach_name)<br>Player (pid, pname, address, club_name)<br>Relation between Game and Player is Many to Many.<br>Constraint: Primary key, no_of_players should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display the name of club whose coach is “Mr. Sehwag”.<br>2. Update the game name of player to cricket whose name is “Mr Rahane”.",
             marks: 15,
           },
           {
@@ -729,12 +729,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Item (item_no, item_name, quantity)<br>Suppliers (sup_no, sup_name, address, city, phone_no)<br>Relation between Item and Supplier is Many to Many with rate and discount as descriptive attribute.<br>Constraint: Primary key, phone_no must be 10 digits.<br>Consider the above tables and execute the following queries:<br>1. Display item wise quantity.<br>2. Display Suppliers whose names are starting with ‘s’ character.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Item (item_no, item_name, quantity)<br>Suppliers (sup_no, sup_name, address, city, phone_no)<br>Relation between Item and Supplier is Many to Many with rate and discount as descriptive attribute.<br>Constraint: Primary key, phone_no must be 10 digits.<br>Consider the above tables and execute the following queries:<br>1. Display item wise quantity.<br>2. Display Suppliers whose names are starting with ‘s’ character.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Delete items having quantity less than 2.<br>2. Display total number of suppliers who are supplying ‘Refrigerator’.<br>3. Display all suppliers supplying ‘Washing Machine’ with minimum cost.<br>4. Give supplier details who give maximum discount on each item.<br>5. List suppliers supplying maximum number of item.',
+            text: "Consider the above tables and execute the following queries:<br>1. Delete items having quantity less than 2.<br>2. Display total number of suppliers who are supplying ‘Refrigerator’.<br>3. Display all suppliers supplying ‘Washing Machine’ with minimum cost.<br>4. Give supplier details who give maximum discount on each item.<br>5. List suppliers supplying maximum number of item.",
             marks: 25,
           },
         ],
@@ -745,7 +745,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Wholesaler (w_no, w_name, address, city)<br>Product (product_no, product_name, rate)<br>Relation between Wholesaler and Product is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, rate should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Update product_name to “Monitor” whose supplier is “Mr. Patil”.<br>2. Display product wise rate.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Wholesaler (w_no, w_name, address, city)<br>Product (product_no, product_name, rate)<br>Relation between Wholesaler and Product is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, rate should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Update product_name to “Monitor” whose supplier is “Mr. Patil”.<br>2. Display product wise rate.",
             marks: 15,
           },
           {
@@ -760,12 +760,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Client (client_no, client_name, address, birthdate)<br>Policy_info (policy_no, desc, maturity_amt, prem_amt, date)<br>Relation between Client and Policy_info is Many to Many<br>Constraint: Primary key, prem_amt and maturity_amt should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display premium amount paid by “Mr. Mahandule” since 1 Jan 2018.<br>2. Display the details of client who have taken policy “Jeevan Raksha”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Client (client_no, client_name, address, birthdate)<br>Policy_info (policy_no, desc, maturity_amt, prem_amt, date)<br>Relation between Client and Policy_info is Many to Many<br>Constraint: Primary key, prem_amt and maturity_amt should be > 0.<br>Consider the above tables and execute the following queries:<br>1. Display premium amount paid by “Mr. Mahandule” since 1 Jan 2018.<br>2. Display the details of client who have taken policy “Jeevan Raksha”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display Policy details having maturity amount >500000.<br>2. Find total number of policies purchased on 12th January 2019.<br>3. Find clients who have more than 3 policies.<br>4. Find all policies whose number of clients is same as that of policy ‘Jeevan Raksha’.<br>5. Display policy wise client details.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display Policy details having maturity amount >500000.<br>2. Find total number of policies purchased on 12th January 2019.<br>3. Find clients who have more than 3 policies.<br>4. Find all policies whose number of clients is same as that of policy ‘Jeevan Raksha’.<br>5. Display policy wise client details.",
             marks: 25,
           },
         ],
@@ -775,12 +775,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Train (train_no, train_name, depart_time, arrival_time, source_stn, dest_stn)<br>Passenger (p_id, p_name, address, age, gender)<br>Relation between Train and Passenger is Many to Many with seat_no, amount and date as descriptive attribute.<br>Constraint: Primary key, seat_no should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display passenger names and their seat no’s of train “Sahyadri Express”.<br>2. Display details of train in which “Mr. Roy” is travelling from “Pune” to “Uruli Kanchan”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Train (train_no, train_name, depart_time, arrival_time, source_stn, dest_stn)<br>Passenger (p_id, p_name, address, age, gender)<br>Relation between Train and Passenger is Many to Many with seat_no, amount and date as descriptive attribute.<br>Constraint: Primary key, seat_no should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display passenger names and their seat no’s of train “Sahyadri Express”.<br>2. Display details of train in which “Mr. Roy” is travelling from “Pune” to “Uruli Kanchan”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display passenger details having age>50.<br>2. Display total amount collected for “Kokan Express” on 5th January 2019.<br>3. Find total number of passengers of “Pune to Mumbai” route.<br>4. Cancel all the trains of 21st January 2019.<br>5. Calculate total number of male passengers in “Shatabdi Express”.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display passenger details having age>50.<br>2. Display total amount collected for “Kokan Express” on 5th January 2019.<br>3. Find total number of passengers of “Pune to Mumbai” route.<br>4. Cancel all the trains of 21st January 2019.<br>5. Calculate total number of male passengers in “Shatabdi Express”.",
             marks: 25,
           },
         ],
@@ -790,12 +790,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Student (rno, sname, address, class)<br>Subject (subno, subname)<br>Relationship: - Student and Subject are related with many-to-many relationship with attribute marks and status.<br>Constraints: - Primary Key, class must be fy, sy, ty.<br>Consider the above tables and execute the following queries:<br>1. List the names of students class wise.<br>2. Display the marks of students subject wise.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Student (rno, sname, address, class)<br>Subject (subno, subname)<br>Relationship: - Student and Subject are related with many-to-many relationship with attribute marks and status.<br>Constraints: - Primary Key, class must be fy, sy, ty.<br>Consider the above tables and execute the following queries:<br>1. List the names of students class wise.<br>2. Display the marks of students subject wise.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. List the distinct names of students who have either Electronics, or Statistics or both subjects.<br>2. List the names of students who are either passed or failed.<br>3. List the students who have “Database” subject and they are not in “TY” class.<br>4. List the names of students who are not failed in any subject.<br>5. List the names of students not staying at “Uruli Kanchan”.',
+            text: "Consider the above tables and execute the following queries:<br>1. List the distinct names of students who have either Electronics, or Statistics or both subjects.<br>2. List the names of students who are either passed or failed.<br>3. List the students who have “Database” subject and they are not in “TY” class.<br>4. List the names of students who are not failed in any subject.<br>5. List the names of students not staying at “Uruli Kanchan”.",
             marks: 25,
           },
         ],
@@ -805,12 +805,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Bus (bus_no, capacity, depo_name)<br>Route (route_no, source, destination, no_of_stations)<br>Relation between Bus and Route is Many to One.<br>Constraint: Bus capacity should be greater than 0, depo_name should not be null.<br>Consider the above tables and execute the following queries:<br>1. List all buses at depo “Kothrud”.<br>2. Delete bus details whose number is “MH12HL7812”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Bus (bus_no, capacity, depo_name)<br>Route (route_no, source, destination, no_of_stations)<br>Relation between Bus and Route is Many to One.<br>Constraint: Bus capacity should be greater than 0, depo_name should not be null.<br>Consider the above tables and execute the following queries:<br>1. List all buses at depo “Kothrud”.<br>2. Delete bus details whose number is “MH12HL7812”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. List all buses on route no 41.<br>2. List the route details having number of stations > 10.<br>3. Delete all buses having capacity < 20.<br>4. Find the maximum number of stations.<br>5. List all routes starting from “station”.',
+            text: "Consider the above tables and execute the following queries:<br>1. List all buses on route no 41.<br>2. List the route details having number of stations > 10.<br>3. Delete all buses having capacity < 20.<br>4. Find the maximum number of stations.<br>5. List all routes starting from “station”.",
             marks: 25,
           },
         ],
@@ -820,12 +820,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>College (code, college_name, address)<br>Teacher (teacher_id, teacher_name, Qualification, specialization, salary, Desg)<br>Relation between Teacher and College is Many to One.<br>Constraint: Primary Key, qualification should not be null.<br>Consider the above tables and execute the following queries:<br>1. List the name of staff having qualification is “SET-NET”.<br>2. Update the salary of teacher to 50000 whose qualification is “PhD”.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>College (code, college_name, address)<br>Teacher (teacher_id, teacher_name, Qualification, specialization, salary, Desg)<br>Relation between Teacher and College is Many to One.<br>Constraint: Primary Key, qualification should not be null.<br>Consider the above tables and execute the following queries:<br>1. List the name of staff having qualification is “SET-NET”.<br>2. Update the salary of teacher to 50000 whose qualification is “PhD”.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. List the college wise staff.<br>2. Display the details of Teachers who are working in Dr. D Y Patil College and their specialization is “Computer”.<br>3. Display the designation of teacher whose name is “Mr Patil” and he is working in DPU college.<br>4. Display teacher wise salary.<br>5. Update an address of college to “Sant Tukaram Nagar” whose name is “MD College”.',
+            text: "Consider the above tables and execute the following queries:<br>1. List the college wise staff.<br>2. Display the details of Teachers who are working in Dr. D Y Patil College and their specialization is “Computer”.<br>3. Display the designation of teacher whose name is “Mr Patil” and he is working in DPU college.<br>4. Display teacher wise salary.<br>5. Update an address of college to “Sant Tukaram Nagar” whose name is “MD College”.",
             marks: 25,
           },
         ],
@@ -835,12 +835,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Gym (Name, city, charges, scheme)<br>Member (ID, Name, phoneNo, address)<br>Relation between Gym and member is one to many.<br>Constraint: Primary Key, charges must be greater than 0.<br>Consider the above tables and execute the following queries:<br>1. Display the scheme details of “Gold Gym”.<br>2. List out all the gym of “Pimpri” city.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Gym (Name, city, charges, scheme)<br>Member (ID, Name, phoneNo, address)<br>Relation between Gym and member is one to many.<br>Constraint: Primary Key, charges must be greater than 0.<br>Consider the above tables and execute the following queries:<br>1. Display the scheme details of “Gold Gym”.<br>2. List out all the gym of “Pimpri” city.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Give the details of scheme to which “Mr. Patil” is admitted.<br>2. List out gym wise members.<br>3. List out scheme wise charges.<br>4. Display all the members from Pune city who have paid Gym charges more than 10000.<br>5. Drop column address from Member table.',
+            text: "Consider the above tables and execute the following queries:<br>1. Give the details of scheme to which “Mr. Patil” is admitted.<br>2. List out gym wise members.<br>3. List out scheme wise charges.<br>4. Display all the members from Pune city who have paid Gym charges more than 10000.<br>5. Drop column address from Member table.",
             marks: 25,
           },
         ],
@@ -851,12 +851,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Student (rollno, sname, class, timetable)<br>Lab (LabNo, LabName, capacity, equipment)<br>Relation between Student and Lab is Many to One.<br>Constraint: Primary Key, capacity should not be null.<br>Consider the above tables and execute the following queries:<br>1. Add column Phone_No with data type int in Student table.<br>2. Display lab wise capacity.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Student (rollno, sname, class, timetable)<br>Lab (LabNo, LabName, capacity, equipment)<br>Relation between Student and Lab is Many to One.<br>Constraint: Primary Key, capacity should not be null.<br>Consider the above tables and execute the following queries:<br>1. Add column Phone_No with data type int in Student table.<br>2. Display lab wise capacity.",
             marks: 25,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display practical time table of class ‘FYBBA(CA)’.<br>2. Display the LabName in which ‘Mr Advait’ is doing practical.<br>3. List out class wise students.<br>4. Delete the column equipment from Lab table.<br>5. Update capacity of Lab to 100 whose Number is 1.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display practical time table of class ‘FYBBA(CA)’.<br>2. Display the LabName in which ‘Mr Advait’ is doing practical.<br>3. List out class wise students.<br>4. Delete the column equipment from Lab table.<br>5. Update capacity of Lab to 100 whose Number is 1.",
             marks: 25,
           },
         ],
@@ -867,12 +867,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Blood (blood_id, blood_group, cholesterol_level, storage)<br>Donar (donar_id, name, address, gender, phone_no)<br>Relation between Blood and Donar is Many to one.<br>Constraint: Primary Key , Blood_group should not be null.<br>Consider the above tables and execute the following queries:<br>1. List out Donar wise Blood_group.<br>2. Display cholesterol_level of blood which is given by ‘Mr. Mahandule’.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Blood (blood_id, blood_group, cholesterol_level, storage)<br>Donar (donar_id, name, address, gender, phone_no)<br>Relation between Blood and Donar is Many to one.<br>Constraint: Primary Key , Blood_group should not be null.<br>Consider the above tables and execute the following queries:<br>1. List out Donar wise Blood_group.<br>2. Display cholesterol_level of blood which is given by ‘Mr. Mahandule’.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display the stock of blood whose group is “O+ve”.<br>2. Delete gender column from Donar table.<br>3. Update storage of blood to 100 bottles whose blood_group is “B+ve”.<br>4. Display blood group having maximum storage.<br>5. Display the details of donar in ascending order of donar_name.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display the stock of blood whose group is “O+ve”.<br>2. Delete gender column from Donar table.<br>3. Update storage of blood to 100 bottles whose blood_group is “B+ve”.<br>4. Display blood group having maximum storage.<br>5. Display the details of donar in ascending order of donar_name.",
             marks: 25,
           },
         ],
@@ -883,12 +883,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Country (CId, CName , no_of_states, area, location, population)<br>Citizen (Id, Name, mother_toung, state_name)<br>Relation between Country and Citizen is one to many.<br>Constraint: Primary key, area should not be null.<br>Consider the above tables and execute the following queries:<br>1. List out country wise number of states.<br>2. Display the name of country having minimum population.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Country (CId, CName , no_of_states, area, location, population)<br>Citizen (Id, Name, mother_toung, state_name)<br>Relation between Country and Citizen is one to many.<br>Constraint: Primary key, area should not be null.<br>Consider the above tables and execute the following queries:<br>1. List out country wise number of states.<br>2. Display the name of country having minimum population.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display citizens whose mother_tounge is ‘marathi’.<br>2. Update the population of India to 10000000.<br>3. Display citizen details in descending order by state_name.<br>4. Display country details having population more than 1000000.<br>5. Display Country details where ‘Ms Reshma’ is staying.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display citizens whose mother_tounge is ‘marathi’.<br>2. Update the population of India to 10000000.<br>3. Display citizen details in descending order by state_name.<br>4. Display country details having population more than 1000000.<br>5. Display Country details where ‘Ms Reshma’ is staying.",
             marks: 25,
           },
         ],
@@ -899,33 +899,33 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Library (Lno, Lname, Location, Librarian, no_of_books)<br>Book (Bid, Bname, Author_Name, Price, publication)<br>Relation between Library and Book is one to many.<br>Constraint: Primary key, Price should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display library details having number of books greater than 10000.<br>2. Display the list of books of ‘BPB’ publication.',
+            text: "Consider the following entities and their relationships. Create a RDB in 3 NF with appropriate data types and Constraints.<br>Library (Lno, Lname, Location, Librarian, no_of_books)<br>Book (Bid, Bname, Author_Name, Price, publication)<br>Relation between Library and Book is one to many.<br>Constraint: Primary key, Price should not be null.<br>Consider the above tables and execute the following queries:<br>1. Display library details having number of books greater than 10000.<br>2. Display the list of books of ‘BPB’ publication.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Consider the above tables and execute the following queries:<br>1. Display publication wise number of books.<br>2. Display total price of books of ‘Nirali’ publication.<br>3. Delete the book details of Vision publication from ‘DPU’ Library.<br>4. Display all books of author whose initial character of name is ‘A’.<br>5. Update number of books of success publication to 1000 from DYP library.',
+            text: "Consider the above tables and execute the following queries:<br>1. Display publication wise number of books.<br>2. Display total price of books of ‘Nirali’ publication.<br>3. Delete the book details of Vision publication from ‘DPU’ Library.<br>4. Display all books of author whose initial character of name is ‘A’.<br>5. Update number of books of success publication to 1000 from DYP library.",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'sql',
+    language: "sql",
   },
   {
-    subject: 'Web Technology',
+    subject: "Web Technology",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to calculate the volume of a sphere.',
+            text: "Write a JavaScript program to calculate the volume of a sphere.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create HTML page to Divide the frames into different sections as shown below and add appropriate HTML files to each frame.<br>First Frame : Your Name and address<br>Second Frame : Bulleted list of favourite colours<br>Third Frame : Numbered List of Cities<br>Fourth Frame : Scrolling Message<br>Fifth Frame : Blinking Reminders<br>Sixth Frame : Name of Countries',
+            text: "Create HTML page to Divide the frames into different sections as shown below and add appropriate HTML files to each frame.<br>First Frame : Your Name and address<br>Second Frame : Bulleted list of favourite colours<br>Third Frame : Numbered List of Cities<br>Fourth Frame : Scrolling Message<br>Fifth Frame : Blinking Reminders<br>Sixth Frame : Name of Countries",
             marks: 25,
           },
         ],
@@ -935,12 +935,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a number from the user and display its multiplication table.',
+            text: "Write a JavaScript program to accept a number from the user and display its multiplication table.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write the HTML code to create the following table. Use internal CSS to format the table.<br>Book_No Book_Name Price<br>RS Paise<br>101 DBMS 200 50<br>102 C-Prog 150 75<br>103 JAVA 300 00<br>104 PHP 250 50<br>105 ASP 100 00',
+            text: "Write the HTML code to create the following table. Use internal CSS to format the table.<br>Book_No Book_Name Price<br>RS Paise<br>101 DBMS 200 50<br>102 C-Prog 150 75<br>103 JAVA 300 00<br>104 PHP 250 50<br>105 ASP 100 00",
             marks: 25,
           },
         ],
@@ -950,12 +950,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a number from the user and calculate and display its sum of digits.',
+            text: "Write a JavaScript program to accept a number from the user and calculate and display its sum of digits.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to design a web page as per given specification. Divide the browser screen into two frames. The first frame will display the heading. Divide the second frame into two columns. The frame on the left should contain names of cities consisting of hyperlinks. Clicking on any of these hyperlinks will display related information in the right-hand side frame as shown below:<br>IT Industries in INDIA<br>City<br>1. Pune<br>2. Mumbai<br>Pune<br>• Infosys<br>• Persistent',
+            text: "Write HTML code to design a web page as per given specification. Divide the browser screen into two frames. The first frame will display the heading. Divide the second frame into two columns. The frame on the left should contain names of cities consisting of hyperlinks. Clicking on any of these hyperlinks will display related information in the right-hand side frame as shown below:<br>IT Industries in INDIA<br>City<br>1. Pune<br>2. Mumbai<br>Pune<br>• Infosys<br>• Persistent",
             marks: 25,
           },
         ],
@@ -965,12 +965,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a number from the user and check whether it is an Armstrong number or not.',
+            text: "Write a JavaScript program to accept a number from the user and check whether it is an Armstrong number or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML web page with the following specifications:<br>i) Title should be about your College.<br>ii) Put an image in the background.<br>iii) Place your college name at the top of the page in large text followed by the address in smaller size.<br>iv) Add names of courses offered, each in a different color, style, and font.<br>v) Add scrolling text about the college.<br>vi) Add any image at the bottom.<br>(Use External CSS to format the webpage.)',
+            text: "Create an HTML web page with the following specifications:<br>i) Title should be about your College.<br>ii) Put an image in the background.<br>iii) Place your college name at the top of the page in large text followed by the address in smaller size.<br>iv) Add names of courses offered, each in a different color, style, and font.<br>v) Add scrolling text about the college.<br>vi) Add any image at the bottom.<br>(Use External CSS to format the webpage.)",
             marks: 25,
           },
         ],
@@ -980,12 +980,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a number from the user and check whether it is a perfect number or not.',
+            text: "Write a JavaScript program to accept a number from the user and check whether it is a perfect number or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to design a website for Online Shopping. Design the home page which consists of a list of items, each with a hyperlink. Clicking on a hyperlink should display related information on a separate web page. (Use external CSS to format each web page.)',
+            text: "Write HTML code to design a website for Online Shopping. Design the home page which consists of a list of items, each with a hyperlink. Clicking on a hyperlink should display related information on a separate web page. (Use external CSS to format each web page.)",
             marks: 25,
           },
         ],
@@ -995,12 +995,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a number from the user and check whether it is a prime number or not.',
+            text: "Write a JavaScript program to accept a number from the user and check whether it is a prime number or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to display the calendar of the current month in a tabular format. Use proper colors for weekdays and holidays. Display the month name, year, and images as advertisements at the beginning of the calendar.',
+            text: "Write HTML code to display the calendar of the current month in a tabular format. Use proper colors for weekdays and holidays. Display the month name, year, and images as advertisements at the beginning of the calendar.",
             marks: 25,
           },
         ],
@@ -1010,12 +1010,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a string from the user and display the count of vowel characters from that string.',
+            text: "Write a JavaScript program to accept a string from the user and display the count of vowel characters from that string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to display the Theory Time Table of FYBBA(CA). Use internal CSS to format the table.',
+            text: "Write HTML code to display the Theory Time Table of FYBBA(CA). Use internal CSS to format the table.",
             marks: 25,
           },
         ],
@@ -1025,12 +1025,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a string and a character from the user and check the count of occurrences of that character in the string.',
+            text: "Write a JavaScript program to accept a string and a character from the user and check the count of occurrences of that character in the string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page with the following specifications:<br>i) Title should be about yourself.<br>ii) Background color should be pink.<br>iii) Place your name at the top of the page in large text and centered.<br>iv) Add names of your family members, each in a different size, color, style, and font.<br>v) Add scrolling text about your family.<br>vi) Add any image at the bottom. (Use internal CSS to format the web page.)',
+            text: "Create an HTML page with the following specifications:<br>i) Title should be about yourself.<br>ii) Background color should be pink.<br>iii) Place your name at the top of the page in large text and centered.<br>iv) Add names of your family members, each in a different size, color, style, and font.<br>v) Add scrolling text about your family.<br>vi) Add any image at the bottom. (Use internal CSS to format the web page.)",
             marks: 25,
           },
         ],
@@ -1040,12 +1040,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a string and check whether the input string is a palindrome string or not.',
+            text: "Write a JavaScript program to accept a string and check whether the input string is a palindrome string or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write the HTML code which generates the following output. Use internal CSS to format the table.<br>Country | Population (in Crores)<br>INDIA<br>1998 85<br>1999 90<br>2000 100<br>USA<br>1998 30<br>1999 35<br>2000 40<br>UK<br>1998 25<br>1999 30<br>2000 35',
+            text: "Write the HTML code which generates the following output. Use internal CSS to format the table.<br>Country | Population (in Crores)<br>INDIA<br>1998 85<br>1999 90<br>2000 100<br>USA<br>1998 30<br>1999 35<br>2000 40<br>UK<br>1998 25<br>1999 30<br>2000 35",
             marks: 25,
           },
         ],
@@ -1055,12 +1055,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to read a number from the user, store its factors into an array, and display that array. (Handle onClick event.)',
+            text: "Write a JavaScript program to read a number from the user, store its factors into an array, and display that array. (Handle onClick event.)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code which generates the following output and displays each element of the list in different sizes, colors, and fonts. Use inline CSS to format the list.<br>1. DYP<br>• Courses<br>  ◦ BCS<br>  ◦ BCA<br>2. Indira<br>• Courses<br>  ◦ BCA<br>  ◦ MCs<br>3. ATSS<br>• Courses<br>  ◦ BBA<br>  ◦ BCS',
+            text: "Write HTML code which generates the following output and displays each element of the list in different sizes, colors, and fonts. Use inline CSS to format the list.<br>1. DYP<br>• Courses<br>  ◦ BCS<br>  ◦ BCA<br>2. Indira<br>• Courses<br>  ◦ BCA<br>  ◦ MCs<br>3. ATSS<br>• Courses<br>  ◦ BBA<br>  ◦ BCS",
             marks: 25,
           },
         ],
@@ -1070,12 +1070,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept a string and a position (number) from the user and display the character at the specified position.',
+            text: "Write a JavaScript program to accept a string and a position (number) from the user and display the character at the specified position.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code which generates the following output and display each element of the list in different size, color & font. Use external CSS to format the list.<br>• Non-flowering plants<br>  ◦ Fern<br>  ◦ Spore<br>• Flowering plants<br>  ◦ Lilly<br>  ◦ Rose<br>  1. Red Rose<br>  2. Pink Rose',
+            text: "Write HTML code which generates the following output and display each element of the list in different size, color & font. Use external CSS to format the list.<br>• Non-flowering plants<br>  ◦ Fern<br>  ◦ Spore<br>• Flowering plants<br>  ◦ Lilly<br>  ◦ Rose<br>  1. Red Rose<br>  2. Pink Rose",
             marks: 25,
           },
         ],
@@ -1085,12 +1085,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Design a student registration form with fields Name, Address, city, and Pin-Code. Write a JavaScript program to perform the following validation:<br>i. Check name should not be empty and contain alphabets only<br>ii. Pin-code must be 6 digits only.',
+            text: "Design a student registration form with fields Name, Address, city, and Pin-Code. Write a JavaScript program to perform the following validation:<br>i. Check name should not be empty and contain alphabets only<br>ii. Pin-code must be 6 digits only.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page with the following specifications:<br>i) Title should be about your College.<br>ii) Put an image in the background.<br>iii) Place your college name at the top of the page in large text followed by the address in smaller size.<br>iv) Add names of courses offered, each in different color, style, and font.<br>v) Add scrolling text about the college.<br>vi) Add any image at the bottom. (Use internal CSS to format the web page.)',
+            text: "Create an HTML page with the following specifications:<br>i) Title should be about your College.<br>ii) Put an image in the background.<br>iii) Place your college name at the top of the page in large text followed by the address in smaller size.<br>iv) Add names of courses offered, each in different color, style, and font.<br>v) Add scrolling text about the college.<br>vi) Add any image at the bottom. (Use internal CSS to format the web page.)",
             marks: 25,
           },
         ],
@@ -1100,12 +1100,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Design a login form with fields User Name, Password, and Login button. Write JavaScript code to accept username and password, validate login details, and display a message accordingly.',
+            text: "Design a login form with fields User Name, Password, and Login button. Write JavaScript code to accept username and password, validate login details, and display a message accordingly.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code which will divide the web page into three frames. The first frame should consist of the name of the college as a heading. The second frame should consist of the name of courses with hyperlinks. Once clicked on any course, it should display the subject of that course in the third frame.',
+            text: "Write HTML code which will divide the web page into three frames. The first frame should consist of the name of the college as a heading. The second frame should consist of the name of courses with hyperlinks. Once clicked on any course, it should display the subject of that course in the third frame.",
             marks: 25,
           },
         ],
@@ -1115,12 +1115,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write HTML code to display the names of your family members, each in a different color, size, and style. Also, display the following polynomial expression:<br>a0 + a1x<sup>1</sup> + a2x<sup>2</sup> + a3x<sup>3</sup> + a4x<sup>4</sup>',
+            text: "Write HTML code to display the names of your family members, each in a different color, size, and style. Also, display the following polynomial expression:<br>a0 + a1x<sup>1</sup> + a2x<sup>2</sup> + a3x<sup>3</sup> + a4x<sup>4</sup>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a JavaScript program to accept a username and password from the user. If the username and password are the same, then display his scorecard on the next page as shown below.',
+            text: "Write a JavaScript program to accept a username and password from the user. If the username and password are the same, then display his scorecard on the next page as shown below.",
             marks: 25,
           },
         ],
@@ -1130,12 +1130,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to display the current Day, Date, Month, Year, and Time on the web page and greet the user accordingly.',
+            text: "Write a JavaScript program to display the current Day, Date, Month, Year, and Time on the web page and greet the user accordingly.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page with the following specifications:<br>i) Title should be about your City.<br>ii) Color the background with pink color.<br>iii) Place your city name at the top of the page in large text and in blue color.<br>iv) Add names of the landmarks in your city, each in a different color, style, and font.<br>v) Add scrolling text about your City.<br>vi) Add any image at the bottom. (Use inline CSS to format the web page.)',
+            text: "Create an HTML page with the following specifications:<br>i) Title should be about your City.<br>ii) Color the background with pink color.<br>iii) Place your city name at the top of the page in large text and in blue color.<br>iv) Add names of the landmarks in your city, each in a different color, style, and font.<br>v) Add scrolling text about your City.<br>vi) Add any image at the bottom. (Use inline CSS to format the web page.)",
             marks: 25,
           },
         ],
@@ -1145,12 +1145,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a sentence from the user and alter it as follows: Every space is replaced by * and digits are replaced by ?.',
+            text: "Write a JavaScript code to accept a sentence from the user and alter it as follows: Every space is replaced by * and digits are replaced by ?.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code which generates the following output and display each element of the list in different size, color & font. Use inline CSS to format the list.<br>• Honda<br>  ◦ Petrol<br>    1) Honda City<br>    2) Brio<br>  ◦ Diesel<br>    1) Amaze<br>    2) Brio<br>• Maruti-Suzuki<br>  ◦ Petrol<br>    1) Swift<br>    2) Ritz<br>  ◦ Diesel<br>    1) Swift-Desire',
+            text: "Write HTML code which generates the following output and display each element of the list in different size, color & font. Use inline CSS to format the list.<br>• Honda<br>  ◦ Petrol<br>    1) Honda City<br>    2) Brio<br>  ◦ Diesel<br>    1) Amaze<br>    2) Brio<br>• Maruti-Suzuki<br>  ◦ Petrol<br>    1) Swift<br>    2) Ritz<br>  ◦ Diesel<br>    1) Swift-Desire",
             marks: 25,
           },
         ],
@@ -1160,12 +1160,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a string from the user and display the occurrences of every vowel character from the string.',
+            text: "Write a JavaScript code to accept a string from the user and display the occurrences of every vowel character from the string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Design an HTML form for customer registration visiting a departmental store. The form should consist of fields such as name, contact number, gender, preferred days of purchasing, favorite item (to be selected from a list of items), suggestions, etc. You should provide buttons to submit as well as reset the form contents.',
+            text: "Design an HTML form for customer registration visiting a departmental store. The form should consist of fields such as name, contact number, gender, preferred days of purchasing, favorite item (to be selected from a list of items), suggestions, etc. You should provide buttons to submit as well as reset the form contents.",
             marks: 25,
           },
         ],
@@ -1175,12 +1175,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to accept the value of n and display all odd numbers up to n.',
+            text: "Write a JavaScript program to accept the value of n and display all odd numbers up to n.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write the HTML code which generates the following output. (Use external CSS to format the given table)<br>Book_No Book_Name<br>Price<br> RS Paise<br>101 DBMS 200 50<br>102 C-Prog 150 75<br>103 JAVA 300 00<br>104 PHP 250 50<br>105 ASP 100 00',
+            text: "Write the HTML code which generates the following output. (Use external CSS to format the given table)<br>Book_No Book_Name<br>Price<br> RS Paise<br>101 DBMS 200 50<br>102 C-Prog 150 75<br>103 JAVA 300 00<br>104 PHP 250 50<br>105 ASP 100 00",
             marks: 25,
           },
         ],
@@ -1190,12 +1190,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a number from the user and display its factorial.',
+            text: "Write a JavaScript code to accept a number from the user and display its factorial.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Design an HTML form to take the information of a customer for booking a travel plan consisting of fields such as name, address, contact number, gender, preferred season (checkboxes), location type (to be selected from a list), etc. You should provide buttons to submit as well as reset the form contents. (All the fields should be properly aligned.)',
+            text: "Design an HTML form to take the information of a customer for booking a travel plan consisting of fields such as name, address, contact number, gender, preferred season (checkboxes), location type (to be selected from a list), etc. You should provide buttons to submit as well as reset the form contents. (All the fields should be properly aligned.)",
             marks: 25,
           },
         ],
@@ -1205,12 +1205,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a number n from the user and display the first n terms of the Fibonacci series.',
+            text: "Write a JavaScript code to accept a number n from the user and display the first n terms of the Fibonacci series.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page with the following specifications:<br>i) Title should be about your Car.<br>ii) Color the background with pink color.<br>iii) Place your car name at the top of the page in large text and in green color.<br>iv) Add names of features in your car, each in a different color, style, and font.<br>v) Add scrolling text about your Car.<br>vi) Add any image at the bottom. (Use external CSS to format the web page.)',
+            text: "Create an HTML page with the following specifications:<br>i) Title should be about your Car.<br>ii) Color the background with pink color.<br>iii) Place your car name at the top of the page in large text and in green color.<br>iv) Add names of features in your car, each in a different color, style, and font.<br>v) Add scrolling text about your Car.<br>vi) Add any image at the bottom. (Use external CSS to format the web page.)",
             marks: 25,
           },
         ],
@@ -1220,12 +1220,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept the values of x and y and then display xy.',
+            text: "Write a JavaScript code to accept the values of x and y and then display xy.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code which generates the following output and display each element of the list in different size, color & font. Use internal CSS to format the list.<br>• Coffee<br>• Tea<br>  ◦ Black Tea<br>  ◦ Green Tea<br>    1) Africa<br>    2) China',
+            text: "Write HTML code which generates the following output and display each element of the list in different size, color & font. Use internal CSS to format the list.<br>• Coffee<br>• Tea<br>  ◦ Black Tea<br>  ◦ Green Tea<br>    1) Africa<br>    2) China",
             marks: 25,
           },
         ],
@@ -1235,12 +1235,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a string and write a function to calculate the length of the string.',
+            text: "Write a JavaScript code to accept a string and write a function to calculate the length of the string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page to divide the frames into different sections as shown below and add appropriate HTML files to each frame:<br>First Frame: Your Name and Address<br>Second Frame: Bulleted list of favorite colors<br>Third Frame: Links to favorite sites<br>Fourth Frame: Scrolling Message<br>Fifth Frame: Blinking Reminders<br>Sixth Frame: Image',
+            text: "Create an HTML page to divide the frames into different sections as shown below and add appropriate HTML files to each frame:<br>First Frame: Your Name and Address<br>Second Frame: Bulleted list of favorite colors<br>Third Frame: Links to favorite sites<br>Fourth Frame: Scrolling Message<br>Fifth Frame: Blinking Reminders<br>Sixth Frame: Image",
             marks: 25,
           },
         ],
@@ -1250,12 +1250,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a number and write a function to calculate the sum of digits of that number.',
+            text: "Write a JavaScript code to accept a number and write a function to calculate the sum of digits of that number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to create the following table. (Use external CSS to format the table)<br>Course Fee Structure<br>Year<br> FY SY TY<br>B.Sc.(CS) 20000 25000 30000 2017<br>BCA(Sci) 15000 20000 25000 2018<br>BBA(CA) 25000 30000 35000 2019',
+            text: "Write HTML code to create the following table. (Use external CSS to format the table)<br>Course Fee Structure<br>Year<br> FY SY TY<br>B.Sc.(CS) 20000 25000 30000 2017<br>BCA(Sci) 15000 20000 25000 2018<br>BBA(CA) 25000 30000 35000 2019",
             marks: 25,
           },
         ],
@@ -1265,12 +1265,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript code to accept a number from the user and write a function to calculate the sum of all odd digits of that number.',
+            text: "Write a JavaScript code to accept a number from the user and write a function to calculate the sum of all odd digits of that number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to display the following list. (Use internal CSS to format the list)<br>i. Arts<br>• BA<br>• MA<br>ii. Commerce<br>• Bcom<br>• Mcom<br>iii. Science<br>• B.Sc.<br>• M.Sc.',
+            text: "Write HTML code to display the following list. (Use internal CSS to format the list)<br>i. Arts<br>• BA<br>• MA<br>ii. Commerce<br>• Bcom<br>• Mcom<br>iii. Science<br>• B.Sc.<br>• M.Sc.",
             marks: 25,
           },
         ],
@@ -1280,12 +1280,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript function that reverses an input number.',
+            text: "Write a JavaScript function that reverses an input number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page to divide the frames into different sections as shown below and add appropriate HTML files to each frame:<br>First Frame: Your Name and Address<br>Second Frame: Bulleted list of favorite colors<br>Third Frame: Numbered List of Cities<br>Fourth Frame: Scrolling Message<br>Fifth Frame: Blinking Reminders<br>Sixth Frame: Name of Countries',
+            text: "Create an HTML page to divide the frames into different sections as shown below and add appropriate HTML files to each frame:<br>First Frame: Your Name and Address<br>Second Frame: Bulleted list of favorite colors<br>Third Frame: Numbered List of Cities<br>Fourth Frame: Scrolling Message<br>Fifth Frame: Blinking Reminders<br>Sixth Frame: Name of Countries",
             marks: 25,
           },
         ],
@@ -1295,12 +1295,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript function that checks whether an input string is a palindrome or not.',
+            text: "Write a JavaScript function that checks whether an input string is a palindrome or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML and CSS code to design a web page. Divide the browser screen into two frames. The first frame will display the heading. The second frame contains a menu consisting of hyperlinks. Clicking on any one of these hyperlinks will display related information in a new page.',
+            text: "Write HTML and CSS code to design a web page. Divide the browser screen into two frames. The first frame will display the heading. The second frame contains a menu consisting of hyperlinks. Clicking on any one of these hyperlinks will display related information in a new page.",
             marks: 25,
           },
         ],
@@ -1310,12 +1310,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript function to compute the sum of factors of an input number.',
+            text: "Write a JavaScript function to compute the sum of factors of an input number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to display the calendar of the current month in tabular format. Use proper color for weekdays and holidays. Display the month name, year, and images as advertisement at the beginning of the calendar.',
+            text: "Write HTML code to display the calendar of the current month in tabular format. Use proper color for weekdays and holidays. Display the month name, year, and images as advertisement at the beginning of the calendar.",
             marks: 25,
           },
         ],
@@ -1325,12 +1325,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to construct the following pattern up to n lines, using a nested for loop.<br>*<br>* *<br>* * *',
+            text: "Write a JavaScript program to construct the following pattern up to n lines, using a nested for loop.<br>*<br>* *<br>* * *",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Design an HTML form for Bus Ticket Reservation consisting of fields for Name, Address, contact number, source station (dropdown list), Destination station, Date of booking, Date of journey, number of passengers, name of passenger, gender of passenger, etc. You should provide buttons to submit as well as reset the form contents. (Use proper alignment)',
+            text: "Design an HTML form for Bus Ticket Reservation consisting of fields for Name, Address, contact number, source station (dropdown list), Destination station, Date of booking, Date of journey, number of passengers, name of passenger, gender of passenger, etc. You should provide buttons to submit as well as reset the form contents. (Use proper alignment)",
             marks: 25,
           },
         ],
@@ -1340,12 +1340,12 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript function that accepts three numbers and displays the larger number.',
+            text: "Write a JavaScript function that accepts three numbers and displays the larger number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an HTML page with the following specifications:<br>i) Title should be about your City.<br>ii) Color the background with pink color.<br>iii) Place your city name at the top of the page in large text and in blue color.<br>iv) Add names of the landmarks in your city, each in different color, style, and font.<br>v) Add scrolling text about your City.<br>vi) Add any image at the bottom. (Use Internal CSS to format the web page.)',
+            text: "Create an HTML page with the following specifications:<br>i) Title should be about your City.<br>ii) Color the background with pink color.<br>iii) Place your city name at the top of the page in large text and in blue color.<br>iv) Add names of the landmarks in your city, each in different color, style, and font.<br>v) Add scrolling text about your City.<br>vi) Add any image at the bottom. (Use Internal CSS to format the web page.)",
             marks: 25,
           },
         ],
@@ -1355,28 +1355,28 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Write a JavaScript program to construct the following pattern up to n lines, using a nested for loop.<br>A<br>B C<br>D E F',
+            text: "Write a JavaScript program to construct the following pattern up to n lines, using a nested for loop.<br>A<br>B C<br>D E F",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write HTML code to create the following table. Use External CSS to format the table.<br>College/Courses Arts Commerce<br> UG PG UG PG<br>D. Y. Patil, Pimpri BA MA B.Com M.Com<br>Indira College BA MA BBA(CA) MCA(Commerce)<br>Wadia College BA MA B.Com M.Com(Ecommerce)',
+            text: "Write HTML code to create the following table. Use External CSS to format the table.<br>College/Courses Arts Commerce<br> UG PG UG PG<br>D. Y. Patil, Pimpri BA MA B.Com M.Com<br>Indira College BA MA BBA(CA) MCA(Commerce)<br>Wadia College BA MA B.Com M.Com(Ecommerce)",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'html',
+    language: "html",
   },
   {
-    subject: 'RDBMS',
+    subject: "RDBMS",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Client (client_no, client_name, address, birthdate)<br>Policy_info (policy_no, desc, maturity_amt, prem_amt, date)<br>Relation between Client and Policy_info is Many to Many<br>Constraint: Primary key, prem_amt and maturity_amt should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will return total maturity amount of policies of a particular client.<br>2) Write a cursor which will display policy date wise client details.',
+            text: "Consider the following entities and their relationships:<br>Client (client_no, client_name, address, birthdate)<br>Policy_info (policy_no, desc, maturity_amt, prem_amt, date)<br>Relation between Client and Policy_info is Many to Many<br>Constraint: Primary key, prem_amt and maturity_amt should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will return total maturity amount of policies of a particular client.<br>2) Write a cursor which will display policy date wise client details.",
             marks: 40,
           },
         ],
@@ -1386,7 +1386,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following Item_Supplier database:<br>Item (itemno, itemname)<br>Supplier (supplier_No, supplier_name, address, city)<br>Relationship between Item and Supplier is many-to-many with descriptive attribute rate and quantity.<br>Constraints: itemno, supplier_No primary key.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function to print the total number of suppliers of a particular item.<br>2) Write a trigger which will fire before insert or update on rate and quantity less than or equal to zero. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following Item_Supplier database:<br>Item (itemno, itemname)<br>Supplier (supplier_No, supplier_name, address, city)<br>Relationship between Item and Supplier is many-to-many with descriptive attribute rate and quantity.<br>Constraints: itemno, supplier_No primary key.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function to print the total number of suppliers of a particular item.<br>2) Write a trigger which will fire before insert or update on rate and quantity less than or equal to zero. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1396,7 +1396,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationship:<br>Newspaper (name, language, publisher, cost)<br>Cities (pincode, city, state)<br>Relationship between Newspaper and Cities is many-to-many with descriptive attribute daily required.<br>Constraints: name and pincode primary key.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a trigger which will fire before insert on the cities table which check that the pincode must be of 6 digits. (Raise user defined exception and give appropriate message).<br>2) Write a procedure to calculate city wise total cost of each newspaper.',
+            text: "Consider the following entities and their relationship:<br>Newspaper (name, language, publisher, cost)<br>Cities (pincode, city, state)<br>Relationship between Newspaper and Cities is many-to-many with descriptive attribute daily required.<br>Constraints: name and pincode primary key.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a trigger which will fire before insert on the cities table which check that the pincode must be of 6 digits. (Raise user defined exception and give appropriate message).<br>2) Write a procedure to calculate city wise total cost of each newspaper.",
             marks: 40,
           },
         ],
@@ -1406,7 +1406,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Client (client_no, client_name, address, birthdate)<br>Policy_info (policy_no, desc, maturity_amt, prem_amt, date)<br>Relation between Client and Policy_info is Many to Many.<br>Constraint: Primary key, prem_amt and maturity_amt should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will display all policy details having premium amount less than 5000.<br>2) Write a trigger which will fire before insert or update on policy_info having maturity amount less than premium amount. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Client (client_no, client_name, address, birthdate)<br>Policy_info (policy_no, desc, maturity_amt, prem_amt, date)<br>Relation between Client and Policy_info is Many to Many.<br>Constraint: Primary key, prem_amt and maturity_amt should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will display all policy details having premium amount less than 5000.<br>2) Write a trigger which will fire before insert or update on policy_info having maturity amount less than premium amount. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1416,7 +1416,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Library (Lno, Lname, Location, Librarian, no_of_books)<br>Book (Bid, Bname, Author_Name, Price, publication)<br>Relation between Library and Book is one to many.<br>Constraint: Primary key, Price should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept publication name from user and display total price of books of that publication.<br>2) Write a cursor which will display library wise book details. (Use Parameterized Cursor)',
+            text: "Consider the following entities and their relationships:<br>Library (Lno, Lname, Location, Librarian, no_of_books)<br>Book (Bid, Bname, Author_Name, Price, publication)<br>Relation between Library and Book is one to many.<br>Constraint: Primary key, Price should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept publication name from user and display total price of books of that publication.<br>2) Write a cursor which will display library wise book details. (Use Parameterized Cursor)",
             marks: 40,
           },
         ],
@@ -1446,7 +1446,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Plan (plan_no, plan_name, nooffreecalls, freecalltime, fix_amt)<br>Customer (cust_no, cust_name, mobile_no)<br>Relation between Plan and Customer is One to Many.<br>Constraint: Primary key, fix_amt should be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept plan number from user and display all the details of the selected plan.<br>2) Write a cursor which will display customer wise plan details. (Use Parameterized Cursor).',
+            text: "Consider the following entities and their relationships:<br>Plan (plan_no, plan_name, nooffreecalls, freecalltime, fix_amt)<br>Customer (cust_no, cust_name, mobile_no)<br>Relation between Plan and Customer is One to Many.<br>Constraint: Primary key, fix_amt should be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept plan number from user and display all the details of the selected plan.<br>2) Write a cursor which will display customer wise plan details. (Use Parameterized Cursor).",
             marks: 40,
           },
         ],
@@ -1466,7 +1466,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Gym (Name, city, charges, scheme)<br>Member (ID, Name, phoneNo, address)<br>Relation between Gym and Member is One to Many.<br>Constraint: Primary Key, charges must be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept member id and scheme from user and display charges paid by that member.<br>2) Write a trigger which will fire before insert or update on Gym having charges less than 1000. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Gym (Name, city, charges, scheme)<br>Member (ID, Name, phoneNo, address)<br>Relation between Gym and Member is One to Many.<br>Constraint: Primary Key, charges must be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept member id and scheme from user and display charges paid by that member.<br>2) Write a trigger which will fire before insert or update on Gym having charges less than 1000. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1476,7 +1476,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Student (rollno, sname, class, timetable)<br>Lab (LabNo, LabName, capacity, equipment)<br>Relation between Student and Lab is Many to One.<br>Constraint: Primary Key, capacity should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept Lab number from user and display total number of student allocated in that lab.<br>2) Write a cursor which will display lab wise student details.',
+            text: "Consider the following entities and their relationships:<br>Student (rollno, sname, class, timetable)<br>Lab (LabNo, LabName, capacity, equipment)<br>Relation between Student and Lab is Many to One.<br>Constraint: Primary Key, capacity should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept Lab number from user and display total number of student allocated in that lab.<br>2) Write a cursor which will display lab wise student details.",
             marks: 40,
           },
         ],
@@ -1486,7 +1486,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Wholesaler (w_no, w_name, address, city)<br>Product (product_no, product_name, rate)<br>Relation between Wholesaler and Product is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, rate should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept wholesaler name from user and will display total number of items supplied by him.<br>2) Write a trigger which will fire before insert or update on product having rate less than or equal to zero. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Wholesaler (w_no, w_name, address, city)<br>Product (product_no, product_name, rate)<br>Relation between Wholesaler and Product is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, rate should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept wholesaler name from user and will display total number of items supplied by him.<br>2) Write a trigger which will fire before insert or update on product having rate less than or equal to zero. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1496,7 +1496,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Country (CId, CName, no_of_states, area, location, population)<br>Citizen (Id, Name, mother_toung, state_name)<br>Relation between Country and Citizen is one to many.<br>Constraint: Primary key, area should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will display name of the country having minimum population.<br>2) Write a cursor which will display country wise citizen details.',
+            text: "Consider the following entities and their relationships:<br>Country (CId, CName, no_of_states, area, location, population)<br>Citizen (Id, Name, mother_toung, state_name)<br>Relation between Country and Citizen is one to many.<br>Constraint: Primary key, area should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will display name of the country having minimum population.<br>2) Write a cursor which will display country wise citizen details.",
             marks: 40,
           },
         ],
@@ -1506,7 +1506,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>College (code, college_name, address)<br>Teacher (teacher_id, teacher_name, Qualification, specialization, salary, Desg)<br>Relation between Teacher and College is Many to One.<br>Constraint: Primary Key, qualification should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will accept teacher name from user and display his/her college details.<br>2) Write a trigger which will fire before insert or update on Teacher having salary less than or equal to zero. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>College (code, college_name, address)<br>Teacher (teacher_id, teacher_name, Qualification, specialization, salary, Desg)<br>Relation between Teacher and College is Many to One.<br>Constraint: Primary Key, qualification should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will accept teacher name from user and display his/her college details.<br>2) Write a trigger which will fire before insert or update on Teacher having salary less than or equal to zero. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1526,7 +1526,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Game (game_name, no_of_players, coach_name)<br>Player (pid, pname, address, club_name)<br>Relation between Game and Player is Many to Many.<br>Constraint: Primary key, no_of_players should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will display games details having number of players more than 5.<br>2) Write a trigger which will fire before insert or update on Game having no_of_players less than or equal to zero. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Game (game_name, no_of_players, coach_name)<br>Player (pid, pname, address, club_name)<br>Relation between Game and Player is Many to Many.<br>Constraint: Primary key, no_of_players should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will display games details having number of players more than 5.<br>2) Write a trigger which will fire before insert or update on Game having no_of_players less than or equal to zero. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1536,7 +1536,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following Item_Supplier database:<br>Company (name, address, city, phone, share_value)<br>Person (pname, pcity)<br>Relationship between Company and Person is M to M relationship with descriptive attribute No_of_shares.<br>Constraints: name, pname primary key.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a trigger before insert or update on No_of_shares field should not be zero. (Raise user defined exception and give appropriate message).<br>2) Write a function to display total no_of_shares of a specific person.',
+            text: "Consider the following Item_Supplier database:<br>Company (name, address, city, phone, share_value)<br>Person (pname, pcity)<br>Relationship between Company and Person is M to M relationship with descriptive attribute No_of_shares.<br>Constraints: name, pname primary key.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a trigger before insert or update on No_of_shares field should not be zero. (Raise user defined exception and give appropriate message).<br>2) Write a function to display total no_of_shares of a specific person.",
             marks: 40,
           },
         ],
@@ -1546,7 +1546,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationship:<br>Student (s_reg_no, s_name, s_class)<br>Competition (comp_no, comp_name, comp_type)<br>Relationship between Student and Competition is many-to-many with descriptive attribute rank and year.<br>Constraints: primary key, foreign key, primary key for third table(s_reg_no, comp_no, year), s_name and comp_name should not be null, comp_type can be sports or academic.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept s_reg_no of student and returns total number of competitions in which student has participated in a given year.<br>2) Write a cursor which will display year wise details of competitions. (Use parameterized cursor).',
+            text: "Consider the following entities and their relationship:<br>Student (s_reg_no, s_name, s_class)<br>Competition (comp_no, comp_name, comp_type)<br>Relationship between Student and Competition is many-to-many with descriptive attribute rank and year.<br>Constraints: primary key, foreign key, primary key for third table(s_reg_no, comp_no, year), s_name and comp_name should not be null, comp_type can be sports or academic.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept s_reg_no of student and returns total number of competitions in which student has participated in a given year.<br>2) Write a cursor which will display year wise details of competitions. (Use parameterized cursor).",
             marks: 40,
           },
         ],
@@ -1556,7 +1556,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Game (game_name, no_of_players, coach_name)<br>Player (pid, pname, address, club_name)<br>Relation between Game and Player is Many to Many.<br>Constraint: Primary key, no_of_players should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will return total number of football players of ‘Sports Club’.<br>2) Write a cursor which will display club wise details of players.',
+            text: "Consider the following entities and their relationships:<br>Game (game_name, no_of_players, coach_name)<br>Player (pid, pname, address, club_name)<br>Relation between Game and Player is Many to Many.<br>Constraint: Primary key, no_of_players should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will return total number of football players of ‘Sports Club’.<br>2) Write a cursor which will display club wise details of players.",
             marks: 40,
           },
         ],
@@ -1566,7 +1566,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Driver (driver_id, driver_name, address)<br>Car (license_no, model, year)<br>Relation between Driver and Car is Many to Many with date and time as descriptive attribute.<br>Constraint: Primary key, driver_name should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display car details used on specific day.<br>2) Write a cursor which will display driver wise car details in the year 2018.',
+            text: "Consider the following entities and their relationships:<br>Driver (driver_id, driver_name, address)<br>Car (license_no, model, year)<br>Relation between Driver and Car is Many to Many with date and time as descriptive attribute.<br>Constraint: Primary key, driver_name should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display car details used on specific day.<br>2) Write a cursor which will display driver wise car details in the year 2018.",
             marks: 40,
           },
         ],
@@ -1576,7 +1576,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>College (code, college_name, address)<br>Teacher (teacher_id, teacher_name, Qualification, specialization, salary, Desg)<br>Relation between Teacher and College is Many to One.<br>Constraint: Primary Key, qualification should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept college name from user and display total number of “Ph.D” qualified teachers.<br>2) Write a cursor which will display college wise teacher details.',
+            text: "Consider the following entities and their relationships:<br>College (code, college_name, address)<br>Teacher (teacher_id, teacher_name, Qualification, specialization, salary, Desg)<br>Relation between Teacher and College is Many to One.<br>Constraint: Primary Key, qualification should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will accept college name from user and display total number of “Ph.D” qualified teachers.<br>2) Write a cursor which will display college wise teacher details.",
             marks: 40,
           },
         ],
@@ -1586,7 +1586,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Country (CId, CName, no_of_states, area, location, population)<br>Citizen (Id, Name, mother_toung, state_name)<br>Relation between Country and Citizen is one to many.<br>Constraint: Primary key, area should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display name of citizens having mother toung “Marathi” and from “India”.<br>2) Write a trigger which will fire before insert or update on country having no_of_state less than equal to zero. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Country (CId, CName, no_of_states, area, location, population)<br>Citizen (Id, Name, mother_toung, state_name)<br>Relation between Country and Citizen is one to many.<br>Constraint: Primary key, area should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display name of citizens having mother toung “Marathi” and from “India”.<br>2) Write a trigger which will fire before insert or update on country having no_of_state less than equal to zero. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1596,7 +1596,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Wholesaler (w_no, w_name, address, city)<br>Product (product_no, product_name, rate)<br>Relation between Wholesaler and Product is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, rate should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will display details of products supplied by “Mr. Patil”.<br>2) Write a cursor which will display wholesaler wise product details. (Use Parameterized cursor).',
+            text: "Consider the following entities and their relationships:<br>Wholesaler (w_no, w_name, address, city)<br>Product (product_no, product_name, rate)<br>Relation between Wholesaler and Product is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, rate should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure which will display details of products supplied by “Mr. Patil”.<br>2) Write a cursor which will display wholesaler wise product details. (Use Parameterized cursor).",
             marks: 40,
           },
         ],
@@ -1606,7 +1606,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Student (rollno, sname, class, timetable)<br>Lab (LabNo, LabName, capacity, equipment)<br>Relation between Student and Lab is Many to One.<br>Constraint: Primary Key, capacity should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display details of students which perform practical sessions in a given Lab.<br>2) Write a trigger which will fire before delete on Lab (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Student (rollno, sname, class, timetable)<br>Lab (LabNo, LabName, capacity, equipment)<br>Relation between Student and Lab is Many to One.<br>Constraint: Primary Key, capacity should not be null.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display details of students which perform practical sessions in a given Lab.<br>2) Write a trigger which will fire before delete on Lab (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1616,7 +1616,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Gym (Name, city, charges, scheme)<br>Member (ID, Name, phoneNo, address)<br>Relation between Gym and member is one to many.<br>Constraint: Primary Key, charges must be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display member details of gym located at “Pimpri”.<br>2) Write a cursor which will display gym wise member details. (Use Parameterized Cursor).',
+            text: "Consider the following entities and their relationships:<br>Gym (Name, city, charges, scheme)<br>Member (ID, Name, phoneNo, address)<br>Relation between Gym and member is one to many.<br>Constraint: Primary Key, charges must be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display member details of gym located at “Pimpri”.<br>2) Write a cursor which will display gym wise member details. (Use Parameterized Cursor).",
             marks: 40,
           },
         ],
@@ -1626,7 +1626,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Project (pno, pname, start_date, budget, status)<br>Department (dno, dname, HOD, loc)<br>The relationship between Project and Department is Many to One.<br>Constraint: Primary key.<br>Project Status Constraints: C – Completed, P - Progressive, I – Incomplete<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display the name of HOD who has completed maximum project.<br>2) Write a trigger which will fire before insert or update on project having budget less than or equal to zero. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Project (pno, pname, start_date, budget, status)<br>Department (dno, dname, HOD, loc)<br>The relationship between Project and Department is Many to One.<br>Constraint: Primary key.<br>Project Status Constraints: C – Completed, P - Progressive, I – Incomplete<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display the name of HOD who has completed maximum project.<br>2) Write a trigger which will fire before insert or update on project having budget less than or equal to zero. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1636,7 +1636,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Plan (plan_no, plan_name, nooffreecalls, freecalltime, fix_amt)<br>Customer (cust_no, cust_name, mobile_no)<br>Relation between Plan and Customer is One to Many.<br>Constraint: Primary key, fix_amt should be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display the plan having minimum response.<br>2) Write a trigger which will fire before insert or update on mobile number having length less than or greater than 10. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Plan (plan_no, plan_name, nooffreecalls, freecalltime, fix_amt)<br>Customer (cust_no, cust_name, mobile_no)<br>Relation between Plan and Customer is One to Many.<br>Constraint: Primary key, fix_amt should be greater than 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a procedure to display the plan having minimum response.<br>2) Write a trigger which will fire before insert or update on mobile number having length less than or greater than 10. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1646,7 +1646,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Bill (billno, day, tableno, total)<br>Menu (dish_no, dish_desc, price)<br>The relationship between Bill and Menu is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, price should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which accept a table number and display total amount of bill for a specific table.<br>2) Write a cursor which will display table wise menu details.',
+            text: "Consider the following entities and their relationships:<br>Bill (billno, day, tableno, total)<br>Menu (dish_no, dish_desc, price)<br>The relationship between Bill and Menu is Many to Many with quantity as descriptive attribute.<br>Constraint: Primary key, price should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which accept a table number and display total amount of bill for a specific table.<br>2) Write a cursor which will display table wise menu details.",
             marks: 40,
           },
         ],
@@ -1656,7 +1656,7 @@ const SlipData = [
         questions: [
           {
             questionId: 1,
-            text: 'Consider the following entities and their relationships:<br>Employee (emp_id, emp_name, address)<br>Investment (inv_no, inv_name, inv_date, inv_amount)<br>Relation between Employee and Investment is One to Many.<br>Constraint: Primary key, inv_amount should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will return total investment amount of a particular client.<br>2) Write a trigger which will fire before insert or update on Investment having investment amount less than 50000. (Raise user defined exception and give appropriate message).',
+            text: "Consider the following entities and their relationships:<br>Employee (emp_id, emp_name, address)<br>Investment (inv_no, inv_name, inv_date, inv_amount)<br>Relation between Employee and Investment is One to Many.<br>Constraint: Primary key, inv_amount should be > 0.<br>Create a RDB in 3NF and write PL/SQL blocks in Oracle for the following:<br>1) Write a function which will return total investment amount of a particular client.<br>2) Write a trigger which will fire before insert or update on Investment having investment amount less than 50000. (Raise user defined exception and give appropriate message).",
             marks: 40,
           },
         ],
@@ -1672,10 +1672,10 @@ const SlipData = [
         ],
       },
     ],
-    language: 'plsql',
+    language: "plsql",
   },
   {
-    subject: 'Data Structure',
+    subject: "Data Structure",
     slips: [
       {
         slipId: 1,
@@ -2247,10 +2247,10 @@ const SlipData = [
         ],
       },
     ],
-    language: 'c',
+    language: "c",
   },
   {
-    subject: 'Big Data',
+    subject: "Big Data",
     slips: [
       {
         slipId: 1,
@@ -2610,10 +2610,10 @@ const SlipData = [
         ],
       },
     ],
-    language: 'r',
+    language: "r",
   },
   {
-    subject: 'Php',
+    subject: "Php",
     slips: [
       {
         slipId: 1,
@@ -4881,10 +4881,10 @@ while($row = mysqli_fetch_assoc($result)) {
         ],
       },
     ],
-    language: 'php',
+    language: "php",
   },
   {
-    subject: 'Angular JS',
+    subject: "Angular JS",
     slips: [
       {
         slipId: 1,
@@ -5195,10 +5195,10 @@ while($row = mysqli_fetch_assoc($result)) {
         ],
       },
     ],
-    language: 'javascript',
+    language: "javascript",
   },
   {
-    subject: 'CPP',
+    subject: "CPP",
     slips: [
       {
         slipId: 1,
@@ -5357,12 +5357,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class MyArray, which contains a single dimensional integer array of a given size. Write a member function to display the sum of given array elements. (Use Dynamic Constructor and Destructor).',
+            text: "a) Create a C++ class MyArray, which contains a single dimensional integer array of a given size. Write a member function to display the sum of given array elements. (Use Dynamic Constructor and Destructor).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a base class Student with data members Roll No, Name. Derives two classes from it, class Theory with data members M1, M2, M3, M4 and class Practical with data members P1, P2. Class Result (Total Marks, Percentage, Grade) inherits both Theory and Practical classes. (Use concept of Virtual Base Class and protected access specifiers)<br>Write a C++ menu driven program to perform the following functions:<br>i. Accept Student Information<br>ii. Display Student Information<br>iii. Calculate Total marks, Percentage and Grade.',
+            text: "b) Create a base class Student with data members Roll No, Name. Derives two classes from it, class Theory with data members M1, M2, M3, M4 and class Practical with data members P1, P2. Class Result (Total Marks, Percentage, Grade) inherits both Theory and Practical classes. (Use concept of Virtual Base Class and protected access specifiers)<br>Write a C++ menu driven program to perform the following functions:<br>i. Accept Student Information<br>ii. Display Student Information<br>iii. Calculate Total marks, Percentage and Grade.",
             marks: 25,
           },
         ],
@@ -5372,12 +5372,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to create a class Date with data members day, month, and year. Use default and parameterized constructor to initialize date and display date in dd-Mon-yyyy format. (Example: Input: 04-01-2021 Output: 04-Jan-2021).',
+            text: "a) Write a C++ program to create a class Date with data members day, month, and year. Use default and parameterized constructor to initialize date and display date in dd-Mon-yyyy format. (Example: Input: 04-01-2021 Output: 04-Jan-2021).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class Weight with data members kilogram, gram. Write a C++ program using operator overloading to perform the following functions:<br>i. To accept weight.<br>ii. To display weight in kilogram and gram format.<br>iii. Overload += operator to add two weights.<br>iv. Overload == operator to check equality of two weights.',
+            text: "b) Create a C++ class Weight with data members kilogram, gram. Write a C++ program using operator overloading to perform the following functions:<br>i. To accept weight.<br>ii. To display weight in kilogram and gram format.<br>iii. Overload += operator to add two weights.<br>iv. Overload == operator to check equality of two weights.",
             marks: 25,
           },
         ],
@@ -5387,12 +5387,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to create a class Product with data members Product_id, Product_Name, Qty, Price. Write member functions to accept and display Product information also display the number of objects created for Product class. (Use Static data member and Static member function).',
+            text: "a) Write a C++ program to create a class Product with data members Product_id, Product_Name, Qty, Price. Write member functions to accept and display Product information also display the number of objects created for Product class. (Use Static data member and Static member function).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class Cuboid with data members length, breadth, and height. Write necessary member functions for the following:<br>i. void setvalues(float, float, float) to set values of data members.<br>ii. void getvalues() to display values of data members.<br>iii. float volume() to calculate and return the volume of cuboid.<br>iv. float surface_area() to calculate and return the surface area of cuboid.<br>(Use Inline function).',
+            text: "b) Create a C++ class Cuboid with data members length, breadth, and height. Write necessary member functions for the following:<br>i. void setvalues(float, float, float) to set values of data members.<br>ii. void getvalues() to display values of data members.<br>iii. float volume() to calculate and return the volume of cuboid.<br>iv. float surface_area() to calculate and return the surface area of cuboid.<br>(Use Inline function).",
             marks: 25,
           },
         ],
@@ -5402,12 +5402,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to accept the radius of a Circle. Calculate and display the diameter, circumference as well as area of a Circle. (Use Inline function).',
+            text: "a) Write a C++ program to accept the radius of a Circle. Calculate and display the diameter, circumference as well as area of a Circle. (Use Inline function).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class MyString with data members a character pointer and str_length. (Use new and delete operator). Write a C++ program using operator overloading to perform the following operations:<br>i. To reverse the case of each alphabet from a given string.<br>ii. To compare the length of two strings.<br>iii. To add constant ‘n’ to each alphabet of a string.',
+            text: "b) Create a C++ class MyString with data members a character pointer and str_length. (Use new and delete operator). Write a C++ program using operator overloading to perform the following operations:<br>i. To reverse the case of each alphabet from a given string.<br>ii. To compare the length of two strings.<br>iii. To add constant ‘n’ to each alphabet of a string.",
             marks: 25,
           },
         ],
@@ -5417,12 +5417,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class Fraction with data members Numerator and Denominator. Write a C++ program to calculate and display the sum of two fractions. (Use Constructor).',
+            text: "a) Create a C++ class Fraction with data members Numerator and Denominator. Write a C++ program to calculate and display the sum of two fractions. (Use Constructor).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a C++ class Seller (S_Name, Product_name, Sales_Quantity, Target_Quantity, Month, Commission). Each salesman deals with a separate product and is assigned a target for a month. At the end of the month, his monthly sales is compared with target and commission is calculated as follows:<br> If Sales_Quantity > Target_Quantity then commission is 25% of extra sales made + 10% of target.<br> If Sales_Quantity = Target_Quantity then commission is 10% of target.<br> Otherwise commission is zero.<br>Display salesman information along with commission obtained. (Use array of objects).',
+            text: "b) Write a C++ class Seller (S_Name, Product_name, Sales_Quantity, Target_Quantity, Month, Commission). Each salesman deals with a separate product and is assigned a target for a month. At the end of the month, his monthly sales is compared with target and commission is calculated as follows:<br> If Sales_Quantity > Target_Quantity then commission is 25% of extra sales made + 10% of target.<br> If Sales_Quantity = Target_Quantity then commission is 10% of target.<br> Otherwise commission is zero.<br>Display salesman information along with commission obtained. (Use array of objects).",
             marks: 25,
           },
         ],
@@ -5432,7 +5432,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to create a class Machine with data members Machine_Id, Machine_Name, Price. Create and initialize all values of Machine object by using parameterized constructor and copy constructor. Display details of Machine using setw() and setprecision().',
+            text: "a) Write a C++ program to create a class Machine with data members Machine_Id, Machine_Name, Price. Create and initialize all values of Machine object by using parameterized constructor and copy constructor. Display details of Machine using setw() and setprecision().",
             marks: 15,
           },
           {
@@ -5447,12 +5447,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class MyMatrix. Write a C++ program to accept and display a Matrix. Overload binary ‘-’ operator to calculate the subtraction of two matrices.',
+            text: "a) Create a C++ class MyMatrix. Write a C++ program to accept and display a Matrix. Overload binary ‘-’ operator to calculate the subtraction of two matrices.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Design two base classes Student (S_id, Name, Class) and Competition (C_id, C_Name). Derive a class Stud_Comp (Rank) from it. Write a menu driven program to perform the following functions:<br>i. Accept information.<br>ii. Display information.<br>iii. Display Student Details in the ascending order of Rank of a specified competition.<br>(Use array of objects).',
+            text: "b) Design two base classes Student (S_id, Name, Class) and Competition (C_id, C_Name). Derive a class Stud_Comp (Rank) from it. Write a menu driven program to perform the following functions:<br>i. Accept information.<br>ii. Display information.<br>iii. Display Student Details in the ascending order of Rank of a specified competition.<br>(Use array of objects).",
             marks: 25,
           },
         ],
@@ -5467,7 +5467,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class MyArray with data members:<br>- int *arr<br>- int size<br>Write necessary member functions to accept and display Array elements. Overload the following operators:<br>Operator Example Purpose<br>- (Unary) -Al Reverse array elements.<br>+(Binary) A2=Al+n Add constant n to all array elements.',
+            text: "b) Create a C++ class MyArray with data members:<br>- int *arr<br>- int size<br>Write necessary member functions to accept and display Array elements. Overload the following operators:<br>Operator Example Purpose<br>- (Unary) -Al Reverse array elements.<br>+(Binary) A2=Al+n Add constant n to all array elements.",
             marks: 25,
           },
         ],
@@ -5477,12 +5477,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to create a class Distance with data members meter and centimeter to represent distance. Write a function Larger() to return the larger of two distances. (Use this pointer).',
+            text: "a) Write a C++ program to create a class Distance with data members meter and centimeter to represent distance. Write a function Larger() to return the larger of two distances. (Use this pointer).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ base class Media. Derive two different classes from it, class NewsPaper with data members N_Name, N_Editor, N_Price, No_of_Pages and class Magazine with data members M_Name, M_Editor, M_Price. Write a C++ program to perform the following functions:<br>i. Accept and Display information of all Media.<br>ii. Display the total cost of all Media items.',
+            text: "b) Create a C++ base class Media. Derive two different classes from it, class NewsPaper with data members N_Name, N_Editor, N_Price, No_of_Pages and class Magazine with data members M_Name, M_Editor, M_Price. Write a C++ program to perform the following functions:<br>i. Accept and Display information of all Media.<br>ii. Display the total cost of all Media items.",
             marks: 25,
           },
         ],
@@ -5492,12 +5492,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to create a class Currency with data members Dollar, Cent. Write a member function to add two currency amounts and display the result in Dollar and Cent format.',
+            text: "a) Write a C++ program to create a class Currency with data members Dollar, Cent. Write a member function to add two currency amounts and display the result in Dollar and Cent format.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a base class Rectangle with data members Length and Width. Derive two classes from it, Square (Side) and Circle (Radius). Write a program to compute and display area and perimeter/circumference of Rectangle, Square and Circle.<br>Use pure virtual functions to achieve this. (Use virtual functions and Abstract Class).',
+            text: "b) Create a base class Rectangle with data members Length and Width. Derive two classes from it, Square (Side) and Circle (Radius). Write a program to compute and display area and perimeter/circumference of Rectangle, Square and Circle.<br>Use pure virtual functions to achieve this. (Use virtual functions and Abstract Class).",
             marks: 25,
           },
         ],
@@ -5507,12 +5507,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class Employee with data members Emp_id, Emp_Name, Company_Name and Salary.<br>Write member functions to accept and display Employee information. Design User defined Manipulator to print Salary.<br>(For Salary set right justification, maximum width to 7 and fill remaining spaces with ‘*’).',
+            text: "a) Create a C++ class Employee with data members Emp_id, Emp_Name, Company_Name and Salary.<br>Write member functions to accept and display Employee information. Design User defined Manipulator to print Salary.<br>(For Salary set right justification, maximum width to 7 and fill remaining spaces with ‘*’).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class for a two dimensional points. Write necessary member functions to accept & display the point object. Overload the following operators:<br>Operator Example Purpose<br>+ (Binary) P3=P1+P2 Adds coordinates of point P1 and P2.<br>- (Unary) -P1 Negates coordinates of point P1.<br>*(Binary) P2=P1*n Multiply coordinates of point P1 by constant ‘n’.',
+            text: "b) Create a C++ class for a two dimensional points. Write necessary member functions to accept & display the point object. Overload the following operators:<br>Operator Example Purpose<br>+ (Binary) P3=P1+P2 Adds coordinates of point P1 and P2.<br>- (Unary) -P1 Negates coordinates of point P1.<br>*(Binary) P2=P1*n Multiply coordinates of point P1 by constant ‘n’.",
             marks: 25,
           },
         ],
@@ -5522,12 +5522,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to define two function templates for calculating the square and cube of given numbers with different data types.',
+            text: "a) Write a C++ program to define two function templates for calculating the square and cube of given numbers with different data types.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a C++ program to overload ‘display_str’ function as follows:<br>i. void display_str(char *) - Display a string in double quotes.<br>ii. void display_str(int n, char *) - Display first n characters from a given string.<br>iii. void display_str(int m, int n, char *) - Display substring of a given string from position m to n.',
+            text: "b) Write a C++ program to overload ‘display_str’ function as follows:<br>i. void display_str(char *) - Display a string in double quotes.<br>ii. void display_str(int n, char *) - Display first n characters from a given string.<br>iii. void display_str(int m, int n, char *) - Display substring of a given string from position m to n.",
             marks: 25,
           },
         ],
@@ -5537,12 +5537,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class MyString with data member character pointer. Write a C++ program to accept and display a string. Overload “+” operator to concatenate two strings.',
+            text: "a) Create a C++ class MyString with data member character pointer. Write a C++ program to accept and display a string. Overload “+” operator to concatenate two strings.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class ComplexNumber with data members real and imaginary. Write necessary functions:<br>i. To accept Complex Number using constructor.<br>ii. To display Complex Number in format [x + iy].<br>iii. To add two Complex Numbers by using friend function.',
+            text: "b) Create a C++ class ComplexNumber with data members real and imaginary. Write necessary functions:<br>i. To accept Complex Number using constructor.<br>ii. To display Complex Number in format [x + iy].<br>iii. To add two Complex Numbers by using friend function.",
             marks: 25,
           },
         ],
@@ -5552,12 +5552,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class FixDeposit with data members FD_No, Cust Name, FD_Amt, Interest rate, Maturity amt, Number_of months. Create and Initialize all values of FixDeposit object by using parameterized constructor with default value for interest rate. Calculate maturity amt using interest rate and display all the details.',
+            text: "a) Create a C++ class FixDeposit with data members FD_No, Cust Name, FD_Amt, Interest rate, Maturity amt, Number_of months. Create and Initialize all values of FixDeposit object by using parameterized constructor with default value for interest rate. Calculate maturity amt using interest rate and display all the details.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class InvoiceBill with data members Order_id, O_Date, Customer Name, No_of Products, Prod_Name[], Quantity[], Prod_Price[]. A Customer can buy ‘n’ products. Accept quantity for each product. Generate and Display the bill using appropriate Manipulators. (Use new operator)',
+            text: "b) Create a C++ class InvoiceBill with data members Order_id, O_Date, Customer Name, No_of Products, Prod_Name[], Quantity[], Prod_Price[]. A Customer can buy ‘n’ products. Accept quantity for each product. Generate and Display the bill using appropriate Manipulators. (Use new operator)",
             marks: 25,
           },
         ],
@@ -5568,7 +5568,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to calculate mean, mode and median of three integer numbers. (Use Inline function)',
+            text: "a) Write a C++ program to calculate mean, mode and median of three integer numbers. (Use Inline function)",
             marks: 15,
           },
           {
@@ -5584,12 +5584,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to find average of 3 integer numbers and average of 3 float numbers. (Use function overloading)',
+            text: "a) Write a C++ program to find average of 3 integer numbers and average of 3 float numbers. (Use function overloading)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class Time with data members hours, minutes, seconds. Write a C++ program using operator overloading to perform the following:<br>i. = To check whether two Times are equal or not.<br>ii. >> To accept the time.<br>iii. << To display the time.',
+            text: "b) Create a C++ class Time with data members hours, minutes, seconds. Write a C++ program using operator overloading to perform the following:<br>i. = To check whether two Times are equal or not.<br>ii. >> To accept the time.<br>iii. << To display the time.",
             marks: 25,
           },
         ],
@@ -5600,12 +5600,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a C++ class College, with data members College_Id, College Name, Establishment_year, University_Name. Overload operators >> and << to accept and display College information.',
+            text: "a) Create a C++ class College, with data members College_Id, College Name, Establishment_year, University_Name. Overload operators >> and << to accept and display College information.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a base class Travels with data members T_no, Company_Name. Derive a class Route with data members Route_id, Source, and Destination from Travels class. Also derive a class Reservation with data members Number_of_Seats, Travels_Class, Fare, and Travel_Date from Route.<br>Write a C++ program to perform following necessary member functions:<br>i. Accept details of ‘n’ reservations.<br>ii. Display details of all reservations.<br>iii. Display reservation details of a specified Date.',
+            text: "b) Create a base class Travels with data members T_no, Company_Name. Derive a class Route with data members Route_id, Source, and Destination from Travels class. Also derive a class Reservation with data members Number_of_Seats, Travels_Class, Fare, and Travel_Date from Route.<br>Write a C++ program to perform following necessary member functions:<br>i. Accept details of ‘n’ reservations.<br>ii. Display details of all reservations.<br>iii. Display reservation details of a specified Date.",
             marks: 25,
           },
         ],
@@ -5616,12 +5616,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a C++ program to read array of ‘n’ integers from user and display it in reverse order. (Use Dynamic memory allocation)',
+            text: "a) Write a C++ program to read array of ‘n’ integers from user and display it in reverse order. (Use Dynamic memory allocation)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class Employee with data members Emp_Id, Emp_Name, Mobile_No, Salary. Write necessary member functions for the following:<br>i. Accept details of n employees<br>ii. Display employee details in descending order of their salary.<br>iii. Display details of a particular employee.<br>(Use Array of object and Use appropriate manipulators)',
+            text: "b) Create a C++ class Employee with data members Emp_Id, Emp_Name, Mobile_No, Salary. Write necessary member functions for the following:<br>i. Accept details of n employees<br>ii. Display employee details in descending order of their salary.<br>iii. Display details of a particular employee.<br>(Use Array of object and Use appropriate manipulators)",
             marks: 25,
           },
         ],
@@ -5632,12 +5632,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write C++ program to create a class E_Bill with data members Cust_Name, Meter_ID, No_of Units and Total_Charges. Write member functions to accept and display customer information by calculating charges. (Rules to calculate electricity board charges):<br>- For first 100 units: Rs. 1 per unit<br>- For next 200 units: Rs. 2 per unit<br>- Beyond 300 units: Rs. 5 per unit<br>All users are charged a minimum of Rs.150. If the total charge is more than Rs.250.00 then an additional charge of 15% is added.',
+            text: "a) Write C++ program to create a class E_Bill with data members Cust_Name, Meter_ID, No_of Units and Total_Charges. Write member functions to accept and display customer information by calculating charges. (Rules to calculate electricity board charges):<br>- For first 100 units: Rs. 1 per unit<br>- For next 200 units: Rs. 2 per unit<br>- Beyond 300 units: Rs. 5 per unit<br>All users are charged a minimum of Rs.150. If the total charge is more than Rs.250.00 then an additional charge of 15% is added.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class VisitingStaff with data members Name, No_of Subjects, Name_of Subjects[], Working_hours, Total_Salary. (Number of subjects varies for a Staff). Write a parameterized constructor to initialize the data members and create an array for Name of Subjects dynamically. Display Visiting Staff details by calculating salary. (Assume remuneration Rs. 300 per working hour)',
+            text: "b) Create a C++ class VisitingStaff with data members Name, No_of Subjects, Name_of Subjects[], Working_hours, Total_Salary. (Number of subjects varies for a Staff). Write a parameterized constructor to initialize the data members and create an array for Name of Subjects dynamically. Display Visiting Staff details by calculating salary. (Assume remuneration Rs. 300 per working hour)",
             marks: 25,
           },
         ],
@@ -5648,33 +5648,33 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write C++ program to create two classes Integer Array and Float Array with an array as a data member. Write necessary member functions to accept and display array elements of both the classes. Find and display average of both the arrays. (Use Friend function)',
+            text: "a) Write C++ program to create two classes Integer Array and Float Array with an array as a data member. Write necessary member functions to accept and display array elements of both the classes. Find and display average of both the arrays. (Use Friend function)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a C++ class Marksheet with data members Seat_No, Student_Name, Class, Subject_Name[], Int_Marks[], Ext_Marks[], Total[], Grand_Total, Percentage, Grade. Write member function to accept Student information for 5 subjects. Calculate Total, Grand_Total, Percentage, Grade and use setw(), setprecision() and setfill() to display Marksheet.',
+            text: "b) Create a C++ class Marksheet with data members Seat_No, Student_Name, Class, Subject_Name[], Int_Marks[], Ext_Marks[], Total[], Grand_Total, Percentage, Grade. Write member function to accept Student information for 5 subjects. Calculate Total, Grand_Total, Percentage, Grade and use setw(), setprecision() and setfill() to display Marksheet.",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'cpp',
+    language: "cpp",
   },
   {
-    subject: 'Advance Php',
+    subject: "Advance Php",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script to create a simple calculator that can accept two numbers and perform operations like add, subtract, multiplication. (Use the concept of Class)',
+            text: "a) Write a PHP script to create a simple calculator that can accept two numbers and perform operations like add, subtract, multiplication. (Use the concept of Class)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP script to create student.xml file which contains student roll no, name, address, college and course. Print students detail of specific course in tabular format after accepting course as input.',
+            text: "b) Write a PHP script to create student.xml file which contains student roll no, name, address, college and course. Print students detail of specific course in tabular format after accepting course as input.",
             marks: 25,
           },
         ],
@@ -5684,12 +5684,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script to demonstrate the introspection for examining classes and objects. (use function get_declared_classes(), get_class_methods() and get_class_vars()).',
+            text: "a) Write a PHP script to demonstrate the introspection for examining classes and objects. (use function get_declared_classes(), get_class_methods() and get_class_vars()).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a script to solve following questions (Use “Student.xml” file)<br>i) Create a DOM Document object and load this XML file.<br>ii) Get the output of this Document to the browser.<br>iii) Save this [.XML] document in another format i.e. in [.doc].<br>Write a XML Script to print the names of the student present in “Student.xml” file.',
+            text: "b) Write a script to solve following questions (Use “Student.xml” file)<br>i) Create a DOM Document object and load this XML file.<br>ii) Get the output of this Document to the browser.<br>iii) Save this [.XML] document in another format i.e. in [.doc].<br>Write a XML Script to print the names of the student present in “Student.xml” file.",
             marks: 25,
           },
         ],
@@ -5699,7 +5699,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a Calculator class that can accept two values, then add, subtract, multiply them or divide them on request.<br>For example:<br>$calc = new Calculator(3, 4);<br>echo $calc->add(); // Displays “7”<br>echo $calc->multiply(); // Displays “12”',
+            text: "a) Write a Calculator class that can accept two values, then add, subtract, multiply them or divide them on request.<br>For example:<br>$calc = new Calculator(3, 4);<br>echo $calc->add(); // Displays “7”<br>echo $calc->multiply(); // Displays “12”",
             marks: 15,
           },
           {
@@ -5715,12 +5715,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Define a class Employee having private members — id, name, department, salary. Define parameterized constructors. Create a subclass called “Manager” with private member bonus. Create 3 objects of the Manager class and display the details of the manager having the maximum total salary (salary + bonus).',
+            text: "a) Define a class Employee having private members — id, name, department, salary. Define parameterized constructors. Create a subclass called “Manager” with private member bonus. Create 3 objects of the Manager class and display the details of the manager having the maximum total salary (salary + bonus).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create an XML file which should comprise the following:<br><cricket><br><player>Sachin Tendulkar</player><br><runs>2000</runs><br><wickets>100</wickets><br><noofnotout>20</noofnotout><br></cricket><br>For at least 5 players.<br>Write a PHP script to display the details of players who have scored more than 1200 runs and at least 50 wickets.',
+            text: "b) Create an XML file which should comprise the following:<br><cricket><br><player>Sachin Tendulkar</player><br><runs>2000</runs><br><wickets>100</wickets><br><noofnotout>20</noofnotout><br></cricket><br>For at least 5 players.<br>Write a PHP script to display the details of players who have scored more than 1200 runs and at least 50 wickets.",
             marks: 25,
           },
         ],
@@ -5731,12 +5731,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create an abstract class Shape with methods area() and volume(). Derive three classes rectangle (length, breadth), Circle (radius) and Cylinder (radius, height). Calculate area and volume of all. (Use Method overriding).',
+            text: "a) Create an abstract class Shape with methods area() and volume(). Derive three classes rectangle (length, breadth), Circle (radius) and Cylinder (radius, height). Calculate area and volume of all. (Use Method overriding).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create student table as follows:<br>Student(sno, sname, standard, Marks, per).<br>Write a PHP script to select the student name and print the student’s details of a particular standard.',
+            text: "b) Create student table as follows:<br>Student(sno, sname, standard, Marks, per).<br>Write a PHP script to select the student name and print the student’s details of a particular standard.",
             marks: 25,
           },
         ],
@@ -5746,7 +5746,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script, which will return the following components of the URL (Using response header)<br>http://www.college.com/Science/CS.php<br>List of Components: scheme, host, path<br>Expected output:<br>Scheme: http<br>Host: www.college.com<br>Path: /Science/CS.php',
+            text: "a) Write a PHP script, which will return the following components of the URL (Using response header)<br>http://www.college.com/Science/CS.php<br>List of Components: scheme, host, path<br>Expected output:<br>Scheme: http<br>Host: www.college.com<br>Path: /Science/CS.php",
             marks: 15,
           },
           {
@@ -5762,12 +5762,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Define an Interface which has methods gmtokg() & kgtogm(). Create a Class Convert which implements this interface & converts the value kg to gm and gm to kg.',
+            text: "a) Define an Interface which has methods gmtokg() & kgtogm(). Create a Class Convert which implements this interface & converts the value kg to gm and gm to kg.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Consider the following relational database:<br>Project (P_Group_No, Project_Title)<br>Student (Seat_no, Name, Class, P_Group_No)<br>Write an Ajax script to accept project title and display a list of students who are working on a particular project.',
+            text: "b) Consider the following relational database:<br>Project (P_Group_No, Project_Title)<br>Student (Seat_no, Name, Class, P_Group_No)<br>Write an Ajax script to accept project title and display a list of students who are working on a particular project.",
             marks: 25,
           },
         ],
@@ -5778,12 +5778,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script to create class Shape and its subclasses Triangle, Square, Circle and display the area of the selected shape (use concept of inheritance).',
+            text: "a) Write a PHP script to create class Shape and its subclasses Triangle, Square, Circle and display the area of the selected shape (use concept of inheritance).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write an Ajax script to get player details from an XML file when the user selects a player name. Create an XML file to store details of the player (name, country, wickets, and runs).',
+            text: "b) Write an Ajax script to get player details from an XML file when the user selects a player name. Create an XML file to store details of the player (name, country, wickets, and runs).",
             marks: 25,
           },
         ],
@@ -5794,12 +5794,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP program to create a Class Calculator which will accept two values from the user and pass them as arguments through a parameterized constructor and do the following tasks:<br>a) Add<br>b) Subtract<br>c) Multiply them together or divide them on request.',
+            text: "a) Write a PHP program to create a Class Calculator which will accept two values from the user and pass them as arguments through a parameterized constructor and do the following tasks:<br>a) Add<br>b) Subtract<br>c) Multiply them together or divide them on request.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Consider the following entities and their relationships:<br>Movie(movie_no, movie_name, release_year)<br>Actor(actor_no, name)<br>Relationship between movie and actor is many-to-many with attribute rate in Rs.<br>Create a RDB in 3NF. Using three radio buttons (accept, insert, update)<br>Write an Ajax script to accept an actor name and display names of movies in which he has acted.',
+            text: "b) Consider the following entities and their relationships:<br>Movie(movie_no, movie_name, release_year)<br>Actor(actor_no, name)<br>Relationship between movie and actor is many-to-many with attribute rate in Rs.<br>Create a RDB in 3NF. Using three radio buttons (accept, insert, update)<br>Write an Ajax script to accept an actor name and display names of movies in which he has acted.",
             marks: 25,
           },
         ],
@@ -5810,12 +5810,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script to demonstrate the concept of Introspection for examining objects. (Using any 3 predefined functions).',
+            text: "a) Write a PHP script to demonstrate the concept of Introspection for examining objects. (Using any 3 predefined functions).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP script to perform the following stack-related operations: insert, delete, and display (Use concept of self-processing form).',
+            text: "b) Write a PHP script to perform the following stack-related operations: insert, delete, and display (Use concept of self-processing form).",
             marks: 25,
           },
         ],
@@ -5825,7 +5825,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP program to create a class Circle having a radius data member and two member functions find_circumference() and find_area(). Display area and circumference depending on user’s preference.',
+            text: "a) Write a PHP program to create a class Circle having a radius data member and two member functions find_circumference() and find_area(). Display area and circumference depending on user’s preference.",
             marks: 15,
           },
           {
@@ -5841,7 +5841,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP program to convert temperature Fahrenheit to Celsius using a sticky form.',
+            text: "a) Write a PHP program to convert temperature Fahrenheit to Celsius using a sticky form.",
             marks: 15,
           },
           {
@@ -5857,12 +5857,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a form to accept Employee details and display it on the next page. (Use sticky form concept).',
+            text: "a) Create a form to accept Employee details and display it on the next page. (Use sticky form concept).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a web application that contains Voter details and checks proper validation for (name, age, and nationality), as Name should be in uppercase letters only, Age should not be less than 18 years, and Nationality should be Indian. (Use HTML-AJAX-PHP).',
+            text: "b) Create a web application that contains Voter details and checks proper validation for (name, age, and nationality), as Name should be in uppercase letters only, Age should not be less than 18 years, and Nationality should be Indian. (Use HTML-AJAX-PHP).",
             marks: 25,
           },
         ],
@@ -5873,12 +5873,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script to accept a string from the user and then display the accepted string in reverse order. (Use concept of self-processing form).',
+            text: "a) Write a PHP script to accept a string from the user and then display the accepted string in reverse order. (Use concept of self-processing form).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP script using AJAX concept to check if the username and password are valid or invalid (Use database to store username and password).',
+            text: "b) Write a PHP script using AJAX concept to check if the username and password are valid or invalid (Use database to store username and password).",
             marks: 25,
           },
         ],
@@ -5889,12 +5889,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP program to select a list of subjects from a list box and display the selected subject information on the next page. (Use sticky multivalued parameter).',
+            text: "a) Write a PHP program to select a list of subjects from a list box and display the selected subject information on the next page. (Use sticky multivalued parameter).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP script using AJAX concept to give hints to the user when they type a city name in the text field.',
+            text: "b) Write a PHP script using AJAX concept to give hints to the user when they type a city name in the text field.",
             marks: 25,
           },
         ],
@@ -5904,12 +5904,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP program to accept two strings from the user and check whether the entered strings are matching or not. (Use sticky form concept).<br>',
+            text: "a) Write a PHP program to accept two strings from the user and check whether the entered strings are matching or not. (Use sticky form concept).<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write an Ajax program to carry out validation for a username entered in a textbox. If the textbox is blank, print ‘Enter username’. If the number of characters is less than three, print ‘Username is too short’. If the value entered is appropriate, print ‘Valid username’.<br>',
+            text: "b) Write an Ajax program to carry out validation for a username entered in a textbox. If the textbox is blank, print ‘Enter username’. If the number of characters is less than three, print ‘Username is too short’. If the value entered is appropriate, print ‘Valid username’.<br>",
             marks: 25,
           },
         ],
@@ -5920,7 +5920,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script to display server information in table format (Use $_SERVER).<br>',
+            text: "a) Write a PHP script to display server information in table format (Use $_SERVER).<br>",
             marks: 15,
           },
           {
@@ -5935,7 +5935,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP program to create a simple distance calculator that can accept distance in meters from the user. Convert it into centimeters or kilometers according to user preference. (Use radio buttons and Self Processing form).<br>',
+            text: "a) Write a PHP program to create a simple distance calculator that can accept distance in meters from the user. Convert it into centimeters or kilometers according to user preference. (Use radio buttons and Self Processing form).<br>",
             marks: 15,
           },
           {
@@ -5951,12 +5951,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create an XML document and parse the XML data into an array.<br>',
+            text: "a) Create an XML document and parse the XML data into an array.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write an Ajax program to get book details from an XML file when the user selects a book name. Create an XML file to store details of books (name, author, year, and price).<br>',
+            text: "b) Write an Ajax program to get book details from an XML file when the user selects a book name. Create an XML file to store details of books (name, author, year, and price).<br>",
             marks: 25,
           },
         ],
@@ -5967,12 +5967,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create an XML file which gives details of movies available in “Venus CD Store” from the following categories: a) Classical b) Action c) Horror. Elements in each category are in the following format:<br><Category><Movie Name>----</Movie Name><Release Year>----</Release Year><Actor Name>----</Actor Name></Category> Save the file with the name “movies.xml”.<br>',
+            text: "a) Create an XML file which gives details of movies available in “Venus CD Store” from the following categories: a) Classical b) Action c) Horror. Elements in each category are in the following format:<br><Category><Movie Name>----</Movie Name><Release Year>----</Release Year><Actor Name>----</Actor Name></Category> Save the file with the name “movies.xml”.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP script for the following: Design a form to accept a number from the user. Perform the operations and show the results:<br>1) Fibonacci Series.<br>2) To find the sum of the digits of that number.<br>(Use the concept of self-processing page.)<br>',
+            text: "b) Write a PHP script for the following: Design a form to accept a number from the user. Perform the operations and show the results:<br>1) Fibonacci Series.<br>2) To find the sum of the digits of that number.<br>(Use the concept of self-processing page.)<br>",
             marks: 25,
           },
         ],
@@ -5982,12 +5982,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a script to create an XML file named “Course.xml”<br><Course><Computer Science><Student name>...</Student name></Class name><percentage>...</percentage></Computer Science></Course><br>Store the details of 5 students who are in SYBBA(CA).<br>',
+            text: "a) Write a script to create an XML file named “Course.xml”<br><Course><Computer Science><Student name>...</Student name></Class name><percentage>...</percentage></Computer Science></Course><br>Store the details of 5 students who are in SYBBA(CA).<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a class Student with data members Roll No, Name, PRN number. Derive class Marks from Student with data members M_PHP, M_OS, M_CPP, M_Networking and derive a class Result from class Marks with members (Total Marks, Percentage, Grade). (Use Interface Concept)<br>Write a Menu driven program in PHP to perform the following operations:<br>i. Accept Student Information<br>ii. Display Student Information with its result<br>',
+            text: "b) Create a class Student with data members Roll No, Name, PRN number. Derive class Marks from Student with data members M_PHP, M_OS, M_CPP, M_Networking and derive a class Result from class Marks with members (Total Marks, Percentage, Grade). (Use Interface Concept)<br>Write a Menu driven program in PHP to perform the following operations:<br>i. Accept Student Information<br>ii. Display Student Information with its result<br>",
             marks: 25,
           },
         ],
@@ -5997,12 +5997,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create an XML file which gives details of books available in “Pragati Bookstore” from the following categories:<br>1) Yoga<br>2) Story<br>3) Technical<br>and elements in each category are in the following format:<br><Book><Book_Title>...</Book_Title><Book_Author>...</Book_Author><Book_Price>...</Book_Price></Book><br>Save the file as “Bookcategory.xml”<br>',
+            text: "a) Create an XML file which gives details of books available in “Pragati Bookstore” from the following categories:<br>1) Yoga<br>2) Story<br>3) Technical<br>and elements in each category are in the following format:<br><Book><Book_Title>...</Book_Title><Book_Author>...</Book_Author><Book_Price>...</Book_Price></Book><br>Save the file as “Bookcategory.xml”<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Basic Page in Drupal titled “About Me”. Add the details about yourself in the page. Also place this page link in the Main Menu. Display this menu link before all the menu items. Show text “This is <your name>” when you move the mouse pointer at this menu link.<br>',
+            text: "b) Create a Basic Page in Drupal titled “About Me”. Add the details about yourself in the page. Also place this page link in the Main Menu. Display this menu link before all the menu items. Show text “This is <your name>” when you move the mouse pointer at this menu link.<br>",
             marks: 25,
           },
         ],
@@ -6012,12 +6012,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create an application that reads “Sports.xml” file into a simple XML object. Display attributes and elements. (Hint: Use simplexml_load_file() function)<br>',
+            text: "a) Create an application that reads “Sports.xml” file into a simple XML object. Display attributes and elements. (Hint: Use simplexml_load_file() function)<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write an Ajax program to print Movie details by selecting an Actor’s name.<br>Create table MOVIE and ACTOR as follows with 1:M cardinality:<br>MOVIE (mno, mname, release_yr) and ACTOR (ano, aname)<br>',
+            text: "b) Write an Ajax program to print Movie details by selecting an Actor’s name.<br>Create table MOVIE and ACTOR as follows with 1:M cardinality:<br>MOVIE (mno, mname, release_yr) and ACTOR (ano, aname)<br>",
             marks: 25,
           },
         ],
@@ -6032,7 +6032,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'b) Create a Basic Page in Drupal titled “DepartmentPortal”. Add the details about Departments and Teacher details in the page. Also place this page link in the Main Menu.<br>',
+            text: "b) Create a Basic Page in Drupal titled “DepartmentPortal”. Add the details about Departments and Teacher details in the page. Also place this page link in the Main Menu.<br>",
             marks: 25,
           },
         ],
@@ -6042,12 +6042,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a script to create “vehicle.xml” file with multiple elements as given below:<br><Vehicle><Type=Two Wheeler><Vehicle_Name>...</Vehicle_Name><Company>...</Company><Color>...</Color><Average>...</Average></Type></Vehicle><br>Also add Type=“Four Wheeler” and its elements.<br>',
+            text: "a) Write a script to create “vehicle.xml” file with multiple elements as given below:<br><Vehicle><Type=Two Wheeler><Vehicle_Name>...</Vehicle_Name><Company>...</Company><Color>...</Color><Average>...</Average></Type></Vehicle><br>Also add Type=“Four Wheeler” and its elements.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP program to implement Create, Read, Update, and Display operations on Teacher table with attributes (tid, tname, address, subject). (Use Radio Buttons)<br>',
+            text: "b) Write a PHP program to implement Create, Read, Update, and Display operations on Teacher table with attributes (tid, tname, address, subject). (Use Radio Buttons)<br>",
             marks: 25,
           },
         ],
@@ -6057,12 +6057,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a simple PHP program which implements Ajax for the addition of two numbers.<br>',
+            text: "a) Write a simple PHP program which implements Ajax for the addition of two numbers.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a front-page article in Drupal titled “My Article”. Write an article about PHP programming Language and add it to the article page. Display an Image appropriate to the Article at the bottom of the Article. Also, place this page link in the Main Menu. Display this menu link before all the menu items. Show text “This is <your name>” when you move the mouse pointer at this menu link. Also post a comment about your article.<br>',
+            text: "b) Create a front-page article in Drupal titled “My Article”. Write an article about PHP programming Language and add it to the article page. Display an Image appropriate to the Article at the bottom of the Article. Also, place this page link in the Main Menu. Display this menu link before all the menu items. Show text “This is <your name>” when you move the mouse pointer at this menu link. Also post a comment about your article.<br>",
             marks: 25,
           },
         ],
@@ -6073,12 +6073,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a simple PHP program which implements Ajax for the Factorial of a number.<br>',
+            text: "a) Write a simple PHP program which implements Ajax for the Factorial of a number.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP script to read book.xml and print book details in tabular format using simple XML. (Content of book.xml are book_code, book_name, author, year, price).<br>',
+            text: "b) Write a PHP script to read book.xml and print book details in tabular format using simple XML. (Content of book.xml are book_code, book_name, author, year, price).<br>",
             marks: 25,
           },
         ],
@@ -6089,12 +6089,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write an Ajax program to display a list of games stored in an array on clicking the OK button.<br>',
+            text: "a) Write an Ajax program to display a list of games stored in an array on clicking the OK button.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Block in Drupal titled “CollegeSite™”. The block should be displayed on the left side of each page. The block should contain an announcement about an upcoming event in your college. Also, change the theme of your website by following properties:<br>a) Change the background color.<br>b) Change the logo image.<br>',
+            text: "b) Create a Block in Drupal titled “CollegeSite™”. The block should be displayed on the left side of each page. The block should contain an announcement about an upcoming event in your college. Also, change the theme of your website by following properties:<br>a) Change the background color.<br>b) Change the logo image.<br>",
             marks: 25,
           },
         ],
@@ -6105,12 +6105,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a PHP script using Ajax concept to develop a user-friendly and interactive search engine (like a Google search engine).<br>',
+            text: "a) Write a PHP script using Ajax concept to develop a user-friendly and interactive search engine (like a Google search engine).<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Write a PHP Script to create a super class Vehicle having members Company and price. Derive 2 different classes:<br>LightMotorVehicle (members — mileage)<br>HeavyMotorVehicle (members — capacity-in-tons).<br>Define 5 Objects of each subclass and display details in a table format.<br>',
+            text: "b) Write a PHP Script to create a super class Vehicle having members Company and price. Derive 2 different classes:<br>LightMotorVehicle (members — mileage)<br>HeavyMotorVehicle (members — capacity-in-tons).<br>Define 5 Objects of each subclass and display details in a table format.<br>",
             marks: 25,
           },
         ],
@@ -6121,21 +6121,21 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Derive a class Rectangle from class Square. Create one more class Triangle. Create an interface with only one method called cal_area (). Implement this interface in all the classes. Include appropriate data members and constructors in all classes. Write a program to accept details of a Rectangle, Square, and Triangle and display the area.<br>',
+            text: "a) Derive a class Rectangle from class Square. Create one more class Triangle. Create an interface with only one method called cal_area (). Implement this interface in all the classes. Include appropriate data members and constructors in all classes. Write a program to accept details of a Rectangle, Square, and Triangle and display the area.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Develop a module in Drupal to create a page showing your contact details (name, roll_no, address, and phone). Also, add Navigation on the Home Page called “Contact Details”.<br>',
+            text: "b) Develop a module in Drupal to create a page showing your contact details (name, roll_no, address, and phone). Also, add Navigation on the Home Page called “Contact Details”.<br>",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'php',
+    language: "php",
   },
   {
-    subject: 'Node JS',
+    subject: "Node JS",
     slips: [
       {
         slipId: 1,
@@ -6157,12 +6157,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that uses a user-defined module to return the factorial of a given number.<br>',
+            text: "a) Create a Node.js application that uses a user-defined module to return the factorial of a given number.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Node.js application that contains the Employee Registration details and write JavaScript to validate DOB, Joining Date, and Salary.<br>',
+            text: "b) Create a Node.js application that contains the Employee Registration details and write JavaScript to validate DOB, Joining Date, and Salary.<br>",
             marks: 25,
           },
         ],
@@ -6172,12 +6172,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that uses a user-defined module circle.js which exports the functions area() and circumference() and display the details on the console.<br>',
+            text: "a) Create a Node.js application that uses a user-defined module circle.js which exports the functions area() and circumference() and display the details on the console.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Node.js application for validating a student registration form.<br>',
+            text: "b) Create a Node.js application for validating a student registration form.<br>",
             marks: 25,
           },
         ],
@@ -6187,12 +6187,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that accepts the first name, last name, and date of birth of a person and define a module that concatenates firstName and lastName and also calculates the age of the person.<br>',
+            text: "a) Create a Node.js application that accepts the first name, last name, and date of birth of a person and define a module that concatenates firstName and lastName and also calculates the age of the person.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a SYBBA(CA) Teachers Profile System.<br>',
+            text: "b) Using Node.js, create a SYBBA(CA) Teachers Profile System.<br>",
             marks: 25,
           },
         ],
@@ -6202,7 +6202,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that performs the following operations on Buffer data:<br> a. Concat<br> b. Compare<br> c. Copy<br>',
+            text: "a) Create a Node.js application that performs the following operations on Buffer data:<br> a. Concat<br> b. Compare<br> c. Copy<br>",
             marks: 15,
           },
           {
@@ -6217,7 +6217,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js file that opens the requested file and returns the content to the client. If anything goes wrong, throw a 404 error.<br>',
+            text: "a) Create a Node.js file that opens the requested file and returns the content to the client. If anything goes wrong, throw a 404 error.<br>",
             marks: 15,
           },
           {
@@ -6232,7 +6232,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Using Node.js, create a web page to read two file names from the user and append the contents of the first file into the second file.<br>',
+            text: "a) Using Node.js, create a web page to read two file names from the user and append the contents of the first file into the second file.<br>",
             marks: 15,
           },
           {
@@ -6247,7 +6247,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Using Node.js, create a web page to read two file names from the user and combine them in a third file with all content in uppercase.<br>',
+            text: "a) Using Node.js, create a web page to read two file names from the user and combine them in a third file with all content in uppercase.<br>",
             marks: 15,
           },
           {
@@ -6262,12 +6262,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js file that writes an HTML form with an upload field.<br>',
+            text: "a) Create a Node.js file that writes an HTML form with an upload field.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a recipe book.<br>',
+            text: "b) Using Node.js, create a recipe book.<br>",
             marks: 25,
           },
         ],
@@ -6277,12 +6277,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to download a JPG image from the server.<br>',
+            text: "a) Create a Node.js application to download a JPG image from the server.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Node.js application that displays a department-employee relationship with a 1:M cardinality and shows the minimum, maximum, and average salary of employees for each department name.<br>',
+            text: "b) Create a Node.js application that displays a department-employee relationship with a 1:M cardinality and shows the minimum, maximum, and average salary of employees for each department name.<br>",
             marks: 25,
           },
         ],
@@ -6292,12 +6292,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a simple web server using Node.js that shows the college information.<br>',
+            text: "a) Create a simple web server using Node.js that shows the college information.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a Computer Science department portal.<br>',
+            text: "b) Using Node.js, create a Computer Science department portal.<br>",
             marks: 25,
           },
         ],
@@ -6307,12 +6307,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that binds two listeners to a single event.<br>',
+            text: "a) Create a Node.js application that binds two listeners to a single event.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a user login system.<br>',
+            text: "b) Using Node.js, create a user login system.<br>",
             marks: 25,
           },
         ],
@@ -6322,7 +6322,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application using a user-defined Rectangle module to find the area of a rectangle and display the details on the console.<br>',
+            text: "a) Create a Node.js application using a user-defined Rectangle module to find the area of a rectangle and display the details on the console.<br>",
             marks: 15,
           },
           {
@@ -6337,12 +6337,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to search for a particular word in a file and display the result on the console.<br>',
+            text: "a) Create a Node.js application to search for a particular word in a file and display the result on the console.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an electricity bill calculation system.<br>',
+            text: "b) Using Node.js, create an electricity bill calculation system.<br>",
             marks: 25,
           },
         ],
@@ -6352,12 +6352,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to count the occurrence of a given word in a file and display the count on the console.<br>',
+            text: "a) Create a Node.js application to count the occurrence of a given word in a file and display the count on the console.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an eLearning system.<br>',
+            text: "b) Using Node.js, create an eLearning system.<br>",
             marks: 25,
           },
         ],
@@ -6367,7 +6367,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js file named main.js for an event-driven application. There should be a main loop that listens for events, and then triggers a callback function when one of those events is detected.<br>',
+            text: "a) Create a Node.js file named main.js for an event-driven application. There should be a main loop that listens for events, and then triggers a callback function when one of those events is detected.<br>",
             marks: 15,
           },
           {
@@ -6382,12 +6382,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a Node.js application that transfers a file as an attachment on the web and enables the browser to prompt the user to download the file using Express.js.<br>',
+            text: "a) Write a Node.js application that transfers a file as an attachment on the web and enables the browser to prompt the user to download the file using Express.js.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, display the employee details ordered by salary in a table format.<br>',
+            text: "b) Using Node.js, display the employee details ordered by salary in a table format.<br>",
             marks: 25,
           },
         ],
@@ -6402,7 +6402,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an application that contains voter details and checks proper validation for (name, age, and nationality), such as Name should be in uppercase letters only, Age should not be less than 18 years, and Nationality should be Indian, and store the data in a database.<br>',
+            text: "b) Using Node.js, create an application that contains voter details and checks proper validation for (name, age, and nationality), such as Name should be in uppercase letters only, Age should not be less than 18 years, and Nationality should be Indian, and store the data in a database.<br>",
             marks: 25,
           },
         ],
@@ -6412,7 +6412,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a Node.js application that shows some information when your Node.js application gets started, a warning when it tries to open an existing file, and an error message if the specified file is not found.<br>',
+            text: "a) Write a Node.js application that shows some information when your Node.js application gets started, a warning when it tries to open an existing file, and an error message if the specified file is not found.<br>",
             marks: 15,
           },
           {
@@ -6427,12 +6427,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Write a Node.js application containing an event handler to open and read the contents of a file.<br>',
+            text: "a) Write a Node.js application containing an event handler to open and read the contents of a file.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an application that shows the SY BBA(CA) course structure.<br>',
+            text: "b) Using Node.js, create an application that shows the SY BBA(CA) course structure.<br>",
             marks: 25,
           },
         ],
@@ -6447,7 +6447,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an application that shows the mini statement of a particular account (customer table).<br>',
+            text: "b) Using Node.js, create an application that shows the mini statement of a particular account (customer table).<br>",
             marks: 25,
           },
         ],
@@ -6457,12 +6457,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to count the number of lines in a file and display the count on the console.<br>',
+            text: "a) Create a Node.js application to count the number of lines in a file and display the count on the console.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an application to perform the following operations on a customer account (minimum balance should be maintained at 1000 and use the customer table):<br>1. Withdraw the amount<br>2. Balance enquiry<br>',
+            text: "b) Using Node.js, create an application to perform the following operations on a customer account (minimum balance should be maintained at 1000 and use the customer table):<br>1. Withdraw the amount<br>2. Balance enquiry<br>",
             marks: 25,
           },
         ],
@@ -6472,7 +6472,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to search for a particular word in a file and replace all occurrences of that word with another word and bold all.<br>',
+            text: "a) Create a Node.js application to search for a particular word in a file and replace all occurrences of that word with another word and bold all.<br>",
             marks: 15,
           },
           {
@@ -6487,12 +6487,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that raises and binds an event by returning an EventEmitter object from a function.<br>',
+            text: "a) Create a Node.js application that raises and binds an event by returning an EventEmitter object from a function.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a historical place portal.<br>',
+            text: "b) Using Node.js, create a historical place portal.<br>",
             marks: 25,
           },
         ],
@@ -6502,12 +6502,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that waits until the promise returns the result using the wait function.<br>',
+            text: "a) Create a Node.js application that waits until the promise returns the result using the wait function.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create an application that shows the events of the day.<br>',
+            text: "b) Using Node.js, create an application that shows the events of the day.<br>",
             marks: 25,
           },
         ],
@@ -6517,12 +6517,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that raises and binds an event by extending the EventEmitter class.<br>',
+            text: "a) Create a Node.js application that raises and binds an event by extending the EventEmitter class.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a department store portal.<br>',
+            text: "b) Using Node.js, create a department store portal.<br>",
             marks: 25,
           },
         ],
@@ -6532,12 +6532,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to create a directory and list the contents of the directory.<br>',
+            text: "a) Create a Node.js application to create a directory and list the contents of the directory.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Node.js application that contains student registration details and write a JavaScript function to validate the DOB, mobile number, and email address.<br>',
+            text: "b) Create a Node.js application that contains student registration details and write a JavaScript function to validate the DOB, mobile number, and email address.<br>",
             marks: 25,
           },
         ],
@@ -6547,12 +6547,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application to check whether a given name is a file or directory. If it is a file, truncate the content after 10 bytes.<br>',
+            text: "a) Create a Node.js application to check whether a given name is a file or directory. If it is a file, truncate the content after 10 bytes.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a user login system with a forgot password option that allows setting a new password.<br>',
+            text: "b) Using Node.js, create a user login system with a forgot password option that allows setting a new password.<br>",
             marks: 25,
           },
         ],
@@ -6562,12 +6562,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application using a user-defined Rectangle module to find the area of a rectangle and display the details on the console.<br>',
+            text: "a) Create a Node.js application using a user-defined Rectangle module to find the area of a rectangle and display the details on the console.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Using Node.js, create a matrimonial portal.<br>',
+            text: "b) Using Node.js, create a matrimonial portal.<br>",
             marks: 25,
           },
         ],
@@ -6577,21 +6577,21 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'a) Create a Node.js application that uses a user-defined module circle.js which exports the functions area() and circumference() and displays the details on the console.<br>',
+            text: "a) Create a Node.js application that uses a user-defined module circle.js which exports the functions area() and circumference() and displays the details on the console.<br>",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'b) Create a Node.js file that demonstrates creating a database and a Hospital table (hReg, hName, address, contact) in MySQL.<br>',
+            text: "b) Create a Node.js file that demonstrates creating a database and a Hospital table (hReg, hName, address, contact) in MySQL.<br>",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'javascript',
+    language: "javascript",
   },
   {
-    subject: 'Core Java',
+    subject: "Core Java",
     slips: [
       {
         slipId: 1,
@@ -6661,7 +6661,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a java program to display following pattern: <br> 5 <br> 4 5<br> 3 4 5<br> 2 3 4 5<br> 1 2 3 4 5',
+            text: "Write a java program to display following pattern: <br> 5 <br> 4 5<br> 3 4 5<br> 2 3 4 5<br> 1 2 3 4 5",
             marks: 15,
           },
           {
@@ -6894,7 +6894,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Construct a Linked List containing name: CPP, Java, Python and PHP. Then extend your java program to do the following: <br/>i. Display the contents of the List using an Iterator <br/>ii. Display the contents of the List in reverse order using a ListIterator',
+            text: "Construct a Linked List containing name: CPP, Java, Python and PHP. Then extend your java program to do the following: <br/>i. Display the contents of the List using an Iterator <br/>ii. Display the contents of the List in reverse order using a ListIterator",
             marks: 25,
           },
         ],
@@ -6969,7 +6969,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Create a package named Series having three different classes to print series: <br/>i. Fibonacci series <br/>ii. Cube of numbers <br/>iii. Square of numbers <br/>Write a java program to generate ‘n’ terms of the above series',
+            text: "Create a package named Series having three different classes to print series: <br/>i. Fibonacci series <br/>ii. Cube of numbers <br/>iii. Square of numbers <br/>Write a java program to generate ‘n’ terms of the above series",
             marks: 25,
           },
         ],
@@ -7050,10 +7050,10 @@ while($row = mysqli_fetch_assoc($result)) {
         ],
       },
     ],
-    language: 'java',
+    language: "java",
   },
   {
-    subject: 'Python',
+    subject: "Python",
     slips: [
       {
         slipId: 1,
@@ -7121,7 +7121,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Python script using class, which has two methods get_String and print_String. get_String accept a string from the user and print_String print the string in upper case',
+            text: "Write a Python script using class, which has two methods get_String and print_String. get_String accept a string from the user and print_String print the string in upper case",
             marks: 15,
           },
           {
@@ -7426,7 +7426,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Write a Python script to Create a Class which Performs Basic Calculator Operations.',
+            text: "Write a Python script to Create a Class which Performs Basic Calculator Operations.",
             marks: 25,
           },
         ],
@@ -7507,10 +7507,10 @@ while($row = mysqli_fetch_assoc($result)) {
         ],
       },
     ],
-    language: 'python',
+    language: "python",
   },
   {
-    subject: 'MongoDB',
+    subject: "MongoDB",
     slips: [
       {
         slipId: 1,
@@ -8315,22 +8315,22 @@ while($row = mysqli_fetch_assoc($result)) {
         ],
       },
     ],
-    language: 'json',
+    language: "json",
   },
   {
-    subject: 'Advance Java',
+    subject: "Advance Java",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to scroll the text from left to right and vice versa continuously.',
+            text: "Write a Java program to scroll the text from left to right and vice versa continuously.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a socket program in Java for a chatting application. (Use Swing)',
+            text: "Write a socket program in Java for a chatting application. (Use Swing)",
             marks: 25,
           },
         ],
@@ -8340,12 +8340,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP program to check whether a given number is Perfect or not. (Use Include directive).',
+            text: "Write a JSP program to check whether a given number is Perfect or not. (Use Include directive).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program in multithreading using an applet for drawing a flag.',
+            text: "Write a Java program in multithreading using an applet for drawing a flag.",
             marks: 25,
           },
         ],
@@ -8355,12 +8355,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a socket program in Java to check whether a given number is prime or not. Display the result on the client terminal.',
+            text: "Write a socket program in Java to check whether a given number is prime or not. Display the result on the client terminal.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program using an applet for a bouncing ball. For each bounce, the color of the ball should change randomly.',
+            text: "Write a Java program using an applet for a bouncing ball. For each bounce, the color of the ball should change randomly.",
             marks: 25,
           },
         ],
@@ -8375,7 +8375,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET program that provides information about an HTTP request from a client, such as IP address and browser type. The servlet also provides information about the server on which the servlet is running, such as the operating system type, and the names of currently loaded servlets.',
+            text: "Write a SERVLET program that provides information about an HTTP request from a client, such as IP address and browser type. The servlet also provides information about the server on which the servlet is running, such as the operating system type, and the names of currently loaded servlets.",
             marks: 25,
           },
         ],
@@ -8385,12 +8385,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP program to calculate the sum of the first and last digit of a given number. Display the sum in Red Color with font size 18.',
+            text: "Write a JSP program to calculate the sum of the first and last digit of a given number. Display the sum in Red Color with font size 18.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program in multithreading using applet for Traffic signal.',
+            text: "Write a Java program in multithreading using applet for Traffic signal.",
             marks: 25,
           },
         ],
@@ -8400,12 +8400,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to blink an image on the Frame continuously.',
+            text: "Write a Java program to blink an image on the Frame continuously.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET program which counts how many times a user has visited a web page. If the user is visiting the page for the first time, display a welcome message. If the user is revisiting the page, display the number of times visited. (Use Cookie)',
+            text: "Write a SERVLET program which counts how many times a user has visited a web page. If the user is visiting the page for the first time, display a welcome message. If the user is revisiting the page, display the number of times visited. (Use Cookie)",
             marks: 25,
           },
         ],
@@ -8415,12 +8415,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP script to validate a given E-Mail ID.',
+            text: "Write a JSP script to validate a given E-Mail ID.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Multithreading program in Java to display the numbers between 1 to 100 continuously in a TextField by clicking on a button. (Use Runnable Interface).',
+            text: "Write a Multithreading program in Java to display the numbers between 1 to 100 continuously in a TextField by clicking on a button. (Use Runnable Interface).",
             marks: 25,
           },
         ],
@@ -8430,12 +8430,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java Program to display all the employee names whose initial character of their name is ‘A’.',
+            text: "Write a Java Program to display all the employee names whose initial character of their name is ‘A’.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program in multithreading using applet for a Digital watch.',
+            text: "Write a Java program in multithreading using applet for a Digital watch.",
             marks: 25,
           },
         ],
@@ -8445,12 +8445,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java Program to create an Emp (ENo, EName, Sal) table and insert records into it using PreparedStatement Interface.',
+            text: "Write a Java Program to create an Emp (ENo, EName, Sal) table and insert records into it using PreparedStatement Interface.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a JSP program to create an online shopping mall. Users must be allowed to make purchases from two pages. Each page should have a page total. The third page should display a bill, which consists of the page total of whatever purchases have been made and print the total. (Use Session)',
+            text: "Write a JSP program to create an online shopping mall. Users must be allowed to make purchases from two pages. Each page should have a page total. The third page should display a bill, which consists of the page total of whatever purchases have been made and print the total. (Use Session)",
             marks: 25,
           },
         ],
@@ -8465,7 +8465,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET program to display the details of a Product (ProdCode, PName, Price) on the browser in tabular format. (Use database)',
+            text: "Write a SERVLET program to display the details of a Product (ProdCode, PName, Price) on the browser in tabular format. (Use database)",
             marks: 25,
           },
         ],
@@ -8475,12 +8475,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to display the IP Address and name of the client machine.',
+            text: "Write a Java program to display the IP Address and name of the client machine.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program to display sales details of Product (PID, PName, Qty, Rate, Amount) between two selected dates. (Assume Sales table is already created).',
+            text: "Write a Java program to display sales details of Product (PID, PName, Qty, Rate, Amount) between two selected dates. (Assume Sales table is already created).",
             marks: 25,
           },
         ],
@@ -8490,12 +8490,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to count the number of records in a table.',
+            text: "Write a Java program to count the number of records in a table.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program in Java which will show the lifecycle (creation, sleep, and dead) of a thread. The program should print randomly the name of the thread and the value of the sleep time. The name of the thread should be hard-coded through the constructor. The sleep time of a thread will be a random integer in the range 0 to 4999.',
+            text: "Write a program in Java which will show the lifecycle (creation, sleep, and dead) of a thread. The program should print randomly the name of the thread and the value of the sleep time. The name of the thread should be hard-coded through the constructor. The sleep time of a thread will be a random integer in the range 0 to 4999.",
             marks: 25,
           },
         ],
@@ -8505,12 +8505,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to display the name of the currently executing Thread in multithreading.',
+            text: "Write a Java program to display the name of the currently executing Thread in multithreading.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a JSP program to display the details of College (CollegeID, Coll_Name, Address) in tabular form on the browser.',
+            text: "Write a JSP program to display the details of College (CollegeID, Coll_Name, Address) in tabular form on the browser.",
             marks: 25,
           },
         ],
@@ -8520,12 +8520,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP program to accept Name and Age of Voter and check whether he is eligible for voting or not.',
+            text: "Write a JSP program to accept Name and Age of Voter and check whether he is eligible for voting or not.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program to display given extension files from a specific directory on the server machine.',
+            text: "Write a Java program to display given extension files from a specific directory on the server machine.",
             marks: 25,
           },
         ],
@@ -8535,12 +8535,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to display each alphabet after 2 seconds between ‘a’ to ‘z’.',
+            text: "Write a Java program to display each alphabet after 2 seconds between ‘a’ to ‘z’.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program to accept the details of Student (RNo, SName, Per, Gender, Class) and store them into the database. (Use appropriate Swing Components and PreparedStatement Interface).',
+            text: "Write a Java program to accept the details of Student (RNo, SName, Per, Gender, Class) and store them into the database. (Use appropriate Swing Components and PreparedStatement Interface).",
             marks: 25,
           },
         ],
@@ -8555,7 +8555,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Write a Java program to accept the details of students (rno, sname, per) for at least 5 records, store them into the database, and display the details of the student with the highest percentage. (Use PreparedStatement Interface).',
+            text: "Write a Java program to accept the details of students (rno, sname, per) for at least 5 records, store them into the database, and display the details of the student with the highest percentage. (Use PreparedStatement Interface).",
             marks: 25,
           },
         ],
@@ -8565,7 +8565,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to accept a String from the user and display each vowel from the String after 3 seconds.',
+            text: "Write a Java program to accept a String from the user and display each vowel from the String after 3 seconds.",
             marks: 15,
           },
           {
@@ -8580,12 +8580,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to calculate the factorial of a number. (Use sleep() method).',
+            text: "Write a Java program to calculate the factorial of a number. (Use sleep() method).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program for a simple standalone chatting application.',
+            text: "Write a Java program for a simple standalone chatting application.",
             marks: 25,
           },
         ],
@@ -8595,12 +8595,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP program which accepts UserName in a TextBox and greets the user according to the time on the server machine.',
+            text: "Write a JSP program which accepts UserName in a TextBox and greets the user according to the time on the server machine.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program to display the first record from the student table (rno, sname, per) onto the TextFields by clicking on a button. (Assume Student table is already created).',
+            text: "Write a Java program to display the first record from the student table (rno, sname, per) onto the TextFields by clicking on a button. (Assume Student table is already created).",
             marks: 25,
           },
         ],
@@ -8610,12 +8610,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JDBC program to delete the details of a given employee (ENo, EName, Salary). Accept employee ID through the command line.',
+            text: "Write a JDBC program to delete the details of a given employee (ENo, EName, Salary). Accept employee ID through the command line.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program in multithreading using applet for drawing a temple.',
+            text: "Write a Java program in multithreading using applet for drawing a temple.",
             marks: 25,
           },
         ],
@@ -8625,12 +8625,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to display the name and priority of a Thread.',
+            text: "Write a Java program to display the name and priority of a Thread.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET program in Java to accept details of a student (SeatNo, Stud_Name, Class, Total_Marks). Calculate percentage and grade obtained and display details on the page.',
+            text: "Write a SERVLET program in Java to accept details of a student (SeatNo, Stud_Name, Class, Total_Marks). Calculate percentage and grade obtained and display details on the page.",
             marks: 25,
           },
         ],
@@ -8640,12 +8640,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to display the Date and Time of the Server machine on the client machine.',
+            text: "Write a Java program to display the Date and Time of the Server machine on the client machine.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a JSP program to accept the details of an Account (ANo, Type, Bal) and store it into the database and display it in tabular form.',
+            text: "Write a JSP program to accept the details of an Account (ANo, Type, Bal) and store it into the database and display it in tabular form.",
             marks: 25,
           },
         ],
@@ -8655,12 +8655,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java Program to display the details of a College (CID, CName, Address, Year) on a JTable.',
+            text: "Write a Java Program to display the details of a College (CID, CName, Address, Year) on a JTable.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET application to accept username and password, search them in the database, if found then display an appropriate message on the browser, otherwise display an error message.',
+            text: "Write a SERVLET application to accept username and password, search them in the database, if found then display an appropriate message on the browser, otherwise display an error message.",
             marks: 25,
           },
         ],
@@ -8670,12 +8670,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create a JSP page to accept a number from a user and display it in words: Example: 123 – One Two Three. The output should be in red color.',
+            text: "Create a JSP page to accept a number from a user and display it in words: Example: 123 – One Two Three. The output should be in red color.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a menu-driven program in Java for the following: Assume Emp table with attributes (ENo, EName, Salary, Desg) is already created.\n1. Insert\n2. Update\n3. Delete\n4. Search\n5. Display\n6. Exit.',
+            text: "Write a menu-driven program in Java for the following: Assume Emp table with attributes (ENo, EName, Salary, Desg) is already created.\n1. Insert\n2. Update\n3. Delete\n4. Search\n5. Display\n6. Exit.",
             marks: 25,
           },
         ],
@@ -8685,12 +8685,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to accept a number through the client terminal, send it to the Server, and the Server calculates its factors and sends it back to the client.',
+            text: "Write a Java program to accept a number through the client terminal, send it to the Server, and the Server calculates its factors and sends it back to the client.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java Program for the following: Assume database is already created.',
+            text: "Write a Java Program for the following: Assume database is already created.",
             marks: 25,
           },
         ],
@@ -8700,12 +8700,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program to display a list of college names from the college table. (Assume College table (CID, CName, addr) is already created.)',
+            text: "Write a Java program to display a list of college names from the college table. (Assume College table (CID, CName, addr) is already created.)",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET program to design an HTML page containing 4 option buttons (Painting, Drawing, Singing, Swimming) and 2 buttons (Reset and Submit). When the user clicks Submit, the server responds by adding a cookie containing the selected hobby and sends the HTML page to the client. Program should not allow duplicate cookies to be written.',
+            text: "Write a SERVLET program to design an HTML page containing 4 option buttons (Painting, Drawing, Singing, Swimming) and 2 buttons (Reset and Submit). When the user clicks Submit, the server responds by adding a cookie containing the selected hobby and sends the HTML page to the client. Program should not allow duplicate cookies to be written.",
             marks: 25,
           },
         ],
@@ -8715,12 +8715,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP script to accept the details of a Teacher (TID, TName, Desg, Subject, Qualification) and display it on the browser. Use appropriate controls for accepting data.',
+            text: "Write a JSP script to accept the details of a Teacher (TID, TName, Desg, Subject, Qualification) and display it on the browser. Use appropriate controls for accepting data.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java Program for the implementation of a scrollable ResultSet. Assume Teacher table with attributes (TID, TName, Salary, Subject) is already created.',
+            text: "Write a Java Program for the implementation of a scrollable ResultSet. Assume Teacher table with attributes (TID, TName, Salary, Subject) is already created.",
             marks: 25,
           },
         ],
@@ -8730,12 +8730,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program for the implementation of synchronization.',
+            text: "Write a Java program for the implementation of synchronization.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program to design a following screen: [Details of screen design would be provided here]',
+            text: "Write a Java program to design a following screen: [Details of screen design would be provided here]",
             marks: 25,
           },
         ],
@@ -8745,12 +8745,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Java program using multithreading for the following:\n1. Display all the odd numbers between 1 to n.\n2. Display all the prime numbers between 1 to n.',
+            text: "Write a Java program using multithreading for the following:\n1. Display all the odd numbers between 1 to n.\n2. Display all the prime numbers between 1 to n.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a SERVLET program to change the inactive time interval of a session.',
+            text: "Write a SERVLET program to change the inactive time interval of a session.",
             marks: 25,
           },
         ],
@@ -8760,33 +8760,33 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a JSP script to accept a String from a user and display it in reverse order.',
+            text: "Write a JSP script to accept a String from a user and display it in reverse order.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a Java program in multithreading using applet for moving a car.',
+            text: "Write a Java program in multithreading using applet for moving a car.",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'java',
+    language: "java",
   },
   {
-    subject: 'Android Programming',
+    subject: "Android Programming",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Create a Simple Application which sends a ‘Hello’ message from one activity to another with the help of a Button (Use Intent).',
+            text: "Create a Simple Application which sends a ‘Hello’ message from one activity to another with the help of a Button (Use Intent).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to demonstrate a Progress Dialog Box using AsyncTask.',
+            text: "Create an Android application to demonstrate a Progress Dialog Box using AsyncTask.",
             marks: 25,
           },
         ],
@@ -8796,12 +8796,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create a Simple Application which demonstrates the Life Cycle of an Activity.',
+            text: "Create a Simple Application which demonstrates the Life Cycle of an Activity.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that demonstrates DatePicker and DatePickerDialog.',
+            text: "Create an Android application that demonstrates DatePicker and DatePickerDialog.",
             marks: 25,
           },
         ],
@@ -8811,12 +8811,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create a simple application which reads a positive number from the user and displays its factorial value in another activity.',
+            text: "Create a simple application which reads a positive number from the user and displays its factorial value in another activity.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that plays an audio (song) in the background. The audio will not be stopped even if you switch to another activity. To stop the audio, you need to stop the service.',
+            text: "Create an Android application that plays an audio (song) in the background. The audio will not be stopped even if you switch to another activity. To stop the audio, you need to stop the service.",
             marks: 25,
           },
         ],
@@ -8826,12 +8826,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android app that reads student details (Name, Surname, Class, Gender, Hobbies, Marks) and displays all information in another activity in table format on click of the Submit button.',
+            text: "Create an Android app that reads student details (Name, Surname, Class, Gender, Hobbies, Marks) and displays all information in another activity in table format on click of the Submit button.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to display the satellite view of the current location using Google Maps.',
+            text: "Create an Android application to display the satellite view of the current location using Google Maps.",
             marks: 25,
           },
         ],
@@ -8841,12 +8841,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application that will change the color of the college name on click of a push button and change the font size and font style of the text view using XML.',
+            text: "Create an Android application that will change the color of the college name on click of a push button and change the font size and font style of the text view using XML.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to find the factorial of a number and display the result in an alert box.',
+            text: "Create an Android application to find the factorial of a number and display the result in an alert box.",
             marks: 25,
           },
         ],
@@ -8856,12 +8856,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create a simple application that performs arithmetic operations using ConstraintLayout.',
+            text: "Create a simple application that performs arithmetic operations using ConstraintLayout.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that sends a notification on click of a button and displays the notification message on the second activity.',
+            text: "Create an Android application that sends a notification on click of a button and displays the notification message on the second activity.",
             marks: 25,
           },
         ],
@@ -8871,12 +8871,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application to accept two numbers and find the power and average. Display the result on the next activity on button click.',
+            text: "Create an Android application to accept two numbers and find the power and average. Display the result on the next activity on button click.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application for performing the following operations on the table Customer (id, name, address, phno) using SQLite database:<br> i) Insert new customer details.<br> ii) Show all the customer details on a toast message.',
+            text: "Create an Android application for performing the following operations on the table Customer (id, name, address, phno) using SQLite database:<br> i) Insert new customer details.<br> ii) Show all the customer details on a toast message.",
             marks: 25,
           },
         ],
@@ -8886,7 +8886,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application to demonstrate a phone call using implicit intent.',
+            text: "Create an Android application to demonstrate a phone call using implicit intent.",
             marks: 15,
           },
           {
@@ -8901,12 +8901,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Design the following screens using TableLayout. Display the entered text using Toast.',
+            text: "Design the following screens using TableLayout. Display the entered text using Toast.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an application to send an SMS message to a friend. After sending the message, display the delivery report of the message.',
+            text: "Create an application to send an SMS message to a friend. After sending the message, display the delivery report of the message.",
             marks: 25,
           },
         ],
@@ -8916,12 +8916,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application to perform Zoom In, Zoom Out operations and display Satellite view on Google Maps.',
+            text: "Create an Android application to perform Zoom In, Zoom Out operations and display Satellite view on Google Maps.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an application to perform the following operations on the table Game (gno, gname, type, no_of_players):<br> i) Update no_of_players to four where the game is Badminton.<br> ii) Display all the records.',
+            text: "Create an application to perform the following operations on the table Game (gno, gname, type, no_of_players):<br> i) Update no_of_players to four where the game is Badminton.<br> ii) Display all the records.",
             marks: 25,
           },
         ],
@@ -8931,12 +8931,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application that demonstrates Radio Button.',
+            text: "Create an Android application that demonstrates Radio Button.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that demonstrates ListView. On click of a List item, display a Toast.',
+            text: "Create an Android application that demonstrates ListView. On click of a List item, display a Toast.",
             marks: 25,
           },
         ],
@@ -8946,12 +8946,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Design screens using RadioButtons & CheckBoxes. Display the selected text using Toast.',
+            text: "Design screens using RadioButtons & CheckBoxes. Display the selected text using Toast.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to search a specific location on Google Maps.',
+            text: "Write a program to search a specific location on Google Maps.",
             marks: 25,
           },
         ],
@@ -8961,12 +8961,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android app with a Login Screen. On successful login, display a message to go to the next activity (without using a database and use TableLayout).',
+            text: "Create an Android app with a Login Screen. On successful login, display a message to go to the next activity (without using a database and use TableLayout).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to perform the following operations on the table Student (Sid, Sname, phno). Use auto-increment for Sid:<br> a) Add Student and display its information.<br> b) Delete Student.',
+            text: "Create an Android application to perform the following operations on the table Student (Sid, Sname, phno). Use auto-increment for Sid:<br> a) Add Student and display its information.<br> b) Delete Student.",
             marks: 25,
           },
         ],
@@ -8976,12 +8976,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application to send an email with an attachment.',
+            text: "Create an Android application to send an email with an attachment.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to demonstrate how to use a service to download a file from the Internet on click of a Download button. Once done, the service should notify the activity via a broadcast receiver that the download is complete.',
+            text: "Create an Android application to demonstrate how to use a service to download a file from the Internet on click of a Download button. Once done, the service should notify the activity via a broadcast receiver that the download is complete.",
             marks: 25,
           },
         ],
@@ -8991,12 +8991,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Design an Android layout and add a border to it.',
+            text: "Design an Android layout and add a border to it.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to search a specific location on Google Maps.',
+            text: "Create an Android application to search a specific location on Google Maps.",
             marks: 25,
           },
         ],
@@ -9006,12 +9006,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create a vertical ScrollView in Android.',
+            text: "Create a vertical ScrollView in Android.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that demonstrates TimePicker and displays the selected time on a TextView.',
+            text: "Create an Android application that demonstrates TimePicker and displays the selected time on a TextView.",
             marks: 25,
           },
         ],
@@ -9021,12 +9021,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application to construct an image switcher using setFactory().',
+            text: "Create an Android application to construct an image switcher using setFactory().",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that demonstrates ContextMenu.',
+            text: "Create an Android application that demonstrates ContextMenu.",
             marks: 25,
           },
         ],
@@ -9036,12 +9036,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an Android application to accept two numbers from the user, display them, but reject input if both numbers are greater than 10 and ask for two new numbers.',
+            text: "Write an Android application to accept two numbers from the user, display them, but reject input if both numbers are greater than 10 and ask for two new numbers.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a program to find the specific location of an Android device and display details of the place like address line and city with Geocoding.',
+            text: "Write a program to find the specific location of an Android device and display details of the place like address line and city with Geocoding.",
             marks: 25,
           },
         ],
@@ -9051,12 +9051,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an Android code to merge two given Array/List.',
+            text: "Write an Android code to merge two given Array/List.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a simple calculator using LinearLayout.',
+            text: "Create a simple calculator using LinearLayout.",
             marks: 25,
           },
         ],
@@ -9066,12 +9066,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an Android application to change the image displayed on the screen.',
+            text: "Write an Android application to change the image displayed on the screen.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application to perform string operations according to user selection of radio buttons.',
+            text: "Create an Android application to perform string operations according to user selection of radio buttons.",
             marks: 25,
           },
         ],
@@ -9081,12 +9081,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an Android program to demonstrate Date Picker Dialog in Android.',
+            text: "Write an Android program to demonstrate Date Picker Dialog in Android.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create table Game (no, name, type, no_of_players). Create an application to perform the following operations:<br> i) Update no_of_players to four where game is Badminton.<br> ii) Display all the records.',
+            text: "Create table Game (no, name, type, no_of_players). Create an application to perform the following operations:<br> i) Update no_of_players to four where game is Badminton.<br> ii) Display all the records.",
             marks: 25,
           },
         ],
@@ -9096,12 +9096,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create a simple application which shows greeting information to the user.',
+            text: "Create a simple application which shows greeting information to the user.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that demonstrates GridView. On click of an item, display a Toast.',
+            text: "Create an Android application that demonstrates GridView. On click of an item, display a Toast.",
             marks: 25,
           },
         ],
@@ -9111,12 +9111,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an Android program to demonstrate Date Picker Dialog in Android on click of EditText.',
+            text: "Write an Android program to demonstrate Date Picker Dialog in Android on click of EditText.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an Android application that demonstrates a custom ListView which shows the BookName and Author Name.',
+            text: "Create an Android application that demonstrates a custom ListView which shows the BookName and Author Name.",
             marks: 25,
           },
         ],
@@ -9126,12 +9126,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application that demonstrates Switch and Toggle Button.',
+            text: "Create an Android application that demonstrates Switch and Toggle Button.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create table Company (id, name, address, phno). Create an application for performing the following operations on the table:<br> a) Insert new company details.<br> b) Show all the company details.',
+            text: "Create table Company (id, name, address, phno). Create an application for performing the following operations on the table:<br> a) Insert new company details.<br> b) Show all the company details.",
             marks: 25,
           },
         ],
@@ -9141,12 +9141,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application that demonstrates RatingBar and displays the number of stars selected on Toast and TextView.',
+            text: "Create an Android application that demonstrates RatingBar and displays the number of stars selected on Toast and TextView.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create table Employee (Eno, Ename, Designation, Salary). Create an Android application for performing the following operations on the table (using SQLite database):<br> i) Insert new employee details.<br> ii) Display all the employee details.',
+            text: "Create table Employee (Eno, Ename, Designation, Salary). Create an Android application for performing the following operations on the table (using SQLite database):<br> i) Insert new employee details.<br> ii) Display all the employee details.",
             marks: 25,
           },
         ],
@@ -9156,12 +9156,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application to accept a number and display the multiplication table (use TableLayout).',
+            text: "Create an Android application to accept a number and display the multiplication table (use TableLayout).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create the following layout using Spinner.',
+            text: "Create the following layout using Spinner.",
             marks: 25,
           },
         ],
@@ -9171,12 +9171,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an Android program to perform Zoom In, Zoom Out operation and display Hybrid view on Google Maps.',
+            text: "Write an Android program to perform Zoom In, Zoom Out operation and display Hybrid view on Google Maps.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Construct an Android application to accept a number and calculate Factorial and Sum of Digits of a given number using Context Menu.',
+            text: "Construct an Android application to accept a number and calculate Factorial and Sum of Digits of a given number using Context Menu.",
             marks: 25,
           },
         ],
@@ -9186,12 +9186,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an Android application that reads the person and greet message from one activity and displays the greet message on another activity on click of a button (use Intent).',
+            text: "Create an Android application that reads the person and greet message from one activity and displays the greet message on another activity on click of a button (use Intent).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a custom ListView in an Android application.',
+            text: "Create a custom ListView in an Android application.",
             marks: 25,
           },
         ],
@@ -9201,12 +9201,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create an application to accept movie details like Name, Release Year, Collection and display the same information on the next activity.',
+            text: "Create an application to accept movie details like Name, Release Year, Collection and display the same information on the next activity.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Construct an application to accept a number and calculate Palindrome and Reverse of a number using Menu.',
+            text: "Construct an application to accept a number and calculate Palindrome and Reverse of a number using Menu.",
             marks: 25,
           },
         ],
@@ -9216,33 +9216,33 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Create the first activity to accept information like Student First Name, Middle Name, Last Name, Date of Birth, Address, Email ID and display all information on the second activity when the user clicks on the Submit button.',
+            text: "Create the first activity to accept information like Student First Name, Middle Name, Last Name, Date of Birth, Address, Email ID and display all information on the second activity when the user clicks on the Submit button.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create table Employee (Eno, Ename, Designation, Salary). Create an Android application for performing the following operations on the table (using SQLite database):<br> i) Insert new employee details.<br> ii) Display all the employee details.',
+            text: "Create table Employee (Eno, Ename, Designation, Salary). Create an Android application for performing the following operations on the table (using SQLite database):<br> i) Insert new employee details.<br> ii) Display all the employee details.",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'java',
+    language: "java",
   },
   {
-    subject: 'Dot Net Framework',
+    subject: "Dot Net Framework",
     slips: [
       {
         slipId: 1,
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.Net program to display the numbers continuously in a TextBox by clicking on a Button.',
+            text: "Write a VB.Net program to display the numbers continuously in a TextBox by clicking on a Button.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.Net program to accept the details of Employee (ENO, EName, Salary) and store them into the database and display them in a GridView control.',
+            text: "Write a VB.Net program to accept the details of Employee (ENO, EName, Salary) and store them into the database and display them in a GridView control.",
             marks: 25,
           },
         ],
@@ -9252,12 +9252,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.Net program to move the text “Pune University” continuously from Left to Right and Vice Versa.',
+            text: "Write a VB.Net program to move the text “Pune University” continuously from Left to Right and Vice Versa.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a C#.Net program to create a base class Department and derived classes Sales and Human Resource. Accept the details of both departments and display them in proper format.',
+            text: "Write a C#.Net program to create a base class Department and derived classes Sales and Human Resource. Accept the details of both departments and display them in proper format.",
             marks: 25,
           },
         ],
@@ -9267,12 +9267,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C# .Net to create a function for the sum of two numbers.',
+            text: "Write a program in C# .Net to create a function for the sum of two numbers.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to create a teacher table (Tid, TName, subject). Insert the records (Max: 5). Search for a teacher whose name is “Seeta” and display the result.',
+            text: "Write a VB.NET program to create a teacher table (Tid, TName, subject). Insert the records (Max: 5). Search for a teacher whose name is “Seeta” and display the result.",
             marks: 25,
           },
         ],
@@ -9282,12 +9282,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Design a VB.NET form to pick a date from DateTimePicker Control and display day, month, and year in separate text boxes.',
+            text: "Design a VB.NET form to pick a date from DateTimePicker Control and display day, month, and year in separate text boxes.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a web application to insert 3 records into a SQL database table with the following fields: (DeptId, DeptName, EmpName, Salary). Update the salary for any one employee, increasing it by 15% of the present salary. Perform a delete operation on one row of the database table.',
+            text: "Create a web application to insert 3 records into a SQL database table with the following fields: (DeptId, DeptName, EmpName, Salary). Update the salary for any one employee, increasing it by 15% of the present salary. Perform a delete operation on one row of the database table.",
             marks: 25,
           },
         ],
@@ -9297,12 +9297,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program to accept a character from the keyboard and check whether it is a vowel or consonant. Also, display the case of that character.',
+            text: "Write a VB.NET program to accept a character from the keyboard and check whether it is a vowel or consonant. Also, display the case of that character.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Design a web application form in ASP.Net with fields for loan amount, interest rate, and duration. Calculate the simple interest and perform necessary validations, ensuring data has been entered for each field and checking for non-numeric values. Use suitable web-form controls.',
+            text: "Design a web application form in ASP.Net with fields for loan amount, interest rate, and duration. Calculate the simple interest and perform necessary validations, ensuring data has been entered for each field and checking for non-numeric values. Use suitable web-form controls.",
             marks: 25,
           },
         ],
@@ -9312,12 +9312,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an ASP.Net program that displays the names of some flowers in two columns. Bind a label to the RadioButtonList so that when the user selects an option from the list and clicks on a button, the label displays the flower selected by the user.',
+            text: "Write an ASP.Net program that displays the names of some flowers in two columns. Bind a label to the RadioButtonList so that when the user selects an option from the list and clicks on a button, the label displays the flower selected by the user.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to create a movie table (Mv_Name, Release_year, Director). Insert the records (Max: 5). Delete the records of movies whose release year is 2022 and display an appropriate message in a message box.',
+            text: "Write a VB.NET program to create a movie table (Mv_Name, Release_year, Director). Insert the records (Max: 5). Delete the records of movies whose release year is 2022 and display an appropriate message in a message box.",
             marks: 25,
           },
         ],
@@ -9327,12 +9327,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an ASP.Net program to accept a number from the user in a textbox control and throw an exception if the number is not a perfect number. Assume suitable controls on the web form.',
+            text: "Write an ASP.Net program to accept a number from the user in a textbox control and throw an exception if the number is not a perfect number. Assume suitable controls on the web form.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to create a table student (Roll No, SName, Class, City). Insert the records (Max: 5). Update the city of students to ‘Pune’ whose city is ‘Mumbai’ and display updated records in a GridView.',
+            text: "Write a VB.NET program to create a table student (Roll No, SName, Class, City). Insert the records (Max: 5). Update the city of students to ‘Pune’ whose city is ‘Mumbai’ and display updated records in a GridView.",
             marks: 25,
           },
         ],
@@ -9342,12 +9342,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'List of employees is available in a listbox. Write an ASP.Net application to add selected or all records from the listbox to a TextBox (assume multi-line property of TextBox is true).',
+            text: "List of employees is available in a listbox. Write an ASP.Net application to add selected or all records from the listbox to a TextBox (assume multi-line property of TextBox is true).",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a C#.Net program for multiplication of matrices.',
+            text: "Write a C#.Net program for multiplication of matrices.",
             marks: 25,
           },
         ],
@@ -9357,7 +9357,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a Menu-driven program in C#.Net to perform the following functionalities: Addition, Multiplication, Subtraction, Division.',
+            text: "Write a Menu-driven program in C#.Net to perform the following functionalities: Addition, Multiplication, Subtraction, Division.",
             marks: 15,
           },
           {
@@ -9372,7 +9372,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program that demonstrates the use of primitive data types in C#. The program should also support the type conversion of Integer to String and String to Integer.',
+            text: "Write a program that demonstrates the use of primitive data types in C#. The program should also support the type conversion of Integer to String and String to Integer.",
             marks: 15,
           },
           {
@@ -9387,12 +9387,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an ASP.Net program that gets user input such as the user name, mode of payment, and appropriate credit card. After the user enters the appropriate values, the Validation button validates the values entered.',
+            text: "Write an ASP.Net program that gets user input such as the user name, mode of payment, and appropriate credit card. After the user enters the appropriate values, the Validation button validates the values entered.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a C# program to make a class named Fruit with a data member to calculate the number of fruits in a basket. Create two other classes named Apples and Mangoes to calculate the number of apples and mangoes in the basket. Display the total number of fruits in the basket.',
+            text: "Write a C# program to make a class named Fruit with a data member to calculate the number of fruits in a basket. Create two other classes named Apples and Mangoes to calculate the number of apples and mangoes in the basket. Display the total number of fruits in the basket.",
             marks: 25,
           },
         ],
@@ -9402,12 +9402,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an ASP.Net program that displays a button in green color and it should change to yellow when the mouse moves over it.',
+            text: "Write an ASP.Net program that displays a button in green color and it should change to yellow when the mouse moves over it.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to create a player table (PID, PName, Game, no_of_matches). Insert records and update the number of matches of ‘Rohit Sharma’ and display the result in a DataGridView.',
+            text: "Write a VB.NET program to create a player table (PID, PName, Game, no_of_matches). Insert records and update the number of matches of ‘Rohit Sharma’ and display the result in a DataGridView.",
             marks: 25,
           },
         ],
@@ -9417,12 +9417,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program for blinking an image.',
+            text: "Write a VB.NET program for blinking an image.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a C# program to accept and display ‘n’ student’s details such as Roll No, Name, and marks in three subjects, using a class. Display the percentage of each student.',
+            text: "Write a C# program to accept and display ‘n’ student’s details such as Roll No, Name, and marks in three subjects, using a class. Display the percentage of each student.",
             marks: 25,
           },
         ],
@@ -9432,12 +9432,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to find the sum of all elements in the array.',
+            text: "Write a program in C#.Net to find the sum of all elements in the array.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a C#.Net program to define a class Person having members – name and address. Create a subclass called Employee with members – staff_id and salary. Create ‘n’ objects of the Employee class and display all the details of the Employee.',
+            text: "Write a C#.Net program to define a class Person having members – name and address. Create a subclass called Employee with members – staff_id and salary. Create ‘n’ objects of the Employee class and display all the details of the Employee.",
             marks: 25,
           },
         ],
@@ -9447,12 +9447,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write an ASP.Net application to create a user control that contains a list of colors. Add a button to the Web Form which, when clicked, changes the color of the form to the color selected from the list.',
+            text: "Write an ASP.Net application to create a user control that contains a list of colors. Add a button to the Web Form which, when clicked, changes the color of the form to the color selected from the list.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a C#.Net program to accept and display ‘n’ customer’s details such as customer_no, Name, address, item_no, quantity, and price. Display the total price of all items.',
+            text: "Write a C#.Net program to accept and display ‘n’ customer’s details such as customer_no, Name, address, item_no, quantity, and price. Display the total price of all items.",
             marks: 25,
           },
         ],
@@ -9467,7 +9467,7 @@ while($row = mysqli_fetch_assoc($result)) {
           },
           {
             questionId: 2,
-            text: 'Define a class Supplier with fields – sid, name, address, pincode. Write a C#.Net program to accept the details of ‘n’ suppliers and display them.',
+            text: "Define a class Supplier with fields – sid, name, address, pincode. Write a C#.Net program to accept the details of ‘n’ suppliers and display them.",
             marks: 25,
           },
         ],
@@ -9477,12 +9477,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a C#.Net application to display the vowels from a given string.',
+            text: "Write a C#.Net application to display the vowels from a given string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to accept the details of a product (PID, PName, expiry_date, price). Store it in the database and display it on a DataGridView.',
+            text: "Write a VB.NET program to accept the details of a product (PID, PName, expiry_date, price). Store it in the database and display it on a DataGridView.",
             marks: 25,
           },
         ],
@@ -9492,12 +9492,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program to accept a number from the user through an input box and display its multiplication table in a list box.',
+            text: "Write a VB.NET program to accept a number from the user through an input box and display its multiplication table in a list box.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write an ASP.Net program containing the following controls: ListBox, Button, Image, Label. The ListBox is used to list items available in a store. When the user clicks on an item in the ListBox, its image is displayed in the Image control. When the user clicks the Button, the cost of the selected item is displayed in the Label control.',
+            text: "Write an ASP.Net program containing the following controls: ListBox, Button, Image, Label. The ListBox is used to list items available in a store. When the user clicks on an item in the ListBox, its image is displayed in the Image control. When the user clicks the Button, the cost of the selected item is displayed in the Label control.",
             marks: 25,
           },
         ],
@@ -9507,7 +9507,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program to check whether the entered string is a palindrome or not.',
+            text: "Write a VB.NET program to check whether the entered string is a palindrome or not.",
             marks: 15,
           },
           {
@@ -9522,7 +9522,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program to generate a Sample TreeView control.',
+            text: "Write a VB.NET program to generate a Sample TreeView control.",
             marks: 15,
           },
           {
@@ -9537,12 +9537,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program to accept sentences in a text box and count the number of words. Display the count in a message box.',
+            text: "Write a VB.NET program to accept sentences in a text box and count the number of words. Display the count in a message box.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write an ASP.Net application for the following:\n1. Create a table EMP (eno, ename, edesignation, salary, joindate)\n2. Insert a record.\n3. Update a record.',
+            text: "Write an ASP.Net application for the following:\n1. Create a table EMP (eno, ename, edesignation, salary, joindate)\n2. Insert a record.\n3. Update a record.",
             marks: 25,
           },
         ],
@@ -9552,12 +9552,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C# to create a function to swap the values of two integers.',
+            text: "Write a program in C# to create a function to swap the values of two integers.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to design the following form; it contains three menus: Color (Red, Blue, Green), Window (Maximize, Minimize, Restore), and Exit. On selection of any menu or submenu, the result should affect the form control (for example, if the user selects Red color from the Color menu, the back color of the form should change to Red, and if the user selects Maximize from the Window menu, the form should be maximized).',
+            text: "Write a VB.NET program to design the following form; it contains three menus: Color (Red, Blue, Green), Window (Maximize, Minimize, Restore), and Exit. On selection of any menu or submenu, the result should affect the form control (for example, if the user selects Red color from the Color menu, the back color of the form should change to Red, and if the user selects Maximize from the Window menu, the form should be maximized).",
             marks: 25,
           },
         ],
@@ -9567,12 +9567,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C# to create a function to display the n terms of the Fibonacci sequence.',
+            text: "Write a program in C# to create a function to display the n terms of the Fibonacci sequence.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create an ASP.Net application that accepts name, password, age, email ID, and user ID. All the information entries are compulsory. The password should be reconfirmed. Age should be within 21 to 30. Email ID should be valid. User ID should have at least one capital letter, one digit, and its length should be between 7 and 20 characters.',
+            text: "Create an ASP.Net application that accepts name, password, age, email ID, and user ID. All the information entries are compulsory. The password should be reconfirmed. Age should be within 21 to 30. Email ID should be valid. User ID should have at least one capital letter, one digit, and its length should be between 7 and 20 characters.",
             marks: 25,
           },
         ],
@@ -9582,7 +9582,7 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to create a function to check whether a number is prime or not.',
+            text: "Write a program in C#.Net to create a function to check whether a number is prime or not.",
             marks: 15,
           },
           {
@@ -9597,12 +9597,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to create a function to calculate the sum of the individual digits of a given number.',
+            text: "Write a program in C#.Net to create a function to calculate the sum of the individual digits of a given number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a Web Application in ASP.Net to display all the EmpName and DeptId of the employees from the database using SQL source control and bind it to a GridView. Database fields are (DeptId, DeptName, EmpName, Salary).',
+            text: "Create a Web Application in ASP.Net to display all the EmpName and DeptId of the employees from the database using SQL source control and bind it to a GridView. Database fields are (DeptId, DeptName, EmpName, Salary).",
             marks: 25,
           },
         ],
@@ -9612,12 +9612,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to create a recursive function to find the factorial of a given number.',
+            text: "Write a program in C#.Net to create a recursive function to find the factorial of a given number.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write an ASP.Net program to create a Login Module which adds Username and Password to the database. The Username in the database should be a primary key.',
+            text: "Write an ASP.Net program to create a Login Module which adds Username and Password to the database. The Username in the database should be a primary key.",
             marks: 25,
           },
         ],
@@ -9627,12 +9627,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to find the length of a string.',
+            text: "Write a program in C#.Net to find the length of a string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Create a web application in ASP.Net which may have a textbox. The user must type some data into it, with a limit of 255 characters. After exceeding the limit, the last word should not be typed, and the color of the textbox should change to red.',
+            text: "Create a web application in ASP.Net which may have a textbox. The user must type some data into it, with a limit of 255 characters. After exceeding the limit, the last word should not be typed, and the color of the textbox should change to red.",
             marks: 25,
           },
         ],
@@ -9642,12 +9642,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to read n numbers in an array and display them in reverse order.',
+            text: "Write a program in C#.Net to read n numbers in an array and display them in reverse order.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to create a table Patient (PID, PName, Contact No, Disease). Insert five records into the table and display an appropriate message in a message box.',
+            text: "Write a VB.NET program to create a table Patient (PID, PName, Contact No, Disease). Insert five records into the table and display an appropriate message in a message box.",
             marks: 25,
           },
         ],
@@ -9657,12 +9657,12 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a program in C#.Net to separate the individual characters from a string.',
+            text: "Write a program in C#.Net to separate the individual characters from a string.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to accept the details of a customer (CName, Contact No, Email_id). Store it in the database with proper validation and display an appropriate message using a message box.',
+            text: "Write a VB.NET program to accept the details of a customer (CName, Contact No, Email_id). Store it in the database with proper validation and display an appropriate message using a message box.",
             marks: 25,
           },
         ],
@@ -9672,28 +9672,28 @@ while($row = mysqli_fetch_assoc($result)) {
         questions: [
           {
             questionId: 1,
-            text: 'Write a VB.NET program to design the following screen: accept the details from the user. Clicking on the Submit button should calculate and display the Net Salary into a textbox. Display a message box informing the Name and Net Salary of the employee.',
+            text: "Write a VB.NET program to design the following screen: accept the details from the user. Clicking on the Submit button should calculate and display the Net Salary into a textbox. Display a message box informing the Name and Net Salary of the employee.",
             marks: 15,
           },
           {
             questionId: 2,
-            text: 'Write a VB.NET program to accept the details of a Supplier (SupId, SupName, Phone No, Address), store it in the database, and display it.',
+            text: "Write a VB.NET program to accept the details of a Supplier (SupId, SupName, Phone No, Address), store it in the database, and display it.",
             marks: 25,
           },
         ],
       },
     ],
-    language: 'csharp',
+    language: "csharp",
   },
 ];
 
 /* 0-c, 1-dbms, 2-web tech, 3-rdbms 4-data structure, 5-bigdata, 6-php, 7-angular js, 8-cpp, 9-advance php, 10-nodejs, 11-corejava, 12-python, 13-mongodb, 14-advance java, 15-android programming, 16-dotnot framework   */
 
-import { collection, doc, setDoc } from 'firebase/firestore';
-import { db } from '../../src/config/firebase';
+import { collection, doc, setDoc } from "firebase/firestore";
+import { db } from "../../src/config/firebase";
 
 export async function uploadSlipData() {
-  const subjectsCollection = collection(db, 'slipSubjects');
+  const subjectsCollection = collection(db, "slipSubjects");
 
   for (const subject of SlipData) {
     const subjectDoc = doc(subjectsCollection, subject.subject);
@@ -9704,5 +9704,5 @@ export async function uploadSlipData() {
     });
   }
 
-  console.log('Data uploaded successfully');
+  console.log("Data uploaded successfully");
 }
