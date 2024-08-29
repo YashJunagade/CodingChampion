@@ -1,9 +1,9 @@
-import Editor from "@monaco-editor/react";
-import Groq from "groq-sdk";
-import FormattedText from "./FormattedText";
-import Modal from "./Modal"; // Import the Modal component
-import { useState } from "react";
-import "./CodeEditor.css";
+import Editor from '@monaco-editor/react';
+import Groq from 'groq-sdk';
+import FormattedText from './FormattedText';
+import Modal from './Modal'; // Import the Modal component
+import { useState, useCallback, useRef } from 'react';
+import './CodeEditor.css';
 
 const apiKeys = [
   import.meta.env.VITE_GROQ_API_KEY_1,
@@ -12,19 +12,19 @@ const apiKeys = [
 ];
 
 const models = [
-  "gemma-7b-it",
-  "gemma2-9b-it",
-  "llama-3.1-70b-versatile",
-  "llama-3.1-8b-instant",
-  "llama3-70b-8192",
-  "llama3-8b-8192",
-  "llama3-groq-70b-8192-tool-use-preview",
-  "llama3-groq-8b-8192-tool-use-preview",
-  "mixtral-8x7b-32768",
+  'gemma-7b-it',
+  'gemma2-9b-it',
+  'llama-3.1-70b-versatile',
+  'llama-3.1-8b-instant',
+  'llama3-70b-8192',
+  'llama3-8b-8192',
+  'llama3-groq-70b-8192-tool-use-preview',
+  'llama3-groq-8b-8192-tool-use-preview',
+  'mixtral-8x7b-32768',
 ];
 
 function CodeEditor({ language, solution }) {
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
   const [currentKeyIndex, setCurrentKeyIndex] = useState(0); // State to manage the current API key
   const [currentModelIndex, setCurrentModelIndex] = useState(0); // State to manage the current model
@@ -35,7 +35,7 @@ function CodeEditor({ language, solution }) {
     const model = models[currentModelIndex];
 
     if (!apiKey) {
-      console.error("API key is not defined");
+      console.error('API key is not defined');
       return;
     }
 
@@ -50,17 +50,17 @@ function CodeEditor({ language, solution }) {
       const chatCompletion = await groq.chat.completions.create({
         messages: [
           {
-            role: "user",
+            role: 'user',
             content: `${solution} exaplain the given code to me in simple words. also explain how each function works in brief. give sample input and output for the program`,
           },
         ],
         model, // Use the selected model
       });
 
-      setResult(chatCompletion.choices[0]?.message?.content || "");
+      setResult(chatCompletion.choices[0]?.message?.content || '');
     } catch (error) {
-      console.error("Error fetching solution:", error);
-      setResult("An error occurred while fetching the solution.");
+      console.error('Error fetching solution:', error);
+      setResult('An error occurred while fetching the solution.');
     } finally {
       // Rotate the API key index
       setCurrentKeyIndex((prevIndex) => (prevIndex + 1) % apiKeys.length);
@@ -71,17 +71,34 @@ function CodeEditor({ language, solution }) {
     }
   };
 
+  // copying the code logic ->
+  const solutionRef = useRef(null);
+  const copyToClipboard = useCallback(() => {
+    solutionRef.current?.select();
+
+    window.navigator.clipboard.writeText(solution);
+  }, [solution]);
+
   return (
     <>
-      <button onClick={fetchSolution} disabled={loading} className="btn">
-        {loading ? "Wait Magic Is Happing..." : "Explain Me"}
-      </button>
+      <div className="flex justify-between">
+        <button onClick={fetchSolution} disabled={loading} className="btn">
+          {loading ? 'Wait Magic Is Happing...' : 'Explain Me'}
+        </button>
+        <button
+          onClick={copyToClipboard}
+          className="bg-accent px-4 rounded text-white font-bold hover:bg-black"
+        >
+          Copy
+        </button>
+      </div>
       <Editor
         height="100%"
         width="100%"
         language={language}
         theme="vs-dark"
         value={solution}
+        ref={solutionRef}
       />
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         {result && <FormattedText text={result} />}
