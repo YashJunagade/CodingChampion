@@ -6,13 +6,6 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className="heroContainer">
-        <h1 className="text-xl font-bold text-red-500 text-center mt-4">
-          <span className="text-3xl block">Gear Up for Success:</span>
-          <span className="text-2xl">Your Ultimate Preparation Hub!</span>
-        </h1>
-        <div className="flex flex-col md:grid md:grid-cols-2"></div>
-      </div>
       <div className="mb-20">
         <h1 className="text-xl font-bold text-red-500 text-center my-10">
           <span className="text-3xl block">Gear Up for Success:</span>
