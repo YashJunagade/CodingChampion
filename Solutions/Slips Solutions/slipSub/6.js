@@ -1,6 +1,6 @@
 const php = [
   {
-    subject: "Php",
+    subject: 'Php',
     slips: [
       {
         slipId: 1,
@@ -2268,6 +2268,6 @@ while($row = mysqli_fetch_assoc($result)) {
         ],
       },
     ],
-    language: "php",
+    language: 'php',
   },
 ];

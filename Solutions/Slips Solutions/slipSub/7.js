@@ -1,6 +1,6 @@
 const angularjs = [
   {
-    subject: "Angular JS",
+    subject: 'Angular JS',
     slips: [
       {
         slipId: 1,
@@ -311,6 +311,6 @@ const angularjs = [
         ],
       },
     ],
-    language: "javascript",
+    language: 'javascript',
   },
 ];

@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "echo \"No tests specified\"",
+    "prettier": "prettier --write"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -44,6 +46,7 @@
     "vite": "^5.4.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write",
+    "*.js": ["eslint --fix", "prettier --write"]
   }
 }

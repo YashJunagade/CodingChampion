@@ -142,7 +142,9 @@ span .qTag {
   color: #333;
   text-decoration: none;
   display: block;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .assignment-set li a:hover {

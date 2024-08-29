@@ -1,7 +1,7 @@
-import Navbar from "../../Components/Navbar/Navbar";
-import SideBar from "../../Components/SideBar/SideBar";
-import Menu from "./Menu";
-import "./Slip.css";
+import Navbar from '../../Components/Navbar/Navbar';
+import SideBar from '../../Components/SideBar/SideBar';
+import Menu from './Menu';
+import './Slip.css';
 
 function Slip() {
   return (

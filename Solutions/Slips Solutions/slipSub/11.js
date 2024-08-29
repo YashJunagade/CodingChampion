@@ -1,6 +1,6 @@
 const corejava = [
   {
-    subject: "Core Java",
+    subject: 'Core Java',
     slips: [
       {
         slipId: 1,
@@ -70,7 +70,7 @@ const corejava = [
         questions: [
           {
             questionId: 1,
-            text: "Write a java program to display following pattern: <br> 5 <br> 4 5<br> 3 4 5<br> 2 3 4 5<br> 1 2 3 4 5",
+            text: 'Write a java program to display following pattern: <br> 5 <br> 4 5<br> 3 4 5<br> 2 3 4 5<br> 1 2 3 4 5',
             marks: 15,
           },
           {
@@ -303,7 +303,7 @@ const corejava = [
           },
           {
             questionId: 2,
-            text: "Construct a Linked List containing name: CPP, Java, Python and PHP. Then extend your java program to do the following: <br/>i. Display the contents of the List using an Iterator <br/>ii. Display the contents of the List in reverse order using a ListIterator",
+            text: 'Construct a Linked List containing name: CPP, Java, Python and PHP. Then extend your java program to do the following: <br/>i. Display the contents of the List using an Iterator <br/>ii. Display the contents of the List in reverse order using a ListIterator',
             marks: 25,
           },
         ],
@@ -378,7 +378,7 @@ const corejava = [
           },
           {
             questionId: 2,
-            text: "Create a package named Series having three different classes to print series: <br/>i. Fibonacci series <br/>ii. Cube of numbers <br/>iii. Square of numbers <br/>Write a java program to generate ‘n’ terms of the above series",
+            text: 'Create a package named Series having three different classes to print series: <br/>i. Fibonacci series <br/>ii. Cube of numbers <br/>iii. Square of numbers <br/>Write a java program to generate ‘n’ terms of the above series',
             marks: 25,
           },
         ],
@@ -459,6 +459,6 @@ const corejava = [
         ],
       },
     ],
-    language: "java",
+    language: 'java',
   },
 ];

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import Navbar from "../../src/Components/Navbar/Navbar";
-import SideBar from "../../src/Components/SideBar/SideBar";
+import React, { useState, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import Navbar from '../../src/Components/Navbar/Navbar';
+import SideBar from '../../src/Components/SideBar/SideBar';
 import {
   collection,
   query,
@@ -9,28 +9,28 @@ import {
   getDocs,
   getDoc,
   doc,
-} from "firebase/firestore";
-import { db } from "../../src/config/firebase";
-import "./SlipList.css";
-import { uploadSlipData } from "./SlipData";
+} from 'firebase/firestore';
+import { db } from '../../src/config/firebase';
+import './SlipList.css';
+import { uploadSlipData } from './SlipData';
 
 const SlipList = () => {
   const { subjectId } = useParams();
   const [subject, setSubject] = useState(null);
-  const [filterMarks, setFilterMarks] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [filterMarks, setFilterMarks] = useState('');
+  const [sortOrder, setSortOrder] = useState('asc');
 
   useEffect(() => {
     const fetchSubject = async () => {
       try {
-        const subjectDoc = await getDoc(doc(db, "slipSubjects", subjectId));
+        const subjectDoc = await getDoc(doc(db, 'slipSubjects', subjectId));
         if (subjectDoc.exists()) {
           setSubject(subjectDoc.data());
         } else {
-          console.log("No such document!");
+          console.log('No such document!');
         }
       } catch (error) {
-        console.error("Error fetching document:", error);
+        console.error('Error fetching document:', error);
       }
     };
 
@@ -45,12 +45,12 @@ const SlipList = () => {
     .map((slip) => ({
       ...slip,
       questions: slip.questions.filter(
-        (q) => filterMarks === "" || q.marks.toString() === filterMarks
+        (q) => filterMarks === '' || q.marks.toString() === filterMarks
       ),
     }))
     .filter((slip) => slip.questions.length > 0)
     .sort((a, b) => {
-      if (sortOrder === "asc") {
+      if (sortOrder === 'asc') {
         return a.slipId - b.slipId;
       } else {
         return b.slipId - a.slipId;
@@ -84,10 +84,10 @@ const SlipList = () => {
               ))}
             </select>
             <button
-              onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
+              onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
               className="sort-button"
             >
-              Sort {sortOrder === "asc" ? "Descending" : "Ascending"}
+              Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
             </button>
           </div>
           {filteredAndSortedSlips.map((slip, index) => (

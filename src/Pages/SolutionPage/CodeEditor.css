@@ -7,7 +7,9 @@
   font-weight: bold; /* Bold text */
   border-radius: 8px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease; /* Smooth transition */
 }
 
 .btn:hover {

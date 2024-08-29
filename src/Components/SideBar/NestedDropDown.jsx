@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function NestedDropdown({ title, subjects }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +12,7 @@ function NestedDropdown({ title, subjects }) {
     <div className="nested-dropdown">
       <a onClick={toggleMenu}>
         {title}
-        <span className="arrow">{isOpen ? "▲" : "▼"}</span>
+        <span className="arrow">{isOpen ? '▲' : '▼'}</span>
       </a>
       {isOpen && (
         <div className="nested-menu">
