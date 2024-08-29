@@ -3,23 +3,23 @@ import {
   Route,
   Routes,
   Navigate,
-} from "react-router-dom";
-import Home from "./Pages/Home/Home";
-import Slip from "./Pages/Slip/Slip";
-import Labbook from "./Pages/Labbook/Labbook";
-import SlipList from "../Solutions/Slips Solutions/SlipList";
-import Login from "./Pages/Auth/LogIn/Login";
-import Register from "./Pages/Auth/Register/Register";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
-import "./index.css";
-import UserData from "./store/UserData";
-import Roadmaps from "./Pages/RoadMaps/Roadmaps";
-import Dsa from "./Pages/DataStructure/Dsa";
-import LabList from "../Solutions/Labbook Solutions/LabList";
-import SlipSolution from "./Pages/SolutionPage/SlipSolution/SlipSolution";
-import LabSolution from "./Pages/SolutionPage/LabSolution/LabSolution";
+} from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Slip from './Pages/Slip/Slip';
+import Labbook from './Pages/Labbook/Labbook';
+import SlipList from '../Solutions/Slips Solutions/SlipList';
+import Login from './Pages/Auth/LogIn/Login';
+import Register from './Pages/Auth/Register/Register';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import './index.css';
+import UserData from './store/UserData';
+import Roadmaps from './Pages/RoadMaps/Roadmaps';
+import Dsa from './Pages/DataStructure/Dsa';
+import LabList from '../Solutions/Labbook Solutions/LabList';
+import SlipSolution from './Pages/SolutionPage/SlipSolution/SlipSolution';
+import LabSolution from './Pages/SolutionPage/LabSolution/LabSolution';
 const App = () => {
   return (
     <Router>

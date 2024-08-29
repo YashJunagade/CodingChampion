@@ -1,11 +1,11 @@
-import React, { Suspense, useEffect, useRef, useState } from "react";
-import "./SlipSolution.css";
-import { db } from "../../../config/firebase";
-import { useParams } from "react-router-dom";
-import Navbar from "../../Home/Navbar";
-import CodeEditor from "../CodeEditor";
-import { doc, getDoc } from "firebase/firestore";
-import QuestionSlipCom from "./QuestionSlipCom";
+import React, { Suspense, useEffect, useRef, useState } from 'react';
+import './SlipSolution.css';
+import { db } from '../../../config/firebase';
+import { useParams } from 'react-router-dom';
+import Navbar from '../../Home/Navbar';
+import CodeEditor from '../CodeEditor';
+import { doc, getDoc } from 'firebase/firestore';
+import QuestionSlipCom from './QuestionSlipCom';
 
 const SlipSolution = () => {
   const [width, setWidth] = useState(40); // Initial width in percentage
@@ -21,7 +21,7 @@ const SlipSolution = () => {
   useEffect(() => {
     const fetchQuestion = async () => {
       setLoading(true);
-      const subjectDoc = await getDoc(doc(db, "slipSubjects", subjectId));
+      const subjectDoc = await getDoc(doc(db, 'slipSubjects', subjectId));
       if (subjectDoc.exists()) {
         setLanguage(subjectDoc.data().language);
         const question =
@@ -32,10 +32,10 @@ const SlipSolution = () => {
         setText(question.text);
         setSolution(
           question.sol ??
-            "Currently there is no solution for this Question\n\t Our team is working on it \n\t\t try after some time..."
+            'Currently there is no solution for this Question\n\t Our team is working on it \n\t\t try after some time...'
         );
       } else {
-        console.log("No such document!");
+        console.log('No such document!');
       }
       setLoading(false);
     };
@@ -45,8 +45,8 @@ const SlipSolution = () => {
 
   const handleMouseDown = (e) => {
     e.preventDefault();
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
   };
 
   const handleMouseMove = (e) => {
@@ -61,8 +61,8 @@ const SlipSolution = () => {
   };
 
   const handleMouseUp = () => {
-    document.removeEventListener("mousemove", handleMouseMove);
-    document.removeEventListener("mouseup", handleMouseUp);
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
   };
 
   return (

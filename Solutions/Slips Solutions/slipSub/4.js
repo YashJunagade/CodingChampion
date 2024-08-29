@@ -1,6 +1,6 @@
 const ds = [
   {
-    subject: "Data Structure",
+    subject: 'Data Structure',
     slips: [
       {
         slipId: 1,
@@ -572,6 +572,6 @@ const ds = [
         ],
       },
     ],
-    language: "c",
+    language: 'c',
   },
 ];

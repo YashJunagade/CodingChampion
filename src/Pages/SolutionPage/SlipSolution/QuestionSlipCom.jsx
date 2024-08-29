@@ -3,9 +3,9 @@ function QuestionCom({ slipId, questionId, text, marks }) {
     <div
       className="preview-container"
       style={{
-        maxHeight: "100%",
-        overflowY: "auto",
-        padding: "10px",
+        maxHeight: '100%',
+        overflowY: 'auto',
+        padding: '10px',
       }}
     >
       <div>Slip No : {slipId}</div>

@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import googleLogo from "../../../assets/google.png";
+import React, { useState } from 'react';
+import googleLogo from '../../../assets/google.png';
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
-} from "firebase/auth";
-import { auth, db } from "../../../config/firebase";
-import { setDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+} from 'firebase/auth';
+import { auth, db } from '../../../config/firebase';
+import { setDoc, doc } from 'firebase/firestore';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 function Register() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -25,20 +25,20 @@ function Register() {
       await createUserWithEmailAndPassword(auth, email, password);
       const user = auth.currentUser;
       if (user) {
-        await setDoc(doc(db, "Users", user.uid), {
+        await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
           fName: firstName,
           lName: lastName,
         });
       }
-      toast.success("User Registered Successfully!! \n Now logging you in...", {
-        position: "bottom-right",
+      toast.success('User Registered Successfully!! \n Now logging you in...', {
+        position: 'bottom-right',
       });
-      navigate("/");
+      navigate('/');
     } catch (err) {
       console.error(err);
       toast.error(err.message, {
-        position: "bottom-center",
+        position: 'bottom-center',
       });
       setLoading(false);
     }
@@ -51,20 +51,20 @@ function Register() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       if (user) {
-        await setDoc(doc(db, "Users", user.uid), {
+        await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
-          fName: user.displayName.split(" ")[0],
-          lName: user.displayName.split(" ")[1] || "",
+          fName: user.displayName.split(' ')[0],
+          lName: user.displayName.split(' ')[1] || '',
         });
       }
-      toast.success("User Registered Successfully!! \n Now logging you in...", {
-        position: "bottom-right",
+      toast.success('User Registered Successfully!! \n Now logging you in...', {
+        position: 'bottom-right',
       });
-      navigate("/");
+      navigate('/');
     } catch (err) {
       console.error(err);
       toast.error(err.message, {
-        position: "bottom-center",
+        position: 'bottom-center',
       });
       setLoading(false);
     }
@@ -136,7 +136,7 @@ function Register() {
         </div>
 
         <button type="submit" style={styles.submitButton}>
-          {loading ? "Sign up..." : "Sign Up"}
+          {loading ? 'Sign up...' : 'Sign Up'}
         </button>
 
         <div style={styles.loginLink}>
@@ -155,69 +155,69 @@ function Register() {
 
 const styles = {
   container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
-    backgroundColor: "#f5f5f5",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '#f5f5f5',
   },
   form: {
-    backgroundColor: "#fff",
-    padding: "40px",
-    borderRadius: "10px",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-    width: "500px",
-    textAlign: "center",
+    backgroundColor: '#fff',
+    padding: '40px',
+    borderRadius: '10px',
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+    width: '500px',
+    textAlign: 'center',
   },
   heading: {
-    marginBottom: "20px",
-    fontSize: "24px",
+    marginBottom: '20px',
+    fontSize: '24px',
   },
   inputGroup: {
-    marginBottom: "20px",
+    marginBottom: '20px',
   },
   label: {
-    display: "block",
-    marginBottom: "5px",
-    textAlign: "left",
-    fontSize: "14px",
+    display: 'block',
+    marginBottom: '5px',
+    textAlign: 'left',
+    fontSize: '14px',
   },
   input: {
-    width: "100%",
-    padding: "10px",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
-    fontSize: "16px",
+    width: '100%',
+    padding: '10px',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    fontSize: '16px',
   },
   submitButton: {
-    width: "100%",
-    padding: "10px",
-    backgroundColor: "#007bff",
-    color: "#fff",
-    borderRadius: "5px",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "16px",
+    width: '100%',
+    padding: '10px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    borderRadius: '5px',
+    border: 'none',
+    cursor: 'pointer',
+    fontSize: '16px',
   },
   loginLink: {
-    marginTop: "10px",
-    fontSize: "14px",
+    marginTop: '10px',
+    fontSize: '14px',
   },
   orContinue: {
-    margin: "20px 0",
-    fontSize: "14px",
-    color: "#666",
+    margin: '20px 0',
+    fontSize: '14px',
+    color: '#666',
   },
   googleButton: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    backgroundColor: "#fff",
-    borderRadius: "5px",
-    border: "1px solid #ccc",
-    cursor: "pointer",
-    fontSize: "16px",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    backgroundColor: '#fff',
+    borderRadius: '5px',
+    border: '1px solid #ccc',
+    cursor: 'pointer',
+    fontSize: '16px',
   },
 };
 

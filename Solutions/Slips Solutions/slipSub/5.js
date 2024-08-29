@@ -1,6 +1,6 @@
 const bd = [
   {
-    subject: "Big Data",
+    subject: 'Big Data',
     slips: [
       {
         slipId: 1,
@@ -354,6 +354,6 @@ const bd = [
         ],
       },
     ],
-    language: "r",
+    language: 'r',
   },
 ];

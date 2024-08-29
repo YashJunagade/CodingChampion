@@ -1,6 +1,6 @@
 const cpp = [
   {
-    subject: "CPP",
+    subject: 'CPP',
     slips: [
       {
         slipId: 1,
@@ -159,12 +159,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class MyArray, which contains a single dimensional integer array of a given size. Write a member function to display the sum of given array elements. (Use Dynamic Constructor and Destructor).",
+            text: 'a) Create a C++ class MyArray, which contains a single dimensional integer array of a given size. Write a member function to display the sum of given array elements. (Use Dynamic Constructor and Destructor).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a base class Student with data members Roll No, Name. Derives two classes from it, class Theory with data members M1, M2, M3, M4 and class Practical with data members P1, P2. Class Result (Total Marks, Percentage, Grade) inherits both Theory and Practical classes. (Use concept of Virtual Base Class and protected access specifiers)<br>Write a C++ menu driven program to perform the following functions:<br>i. Accept Student Information<br>ii. Display Student Information<br>iii. Calculate Total marks, Percentage and Grade.",
+            text: 'b) Create a base class Student with data members Roll No, Name. Derives two classes from it, class Theory with data members M1, M2, M3, M4 and class Practical with data members P1, P2. Class Result (Total Marks, Percentage, Grade) inherits both Theory and Practical classes. (Use concept of Virtual Base Class and protected access specifiers)<br>Write a C++ menu driven program to perform the following functions:<br>i. Accept Student Information<br>ii. Display Student Information<br>iii. Calculate Total marks, Percentage and Grade.',
             marks: 25,
           },
         ],
@@ -174,12 +174,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to create a class Date with data members day, month, and year. Use default and parameterized constructor to initialize date and display date in dd-Mon-yyyy format. (Example: Input: 04-01-2021 Output: 04-Jan-2021).",
+            text: 'a) Write a C++ program to create a class Date with data members day, month, and year. Use default and parameterized constructor to initialize date and display date in dd-Mon-yyyy format. (Example: Input: 04-01-2021 Output: 04-Jan-2021).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class Weight with data members kilogram, gram. Write a C++ program using operator overloading to perform the following functions:<br>i. To accept weight.<br>ii. To display weight in kilogram and gram format.<br>iii. Overload += operator to add two weights.<br>iv. Overload == operator to check equality of two weights.",
+            text: 'b) Create a C++ class Weight with data members kilogram, gram. Write a C++ program using operator overloading to perform the following functions:<br>i. To accept weight.<br>ii. To display weight in kilogram and gram format.<br>iii. Overload += operator to add two weights.<br>iv. Overload == operator to check equality of two weights.',
             marks: 25,
           },
         ],
@@ -189,12 +189,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to create a class Product with data members Product_id, Product_Name, Qty, Price. Write member functions to accept and display Product information also display the number of objects created for Product class. (Use Static data member and Static member function).",
+            text: 'a) Write a C++ program to create a class Product with data members Product_id, Product_Name, Qty, Price. Write member functions to accept and display Product information also display the number of objects created for Product class. (Use Static data member and Static member function).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class Cuboid with data members length, breadth, and height. Write necessary member functions for the following:<br>i. void setvalues(float, float, float) to set values of data members.<br>ii. void getvalues() to display values of data members.<br>iii. float volume() to calculate and return the volume of cuboid.<br>iv. float surface_area() to calculate and return the surface area of cuboid.<br>(Use Inline function).",
+            text: 'b) Create a C++ class Cuboid with data members length, breadth, and height. Write necessary member functions for the following:<br>i. void setvalues(float, float, float) to set values of data members.<br>ii. void getvalues() to display values of data members.<br>iii. float volume() to calculate and return the volume of cuboid.<br>iv. float surface_area() to calculate and return the surface area of cuboid.<br>(Use Inline function).',
             marks: 25,
           },
         ],
@@ -204,12 +204,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to accept the radius of a Circle. Calculate and display the diameter, circumference as well as area of a Circle. (Use Inline function).",
+            text: 'a) Write a C++ program to accept the radius of a Circle. Calculate and display the diameter, circumference as well as area of a Circle. (Use Inline function).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class MyString with data members a character pointer and str_length. (Use new and delete operator). Write a C++ program using operator overloading to perform the following operations:<br>i. To reverse the case of each alphabet from a given string.<br>ii. To compare the length of two strings.<br>iii. To add constant ‘n’ to each alphabet of a string.",
+            text: 'b) Create a C++ class MyString with data members a character pointer and str_length. (Use new and delete operator). Write a C++ program using operator overloading to perform the following operations:<br>i. To reverse the case of each alphabet from a given string.<br>ii. To compare the length of two strings.<br>iii. To add constant ‘n’ to each alphabet of a string.',
             marks: 25,
           },
         ],
@@ -219,12 +219,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class Fraction with data members Numerator and Denominator. Write a C++ program to calculate and display the sum of two fractions. (Use Constructor).",
+            text: 'a) Create a C++ class Fraction with data members Numerator and Denominator. Write a C++ program to calculate and display the sum of two fractions. (Use Constructor).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Write a C++ class Seller (S_Name, Product_name, Sales_Quantity, Target_Quantity, Month, Commission). Each salesman deals with a separate product and is assigned a target for a month. At the end of the month, his monthly sales is compared with target and commission is calculated as follows:<br> If Sales_Quantity > Target_Quantity then commission is 25% of extra sales made + 10% of target.<br> If Sales_Quantity = Target_Quantity then commission is 10% of target.<br> Otherwise commission is zero.<br>Display salesman information along with commission obtained. (Use array of objects).",
+            text: 'b) Write a C++ class Seller (S_Name, Product_name, Sales_Quantity, Target_Quantity, Month, Commission). Each salesman deals with a separate product and is assigned a target for a month. At the end of the month, his monthly sales is compared with target and commission is calculated as follows:<br> If Sales_Quantity > Target_Quantity then commission is 25% of extra sales made + 10% of target.<br> If Sales_Quantity = Target_Quantity then commission is 10% of target.<br> Otherwise commission is zero.<br>Display salesman information along with commission obtained. (Use array of objects).',
             marks: 25,
           },
         ],
@@ -234,7 +234,7 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to create a class Machine with data members Machine_Id, Machine_Name, Price. Create and initialize all values of Machine object by using parameterized constructor and copy constructor. Display details of Machine using setw() and setprecision().",
+            text: 'a) Write a C++ program to create a class Machine with data members Machine_Id, Machine_Name, Price. Create and initialize all values of Machine object by using parameterized constructor and copy constructor. Display details of Machine using setw() and setprecision().',
             marks: 15,
           },
           {
@@ -249,12 +249,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class MyMatrix. Write a C++ program to accept and display a Matrix. Overload binary ‘-’ operator to calculate the subtraction of two matrices.",
+            text: 'a) Create a C++ class MyMatrix. Write a C++ program to accept and display a Matrix. Overload binary ‘-’ operator to calculate the subtraction of two matrices.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Design two base classes Student (S_id, Name, Class) and Competition (C_id, C_Name). Derive a class Stud_Comp (Rank) from it. Write a menu driven program to perform the following functions:<br>i. Accept information.<br>ii. Display information.<br>iii. Display Student Details in the ascending order of Rank of a specified competition.<br>(Use array of objects).",
+            text: 'b) Design two base classes Student (S_id, Name, Class) and Competition (C_id, C_Name). Derive a class Stud_Comp (Rank) from it. Write a menu driven program to perform the following functions:<br>i. Accept information.<br>ii. Display information.<br>iii. Display Student Details in the ascending order of Rank of a specified competition.<br>(Use array of objects).',
             marks: 25,
           },
         ],
@@ -269,7 +269,7 @@ const cpp = [
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class MyArray with data members:<br>- int *arr<br>- int size<br>Write necessary member functions to accept and display Array elements. Overload the following operators:<br>Operator Example Purpose<br>- (Unary) -Al Reverse array elements.<br>+(Binary) A2=Al+n Add constant n to all array elements.",
+            text: 'b) Create a C++ class MyArray with data members:<br>- int *arr<br>- int size<br>Write necessary member functions to accept and display Array elements. Overload the following operators:<br>Operator Example Purpose<br>- (Unary) -Al Reverse array elements.<br>+(Binary) A2=Al+n Add constant n to all array elements.',
             marks: 25,
           },
         ],
@@ -279,12 +279,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to create a class Distance with data members meter and centimeter to represent distance. Write a function Larger() to return the larger of two distances. (Use this pointer).",
+            text: 'a) Write a C++ program to create a class Distance with data members meter and centimeter to represent distance. Write a function Larger() to return the larger of two distances. (Use this pointer).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ base class Media. Derive two different classes from it, class NewsPaper with data members N_Name, N_Editor, N_Price, No_of_Pages and class Magazine with data members M_Name, M_Editor, M_Price. Write a C++ program to perform the following functions:<br>i. Accept and Display information of all Media.<br>ii. Display the total cost of all Media items.",
+            text: 'b) Create a C++ base class Media. Derive two different classes from it, class NewsPaper with data members N_Name, N_Editor, N_Price, No_of_Pages and class Magazine with data members M_Name, M_Editor, M_Price. Write a C++ program to perform the following functions:<br>i. Accept and Display information of all Media.<br>ii. Display the total cost of all Media items.',
             marks: 25,
           },
         ],
@@ -294,12 +294,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to create a class Currency with data members Dollar, Cent. Write a member function to add two currency amounts and display the result in Dollar and Cent format.",
+            text: 'a) Write a C++ program to create a class Currency with data members Dollar, Cent. Write a member function to add two currency amounts and display the result in Dollar and Cent format.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a base class Rectangle with data members Length and Width. Derive two classes from it, Square (Side) and Circle (Radius). Write a program to compute and display area and perimeter/circumference of Rectangle, Square and Circle.<br>Use pure virtual functions to achieve this. (Use virtual functions and Abstract Class).",
+            text: 'b) Create a base class Rectangle with data members Length and Width. Derive two classes from it, Square (Side) and Circle (Radius). Write a program to compute and display area and perimeter/circumference of Rectangle, Square and Circle.<br>Use pure virtual functions to achieve this. (Use virtual functions and Abstract Class).',
             marks: 25,
           },
         ],
@@ -309,12 +309,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class Employee with data members Emp_id, Emp_Name, Company_Name and Salary.<br>Write member functions to accept and display Employee information. Design User defined Manipulator to print Salary.<br>(For Salary set right justification, maximum width to 7 and fill remaining spaces with ‘*’).",
+            text: 'a) Create a C++ class Employee with data members Emp_id, Emp_Name, Company_Name and Salary.<br>Write member functions to accept and display Employee information. Design User defined Manipulator to print Salary.<br>(For Salary set right justification, maximum width to 7 and fill remaining spaces with ‘*’).',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class for a two dimensional points. Write necessary member functions to accept & display the point object. Overload the following operators:<br>Operator Example Purpose<br>+ (Binary) P3=P1+P2 Adds coordinates of point P1 and P2.<br>- (Unary) -P1 Negates coordinates of point P1.<br>*(Binary) P2=P1*n Multiply coordinates of point P1 by constant ‘n’.",
+            text: 'b) Create a C++ class for a two dimensional points. Write necessary member functions to accept & display the point object. Overload the following operators:<br>Operator Example Purpose<br>+ (Binary) P3=P1+P2 Adds coordinates of point P1 and P2.<br>- (Unary) -P1 Negates coordinates of point P1.<br>*(Binary) P2=P1*n Multiply coordinates of point P1 by constant ‘n’.',
             marks: 25,
           },
         ],
@@ -324,12 +324,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to define two function templates for calculating the square and cube of given numbers with different data types.",
+            text: 'a) Write a C++ program to define two function templates for calculating the square and cube of given numbers with different data types.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Write a C++ program to overload ‘display_str’ function as follows:<br>i. void display_str(char *) - Display a string in double quotes.<br>ii. void display_str(int n, char *) - Display first n characters from a given string.<br>iii. void display_str(int m, int n, char *) - Display substring of a given string from position m to n.",
+            text: 'b) Write a C++ program to overload ‘display_str’ function as follows:<br>i. void display_str(char *) - Display a string in double quotes.<br>ii. void display_str(int n, char *) - Display first n characters from a given string.<br>iii. void display_str(int m, int n, char *) - Display substring of a given string from position m to n.',
             marks: 25,
           },
         ],
@@ -339,12 +339,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class MyString with data member character pointer. Write a C++ program to accept and display a string. Overload “+” operator to concatenate two strings.",
+            text: 'a) Create a C++ class MyString with data member character pointer. Write a C++ program to accept and display a string. Overload “+” operator to concatenate two strings.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class ComplexNumber with data members real and imaginary. Write necessary functions:<br>i. To accept Complex Number using constructor.<br>ii. To display Complex Number in format [x + iy].<br>iii. To add two Complex Numbers by using friend function.",
+            text: 'b) Create a C++ class ComplexNumber with data members real and imaginary. Write necessary functions:<br>i. To accept Complex Number using constructor.<br>ii. To display Complex Number in format [x + iy].<br>iii. To add two Complex Numbers by using friend function.',
             marks: 25,
           },
         ],
@@ -354,12 +354,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class FixDeposit with data members FD_No, Cust Name, FD_Amt, Interest rate, Maturity amt, Number_of months. Create and Initialize all values of FixDeposit object by using parameterized constructor with default value for interest rate. Calculate maturity amt using interest rate and display all the details.",
+            text: 'a) Create a C++ class FixDeposit with data members FD_No, Cust Name, FD_Amt, Interest rate, Maturity amt, Number_of months. Create and Initialize all values of FixDeposit object by using parameterized constructor with default value for interest rate. Calculate maturity amt using interest rate and display all the details.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class InvoiceBill with data members Order_id, O_Date, Customer Name, No_of Products, Prod_Name[], Quantity[], Prod_Price[]. A Customer can buy ‘n’ products. Accept quantity for each product. Generate and Display the bill using appropriate Manipulators. (Use new operator)",
+            text: 'b) Create a C++ class InvoiceBill with data members Order_id, O_Date, Customer Name, No_of Products, Prod_Name[], Quantity[], Prod_Price[]. A Customer can buy ‘n’ products. Accept quantity for each product. Generate and Display the bill using appropriate Manipulators. (Use new operator)',
             marks: 25,
           },
         ],
@@ -370,7 +370,7 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to calculate mean, mode and median of three integer numbers. (Use Inline function)",
+            text: 'a) Write a C++ program to calculate mean, mode and median of three integer numbers. (Use Inline function)',
             marks: 15,
           },
           {
@@ -386,12 +386,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to find average of 3 integer numbers and average of 3 float numbers. (Use function overloading)",
+            text: 'a) Write a C++ program to find average of 3 integer numbers and average of 3 float numbers. (Use function overloading)',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class Time with data members hours, minutes, seconds. Write a C++ program using operator overloading to perform the following:<br>i. = To check whether two Times are equal or not.<br>ii. >> To accept the time.<br>iii. << To display the time.",
+            text: 'b) Create a C++ class Time with data members hours, minutes, seconds. Write a C++ program using operator overloading to perform the following:<br>i. = To check whether two Times are equal or not.<br>ii. >> To accept the time.<br>iii. << To display the time.',
             marks: 25,
           },
         ],
@@ -402,12 +402,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Create a C++ class College, with data members College_Id, College Name, Establishment_year, University_Name. Overload operators >> and << to accept and display College information.",
+            text: 'a) Create a C++ class College, with data members College_Id, College Name, Establishment_year, University_Name. Overload operators >> and << to accept and display College information.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a base class Travels with data members T_no, Company_Name. Derive a class Route with data members Route_id, Source, and Destination from Travels class. Also derive a class Reservation with data members Number_of_Seats, Travels_Class, Fare, and Travel_Date from Route.<br>Write a C++ program to perform following necessary member functions:<br>i. Accept details of ‘n’ reservations.<br>ii. Display details of all reservations.<br>iii. Display reservation details of a specified Date.",
+            text: 'b) Create a base class Travels with data members T_no, Company_Name. Derive a class Route with data members Route_id, Source, and Destination from Travels class. Also derive a class Reservation with data members Number_of_Seats, Travels_Class, Fare, and Travel_Date from Route.<br>Write a C++ program to perform following necessary member functions:<br>i. Accept details of ‘n’ reservations.<br>ii. Display details of all reservations.<br>iii. Display reservation details of a specified Date.',
             marks: 25,
           },
         ],
@@ -418,12 +418,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write a C++ program to read array of ‘n’ integers from user and display it in reverse order. (Use Dynamic memory allocation)",
+            text: 'a) Write a C++ program to read array of ‘n’ integers from user and display it in reverse order. (Use Dynamic memory allocation)',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class Employee with data members Emp_Id, Emp_Name, Mobile_No, Salary. Write necessary member functions for the following:<br>i. Accept details of n employees<br>ii. Display employee details in descending order of their salary.<br>iii. Display details of a particular employee.<br>(Use Array of object and Use appropriate manipulators)",
+            text: 'b) Create a C++ class Employee with data members Emp_Id, Emp_Name, Mobile_No, Salary. Write necessary member functions for the following:<br>i. Accept details of n employees<br>ii. Display employee details in descending order of their salary.<br>iii. Display details of a particular employee.<br>(Use Array of object and Use appropriate manipulators)',
             marks: 25,
           },
         ],
@@ -434,12 +434,12 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write C++ program to create a class E_Bill with data members Cust_Name, Meter_ID, No_of Units and Total_Charges. Write member functions to accept and display customer information by calculating charges. (Rules to calculate electricity board charges):<br>- For first 100 units: Rs. 1 per unit<br>- For next 200 units: Rs. 2 per unit<br>- Beyond 300 units: Rs. 5 per unit<br>All users are charged a minimum of Rs.150. If the total charge is more than Rs.250.00 then an additional charge of 15% is added.",
+            text: 'a) Write C++ program to create a class E_Bill with data members Cust_Name, Meter_ID, No_of Units and Total_Charges. Write member functions to accept and display customer information by calculating charges. (Rules to calculate electricity board charges):<br>- For first 100 units: Rs. 1 per unit<br>- For next 200 units: Rs. 2 per unit<br>- Beyond 300 units: Rs. 5 per unit<br>All users are charged a minimum of Rs.150. If the total charge is more than Rs.250.00 then an additional charge of 15% is added.',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class VisitingStaff with data members Name, No_of Subjects, Name_of Subjects[], Working_hours, Total_Salary. (Number of subjects varies for a Staff). Write a parameterized constructor to initialize the data members and create an array for Name of Subjects dynamically. Display Visiting Staff details by calculating salary. (Assume remuneration Rs. 300 per working hour)",
+            text: 'b) Create a C++ class VisitingStaff with data members Name, No_of Subjects, Name_of Subjects[], Working_hours, Total_Salary. (Number of subjects varies for a Staff). Write a parameterized constructor to initialize the data members and create an array for Name of Subjects dynamically. Display Visiting Staff details by calculating salary. (Assume remuneration Rs. 300 per working hour)',
             marks: 25,
           },
         ],
@@ -450,17 +450,17 @@ const cpp = [
         questions: [
           {
             questionId: 1,
-            text: "a) Write C++ program to create two classes Integer Array and Float Array with an array as a data member. Write necessary member functions to accept and display array elements of both the classes. Find and display average of both the arrays. (Use Friend function)",
+            text: 'a) Write C++ program to create two classes Integer Array and Float Array with an array as a data member. Write necessary member functions to accept and display array elements of both the classes. Find and display average of both the arrays. (Use Friend function)',
             marks: 15,
           },
           {
             questionId: 2,
-            text: "b) Create a C++ class Marksheet with data members Seat_No, Student_Name, Class, Subject_Name[], Int_Marks[], Ext_Marks[], Total[], Grand_Total, Percentage, Grade. Write member function to accept Student information for 5 subjects. Calculate Total, Grand_Total, Percentage, Grade and use setw(), setprecision() and setfill() to display Marksheet.",
+            text: 'b) Create a C++ class Marksheet with data members Seat_No, Student_Name, Class, Subject_Name[], Int_Marks[], Ext_Marks[], Total[], Grand_Total, Percentage, Grade. Write member function to accept Student information for 5 subjects. Calculate Total, Grand_Total, Percentage, Grade and use setw(), setprecision() and setfill() to display Marksheet.',
             marks: 25,
           },
         ],
       },
     ],
-    language: "cpp",
+    language: 'cpp',
   },
 ];

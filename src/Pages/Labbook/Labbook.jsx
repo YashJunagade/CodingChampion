@@ -1,7 +1,7 @@
-import Navbar from "../../Components/Navbar/Navbar";
-import SideBar from "../../Components/SideBar/SideBar";
-import Menu from "./Menu";
-import "./Labbook.css";
+import Navbar from '../../Components/Navbar/Navbar';
+import SideBar from '../../Components/SideBar/SideBar';
+import Menu from './Menu';
+import './Labbook.css';
 
 function Labbook() {
   return (

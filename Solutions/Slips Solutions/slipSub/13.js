@@ -1,6 +1,6 @@
 const mongodb = [
   {
-    subject: "MongoDB",
+    subject: 'MongoDB',
     slips: [
       {
         slipId: 1,
@@ -805,6 +805,6 @@ const mongodb = [
         ],
       },
     ],
-    language: "json",
+    language: 'json',
   },
 ];

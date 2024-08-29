@@ -1,6 +1,6 @@
 const python = [
   {
-    subject: "Python",
+    subject: 'Python',
     slips: [
       {
         slipId: 1,
@@ -68,7 +68,7 @@ const python = [
         questions: [
           {
             questionId: 1,
-            text: "Write a Python script using class, which has two methods get_String and print_String. get_String accept a string from the user and print_String print the string in upper case",
+            text: 'Write a Python script using class, which has two methods get_String and print_String. get_String accept a string from the user and print_String print the string in upper case',
             marks: 15,
           },
           {
@@ -373,7 +373,7 @@ const python = [
           },
           {
             questionId: 2,
-            text: "Write a Python script to Create a Class which Performs Basic Calculator Operations.",
+            text: 'Write a Python script to Create a Class which Performs Basic Calculator Operations.',
             marks: 25,
           },
         ],
@@ -454,6 +454,6 @@ const python = [
         ],
       },
     ],
-    language: "python",
+    language: 'python',
   },
 ];

@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "echo \"No tests specified\"",
+    "prettier": "prettier --write"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -36,14 +38,15 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.9",
     "postcss": "^8.4.41",
-    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.10",
     "vite": "^5.4.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write",
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

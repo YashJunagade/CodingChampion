@@ -1,6 +1,6 @@
-import { useState } from "react";
-import NestedDropdown from "./NestedDropDown";
-import "./DropDownMenu.css";
+import { useState } from 'react';
+import NestedDropdown from './NestedDropDown';
+import './DropDownMenu.css';
 
 function DropDownMenu({ menu }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ function DropDownMenu({ menu }) {
     <div className="CollapsibleMenu">
       <div className="CollapsibleMenu-header" onClick={toggleCollapsibleMenu}>
         <span>{menu.name}</span>
-        <span className="arrow">{isOpen ? "▲ Up" : "▼ Down"}</span>
+        <span className="arrow">{isOpen ? '▲ Up' : '▼ Down'}</span>
       </div>
       {isOpen && menu.years && (
         <div className="CollapibleMenu-content">
