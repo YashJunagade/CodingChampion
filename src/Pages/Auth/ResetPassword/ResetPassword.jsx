@@ -6,12 +6,15 @@ import {
   confirmPasswordReset,
 } from 'firebase/auth'
 import { toast } from 'react-toastify'
+import { FaEye, FaEyeSlash } from 'react-icons/fa'
 
 function ResetPassword() {
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const [actionCode, setActionCode] = useState(null)
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
 
@@ -19,24 +22,21 @@ function ResetPassword() {
     const code = searchParams.get('oobCode')
     if (code) {
       setActionCode(code)
-      // Verify the password reset code
       const auth = getAuth()
       verifyPasswordResetCode(auth, code)
-        .then(() => {
-          // Code is valid
-        })
+        .then(() => {})
         .catch((error) => {
           console.error('Error verifying password reset code:', error)
           toast.error('Invalid or expired password reset link.', {
             position: 'bottom-center',
           })
-          navigate('/login') // Redirect to login page
+          navigate('/login')
         })
     } else {
       toast.error('No reset code found in the URL.', {
         position: 'bottom-center',
       })
-      navigate('/login') // Redirect to login page
+      navigate('/login')
     }
   }, [searchParams, navigate])
 
@@ -72,7 +72,7 @@ function ResetPassword() {
       >
         <h2 className="text-2xl font-semibold mb-6">Reset Password</h2>
 
-        <div className="mb-4">
+        <div className="mb-4 relative">
           <label
             className="block text-left text-sm font-medium mb-1"
             htmlFor="new-password"
@@ -80,7 +80,7 @@ function ResetPassword() {
             New Password
           </label>
           <input
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             id="new-password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
@@ -88,9 +88,15 @@ function ResetPassword() {
             className="w-full p-2 border rounded-md text-lg"
             required
           />
+          <span
+            className="absolute right-3 top-9 cursor-pointer"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
         </div>
 
-        <div className="mb-6">
+        <div className="mb-6 relative">
           <label
             className="block text-left text-sm font-medium mb-1"
             htmlFor="confirm-password"
@@ -98,7 +104,7 @@ function ResetPassword() {
             Confirm Password
           </label>
           <input
-            type="password"
+            type={showConfirmPassword ? 'text' : 'password'}
             id="confirm-password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
@@ -106,11 +112,19 @@ function ResetPassword() {
             className="w-full p-2 border rounded-md text-lg"
             required
           />
+          <span
+            className="absolute right-3 top-9 cursor-pointer"
+            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+          >
+            {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
         </div>
 
         <button
           type="submit"
-          className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
+          className={`w-full py-2 rounded-md text-white ${
+            loading ? 'bg-gray-500' : 'bg-blue-500'
+          } transition`}
         >
           {loading ? 'Resetting...' : 'Reset Password'}
         </button>
