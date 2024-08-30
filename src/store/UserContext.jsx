@@ -23,7 +23,7 @@ export const UserProvider = ({ children }) => {
       displayName: user.displayName || '',
       photoURL: user.photoURL || '',
       createdAt: new Date(),
-      profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Assuming this is how you're setting the profile pic
+      profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Profile picture logic
     }
 
     try {
@@ -41,6 +41,8 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       setLoading(true)
+      console.log('Auth state changed:', user) // Debug log
+
       if (user) {
         setIsLoggedIn(true)
         try {
@@ -49,9 +51,7 @@ export const UserProvider = ({ children }) => {
           if (docSnap.exists()) {
             setUserDetails(docSnap.data())
           } else {
-            console.warn(
-              'User authenticated but no Firestore document found. Creating one...'
-            )
+            console.warn('No document found. Creating one...')
             const newUserData = await createUserDocument(user)
             setUserDetails(newUserData)
           }

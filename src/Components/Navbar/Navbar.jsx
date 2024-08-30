@@ -12,16 +12,13 @@ function Navbar() {
     if (userDetails?.profilePic) {
       setIsImageLoading(true)
     }
-  }, [userDetails])
+  }, [])
 
   const handleImageLoad = useCallback(() => {
     setIsImageLoading(false)
   }, [])
 
-  const profilePicUrl = userDetails?.profilePic
-    ? `/avatar/${userDetails.profilePic}`
-    : '/path/to/default-profile-pic.jpg'
-
+  console.log('ProfilePic in Navbar:', userDetails?.profilePic)
   if (loading) {
     return (
       <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6 text-center">
@@ -54,7 +51,7 @@ function Navbar() {
                 </div>
               )}
               <img
-                src={profilePicUrl}
+                src={`/avatar/${userDetails.profilePic}`}
                 alt="Profile"
                 className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
                 onLoad={handleImageLoad}

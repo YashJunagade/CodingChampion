@@ -27,8 +27,6 @@ function Register() {
             uid: user.uid,
             email: user.email,
             userName: user.displayName || user.email.split('@')[0],
-            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
-            createdAt: new Date(),
           },
           { merge: true }
         )
@@ -81,12 +79,18 @@ function Register() {
   }
 
   return (
-    <div style={styles.container}>
-      <form onSubmit={handleRegister} style={styles.form}>
-        <h2 style={styles.heading}>Sign Up</h2>
+    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <form
+        onSubmit={handleRegister}
+        className="bg-white p-8 rounded-lg shadow-lg w-96 text-center"
+      >
+        <h2 className="text-2xl font-semibold mb-6">Sign Up</h2>
 
-        <div style={styles.inputGroup}>
-          <label style={styles.label} htmlFor="email">
+        <div className="mb-4">
+          <label
+            className="block text-left text-sm font-medium mb-1"
+            htmlFor="email"
+          >
             Email Address
           </label>
           <input
@@ -95,13 +99,16 @@ function Register() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter Email"
-            style={styles.input}
+            className="w-full p-2 border rounded-md text-lg"
             required
           />
         </div>
 
-        <div style={styles.inputGroup}>
-          <label style={styles.label} htmlFor="password">
+        <div className="mb-6">
+          <label
+            className="block text-left text-sm font-medium mb-1"
+            htmlFor="password"
+          >
             Password
           </label>
           <input
@@ -110,106 +117,39 @@ function Register() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter Password"
-            style={styles.input}
+            className="w-full p-2 border rounded-md text-lg"
             required
           />
         </div>
 
-        <button type="submit" style={styles.submitButton}>
+        <button
+          type="submit"
+          className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
+        >
           {loading ? 'Signing up...' : 'Sign Up'}
         </button>
 
-        <div style={styles.loginLink}>
-          Already registered? <a href="/login">Login</a>
+        <div className="mt-4">
+          Already registered?{' '}
+          <a href="/login" className="text-blue-500">
+            Login
+          </a>
         </div>
 
-        <div style={styles.orContinue}>--Or continue with--</div>
+        <div className="my-6 text-gray-600">--Or continue with--</div>
 
-        <button style={styles.googleButton} onClick={handleGoogleSignIn}>
-          <img src={googleLogo} alt="Google logo" style={styles.googleIcon} />
-          <span style={styles.googleText}>
+        <button
+          onClick={handleGoogleSignIn}
+          className="flex items-center justify-center w-full border rounded-md py-2 px-4"
+        >
+          <img src={googleLogo} alt="Google logo" className="w-6 h-6 mr-2" />
+          <span className="text-lg">
             {loading ? 'Signing in...' : 'Sign in with Google'}
           </span>
         </button>
       </form>
     </div>
   )
-}
-
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    backgroundColor: '#f5f5f5',
-  },
-  form: {
-    backgroundColor: '#fff',
-    padding: '40px',
-    borderRadius: '10px',
-    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-    width: '400px',
-    textAlign: 'center',
-  },
-  heading: {
-    marginBottom: '20px',
-    fontSize: '24px',
-  },
-  inputGroup: {
-    marginBottom: '20px',
-  },
-  label: {
-    display: 'block',
-    marginBottom: '5px',
-    textAlign: 'left',
-    fontSize: '14px',
-  },
-  input: {
-    width: '100%',
-    padding: '10px',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-    fontSize: '16px',
-  },
-  submitButton: {
-    width: '100%',
-    padding: '10px',
-    backgroundColor: '#007bff',
-    color: '#fff',
-    borderRadius: '5px',
-    border: 'none',
-    cursor: 'pointer',
-    fontSize: '16px',
-    marginBottom: '10px',
-  },
-  loginLink: {
-    fontSize: '14px',
-    marginTop: '10px',
-  },
-  orContinue: {
-    margin: '20px 0',
-    fontSize: '14px',
-    color: '#666',
-  },
-  googleButton: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    backgroundColor: '#fff',
-    borderRadius: '5px',
-    border: '1px solid #ccc',
-    cursor: 'pointer',
-    fontSize: '16px',
-  },
-  googleIcon: {
-    width: '20px',
-    marginRight: '10px',
-  },
-  googleText: {
-    fontSize: '16px',
-  },
 }
 
 export default Register

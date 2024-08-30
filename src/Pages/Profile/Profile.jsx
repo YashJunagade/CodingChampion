@@ -21,6 +21,7 @@ function Profile() {
       console.error('Error signing out:', error)
     }
   }
+  console.log('ProfilePic in Profile:', userDetails.profilePic)
 
   return (
     <>
