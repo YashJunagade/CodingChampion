@@ -11,8 +11,6 @@ import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
 function Register() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -28,17 +26,19 @@ function Register() {
         password
       )
       const user = userCredential.user
+
       if (user) {
         await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
-          fName: firstName,
-          lname: lastName,
+          userName: user.email.split('@')[0], // Default userName based on email
+          profilePic: '', // Empty until the user updates it
         })
       }
+
       toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
       })
-      navigate('/profile')
+      navigate('/')
     } catch (error) {
       console.error('Registration Error:', error)
       toast.error(error.message, {
@@ -53,21 +53,23 @@ function Register() {
     e.preventDefault()
     setLoading(true)
     const provider = new GoogleAuthProvider()
+
     try {
       const result = await signInWithPopup(auth, provider)
       const user = result.user
+
       if (user) {
-        const [firstName, lastName = ''] = user.displayName.split(' ')
         await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
-          fName: firstName,
-          lName: lastName,
+          userName: user.displayName,
+          profilePic: user.photoURL,
         })
       }
+
       toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
       })
-      navigate('/profile')
+      navigate('/')
     } catch (error) {
       console.error('Google Sign-In Error:', error)
       toast.error(error.message, {
@@ -82,36 +84,6 @@ function Register() {
     <div style={styles.container}>
       <form onSubmit={handleRegister} style={styles.form}>
         <h2 style={styles.heading}>Sign Up</h2>
-
-        <div style={styles.inputGroup}>
-          <label style={styles.label} htmlFor="firstName">
-            First Name
-          </label>
-          <input
-            type="text"
-            id="firstName"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder="First Name"
-            style={styles.input}
-            required
-          />
-        </div>
-
-        <div style={styles.inputGroup}>
-          <label style={styles.label} htmlFor="lastName">
-            Last Name
-          </label>
-          <input
-            type="text"
-            id="lastName"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            placeholder="Last Name"
-            style={styles.input}
-            required
-          />
-        </div>
 
         <div style={styles.inputGroup}>
           <label style={styles.label} htmlFor="email">
@@ -155,7 +127,9 @@ function Register() {
 
         <button style={styles.googleButton} onClick={handleGoogleSignIn}>
           <img src={googleLogo} alt="Google logo" style={styles.googleIcon} />
-          <span style={styles.googleText}>Sign in with Google</span>
+          <span style={styles.googleText}>
+            {loading ? 'Signing in...' : 'Sign in with Google'}
+          </span>
         </button>
       </form>
     </div>

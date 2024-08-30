@@ -2,41 +2,63 @@ import React, { useEffect, useState } from 'react'
 import { auth, db } from '../../config/firebase'
 import { doc, getDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import { toast } from 'react-toastify' // Ensure to install and import toast if using it
 
 function Profile() {
   const [userDetails, setUserDetails] = useState(null)
   const navigate = useNavigate()
 
-  async function fetchUserData() {
-    auth.onAuthStateChanged(async (user) => {
-      const docRef = doc(db, 'Users', user.uid)
-      const docSnap = await getDoc(docRef)
-      if (docSnap.exists()) {
-        setUserDetails(docSnap.data())
-        console.log(docSnap.data())
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        try {
+          const docRef = doc(db, 'Users', user.uid)
+          const docSnap = await getDoc(docRef)
+          if (docSnap.exists()) {
+            setUserDetails(docSnap.data())
+          } else {
+            toast.error('No user data found.', {
+              position: 'bottom-center',
+            })
+            navigate('/login')
+          }
+        } catch (error) {
+          toast.error('Error fetching user data.', {
+            position: 'bottom-center',
+          })
+          navigate('/login')
+        }
       } else {
-        toast.error(error.message, {
-          position: 'bottom-center',
-        })
         navigate('/login')
       }
     })
-  }
 
-  useEffect(() => {
-    fetchUserData()
-  }, [])
+    return () => unsubscribe() // Cleanup subscription on unmount
+  }, [navigate])
+
+  const handleSignOut = async () => {
+    try {
+      await signOut(auth)
+      navigate('/login') // Redirect to login after sign out
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
+  }
 
   return (
     <>
       {userDetails ? (
         <div>
-          <p>first Name{userDetails.fName}</p>
-          <p>{userDetails.lName}</p>
-          <img src={userDetails.profilePic} />
+          <p>Email: {userDetails.email}</p>
+          <p>User Name: {userDetails.userName}</p>
+          {userDetails.profilePic && (
+            <img src={userDetails.profilePic} alt="Profile" />
+          )}
+          <button onClick={handleSignOut}>Sign Out</button>
         </div>
       ) : (
-        <p>loading...</p>
+        <p>Loading...</p>
       )}
     </>
   )

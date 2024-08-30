@@ -42,7 +42,7 @@ function Login() {
       toast.success('User Logged in Successfully', {
         position: 'bottom-right',
       })
-      navigate('/profile')
+      navigate('/')
     } catch (err) {
       switch (err.code) {
         case 'auth/user-not-found':
@@ -79,13 +79,14 @@ function Login() {
       const provider = new GoogleAuthProvider()
       const result = await signInWithPopup(auth, provider)
       const user = result.user
+      console.log(user) // Correct way to log the user object
 
       // Save user data to Firestore
       await setDoc(
         doc(db, 'Users', user.uid),
         {
           uid: user.uid,
-          name: user.displayName,
+          userName: user.displayName,
           email: user.email,
           profilePic: user.photoURL,
         },
@@ -95,7 +96,7 @@ function Login() {
       toast.success('User Logged in Successfully with Google', {
         position: 'top-center',
       })
-      navigate('/profile')
+      navigate('/')
     } catch (err) {
       toast.error(err.message, { position: 'bottom-center' })
     } finally {

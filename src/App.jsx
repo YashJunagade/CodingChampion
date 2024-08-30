@@ -24,15 +24,6 @@ import { useEffect, useState } from 'react'
 import { auth } from './config/firebase'
 
 const App = () => {
-  const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user)
-    })
-    return () => unsubscribe()
-  }, [])
-
   return (
     <Router>
       <ToastContainer />
@@ -40,10 +31,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route
-          path="/profile"
-          element={user ? <Profile /> : <Navigate to="/login" />}
-        />
+        <Route path="/profile" element={<Profile />} />
+
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />} />
         <Route path="/:subjectId/labList" element={<LabList />} />
