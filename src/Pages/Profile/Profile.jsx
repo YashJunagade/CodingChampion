@@ -52,9 +52,7 @@ function Profile() {
         <div>
           <p>Email: {userDetails.email}</p>
           <p>User Name: {userDetails.userName}</p>
-          {userDetails.profilePic && (
-            <img src={userDetails.profilePic} alt="Profile" />
-          )}
+          <img src={userDetails.profilePic} alt="Profile" />
           <button onClick={handleSignOut}>Sign Out</button>
         </div>
       ) : (
