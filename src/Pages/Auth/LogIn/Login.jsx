@@ -1,74 +1,107 @@
-import React, { useState } from 'react';
-import googleLogo from '../../../assets/google.png';
+import React, { useState } from 'react'
+import googleLogo from '../../../assets/google.png'
 import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
-} from 'firebase/auth';
-import { auth } from '../../../config/firebase';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+} from 'firebase/auth'
+import { doc, setDoc, getDoc } from 'firebase/firestore'
+import { auth, db } from '../../../config/firebase' // Updated to include Firestore
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault()
+    setLoading(true)
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      )
+      const user = userCredential.user
+
+      // Check if user data exists in Firestore
+      const userDoc = await getDoc(doc(db, 'Users', user.uid))
+      if (!userDoc.exists()) {
+        // No existing data, save user data to Firestore
+        await setDoc(doc(db, 'Users', user.uid), {
+          uid: user.uid,
+          email: user.email,
+          name: user.displayName || '', // User might not have a displayName with email/password login
+          profilePic: user.photoURL || '', // Profile pic will be empty initially for email/password
+        })
+      }
+
       toast.success('User Logged in Successfully', {
         position: 'bottom-right',
-      });
-      navigate('/');
+      })
+      navigate('/profile')
     } catch (err) {
       switch (err.code) {
         case 'auth/user-not-found':
           toast.error('No user found with this email. Please register first.', {
             position: 'bottom-center',
-          });
-          break;
+          })
+          break
         case 'auth/wrong-password':
           toast.error('Incorrect password. Please try again.', {
             position: 'bottom-center',
-          });
-          break;
+          })
+          break
         case 'auth/invalid-email':
           toast.error('Invalid email format. Please check your email.', {
             position: 'bottom-center',
-          });
-          break;
+          })
+          break
         case 'auth/invalid-credential':
           toast.error('Invalid credentials. Please try again.', {
             position: 'bottom-center',
-          });
-          break;
+          })
+          break
         default:
-          toast.error(err.message, { position: 'bottom-center' });
+          toast.error(err.message, { position: 'bottom-center' })
       }
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   const handleGoogleSignIn = async () => {
-    setLoading(true);
+    setLoading(true)
     try {
-      const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
+      const provider = new GoogleAuthProvider()
+      const result = await signInWithPopup(auth, provider)
+      const user = result.user
+
+      // Save user data to Firestore
+      await setDoc(
+        doc(db, 'Users', user.uid),
+        {
+          uid: user.uid,
+          name: user.displayName,
+          email: user.email,
+          profilePic: user.photoURL,
+        },
+        { merge: true }
+      ) // Use merge to update existing data if any
+
       toast.success('User Logged in Successfully with Google', {
         position: 'top-center',
-      });
-      navigate('/');
+      })
+      navigate('/profile')
     } catch (err) {
-      toast.error(err.message, { position: 'bottom-center' });
+      toast.error(err.message, { position: 'bottom-center' })
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <div style={styles.container}>
@@ -129,7 +162,7 @@ function Login() {
         </button>
       </form>
     </div>
-  );
+  )
 }
 
 const styles = {
@@ -195,6 +228,9 @@ const styles = {
     cursor: 'pointer',
     fontSize: '16px',
   },
-};
+  googleIcon: {
+    marginRight: '10px',
+  },
+}
 
-export default Login;
+export default Login

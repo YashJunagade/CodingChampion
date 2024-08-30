@@ -3,36 +3,51 @@ import {
   Route,
   Routes,
   Navigate,
-} from 'react-router-dom';
-import Home from './Pages/Home/Home';
-import Slip from './Pages/Slip/Slip';
-import Labbook from './Pages/Labbook/Labbook';
-import SlipList from '../Solutions/Slips Solutions/SlipList';
-import Login from './Pages/Auth/LogIn/Login';
-import Register from './Pages/Auth/Register/Register';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './App.css';
-import './index.css';
-import UserData from './store/UserData';
-import Roadmaps from './Pages/RoadMaps/Roadmaps';
-import Dsa from './Pages/DataStructure/Dsa';
-import LabList from '../Solutions/Labbook Solutions/LabList';
-import SlipSolution from './Pages/SolutionPage/SlipSolution/SlipSolution';
-import LabSolution from './Pages/SolutionPage/LabSolution/LabSolution';
+} from 'react-router-dom'
+import Home from './Pages/Home/Home'
+import Slip from './Pages/Slip/Slip'
+import Labbook from './Pages/Labbook/Labbook'
+import SlipList from '../Solutions/Slips Solutions/SlipList'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import './App.css'
+import './index.css'
+import Roadmaps from './Pages/RoadMaps/Roadmaps'
+import Dsa from './Pages/DataStructure/Dsa'
+import LabList from '../Solutions/Labbook Solutions/LabList'
+import SlipSolution from './Pages/SolutionPage/SlipSolution/SlipSolution'
+import LabSolution from './Pages/SolutionPage/LabSolution/LabSolution'
+import Login from './Pages/Auth/LogIn/Login'
+import Register from './Pages/Auth/Register/Register'
+import Profile from './Pages/Profile/Profile'
+import { useEffect, useState } from 'react'
+import { auth } from './config/firebase'
+
 const App = () => {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user)
+    })
+    return () => unsubscribe()
+  }, [])
+
   return (
     <Router>
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/profile"
+          element={user ? <Profile /> : <Navigate to="/login" />}
+        />
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />} />
         <Route path="/:subjectId/labList" element={<LabList />} />
         <Route path="/labbook" element={<Labbook />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<UserData />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/dsa" element={<Dsa />} />
         <Route
@@ -45,7 +60,7 @@ const App = () => {
         />
       </Routes>
     </Router>
-  );
-};
+  )
+}
 
-export default App;
+export default App

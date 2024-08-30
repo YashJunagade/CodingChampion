@@ -1,90 +1,98 @@
-import React, { useState } from 'react';
-import googleLogo from '../../../assets/google.png';
+import React, { useState } from 'react'
+import googleLogo from '../../../assets/google.png'
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
-} from 'firebase/auth';
-import { auth, db } from '../../../config/firebase';
-import { setDoc, doc } from 'firebase/firestore';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+} from 'firebase/auth'
+import { auth, db } from '../../../config/firebase'
+import { setDoc, doc } from 'firebase/firestore'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 function Register() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate()
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  const handleRegister = async (e) => {
+    e.preventDefault()
+    setLoading(true)
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      const user = auth.currentUser;
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      )
+      const user = userCredential.user
       if (user) {
         await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
           fName: firstName,
-          lName: lastName,
-        });
+          lname: lastName,
+        })
       }
-      toast.success('User Registered Successfully!! \n Now logging you in...', {
+      toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
-      });
-      navigate('/');
-    } catch (err) {
-      console.error(err);
-      toast.error(err.message, {
+      })
+      navigate('/profile')
+    } catch (error) {
+      console.error('Registration Error:', error)
+      toast.error(error.message, {
         position: 'bottom-center',
-      });
-      setLoading(false);
+      })
+    } finally {
+      setLoading(false)
     }
-  };
-  const handleSigninWithGoogle = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const provider = new GoogleAuthProvider();
+  }
+
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    const provider = new GoogleAuthProvider()
     try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
+      const result = await signInWithPopup(auth, provider)
+      const user = result.user
       if (user) {
+        const [firstName, lastName = ''] = user.displayName.split(' ')
         await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
-          fName: user.displayName.split(' ')[0],
-          lName: user.displayName.split(' ')[1] || '',
-        });
+          fName: firstName,
+          lName: lastName,
+        })
       }
-      toast.success('User Registered Successfully!! \n Now logging you in...', {
+      toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
-      });
-      navigate('/');
-    } catch (err) {
-      console.error(err);
-      toast.error(err.message, {
+      })
+      navigate('/profile')
+    } catch (error) {
+      console.error('Google Sign-In Error:', error)
+      toast.error(error.message, {
         position: 'bottom-center',
-      });
-      setLoading(false);
+      })
+    } finally {
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <div style={styles.container}>
-      <form onSubmit={handleSubmit} style={styles.form}>
+      <form onSubmit={handleRegister} style={styles.form}>
         <h2 style={styles.heading}>Sign Up</h2>
 
         <div style={styles.inputGroup}>
           <label style={styles.label} htmlFor="firstName">
-            First name
+            First Name
           </label>
           <input
             type="text"
             id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            placeholder="First name"
+            placeholder="First Name"
             style={styles.input}
             required
           />
@@ -92,14 +100,14 @@ function Register() {
 
         <div style={styles.inputGroup}>
           <label style={styles.label} htmlFor="lastName">
-            Last name
+            Last Name
           </label>
           <input
             type="text"
             id="lastName"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            placeholder="Last name"
+            placeholder="Last Name"
             style={styles.input}
             required
           />
@@ -107,14 +115,14 @@ function Register() {
 
         <div style={styles.inputGroup}>
           <label style={styles.label} htmlFor="email">
-            Email address
+            Email Address
           </label>
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter email"
+            placeholder="Enter Email"
             style={styles.input}
             required
           />
@@ -129,14 +137,14 @@ function Register() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password"
+            placeholder="Enter Password"
             style={styles.input}
             required
           />
         </div>
 
         <button type="submit" style={styles.submitButton}>
-          {loading ? 'Sign up...' : 'Sign Up'}
+          {loading ? 'Signing up...' : 'Sign Up'}
         </button>
 
         <div style={styles.loginLink}>
@@ -145,12 +153,13 @@ function Register() {
 
         <div style={styles.orContinue}>--Or continue with--</div>
 
-        <button style={styles.googleButton} onClick={handleSigninWithGoogle}>
+        <button style={styles.googleButton} onClick={handleGoogleSignIn}>
           <img src={googleLogo} alt="Google logo" style={styles.googleIcon} />
+          <span style={styles.googleText}>Sign in with Google</span>
         </button>
       </form>
     </div>
-  );
+  )
 }
 
 const styles = {
@@ -166,7 +175,7 @@ const styles = {
     padding: '40px',
     borderRadius: '10px',
     boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
-    width: '500px',
+    width: '400px',
     textAlign: 'center',
   },
   heading: {
@@ -198,10 +207,11 @@ const styles = {
     border: 'none',
     cursor: 'pointer',
     fontSize: '16px',
+    marginBottom: '10px',
   },
   loginLink: {
-    marginTop: '10px',
     fontSize: '14px',
+    marginTop: '10px',
   },
   orContinue: {
     margin: '20px 0',
@@ -219,6 +229,13 @@ const styles = {
     cursor: 'pointer',
     fontSize: '16px',
   },
-};
+  googleIcon: {
+    width: '20px',
+    marginRight: '10px',
+  },
+  googleText: {
+    fontSize: '16px',
+  },
+}
 
-export default Register;
+export default Register
