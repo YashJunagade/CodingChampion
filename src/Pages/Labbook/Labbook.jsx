@@ -6,11 +6,15 @@ import './Labbook.css'
 
 function Labbook() {
   return (
-    <section className="labbookPageSection">
-      <Navbar />
-      <div className="labbookMainContainer">
-        <SideBar />
-        <Menu />
+    <section className="">
+      <Navbar></Navbar>
+      <div className="">
+        <div className="hidden md:inline">
+          <SideBar></SideBar>
+        </div>
+        <div>
+          <Menu></Menu>
+        </div>
       </div>
     </section>
   )
