@@ -1,9 +1,9 @@
-import Navbar from "./Navbar";
-import FeaturesContainer from "./FeaturesContainer";
-import Footer from "../../Components/Footer/Footer";
+import Navbar from './Navbar'
+import FeaturesContainer from './FeaturesContainer'
+import Footer from '../../Components/Footer/Footer'
 
 function Home() {
-     return (
+  return (
     <>
       <Navbar />
       <div className="mb-20">
@@ -20,7 +20,7 @@ function Home() {
           <FeaturesContainer
             featureTitle="Lab Book"
             featureDescription="FY, SY and TY BBA(C.A.) Lab book Assignments with solutions"
-            pageRoute="/slip"
+            pageRoute="/labbook"
           />
           <FeaturesContainer
             featureTitle="Data Structures & Algorithms"
@@ -36,7 +36,7 @@ function Home() {
       </div>
       <Footer />
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
