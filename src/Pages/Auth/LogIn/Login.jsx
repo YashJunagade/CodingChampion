@@ -34,7 +34,7 @@ function Login() {
           uid: user.uid,
           email: user.email,
           name: user.displayName || '', // User might not have a displayName with email/password login
-          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Profile pic will be empty initially for email/password
+          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
         })
       }
 
