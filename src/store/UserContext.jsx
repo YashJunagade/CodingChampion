@@ -18,10 +18,6 @@ export const UserProvider = ({ children }) => {
           const docSnap = await getDoc(docRef)
           if (docSnap.exists()) {
             setUserDetails(docSnap.data())
-          } else {
-            toast.error('No user data found.', {
-              position: 'bottom-center',
-            })
           }
         } catch (error) {
           toast.error('Error fetching user data.', {
@@ -39,18 +35,8 @@ export const UserProvider = ({ children }) => {
     return () => unsubscribe() // Cleanup subscription on unmount
   }, [])
 
-  const handleSignOut = async () => {
-    try {
-      await auth.signOut()
-      setUserDetails(null)
-    } catch (error) {
-      toast.error('Error signing out.', { position: 'bottom-center' })
-      console.error('Error signing out:', error)
-    }
-  }
-
   return (
-    <UserContext.Provider value={{ userDetails, loading, handleSignOut }}>
+    <UserContext.Provider value={{ userDetails, loading }}>
       {children}
     </UserContext.Provider>
   )
