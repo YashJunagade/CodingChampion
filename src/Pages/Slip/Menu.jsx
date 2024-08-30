@@ -15,7 +15,7 @@ function Menu() {
       <div className="">
         {/* first year subjects  */}
         <div
-          className="bg-primary w-[92%] mx-auto min-h-52 mt-8 p-2 rounded-custom cursor-pointer"
+          className="bg-primary w-[94%] mx-auto min-h-44 mt-8 px-2 py-4 rounded-custom cursor-pointer"
           onClick={toggleVisibility}
         >
           <div
@@ -24,7 +24,7 @@ function Menu() {
             }`}
           >
             <div
-              className={`grid grid-cols-2 gap-8 px-2 py-2 transition-transform duration-300 ease-in-out ${
+              className={`grid grid-cols-2 gap-4 px-2 py-2 transition-transform duration-300 ease-in-out ${
                 showSubjects ? 'translate-y-0' : '-translate-y-full'
               }`}
             >
