@@ -18,7 +18,6 @@ function Navbar() {
     setIsImageLoading(false)
   }, [])
 
-  console.log('ProfilePic in Navbar:', userDetails?.profilePic)
   if (loading) {
     return (
       <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6 text-center">

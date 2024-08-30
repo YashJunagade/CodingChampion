@@ -41,7 +41,6 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       setLoading(true)
-      console.log('Auth state changed:', user) // Debug log
 
       if (user) {
         setIsLoggedIn(true)
