@@ -22,6 +22,7 @@ import Register from './Pages/Auth/Register/Register'
 import Profile from './Pages/Profile/Profile'
 import { useEffect, useState } from 'react'
 import { auth } from './config/firebase'
+import ResetPassword from './Pages/Auth/ResetPassword/ResetPassword'
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/profile" element={<Profile />} />
 
         <Route path="/slip" element={<Slip />} />
