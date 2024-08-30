@@ -1,75 +1,75 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './Labsolution.css';
-import Navbar from '../../Home/Navbar';
-import QuestionLabCom from './QuestionLabCom';
-import CodeEditor from '../CodeEditor';
-import { useParams } from 'react-router-dom';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../../../config/firebase';
+import React, { useEffect, useRef, useState } from 'react'
+import './Labsolution.css'
+import Navbar from '../../../Components/Navbar/Navbar'
+import QuestionLabCom from './QuestionLabCom'
+import CodeEditor from '../CodeEditor'
+import { useParams } from 'react-router-dom'
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../../config/firebase'
 
 function LabSolution() {
-  const panelRef = useRef(null);
-  const [width, setWidth] = useState(40);
-  const { subjectId, assignment, set, question } = useParams();
-  const [language, setLanguage] = useState('');
-  const [assignmentNo, setAssignmentNo] = useState('');
-  const [setName, setSetName] = useState('');
-  const [questionNo, setQuestionNo] = useState('');
-  const [questionText, setQuestionText] = useState('');
-  const [solution, setSolution] = useState('');
+  const panelRef = useRef(null)
+  const [width, setWidth] = useState(40)
+  const { subjectId, assignment, set, question } = useParams()
+  const [language, setLanguage] = useState('')
+  const [assignmentNo, setAssignmentNo] = useState('')
+  const [setName, setSetName] = useState('')
+  const [questionNo, setQuestionNo] = useState('')
+  const [questionText, setQuestionText] = useState('')
+  const [solution, setSolution] = useState('')
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const Labdata = await getDoc(doc(db, 'labSubjects', subjectId));
+        const Labdata = await getDoc(doc(db, 'labSubjects', subjectId))
         if (Labdata.exists()) {
-          const data = Labdata.data();
+          const data = Labdata.data()
 
-          setLanguage(data.language);
-          setAssignmentNo(data.assignments[assignment - 1].assignment);
-          setSetName(data.assignments[assignment - 1].sets[set - 1].set);
+          setLanguage(data.language)
+          setAssignmentNo(data.assignments[assignment - 1].assignment)
+          setSetName(data.assignments[assignment - 1].sets[set - 1].set)
           const qData =
             data.assignments[assignment - 1].sets[set - 1].questions[
               question - 1
-            ];
-          setQuestionNo(qData.questionNo);
-          setQuestionText(qData.questionText);
+            ]
+          setQuestionNo(qData.questionNo)
+          setQuestionText(qData.questionText)
           setSolution(
             qData.solution ??
               'Currently there is no solution for this Question\n\t Our team is working on it \n\t\t try after some time...'
-          );
+          )
         } else {
-          console.log('no question found');
+          console.log('no question found')
         }
       } catch (error) {
-        console.log('error fetching data : ', error);
+        console.log('error fetching data : ', error)
       }
-    };
+    }
 
-    fetchData();
-  }, [subjectId, assignment, set, question]);
+    fetchData()
+  }, [subjectId, assignment, set, question])
 
   const handleMouseDown = (e) => {
-    e.preventDefault();
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-  };
+    e.preventDefault()
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
+  }
 
   const handleMouseMove = (e) => {
-    const panelLeft = panelRef.current.getBoundingClientRect().left;
+    const panelLeft = panelRef.current.getBoundingClientRect().left
     const newWidth =
-      ((e.clientX - panelLeft) / panelRef.current.offsetWidth) * 100;
+      ((e.clientX - panelLeft) / panelRef.current.offsetWidth) * 100
 
     // Set minimum and maximum widths to prevent panels from disappearing
     if (newWidth > 10 && newWidth < 90) {
-      setWidth(newWidth);
+      setWidth(newWidth)
     }
-  };
+  }
 
   const handleMouseUp = () => {
-    document.removeEventListener('mousemove', handleMouseMove);
-    document.removeEventListener('mouseup', handleMouseUp);
-  };
+    document.removeEventListener('mousemove', handleMouseMove)
+    document.removeEventListener('mouseup', handleMouseUp)
+  }
 
   return (
     <div className="container">
@@ -92,7 +92,7 @@ function LabSolution() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default LabSolution;
+export default LabSolution

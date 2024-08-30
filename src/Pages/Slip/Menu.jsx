@@ -7,9 +7,22 @@ function Menu() {
     <>
       <div className="">
         {/* first year subjects  */}
-        <div className="bg-primary w-[85%] mx-auto min-h-60 mt-8">test</div>
-        <div className="bg-primary w-[85%] mx-auto min-h-60 mt-8">test</div>
-        <div className="bg-primary w-[85%] mx-auto min-h-60 mt-8">test</div>
+        <div className="bg-primary w-[85%] mx-auto min-h-52 mt-8 rounded-custom">
+          <div className="grid grid-cols-2 gap-2">
+            <Subject
+              subRoute="/C Programming/slipList"
+              subName="C programming"
+            ></Subject>
+            <Subject subRoute="/DBMS/slipList" subName="DBMS"></Subject>
+            <Subject
+              subRoute="/Web Technology/slipList"
+              subName="Web Technology"
+            ></Subject>
+            <Subject subRoute="/RDBMS/slipList" subName="RDBMS"></Subject>
+          </div>
+        </div>
+        <div className="bg-primary w-[85%] mx-auto min-h-52 mt-8">test</div>
+        <div className="bg-primary w-[85%] mx-auto min-h-52 mt-8">test</div>
 
         <Subject
           subRoute="/C Programming/slipList"

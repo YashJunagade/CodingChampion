@@ -1,4 +1,4 @@
-import Navbar from './Navbar'
+import Navbar from '../../Components/Navbar/Navbar'
 import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
 
