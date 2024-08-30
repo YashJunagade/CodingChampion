@@ -4,6 +4,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  sendPasswordResetEmail,
 } from 'firebase/auth'
 import { doc, setDoc, getDoc } from 'firebase/firestore'
 import { auth, db } from '../../../config/firebase'
@@ -14,6 +15,8 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+  const [resetPasswordEmail, setResetPasswordEmail] = useState('')
+  const [resetPasswordMode, setResetPasswordMode] = useState(false)
   const navigate = useNavigate()
 
   const createOrUpdateUserDocument = async (user) => {
@@ -96,75 +99,154 @@ function Login() {
     }
   }
 
+  const handlePasswordReset = async () => {
+    setLoading(true)
+    try {
+      await sendPasswordResetEmail(auth, resetPasswordEmail)
+      toast.success('Password reset email sent. Check your inbox.', {
+        position: 'bottom-center',
+      })
+      setResetPasswordMode(false)
+    } catch (err) {
+      toast.error('Error sending password reset email. Please try again.', {
+        position: 'bottom-center',
+      })
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form
-        onSubmit={handleSubmit}
+        onSubmit={
+          resetPasswordMode
+            ? (e) => {
+                e.preventDefault()
+                handlePasswordReset()
+              }
+            : handleSubmit
+        }
         className="bg-white p-8 rounded-lg shadow-lg w-96 text-center"
       >
-        <h2 className="text-2xl font-semibold mb-6">Login</h2>
+        <h2 className="text-2xl font-semibold mb-6">
+          {resetPasswordMode ? 'Reset Password' : 'Login'}
+        </h2>
 
-        <div className="mb-4">
-          <label
-            className="block text-left text-sm font-medium mb-1"
-            htmlFor="email"
-          >
-            Email address
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter email"
-            className="w-full p-2 border rounded-md text-lg"
-            required
-          />
-        </div>
+        {resetPasswordMode ? (
+          <>
+            <div className="mb-4">
+              <label
+                className="block text-left text-sm font-medium mb-1"
+                htmlFor="reset-email"
+              >
+                Email address
+              </label>
+              <input
+                type="email"
+                id="reset-email"
+                value={resetPasswordEmail}
+                onChange={(e) => setResetPasswordEmail(e.target.value)}
+                placeholder="Enter email"
+                className="w-full p-2 border rounded-md text-lg"
+                required
+              />
+            </div>
 
-        <div className="mb-6">
-          <label
-            className="block text-left text-sm font-medium mb-1"
-            htmlFor="password"
-          >
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password"
-            className="w-full p-2 border rounded-md text-lg"
-            required
-          />
-        </div>
+            <button
+              type="submit"
+              className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
+            >
+              {loading ? 'Sending...' : 'Send Password Reset Email'}
+            </button>
 
-        <button
-          type="submit"
-          className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
-        >
-          {loading ? 'Logging in...' : 'Login'}
-        </button>
+            <button
+              type="button"
+              onClick={() => setResetPasswordMode(false)}
+              className="mt-4 text-blue-500"
+            >
+              Back to Login
+            </button>
+          </>
+        ) : (
+          <>
+            <div className="mb-4">
+              <label
+                className="block text-left text-sm font-medium mb-1"
+                htmlFor="email"
+              >
+                Email address
+              </label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter email"
+                className="w-full p-2 border rounded-md text-lg"
+                required
+              />
+            </div>
 
-        <div className="mt-4">
-          Don't have an account?{' '}
-          <a href="/register" className="text-blue-500">
-            Register
-          </a>
-        </div>
+            <div className="mb-6">
+              <label
+                className="block text-left text-sm font-medium mb-1"
+                htmlFor="password"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter password"
+                className="w-full p-2 border rounded-md text-lg"
+                required
+              />
+            </div>
 
-        <div className="my-6 text-gray-600">--Or continue with--</div>
+            <button
+              type="submit"
+              className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
+            >
+              {loading ? 'Logging in...' : 'Login'}
+            </button>
 
-        <button
-          onClick={handleGoogleSignIn}
-          className="flex items-center justify-center w-full border rounded-md py-2 px-4"
-        >
-          <img src={googleLogo} alt="Google logo" className="w-6 h-6 mr-2" />
-          <span className="text-lg">
-            {loading ? 'Logging in...' : 'Login with Google'}
-          </span>
-        </button>
+            <div className="mt-4">
+              <a
+                href="#"
+                onClick={() => setResetPasswordMode(true)}
+                className="text-blue-500"
+              >
+                Forgot Password?
+              </a>
+            </div>
+
+            <div className="mt-4">
+              Don't have an account?{' '}
+              <a href="/register" className="text-blue-500">
+                Register
+              </a>
+            </div>
+
+            <div className="my-6 text-gray-600">--Or continue with--</div>
+
+            <button
+              onClick={handleGoogleSignIn}
+              className="flex items-center justify-center w-full border rounded-md py-2 px-4"
+            >
+              <img
+                src={googleLogo}
+                alt="Google logo"
+                className="w-6 h-6 mr-2"
+              />
+              <span className="text-lg">
+                {loading ? 'Logging in...' : 'Login with Google'}
+              </span>
+            </button>
+          </>
+        )}
       </form>
     </div>
   )
