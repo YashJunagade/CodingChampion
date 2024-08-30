@@ -1,30 +1,51 @@
 import Subject from './Subject'
+import { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
 function Menu() {
+  const [showSubjects, setShowSubjects] = useState(false)
+
+  const toggleVisibility = () => {
+    setShowSubjects(!showSubjects) // showing the subjects after clicked.
+    console.log('div clicked')
+  }
   return (
     <>
       <div className="">
         {/* first year subjects  */}
-        <div className="bg-primary w-[85%] mx-auto min-h-52 mt-8 rounded-custom">
-          <div className="grid grid-cols-2 gap-2">
-            <Subject
-              subRoute="/C Programming/slipList"
-              subName="C programming"
-            ></Subject>
-            <Subject subRoute="/DBMS/slipList" subName="DBMS"></Subject>
-            <Subject
-              subRoute="/Web Technology/slipList"
-              subName="Web Technology"
-            ></Subject>
-            <Subject subRoute="/RDBMS/slipList" subName="RDBMS"></Subject>
+        <div
+          className="bg-primary w-[85%] mx-auto min-h-52 mt-8 p-6 rounded-custom cursor-pointer"
+          onClick={toggleVisibility}
+        >
+          <div
+            className={`overflow-hidden transition-[max-height] duration-200 ease-linear ${
+              showSubjects ? 'max-h-[1000px]' : 'max-h-0'
+            }`}
+          >
+            <div
+              className={`grid grid-cols-2 gap-10 px-2 py-6 transition-transform duration-300 ease-out ${
+                showSubjects ? 'translate-y-0' : '-translate-y-full'
+              }`}
+            >
+              <Subject
+                subRoute="/C Programming/slipList"
+                subName="C programming"
+              ></Subject>
+              <Subject subRoute="/DBMS/slipList" subName="DBMS"></Subject>
+              <Subject
+                subRoute="/Web Technology/slipList"
+                subName="Web Technology"
+              ></Subject>
+              <Subject subRoute="/RDBMS/slipList" subName="RDBMS"></Subject>
+            </div>
           </div>
+          {!showSubjects && <div className="text-center">Show Subjects</div>}
         </div>
         <div className="bg-primary w-[85%] mx-auto min-h-52 mt-8">test</div>
         <div className="bg-primary w-[85%] mx-auto min-h-52 mt-8">test</div>
 
-        <Subject
+        {/* <Subject
           subRoute="/C Programming/slipList"
           subName="C programming"
         ></Subject>
@@ -33,7 +54,7 @@ function Menu() {
           subRoute="/Web Technology/slipList"
           subName="Web Technology"
         ></Subject>
-        <Subject subRoute="/RDBMS/slipList" subName="RDBMS"></Subject>
+        <Subject subRoute="/RDBMS/slipList" subName="RDBMS"></Subject> */}
 
         {/* second year subjects  */}
         {/* <Subject

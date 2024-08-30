@@ -22,7 +22,11 @@ export default {
         // Custom screen size for `sm`
         sm: '540px', // sm changed from 640px to 540px
       },
+
+      transitionProperty: {
+        'max-height': 'max-height', // custom propery for transition animation
+      },
     },
   },
   plugins: [],
-};
+}
