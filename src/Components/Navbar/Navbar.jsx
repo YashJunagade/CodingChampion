@@ -21,7 +21,7 @@ function Navbar() {
       <div className="flex justify-between">
         {userDetails && userDetails.profilePic ? (
           <div className="h-10 w-10 rounded-full">
-            <img src={`/avatar${userDetails.profilePic}`} alt="Profile" />
+            <img src={`/avatar/${userDetails.profilePic}`} alt="Profile" />
           </div>
         ) : (
           <a href="/login">
