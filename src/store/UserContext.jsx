@@ -22,7 +22,6 @@ export const UserProvider = ({ children }) => {
       email: user.email,
       displayName: user.displayName || '',
       photoURL: user.photoURL || '',
-      createdAt: new Date(),
       profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Profile picture logic
     }
 
