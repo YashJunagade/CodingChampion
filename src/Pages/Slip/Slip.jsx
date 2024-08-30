@@ -1,6 +1,6 @@
 import Navbar from '../../Components/Navbar/Navbar'
 import SideBar from '../../Components/SideBar/SideBar'
-import Menu from './Menu'
+import Menu from '../../Components/Subjects/Menu'
 
 function Slip() {
   return (
