@@ -1,27 +1,34 @@
 import { useNavigate } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 function Navbar() {
-  const { userDetails, loading } = useUser()
+  const { userDetails, loading, isLoggedIn } = useUser()
   const [isImageLoading, setIsImageLoading] = useState(true)
   const navigate = useNavigate()
 
   useEffect(() => {
-    if (userDetails && userDetails.profilePic) {
+    if (userDetails?.profilePic) {
       setIsImageLoading(true)
     }
   }, [userDetails])
 
-  const handleImageLoad = () => {
+  const handleImageLoad = useCallback(() => {
     setIsImageLoading(false)
-  }
+  }, [])
 
-  // Use default profile picture if userDetails.profilePic is not available
   const profilePicUrl = userDetails?.profilePic
     ? `/avatar/${userDetails.profilePic}`
-    : ''
+    : '/path/to/default-profile-pic.jpg'
+
+  if (loading) {
+    return (
+      <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6 text-center">
+        <div>Loading...</div>
+      </nav>
+    )
+  }
 
   return (
     <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6">
@@ -38,7 +45,7 @@ function Navbar() {
         </ul>
       </div>
       <div className="flex justify-between items-center">
-        {userDetails && userDetails.profilePic ? (
+        {isLoggedIn ? (
           <div className="h-10 w-10 rounded-full relative">
             <a href="/profile">
               {isImageLoading && (
@@ -55,15 +62,13 @@ function Navbar() {
             </a>
           </div>
         ) : (
-          loading && (
-            <a href="/login">
-              <button
-                className={`${loading ? 'hidden' : 'block'}bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200`}
-              >
-                Login
-              </button>
-            </a>
-          )
+          <a href="/login">
+            <button
+              className={`bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200`}
+            >
+              Login
+            </button>
+          </a>
         )}
       </div>
     </nav>
