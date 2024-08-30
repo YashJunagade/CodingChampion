@@ -24,7 +24,7 @@ function Menu() {
             }`}
           >
             <div
-              className={`grid grid-cols-2 gap-10 px-2 py-6 transition-transform duration-300 ease-out ${
+              className={`grid grid-cols-2 gap-10 px-2 py-6 transition-transform duration-300 ease-linear ${
                 showSubjects ? 'translate-y-0' : '-translate-y-full'
               }`}
             >
