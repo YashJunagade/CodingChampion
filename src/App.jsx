@@ -10,7 +10,7 @@ import Labbook from './Pages/Labbook/Labbook'
 import SlipList from '../Solutions/Slips Solutions/SlipList'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import './App.css'
+
 import './index.css'
 import Roadmaps from './Pages/RoadMaps/Roadmaps'
 import Dsa from './Pages/DataStructure/Dsa'

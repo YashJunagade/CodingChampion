@@ -1,18 +1,21 @@
-import Navbar from '../../Components/Navbar/Navbar';
-import SideBar from '../../Components/SideBar/SideBar';
-import Menu from './Menu';
-import './Slip.css';
+import Navbar from '../../Components/Navbar/Navbar'
+import SideBar from '../../Components/SideBar/SideBar'
+import Menu from './Menu'
 
 function Slip() {
   return (
-    <section className="slipPageSection">
+    <section className="">
       <Navbar></Navbar>
-      <div className="slipMainContainer">
-        <SideBar></SideBar>
-        <Menu></Menu>
+      <div className="">
+        <div className="hidden md:inline">
+          <SideBar></SideBar>
+        </div>
+        <div>
+          <Menu></Menu>
+        </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Slip;
+export default Slip

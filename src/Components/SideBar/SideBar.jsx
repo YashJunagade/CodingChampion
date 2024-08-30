@@ -1,5 +1,4 @@
-import DropDownMenu from './DropDownMenu';
-import style from './SideBar.module.css';
+import DropDownMenu from './DropDownMenu'
 
 function SideBar() {
   const dropDownList = [
@@ -80,16 +79,16 @@ function SideBar() {
         'Favorite 150',
       ],
     },
-  ];
+  ]
 
   return (
-    <section className={style.sidebarSection}>
-      <div className={style.myProfile}>Profile</div>
+    <section className={``}>
+      <div className="">Profile</div>
       {dropDownList.map((menu, index) => (
         <DropDownMenu key={index} menu={menu} />
       ))}
     </section>
-  );
+  )
 }
 
-export default SideBar;
+export default SideBar
