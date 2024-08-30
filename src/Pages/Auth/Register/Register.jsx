@@ -6,7 +6,7 @@ import {
   GoogleAuthProvider,
 } from 'firebase/auth'
 import { auth, db } from '../../../config/firebase'
-import { setDoc, doc } from 'firebase/firestore'
+import { setDoc, doc, getDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
@@ -28,11 +28,21 @@ function Register() {
       const user = userCredential.user
 
       if (user) {
-        await setDoc(doc(db, 'Users', user.uid), {
-          email: user.email,
-          userName: user.email.split('@')[0], // Default userName based on email
-          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Empty until the user updates it
-        })
+        const userDoc = doc(db, 'Users', user.uid)
+        const userSnapshot = await getDoc(userDoc)
+
+        if (!userSnapshot.exists()) {
+          // Set profile pic only if it is not already set
+          await setDoc(
+            userDoc,
+            {
+              email: user.email,
+              userName: user.email.split('@')[0], // Default userName based on email
+              profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Set profile pic once
+            },
+            { merge: true }
+          )
+        }
       }
 
       toast.success('User Registered Successfully! Now logging you in...', {
@@ -59,11 +69,17 @@ function Register() {
       const user = result.user
 
       if (user) {
-        await setDoc(doc(db, 'Users', user.uid), {
-          email: user.email,
-          userName: user.displayName,
-          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
-        })
+        const userDoc = doc(db, 'Users', user.uid)
+        const userSnapshot = await getDoc(userDoc)
+
+        if (!userSnapshot.exists()) {
+          // Set profile pic only if it is not already set
+          await setDoc(userDoc, {
+            email: user.email,
+            userName: user.displayName,
+            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
+          })
+        }
       }
 
       toast.success('User Registered Successfully! Now logging you in...', {

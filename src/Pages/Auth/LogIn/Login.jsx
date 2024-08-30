@@ -6,7 +6,7 @@ import {
   GoogleAuthProvider,
 } from 'firebase/auth'
 import { doc, setDoc, getDoc } from 'firebase/firestore'
-import { auth, db } from '../../../config/firebase' // Updated to include Firestore
+import { auth, db } from '../../../config/firebase'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 
@@ -27,11 +27,10 @@ function Login() {
       )
       const user = userCredential.user
 
-      // Check if user data exists in Firestore
-      const userDoc = await getDoc(doc(db, 'Users', user.uid))
-      if (!userDoc.exists()) {
-        // No existing data, save user data to Firestore
-        await setDoc(doc(db, 'Users', user.uid), {
+      const userDoc = doc(db, 'Users', user.uid)
+      const userSnapshot = await getDoc(userDoc)
+      if (!userSnapshot.exists()) {
+        await setDoc(userDoc, {
           uid: user.uid,
           email: user.email,
           name: user.displayName || '', // User might not have a displayName with email/password login
@@ -79,19 +78,21 @@ function Login() {
       const provider = new GoogleAuthProvider()
       const result = await signInWithPopup(auth, provider)
       const user = result.user
-      console.log(user) // Correct way to log the user object
 
-      // Save user data to Firestore
-      await setDoc(
-        doc(db, 'Users', user.uid),
-        {
-          uid: user.uid,
-          userName: user.displayName,
-          email: user.email,
-          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
-        },
-        { merge: true }
-      ) // Use merge to update existing data if any
+      const userDoc = doc(db, 'Users', user.uid)
+      const userSnapshot = await getDoc(userDoc)
+      if (!userSnapshot.exists()) {
+        await setDoc(
+          userDoc,
+          {
+            uid: user.uid,
+            userName: user.displayName,
+            email: user.email,
+            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
+          },
+          { merge: true }
+        )
+      }
 
       toast.success('User Logged in Successfully with Google', {
         position: 'top-center',
@@ -139,27 +140,21 @@ function Login() {
           />
         </div>
 
-        <button
-          type="submit"
-          style={styles.submitButton}
-          disabled={loading ? true : false}
-        >
+        <button type="submit" style={styles.submitButton}>
           {loading ? 'Logging in...' : 'Login'}
         </button>
 
         <div style={styles.registerLink}>
-          New user? <a href="/register">Register Here</a>
+          Don't have an account? <a href="/register">Register</a>
         </div>
 
         <div style={styles.orContinue}>--Or continue with--</div>
 
-        <button
-          type="button"
-          style={styles.googleButton}
-          onClick={handleGoogleSignIn}
-          disabled={loading}
-        >
+        <button style={styles.googleButton} onClick={handleGoogleSignIn}>
           <img src={googleLogo} alt="Google logo" style={styles.googleIcon} />
+          <span style={styles.googleText}>
+            {loading ? 'Logging in...' : 'Login with Google'}
+          </span>
         </button>
       </form>
     </div>
