@@ -1,8 +1,8 @@
-import ExpandingDiv from '../../Components/Subjects/ExpandingDiv'
+import ExpandingDiv from './ExpandingDiv'
 
 function Menu() {
   const fySubjects = [
-    { sName: 'C programming' },
+    { sName: 'C Programming' },
     { sName: 'DBMS' },
     { sName: 'Web Technology' },
     { sName: 'RDBMS' },
@@ -10,9 +10,10 @@ function Menu() {
   const sySubjects = [
     { sName: 'Data Structure' },
     { sName: 'Big Data' },
-    { sName: 'PHP' },
+    { sName: 'Php' },
+    { sName: 'CPP' },
     { sName: 'Angular JS' },
-    { sName: 'Advance PHP' },
+    { sName: 'Advance Php' },
     { sName: 'Node JS' },
   ]
   const tySubjects = [
