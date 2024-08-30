@@ -16,6 +16,29 @@ function Login() {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
+  const createOrUpdateUserDocument = async (user) => {
+    const userDoc = doc(db, 'Users', user.uid)
+    try {
+      const userSnapshot = await getDoc(userDoc)
+      if (!userSnapshot.exists()) {
+        await setDoc(
+          userDoc,
+          {
+            uid: user.uid,
+            email: user.email,
+            userName: user.displayName || user.email.split('@')[0],
+            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
+            createdAt: new Date(),
+          },
+          { merge: true }
+        )
+      }
+    } catch (error) {
+      console.error('Error creating/updating user document:', error)
+      throw error
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
@@ -25,22 +48,8 @@ function Login() {
         email,
         password
       )
-      const user = userCredential.user
-
-      const userDoc = doc(db, 'Users', user.uid)
-      const userSnapshot = await getDoc(userDoc)
-      if (!userSnapshot.exists()) {
-        await setDoc(userDoc, {
-          uid: user.uid,
-          email: user.email,
-          name: user.displayName || '', // User might not have a displayName with email/password login
-          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
-        })
-      }
-
-      toast.success('User Logged in Successfully', {
-        position: 'bottom-right',
-      })
+      await createOrUpdateUserDocument(userCredential.user)
+      toast.success('User Logged in Successfully', { position: 'bottom-right' })
       navigate('/')
     } catch (err) {
       switch (err.code) {
@@ -60,7 +69,7 @@ function Login() {
           })
           break
         case 'auth/invalid-credential':
-          toast.error('Invalid credentials. Please try again.', {
+          toast.error('Try again check email and password or register first', {
             position: 'bottom-center',
           })
           break
@@ -77,23 +86,7 @@ function Login() {
     try {
       const provider = new GoogleAuthProvider()
       const result = await signInWithPopup(auth, provider)
-      const user = result.user
-
-      const userDoc = doc(db, 'Users', user.uid)
-      const userSnapshot = await getDoc(userDoc)
-      if (!userSnapshot.exists()) {
-        await setDoc(
-          userDoc,
-          {
-            uid: user.uid,
-            userName: user.displayName,
-            email: user.email,
-            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
-          },
-          { merge: true }
-        )
-      }
-
+      await createOrUpdateUserDocument(result.user)
       toast.success('User Logged in Successfully with Google', {
         position: 'top-center',
       })

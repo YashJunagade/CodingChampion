@@ -16,6 +16,29 @@ function Register() {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
+  const createUserDocument = async (user) => {
+    const userDoc = doc(db, 'Users', user.uid)
+    try {
+      const userSnapshot = await getDoc(userDoc)
+      if (!userSnapshot.exists()) {
+        await setDoc(
+          userDoc,
+          {
+            uid: user.uid,
+            email: user.email,
+            userName: user.displayName || user.email.split('@')[0],
+            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
+            createdAt: new Date(),
+          },
+          { merge: true }
+        )
+      }
+    } catch (error) {
+      console.error('Error creating user document:', error)
+      throw error
+    }
+  }
+
   const handleRegister = async (e) => {
     e.preventDefault()
     setLoading(true)
@@ -25,35 +48,14 @@ function Register() {
         email,
         password
       )
-      const user = userCredential.user
-
-      if (user) {
-        const userDoc = doc(db, 'Users', user.uid)
-        const userSnapshot = await getDoc(userDoc)
-
-        if (!userSnapshot.exists()) {
-          // Set profile pic only if it is not already set
-          await setDoc(
-            userDoc,
-            {
-              email: user.email,
-              userName: user.email.split('@')[0], // Default userName based on email
-              profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Set profile pic once
-            },
-            { merge: true }
-          )
-        }
-      }
-
+      await createUserDocument(userCredential.user)
       toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
       })
       navigate('/')
     } catch (error) {
       console.error('Registration Error:', error)
-      toast.error(error.message, {
-        position: 'bottom-center',
-      })
+      toast.error(error.message, { position: 'bottom-center' })
     } finally {
       setLoading(false)
     }
@@ -62,35 +64,17 @@ function Register() {
   const handleGoogleSignIn = async (e) => {
     e.preventDefault()
     setLoading(true)
-    const provider = new GoogleAuthProvider()
-
     try {
+      const provider = new GoogleAuthProvider()
       const result = await signInWithPopup(auth, provider)
-      const user = result.user
-
-      if (user) {
-        const userDoc = doc(db, 'Users', user.uid)
-        const userSnapshot = await getDoc(userDoc)
-
-        if (!userSnapshot.exists()) {
-          // Set profile pic only if it is not already set
-          await setDoc(userDoc, {
-            email: user.email,
-            userName: user.displayName,
-            profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
-          })
-        }
-      }
-
+      await createUserDocument(result.user)
       toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
       })
       navigate('/')
     } catch (error) {
       console.error('Google Sign-In Error:', error)
-      toast.error(error.message, {
-        position: 'bottom-center',
-      })
+      toast.error(error.message, { position: 'bottom-center' })
     } finally {
       setLoading(false)
     }
