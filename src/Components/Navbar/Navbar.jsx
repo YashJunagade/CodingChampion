@@ -22,7 +22,7 @@ function Navbar() {
         {userDetails && userDetails.profilePic ? (
           <div className="h-10 w-10 rounded-full">
             <img
-              src={`/src/assets/avatar/${userDetails.profilePic}`}
+              src={`/public/avatar${userDetails.profilePic}`}
               alt="Profile"
             />
           </div>
