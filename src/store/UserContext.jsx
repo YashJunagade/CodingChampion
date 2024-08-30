@@ -1,6 +1,12 @@
-import React, { createContext, useContext, useState, useEffect } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useMemo,
+} from 'react'
 import { auth, db } from '../config/firebase'
-import { doc, getDoc } from 'firebase/firestore'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 
 const UserContext = createContext()
@@ -9,6 +15,28 @@ export const UserProvider = ({ children }) => {
   const [userDetails, setUserDetails] = useState(null)
   const [loading, setLoading] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  const createUserDocument = async (user) => {
+    const userRef = doc(db, 'Users', user.uid)
+    const defaultUserData = {
+      email: user.email,
+      displayName: user.displayName || '',
+      photoURL: user.photoURL || '',
+      createdAt: new Date(),
+      profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Assuming this is how you're setting the profile pic
+    }
+
+    try {
+      await setDoc(userRef, defaultUserData, { merge: true })
+      return defaultUserData
+    } catch (error) {
+      console.error('Error creating user document:', error)
+      toast.error('Error creating user profile.', {
+        position: 'bottom-center',
+      })
+      return null
+    }
+  }
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
@@ -21,8 +49,11 @@ export const UserProvider = ({ children }) => {
           if (docSnap.exists()) {
             setUserDetails(docSnap.data())
           } else {
-            console.warn('User authenticated but no Firestore document found')
-            setUserDetails(null)
+            console.warn(
+              'User authenticated but no Firestore document found. Creating one...'
+            )
+            const newUserData = await createUserDocument(user)
+            setUserDetails(newUserData)
           }
         } catch (error) {
           console.error('Error fetching user data:', error)
@@ -41,11 +72,16 @@ export const UserProvider = ({ children }) => {
     return () => unsubscribe() // Cleanup subscription on unmount
   }, [])
 
-  return (
-    <UserContext.Provider value={{ userDetails, loading, isLoggedIn }}>
-      {children}
-    </UserContext.Provider>
+  const value = useMemo(
+    () => ({
+      userDetails,
+      loading,
+      isLoggedIn,
+    }),
+    [userDetails, loading, isLoggedIn]
   )
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
 
 export const useUser = () => useContext(UserContext)
