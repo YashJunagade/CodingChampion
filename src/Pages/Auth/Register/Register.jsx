@@ -31,7 +31,7 @@ function Register() {
         await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
           userName: user.email.split('@')[0], // Default userName based on email
-          profilePic: '', // Empty until the user updates it
+          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Empty until the user updates it
         })
       }
 
@@ -62,7 +62,7 @@ function Register() {
         await setDoc(doc(db, 'Users', user.uid), {
           email: user.email,
           userName: user.displayName,
-          profilePic: user.photoURL,
+          profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
         })
       }
 

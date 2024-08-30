@@ -3,10 +3,11 @@ import { auth, db } from '../../config/firebase'
 import { doc, getDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { signOut } from 'firebase/auth'
-import { toast } from 'react-toastify' // Ensure to install and import toast if using it
+import { toast } from 'react-toastify'
 
 function Profile() {
   const [userDetails, setUserDetails] = useState(null)
+  const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -28,6 +29,8 @@ function Profile() {
             position: 'bottom-center',
           })
           navigate('/login')
+        } finally {
+          setLoading(false)
         }
       } else {
         navigate('/login')
@@ -35,15 +38,20 @@ function Profile() {
     })
 
     return () => unsubscribe() // Cleanup subscription on unmount
-  }, [navigate])
+  }, [])
 
   const handleSignOut = async () => {
     try {
       await signOut(auth)
       navigate('/login') // Redirect to login after sign out
     } catch (error) {
+      toast.error('Error signing out.', { position: 'bottom-center' })
       console.error('Error signing out:', error)
     }
+  }
+
+  if (loading) {
+    return <p>Loading...</p>
   }
 
   return (
@@ -51,12 +59,15 @@ function Profile() {
       {userDetails ? (
         <div>
           <p>Email: {userDetails.email}</p>
-          <p>User Name: {userDetails.userName}</p>
-          <img src={userDetails.profilePic} alt="Profile" />
+          <p>User Name: {userDetails.userName || 'No username set'}</p>
+          <img
+            src={`/src/assets/avatar/${userDetails.profilePic}`}
+            alt="Profile"
+          />
           <button onClick={handleSignOut}>Sign Out</button>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p>No user details available.</p>
       )}
     </>
   )
