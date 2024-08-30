@@ -1,9 +1,12 @@
-import { createRoot } from 'react-dom/client'
-import { StrictMode } from 'react'
-import App from './App.jsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import { UserProvider } from './store/UserContext' // Adjust the path accordingly
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <UserProvider>
+      <App />
+    </UserProvider>
+  </React.StrictMode>
 )

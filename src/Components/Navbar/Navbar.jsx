@@ -1,6 +1,9 @@
-import NavLink from "../../Components/Navbar/NavLink";
+import NavLink from '../../Components/Navbar/NavLink'
+import { useUser } from '../../store/UserContext'
 
 function Navbar() {
+  const { userDetails } = useUser()
+
   return (
     <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6">
       <div>
@@ -16,16 +19,23 @@ function Navbar() {
         </ul>
       </div>
       <div className="flex justify-between">
-        <a href="/login">
-          <button className="bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200">
-            Login
-          </button>
-        </a>
-
-        <div className="bg-accent border-secondary-1 h-10 w-10 rounded-full hidden"></div>
+        {userDetails && userDetails.profilePic ? (
+          <div className="h-10 w-10 rounded-full">
+            <img
+              src={`/src/assets/avatar/${userDetails.profilePic}`}
+              alt="Profile"
+            />
+          </div>
+        ) : (
+          <a href="/login">
+            <button className="bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200">
+              Login
+            </button>
+          </a>
+        )}
       </div>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
