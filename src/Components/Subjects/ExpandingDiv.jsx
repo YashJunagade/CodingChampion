@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import Subject from './Subject'
+import { useLocation } from 'react-router-dom'
 
 function ExpandingDiv({ subjects, title }) {
   const [showSubjects, setShowSubjects] = useState(false)
+  const location = useLocation()
 
   const toggleVisibility = () => {
     setShowSubjects(!showSubjects) // showing the subjects after clicked.
   }
+
+  const isLabbokRoute = location.pathname.includes('/labbook')
+
   return (
     <>
       <div
@@ -26,7 +31,7 @@ function ExpandingDiv({ subjects, title }) {
             {subjects.map((subject, index) => (
               <Subject
                 key={index}
-                subRoute={`/${subject.sName}/slipList`}
+                subRoute={`/${subject.sName}/${isLabbokRoute ? 'labList' : 'slipList'}`}
                 subName={subject.sName}
               />
             ))}
