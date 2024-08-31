@@ -82,11 +82,15 @@ function SideBar() {
   ]
 
   return (
-    <section className="bg-secondary2 text-white h-[100%]">
-      <div className="">Profile</div>
-      {dropDownList.map((menu, index) => (
-        <DropDownMenu key={index} menu={menu} />
-      ))}
+    <section className="bg-primary2  text-black h-screen w-64 overflow-y-auto transition-all duration-300 ease-in-out">
+      <div className="p-4 border-b border-accent ">
+        <h2 className="text-xl font-semibold">Profile</h2>
+      </div>
+      <nav className="mt-4">
+        {dropDownList.map((menu, index) => (
+          <DropDownMenu key={index} menu={menu} />
+        ))}
+      </nav>
     </section>
   )
 }

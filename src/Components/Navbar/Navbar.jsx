@@ -94,7 +94,7 @@ const Navbar = React.memo(() => {
   }, [isModalOpen])
 
   return (
-    <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6">
+    <nav className="w-full h-14 bg-primary2 flex justify-between items-center px-4 md:px-6">
       <div>
         <img src="" alt="logo" />
       </div>

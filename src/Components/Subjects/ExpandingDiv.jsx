@@ -15,7 +15,7 @@ function ExpandingDiv({ subjects, title }) {
   return (
     <>
       <div
-        className="bg-primary w-[94%] mx-auto min-h-44 mt-8 mb-8 px-2 py-4 rounded-custom cursor-pointer"
+        className="bg-primary w-[94%] mx-auto min-h-44 mt-8 mb-8 px-2 py-4 rounded-custom cursor-pointer hover:border-secondary border-2"
         onClick={toggleVisibility}
       >
         <div
