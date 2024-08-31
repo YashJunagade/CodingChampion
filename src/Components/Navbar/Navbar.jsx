@@ -1,29 +1,94 @@
-import React, { useState, useEffect, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
+import { auth } from '../../config/firebase'
+import { toast } from 'react-toastify'
 
-// Use React.memo to prevent unnecessary re-renders
+// Modal Component
+const ProfileModal = ({ userName, onLogout }) => {
+  return (
+    <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
+      <div className="p-4">
+        <p className="font-semibold">Hi, {userName}!</p>
+      </div>
+      <div className="border-t border-gray-200"></div>
+      <div className="p-4">
+        <Link
+          to="/profile"
+          className="block px-4 py-2 hover:bg-gray-100 rounded-md"
+        >
+          Profile
+        </Link>
+        <button
+          onClick={onLogout}
+          className="block w-full text-left px-4 py-2 hover:bg-gray-100 rounded-md"
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  )
+}
+
 const Navbar = React.memo(() => {
   const { userDetails, isLoggedIn } = useUser()
   const [isImageLoading, setIsImageLoading] = useState(true)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const navigate = useNavigate()
+  const modalRef = useRef(null)
 
-  // Handle profile picture changes
   useEffect(() => {
     if (userDetails?.profilePic) {
       setIsImageLoading(true)
     }
   }, [userDetails?.profilePic])
 
-  // Handle image load event
   const handleImageLoad = useCallback(() => {
     setIsImageLoading(false)
   }, [])
 
-  // Create a unique image URL to avoid caching issues
   const profilePicUrl = userDetails?.profilePic
-    ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}` // Add timestamp to avoid caching
+    ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}`
     : 'default-avatar.png'
+
+  const handleProfileClick = () => {
+    setIsModalOpen((prev) => !prev)
+  }
+
+  const handleLogout = async () => {
+    try {
+      await auth.signOut()
+      toast.success("Comback later i'm waiting ", {
+        position: 'bottom-right',
+        autoClose: 2000,
+      })
+      navigate('/login')
+    } catch (error) {
+      console.error('Error signing out:', error)
+    }
+
+    setIsModalOpen(false)
+  }
+
+  const handleClickOutside = (event) => {
+    if (modalRef.current && !modalRef.current.contains(event.target)) {
+      setIsModalOpen(false)
+    }
+  }
+
+  useEffect(() => {
+    if (isModalOpen) {
+      setTimeout(() => {
+        document.addEventListener('click', handleClickOutside)
+      }, 0)
+    } else {
+      document.removeEventListener('click', handleClickOutside)
+    }
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [isModalOpen])
 
   return (
     <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6">
@@ -39,23 +104,32 @@ const Navbar = React.memo(() => {
           <NavLink linkRoute="/dsa" linkName="DSA" />
         </ul>
       </div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center relative">
         {isLoggedIn ? (
-          <div className="h-10 w-10 rounded-full relative">
-            <Link to="/profile">
-              {isImageLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
-                </div>
-              )}
-              <img
-                key={profilePicUrl} // Unique key to manage image reloading
-                src={profilePicUrl}
-                alt="Profile"
-                className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
-                onLoad={handleImageLoad}
-              />
-            </Link>
+          <div
+            className="h-10 w-10 rounded-full relative cursor-pointer"
+            onClick={handleProfileClick}
+          >
+            {isImageLoading && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
+              </div>
+            )}
+            <img
+              key={profilePicUrl}
+              src={profilePicUrl}
+              alt="Profile"
+              className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
+              onLoad={handleImageLoad}
+            />
+            {isModalOpen && (
+              <div ref={modalRef}>
+                <ProfileModal
+                  userName={userDetails?.userName || 'User'}
+                  onLogout={handleLogout}
+                />
+              </div>
+            )}
           </div>
         ) : (
           <Link to="/login">
