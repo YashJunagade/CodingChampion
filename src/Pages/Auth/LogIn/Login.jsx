@@ -50,32 +50,42 @@ function Login() {
         password
       )
       await createOrUpdateUserDocument(userCredential.user)
-      toast.success('User Logged in Successfully', { position: 'bottom-right' })
+      toast.success('User Logged in Successfully', {
+        position: 'bottom-right',
+        autoClose: 2000,
+      })
       navigate('/')
     } catch (err) {
       switch (err.code) {
         case 'auth/user-not-found':
           toast.error('No user found with this email. Please register first.', {
-            position: 'bottom-center',
+            position: 'bottom-right',
+            autoClose: 2000,
           })
           break
         case 'auth/wrong-password':
           toast.error('Incorrect password. Please try again.', {
-            position: 'bottom-center',
+            position: 'bottom-right',
+            autoClose: 2000,
           })
           break
         case 'auth/invalid-email':
           toast.error('Invalid email format. Please check your email.', {
-            position: 'bottom-center',
+            position: 'bottom-right',
+            autoClose: 2000,
           })
           break
         case 'auth/invalid-credential':
           toast.error('Try again check email and password or register first', {
-            position: 'bottom-center',
+            position: 'bottom-right',
+            autoClose: 2000,
           })
           break
         default:
-          toast.error(err.message, { position: 'bottom-center' })
+          toast.error(err.message, {
+            position: 'bottom-right',
+            autoClose: 2000,
+          })
       }
     } finally {
       setLoading(false)
@@ -89,11 +99,12 @@ function Login() {
       const result = await signInWithPopup(auth, provider)
       await createOrUpdateUserDocument(result.user)
       toast.success('User Logged in Successfully with Google', {
-        position: 'top-center',
+        position: 'bottom-right',
+        autoClose: 2000,
       })
       navigate('/')
     } catch (err) {
-      toast.error(err.message, { position: 'bottom-center' })
+      toast.error(err.message, { position: 'bottom-right', autoClose: 2000 })
     } finally {
       setLoading(false)
     }
@@ -104,12 +115,14 @@ function Login() {
     try {
       await sendPasswordResetEmail(auth, resetPasswordEmail)
       toast.success('Password reset email sent. Check your inbox.', {
-        position: 'bottom-center',
+        position: 'bottom-right',
+        autoClose: 2000,
       })
       setResetPasswordMode(false)
     } catch (err) {
       toast.error('Error sending password reset email. Please try again.', {
-        position: 'bottom-center',
+        position: 'bottom-right',
+        autoClose: 2000,
       })
     } finally {
       setLoading(false)

@@ -3,7 +3,7 @@ import React from 'react'
 // Adjust the path accordingly
 import { useUser } from '../../store/UserContext'
 import { auth } from '../../config/firebase'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 function Profile() {
   const { userDetails, loading } = useUser()
   const navigate = useNavigate()
@@ -17,7 +17,10 @@ function Profile() {
       await auth.signOut()
       navigate('/login')
     } catch (error) {
-      toast.error('Error signing out.', { position: 'bottom-center' })
+      toast.error('Error signing out.', {
+        position: 'bottom-right',
+        autoClose: 2000,
+      })
       console.error('Error signing out:', error)
     }
   }
@@ -36,7 +39,11 @@ function Profile() {
           <button onClick={handleSignOut}>Sign Out</button>
         </div>
       ) : (
-        <p>No user details available.</p>
+        <>
+          <p>No user details available.</p>
+          <h2>Please Login First</h2>
+          <Link to="/login">Login</Link>
+        </>
       )}
     </>
   )

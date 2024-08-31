@@ -83,7 +83,10 @@ function CodeEditor({ language, solution }) {
       window.navigator.clipboard
         .writeText(editorValue)
         .then(() => {
-          toast.success('Copied successfully!') // Show success toast
+          toast.success('Copied successfully!', {
+            position: 'bottom-right',
+            autoClose: 2000,
+          })
         })
         .catch((err) => {
           console.error('Failed to copy: ', err)
