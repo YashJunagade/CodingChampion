@@ -20,6 +20,7 @@ export const UserProvider = ({ children }) => {
     const userRef = doc(db, 'Users', user.uid)
     const defaultUserData = {
       email: user.email,
+      userName: user.displayName || user.email.split('@')[0],
       profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Profile picture logic
     }
 
