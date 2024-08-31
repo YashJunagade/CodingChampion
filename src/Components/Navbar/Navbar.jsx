@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
@@ -6,7 +6,7 @@ import { auth } from '../../config/firebase'
 import { toast } from 'react-toastify'
 
 // Modal Component
-const ProfileModal = ({ userName, onLogout }) => {
+const ProfileModal = React.memo(({ userName, onLogout }) => {
   return (
     <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50">
       <div className="p-4">
@@ -29,7 +29,7 @@ const ProfileModal = ({ userName, onLogout }) => {
       </div>
     </div>
   )
-}
+})
 
 const Navbar = React.memo(() => {
   const { userDetails, isLoggedIn } = useUser()
@@ -37,6 +37,13 @@ const Navbar = React.memo(() => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const navigate = useNavigate()
   const modalRef = useRef(null)
+
+  // Memoize the profile picture URL to prevent unnecessary recalculations
+  const profilePicUrl = useMemo(() => {
+    return userDetails?.profilePic
+      ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}`
+      : 'default-avatar.png'
+  }, [userDetails?.profilePic])
 
   useEffect(() => {
     if (userDetails?.profilePic) {
@@ -48,10 +55,6 @@ const Navbar = React.memo(() => {
     setIsImageLoading(false)
   }, [])
 
-  const profilePicUrl = userDetails?.profilePic
-    ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}`
-    : 'default-avatar.png'
-
   const handleProfileClick = () => {
     setIsModalOpen((prev) => !prev)
   }
@@ -59,7 +62,7 @@ const Navbar = React.memo(() => {
   const handleLogout = async () => {
     try {
       await auth.signOut()
-      toast.success("Comback later i'm waiting ", {
+      toast.success("Come back later, I'm waiting!", {
         position: 'bottom-right',
         autoClose: 3000,
       })
@@ -116,7 +119,6 @@ const Navbar = React.memo(() => {
               </div>
             )}
             <img
-              key={profilePicUrl}
               src={profilePicUrl}
               alt="Profile"
               className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
