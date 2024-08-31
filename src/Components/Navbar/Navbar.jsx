@@ -4,30 +4,25 @@ import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
-  const { userDetails, loading, isLoggedIn } = useUser()
+  const { userDetails, isLoggedIn } = useUser()
   const [isImageLoading, setIsImageLoading] = useState(true)
-  const [hasReloaded, setHasReloaded] = useState(false)
 
+  // Handle profile picture changes
   useEffect(() => {
     if (userDetails?.profilePic) {
       setIsImageLoading(true)
     }
   }, [userDetails?.profilePic])
 
+  // Handle image load event
   const handleImageLoad = useCallback(() => {
     setIsImageLoading(false)
   }, [])
 
-  useEffect(() => {
-    // Check if the reload has already happened in this session
-    if (sessionStorage.getItem('navbarReloaded') === 'true') {
-      setHasReloaded(true)
-    } else if (isLoggedIn && !hasReloaded) {
-      // Mark that the reload has happened
-      sessionStorage.setItem('navbarReloaded', 'true')
-      window.location.reload()
-    }
-  }, [isLoggedIn, hasReloaded])
+  // Create a unique image URL
+  const profilePicUrl = userDetails?.profilePic
+    ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}` // Add timestamp to prevent caching
+    : 'default-avatar.png'
 
   return (
     <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6">
@@ -53,11 +48,8 @@ function Navbar() {
                 </div>
               )}
               <img
-                src={
-                  userDetails?.profilePic
-                    ? `/avatar/${userDetails.profilePic}`
-                    : 'default-avatar.png'
-                }
+                key={profilePicUrl} // Add key to force re-render
+                src={profilePicUrl}
                 alt="Profile"
                 className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
                 onLoad={handleImageLoad}
