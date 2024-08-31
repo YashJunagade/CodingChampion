@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
+  useLocation,
 } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Slip from './Pages/Slip/Slip'
@@ -10,7 +10,6 @@ import Labbook from './Pages/Labbook/Labbook'
 import SlipList from '../Solutions/Slips Solutions/SlipList'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
 import './index.css'
 import Roadmaps from './Pages/RoadMaps/Roadmaps'
 import Dsa from './Pages/DataStructure/Dsa'
@@ -20,21 +19,28 @@ import LabSolution from './Pages/SolutionPage/LabSolution/LabSolution'
 import Login from './Pages/Auth/LogIn/Login'
 import Register from './Pages/Auth/Register/Register'
 import Profile from './Pages/Profile/Profile'
-import { useEffect, useState } from 'react'
-import { auth } from './config/firebase'
 import ResetPassword from './Pages/Auth/ResetPassword/ResetPassword'
+import Navbar from '../src/Components/Navbar/Navbar' // Assuming you have a Navbar component
 
 const App = () => {
+  const location = useLocation()
+
+  // Define routes where Navbar should not be displayed
+  const noNavbarRoutes = ['/login', '/register', '/reset-password']
+
+  // Determine if Navbar should be displayed based on the current path
+  const shouldDisplayNavbar = !noNavbarRoutes.includes(location.pathname)
+
   return (
-    <Router>
+    <>
       <ToastContainer />
+      {shouldDisplayNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/profile" element={<Profile />} />
-
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />} />
         <Route path="/:subjectId/labList" element={<LabList />} />
@@ -50,8 +56,16 @@ const App = () => {
           element={<LabSolution />}
         />
       </Routes>
+    </>
+  )
+}
+
+const AppWrapper = () => {
+  return (
+    <Router>
+      <App />
     </Router>
   )
 }
 
-export default App
+export default AppWrapper

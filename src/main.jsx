@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+import AppWrapper from './App'
 import { UserProvider } from './store/UserContext' // Adjust the path accordingly
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <UserProvider>
-      <App />
+      <AppWrapper />
     </UserProvider>
   </React.StrictMode>
 )

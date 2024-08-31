@@ -1,53 +1,53 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import Navbar from '../../src/Components/Navbar/Navbar';
-import SideBar from '../../src/Components/SideBar/SideBar';
-import './LabList.css';
-import { labData } from './LabData'; // Import your labData here
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../../src/config/firebase';
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import Navbar from '../../src/Components/Navbar/Navbar'
+import SideBar from '../../src/Components/SideBar/SideBar'
+import './LabList.css'
+import { labData } from './LabData' // Import your labData here
+import { doc, getDoc } from 'firebase/firestore'
+import { db } from '../../src/config/firebase'
 
 const SlipList = () => {
-  const { subjectId } = useParams();
+  const { subjectId } = useParams()
   const [subject, setSubject] = useState({
     subject: '',
     assignments: [],
-  });
+  })
 
   useEffect(() => {
     const fetchSlipData = async () => {
       try {
-        const slipDataSubject = await getDoc(doc(db, 'labSubjects', subjectId));
+        const slipDataSubject = await getDoc(doc(db, 'labSubjects', subjectId))
         if (slipDataSubject.exists()) {
-          setSubject(slipDataSubject.data());
+          setSubject(slipDataSubject.data())
         } else {
-          console.log('no such document!');
+          console.log('no such document!')
         }
       } catch (error) {
-        console.log('error fetching document : ', error);
+        console.log('error fetching document : ', error)
       }
-    };
+    }
 
-    fetchSlipData();
-  }, [subjectId]);
+    fetchSlipData()
+  }, [subjectId])
 
   function setName(setNo) {
-    let setName = '';
+    let setName = ''
     if (setNo === 1) {
-      setName = 'A';
+      setName = 'A'
     } else if (setNo === 2) {
-      setName = 'B';
+      setName = 'B'
     } else if (setNo === 3) {
-      setName = 'C';
+      setName = 'C'
     } else {
-      console.log('error in set name');
+      console.log('error in set name')
     }
-    return setName;
+    return setName
   }
 
   return (
     <div className="slip-list-container">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="slip-list-main-section">
         <SideBar />
         <div className="content-container">
@@ -82,7 +82,7 @@ const SlipList = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SlipList;
+export default SlipList

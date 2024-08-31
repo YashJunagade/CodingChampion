@@ -67,7 +67,7 @@ const SlipSolution = () => {
 
   return (
     <div className="container">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="codeEditor" ref={panelRef}>
         <div className="panel" style={{ width: `${width}%` }}>
           {loading ? (

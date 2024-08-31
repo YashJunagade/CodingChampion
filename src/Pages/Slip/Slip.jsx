@@ -5,7 +5,7 @@ import Menu from '../../Components/Subjects/Menu'
 function Slip() {
   return (
     <section className="">
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <div className="">
         <div className="hidden md:inline">
           <SideBar></SideBar>

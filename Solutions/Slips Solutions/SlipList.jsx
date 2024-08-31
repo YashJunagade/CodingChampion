@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import Navbar from '../../src/Components/Navbar/Navbar';
-import SideBar from '../../src/Components/SideBar/SideBar';
+import React, { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import Navbar from '../../src/Components/Navbar/Navbar'
+import SideBar from '../../src/Components/SideBar/SideBar'
 import {
   collection,
   query,
@@ -9,36 +9,36 @@ import {
   getDocs,
   getDoc,
   doc,
-} from 'firebase/firestore';
-import { db } from '../../src/config/firebase';
-import './SlipList.css';
-import { uploadSlipData } from './SlipData';
+} from 'firebase/firestore'
+import { db } from '../../src/config/firebase'
+import './SlipList.css'
+import { uploadSlipData } from './SlipData'
 
 const SlipList = () => {
-  const { subjectId } = useParams();
-  const [subject, setSubject] = useState(null);
-  const [filterMarks, setFilterMarks] = useState('');
-  const [sortOrder, setSortOrder] = useState('asc');
+  const { subjectId } = useParams()
+  const [subject, setSubject] = useState(null)
+  const [filterMarks, setFilterMarks] = useState('')
+  const [sortOrder, setSortOrder] = useState('asc')
 
   useEffect(() => {
     const fetchSubject = async () => {
       try {
-        const subjectDoc = await getDoc(doc(db, 'slipSubjects', subjectId));
+        const subjectDoc = await getDoc(doc(db, 'slipSubjects', subjectId))
         if (subjectDoc.exists()) {
-          setSubject(subjectDoc.data());
+          setSubject(subjectDoc.data())
         } else {
-          console.log('No such document!');
+          console.log('No such document!')
         }
       } catch (error) {
-        console.error('Error fetching document:', error);
+        console.error('Error fetching document:', error)
       }
-    };
+    }
 
-    fetchSubject();
-  }, [subjectId]);
+    fetchSubject()
+  }, [subjectId])
 
   if (!subject) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   const filteredAndSortedSlips = subject.slips
@@ -51,21 +51,21 @@ const SlipList = () => {
     .filter((slip) => slip.questions.length > 0)
     .sort((a, b) => {
       if (sortOrder === 'asc') {
-        return a.slipId - b.slipId;
+        return a.slipId - b.slipId
       } else {
-        return b.slipId - a.slipId;
+        return b.slipId - a.slipId
       }
-    });
+    })
 
   const uniqueMarks = [
     ...new Set(
       subject.slips.flatMap((slip) => slip.questions.map((q) => q.marks))
     ),
-  ];
+  ]
 
   return (
     <div className="slip-list-container">
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="slip-list-main-section">
         <SideBar />
         <div className="content-container">
@@ -118,7 +118,7 @@ const SlipList = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SlipList;
+export default SlipList

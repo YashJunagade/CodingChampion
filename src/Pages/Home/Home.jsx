@@ -5,7 +5,7 @@ import Footer from '../../Components/Footer/Footer'
 function Home() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="mb-20">
         <h1 className="text-xl font-bold text-red-500 text-center my-10">
           <span className="text-3xl block">Gear Up for Success:</span>
