@@ -82,7 +82,7 @@ function SideBar() {
   ]
 
   return (
-    <section className={``}>
+    <section className="bg-secondary2 text-white h-[100%]">
       <div className="">Profile</div>
       {dropDownList.map((menu, index) => (
         <DropDownMenu key={index} menu={menu} />

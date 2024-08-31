@@ -15,7 +15,7 @@ function ExpandingDiv({ subjects, title }) {
   return (
     <>
       <div
-        className="bg-primary w-[94%] mx-auto min-h-44 mt-8 px-2 py-4 rounded-custom cursor-pointer"
+        className="bg-primary w-[94%] mx-auto min-h-44 mt-8 mb-8 px-2 py-4 rounded-custom cursor-pointer"
         onClick={toggleVisibility}
       >
         <div
@@ -24,7 +24,7 @@ function ExpandingDiv({ subjects, title }) {
           }`}
         >
           <div
-            className={`grid grid-cols-2 gap-4 gap-y-8 px-2 py-2 my-4 transition-transform duration-300 ease-in-out ${
+            className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-8 px-2 py-2 my-4 transition-transform duration-300 ease-in-out ${
               showSubjects ? 'translate-y-0' : '-translate-y-full'
             }`}
           >

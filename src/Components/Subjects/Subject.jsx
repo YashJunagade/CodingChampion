@@ -4,9 +4,9 @@ function Subject({ subRoute, subName }) {
   return (
     <Link
       to={subRoute}
-      className="mx-auto transition duration-200  ease-in-out delay-150  hover:-translate-y-1 hover:scale-110"
+      className="mx-auto transition duration-200  ease-in-out delay-100  hover:-translate-y-1 hover:scale-110"
     >
-      <div className="flex flex-col h-44 w-32 bg-white shadow-even-shadow hover:shadow-accent  rounded-custom  text-center ">
+      <div className="flex flex-col h-44 w-32 bg-white shadow-even-shadow hover:shadow-accent rounded-custom text-center sm:h-48 sm:w-36 lg:h-52 lg:w-40">
         <img
           src="./src/assets/subLogo/Python.png"
           alt="sub logo"

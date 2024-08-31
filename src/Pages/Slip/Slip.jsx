@@ -6,11 +6,11 @@ function Slip() {
   return (
     <section className="">
       {/* <Navbar></Navbar> */}
-      <div className="">
-        <div className="hidden md:inline">
+      <div className="flex">
+        <div className="hidden md:inline relative">
           <SideBar></SideBar>
         </div>
-        <div>
+        <div className="w-full">
           <Menu></Menu>
         </div>
       </div>
