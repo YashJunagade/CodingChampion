@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
 import { useState, useEffect, useCallback } from 'react'
@@ -7,25 +6,28 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   const { userDetails, loading, isLoggedIn } = useUser()
   const [isImageLoading, setIsImageLoading] = useState(true)
-  const navigate = useNavigate()
+  const [hasReloaded, setHasReloaded] = useState(false)
 
   useEffect(() => {
     if (userDetails?.profilePic) {
       setIsImageLoading(true)
     }
-  }, [])
+  }, [userDetails?.profilePic])
 
   const handleImageLoad = useCallback(() => {
     setIsImageLoading(false)
   }, [])
 
-  if (loading) {
-    return (
-      <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6 text-center">
-        <div>Loading...</div>
-      </nav>
-    )
-  }
+  useEffect(() => {
+    // Check if the reload has already happened in this session
+    if (sessionStorage.getItem('navbarReloaded') === 'true') {
+      setHasReloaded(true)
+    } else if (isLoggedIn && !hasReloaded) {
+      // Mark that the reload has happened
+      sessionStorage.setItem('navbarReloaded', 'true')
+      window.location.reload()
+    }
+  }, [isLoggedIn, hasReloaded])
 
   return (
     <nav className="w-full h-14 bg-primary flex justify-between items-center px-4 md:px-6">
@@ -51,7 +53,11 @@ function Navbar() {
                 </div>
               )}
               <img
-                src={`/avatar/${userDetails.profilePic}`}
+                src={
+                  userDetails?.profilePic
+                    ? `/avatar/${userDetails.profilePic}`
+                    : 'default-avatar.png'
+                }
                 alt="Profile"
                 className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
                 onLoad={handleImageLoad}
@@ -60,9 +66,7 @@ function Navbar() {
           </div>
         ) : (
           <Link to="/login">
-            <button
-              className={`bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200`}
-            >
+            <button className="bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200">
               Login
             </button>
           </Link>
