@@ -31,7 +31,7 @@ export const UserProvider = ({ children }) => {
       console.error('Error creating user document:', error)
       toast.error('Error creating user profile.', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       return null
     }
@@ -57,7 +57,7 @@ export const UserProvider = ({ children }) => {
           console.error('Error fetching user data:', error)
           toast.error('Error fetching user data.', {
             position: 'bottom-right',
-            autoClose: 2000,
+            autoClose: 3000,
           })
           setUserDetails(null)
         }

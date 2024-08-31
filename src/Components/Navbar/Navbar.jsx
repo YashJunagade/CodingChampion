@@ -61,7 +61,7 @@ const Navbar = React.memo(() => {
       await auth.signOut()
       toast.success("Comback later i'm waiting ", {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       navigate('/login')
     } catch (error) {

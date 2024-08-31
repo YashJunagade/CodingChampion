@@ -19,7 +19,7 @@ function Profile() {
     } catch (error) {
       toast.error('Error signing out.', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       console.error('Error signing out:', error)
     }

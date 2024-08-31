@@ -49,12 +49,12 @@ function Register() {
       await createUserDocument(userCredential.user)
       toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       navigate('/')
     } catch (error) {
       console.error('Registration Error:', error)
-      toast.error(error.message, { position: 'bottom-right', autoClose: 2000 })
+      toast.error(error.message, { position: 'bottom-right', autoClose: 3000 })
     } finally {
       setLoading(false)
     }
@@ -69,12 +69,12 @@ function Register() {
       await createUserDocument(result.user)
       toast.success('User Registered Successfully! Now logging you in...', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       navigate('/')
     } catch (error) {
       console.error('Google Sign-In Error:', error)
-      toast.error(error.message, { position: 'bottom-right', autoClose: 2000 })
+      toast.error(error.message, { position: 'bottom-right', autoClose: 3000 })
     } finally {
       setLoading(false)
     }

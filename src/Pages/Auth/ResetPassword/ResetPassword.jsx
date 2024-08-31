@@ -29,14 +29,14 @@ function ResetPassword() {
           console.error('Error verifying password reset code:', error)
           toast.error('Invalid or expired password reset link.', {
             position: 'bottom-right',
-            autoClose: 2000,
+            autoClose: 3000,
           })
           navigate('/login')
         })
     } else {
       toast.error('No reset code found in the URL.', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       navigate('/login')
     }
@@ -47,7 +47,7 @@ function ResetPassword() {
     if (newPassword !== confirmPassword) {
       toast.error('Passwords do not match.', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       return
     }
@@ -57,14 +57,14 @@ function ResetPassword() {
       await confirmPasswordReset(auth, actionCode, newPassword)
       toast.success('Password has been reset successfully.', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
       navigate('/login')
     } catch (error) {
       console.error('Error resetting password:', error)
       toast.error('Error resetting password. Please try again.', {
         position: 'bottom-right',
-        autoClose: 2000,
+        autoClose: 3000,
       })
     } finally {
       setLoading(false)

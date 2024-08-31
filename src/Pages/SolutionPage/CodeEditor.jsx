@@ -85,7 +85,7 @@ function CodeEditor({ language, solution }) {
         .then(() => {
           toast.success('Copied successfully!', {
             position: 'bottom-right',
-            autoClose: 2000,
+            autoClose: 3000,
           })
         })
         .catch((err) => {
