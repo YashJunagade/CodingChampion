@@ -1,13 +1,14 @@
-import { useState } from 'react';
-import NestedDropdown from './NestedDropDown';
-import './DropDownMenu.css';
+import { useState } from 'react'
+import NestedDropdown from './NestedDropDown'
+import './DropDownMenu.css'
+import { Link } from 'react-router-dom'
 
 function DropDownMenu({ menu }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleCollapsibleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className="CollapsibleMenu">
@@ -30,15 +31,15 @@ function DropDownMenu({ menu }) {
         <div className="CollapibleMenu-content">
           {menu.title.map((data, index) => (
             <div className="nested-menu">
-              <a key={index} href="#">
+              <Link key={index} to="#">
                 {data}
-              </a>
+              </Link>
             </div>
           ))}
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default DropDownMenu;
+export default DropDownMenu

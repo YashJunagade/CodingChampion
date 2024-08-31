@@ -1,9 +1,10 @@
+import React, { useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
-import { useState, useEffect, useCallback } from 'react'
-import { Link } from 'react-router-dom'
 
-function Navbar() {
+// Use React.memo to prevent unnecessary re-renders
+const Navbar = React.memo(() => {
   const { userDetails, isLoggedIn } = useUser()
   const [isImageLoading, setIsImageLoading] = useState(true)
 
@@ -19,9 +20,9 @@ function Navbar() {
     setIsImageLoading(false)
   }, [])
 
-  // Create a unique image URL
+  // Create a unique image URL to avoid caching issues
   const profilePicUrl = userDetails?.profilePic
-    ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}` // Add timestamp to prevent caching
+    ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}` // Add timestamp to avoid caching
     : 'default-avatar.png'
 
   return (
@@ -48,7 +49,7 @@ function Navbar() {
                 </div>
               )}
               <img
-                key={profilePicUrl} // Add key to force re-render
+                key={profilePicUrl} // Unique key to manage image reloading
                 src={profilePicUrl}
                 alt="Profile"
                 className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
@@ -66,6 +67,6 @@ function Navbar() {
       </div>
     </nav>
   )
-}
+})
 
 export default Navbar

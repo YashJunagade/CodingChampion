@@ -131,9 +131,9 @@ function Register() {
 
         <div className="mt-4">
           Already registered?{' '}
-          <a href="/login" className="text-blue-500">
+          <Link to="/login" className="text-blue-500">
             Login
-          </a>
+          </Link>
         </div>
 
         <div className="my-6 text-gray-600">--Or continue with--</div>

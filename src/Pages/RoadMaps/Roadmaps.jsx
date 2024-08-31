@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 function Roadmaps() {
   return (
     <div style={styles.container}>
       <h1 style={styles.header}>🚧 Our team is working on this feature!</h1>
       <p style={styles.message}>Please try again after some time.</p>
-      <a href="/" style={styles.link}>
+      <Link href="/" style={styles.link}>
         Go Back To Home
-      </a>
+      </Link>
     </div>
-  );
+  )
 }
 
 // Define some basic styles
@@ -39,5 +39,5 @@ const styles = {
     borderRadius: '4px',
     border: '1px solid #007bff',
   },
-};
-export default Roadmaps;
+}
+export default Roadmaps

@@ -214,20 +214,20 @@ function Login() {
             </button>
 
             <div className="mt-4">
-              <a
-                href="#"
+              <Link
+                to="#"
                 onClick={() => setResetPasswordMode(true)}
                 className="text-blue-500"
               >
                 Forgot Password?
-              </a>
+              </Link>
             </div>
 
             <div className="mt-4">
               Don't have an account?{' '}
-              <a href="/register" className="text-blue-500">
+              <Link to="/register" className="text-blue-500">
                 Register
-              </a>
+              </Link>
             </div>
 
             <div className="my-6 text-gray-600">--Or continue with--</div>

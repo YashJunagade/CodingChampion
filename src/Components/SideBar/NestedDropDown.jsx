@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function NestedDropdown({ title, subjects }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = (e) => {
-    e.stopPropagation(); // Prevent the parent menu from toggling
-    setIsOpen(!isOpen);
-  };
+    e.stopPropagation() // Prevent the parent menu from toggling
+    setIsOpen(!isOpen)
+  }
 
   return (
     <div className="nested-dropdown">
@@ -17,14 +18,14 @@ function NestedDropdown({ title, subjects }) {
       {isOpen && (
         <div className="nested-menu">
           {subjects.map((subject, index) => (
-            <a key={index} href={subject.link}>
+            <Link key={index} to={subject.link}>
               {subject.name}
-            </a>
+            </Link>
           ))}
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default NestedDropdown;
+export default NestedDropdown

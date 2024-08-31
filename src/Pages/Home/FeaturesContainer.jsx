@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom'
+
 function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
   return (
     <div className="w-[60%] sm:w-[99%] lg:w-[70%] max-w-[400px] mx-auto">
@@ -18,14 +20,14 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
             {featureDescription}
           </p>
 
-          <a href={pageRoute} className="mt-auto">
+          <Link to={pageRoute} className="mt-auto">
             <button
               type="button"
               className="w-full mb-2 rounded-md  bg-black px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-accent  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black transition duration-200"
             >
               Try it &rarr;
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
