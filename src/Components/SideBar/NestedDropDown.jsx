@@ -11,10 +11,10 @@ function NestedDropdown({ title, subjects }) {
 
   return (
     <div className="nested-dropdown">
-      <a onClick={toggleMenu}>
+      <Link onClick={toggleMenu}>
         {title}
         <span className="arrow">{isOpen ? '▲' : '▼'}</span>
-      </a>
+      </Link>
       {isOpen && (
         <div className="nested-menu">
           {subjects.map((subject, index) => (

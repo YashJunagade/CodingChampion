@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Roadmaps() {
   return (
     <div style={styles.container}>
       <h1 style={styles.header}>🚧 Our team is working on this feature!</h1>
       <p style={styles.message}>Please try again after some time.</p>
-      <Link href="/" style={styles.link}>
+      <a href="/" style={styles.link}>
         Go Back To Home
-      </Link>
+      </a>
     </div>
   )
 }
