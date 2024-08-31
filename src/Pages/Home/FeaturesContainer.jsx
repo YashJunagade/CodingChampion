@@ -1,36 +1,78 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
   return (
-    <div className="w-[60%] sm:w-[99%] lg:w-[70%] max-w-[400px] mx-auto">
-      <div className=" flex flex-col min-h-[300px] rounded-custom shadow-even-shadow  hover:shadow-accent  hover:shadow-even-shadow transition duration-200  ease-in-out delay-150  hover:-translate-y-1 hover:scale-110">
-        <div className=" rounded-t-custom bg-accent">
-          <img
-            src=""
+    <motion.div
+      className="w-[60%] sm:w-[99%] lg:w-[70%] max-w-[400px] mx-auto"
+      whileHover={{
+        scale: 1.05,
+        y: -10,
+        transition: {
+          stype: 'spring',
+          stiffness: 300,
+          damping: 20,
+        },
+      }}
+    >
+      <motion.div
+        className="flex flex-col min-h-[300px] rounded-custom shadow-even-shadow bg-white overflow-hidden"
+        whileHover={{
+          boxShadow: '0px 10px 20px rgba(255, 80, 1, 0.2)',
+        }}
+        transition={{
+          boxShadow: { duration: 0.3 },
+        }}
+      >
+        <motion.div
+          className=" rounded-t-custom bg-accent"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.img
+            src="https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
             alt="feature"
             className=" w-full h-40 rounded-t-custom object-cover "
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
           />
-        </div>
-        <div className="p-2">
-          <h1 className="items-center text-lg font-semibold text-black sm:h-10 md:h-5">
+        </motion.div>
+        <div className="p-2 flex flex-col h-full">
+          <motion.h1
+            className="items-center text-lg font-semibold text-black sm:h-10 md:h-5"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             {featureTitle}
-          </h1>
-          <p className=" text-sm text-secondary  h-16 mb-2 md:h-10">
+          </motion.h1>
+          <motion.p
+            className=" text-sm text-secondary  h-16 mb-2 md:h-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             {featureDescription}
-          </p>
+          </motion.p>
 
           <Link to={pageRoute} className="mt-auto">
-            <button
+            <motion.button
               type="button"
-              className="w-full mb-2 rounded-md  bg-black px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-accent  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black transition duration-200"
+              className="w-full mb-2 rounded-md  bg-black px-2 py-2 text-sm font-semibold text-white shadow-sm "
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: '#FF5001',
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
               Try it &rarr;
-            </button>
+            </motion.button>
           </Link>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
