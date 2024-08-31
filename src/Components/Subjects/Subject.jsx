@@ -1,22 +1,42 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function Subject({ subRoute, subName }) {
   return (
-    <Link
-      to={subRoute}
-      className="mx-auto transition duration-200  ease-in-out delay-100  hover:-translate-y-1 hover:scale-110"
+    <motion.div
+      whileHover={{
+        scale: 1.1,
+        y: -10,
+        transition: {
+          type: 'spring',
+          stiffness: 300,
+          damping: 10,
+        },
+      }}
     >
-      <div className="flex flex-col h-44 w-32 bg-white shadow-even-shadow hover:shadow-accent rounded-custom text-center sm:h-48 sm:w-36 lg:h-52 lg:w-40">
-        <img
-          src="./src/assets/subLogo/Python.png"
-          alt="sub logo"
-          className="w-[70%] object-cover rounded-t-custom m-auto"
-        />
-        <h3 className="font-bold text-accent  text-center h-[35%] p-1">
-          {subName}
-        </h3>
-      </div>
-    </Link>
+      <Link to={subRoute} className="mx-auto block">
+        <motion.div
+          className="flex flex-col h-44 w-32 bg-white shadow-even-shadow  rounded-custom text-center sm:h-48 sm:w-36 lg:h-52 lg:w-40 mx-auto"
+          whileHover={{
+            boxShadow: '0px 0px 8px rgba(255, 80, 1, 0.2)',
+          }}
+          transition={{
+            boxShadow: { duratoin: 0.2 },
+          }}
+        >
+          <motion.img
+            src="./src/assets/subLogo/Python.png"
+            alt="sub logo"
+            className="w-[70%] object-cover rounded-t-custom m-auto"
+            whileHover={{ rotate: 5 }}
+            transition={{ duration: 0.2 }}
+          />
+          <h3 className="font-bold text-accent  text-center h-[35%] p-1">
+            {subName}
+          </h3>
+        </motion.div>
+      </Link>
+    </motion.div>
   )
 }
 
