@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
 import { useState, useEffect, useCallback } from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const { userDetails, loading, isLoggedIn } = useUser()
@@ -43,7 +44,7 @@ function Navbar() {
       <div className="flex justify-between items-center">
         {isLoggedIn ? (
           <div className="h-10 w-10 rounded-full relative">
-            <a href="/profile">
+            <Link to="/profile">
               {isImageLoading && (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
@@ -55,16 +56,16 @@ function Navbar() {
                 className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
                 onLoad={handleImageLoad}
               />
-            </a>
+            </Link>
           </div>
         ) : (
-          <a href="/login">
+          <Link to="/login">
             <button
               className={`bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200`}
             >
               Login
             </button>
-          </a>
+          </Link>
         )}
       </div>
     </nav>
