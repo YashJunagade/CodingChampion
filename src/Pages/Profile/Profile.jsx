@@ -77,7 +77,19 @@ function Profile() {
                   Select Profile Picture
                 </h2>
                 <div className="flex flex-wrap gap-4">
-                  {['1.jpeg', '2.jpeg', '3.jpeg'].map((picName) => (
+                  {[
+                    '1.jpeg',
+                    '2.jpeg',
+                    '3.jpeg',
+                    '4.jpeg',
+                    '5.jpeg',
+                    '6.jpeg',
+                    '7.jpeg',
+                    '8.jpeg',
+                    '9.jpeg',
+                    '10.jpeg',
+                    '11.jpeg',
+                  ].map((picName) => (
                     <img
                       key={picName}
                       src={`/avatar/${picName}`}
