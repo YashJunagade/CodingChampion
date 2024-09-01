@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 import Navbar from '../../src/Components/Navbar/Navbar'
 import SideBar from '../../src/Components/SideBar/SideBar'
 import './LabList.css'
-import { labData } from './LabData' // Import your labData here
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../src/config/firebase'
 
