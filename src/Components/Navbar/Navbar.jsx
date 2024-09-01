@@ -47,7 +47,6 @@ const Navbar = React.memo(() => {
   const navigate = useNavigate()
   const modalRef = useRef(null)
 
-  // Memoize the profile picture URL to prevent unnecessary recalculations
   const profilePicUrl = useMemo(() => {
     return userDetails?.profilePic
       ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}`
@@ -144,6 +143,7 @@ const Navbar = React.memo(() => {
               </motion.div>
             )}
             <motion.img
+              key={profilePicUrl} // Add this line to force re-render when URL changes
               initial={{ opacity: 0 }}
               animate={{ opacity: isImageLoading ? 0 : 1 }}
               transition={{ duration: 0.3 }}
