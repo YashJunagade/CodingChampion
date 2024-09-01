@@ -4,9 +4,10 @@ import React, {
   useState,
   useEffect,
   useMemo,
+  useCallback,
 } from 'react'
 import { auth, db } from '../config/firebase'
-import { doc, getDoc, setDoc } from 'firebase/firestore'
+import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 
 const UserContext = createContext()
@@ -21,7 +22,7 @@ export const UserProvider = ({ children }) => {
     const defaultUserData = {
       email: user.email,
       userName: user.displayName || user.email.split('@')[0],
-      profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`, // Profile picture logic
+      profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
     }
 
     try {
@@ -36,6 +37,26 @@ export const UserProvider = ({ children }) => {
       return null
     }
   }
+
+  const updateProfilePic = useCallback(async (picName) => {
+    if (!auth.currentUser) return
+
+    const userRef = doc(db, 'Users', auth.currentUser.uid)
+    try {
+      await updateDoc(userRef, { profilePic: picName })
+      setUserDetails((prev) => ({ ...prev, profilePic: picName }))
+      toast.success('Profile picture updated successfully.', {
+        position: 'bottom-right',
+        autoClose: 3000,
+      })
+    } catch (error) {
+      console.error('Error updating profile picture:', error)
+      toast.error('Error updating profile picture.', {
+        position: 'bottom-right',
+        autoClose: 3000,
+      })
+    }
+  }, [])
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
@@ -68,7 +89,7 @@ export const UserProvider = ({ children }) => {
       setLoading(false)
     })
 
-    return () => unsubscribe() // Cleanup subscription on unmount
+    return () => unsubscribe()
   }, [])
 
   const value = useMemo(
@@ -76,8 +97,9 @@ export const UserProvider = ({ children }) => {
       userDetails,
       loading,
       isLoggedIn,
+      updateProfilePic,
     }),
-    [userDetails, loading, isLoggedIn]
+    [userDetails, loading, isLoggedIn, updateProfilePic]
   )
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>
