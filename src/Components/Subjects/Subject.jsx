@@ -3,25 +3,33 @@ import { motion } from 'framer-motion'
 
 function Subject({ subRoute, subName }) {
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.1,
-        y: -10,
-        transition: {
-          type: 'spring',
-          stiffness: 300,
-          damping: 10,
-        },
-      }}
-    >
+    // <motion.div
+    //   whileHover={{
+    //     scale: 1.1,
+    //     y: -10,
+    //     transition: {
+    //       type: 'spring',
+    //       stiffness: 300,
+    //       damping: 10,
+    //     },
+    //   }}
+    // >
+    <div className="relative">
       <Link to={subRoute} className="mx-auto block">
         <motion.div
           className="flex flex-col h-44 w-32 bg-primary shadow-even-shadow  rounded-custom text-center sm:h-48 sm:w-36 lg:h-52 lg:w-40 mx-auto"
           whileHover={{
             boxShadow: '0px 0px 8px rgba(255, 80, 1, 0.2)',
+            scale: 1.1,
+            y: -10,
+            transition: {
+              type: 'spring',
+              stiffness: 300,
+              damping: 10,
+            },
           }}
           transition={{
-            boxShadow: { duratoin: 0.2 },
+            boxShadow: { duration: 0.2 },
           }}
         >
           <motion.img
@@ -41,7 +49,7 @@ function Subject({ subRoute, subName }) {
           </motion.h3>
         </motion.div>
       </Link>
-    </motion.div>
+    </div>
   )
 }
 
