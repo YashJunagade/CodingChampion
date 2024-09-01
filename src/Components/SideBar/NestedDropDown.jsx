@@ -31,7 +31,7 @@ function NestedDropdown({ title, subjects }) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="bg-primary2 py-2 overflow-hidden"
+            className="bg-primary py-2 overflow-hidden"
           >
             <div className="bg-primary pl-8">
               {subjects.map((subject, index) => (
