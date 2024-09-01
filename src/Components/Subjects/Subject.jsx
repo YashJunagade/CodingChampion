@@ -25,7 +25,7 @@ function Subject({ subRoute, subName }) {
           }}
         >
           <motion.img
-            src="./src/assets/subLogo/Python.png"
+            src="./Python.png"
             alt="sub logo"
             className="w-[70%] object-cover rounded-t-custom m-auto"
             whileHover={{ rotate: 5 }}
