@@ -9,12 +9,7 @@ const NavLink = React.memo(({ linkRoute, linkName }) => {
   return (
     <li className="text-center md:mx-4 lg:mx-8 relative">
       <Link to={linkRoute}>
-        <motion.div
-          className="px-2 py-2 cursor-pointer rounded transition-colors duration-100"
-          whileHover={{ backgroundColor: 'var(--accent)', color: 'white' }}
-          animate={{ color: isActive ? 'var(--accent)' : 'inherit' }}
-          initial={false}
-        >
+        <motion.div className="px-2 py-2 cursor-pointer rounded transition-colors hover:bg-accent duration-200">
           {linkName}
           {isActive && (
             <motion.div
