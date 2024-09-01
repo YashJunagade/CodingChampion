@@ -31,7 +31,7 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
           transition={{ duration: 0.3 }}
         >
           <motion.img
-            src="https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="test.webp"
             alt="feature"
             className=" w-full h-40 rounded-t-custom object-cover "
             whileHover={{ scale: 1.1 }}
