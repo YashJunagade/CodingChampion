@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --accent: #ff5001;
+  --primary: #efefef;
+  --primary2: #dddddd;
+  --secondary: #231f20;
+  --secondary2: #231f20;
+}
