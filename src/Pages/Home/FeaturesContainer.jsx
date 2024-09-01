@@ -31,7 +31,7 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
           transition={{ duration: 0.3 }}
         >
           <motion.img
-            src="test.webp"
+            src="https://res.cloudinary.com/dpisw1nnq/image/upload/v1725203664/test_j4xdya.webp"
             alt="feature"
             className=" w-full h-40 rounded-t-custom object-cover "
             whileHover={{ scale: 1.1 }}
