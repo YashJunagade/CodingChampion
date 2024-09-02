@@ -110,6 +110,11 @@ function CodeEditor({ language, solution }) {
           fontSize: 12,
           wordWrap: 'on',
           tabSize: 2,
+          automaticLayout: true,
+          scrollbar: {
+            vertical: 'hidden',
+            horizontal: 'hidden',
+          },
         })
       } else {
         // for larger screens

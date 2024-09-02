@@ -78,10 +78,12 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="mx-auto px-4 mt-4">
-      <div className="flex flex-col md:flex-row h-screen" ref={panelRef}>
+    <div className="flex flex-col h-auto mx-auto px-4 py-4 min-h-screen">
+      <div className="flex flex-col md:flex-row" ref={panelRef}>
+        {/* question slip  */}
         <div
-          className={`overflow-y-visible ${isLargeScreen ? `w-${width}%` : 'w-full'} md:min-w-[20%]`}
+          className={`flex-shrink-0 ${isLargeScreen ? `w-${width}%` : 'w-full'} md:min-w-[20%]`}
+          // overflow-y-visible : try this if flex-shrink gives problem
         >
           {loading ? (
             <div className="flex justify-center items-center h-full">
@@ -109,7 +111,7 @@ const SlipSolution = () => {
         >
           <Suspense
             fallback={
-              <div className="flex justify-center items-center h-full">
+              <div className="flex justify-center items-center h-full ">
                 <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-accent"></div>
               </div>
             }
