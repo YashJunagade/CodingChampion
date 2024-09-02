@@ -2,7 +2,7 @@ import Editor from '@monaco-editor/react'
 import Groq from 'groq-sdk'
 import FormattedText from './FormattedText'
 import Modal from './Modal' // Import the Modal component
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
 
@@ -30,6 +30,13 @@ function CodeEditor({ language, solution }) {
   const [currentKeyIndex, setCurrentKeyIndex] = useState(0) // State to manage the current API key
   const [currentModelIndex, setCurrentModelIndex] = useState(0) // State to manage the current model
   const [loading, setLoading] = useState(false) // State to manage loading status
+
+  // State to manage editor options
+  const [editorOptions, setEditorOptions] = useState({
+    minimap: { enabled: false },
+    scrollBeyondLastLine: false,
+    fontSize: 12,
+  })
 
   const editorRef = useRef(null) // Ref to store the editor instance
 
@@ -93,6 +100,37 @@ function CodeEditor({ language, solution }) {
     }
   }, [])
 
+  useEffect(() => {
+    const updateEditorOptions = () => {
+      if (window.innerWidth < 540) {
+        // for smaller screens :
+        setEditorOptions({
+          minimap: { enabled: false },
+          scrollBeyondLastLine: false,
+          fontSize: 12,
+          wordWrap: 'on',
+          tabSize: 2,
+        })
+      } else {
+        // for larger screens
+        setEditorOptions({
+          minimap: { enabled: true },
+          scrollBeyondLastLine: true,
+          fontSize: 16,
+          wordWrap: 'on',
+          lineNumbers: 'on',
+        })
+      }
+    }
+
+    updateEditorOptions()
+    window.addEventListener('resize', updateEditorOptions)
+
+    return () => {
+      window.removeEventListener('resize', updateEditorOptions)
+    }
+  }, [])
+
   return (
     <div className="flex flex-col h-full">
       <div className="flex justify-between mb-4">
@@ -124,11 +162,7 @@ function CodeEditor({ language, solution }) {
             editorRef.current = editor
           }}
           // Store the editor instance
-          options={{
-            minimap: { enabled: false }, // disabled mini map. (for mobile view)
-            scrollBeyondLastLine: false,
-            fontSize: 12,
-          }}
+          options={editorOptions}
         />
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
