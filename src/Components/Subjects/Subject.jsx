@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-function Subject({ subRoute, subName }) {
+function Subject({ subRoute, subName, imgLink }) {
+  console.log(imgLink)
+  console.log(subName)
   return (
     <motion.div
       whileHover={{
@@ -32,7 +34,7 @@ function Subject({ subRoute, subName }) {
           }}
         >
           <motion.img
-            src="./Python.png"
+            src={imgLink}
             alt="sub logo"
             className="w-[70%] object-cover rounded-t-custom m-auto"
             whileHover={{ rotate: 5 }}
