@@ -103,7 +103,7 @@ function CodeEditor({ language, solution }) {
         fontSize: isMobile ? 12 : 16,
         wordWrap: 'on',
         lineNumbers: isMobile ? 'off' : 'on',
-        tabSize: isMobile ? 1 : 4,
+        tabSize: isMobile ? 0 : 4,
         automaticLayout: true,
         scrollbar: isMobile
           ? {
