@@ -26,19 +26,12 @@ const models = [
 
 function CodeEditor({ language, solution }) {
   const [result, setResult] = useState('')
-  const [isModalOpen, setIsModalOpen] = useState(false) // State to manage modal visibility
-  const [currentKeyIndex, setCurrentKeyIndex] = useState(0) // State to manage the current API key
-  const [currentModelIndex, setCurrentModelIndex] = useState(0) // State to manage the current model
-  const [loading, setLoading] = useState(false) // State to manage loading status
-
-  // State to manage editor options
-  const [editorOptions, setEditorOptions] = useState({
-    minimap: { enabled: false },
-    scrollBeyondLastLine: false,
-    fontSize: 12,
-  })
-
-  const editorRef = useRef(null) // Ref to store the editor instance
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [currentKeyIndex, setCurrentKeyIndex] = useState(0)
+  const [currentModelIndex, setCurrentModelIndex] = useState(0)
+  const [loading, setLoading] = useState(false)
+  const [editorOptions, setEditorOptions] = useState({})
+  const editorRef = useRef(null)
 
   const fetchSolution = async () => {
     const apiKey = apiKeys[currentKeyIndex]
@@ -102,30 +95,26 @@ function CodeEditor({ language, solution }) {
 
   useEffect(() => {
     const updateEditorOptions = () => {
-      if (window.innerWidth < 540) {
-        // for smaller screens :
-        setEditorOptions({
-          minimap: { enabled: false },
-          scrollBeyondLastLine: false,
-          fontSize: 12,
-          wordWrap: 'on',
-          tabSize: 2,
-          automaticLayout: true,
-          scrollbar: {
-            vertical: 'hidden',
-            horizontal: 'hidden',
-          },
-        })
-      } else {
-        // for larger screens
-        setEditorOptions({
-          minimap: { enabled: true },
-          scrollBeyondLastLine: true,
-          fontSize: 16,
-          wordWrap: 'on',
-          lineNumbers: 'on',
-        })
-      }
+      const isMobile = window.innerWidth < 540
+
+      setEditorOptions({
+        minimap: { enabled: !isMobile },
+        scrollBeyondLastLine: !isMobile,
+        fontSize: isMobile ? 12 : 16,
+        wordWrap: 'on',
+        lineNumbers: isMobile ? 'off' : 'on',
+        tabSize: isMobile ? 1 : 4,
+        automaticLayout: true,
+        scrollbar: isMobile
+          ? {
+              vertical: 'hidden',
+              horizontal: 'hidden',
+            }
+          : {
+              vertical: 'visible',
+              horizontal: 'visible',
+            },
+      })
     }
 
     updateEditorOptions()
@@ -144,11 +133,11 @@ function CodeEditor({ language, solution }) {
           disabled={loading}
           className={`px-4 py-2 rounded text-white font-semibold ${
             loading
-              ? 'bg-primary2 cursor-not allowed'
+              ? 'bg-primary2 cursor-not-allowed'
               : 'bg-black hover:bg-accent'
           }`}
         >
-          {loading ? 'Wait Magic Is Happing...' : 'Explain Me'}
+          {loading ? 'Wait Magic Is Happening...' : 'Explain Me'}
         </button>
         <button
           onClick={copyToClipboard}
@@ -166,7 +155,6 @@ function CodeEditor({ language, solution }) {
           onMount={(editor) => {
             editorRef.current = editor
           }}
-          // Store the editor instance
           options={editorOptions}
         />
       </div>
