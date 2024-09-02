@@ -156,11 +156,11 @@ function CodeEditor({ language, solution }) {
     }
 
     updateEditorOptions()
-    // window.addEventListener('resize', updateEditorOptions)
+    window.addEventListener('resize', updateEditorOptions)
 
     return () => {
-      // window.removeEventListener('resize', updateEditorOptions)
-      // const editorElement = editorRef.current?.getDomNode()
+      window.removeEventListener('resize', updateEditorOptions)
+      const editorElement = editorRef.current?.getDomNode()
       if (editorElement) {
         editorElement.removeEventListener('wheel', handleEditorWheel)
       }

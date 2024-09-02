@@ -63,21 +63,7 @@ const SlipSolution = () => {
     document.addEventListener('mouseup', handleMouseUp)
   }
 
-  // only for smaller screens.
-  // const handleMouseMove = (e) => {
-  //   if (!isLargeScreen) return
-  //   const panelLeft = panelRef.current.getBoundingClientRect().left
-  //   const newWidth =
-  //     ((e.clientX - panelLeft) / panelRef.current.offsetWidth) * 100
-
-  //   // Set minimum and maximum widths to prevent panels from disappearing
-  //   if (newWidth > 10 && newWidth < 90) {
-  //     setWidth(newWidth)
-  //   }
-  // }
-
   const handleMouseUp = () => {
-    // document.removeEventListener('mousemove', handleMouseMove)
     document.removeEventListener('mouseup', handleMouseUp)
   }
 

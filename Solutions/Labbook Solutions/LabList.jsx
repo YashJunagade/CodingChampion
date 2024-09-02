@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Navbar from '../../src/Components/Navbar/Navbar'
 import SideBar from '../../src/Components/SideBar/SideBar'
 import './LabList.css'
 import { doc, getDoc } from 'firebase/firestore'
