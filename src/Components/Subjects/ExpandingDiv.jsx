@@ -72,6 +72,7 @@ function ExpandingDiv({ subjects, title }) {
                   key={index}
                   subRoute={`/${subject.sName}/${isLabbokRoute ? 'labList' : 'slipList'}`}
                   subName={subject.sName}
+                  imgLink={subject.imgLink}
                 />
               ))}
             </motion.div>
