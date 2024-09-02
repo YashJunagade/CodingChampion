@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 function Subject({ subRoute, subName, imgLink }) {
-  console.log(imgLink)
-  console.log(subName)
   return (
     <motion.div
       whileHover={{
