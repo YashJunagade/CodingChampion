@@ -79,7 +79,7 @@ const SlipSolution = () => {
 
   return (
     <div className="flex flex-col h-auto mx-auto px-4 py-4 min-h-screen">
-      <div className="flex flex-col md:flex-row " ref={panelRef}>
+      <div className="flex flex-col md:flex-row" ref={panelRef}>
         {/* question slip  */}
         <div
           className={`flex-shrink-0 ${isLargeScreen ? `w-${width}%` : 'w-full'} md:min-w-[20%]`}
