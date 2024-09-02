@@ -3,7 +3,6 @@ import Groq from 'groq-sdk'
 import FormattedText from './FormattedText'
 import Modal from './Modal' // Import the Modal component
 import { useState, useCallback, useRef } from 'react'
-import './CodeEditor.css'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
 
@@ -95,32 +94,49 @@ function CodeEditor({ language, solution }) {
   }, [])
 
   return (
-    <>
-      <div className="flex justify-between">
-        <button onClick={fetchSolution} disabled={loading} className="btn">
+    <div className="flex flex-col h-full">
+      <div className="flex justify-between mb-4">
+        <button
+          onClick={fetchSolution}
+          disabled={loading}
+          className={`px-4 py-2 rounded text-white font-semibold ${
+            loading
+              ? 'bg-primary2 cursor-not allowed'
+              : 'bg-black hover:bg-accent'
+          }`}
+        >
           {loading ? 'Wait Magic Is Happing...' : 'Explain Me'}
         </button>
         <button
           onClick={copyToClipboard}
-          className="bg-accent px-4 rounded text-white font-bold hover:bg-black"
+          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
         >
           Copy
         </button>
       </div>
-      <Editor
-        height="100%"
-        width="100%"
-        language={language}
-        theme="vs-dark"
-        value={solution}
-        onMount={(editor) => {
-          editorRef.current = editor
-        }} // Store the editor instance
-      />
+      <div className="flex-grow">
+        <Editor
+          height="100%"
+          language={language}
+          theme="vs-dark"
+          value={solution}
+          onMount={(editor) => {
+            editorRef.current = editor
+          }}
+          // Store the editor instance
+          options={{
+            minimap: { enabled: false }, // disabled mini map. (for mobile view)
+            scrollBeyondLastLine: false,
+            fontSize: 12,
+          }}
+        />
+      </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        {result && <FormattedText text={result} />}
+        <div className="max-h-[80vh] overflow-y-auto p-6">
+          {result && <FormattedText text={result} />}
+        </div>
       </Modal>
-    </>
+    </div>
   )
 }
 

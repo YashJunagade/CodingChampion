@@ -1,14 +1,12 @@
 import React, { Suspense, useEffect, useRef, useState } from 'react'
-import './SlipSolution.css'
 import { db } from '../../../config/firebase'
 import { useParams } from 'react-router-dom'
-import Navbar from '../../../Components/Navbar/Navbar'
 import CodeEditor from '../CodeEditor'
 import { doc, getDoc } from 'firebase/firestore'
 import QuestionSlipCom from './QuestionSlipCom'
 
 const SlipSolution = () => {
-  const [width, setWidth] = useState(40) // Initial width in percentage
+  const [width, setWidth] = useState(100) // Initial width in percentage (changed from 40 to 100 for mobile screens)
   const panelRef = useRef(null)
   const { subjectId, slipId, questionId } = useParams()
   const [qId, setQId] = useState()
@@ -17,6 +15,7 @@ const SlipSolution = () => {
   const [solution, setSolution] = useState()
   const [language, setLanguage] = useState()
   const [loading, setLoading] = useState(true)
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
 
   useEffect(() => {
     const fetchQuestion = async () => {
@@ -32,7 +31,7 @@ const SlipSolution = () => {
         setText(question.text)
         setSolution(
           question.sol ??
-            'Currently there is no solution for this Question\n\t Our team is working on it \n\t\t try after some time...'
+            'A solution for this coding question is not available at the moment.\n\t Our team is actively working on it.\n\t\tPlease check back later'
         )
       } else {
         console.log('No such document!')
@@ -42,6 +41,19 @@ const SlipSolution = () => {
 
     fetchQuestion()
   }, [subjectId, slipId, questionId])
+
+  // function to handle resizing
+  const handleResize = () => {
+    const newIsLargeScreen = window.innerWidth > 768
+    setIsLargeScreen(newIsLargeScreen)
+    setWidth(newIsLargeScreen ? 40 : 100)
+  }
+
+  useEffect(() => {
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const handleMouseDown = (e) => {
     e.preventDefault()
@@ -66,12 +78,15 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="container">
-      {/* <Navbar /> */}
-      <div className="codeEditor" ref={panelRef}>
-        <div className="panel" style={{ width: `${width}%` }}>
+    <div className="mx-auto px-4">
+      <div className="flex flex-col md:flex-row h-screen" ref={panelRef}>
+        <div
+          className={`overflow-y-auto ${isLargeScreen ? `w-${width}%` : 'w-full'} md:min-w-[20%]`}
+        >
           {loading ? (
-            <div>Loading Question...</div>
+            <div className="flex justify-center items-center h-full">
+              <div className="animate-spin rounded-full h-12 w-12  border-b-2 border-accent"></div>
+            </div>
           ) : (
             <QuestionSlipCom
               slipId={slipId}
@@ -81,12 +96,24 @@ const SlipSolution = () => {
             />
           )}
         </div>
-        <div className="resizer" onMouseDown={handleMouseDown} />
+        {isLargeScreen && (
+          <div
+            className="w-1 bg-primary2 cursor-col-resize"
+            onMouseDown={handleMouseDown}
+          />
+        )}
         <div
-          className="panel"
-          style={{ width: `calc(100% - ${width}% - 10px)` }}
+          className={`overflow-hidden ${
+            isLargeScreen ? `w-${100 - width}%` : 'w-full h-full mt-4 mb-4'
+          } md:min-w-[20%]`}
         >
-          <Suspense fallback={<div>Loading Editor...</div>}>
+          <Suspense
+            fallback={
+              <div className="flex justify-center items-center h-full">
+                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-accent"></div>
+              </div>
+            }
+          >
             <CodeEditor language={language} solution={solution} />
           </Suspense>
         </div>
