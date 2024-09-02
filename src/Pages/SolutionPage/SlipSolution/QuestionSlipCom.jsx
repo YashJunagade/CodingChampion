@@ -1,7 +1,7 @@
 function QuestionCom({ slipId, questionId, text, marks }) {
   return (
     <div className="h-full overflow-y-auto p-4 bg-primary shadow-even-shadow rounded-custom">
-      <div className="text-lg font-semibold mb-2 text-secondary">
+      <div className="text-lg font-semibold mb-2 text-black">
         Slip No : {slipId}
       </div>
       <div
@@ -10,7 +10,7 @@ function QuestionCom({ slipId, questionId, text, marks }) {
           __html: `Q. ${text}`,
         }}
       />
-      <div className="text-sm font-medium text-secondary2">{marks} Marks</div>
+      <div className="text-sm font-medium text-secondary">{marks} Marks</div>
     </div>
   )
 }

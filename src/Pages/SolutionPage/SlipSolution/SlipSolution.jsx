@@ -78,10 +78,10 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="mx-auto px-4">
+    <div className="mx-auto px-4 mt-4">
       <div className="flex flex-col md:flex-row h-screen" ref={panelRef}>
         <div
-          className={`overflow-y-auto ${isLargeScreen ? `w-${width}%` : 'w-full'} md:min-w-[20%]`}
+          className={`overflow-y-visible ${isLargeScreen ? `w-${width}%` : 'w-full'} md:min-w-[20%]`}
         >
           {loading ? (
             <div className="flex justify-center items-center h-full">
