@@ -114,6 +114,7 @@ function CodeEditor({ language, solution }) {
           scrollbar: {
             vertical: 'hidden',
             horizontal: 'hidden',
+            handleMouseWheel: true,
           },
         })
       } else {
@@ -133,6 +134,74 @@ function CodeEditor({ language, solution }) {
 
     return () => {
       window.removeEventListener('resize', updateEditorOptions)
+    }
+  }, [])
+
+  // this code will fix the scrolling issue:
+  const handleEditorDidMount = (editor, monaco) => {
+    editorRef.current = editor
+
+    const editorElement = editor.getDomNode()
+    if (editorElement) {
+      editorElement.addEventListener('wheel', handleEditorWheel, {
+        passive: false,
+      })
+    }
+  }
+
+  const handleEditorWheel = (e) => {
+    const editor = editorRef.current
+    if (!editor) return
+
+    const editorContent = editor.getModel()
+    const lineCount = editorContent.getLineCount()
+    const visibleRange = editor.getVisibleRanges()[0]
+
+    const isAtTop = visibleRange.startLineNumber === 1
+    const isAtBottom = visibleRange.endLineNumber === lineCount
+
+    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+      // Allow default scroll behavior when at the top or bottom
+      return
+    }
+
+    // Prevent default scroll behavior within the editor
+    e.preventDefault()
+
+    // Manually scroll the editor
+    const scrollTop = editor.getScrollTop()
+    editor.setScrollTop(scrollTop + e.deltaY)
+  }
+
+  useEffect(() => {
+    const updateEditorOptions = () => {
+      const isMobile = window.innerWidth < 540
+      setEditorOptions({
+        minimap: { enabled: !isMobile },
+        scrollBeyondLastLine: false,
+        fontSize: isMobile ? 12 : 16,
+        wordWrap: 'on',
+        lineNumbers: isMobile ? 'off' : 'on',
+        tabSize: 2,
+        automaticLayout: true,
+        scrollbar: {
+          vertical: 'visible',
+          horizontal: 'visible',
+          handleMouseWheel: true,
+          alwaysConsumeMouseWheel: false,
+        },
+      })
+    }
+
+    updateEditorOptions()
+    window.addEventListener('resize', updateEditorOptions)
+
+    return () => {
+      window.removeEventListener('resize', updateEditorOptions)
+      const editorElement = editorRef.current?.getDomNode()
+      if (editorElement) {
+        editorElement.removeEventListener('wheel', handleEditorWheel)
+      }
     }
   }, [])
 
@@ -166,7 +235,6 @@ function CodeEditor({ language, solution }) {
           onMount={(editor) => {
             editorRef.current = editor
           }}
-          // Store the editor instance
           options={editorOptions}
         />
       </div>

@@ -107,7 +107,7 @@ const SlipSolution = () => {
 
         {/* // code editor div */}
         <div
-          className={`overflow-hidden ${
+          className={`overflow-y-auto ${
             isLargeScreen ? `w-${100 - width}%` : 'w-full h-screen mt-6 mb-2'
           } md:min-w-[20%]`}
         >
