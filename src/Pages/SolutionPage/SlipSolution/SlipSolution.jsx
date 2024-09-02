@@ -129,6 +129,7 @@ const SlipSolution = () => {
         )}
 
         {/* //question slip div ends  */}
+
         {isLargeScreen && (
           <div
             className="w-1 cursor-col-resize bg-accent"
