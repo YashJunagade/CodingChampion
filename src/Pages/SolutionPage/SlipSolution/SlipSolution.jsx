@@ -78,7 +78,7 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="flex flex-col h-auto mx-auto px-4 py-4 min-h-screen">
+    <div className="flex flex-col h-auto mx-auto px-4 py-4 min-h-screen mt-4">
       <div className="flex flex-col md:flex-row" ref={panelRef}>
         {/* question slip  */}
         <div
@@ -104,14 +104,16 @@ const SlipSolution = () => {
             onMouseDown={handleMouseDown}
           />
         )}
+
+        {/* // code editor div */}
         <div
           className={`overflow-hidden ${
-            isLargeScreen ? `w-${100 - width}%` : 'w-full h-full mt-4 mb-4'
+            isLargeScreen ? `w-${100 - width}%` : 'w-full h-screen mt-6 mb-2'
           } md:min-w-[20%]`}
         >
           <Suspense
             fallback={
-              <div className="flex justify-center items-center h-full ">
+              <div className="flex justify-center items-center h-full">
                 <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-accent"></div>
               </div>
             }
