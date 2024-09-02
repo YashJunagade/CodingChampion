@@ -5,6 +5,7 @@ import Modal from './Modal' // Import the Modal component
 import { useState, useCallback, useRef, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
+import { Resizable } from 're-resizable'
 
 const apiKeys = [
   import.meta.env.VITE_GROQ_API_KEY_1,
@@ -31,6 +32,8 @@ function CodeEditor({ language, solution }) {
   const [currentModelIndex, setCurrentModelIndex] = useState(0)
   const [loading, setLoading] = useState(false)
   const [editorOptions, setEditorOptions] = useState({})
+  const [isResizable, setIsResizable] = useState(window.innerWidth > 768)
+  const [editorWidth, setEditorWidth] = useState('600px')
   const editorRef = useRef(null)
 
   const fetchSolution = async () => {
@@ -131,7 +134,10 @@ function CodeEditor({ language, solution }) {
 
   useEffect(() => {
     const updateEditorOptions = () => {
-      const isMobile = window.innerWidth < 540
+      const isMobile = window.innerWidth < 768
+      setIsResizable(!isMobile)
+      setEditorWidth(isMobile ? '100%' : editorWidth)
+
       setEditorOptions({
         minimap: { enabled: !isMobile },
         scrollBeyondLastLine: false,
@@ -159,11 +165,22 @@ function CodeEditor({ language, solution }) {
         editorElement.removeEventListener('wheel', handleEditorWheel)
       }
     }
-  }, [])
+  }, [editorWidth])
+
+  const editorComponent = (
+    <Editor
+      height="100%"
+      language={language}
+      theme="vs-dark"
+      value={solution}
+      onMount={handleEditorDidMount}
+      options={editorOptions}
+    />
+  )
 
   return (
     <div className="flex flex-col h-full">
-      <div className="flex justify-between mb-4">
+      <div className="flex justify-between mb-1">
         <button
           onClick={fetchSolution}
           disabled={loading}
@@ -183,16 +200,22 @@ function CodeEditor({ language, solution }) {
         </button>
       </div>
       <div className="flex-grow">
-        <Editor
-          height="100%"
-          language={language}
-          theme="vs-dark"
-          value={solution}
-          onMount={(editor) => {
-            editorRef.current = editor
-          }}
-          options={editorOptions}
-        />
+        {isResizable ? (
+          <Resizable
+            size={{ width: editorWidth, height: '100%' }}
+            minWidth="300px"
+            maxWidth="100%"
+            enable={{ left: true }}
+            onResizeStop={(e, direction, ref, d) => {
+              setEditorWidth(ref.style.width)
+            }}
+            style={{ border: '2px solid red' }}
+          >
+            {editorComponent}
+          </Resizable>
+        ) : (
+          editorComponent
+        )}
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div className="max-h-[80vh] overflow-y-auto p-6">

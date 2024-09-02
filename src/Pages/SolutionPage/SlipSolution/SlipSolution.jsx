@@ -7,7 +7,8 @@ import QuestionSlipCom from './QuestionSlipCom'
 import Loader from '../../../Components/Loader/Loader'
 
 const SlipSolution = () => {
-  const [width, setWidth] = useState(100) // Initial width in percentage (changed from 40 to 100 for mobile screens)
+  const [width, setWidth] = useState(100) //  changed back to 50% for resizing logic
+
   const panelRef = useRef(null)
   const { subjectId, slipId, questionId } = useParams()
   const [qId, setQId] = useState()
@@ -81,11 +82,12 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="flex flex-col h-auto mx-auto px-4 py-4 min-h-screen mt-4">
+    <div className="flex flex-col h-auto mx-auto px-2  py-2 min-h-screen bg-primary">
       <div className="flex flex-col md:flex-row" ref={panelRef}>
         {/* question slip  */}
+        {/* // */}
         <div
-          className={`flex-shrink-0 ${isLargeScreen ? `w-${width}%` : 'w-full'} md:w-[35%]`}
+          className={`flex-shrink-0 ${isLargeScreen ? `w-[${width}%]` : 'w-full'} md:w-[35%] md:mt-11 border-2 border-red-600`}
           // overflow-y-visible : try this if flex-shrink gives problem
         >
           {loading ? (
@@ -101,9 +103,10 @@ const SlipSolution = () => {
             />
           )}
         </div>
+        {/* //question slip div ends  */}
         {isLargeScreen && (
           <div
-            className="w-1 bg-primary2 cursor-col-resize"
+            className="w-1 cursor-col-resize"
             onMouseDown={handleMouseDown}
           />
         )}
