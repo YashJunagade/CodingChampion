@@ -138,7 +138,48 @@ function CodeEditor({ language, solution }) {
       editorElement.addEventListener('wheel', handleEditorWheel, {
         passive: false,
       })
+      editorElement.addEventListener('touchstart', handleTouchStart, {
+        passive: false,
+      })
+      editorElement.addEventListener('touchmove', handleTouchMove, {
+        passive: false,
+      })
     }
+  }
+
+  // for touch screens. ( fixing the scrolling issue)
+  let touchStartY = 0
+  let touchEndY = 0
+
+  const handleTouchStart = (e) => {
+    touchStartY = e.touches[0].clientY
+  }
+
+  const handleTouchMove = (e) => {
+    touchEndY = e.touches[0].clientY
+    const deltaY = touchStartY - touchEndY
+
+    const editor = editorRef.current
+    if (!editor) return
+
+    const editorContent = editor.getModel()
+    const lineCount = editorContent.getLineCount()
+    const visibleRange = editor.getVisibleRanges()[0]
+
+    const isAtTop = visibleRange.startLineNumber === 1
+    const isAtBottom = visibleRange.endLineNumber === lineCount
+
+    if ((isAtTop && deltaY < 0) || (isAtBottom && deltaY > 0)) {
+      // Allow default scroll behavior when at the top or bottom
+      return
+    }
+
+    // Prevent default touch scroll behavior within the editor
+    e.preventDefault()
+
+    // Manually scroll the editor
+    const scrollTop = editor.getScrollTop()
+    editor.setScrollTop(scrollTop + deltaY)
   }
 
   const handleEditorWheel = (e) => {
@@ -193,6 +234,8 @@ function CodeEditor({ language, solution }) {
       const editorElement = editorRef.current?.getDomNode()
       if (editorElement) {
         editorElement.removeEventListener('wheel', handleEditorWheel)
+        editorElement.removeEventListener('touchstart', handleTouchStart)
+        editorElement.removeEventListener('touchmove', handleTouchMove)
       }
     }
   }, [])
