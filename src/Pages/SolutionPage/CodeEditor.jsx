@@ -2,8 +2,7 @@ import Editor from '@monaco-editor/react'
 import Groq from 'groq-sdk'
 import FormattedText from './FormattedText'
 import Modal from './Modal' // Import the Modal component
-import { useState, useCallback, useRef } from 'react'
-import './CodeEditor.css'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
 
@@ -31,6 +30,13 @@ function CodeEditor({ language, solution }) {
   const [currentKeyIndex, setCurrentKeyIndex] = useState(0) // State to manage the current API key
   const [currentModelIndex, setCurrentModelIndex] = useState(0) // State to manage the current model
   const [loading, setLoading] = useState(false) // State to manage loading status
+
+  // State to manage editor options
+  const [editorOptions, setEditorOptions] = useState({
+    minimap: { enabled: false },
+    scrollBeyondLastLine: false,
+    fontSize: 12,
+  })
 
   const editorRef = useRef(null) // Ref to store the editor instance
 
@@ -94,33 +100,82 @@ function CodeEditor({ language, solution }) {
     }
   }, [])
 
+  useEffect(() => {
+    const updateEditorOptions = () => {
+      if (window.innerWidth < 540) {
+        // for smaller screens :
+        setEditorOptions({
+          minimap: { enabled: false },
+          scrollBeyondLastLine: false,
+          fontSize: 12,
+          wordWrap: 'on',
+          tabSize: 2,
+          automaticLayout: true,
+          scrollbar: {
+            vertical: 'hidden',
+            horizontal: 'hidden',
+          },
+        })
+      } else {
+        // for larger screens
+        setEditorOptions({
+          minimap: { enabled: true },
+          scrollBeyondLastLine: true,
+          fontSize: 16,
+          wordWrap: 'on',
+          lineNumbers: 'on',
+        })
+      }
+    }
+
+    updateEditorOptions()
+    window.addEventListener('resize', updateEditorOptions)
+
+    return () => {
+      window.removeEventListener('resize', updateEditorOptions)
+    }
+  }, [])
+
   return (
-    <>
-      <div className="flex justify-between">
-        <button onClick={fetchSolution} disabled={loading} className="btn">
+    <div className="flex flex-col h-full">
+      <div className="flex justify-between mb-4">
+        <button
+          onClick={fetchSolution}
+          disabled={loading}
+          className={`px-4 py-2 rounded text-white font-semibold ${
+            loading
+              ? 'bg-primary2 cursor-not allowed'
+              : 'bg-black hover:bg-accent'
+          }`}
+        >
           {loading ? 'Wait Magic Is Happing...' : 'Explain Me'}
         </button>
         <button
           onClick={copyToClipboard}
-          className="bg-accent px-4 rounded text-white font-bold hover:bg-black"
+          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
         >
           Copy
         </button>
       </div>
-      <Editor
-        height="100%"
-        width="100%"
-        language={language}
-        theme="vs-dark"
-        value={solution}
-        onMount={(editor) => {
-          editorRef.current = editor
-        }} // Store the editor instance
-      />
+      <div className="flex-grow">
+        <Editor
+          height="100%"
+          language={language}
+          theme="vs-dark"
+          value={solution}
+          onMount={(editor) => {
+            editorRef.current = editor
+          }}
+          // Store the editor instance
+          options={editorOptions}
+        />
+      </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        {result && <FormattedText text={result} />}
+        <div className="max-h-[80vh] overflow-y-auto p-6">
+          {result && <FormattedText text={result} />}
+        </div>
       </Modal>
-    </>
+    </div>
   )
 }
 

@@ -82,7 +82,7 @@ function SideBar() {
   ]
 
   return (
-    <section className="bg-primary2  text-black h-screen w-56 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out">
+    <section className="bg-primary2  text-black h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out">
       <div className="p-4 border-b border-accent ">
         <h2 className="text-xl font-semibold">Profile</h2>
       </div>

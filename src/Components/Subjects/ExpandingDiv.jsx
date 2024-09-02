@@ -49,7 +49,7 @@ function ExpandingDiv({ subjects, title }) {
 
   return (
     <motion.div
-      className="bg-primary w-[94%] mx-auto mt-8 mb-8 px-2 py-10 rounded-custom cursor-pointer hover:border-accent border-2"
+      className="bg-primary w-[94%] mx-auto mt-8 mb-8 px-2 py-2 min-h-40 rounded-custom cursor-pointer hover:border-accent border-2"
       onClick={toggleVisibility}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
@@ -65,7 +65,7 @@ function ExpandingDiv({ subjects, title }) {
           >
             <motion.div
               variants={contentVariants}
-              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-8 px-2 py-2 my-4"
+              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-8 px-2 py-6 sm:py-8 md:py-10 my-4"
             >
               {subjects.map((subject, index) => (
                 <Subject

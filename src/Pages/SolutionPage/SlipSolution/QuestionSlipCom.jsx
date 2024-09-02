@@ -1,22 +1,18 @@
 function QuestionCom({ slipId, questionId, text, marks }) {
   return (
-    <div
-      className="preview-container"
-      style={{
-        maxHeight: '100%',
-        overflowY: 'auto',
-        padding: '10px',
-      }}
-    >
-      <div>Slip No : {slipId}</div>
+    <div className="h-full overflow-y-auto p-4 bg-primary shadow-even-shadow rounded-custom">
+      <div className="text-lg font-semibold mb-2 text-black">
+        Slip No : {slipId}
+      </div>
       <div
+        className="text-base mb-4 text-gray-800"
         dangerouslySetInnerHTML={{
           __html: `Q. ${text}`,
         }}
       />
-      <div>{marks} marks</div>
+      <div className="text-sm font-medium text-secondary">{marks} Marks</div>
     </div>
-  );
+  )
 }
 
-export default QuestionCom;
+export default QuestionCom
