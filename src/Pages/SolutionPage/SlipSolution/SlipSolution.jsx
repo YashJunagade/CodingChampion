@@ -109,7 +109,7 @@ const SlipSolution = () => {
         <div
           className={`overflow-y-auto ${
             isLargeScreen ? `w-${100 - width}%` : 'w-full h-screen mt-6 mb-2'
-          } md:min-w-[20%]`}
+          } md:w-[80%] md:h-screen`}
         >
           <Suspense
             fallback={
