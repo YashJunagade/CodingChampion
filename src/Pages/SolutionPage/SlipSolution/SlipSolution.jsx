@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import CodeEditor from '../CodeEditor'
 import { doc, getDoc } from 'firebase/firestore'
 import QuestionSlipCom from './QuestionSlipCom'
+import Loader from '../../../Components/Loader/Loader'
 
 const SlipSolution = () => {
   const [width, setWidth] = useState(100) // Initial width in percentage (changed from 40 to 100 for mobile screens)
@@ -87,7 +88,7 @@ const SlipSolution = () => {
         >
           {loading ? (
             <div className="flex justify-center items-center h-full">
-              <div className="animate-spin rounded-full h-12 w-12  border-b-2 border-accent"></div>
+              <Loader />
             </div>
           ) : (
             <QuestionSlipCom
@@ -114,7 +115,7 @@ const SlipSolution = () => {
           <Suspense
             fallback={
               <div className="flex justify-center items-center h-full">
-                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-accent"></div>
+                <Loader />
               </div>
             }
           >
