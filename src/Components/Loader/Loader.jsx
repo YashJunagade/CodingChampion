@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Loader = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapper className="flex items-center justify-center mt-8">
       <div className="loader" />
     </StyledWrapper>
   )

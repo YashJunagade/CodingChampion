@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Navbar from '../../src/Components/Navbar/Navbar'
+import Loader from '../../src/Components/Loader/Loader'
 import SideBar from '../../src/Components/SideBar/SideBar'
 import {
   collection,
@@ -37,7 +37,7 @@ const SlipList = () => {
   }, [subjectId])
 
   if (!subject) {
-    return <div>Loading...</div>
+    return <Loader />
   }
 
   const filteredAndSortedSlips = subject.slips
@@ -64,7 +64,6 @@ const SlipList = () => {
 
   return (
     <div className="slip-list-container">
-      {/* <Navbar /> */}
       <div className="slip-list-main-section">
         <SideBar />
         <div className="content-container">

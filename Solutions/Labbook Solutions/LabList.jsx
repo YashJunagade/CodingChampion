@@ -30,6 +30,10 @@ const SlipList = () => {
     fetchSlipData()
   }, [subjectId])
 
+  if (!subject) {
+    return <Loader />
+  }
+
   function setName(setNo) {
     let setName = ''
     if (setNo === 1) {
@@ -46,7 +50,6 @@ const SlipList = () => {
 
   return (
     <div className="slip-list-container">
-      {/* <Navbar /> */}
       <div className="slip-list-main-section">
         <SideBar />
         <div className="content-container">

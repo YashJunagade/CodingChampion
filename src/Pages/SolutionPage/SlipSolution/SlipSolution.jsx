@@ -62,7 +62,9 @@ const SlipSolution = () => {
     document.addEventListener('mouseup', handleMouseUp)
   }
 
+  // only for smaller screens.
   const handleMouseMove = (e) => {
+    if (!isLargeScreen) return
     const panelLeft = panelRef.current.getBoundingClientRect().left
     const newWidth =
       ((e.clientX - panelLeft) / panelRef.current.offsetWidth) * 100
@@ -109,7 +111,7 @@ const SlipSolution = () => {
         {/* // code editor div */}
         <div
           className={`overflow-y-auto ${
-            isLargeScreen ? `w-${100 - width}%` : 'w-full h-screen mt-6 mb-2'
+            isLargeScreen ? `w-[${100 - width}]%` : 'w-full h-screen mt-6 mb-2'
           } md:w-[80%] md:h-screen`}
         >
           <Suspense
