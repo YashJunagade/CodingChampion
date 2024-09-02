@@ -33,7 +33,7 @@ function CodeEditor({ language, solution }) {
   const [loading, setLoading] = useState(false)
   const [editorOptions, setEditorOptions] = useState({})
   const [isResizable, setIsResizable] = useState(window.innerWidth > 768)
-  const [editorWidth, setEditorWidth] = useState('600px')
+  const [editorWidth, setEditorWidth] = useState('100%')
   const editorRef = useRef(null)
 
   const fetchSolution = async () => {
@@ -141,7 +141,7 @@ function CodeEditor({ language, solution }) {
       setEditorOptions({
         minimap: { enabled: !isMobile },
         scrollBeyondLastLine: false,
-        fontSize: isMobile ? 12 : 16,
+        fontSize: isMobile ? 12 : 15,
         wordWrap: 'on',
         lineNumbers: isMobile ? 'off' : 'on',
         tabSize: 2,
@@ -203,13 +203,12 @@ function CodeEditor({ language, solution }) {
         {isResizable ? (
           <Resizable
             size={{ width: editorWidth, height: '100%' }}
-            minWidth="300px"
+            minWidth="20%"
             maxWidth="100%"
-            enable={{ left: true }}
+            enable={{ right: true }}
             onResizeStop={(e, direction, ref, d) => {
               setEditorWidth(ref.style.width)
             }}
-            style={{ border: '2px solid red' }}
           >
             {editorComponent}
           </Resizable>

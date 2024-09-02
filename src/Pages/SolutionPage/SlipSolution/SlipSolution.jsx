@@ -5,6 +5,7 @@ import CodeEditor from '../CodeEditor'
 import { doc, getDoc } from 'firebase/firestore'
 import QuestionSlipCom from './QuestionSlipCom'
 import Loader from '../../../Components/Loader/Loader'
+import { Resizable } from 're-resizable'
 
 const SlipSolution = () => {
   const [width, setWidth] = useState(100) //  changed back to 50% for resizing logic
@@ -18,6 +19,7 @@ const SlipSolution = () => {
   const [language, setLanguage] = useState()
   const [loading, setLoading] = useState(true)
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
+  const [questionSlipWidth, setQuestionSlipWidth] = useState('35%')
 
   useEffect(() => {
     const fetchQuestion = async () => {
@@ -42,17 +44,15 @@ const SlipSolution = () => {
     }
 
     fetchQuestion()
+
+    // function to handle resizing
   }, [subjectId, slipId, questionId])
 
-  // function to handle resizing
-  const handleResize = () => {
-    const newIsLargeScreen = window.innerWidth > 768
-    setIsLargeScreen(newIsLargeScreen)
-    setWidth(newIsLargeScreen ? 40 : 100)
-  }
-
   useEffect(() => {
-    handleResize()
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 768)
+    }
+
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
@@ -83,30 +83,55 @@ const SlipSolution = () => {
 
   return (
     <div className="flex flex-col h-auto mx-auto px-2  py-2 min-h-screen bg-primary">
-      <div className="flex flex-col md:flex-row" ref={panelRef}>
-        {/* question slip  */}
+      <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
+        {/* question slip  div */}
         {/* // */}
-        <div
-          className={`flex-shrink-0 ${isLargeScreen ? `w-[${width}%]` : 'w-full'} md:w-[35%] md:mt-11 border-2 border-red-600`}
-          // overflow-y-visible : try this if flex-shrink gives problem
-        >
-          {loading ? (
-            <div className="flex justify-center items-center h-full">
-              <Loader />
+        {isLargeScreen ? (
+          <Resizable
+            size={{ width: questionSlipWidth, height: 'auto' }}
+            minWidth="20%"
+            maxWidth="70%"
+            enable={{ right: true }}
+            onResizeStop={(e, direction, ref, d) => {
+              setQuestionSlipWidth(ref.style.width)
+            }}
+          >
+            <div className="h-full overflow-y-auto">
+              {loading ? (
+                <div className="flex justify-center items-center h-full">
+                  <Loader />
+                </div>
+              ) : (
+                <QuestionSlipCom
+                  slipId={slipId}
+                  questionId={qId}
+                  text={text}
+                  marks={marks}
+                />
+              )}
             </div>
-          ) : (
-            <QuestionSlipCom
-              slipId={slipId}
-              questionId={qId}
-              text={text}
-              marks={marks}
-            />
-          )}
-        </div>
+          </Resizable>
+        ) : (
+          <div className="w-full md:w-[35%] md:mt-11">
+            {loading ? (
+              <div classname="flex justify-center items-center h-full">
+                <Loader />
+              </div>
+            ) : (
+              <QuestionSlipCom
+                slipId={slipId}
+                questionId={qId}
+                text={text}
+                marks={marks}
+              />
+            )}
+          </div>
+        )}
+
         {/* //question slip div ends  */}
         {isLargeScreen && (
           <div
-            className="w-1 cursor-col-resize"
+            className="w-1 cursor-col-resize bg-accent"
             onMouseDown={handleMouseDown}
           />
         )}
@@ -115,7 +140,7 @@ const SlipSolution = () => {
         <div
           className={`overflow-y-auto ${
             isLargeScreen ? `w-[${100 - width}]%` : 'w-full h-screen mt-6 mb-2'
-          } md:w-[80%] md:h-screen`}
+          } md:w-[80%] md:h-screen md:flex-grow`}
         >
           <Suspense
             fallback={
