@@ -93,42 +93,6 @@ function CodeEditor({ language, solution }) {
     }
   }, [])
 
-  useEffect(() => {
-    const updateEditorOptions = () => {
-      if (window.innerWidth < 540) {
-        // for smaller screens :
-        setEditorOptions({
-          minimap: { enabled: false },
-          scrollBeyondLastLine: false,
-          fontSize: 12,
-          wordWrap: 'on',
-          tabSize: 2,
-          automaticLayout: true,
-          scrollbar: {
-            vertical: 'hidden',
-            horizontal: 'hidden',
-          },
-        })
-      } else {
-        // for larger screens
-        setEditorOptions({
-          minimap: { enabled: true },
-          scrollBeyondLastLine: true,
-          fontSize: 16,
-          wordWrap: 'on',
-          lineNumbers: 'on',
-        })
-      }
-    }
-
-    updateEditorOptions()
-    window.addEventListener('resize', updateEditorOptions)
-
-    return () => {
-      window.removeEventListener('resize', updateEditorOptions)
-    }
-  }, [])
-
   // this code will fix the scrolling issue:
   const handleEditorDidMount = (editor, monaco) => {
     editorRef.current = editor

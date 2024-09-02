@@ -82,7 +82,7 @@ const SlipSolution = () => {
       <div className="flex flex-col md:flex-row" ref={panelRef}>
         {/* question slip  */}
         <div
-          className={`flex-shrink-0 ${isLargeScreen ? `w-${width}%` : 'w-full'} md:w-[35%] `}
+          className={`flex-shrink-0 ${isLargeScreen ? `w-${width}%` : 'w-full'} md:w-[35%]`}
           // overflow-y-visible : try this if flex-shrink gives problem
         >
           {loading ? (
