@@ -18,8 +18,3 @@ to upload data to firebase firestore :
 //put this into slipList above return
 console.log("Starting data upload...");
 uploadData().then(() => console.log("Data upload complete"));
-
-//config with Prettier
-npm install --save-dev prettier
-npx husky-init; npm install
-npm install --save-dev lint-staged
