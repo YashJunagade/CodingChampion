@@ -217,7 +217,7 @@ function CodeEditor({ language, solution }) {
         )}
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className="max-h-[80vh] overflow-y-auto p-6">
+        <div className="max-h-[80vh] p-6">
           {result && <FormattedText text={result} />}
         </div>
       </Modal>
