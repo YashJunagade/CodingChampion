@@ -1,16 +1,16 @@
-import Navbar from "../../Components/Navbar/Navbar"
-import SideBar from "../../Components/SideBar/SideBar"
-import Menu from "../../Components/Subjects/Menu"
+import Navbar from '../../Components/Navbar/Navbar'
+import SideBar from '../../Components/SideBar/SideBar'
+import Menu from '../../Components/Subjects/Menu'
 
 function Labbook() {
   return (
-    <section className=''>
+    <section className="">
       {/* <Navbar></Navbar> */}
-      <div className='flex'>
-        <div className='hidden md:inline relative'>
+      <div className="flex">
+        <div className="hidden md:inline relative">
           <SideBar></SideBar>
         </div>
-        <div className='w-full'>
+        <div className="w-full">
           <Menu></Menu>
         </div>
       </div>

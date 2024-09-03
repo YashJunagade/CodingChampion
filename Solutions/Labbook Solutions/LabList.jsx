@@ -72,11 +72,11 @@ const LabList = () => {
         <h1 className="text-3xl; font-bold mb-6 text-black">
           {subject.subject} Labbook
         </h1>
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-center ">
           <select
             value={filterAssignment}
             onChange={(e) => setFilterAssignment(e.target.value)}
-            className="w-full sm:w-48 p-2 mb-4 sm:mb-0 rounded-md border border-primary2"
+            className="w-full sm:w-48 p-2 mb-2 sm:mb-0 rounded-md border border-primary2"
           >
             <option value="">All Assignments</option>
             {uniqueAssignments.map((assignment, index) => (
@@ -87,7 +87,7 @@ const LabList = () => {
           </select>
           <button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="w-full sm:w-auto px-4 py-2 bg-black text-white rounded hover:bg-accent transition-colors duration-300"
+            className="w-full sm:w-auto px-4 py-2 bg-black text-white rounded hover:bg-accent transition-colors duration-300 mb-2"
           >
             Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
           </button>

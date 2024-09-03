@@ -1,11 +1,11 @@
-import React, { Suspense, useEffect, useRef, useState } from "react"
-import { db } from "../../../config/firebase"
-import { useParams } from "react-router-dom"
-import CodeEditor from "../CodeEditor"
-import { doc, getDoc } from "firebase/firestore"
-import QuestionSlipCom from "./QuestionSlipCom"
-import Loader from "../../../Components/Loader/Loader"
-import { Resizable } from "re-resizable"
+import React, { Suspense, useEffect, useRef, useState } from 'react'
+import { db } from '../../../config/firebase'
+import { useParams } from 'react-router-dom'
+import CodeEditor from '../CodeEditor'
+import { doc, getDoc } from 'firebase/firestore'
+import QuestionSlipCom from './QuestionSlipCom'
+import Loader from '../../../Components/Loader/Loader'
+import { Resizable } from 're-resizable'
 
 const SlipSolution = () => {
   const [width, setWidth] = useState(100) //  changed back to 50% for resizing logic
@@ -19,12 +19,12 @@ const SlipSolution = () => {
   const [language, setLanguage] = useState()
   const [loading, setLoading] = useState(true)
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
-  const [questionSlipWidth, setQuestionSlipWidth] = useState("35%")
+  const [questionSlipWidth, setQuestionSlipWidth] = useState('35%')
 
   useEffect(() => {
     const fetchQuestion = async () => {
       setLoading(true)
-      const subjectDoc = await getDoc(doc(db, "slipSubjects", subjectId))
+      const subjectDoc = await getDoc(doc(db, 'slipSubjects', subjectId))
       if (subjectDoc.exists()) {
         setLanguage(subjectDoc.data().language)
         const question =
@@ -35,10 +35,10 @@ const SlipSolution = () => {
         setText(question.text)
         setSolution(
           question.sol ??
-            "A solution for this coding question is not available at the moment.\n\t Our team is actively working on it.\n\t\tPlease check back later"
+            'A solution for this coding question is not available at the moment.\n\t Our team is actively working on it.\n\t\tPlease check back later'
         )
       } else {
-        console.log("No such document!")
+        console.log('No such document!')
       }
       setLoading(false)
     }
@@ -53,38 +53,38 @@ const SlipSolution = () => {
       setIsLargeScreen(window.innerWidth > 768)
     }
 
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
 
   const handleMouseDown = (e) => {
     e.preventDefault()
-    document.addEventListener("mousemove", handleMouseMove)
-    document.addEventListener("mouseup", handleMouseUp)
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
   }
 
   const handleMouseUp = () => {
-    document.removeEventListener("mouseup", handleMouseUp)
+    document.removeEventListener('mouseup', handleMouseUp)
   }
 
   return (
-    <div className='flex flex-col h-auto mx-auto px-2  py-2 min-h-screen bg-primary'>
-      <div className='flex flex-col md:flex-row w-full h-full' ref={panelRef}>
+    <div className="flex flex-col h-auto mx-auto px-2  py-2 min-h-screen bg-primary">
+      <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
         {/* question slip  div */}
         {/* // */}
         {isLargeScreen ? (
           <Resizable
-            size={{ width: questionSlipWidth, height: "auto" }}
-            minWidth='20%'
-            maxWidth='70%'
+            size={{ width: questionSlipWidth, height: 'auto' }}
+            minWidth="20%"
+            maxWidth="70%"
             enable={{ right: true }}
             onResizeStop={(e, direction, ref, d) => {
               setQuestionSlipWidth(ref.style.width)
             }}
           >
-            <div className='h-full overflow-y-auto'>
+            <div className="h-full overflow-y-auto">
               {loading ? (
-                <div className='flex justify-center items-center h-full'>
+                <div className="flex justify-center items-center h-full">
                   <Loader />
                 </div>
               ) : (
@@ -98,9 +98,9 @@ const SlipSolution = () => {
             </div>
           </Resizable>
         ) : (
-          <div className='w-full md:w-[35%] md:mt-11'>
+          <div className="w-full md:w-[35%] md:mt-11">
             {loading ? (
-              <div classname='flex justify-center items-center h-full'>
+              <div classname="flex justify-center items-center h-full">
                 <Loader />
               </div>
             ) : (
@@ -118,7 +118,7 @@ const SlipSolution = () => {
 
         {isLargeScreen && (
           <div
-            className='w-1 cursor-col-resize bg-accent'
+            className="w-1 cursor-col-resize bg-accent"
             onMouseDown={handleMouseDown}
           />
         )}
@@ -126,12 +126,12 @@ const SlipSolution = () => {
         {/* // code editor div */}
         <div
           className={`overflow-y-auto ${
-            isLargeScreen ? `w-[${100 - width}]%` : "w-full h-screen mt-6 mb-2"
+            isLargeScreen ? `w-[${100 - width}]%` : 'w-full h-screen mt-6 mb-2'
           } md:w-[80%] md:h-screen md:flex-grow`}
         >
           <Suspense
             fallback={
-              <div className='flex justify-center items-center h-full'>
+              <div className="flex justify-center items-center h-full">
                 <Loader />
               </div>
             }

@@ -74,11 +74,11 @@ const SlipList = () => {
         <h1 className="text-3xl font-bold mb-6 text-black">
           {subject.subject} Slips
         </h1>
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className="w-full sm:w-48 p-2 mb-4 sm:mb-0 rounded-md border border-primary2"
+            className="w-full md:w-48 p-2 md:mb-0 rounded-md border border-black mb-2"
           >
             <option value="">All Marks</option>
             {uniqueMarks.map((mark, index) => (
@@ -89,7 +89,7 @@ const SlipList = () => {
           </select>
           <button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="w-full sm:w-auto px-4 py-2 bg-black text-white rounded hover:bg-accent transition-colors duration-300"
+            className="w-full md:w-auto px-4 py-2 bg-black text-white rounded hover:bg-accent transition-colors duration-300 mb-2"
           >
             Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
           </button>
@@ -123,15 +123,18 @@ const SlipList = () => {
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
                       className="block"
                     >
-                      <div
-                        className="text-black mb-2"
-                        dangerouslySetInnerHTML={{
-                          __html: `Q. ${question.text}`,
-                        }}
-                      />
-                      <span className="inline-block px-2 py-1 text-sm font-semibold text-white bg-accent rounded-full">
-                        {question.marks} Marks
-                      </span>
+                      {/* add flex when the md screen issue gets fixed  */}
+                      <div className="">
+                        <div
+                          className="text-black mb-2"
+                          dangerouslySetInnerHTML={{
+                            __html: `Q. ${question.text}`,
+                          }}
+                        />
+                        <span className="inline-block px-2 py-1 text-sm font-semibold text-white bg-accent rounded-full">
+                          {question.marks} Marks
+                        </span>
+                      </div>
                     </Link>
                   </li>
                 ))}
