@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
 const Loader = () => {
   return (
-    <StyledWrapper className="flex items-center justify-center mt-8">
-      <div className="loader" />
+    <StyledWrapper className='flex items-center justify-center mt-8'>
+      <div className='loader' />
     </StyledWrapper>
   )
 }
@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
   }
 
   .loader::before {
-    content: 'Coding...';
+    content: "Coding...";
     line-height: 1em;
     color: #0000;
     background: inherit;

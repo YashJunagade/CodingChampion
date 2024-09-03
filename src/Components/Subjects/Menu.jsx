@@ -1,104 +1,104 @@
-import ExpandingDiv from './ExpandingDiv'
+import ExpandingDiv from "./ExpandingDiv"
 
 function Menu() {
   const fySubjects = [
     {
-      sName: 'C Programming',
+      sName: "C Programming",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/c_tt1awa.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/c_tt1awa.png",
     },
     {
-      sName: 'DBMS',
+      sName: "DBMS",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/dbms_ukdkrp.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/dbms_ukdkrp.png",
     },
     {
-      sName: 'Web Technology',
+      sName: "Web Technology",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/webTechnology_swhuko.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/webTechnology_swhuko.png",
     },
     {
-      sName: 'RDBMS',
+      sName: "RDBMS",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250650/rdbms_yjo2mj.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250650/rdbms_yjo2mj.png",
     },
   ]
   const sySubjects = [
     {
-      sName: 'Data Structure',
+      sName: "Data Structure",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/dsa_osrfzs.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/dsa_osrfzs.png",
     },
     {
-      sName: 'Big Data',
+      sName: "Big Data",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/bigdata_ayn9dr.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/bigdata_ayn9dr.png",
     },
     {
-      sName: 'Php',
+      sName: "Php",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/php_zueeqn.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/php_zueeqn.png",
     },
     {
-      sName: 'CPP',
+      sName: "CPP",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/cpp_o1qad6.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/cpp_o1qad6.png",
     },
     {
-      sName: 'Angular JS',
+      sName: "Angular JS",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/angularjs_irsaij.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/angularjs_irsaij.png",
     },
     {
-      sName: 'Advance Php',
+      sName: "Advance Php",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/php_zueeqn.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/php_zueeqn.png",
     },
     {
-      sName: 'Node JS',
+      sName: "Node JS",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/nodejs_prhzw5.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/nodejs_prhzw5.png",
     },
   ]
   const tySubjects = [
     {
-      sName: 'Core Java',
+      sName: "Core Java",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/java_tkndrw.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/java_tkndrw.png",
     },
     {
-      sName: 'Python',
+      sName: "Python",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250360/python_itmjxz.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250360/python_itmjxz.png",
     },
     {
-      sName: 'MongoDB',
+      sName: "MongoDB",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/mongodb_kkewlx.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/mongodb_kkewlx.png",
     },
     {
-      sName: 'Advance Java',
+      sName: "Advance Java",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/java_tkndrw.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/java_tkndrw.png",
     },
     {
-      sName: 'Android Programming',
+      sName: "Android Programming",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/androidprogramming_o7tafk.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250358/androidprogramming_o7tafk.png",
     },
     {
-      sName: 'Dot Net Framework',
+      sName: "Dot Net Framework",
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/dotnetframework_gavryb.png',
+        "https://res.cloudinary.com/yashjunagade/image/upload/v1725250359/dotnetframework_gavryb.png",
     },
   ]
 
   return (
     <>
       <div>
-        <ExpandingDiv subjects={fySubjects} title="FY Subjects" />
-        <ExpandingDiv subjects={sySubjects} title="SY Subjects" />
-        <ExpandingDiv subjects={tySubjects} title="TY Subjects" />
+        <ExpandingDiv subjects={fySubjects} title='FY Subjects' />
+        <ExpandingDiv subjects={sySubjects} title='SY Subjects' />
+        <ExpandingDiv subjects={tySubjects} title='TY Subjects' />
       </div>
     </>
   )

@@ -1,27 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react'
-import './Labsolution.css'
-import Navbar from '../../../Components/Navbar/Navbar'
-import QuestionLabCom from './QuestionLabCom'
-import CodeEditor from '../CodeEditor'
-import { useParams } from 'react-router-dom'
-import { doc, getDoc } from 'firebase/firestore'
-import { db } from '../../../config/firebase'
+import React, { useEffect, useRef, useState } from "react"
+import "./Labsolution.css"
+import Navbar from "../../../Components/Navbar/Navbar"
+import QuestionLabCom from "./QuestionLabCom"
+import CodeEditor from "../CodeEditor"
+import { useParams } from "react-router-dom"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../../config/firebase"
 
 function LabSolution() {
   const panelRef = useRef(null)
   const [width, setWidth] = useState(40)
   const { subjectId, assignment, set, question } = useParams()
-  const [language, setLanguage] = useState('')
-  const [assignmentNo, setAssignmentNo] = useState('')
-  const [setName, setSetName] = useState('')
-  const [questionNo, setQuestionNo] = useState('')
-  const [questionText, setQuestionText] = useState('')
-  const [solution, setSolution] = useState('')
+  const [language, setLanguage] = useState("")
+  const [assignmentNo, setAssignmentNo] = useState("")
+  const [setName, setSetName] = useState("")
+  const [questionNo, setQuestionNo] = useState("")
+  const [questionText, setQuestionText] = useState("")
+  const [solution, setSolution] = useState("")
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const Labdata = await getDoc(doc(db, 'labSubjects', subjectId))
+        const Labdata = await getDoc(doc(db, "labSubjects", subjectId))
         if (Labdata.exists()) {
           const data = Labdata.data()
 
@@ -36,13 +36,13 @@ function LabSolution() {
           setQuestionText(qData.questionText)
           setSolution(
             qData.solution ??
-              'Currently there is no solution for this Question\n\t Our team is working on it \n\t\t try after some time...'
+              "Currently there is no solution for this Question\n\t Our team is working on it \n\t\t try after some time..."
           )
         } else {
-          console.log('no question found')
+          console.log("no question found")
         }
       } catch (error) {
-        console.log('error fetching data : ', error)
+        console.log("error fetching data : ", error)
       }
     }
 
@@ -51,8 +51,8 @@ function LabSolution() {
 
   const handleMouseDown = (e) => {
     e.preventDefault()
-    document.addEventListener('mousemove', handleMouseMove)
-    document.addEventListener('mouseup', handleMouseUp)
+    document.addEventListener("mousemove", handleMouseMove)
+    document.addEventListener("mouseup", handleMouseUp)
   }
 
   const handleMouseMove = (e) => {
@@ -67,15 +67,15 @@ function LabSolution() {
   }
 
   const handleMouseUp = () => {
-    document.removeEventListener('mousemove', handleMouseMove)
-    document.removeEventListener('mouseup', handleMouseUp)
+    document.removeEventListener("mousemove", handleMouseMove)
+    document.removeEventListener("mouseup", handleMouseUp)
   }
 
   return (
-    <div className="container">
+    <div className='container'>
       {/* <Navbar /> */}
-      <div className="codeEditor" ref={panelRef}>
-        <div className="panel" style={{ width: `${width}%` }}>
+      <div className='codeEditor' ref={panelRef}>
+        <div className='panel' style={{ width: `${width}%` }}>
           <QuestionLabCom
             assignmentNo={assignmentNo}
             setName={setName}
@@ -83,9 +83,9 @@ function LabSolution() {
             questionText={questionText}
           />
         </div>
-        <div className="resizer" onMouseDown={handleMouseDown} />
+        <div className='resizer' onMouseDown={handleMouseDown} />
         <div
-          className="panel"
+          className='panel'
           style={{ width: `calc(100% - ${width}% - 10px)` }}
         >
           <CodeEditor language={language} solution={solution} />

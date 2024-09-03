@@ -1,7 +1,7 @@
-import { useState } from 'react'
-import Subject from './Subject'
-import { useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from "react"
+import Subject from "./Subject"
+import { useLocation } from "react-router-dom"
+import { motion, AnimatePresence } from "framer-motion"
 
 function ExpandingDiv({ subjects, title }) {
   const [showSubjects, setShowSubjects] = useState(false)
@@ -11,14 +11,14 @@ function ExpandingDiv({ subjects, title }) {
     setShowSubjects(!showSubjects) // showing the subjects after clicked.
   }
 
-  const isLabbokRoute = location.pathname.includes('/labbook')
+  const isLabbokRoute = location.pathname.includes("/labbook")
 
   // custom motion container Varients for smooth animations :
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
     visible: {
       opacity: 1,
-      height: 'auto',
+      height: "auto",
       transition: {
         duration: 0.4,
         ease: [0.04, 0.62, 0.23, 0.98],
@@ -49,7 +49,7 @@ function ExpandingDiv({ subjects, title }) {
 
   return (
     <motion.div
-      className="bg-primary w-[94%] mx-auto mt-8 mb-8 px-2 py-2 min-h-40 rounded-custom cursor-pointer hover:border-accent border-2"
+      className='bg-primary w-[94%] mx-auto mt-8 mb-8 px-2 py-2 min-h-40 rounded-custom cursor-pointer hover:border-accent border-2'
       onClick={toggleVisibility}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
@@ -58,19 +58,19 @@ function ExpandingDiv({ subjects, title }) {
         {showSubjects && (
           <motion.div
             variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            className="overflow-hidden"
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+            className='overflow-hidden'
           >
             <motion.div
               variants={contentVariants}
-              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-8 px-2 py-6 sm:py-8 md:py-10 my-4"
+              className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-8 px-2 py-6 sm:py-8 md:py-10 my-4'
             >
               {subjects.map((subject, index) => (
                 <Subject
                   key={index}
-                  subRoute={`/${subject.sName}/${isLabbokRoute ? 'labList' : 'slipList'}`}
+                  subRoute={`/${subject.sName}/${isLabbokRoute ? "labList" : "slipList"}`}
                   subName={subject.sName}
                   imgLink={subject.imgLink}
                 />
@@ -81,12 +81,12 @@ function ExpandingDiv({ subjects, title }) {
       </AnimatePresence>
       {!showSubjects && (
         <motion.div
-          className="text-center"
+          className='text-center'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          {title || 'Show Subjects'}
+          {title || "Show Subjects"}
         </motion.div>
       )}
     </motion.div>
