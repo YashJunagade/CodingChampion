@@ -1,34 +1,32 @@
 function QuestionCom({ assignmentNo, setName, questionNo, questionText }) {
   function findName(setNo) {
-    let setname = ""
+    let setname = ''
     if (setNo === 1) {
-      setname = "A"
+      setname = 'A'
     } else if (setNo === 2) {
-      setname = "B"
+      setname = 'B'
     } else if (setNo === 3) {
-      setname = "C"
+      setname = 'C'
     }
 
     return setname
   }
 
   return (
-    <div
-      className='preview-container'
-      style={{
-        maxHeight: "100%",
-        overflowY: "auto",
-        padding: "10px",
-      }}
-    >
-      <div>Assignment No: {assignmentNo || "N/A"}</div>
-      <div>Set: {findName(setName) || "N/A"}</div>
+    <div className="h-full overflow-y-auto p-4 bg-[#1e1e1e]">
+      <div className="text-lg font-semibold mb-2 text-accent">
+        Assignment No: {assignmentNo || 'N/A'}
+      </div>
+      <div className="text-base mb-2 text-primary">
+        Set: {findName(setName) || 'N/A'}
+      </div>
       <div
+        className="text-base mb-4 text-primary"
         dangerouslySetInnerHTML={{
           __html:
             questionNo && questionText
               ? `Q ${questionNo}. ${questionText}`
-              : "Question not available",
+              : 'Question not available',
         }}
       />
     </div>
