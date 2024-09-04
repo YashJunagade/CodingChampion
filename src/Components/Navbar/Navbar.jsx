@@ -14,16 +14,16 @@ const ProfileModal = React.memo(({ userName, onLogout }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.2 }}
-      className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-50 hover:shadow-sm hover:shadow-accent"
+      className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-[9999] hover:shadow-sm hover:shadow-accent"
     >
-      <div className="p-4">
+      <div className="p-4 z-50">
         <p className="font-semibold">Hi, {userName}!</p>
       </div>
       <div className="border-t border-gray-200"></div>
       <div className="p-4">
         <Link to="/profile">
           <motion.button
-            className="block w-full text-left px-4 py-2 hover:bg-accent rounded-md"
+            className="block w-full text-left px-4 py-2 hover:bg-accent rounded-md z-50"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -32,7 +32,7 @@ const ProfileModal = React.memo(({ userName, onLogout }) => {
         </Link>
         <motion.button
           onClick={onLogout}
-          className="block w-full text-left px-4 py-2 hover:bg-accent rounded-md"
+          className="block w-full text-left px-4 py-2 hover:bg-accent rounded-md z-50"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -109,7 +109,7 @@ const Navbar = React.memo(() => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full h-14 md:h-16 lg:h-18 bg-primary2 flex justify-between items-center px-4 md:px-6"
+      className="w-full h-14 md:h-16 lg:h-18 bg-primary2 flex justify-between items-center px-4 md:px-6 relative z-[9998]"
     >
       <div>
         <img src="" alt="logo" />
