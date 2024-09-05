@@ -57,18 +57,21 @@ const underlineVariants = {
 function Home() {
   return (
     <>
-      <div className="pb-20 max-w-[1400px] mx-auto">
+      <div className="pb-24 md:px-8 max-w-[1200px] mx-auto">
         <motion.h1
-          className="text-xl font-bold text-accent text-center py-10"
+          className="text-xl font-bold text-accent text-center pt-4 pb-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.span className="text-3xl block" variants={itemVariants}>
+          <motion.span
+            className="text-2xl sm:text-3xl  block"
+            variants={itemVariants}
+          >
             Crack Every Slip, Master Every Lab:
           </motion.span>
           <motion.div
-            className="text-2xl mt-2 relative inline-block"
+            className="text-xl sm:text-2xl mt-2 relative inline-block"
             variants={itemVariants}
           >
             <motion.span variants={itemVariants}>Become a </motion.span>
@@ -88,7 +91,7 @@ function Home() {
             />
           </motion.div>
         </motion.h1>
-        <div className="flex flex-col gap-x-5 gap-y-10 sm:grid md:grid-cols-2">
+        <div className="flex flex-col sm:grid md:grid-cols-2 gap-y-8 lg:gap-y-12">
           <FeaturesContainer
             featureTitle="Practical Slips"
             featureDescription="FY, SY and TY BBA(C.A.) practical slips with solutions"

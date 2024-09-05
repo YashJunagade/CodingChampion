@@ -12,8 +12,19 @@ export default {
         accent: '#f51524',
         accentInverse: '#0aeadb',
         // light mode gradint
-        lgrad1: '#E2E2E2',
-        lgrad2: '#C9D6FF',
+
+        //option1
+        lgrad1: ' #D7E1EC',
+        lgrad2: '#FFFFFF',
+
+        // try more:
+        //Option2
+        // lgrad1: '#E2E2E2',
+        // lgrad2: '#C9D6FF',
+
+        //Option3:
+        // lgrad1: ' #EDF1F4',
+        // lgrad2: '#C3CBDC',
       },
       boxShadow: {
         'even-shadow': '0 0 8px rgba(0, 0, 0, 0.5)', // for even shadows on all sides of the box

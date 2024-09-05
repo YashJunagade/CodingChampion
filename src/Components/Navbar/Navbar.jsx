@@ -109,7 +109,7 @@ const Navbar = React.memo(() => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full h-14 md:h-16 lg:h-18 bg-transparent flex justify-between items-center px-4 md:px-6 relative z-[9998]"
+      className="w-full h-14 md:h-16 bg-transparent flex justify-between items-center px-4 md:px-6 relative z-[9998]"
     >
       <div>
         <img src="" alt="logo" />
@@ -129,55 +129,57 @@ const Navbar = React.memo(() => {
       </motion.div>
 
       <div className="flex justify-between items-center relative ">
-        {isLoggedIn ? (
-          <motion.div
-            className="h-10 w-10 rounded-full relative cursor-pointer border-2 border-white"
-            onClick={handleProfileClick}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            {isImageLoading && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="absolute inset-0 flex items-center justify-center"
-              >
-                <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
-              </motion.div>
-            )}
-            <motion.img
-              key={profilePicUrl} // Add this line to force re-render when URL changes
-              initial={{ opacity: 0 }}
-              animate={{ opacity: isImageLoading ? 0 : 1 }}
-              transition={{ duration: 0.3 }}
-              src={profilePicUrl}
-              alt="Profile"
-              className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
-              onLoad={handleImageLoad}
-            />
-            <AnimatePresence>
-              {isModalOpen && (
-                <div ref={modalRef}>
-                  <ProfileModal
-                    userName={userDetails?.userName || 'User'}
-                    onLogout={handleLogout}
-                  />
-                </div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        ) : (
-          <Link to="/login">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200"
+        <div className="w-[100px] h-10 flex justify-end items-center">
+          {isLoggedIn ? (
+            <motion.div
+              className="h-10 w-10 rounded-full relative cursor-pointer border-2 border-white"
+              onClick={handleProfileClick}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
-              Login
-            </motion.button>
-          </Link>
-        )}
+              {isImageLoading && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute inset-0 flex items-center justify-center"
+                >
+                  <div className="h-10 w-10 bg-gray-300 rounded-full animate-pulse"></div>
+                </motion.div>
+              )}
+              <motion.img
+                key={profilePicUrl} // Add this line to force re-render when URL changes
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isImageLoading ? 0 : 1 }}
+                transition={{ duration: 0.3 }}
+                src={profilePicUrl}
+                alt="Profile"
+                className={`${isImageLoading ? 'hidden' : 'block'} h-full w-full rounded-full`}
+                onLoad={handleImageLoad}
+              />
+              <AnimatePresence>
+                {isModalOpen && (
+                  <div ref={modalRef}>
+                    <ProfileModal
+                      userName={userDetails?.userName || 'User'}
+                      onLogout={handleLogout}
+                    />
+                  </div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ) : (
+            <Link to="/login">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200"
+              >
+                Login
+              </motion.button>
+            </Link>
+          )}
+        </div>
       </div>
     </motion.nav>
   )
