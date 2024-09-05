@@ -1,8 +1,8 @@
 import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
 import React from 'react'
-import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect, useCallback } from 'react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,6 +28,20 @@ const itemVariants = {
   },
 }
 
+const lastLineVarient = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+      delay: 1, // delay for last line
+    },
+  },
+}
+
 const wordVariants = {
   hidden: { scale: 0, opacity: 0 },
   visible: (i) => ({
@@ -37,7 +51,7 @@ const wordVariants = {
       type: 'spring',
       stiffness: 100,
       damping: 10,
-      delay: i * 0.1,
+      delay: 1.2,
     },
   }),
 }
@@ -57,15 +71,122 @@ const underlineVariants = {
 
 function Home() {
   const [isLargeScreen, setIsLargeScreen] = useState(null)
+  const [key, setKey] = useState(0)
+
+  const handleResize = useCallback(() => {
+    setIsLargeScreen(window.innerWidth > 540)
+    setKey((prev) => prev + 1) // Increment key to force re-render
+  }, [])
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 540)
-    }
-
+    handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [handleResize])
+
+  const renderHeading = () => {
+    if (isLargeScreen === null) return null // while loading, return null
+
+    return (
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`content-${isLargeScreen ? 'large' : 'small'}-${key}`}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          {isLargeScreen ? (
+            <>
+              <div className="flex-col">
+                <div>
+                  <motion.span
+                    className="text-2xl inline-block"
+                    variants={itemVariants}
+                  >
+                    Crack Every <span className="text-accent"> Slip, </span>
+                  </motion.span>
+                  <motion.span
+                    className="text-2xl inline-block"
+                    variants={itemVariants}
+                  >
+                    Master Every <span className="text-accent"> Lab, </span>
+                  </motion.span>
+                  <motion.span
+                    className="text-2xl inline-block"
+                    variants={itemVariants}
+                  >
+                    Solve Every<span className="text-accent"> Problem:</span>
+                  </motion.span>
+                </div>
+                <motion.div
+                  className="text-2xl md:text-3xl sm:mt-2 relative inline-block"
+                  variants={lastLineVarient}
+                >
+                  <motion.span className="inline-block">Become a </motion.span>
+                  {['Coding ', 'Champion!'].map((word, index) => (
+                    <motion.span
+                      key={index}
+                      className="inline-block mx-1 text-accent"
+                      variants={wordVariants}
+                      custom={index}
+                    >
+                      {word}{' '}
+                    </motion.span>
+                  ))}
+                  <motion.span
+                    className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent"
+                    variants={underlineVariants}
+                  />
+                </motion.div>
+              </div>
+            </>
+          ) : (
+            <>
+              <motion.span
+                className="text-xl block my-2"
+                variants={itemVariants}
+              >
+                Crack Every <span className="text-accent"> Slip, </span>
+              </motion.span>
+              <motion.span
+                className="text-xl block my-2"
+                variants={itemVariants}
+              >
+                Master Every <span className="text-accent"> Lab, </span>
+              </motion.span>
+              <motion.span
+                className="text-xl block my-2"
+                variants={itemVariants}
+              >
+                Solve Every<span className="text-accent"> Problem:</span>
+              </motion.span>
+              <motion.div
+                className="text-2xl md:text-3xl sm:mt-2 relative inline-block"
+                variants={lastLineVarient}
+              >
+                <motion.span>Become a </motion.span>
+                {['Coding ', 'Champion!'].map((word, index) => (
+                  <motion.span
+                    key={index}
+                    className="inline-block mx-1 text-accent"
+                    variants={wordVariants}
+                    custom={index}
+                  >
+                    {word}{' '}
+                  </motion.span>
+                ))}
+                <motion.span
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent"
+                  variants={underlineVariants}
+                />
+              </motion.div>
+            </>
+          )}
+        </motion.div>
+      </AnimatePresence>
+    )
+  }
 
   return (
     <>
@@ -76,48 +197,7 @@ function Home() {
           initial="hidden"
           animate="visible"
         >
-          {isLargeScreen ? (
-            <motion.span
-              className="text-xl sm:text-2xl  block"
-              variants={itemVariants}
-            >
-              Crack Every <span className="text-accent"> Slip, </span> Master
-              Every <span className="text-accent"> Lab, </span>
-              Solve Every<span className="text-accent"> Problem:</span>
-            </motion.span>
-          ) : (
-            <motion.span className="text-xl">
-              <motion.span className=" block my-2" variants={itemVariants}>
-                Crack Every <span className="text-accent"> Slip, </span>
-              </motion.span>
-              <motion.span className="  block my-2" variants={itemVariants}>
-                Master Every <span className="text-accent"> Lab, </span>
-              </motion.span>
-              <motion.span className="  block my-2" variants={itemVariants}>
-                Solve Every<span className="text-accent"> Problem:</span>
-              </motion.span>
-            </motion.span>
-          )}
-          <motion.div
-            className="text-2xl md:text-3xl sm:mt-2 relative inline-block"
-            variants={itemVariants}
-          >
-            <motion.span variants={itemVariants}>Become a </motion.span>
-            {['Coding ', 'Champion!'].map((word, index) => (
-              <motion.span
-                key={index}
-                className="inline-block mx-1 text-accent"
-                variants={wordVariants}
-                custom={index}
-              >
-                {word}{' '}
-              </motion.span>
-            ))}
-            <motion.span
-              className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent"
-              variants={underlineVariants}
-            />
-          </motion.div>
+          {renderHeading()}
         </motion.h1>
         <div className="flex flex-col sm:grid md:grid-cols-2 gap-y-8 lg:gap-y-12">
           <FeaturesContainer
