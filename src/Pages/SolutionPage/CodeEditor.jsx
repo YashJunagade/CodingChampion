@@ -22,7 +22,6 @@ const models = [
   import.meta.env.VITE_MODAL6,
   import.meta.env.VITE_MODAL7,
   import.meta.env.VITE_MODAL8,
-  import.meta.env.VITE_MODAL9,
 ]
 
 function CodeEditor({ language, solution }) {
