@@ -109,7 +109,7 @@ const Navbar = React.memo(() => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full h-14 md:h-16 bg-transparent flex justify-between items-center px-4 md:px-6 relative z-[9998]"
+      className="w-full h-14 md:h-16 border-b-2 border-white sm:border-none sm:bg-transparent flex justify-between items-center px-4 md:px-6 relative z-[9998]"
     >
       <div>
         <img src="" alt="logo" />
@@ -132,7 +132,7 @@ const Navbar = React.memo(() => {
         <div className="w-[100px] h-10 flex justify-end items-center">
           {isLoggedIn ? (
             <motion.div
-              className="h-10 w-10 rounded-full relative cursor-pointer border-2 border-white"
+              className="h-10 w-10 rounded-full relative cursor-pointer"
               onClick={handleProfileClick}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -171,9 +171,12 @@ const Navbar = React.memo(() => {
           ) : (
             <Link to="/login">
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{
+                  scale: 1.05,
+                }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-accent px-2 py-2 rounded-md text-primary font-bold hover:text-primary hover:bg-black transition ease-in-out duration-200"
+                transition={{ duration: 0.2 }}
+                className="bg-accent px-2 py-2 rounded-md text-white font-bold"
               >
                 Login
               </motion.button>

@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
   return (
     <motion.div
-      className="flex flex-col min-h-[260px] rounded-custom shadow-even-shadow overflow-hidden w-[80%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto bg-white"
+      className="flex flex-col min-h-[260px] rounded-custom shadow-even-shadow overflow-hidden w-[72%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto bg-white"
       whileHover={{
-        boxShadow: '0px 10px 20px rgba(255, 80, 1, 0.2)',
+        boxShadow: '0px 10px 20px rgba(245, 21, 36, 0.3)',
         scale: 1.05,
         y: -10,
         transition: {
@@ -34,16 +34,16 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
         />
       </motion.div>
       <div className="p-2 flex flex-col h-full">
-        <motion.h1
-          className="items-center text-lg font-semibold text-black sm:h-10 md:h-5"
+        <motion.h2
+          className="items-center text-lg font-semibold text-black h-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           {featureTitle}
-        </motion.h1>
+        </motion.h2>
         <motion.p
-          className=" text-sm text-secondary  h-16 mb-2 md:h-10"
+          className=" text-sm text-secondary h-auto mb-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -51,13 +51,13 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
           {featureDescription}
         </motion.p>
 
-        <Link to={pageRoute} className="mt-auto">
+        <Link to={pageRoute} className="mt-auto text-center">
           <motion.button
             type="button"
-            className="w-full mb-2 rounded-md  bg-black px-2 py-2 text-sm font-semibold text-white shadow-sm "
+            className="w-[97%] mb-1 rounded-md  bg-black px-2 py-2 font-semibold text-white shadow-sm"
             whileHover={{
               scale: 1.05,
-              backgroundColor: '#FF5001',
+              backgroundColor: 'var(--accent)',
             }}
             whileTap={{ scale: 0.95 }}
             transition={{ duration: 0.2 }}

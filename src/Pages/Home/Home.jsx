@@ -59,13 +59,13 @@ function Home() {
     <>
       <div className="pb-24 md:px-8 max-w-[1200px] mx-auto">
         <motion.h1
-          className="text-xl font-bold text-accent text-center pt-4 pb-10"
+          className="text-xl font-bold text-accent text-center pt-4 pb-6 sm:pb-8 md:pb-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <motion.span
-            className="text-2xl sm:text-3xl  block"
+            className="text-xl sm:text-3xl  block"
             variants={itemVariants}
           >
             Crack Every Slip, Master Every Lab:
@@ -75,10 +75,10 @@ function Home() {
             variants={itemVariants}
           >
             <motion.span variants={itemVariants}>Become a </motion.span>
-            {['Coding', 'Champion!'].map((word, index) => (
+            {['Coding ', 'Champion!'].map((word, index) => (
               <motion.span
                 key={index}
-                className="inline-block"
+                className="inline-block m-[1px]"
                 variants={wordVariants}
                 custom={index}
               >
