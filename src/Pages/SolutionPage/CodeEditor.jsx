@@ -246,7 +246,7 @@ function CodeEditor({ language, solution }) {
               : 'bg-black hover:bg-accent'
           }`}
         >
-          {loading ? 'Wait Magic Is Happening...' : 'Explain Me'}
+          {loading ? 'Magic ...' : 'Explain Me'}
         </button>
         {/* Ask Your Doubt to AI button */}
         <button
@@ -304,7 +304,7 @@ function CodeEditor({ language, solution }) {
           <div className="flex flex-col">
             <textarea
               className="p-2 rounded border mb-4"
-              placeholder="Type your query here..."
+              placeholder="Type your query or doubt here..."
               value={userQuery}
               onChange={(e) => setUserQuery(e.target.value)}
               onKeyPress={handleKeyPress}
