@@ -59,10 +59,11 @@ function CodeEditor({ language, solution }) {
 
     try {
       const chatCompletion = await groq.chat.completions.create({
+        // removed the markdown syntax requirement for now.
         messages: [
           {
             role: 'user',
-            content: `${solution}\n\nExplain the given code in simple words. Also explain how each function works in brief. Give sample input and output for the program. Please provide a well-formatted response using Markdown syntax for headings, lists, and code blocks where appropriate.`,
+            content: `${solution}\n\nExplain the given code in simple words. Also explain how each function works in brief. Give sample input and output for the program. Please provide a well-formatted response . You can also use diagrams or piece of code wherever necessary.`,
           },
         ],
         model,
