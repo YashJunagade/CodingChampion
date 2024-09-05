@@ -168,15 +168,26 @@ function CodeEditor({ language, solution }) {
   }, [editorWidth])
 
   const editorComponent = (
-    <div style={{ width: '100%', height: '100%', borderStartStartRadius: '10px', borderEndStartRadius: '10px',  overflow: 'hidden', margin: '0 5px', zIndex : '1', boxSizing: "border-box"}}>
-    <Editor
-      height="100%"
-      language={language}
-      theme="vs-dark"
-      value={solution}
-      onMount={handleEditorDidMount}
-      options={editorOptions}
-    />
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        borderStartStartRadius: '10px',
+        borderEndStartRadius: '10px',
+        overflow: 'hidden',
+        margin: '0 5px',
+        zIndex: '1',
+        boxSizing: 'border-box',
+      }}
+    >
+      <Editor
+        height="100%"
+        language={language}
+        theme="vs-dark"
+        value={solution}
+        onMount={handleEditorDidMount}
+        options={editorOptions}
+      />
     </div>
   )
 

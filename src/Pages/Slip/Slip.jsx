@@ -10,7 +10,7 @@ function Slip() {
         <div className="hidden md:inline relative">
           <SideBar></SideBar>
         </div>
-        <div className="w-full">
+        <div className="w-full bg-primary">
           <Menu></Menu>
         </div>
       </div>

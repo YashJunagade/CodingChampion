@@ -70,7 +70,7 @@ const SlipList = () => {
       <div className="hidden md:inline relative">
         <SideBar />
       </div>
-      <div className="flex-grow p-4 lg:p8">
+      <div className="flex-row p-4 lg:p8">
         <h1 className="text-3xl font-bold mb-6 text-black">
           {subject.subject} Slips
         </h1>
@@ -106,7 +106,7 @@ const SlipList = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="rounded-custom overflow-hidden shadow-even-shadow mt-4"
+              className="rounded-custom shadow-even-shadow mt-4"
             >
               <div className="p-4 bg-secondary2 text-black">
                 <h2 className="text-xl font-semibold">
@@ -121,10 +121,10 @@ const SlipList = () => {
                   >
                     <Link
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
-                      className="block"
+                      className=""
                     >
                       {/* add flex when the md screen issue gets fixed  */}
-                      <div className="">
+                      <div className="md:flex">
                         <div
                           className="text-black mb-2"
                           dangerouslySetInnerHTML={{
