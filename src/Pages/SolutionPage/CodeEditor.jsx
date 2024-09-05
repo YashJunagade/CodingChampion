@@ -1,7 +1,7 @@
 import Editor from '@monaco-editor/react'
 import Groq from 'groq-sdk'
 import FormattedText from './FormattedText'
-import Modal from './Modal' // Import the Modal component
+import Modal from './Modal'
 import { useState, useCallback, useRef, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
@@ -27,7 +27,8 @@ const models = [
 
 function CodeEditor({ language, solution }) {
   const [result, setResult] = useState('')
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isExplanationModalOpen, setIsExplanationModalOpen] = useState(false)
+  const [isQueryModalOpen, setIsQueryModalOpen] = useState(false)
   const [currentKeyIndex, setCurrentKeyIndex] = useState(0)
   const [currentModelIndex, setCurrentModelIndex] = useState(0)
   const [loading, setLoading] = useState(false)
@@ -35,6 +36,10 @@ function CodeEditor({ language, solution }) {
   const [isResizable, setIsResizable] = useState(window.innerWidth > 768)
   const [editorWidth, setEditorWidth] = useState('100%')
   const editorRef = useRef(null)
+
+  // State for user query and its response
+  const [userQuery, setUserQuery] = useState('')
+  const [queryResponse, setQueryResponse] = useState('')
 
   const fetchSolution = async () => {
     const apiKey = apiKeys[currentKeyIndex]
@@ -47,20 +52,20 @@ function CodeEditor({ language, solution }) {
 
     const groq = new Groq({
       apiKey,
-      dangerouslyAllowBrowser: true, // Allows the SDK to work in the browser
+      dangerouslyAllowBrowser: true,
     })
 
-    setLoading(true) // Set loading to true while fetching the solution
+    setLoading(true)
 
     try {
       const chatCompletion = await groq.chat.completions.create({
         messages: [
           {
             role: 'user',
-            content: `${solution} explain the given code to me in simple words. also explain how each function works in brief. give sample input and output for the program`,
+            content: `${solution} explain the given code to me in simple words. also explain how each function works in brief. give sample input and output for the program.`,
           },
         ],
-        model, // Use the selected model
+        model,
       })
 
       setResult(chatCompletion.choices[0]?.message?.content || '')
@@ -68,18 +73,55 @@ function CodeEditor({ language, solution }) {
       console.error('Error fetching solution:', error)
       setResult('An error occurred while fetching the solution.')
     } finally {
-      // Rotate the API key index
       setCurrentKeyIndex((prevIndex) => (prevIndex + 1) % apiKeys.length)
-      // Randomly select a model from the models array
       setCurrentModelIndex(Math.floor(Math.random() * models.length))
-      setIsModalOpen(true) // Open the modal after fetching the solution or in case of error
-      setLoading(false) // Set loading to false when done
+      setIsExplanationModalOpen(true)
+      setLoading(false)
     }
   }
 
-  // copying the code logic ->
+  const handleQuerySubmit = async () => {
+    if (!userQuery.trim()) return
+
+    const apiKey = apiKeys[currentKeyIndex]
+    const model = models[currentModelIndex]
+
+    if (!apiKey) {
+      console.error('API key is not defined')
+      return
+    }
+
+    const groq = new Groq({
+      apiKey,
+      dangerouslyAllowBrowser: true,
+    })
+
+    setLoading(true)
+
+    try {
+      const chatCompletion = await groq.chat.completions.create({
+        messages: [
+          {
+            role: 'user',
+            content: `Given this code:\n\n${solution}\n\nUser's question: ${userQuery} give me output in the md formatted`,
+          },
+        ],
+        model,
+      })
+
+      setQueryResponse(chatCompletion.choices[0]?.message?.content || '')
+    } catch (error) {
+      console.error('Error fetching query response:', error)
+      setQueryResponse('An error occurred while fetching the response.')
+    } finally {
+      setCurrentKeyIndex((prevIndex) => (prevIndex + 1) % apiKeys.length)
+      setCurrentModelIndex(Math.floor(Math.random() * models.length))
+      setLoading(false)
+    }
+  }
+
   const copyToClipboard = useCallback(() => {
-    const editorValue = editorRef.current?.getValue() // Get the current value from the editor
+    const editorValue = editorRef.current?.getValue()
 
     if (editorValue) {
       window.navigator.clipboard
@@ -96,7 +138,6 @@ function CodeEditor({ language, solution }) {
     }
   }, [])
 
-  // this code will fix the scrolling issue:
   const handleEditorDidMount = (editor, monaco) => {
     editorRef.current = editor
 
@@ -120,14 +161,10 @@ function CodeEditor({ language, solution }) {
     const isAtBottom = visibleRange.endLineNumber === lineCount
 
     if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-      // Allow default scroll behavior when at the top or bottom
       return
     }
 
-    // Prevent default scroll behavior within the editor
     e.preventDefault()
-
-    // Manually scroll the editor
     const scrollTop = editor.getScrollTop()
     editor.setScrollTop(scrollTop + e.deltaY)
   }
@@ -212,28 +249,83 @@ function CodeEditor({ language, solution }) {
           Copy
         </button>
       </div>
-      <div className="flex-grow">
-        {isResizable ? (
-          <Resizable
-            size={{ width: editorWidth, height: '100%' }}
-            minWidth="20%"
-            maxWidth="100%"
-            enable={{ right: true }}
-            onResizeStop={(e, direction, ref, d) => {
-              setEditorWidth(ref.style.width)
-            }}
-          >
-            {editorComponent}
-          </Resizable>
-        ) : (
-          editorComponent
-        )}
+
+      {/* Ask Your Doubt to AI button */}
+      <div className="flex justify-between mt-4">
+        <button
+          onClick={() => setIsQueryModalOpen(true)}
+          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
+        >
+          Ask Your Doubt to AI
+        </button>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className="max-h-[80vh] p-6">
-          {result && <FormattedText text={result} />}
-        </div>
-      </Modal>
+
+      <Resizable
+        enable={{ right: isResizable }}
+        defaultSize={{
+          width: '100%',
+          height: '100%',
+        }}
+        size={{ width: editorWidth, height: '100%' }}
+        onResizeStop={(e, direction, ref, d) => {
+          setEditorWidth((prevWidth) => {
+            const newWidth = parseInt(prevWidth) + d.width
+            return `${newWidth}px`
+          })
+        }}
+      >
+        {editorComponent}
+      </Resizable>
+
+      {isExplanationModalOpen && (
+        <Modal
+          isOpen={isExplanationModalOpen}
+          title="AI Explanation"
+          onClose={() => setIsExplanationModalOpen(false)}
+        >
+          <FormattedText result={result} />
+        </Modal>
+      )}
+
+      {isQueryModalOpen && (
+        <Modal
+          isOpen={isQueryModalOpen}
+          title="Ask Your Doubt to AI"
+          onClose={() => {
+            setIsQueryModalOpen(false)
+            setUserQuery('')
+            setQueryResponse('')
+          }}
+        >
+          <div className="flex flex-col">
+            <textarea
+              className="p-2 rounded border mb-4"
+              placeholder="Type your query here..."
+              value={userQuery}
+              onChange={(e) => setUserQuery(e.target.value)}
+              rows={4}
+            />
+            <button
+              onClick={handleQuerySubmit}
+              disabled={loading}
+              className={`px-4 py-2 rounded text-white font-semibold ${
+                loading
+                  ? 'bg-primary2 cursor-not-allowed'
+                  : 'bg-black hover:bg-accent'
+              }`}
+            >
+              {loading ? 'Fetching Response...' : 'Submit Query'}
+            </button>
+
+            {queryResponse && (
+              <div className="mt-4 p-2 border rounded bg-gray-100">
+                <h3 className="font-semibold">AI Response:</h3>
+                <p>{queryResponse}</p>
+              </div>
+            )}
+          </div>
+        </Modal>
+      )}
     </div>
   )
 }
