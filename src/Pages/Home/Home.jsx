@@ -59,7 +59,7 @@ function Home() {
     <>
       <div className="pb-24 md:px-8 max-w-[1200px] mx-auto">
         <motion.h1
-          className="text-xl font-bold text-accent text-center pt-4 pb-6 sm:pb-8 md:pb-10"
+          className="text-xl font-bold text-black text-center pt-4 pb-6 sm:pt-6 sm:pb-8 md:pb-10"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -68,7 +68,8 @@ function Home() {
             className="text-xl sm:text-3xl  block"
             variants={itemVariants}
           >
-            Crack Every Slip, Master Every Lab:
+            Crack Every <span className="text-accent"> Slip, </span> Master
+            Every <span className="text-accent"> Lab:</span>
           </motion.span>
           <motion.div
             className="text-xl sm:text-2xl mt-2 relative inline-block"
@@ -78,7 +79,7 @@ function Home() {
             {['Coding ', 'Champion!'].map((word, index) => (
               <motion.span
                 key={index}
-                className="inline-block m-[1px]"
+                className="inline-block m-[1px] text-accent"
                 variants={wordVariants}
                 custom={index}
               >
@@ -86,7 +87,7 @@ function Home() {
               </motion.span>
             ))}
             <motion.span
-              className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"
+              className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent"
               variants={underlineVariants}
             />
           </motion.div>
