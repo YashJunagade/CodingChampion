@@ -62,20 +62,20 @@ function CodeEditor({ language, solution }) {
         messages: [
           {
             role: 'user',
-            content: `${solution} explain the given code to me in simple words. also explain how each function works in brief. give sample input and output for the program.`,
+            content: `${solution}\n\nExplain the given code in simple words. Also explain how each function works in brief. Give sample input and output for the program. Please provide a well-formatted response using Markdown syntax for headings, lists, and code blocks where appropriate.`,
           },
         ],
         model,
       })
 
       setResult(chatCompletion.choices[0]?.message?.content || '')
+      setIsExplanationModalOpen(true)
     } catch (error) {
       console.error('Error fetching solution:', error)
       setResult('An error occurred while fetching the solution.')
     } finally {
       setCurrentKeyIndex((prevIndex) => (prevIndex + 1) % apiKeys.length)
       setCurrentModelIndex(Math.floor(Math.random() * models.length))
-      setIsExplanationModalOpen(true)
       setLoading(false)
     }
   }
@@ -103,7 +103,7 @@ function CodeEditor({ language, solution }) {
         messages: [
           {
             role: 'user',
-            content: `Given this code:\n\n${solution}\n\nUser's question: ${userQuery} give me output in the md formatted`,
+            content: `Given this code:\n\n${solution}\n\nUser's question: ${userQuery}\n\nPlease provide a well-formatted response using Markdown syntax for headings, lists, and code blocks where appropriate.`,
           },
         ],
         model,
@@ -117,6 +117,13 @@ function CodeEditor({ language, solution }) {
       setCurrentKeyIndex((prevIndex) => (prevIndex + 1) % apiKeys.length)
       setCurrentModelIndex(Math.floor(Math.random() * models.length))
       setLoading(false)
+    }
+  }
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleQuerySubmit()
     }
   }
 
@@ -283,10 +290,11 @@ function CodeEditor({ language, solution }) {
           title="AI Explanation"
           onClose={() => setIsExplanationModalOpen(false)}
         >
-          <FormattedText result={result} />
+          <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
+            <FormattedText text={result} />
+          </div>
         </Modal>
       )}
-
       {isQueryModalOpen && (
         <Modal
           isOpen={isQueryModalOpen}
@@ -303,6 +311,7 @@ function CodeEditor({ language, solution }) {
               placeholder="Type your query here..."
               value={userQuery}
               onChange={(e) => setUserQuery(e.target.value)}
+              onKeyPress={handleKeyPress}
               rows={4}
             />
             <button
@@ -318,9 +327,9 @@ function CodeEditor({ language, solution }) {
             </button>
 
             {queryResponse && (
-              <div className="mt-4 p-2 border rounded bg-gray-100">
-                <h3 className="font-semibold">AI Response:</h3>
-                <p>{queryResponse}</p>
+              <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
+                <h3 className="font-semibold mb-2">AI Response:</h3>
+                <FormattedText text={queryResponse} />
               </div>
             )}
           </div>
