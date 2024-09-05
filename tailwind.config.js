@@ -9,7 +9,11 @@ export default {
         primary2: '#DDDDDD',
         secondary: '#231F20',
         secondary2: '#231F20',
-        accent: '#FF5001',
+        accent: '#f51524',
+        accentInverse: '#0aeadb',
+        // light mode gradint
+        lgrad1: '#E2E2E2',
+        lgrad2: '#C9D6FF',
       },
       boxShadow: {
         'even-shadow': '0 0 8px rgba(0, 0, 0, 0.5)', // for even shadows on all sides of the box

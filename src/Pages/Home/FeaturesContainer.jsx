@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
   return (
     <motion.div
-      className="w-[60%] sm:w-[99%] lg:w-[70%] max-w-[400px] mx-auto"
+      className="w-[60%] md:w-[100%] max-w-[420px] mx-auto"
       whileHover={{
         scale: 1.05,
         y: -10,

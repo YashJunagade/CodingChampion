@@ -109,7 +109,7 @@ const Navbar = React.memo(() => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full h-14 md:h-16 lg:h-18 bg-primary2 flex justify-between items-center px-4 md:px-6 relative z-[9998]"
+      className="w-full h-14 md:h-16 lg:h-18 bg-transparent flex justify-between items-center px-4 md:px-6 relative z-[9998]"
     >
       <div>
         <img src="" alt="logo" />
@@ -127,10 +127,11 @@ const Navbar = React.memo(() => {
           <NavLink linkRoute="/dsa" linkName="DSA" />
         </ul>
       </motion.div>
-      <div className="flex justify-between items-center relative">
+
+      <div className="flex justify-between items-center relative ">
         {isLoggedIn ? (
           <motion.div
-            className="h-10 w-10 rounded-full relative cursor-pointer"
+            className="h-10 w-10 rounded-full relative cursor-pointer border-2 border-white"
             onClick={handleProfileClick}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
