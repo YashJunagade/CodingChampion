@@ -3,6 +3,7 @@ import { useUser } from '../../store/UserContext'
 import { auth } from '../../config/firebase'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
+import Sidebar from "../../Components/SideBar/SideBar"
 
 function Profile() {
   const { userDetails, loading, isLoggedIn, updateProfilePic } = useUser()
@@ -46,6 +47,8 @@ function Profile() {
   }
 
   return (
+    <div className='md:flex w-full h-full'>
+    <Sidebar></Sidebar>
     <div className="p-4">
       {userDetails ? (
         <>
@@ -95,8 +98,7 @@ function Profile() {
                       src={`/avatar/${picName}`}
                       alt={picName}
                       onClick={() => handlePicSelect(picName)}
-                      className="w-24 h-24 cursor-pointer border-2 border-gray-300 rounded hover:border-blue-500"
-                    />
+                      className="w-24 h-24 cursor-pointer border-2 border-gray-300 rounded-[50%] hover:border-blue-500"/>
                   ))}
                 </div>
               </div>
@@ -106,6 +108,7 @@ function Profile() {
       ) : (
         <p>No user details available.</p>
       )}
+    </div>
     </div>
   )
 }
