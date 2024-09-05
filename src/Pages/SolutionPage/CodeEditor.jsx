@@ -254,7 +254,7 @@ function CodeEditor({ language, solution }) {
           onClick={() => setIsQueryModalOpen(true)}
           className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
         >
-          Ask Your Doubt to Myra
+          Ask Deva
         </button>
         <button
           onClick={copyToClipboard}
@@ -284,7 +284,7 @@ function CodeEditor({ language, solution }) {
       {isExplanationModalOpen && (
         <Modal
           isOpen={isExplanationModalOpen}
-          title="Myra ---"
+          title="Deva "
           onClose={() => setIsExplanationModalOpen(false)}
         >
           <div className="mt-8 p-4 border rounded bg-white shadow-md overflow-auto">
@@ -295,7 +295,7 @@ function CodeEditor({ language, solution }) {
       {isQueryModalOpen && (
         <Modal
           isOpen={isQueryModalOpen}
-          title="Ask Your Doubt to AI"
+          title="Ask Your Doubt to Deva"
           onClose={() => {
             setIsQueryModalOpen(false)
             setUserQuery('')
@@ -325,7 +325,7 @@ function CodeEditor({ language, solution }) {
 
             {queryResponse && (
               <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
-                <h3 className="font-semibold mb-2">Myra : </h3>
+                <h3 className="font-semibold mb-2">Deva : </h3>
                 <FormattedText text={queryResponse} />
               </div>
             )}
