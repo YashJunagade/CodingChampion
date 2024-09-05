@@ -14,15 +14,15 @@ const apiKeys = [
 ]
 
 const models = [
-  'gemma-7b-it',
-  'gemma2-9b-it',
-  'llama-3.1-70b-versatile',
-  'llama-3.1-8b-instant',
-  'llama3-70b-8192',
-  'llama3-8b-8192',
-  'llama3-groq-70b-8192-tool-use-preview',
-  'llama3-groq-8b-8192-tool-use-preview',
-  'mixtral-8x7b-32768',
+  import.meta.env.VITE_MODAL1,
+  import.meta.env.VITE_MODAL2,
+  import.meta.env.VITE_MODAL3,
+  import.meta.env.VITE_MODAL4,
+  import.meta.env.VITE_MODAL5,
+  import.meta.env.VITE_MODAL6,
+  import.meta.env.VITE_MODAL7,
+  import.meta.env.VITE_MODAL8,
+  import.meta.env.VITE_MODAL9,
 ]
 
 function CodeEditor({ language, solution }) {
