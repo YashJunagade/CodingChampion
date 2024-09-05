@@ -249,21 +249,18 @@ function CodeEditor({ language, solution }) {
         >
           {loading ? 'Wait Magic Is Happening...' : 'Explain Me'}
         </button>
+        {/* Ask Your Doubt to AI button */}
+        <button
+          onClick={() => setIsQueryModalOpen(true)}
+          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
+        >
+          Ask Your Doubt to Myra
+        </button>
         <button
           onClick={copyToClipboard}
           className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
         >
           Copy
-        </button>
-      </div>
-
-      {/* Ask Your Doubt to AI button */}
-      <div className="flex justify-between mt-4">
-        <button
-          onClick={() => setIsQueryModalOpen(true)}
-          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
-        >
-          Ask Your Doubt to AI
         </button>
       </div>
 
@@ -287,10 +284,10 @@ function CodeEditor({ language, solution }) {
       {isExplanationModalOpen && (
         <Modal
           isOpen={isExplanationModalOpen}
-          title="AI Explanation"
+          title="Myra ---"
           onClose={() => setIsExplanationModalOpen(false)}
         >
-          <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
+          <div className="mt-8 p-4 border rounded bg-white shadow-md overflow-auto">
             <FormattedText text={result} />
           </div>
         </Modal>
@@ -328,7 +325,7 @@ function CodeEditor({ language, solution }) {
 
             {queryResponse && (
               <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
-                <h3 className="font-semibold mb-2">AI Response:</h3>
+                <h3 className="font-semibold mb-2">Myra : </h3>
                 <FormattedText text={queryResponse} />
               </div>
             )}
