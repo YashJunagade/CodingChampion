@@ -69,7 +69,7 @@ function Menu() {
     {
       sName: 'Python',
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725250360/python_itmjxz.png',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1725554364/python_dgl5mb.png',
     },
     {
       sName: 'MongoDB',
