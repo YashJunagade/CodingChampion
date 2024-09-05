@@ -2,6 +2,7 @@ import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -55,30 +56,57 @@ const underlineVariants = {
 }
 
 function Home() {
+  const [isLargeScreen, setIsLargeScreen] = useState(null)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 540)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <>
       <div className="pb-24 md:px-8 max-w-[1200px] mx-auto">
         <motion.h1
-          className="text-xl font-bold text-accent text-center pt-4 pb-6 sm:pb-8 md:pb-10"
+          className="text-xl font-bold text-black text-center pt-2 pb-8  sm:pt-8 sm:pb-8 md:pb-12"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.span
-            className="text-xl sm:text-3xl  block"
-            variants={itemVariants}
-          >
-            Crack Every Slip, Master Every Lab:
-          </motion.span>
+          {isLargeScreen ? (
+            <motion.span
+              className="text-xl sm:text-2xl  block"
+              variants={itemVariants}
+            >
+              Crack Every <span className="text-accent"> Slip, </span> Master
+              Every <span className="text-accent"> Lab, </span>
+              Solve Every<span className="text-accent"> Problem:</span>
+            </motion.span>
+          ) : (
+            <motion.span className="text-xl">
+              <motion.span className=" block my-2" variants={itemVariants}>
+                Crack Every <span className="text-accent"> Slip, </span>
+              </motion.span>
+              <motion.span className="  block my-2" variants={itemVariants}>
+                Master Every <span className="text-accent"> Lab, </span>
+              </motion.span>
+              <motion.span className="  block my-2" variants={itemVariants}>
+                Solve Every<span className="text-accent"> Problem:</span>
+              </motion.span>
+            </motion.span>
+          )}
           <motion.div
-            className="text-xl sm:text-2xl mt-2 relative inline-block"
+            className="text-2xl md:text-3xl sm:mt-2 relative inline-block"
             variants={itemVariants}
           >
             <motion.span variants={itemVariants}>Become a </motion.span>
             {['Coding ', 'Champion!'].map((word, index) => (
               <motion.span
                 key={index}
-                className="inline-block m-[1px]"
+                className="inline-block mx-1 text-accent"
                 variants={wordVariants}
                 custom={index}
               >
@@ -86,7 +114,7 @@ function Home() {
               </motion.span>
             ))}
             <motion.span
-              className="absolute bottom-0 left-0 w-full h-0.5 bg-accent"
+              className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent"
               variants={underlineVariants}
             />
           </motion.div>
