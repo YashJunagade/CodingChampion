@@ -10,6 +10,20 @@ import { auth, db } from '../config/firebase'
 import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 
+const profilePicContainer = [
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/1_e5x60h.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/2_waioan.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/3_xzky8n.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/4_nvmpvq.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/5_geek0f.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/6_k3o1wj.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552110/7_uharyc.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552110/8_twqbsh.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552110/9_yuwpyy.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552110/10_j892oj.jpg',
+  'https://res.cloudinary.com/yashjunagade/image/upload/v1725552110/11_trvpva.jpg',
+]
+
 const UserContext = createContext()
 
 export const UserProvider = ({ children }) => {
@@ -22,7 +36,7 @@ export const UserProvider = ({ children }) => {
     const defaultUserData = {
       email: user.email,
       userName: user.displayName || user.email.split('@')[0],
-      profilePic: `${Math.floor(Math.random() * 11) + 1}.jpeg`,
+      profilePic: profilePicContainer[Math.floor(Math.random() * 11) + 1],
     }
 
     try {

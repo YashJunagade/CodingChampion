@@ -52,7 +52,7 @@ const Navbar = React.memo(() => {
 
   const profilePicUrl = useMemo(() => {
     return userDetails?.profilePic
-      ? `/avatar/${userDetails.profilePic}?t=${new Date().getTime()}`
+      ? `${userDetails.profilePic}?t=${new Date().getTime()}`
       : 'default-avatar.png'
   }, [userDetails?.profilePic])
 
