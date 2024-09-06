@@ -236,8 +236,8 @@ function CodeEditor({ language, solution }) {
   )
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex justify-between mb-1">
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex justify-between mb-1 md:mx-1">
         <button
           onClick={fetchSolution}
           disabled={loading}

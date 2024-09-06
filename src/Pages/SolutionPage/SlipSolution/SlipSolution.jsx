@@ -68,7 +68,7 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="flex flex-col h-auto mx-auto px-2  py-2 min-h-screen bg-primary md:mt-16">
+    <div className="flex flex-col h-auto mx-auto px-2  py-2 min-h-screen bg-primary md:mt-16 ">
       <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
         {/* question slip  div */}
         {/* // */}
@@ -82,7 +82,7 @@ const SlipSolution = () => {
               setQuestionSlipWidth(ref.style.width)
             }}
           >
-            <div className="h-full overflow-y-auto">
+            <div className="h-full overflow-y-auto md:mr-1 md:rounded-lg">
               {loading ? (
                 <div className="flex justify-center items-center h-full">
                   <Loader />
