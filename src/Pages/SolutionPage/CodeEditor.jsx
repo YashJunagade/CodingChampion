@@ -6,6 +6,7 @@ import { useState, useCallback, useRef, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
 import { Resizable } from 're-resizable'
+import AskDevaButton from './Deva/AskDeva'
 
 const apiKeys = [
   import.meta.env.VITE_GROQ_API_KEY_1,
@@ -57,7 +58,6 @@ function CodeEditor({ language, solution }) {
 
     try {
       const chatCompletion = await groq.chat.completions.create({
-        // removed the markdown syntax requirement for now.
         messages: [
           {
             role: 'user',
@@ -195,6 +195,7 @@ function CodeEditor({ language, solution }) {
           handleMouseWheel: true,
           alwaysConsumeMouseWheel: false,
         },
+        readOnly: isMobile,
       })
     }
 
@@ -247,13 +248,6 @@ function CodeEditor({ language, solution }) {
           }`}
         >
           {loading ? 'Magic ...' : 'Explain Me'}
-        </button>
-        {/* Ask Your Doubt to AI button */}
-        <button
-          onClick={() => setIsQueryModalOpen(true)}
-          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
-        >
-          Ask Deva
         </button>
         <button
           onClick={copyToClipboard}
@@ -331,6 +325,7 @@ function CodeEditor({ language, solution }) {
           </div>
         </Modal>
       )}
+      <AskDevaButton onOpen={() => setIsQueryModalOpen(true)} />
     </div>
   )
 }
