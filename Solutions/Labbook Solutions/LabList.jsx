@@ -33,7 +33,11 @@ const LabList = () => {
   }, [subjectId])
 
   if (!subject) {
-    return <Loader />
+    return (
+      <div className="md:mt-16">
+        <Loader />
+      </div>
+    )
   }
 
   const filteredAndSortedAssignments = subject.assignments
@@ -64,7 +68,7 @@ const LabList = () => {
   }
 
   return (
-    <div className="flex min-h-screen bg-primary">
+    <div className="flex min-h-screen bg-primary md:mt-16 md:ml-52 lg:ml-60">
       <div className="hidden md:inline relative">
         <SideBar />
       </div>

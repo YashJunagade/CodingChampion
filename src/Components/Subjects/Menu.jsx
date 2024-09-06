@@ -95,7 +95,7 @@ function Menu() {
 
   return (
     <>
-      <div className="md:mt-32">
+      <div className="md:mt-32 md:ml-52 lg:ml-60">
         <ExpandingDiv subjects={fySubjects} title="FY Subjects" />
         <ExpandingDiv subjects={sySubjects} title="SY Subjects" />
         <ExpandingDiv subjects={tySubjects} title="TY Subjects" />

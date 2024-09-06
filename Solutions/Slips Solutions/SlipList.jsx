@@ -71,7 +71,7 @@ const SlipList = () => {
   ]
 
   return (
-    <div className="flex min-h-screen bg-primary md:mt-16">
+    <div className="flex min-h-screen bg-primary md:mt-16 md:ml-52 lg:ml-60">
       <div className="hidden md:inline relative">
         <SideBar />
       </div>

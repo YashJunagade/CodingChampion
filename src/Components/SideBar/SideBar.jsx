@@ -1,3 +1,4 @@
+import { div } from 'framer-motion/client'
 import DropDownMenu from './DropDownMenu'
 
 function SideBar() {
@@ -97,16 +98,18 @@ function SideBar() {
   ]
 
   return (
-    <section className="bg-primary2  text-black h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out">
-      <div className="p-4 border-b border-accent ">
-        <h2 className="text-xl font-semibold">Profile</h2>
-      </div>
-      <nav className="mt-4">
-        {dropDownList.map((menu, index) => (
-          <DropDownMenu key={index} menu={menu} />
-        ))}
+    <div className="relative z-40">
+      <nav className="bg-primary2 text-black h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 bottom-0">
+        <div className="p-4 border-b border-accent ">
+          <h2 className="text-xl font-semibold">Profile</h2>
+        </div>
+        <nav className="mt-4">
+          {dropDownList.map((menu, index) => (
+            <DropDownMenu key={index} menu={menu} />
+          ))}
+        </nav>
       </nav>
-    </section>
+    </div>
   )
 }
 
