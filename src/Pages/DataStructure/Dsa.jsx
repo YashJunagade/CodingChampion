@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function Dsa() {
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className="md:mt-16">
       <h1 style={styles.header}>🚧 Our team is working on this feature!</h1>
       <p style={styles.message}>Please try again after some time.</p>
       <a href="/" style={styles.link}>

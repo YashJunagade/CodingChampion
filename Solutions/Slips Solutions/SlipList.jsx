@@ -12,6 +12,7 @@ import {
 } from 'firebase/firestore'
 import { db } from '../../src/config/firebase'
 import { motion } from 'framer-motion'
+import { div } from 'framer-motion/client'
 
 const SlipList = () => {
   const { subjectId } = useParams()
@@ -37,7 +38,11 @@ const SlipList = () => {
   }, [subjectId])
 
   if (!subject) {
-    return <Loader />
+    return (
+      <div className="md:mt-16">
+        <Loader />
+      </div>
+    )
   }
 
   const filteredAndSortedSlips = subject.slips
@@ -66,7 +71,7 @@ const SlipList = () => {
   ]
 
   return (
-    <div className="flex min-h-screen bg-primary">
+    <div className="flex min-h-screen bg-primary md:mt-16">
       <div className="hidden md:inline relative">
         <SideBar />
       </div>

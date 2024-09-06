@@ -104,13 +104,15 @@ function Home() {
                     className="text-2xl inline-block"
                     variants={itemVariants}
                   >
-                    Crack Every <span className="text-accent"> Slip, </span>
+                    Crack Every{' '}
+                    <span className="text-accent"> Slip,&nbsp; </span>
                   </motion.span>
                   <motion.span
                     className="text-2xl inline-block"
                     variants={itemVariants}
                   >
-                    Master Every <span className="text-accent"> Lab, </span>
+                    Master Every{' '}
+                    <span className="text-accent"> Lab,&nbsp;</span>
                   </motion.span>
                   <motion.span
                     className="text-2xl inline-block"
@@ -190,7 +192,7 @@ function Home() {
 
   return (
     <>
-      <div className="pb-24 md:px-8 max-w-[1200px] mx-auto">
+      <div className="pb-24 md:px-8 max-w-[1200px] mx-auto md:mt-16">
         <motion.h1
           className="text-xl font-bold text-black text-center pt-2 pb-8  sm:pt-8 sm:pb-8 md:pb-12"
           variants={containerVariants}
