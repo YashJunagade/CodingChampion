@@ -243,15 +243,15 @@ function CodeEditor({ language, solution }) {
           disabled={loading}
           className={`px-4 py-2 rounded text-white font-semibold ${
             loading
-              ? 'bg-primary2 cursor-not-allowed'
-              : 'bg-black hover:bg-accent'
+              ? 'bg-[#D43212] cursor-not-allowed'
+              : 'bg-[#D43212] hover:bg-accent'
           }`}
         >
           {loading ? 'Magic ...' : 'Explain Me'}
         </button>
         <button
           onClick={copyToClipboard}
-          className="px-4 py-2 rounded bg-black text-white font-semibold hover:bg-accent"
+          className="px-4 py-2 rounded bg-[#D43212] text-white font-semibold hover:bg-accent"
         >
           Copy
         </button>

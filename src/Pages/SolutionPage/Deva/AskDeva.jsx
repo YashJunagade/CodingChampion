@@ -45,7 +45,7 @@ const AskDevaButton = ({ onOpen }) => {
         </div>
         <button
           onClick={onOpen}
-          className="bg-black hover:bg-accent text-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 flex items-center"
+          className="bg-[#D43212] text-white rounded-full p-3 shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110 flex items-center"
         >
           <MessageCircle size={24} className="mr-2" />
           <span>Ask Deva</span>
