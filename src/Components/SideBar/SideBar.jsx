@@ -1,5 +1,8 @@
 import { div } from 'framer-motion/client'
 import DropDownMenu from './DropDownMenu'
+import { Link } from 'react-router-dom'
+
+import { FaGithub } from 'react-icons/fa'
 
 function SideBar() {
   const dropDownList = [
@@ -99,7 +102,7 @@ function SideBar() {
 
   return (
     <div className="relative z-40">
-      <nav className="bg-primary2 text-black h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 bottom-0">
+      <nav className="bg-blackShade border-r-[1px] text-white h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 bottom-24">
         <div className="p-4 border-b border-accent ">
           <h2 className="text-xl font-semibold">Profile</h2>
         </div>
@@ -108,6 +111,19 @@ function SideBar() {
             <DropDownMenu key={index} menu={menu} />
           ))}
         </nav>
+        <div className="border-t border-accent">
+          <Link
+            to="https://github.com/YashJunagade/Unknown"
+            target="_blank"
+            className=" w-full py-4 px-8 inline-block hover:bg-accent transition-colors duration-200 rounded hover:text-primary"
+          >
+            <div className="flex items-center">
+              <FaGithub size={30} />
+
+              <span className="text-center pl-2 ">Contribute</span>
+            </div>
+          </Link>
+        </div>
       </nav>
     </div>
   )

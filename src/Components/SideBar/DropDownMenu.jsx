@@ -14,10 +14,10 @@ function DropDownMenu({ menu }) {
   return (
     <div className="">
       <div
-        className="flex items-center justify-between p-4 cursor-pointer hover:bg-accent transition-colors duration-200 rounded hover:text-primary"
+        className="flex items-center justify-between p-4 cursor-pointer hover:bg-accent transition-colors duration-200 rounded hover:text-white"
         onClick={toggleCollapsibleMenu}
       >
-        <span className="font-medium">{menu.name}</span>
+        <span className="font-medium"> {menu.name}</span>
         {isOpen ? (
           <ChevronUp className="w-5 h-5" />
         ) : (
@@ -31,9 +31,9 @@ function DropDownMenu({ menu }) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="bg-primary py-2 overflow-hidden"
+            className="bg-font3 overflow-hidden"
           >
-            <div className="bg-primary py-2">
+            <div className="">
               {menu.years &&
                 menu.years.map((year, index) => (
                   <NestedDropdown
@@ -47,7 +47,7 @@ function DropDownMenu({ menu }) {
                   <Link
                     key={index}
                     to="#"
-                    className="block px-6 py-2 hover:bg-accent transition-colors duration-200 rounded hover:text-primary"
+                    className="block px-6 py-2 hover:bg-accent transition-colors duration-200 rounded hover:text-white"
                   >
                     {data}
                   </Link>

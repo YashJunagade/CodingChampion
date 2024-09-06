@@ -10,3 +10,10 @@
   --secondary: #231f20;
   --secondary2: #231f20;
 }
+
+.grid-background {
+  background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}

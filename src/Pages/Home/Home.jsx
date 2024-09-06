@@ -101,28 +101,28 @@ function Home() {
               <div className="flex-col">
                 <div>
                   <motion.span
-                    className="text-2xl inline-block"
+                    className="sm:text-2xl md:text-3xl inline-block"
                     variants={itemVariants}
                   >
                     Crack Every{' '}
                     <span className="text-accent"> Slip,&nbsp; </span>
                   </motion.span>
                   <motion.span
-                    className="text-2xl inline-block"
+                    className="sm:text-2xl md:text-3xl inline-block"
                     variants={itemVariants}
                   >
                     Master Every{' '}
                     <span className="text-accent"> Lab,&nbsp;</span>
                   </motion.span>
                   <motion.span
-                    className="text-2xl inline-block"
+                    className="sm:text-2xl md:text-3xl inline-block"
                     variants={itemVariants}
                   >
                     Solve Every<span className="text-accent"> Problem:</span>
                   </motion.span>
                 </div>
                 <motion.div
-                  className="text-2xl md:text-3xl sm:mt-2 relative inline-block"
+                  className="text-2xl md:text-4xl sm:text-3xl sm:mt-2 relative inline-block"
                   variants={lastLineVarient}
                 >
                   <motion.span className="inline-block">Become a </motion.span>
@@ -201,7 +201,7 @@ function Home() {
         >
           {renderHeading()}
         </motion.h1>
-        <div className="flex flex-col sm:grid md:grid-cols-2 gap-y-8 lg:gap-y-12">
+        <div className="flex flex-col sm:grid md:grid-cols-2 gap-y-8 lg:gap-y-12 md:mt-6">
           <FeaturesContainer
             featureTitle="Practical Slips"
             featureDescription="FY, SY and TY BBA(C.A.) practical slips with solutions"

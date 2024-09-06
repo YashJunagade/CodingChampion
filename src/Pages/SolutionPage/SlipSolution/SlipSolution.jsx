@@ -118,7 +118,7 @@ const SlipSolution = () => {
 
         {isLargeScreen && (
           <div
-            className="w-1 cursor-col-resize bg-accent"
+            className="w-4 cursor-col-resize"
             onMouseDown={handleMouseDown}
           />
         )}

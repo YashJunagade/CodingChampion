@@ -110,7 +110,7 @@ const Navbar = React.memo(() => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-14 md:h-16 border-b-[1px] bg-white flex justify-between items-center px-4 md:px-6 md:fixed top-0 left-0 right-0"
+        className="w-full h-14 md:h-16 bg-blackShade text-white flex justify-between items-center px-4 md:px-6 md:fixed top-0 left-0 right-0 border-b-[1px] border-white"
       >
         <div>
           <img src="" alt="logo" />
@@ -177,7 +177,7 @@ const Navbar = React.memo(() => {
                   }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="bg-accent px-2 py-2 rounded-md text-white font-bold"
+                  className="bg-accent px-4 py-2 rounded-md text-white font-bold"
                 >
                   Login
                 </motion.button>

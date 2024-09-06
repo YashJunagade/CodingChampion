@@ -71,7 +71,7 @@ const SlipList = () => {
   ]
 
   return (
-    <div className="flex min-h-screen bg-primary md:mt-16 md:ml-52 lg:ml-60">
+    <div className="flex min-h-screen md:mt-16 md:ml-52 lg:ml-60">
       <div className="hidden md:inline relative">
         <SideBar />
       </div>
@@ -83,7 +83,7 @@ const SlipList = () => {
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className="w-full md:w-48 p-2 md:mb-0 rounded-md border border-black mb-2"
+            className=" md:w-[50%] px-8 py-2 md:mb-0 rounded-md border-black shadow-md  bg-black text-white  text-center mb-2 font-bold"
           >
             <option value="">All Marks</option>
             {uniqueMarks.map((mark, index) => (
@@ -92,12 +92,17 @@ const SlipList = () => {
               </option>
             ))}
           </select>
-          <button
+          <motion.button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="w-full md:w-auto px-4 py-2 bg-black text-white rounded hover:bg-accent transition-colors duration-300 mb-2"
+            className="bg-accent w-full md:w-[50%] px-4 py-2 rounded-md text-white font-bold"
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
           >
             Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
-          </button>
+          </motion.button>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
@@ -111,32 +116,33 @@ const SlipList = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="rounded-custom shadow-even-shadow mt-4"
+              className="rounded-custom shadow-even-shadow mt-4 bg-base1"
             >
-              <div className="p-4 bg-secondary2 text-black">
+              <div className="p-4 rounded-custom bg-base1 text-black">
                 <h2 className="text-xl font-semibold">
                   Slip No: {slip.slipId}
                 </h2>
               </div>
-              <ul className="divide-y divide-primary2">
+              <ul className="divide-y divide-base1">
                 {slip.questions.map((question, qIndex) => (
+                  //bug: hover doesnt work on any other color than accent.
                   <li
                     key={qIndex}
-                    className="p-4 bg-primary2 mt-2 hover:bg-accent transition-colors duration-200"
+                    className="p-4 bg-base3 rounded-b-custom mt-2 hover:bg-accent transition-colors duration-200"
                   >
                     <Link
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
                       className=""
                     >
                       {/* add flex when the md screen issue gets fixed  */}
-                      <div className="md:flex">
+                      <div className="md:flex justify-between h-full">
                         <div
                           className="text-black mb-2"
                           dangerouslySetInnerHTML={{
                             __html: `Q. ${question.text}`,
                           }}
                         />
-                        <span className="inline-block px-2 py-1 text-sm font-semibold text-white bg-accent rounded-full">
+                        <span className="inline-block h-full text-sm  px-2 py-2 font-semibold text-white bg-accent rounded-full w-[15%]">
                           {question.marks} Marks
                         </span>
                       </div>

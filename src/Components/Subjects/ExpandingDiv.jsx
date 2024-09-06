@@ -49,7 +49,7 @@ function ExpandingDiv({ subjects, title }) {
 
   return (
     <motion.div
-      className="bg-primary w-[94%] mx-auto mt-8 mb-8  md:mt-16 px-2 py-2 min-h-40 rounded-custom cursor-pointer hover:border-accent border-2"
+      className="bg-base1 w-[94%] mx-auto mt-11 shadow-even-shadow md:mt-16 md:mb-16 px-2 py-2 min-h-40 md:min-h-48 rounded-custom cursor-pointer hover:border-accent border-2"
       onClick={toggleVisibility}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
@@ -61,7 +61,7 @@ function ExpandingDiv({ subjects, title }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="overflow-hidden"
+            className="overflow-hidden py-4"
           >
             <motion.div
               variants={contentVariants}
