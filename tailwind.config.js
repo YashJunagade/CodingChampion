@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -27,7 +28,7 @@ export default {
         lightGray: '#E2E2E2',
         lightGreen: '#BEE0BE',
         orangeGray: '#E4DCCF',
-        accent: '#F75708', // orange1 #F75708     // orange2 : #F97C18
+        accent: '#F51524', // orange1 #F75708     // orange2 : #F97C18   // red:  red #f51524
       },
       boxShadow: {
         'even-shadow': '0 0 8px rgba(0, 0, 0, 0.5)', // for even shadows on all sides of the box

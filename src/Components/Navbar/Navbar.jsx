@@ -5,6 +5,7 @@ import { useUser } from '../../store/UserContext'
 import { auth } from '../../config/firebase'
 import { toast } from 'react-toastify'
 import { motion, AnimatePresence } from 'framer-motion'
+import Switch from './Switch'
 
 // Modal Component
 const ProfileModal = React.memo(({ userName, onLogout }) => {
@@ -131,6 +132,9 @@ const Navbar = React.memo(() => {
 
         <div className="flex justify-between items-center relative ">
           <div className="w-[100px] h-10 flex justify-end items-center">
+            <div className="pb-10 mr-4 md:mr-6 lg:mr-8">
+              <Switch />
+            </div>
             {isLoggedIn ? (
               <motion.div
                 className="h-10 w-10 rounded-full relative cursor-pointer"
