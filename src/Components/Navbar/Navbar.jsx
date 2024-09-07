@@ -131,8 +131,8 @@ const Navbar = React.memo(() => {
         </motion.div>
 
         <div className="flex justify-between items-center relative ">
-          <div className="w-[100px] h-10 flex justify-end items-center">
-            <div className="pb-10 mr-4 md:mr-6 lg:mr-8">
+          <div className="w-[120px] h-10 flex justify-end items-center">
+            <div className="mr-4 md:mr-6 lg:mr-8">
               <Switch />
             </div>
             {isLoggedIn ? (
