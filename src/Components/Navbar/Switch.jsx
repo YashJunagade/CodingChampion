@@ -35,14 +35,14 @@ const Switch = () => {
           onChange={toggleTheme} // Toggle theme on click
         />
         <svg
-          width="18"
-          height="18"
+          width="40"
+          height="40"
           viewBox="0 0 20 20"
           fill="currentColor"
           stroke="none"
         >
           <mask id="moon-mask">
-            <rect x="0" y="0" width="20" height="20" fill="white" />
+            <rect x="0" y="0" width="40" height="40" fill="white" />
             <circle cx="11" cy="3" r="8" fill="black" />
           </mask>
           <circle
@@ -68,8 +68,11 @@ const Switch = () => {
 
 const StyledWrapper = styled.div`
   .themeToggle {
-    color: #000;
-    width: 3em;
+    width: 30px; /* Increase width */
+    height: 30px; /* Increase height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .st-sunMoonThemeToggleBtn {
@@ -79,15 +82,15 @@ const StyledWrapper = styled.div`
 
   .st-sunMoonThemeToggleBtn .themeToggleInput {
     opacity: 0;
-    width: 100%;
-    aspect-ratio: 1;
+    width: 30px; /* Match the parent width */
+    height: 30px; /* Match the parent height */
   }
 
   .st-sunMoonThemeToggleBtn svg {
     position: absolute;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 30px; /* Ensure this matches the parent */
+    height: 30px; /* Ensure this matches the parent */
     transition: transform 0.4s ease;
     transform: rotate(40deg);
   }
@@ -120,19 +123,19 @@ const StyledWrapper = styled.div`
   .st-sunMoonThemeToggleBtn svg .sunRay5 {
     animation-delay: 0.25s !important;
   }
-  .st-sunMoonThemeToggleBtn svg .sunRay5 {
-    animation-delay: 0.29s !important;
-  }
 
   .st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg {
     transform: rotate(90deg);
   }
+
   .st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg mask > circle {
     transform: translate(16px, -3px);
   }
+
   .st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunMoon {
     transform: scale(0.55);
   }
+
   .st-sunMoonThemeToggleBtn .themeToggleInput:checked + svg .sunRay {
     animation: showRay1832 0.4s ease 0s 1 forwards;
   }
