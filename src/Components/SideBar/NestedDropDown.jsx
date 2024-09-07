@@ -1,20 +1,28 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import './CurvedLines.css'
 
-function NestedDropdown({ title, subjects }) {
+function NestedDropdown({ title, subjects, isLast }) {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
   const toggleMenu = (e) => {
-    e.stopPropagation() // Prevent the parent menu from toggling
+    e.stopPropagation()
     setIsOpen(!isOpen)
   }
 
+  const isActive = (path) => {
+    return location.pathname.startsWith(path)
+  }
+
   return (
-    <div>
+    <div className={`relative nested-item ${isLast ? 'last-item' : ''}`}>
       <div
-        className="flex items-center justify-between px-6 py-2 cursor-pointer hover:bg-accent transition-colors duration-200 rounded hover:text-primary"
+        className={`flex items-center justify-between px-6 py-2 cursor-pointer hover:bg-accent transition-colors duration-200 rounded hover:text-white ${
+          isOpen ? 'text-accent' : ''
+        }`}
         onClick={toggleMenu}
       >
         <span>{title}</span>
@@ -31,14 +39,16 @@ function NestedDropdown({ title, subjects }) {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className=" py-2 overflow-hidden"
+            className="py-2 overflow-hidden"
           >
-            <div className="bg-base3 text-white pl-8">
+            <div className=" text-white pl-4 relative">
               {subjects.map((subject, index) => (
                 <Link
                   key={index}
                   to={subject.link}
-                  className="block px-6 py-2 hover:bg-accent hover:text-primary transition-colors duration-200 rounded"
+                  className={`block px-6 py-2 hover:bg-accent hover:text-white transition-colors duration-200 rounded ${
+                    isActive(subject.link) ? 'text-accent' : ''
+                  } ${index === subjects.length - 1 ? 'last-subject' : ''}`}
                 >
                   {subject.name}
                 </Link>
