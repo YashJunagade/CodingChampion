@@ -133,7 +133,7 @@ function Login() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen -mt-14 bg-gray-100">
       <form
         onSubmit={
           resetPasswordMode
@@ -224,7 +224,7 @@ function Login() {
 
             <button
               type="submit"
-              className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
+              className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500 text-lg' : 'bg-blue-500 text-lg'} transition`}
             >
               {loading ? 'Logging in...' : 'Login'}
             </button>
@@ -241,19 +241,21 @@ function Login() {
 
             <div className="mt-4">
               Don't have an account?{' '}
-              <Link to="/register" className="text-blue-500">
+              <Link to="/register" className="text-blue-500 font-bold text-md">
                 Register
               </Link>
             </div>
 
-            <div className="my-6 text-gray-600">--Or continue with--</div>
+            <div className="my-6 text-gray-600">
+              ----- Or continue with -----
+            </div>
 
             <button
               onClick={handleGoogleSignIn}
               className="flex items-center justify-center w-full border rounded-md py-2 px-4"
             >
               <img
-                src={googleLogo}
+                src="https://res.cloudinary.com/yashjunagade/image/upload/v1725686275/googleLogo_yhe7ju.png"
                 alt="Google logo"
                 className="w-6 h-6 mr-2"
               />
