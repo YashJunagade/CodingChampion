@@ -1,7 +1,7 @@
 :root {
   --accent-color: #f51524;
   --line-width: 2px;
-  --curve-radius: 10px;
+  --curve-radius: 12px;
 }
 
 .menu-item {
@@ -39,15 +39,17 @@
 }
 
 .nested-item:last-child::before {
-  height: 16px;
+  height: 20px;
+  border-bottom-right-radius: 10px;
 }
 
 .nested-item:last-child::after {
   border-left: none;
   border-bottom: var(--line-width) solid var(--accent-color);
-  width: 16px;
-  left: -8px;
-  top: 6px;
+  width: 20px;
+  left: -10px;
+  top: 8px;
+  
 }
 
 .menu-content {
