@@ -7,9 +7,9 @@ function Slip() {
     <section className="">
       {/* <Navbar></Navbar> */}
       <div className="flex">
-        <div className="hidden md:inline relative">
-          <SideBar></SideBar>
-        </div>
+        {/* <div className="hidden md:inline relative"> */}
+        <SideBar></SideBar>
+        {/* </div> */}
         <div className="w-full ">
           <Menu></Menu>
         </div>

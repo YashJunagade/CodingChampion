@@ -1,12 +1,16 @@
-import { div } from 'framer-motion/client'
-import DropDownMenu from './DropDownMenu'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-import { FaGithub } from 'react-icons/fa'
-
+import { FaGithub, FaBars, FaTimes } from 'react-icons/fa'
+import DropDownMenu from './DropDownMenu'
 import './CurvedLines.css'
 
 function SideBar() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
   const dropDownList = [
     {
       name: 'Slip Solutions',
@@ -104,34 +108,64 @@ function SideBar() {
 
   return (
     <>
-      <div className="relative z-40">
-        <nav className="bg-black text-white w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out fixed top-16 left-0 bottom-24">
-          <div className="p-4 border-b border-accent ">
-            <h2 className="text-xl font-bold">Profile</h2>
+      {/* Hamburger icon for mobile (only visible on small screens) */}
+      <div className="sm:block md:hidden lg:hidden fixed top-4 left-4 z-50">
+        {!isSidebarOpen && (
+          <button onClick={toggleSidebar} className="text-white p-2">
+            <FaBars size={24} />
+          </button>
+        )}
+      </div>
+
+      {/* Sidebar (visible by default on md and lg, hidden on sm) */}
+      <div
+        className={`fixed md:mt-16 inset-y-0 left-0 z-40 w-60 bg-black text-white transform ${
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        } md:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out`}
+      >
+        <nav className="h-full flex flex-col">
+          <div className="py-8 border-b border-accent relative text-center">
+            <h2 className="text-xl font-bold">
+              <Link to={'/profile'}>Profile</Link>
+            </h2>
+            {isSidebarOpen && (
+              <button
+                onClick={toggleSidebar}
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white sm:block md:hidden lg:hidden"
+              >
+                <FaTimes size={24} />
+              </button>
+            )}
           </div>
-          <nav className="mt-4">
-            {dropDownList.map((menu, index) => (
-              <DropDownMenu key={index} menu={menu} />
-            ))}
-          </nav>
+          <div className="flex-grow overflow-y-auto">
+            <nav className="mt-4">
+              {dropDownList.map((menu, index) => (
+                <DropDownMenu key={index} menu={menu} />
+              ))}
+            </nav>
+          </div>
+          <div className="border-t border-accent p-4">
+            <Link
+              to="https://github.com/YashJunagade/Unknown"
+              target="_blank"
+              className="w-full py-2 px-4 inline-block hover:bg-accent transition-colors duration-200 rounded hover:text-primary"
+            >
+              <div className="flex items-center">
+                <FaGithub size={24} />
+                <span className="ml-2">Contribute</span>
+              </div>
+            </Link>
+          </div>
         </nav>
       </div>
 
-      <div className="absolute z-40">
-        <div className="border-t border-accent fixed bottom-0 left-0 w-52 lg:w-60 transition-all duration-300 ease-in-out bg-black text-white h-24">
-          <Link
-            to="https://github.com/YashJunagade/Unknown"
-            target="_blank"
-            className=" w-full py-4 px-8 inline-block hover:bg-accent transition-colors duration-200 rounded hover:text-primary"
-          >
-            <div className="flex items-center">
-              <FaGithub size={30} />
-
-              <span className="text-center pl-2 ">Contribute</span>
-            </div>
-          </Link>
-        </div>
-      </div>
+      {/* Overlay for mobile (only visible on small screens) */}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-30 sm:block md:hidden lg:hidden"
+          onClick={toggleSidebar}
+        ></div>
+      )}
     </>
   )
 }
