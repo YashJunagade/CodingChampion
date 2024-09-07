@@ -33,7 +33,7 @@ function NestedDropdown({ title, subjects }) {
             transition={{ duration: 0.2 }}
             className=" py-2 overflow-hidden"
           >
-            <div className="bg-base3 text-black pl-8">
+            <div className="bg-base3 text-white pl-8">
               {subjects.map((subject, index) => (
                 <Link
                   key={index}

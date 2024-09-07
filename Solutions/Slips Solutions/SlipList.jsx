@@ -116,19 +116,19 @@ const SlipList = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="rounded-custom shadow-even-shadow mt-4 bg-base1"
+              className="rounded shadow-even-shadow mt-4 bg-base1"
             >
-              <div className="p-4 rounded-custom bg-base1 text-black">
+              <div className="p-4 rounded-t bg-orangeGray text-black">
                 <h2 className="text-xl font-semibold">
                   Slip No: {slip.slipId}
                 </h2>
               </div>
-              <ul className="divide-y divide-base1">
+              <ul className="divide-y divide-white">
                 {slip.questions.map((question, qIndex) => (
                   //bug: hover doesnt work on any other color than accent.
                   <li
                     key={qIndex}
-                    className="p-4 bg-base3 rounded-b-custom mt-2 hover:bg-accent transition-colors duration-200"
+                    className="p-4 bg-white rounded mt-2 hover:bg-accent transition-colors duration-200"
                   >
                     <Link
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}

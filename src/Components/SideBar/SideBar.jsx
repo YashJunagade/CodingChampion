@@ -102,7 +102,7 @@ function SideBar() {
 
   return (
     <div className="relative z-40">
-      <nav className="bg-blackShade border-r-[1px] text-white h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 bottom-24">
+      <nav className="bg-black border-r-[1px] text-white h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 bottom-24">
         <div className="p-4 border-b border-accent ">
           <h2 className="text-xl font-semibold">Profile</h2>
         </div>

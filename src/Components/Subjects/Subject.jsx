@@ -16,9 +16,9 @@ function Subject({ subRoute, subName, imgLink }) {
     >
       <Link to={subRoute} className="mx-auto block">
         <motion.div
-          className="flex flex-col h-44 w-32 bg-white shadow-even-shadow  rounded-custom text-center sm:h-48  sm:w-36 lg:h-52 lg:w-40 mx-auto"
+          className="flex flex-col h-44 w-32 bg-orangeGray shadow-even-shadow  rounded-custom text-center sm:h-48  sm:w-36 lg:h-52 lg:w-40 mx-auto"
           whileHover={{
-            boxShadow: '0px 10px 20px rgba(245, 21, 36, 0.3)',
+            boxShadow: '0px 10px 20px rgba(247, 87, 8, 0.3)',
             scale: 1.1,
             y: -5,
             transition: {
@@ -39,7 +39,7 @@ function Subject({ subRoute, subName, imgLink }) {
             transition={{ duration: 0.2 }}
           />
           <motion.h3
-            className="font-bold text-white rounded-b-custom text-center bg-blackShade h-[35%] p-1 flex justify-center items-center"
+            className="font-bold text-white rounded-b-custom text-center bg-black h-[35%] p-1 flex justify-center items-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

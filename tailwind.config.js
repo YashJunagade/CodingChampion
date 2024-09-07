@@ -15,14 +15,18 @@ export default {
         //striver black ->
         blackShade: '#0f181a',
         // new color theme for light mode :
-        base: 'f4f5f7',
-        base1: '#f1f5f9',
-        base2: '#e2e8f0',
-        base3: '#cbd5e1',
-        font1: '#000000',
-        font2: '#27272a',
-        font3: '#71717a',
-        highlight: '#8cb4e9',
+
+        // latest color theme : Orange Black and white.
+        // do background black and text white for dark mode.
+        // do background white and text black for light mode.
+
+        //**************************************** */
+
+        black: '#191919',
+        offWhite: '#F6F6F6',
+        lightGray: 'E2E2E2',
+        orangeGray: '#E4DCCF',
+        accent: '#F75708', // orange1 #F75708     // orange2 : #F97C18
       },
       boxShadow: {
         'even-shadow': '0 0 8px rgba(0, 0, 0, 0.5)', // for even shadows on all sides of the box

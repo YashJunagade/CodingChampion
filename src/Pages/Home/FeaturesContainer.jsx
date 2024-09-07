@@ -7,7 +7,7 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
     <motion.div
       className="flex flex-col min-h-[260px] rounded-custom shadow-even-shadow overflow-hidden w-[72%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto bg-white"
       whileHover={{
-        boxShadow: '0px 10px 20px rgba(245, 21, 36, 0.3)',
+        boxShadow: '0px 10px 20px rgba(247, 87, 8, 0.3)',
         scale: 1.05,
         y: -10,
         transition: {
