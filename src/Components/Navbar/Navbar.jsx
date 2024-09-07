@@ -14,7 +14,7 @@ const ProfileModal = React.memo(({ userName, onLogout }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.2 }}
-      className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-[50] hover:shadow-sm hover:shadow-accent"
+      className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-[50] hover:shadow-sm hover:shadow-accent  text-black"
     >
       <div className="p-4 z-50">
         <p className="font-semibold">Hi, {userName}!</p>

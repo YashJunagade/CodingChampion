@@ -9,6 +9,7 @@ import { auth, db } from '../../../config/firebase'
 import { setDoc, doc, getDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
+import NewLoader from '../../../Components/Loader/NewLoader'
 
 function Register() {
   const [email, setEmail] = useState('')
@@ -87,7 +88,7 @@ function Register() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen -mt-10 bg-gray-100">
       <form
         onSubmit={handleRegister}
         className="bg-white p-8 rounded-lg shadow-lg w-96 text-center"
@@ -139,18 +140,22 @@ function Register() {
 
         <div className="mt-4">
           Already registered?{' '}
-          <Link to="/login" className="text-blue-500">
+          <Link to="/login" className="text-blue-500 font-bold text-md">
             Login
           </Link>
         </div>
 
-        <div className="my-6 text-gray-600">--Or continue with--</div>
+        <div className="my-6 text-gray-600">----- Or continue with -----</div>
 
         <button
           onClick={handleGoogleSignIn}
           className="flex items-center justify-center w-full border rounded-md py-2 px-4"
         >
-          <img src={googleLogo} alt="Google logo" className="w-6 h-6 mr-2" />
+          <img
+            src="https://res.cloudinary.com/yashjunagade/image/upload/v1725686275/googleLogo_yhe7ju.png"
+            alt="Google logo"
+            className="w-6 h-6 mr-2"
+          />
           <span className="text-lg">
             {loading ? 'Signing in...' : 'Sign in with Google'}
           </span>
