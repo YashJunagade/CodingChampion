@@ -11,6 +11,10 @@ function SideBar() {
     setIsSidebarOpen(!isSidebarOpen)
   }
 
+  const closeSidebar = () => {
+    setIsSidebarOpen(false)
+  }
+
   const dropDownList = [
     {
       name: 'Slip Solutions',
@@ -109,9 +113,12 @@ function SideBar() {
   return (
     <>
       {/* Hamburger icon for mobile (only visible on small screens) */}
-      <div className="sm:block md:hidden lg:hidden fixed top-4 left-4 z-50">
+      <div className="sm:block md:hidden lg:hidden absolute top-1 left-1 z-50">
         {!isSidebarOpen && (
-          <button onClick={toggleSidebar} className="text-white p-2">
+          <button
+            onClick={toggleSidebar}
+            className="dark:text-white text:black p-2"
+          >
             <FaBars size={24} />
           </button>
         )}
@@ -124,23 +131,27 @@ function SideBar() {
         } md:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out`}
       >
         <nav className="h-full flex flex-col">
-          <div className="py-8 border-b border-accent relative text-center">
+          <div className="py-8 border-b border-accent relative text-center pr-4">
             <h2 className="text-xl font-bold">
               <Link to={'/profile'}>Profile</Link>
             </h2>
             {isSidebarOpen && (
               <button
                 onClick={toggleSidebar}
-                className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white sm:block md:hidden lg:hidden"
+                className="absolute top-1/3 right-4 transform -translate-y-1/2 text-white sm:block md:hidden lg:hidden"
               >
-                <FaTimes size={24} />
+                <FaTimes size={20} />
               </button>
             )}
           </div>
           <div className="flex-grow overflow-y-auto">
             <nav className="mt-4">
               {dropDownList.map((menu, index) => (
-                <DropDownMenu key={index} menu={menu} />
+                <DropDownMenu
+                  key={index}
+                  menu={menu}
+                  closeSidebar={closeSidebar}
+                />
               ))}
             </nav>
           </div>
