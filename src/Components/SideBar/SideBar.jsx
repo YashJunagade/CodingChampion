@@ -116,7 +116,7 @@ function SideBar() {
       </div>
 
       <div className="absolute z-40">
-        <div className="border-t border-accent fixed bottom-0 w-52 lg:w-60 transition-all duration-300 ease-in-out bg-black text-white h-24">
+        <div className="border-t border-accent fixed bottom-0 left-0 w-52 lg:w-60 transition-all duration-300 ease-in-out bg-black text-white h-24">
           <Link
             to="https://github.com/YashJunagade/Unknown"
             target="_blank"

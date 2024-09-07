@@ -110,7 +110,7 @@ const Navbar = React.memo(() => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full h-14 md:h-16 bg-offWhite text-black flex justify-between items-center px-4 md:px-6 md:fixed top-0 left-0 right-0"
+        className="w-full h-14 md:h-16 bg-offWhite dark:bg-black dark:text-white text-black flex justify-between items-center px-4 md:px-6 md:fixed top-0 left-0 right-0"
       >
         <div>
           <img src="" alt="logo" />

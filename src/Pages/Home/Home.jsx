@@ -98,7 +98,7 @@ function Home() {
         >
           {isLargeScreen ? (
             <>
-              <div className="flex-col">
+              <div className="flex-col text-black dark:text-white">
                 <div>
                   <motion.span
                     className="sm:text-2xl md:text-3xl inline-block"

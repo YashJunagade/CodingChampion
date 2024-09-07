@@ -116,9 +116,9 @@ const SlipList = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="rounded shadow-even-shadow mt-4 bg-base1"
+              className="rounded-custom shadow-even-shadow mt-4 bg-white"
             >
-              <div className="p-4 rounded-t bg-lightGray text-black">
+              <div className="p-4 rounded-t-custom bg-lightGray text-black">
                 <h2 className="text-xl font-semibold">
                   Slip No: {slip.slipId}
                 </h2>
