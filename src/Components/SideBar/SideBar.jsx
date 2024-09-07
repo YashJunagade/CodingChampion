@@ -101,17 +101,22 @@ function SideBar() {
   ]
 
   return (
-    <div className="relative z-40">
-      <nav className="bg-black border-r-[1px] text-white h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 bottom-24">
-        <div className="p-4 border-b border-accent ">
-          <h2 className="text-xl font-semibold">Profile</h2>
-        </div>
-        <nav className="mt-4">
-          {dropDownList.map((menu, index) => (
-            <DropDownMenu key={index} menu={menu} />
-          ))}
+    <>
+      <div className="relative z-40">
+        <nav className="bg-black text-white h-screen w-52 lg:w-60 overflow-y-auto transition-all duration-300 ease-in-out  fixed top-16 left-0 ">
+          <div className="p-4 border-b border-accent ">
+            <h2 className="text-xl font-semibold">Profile</h2>
+          </div>
+          <nav className="mt-4">
+            {dropDownList.map((menu, index) => (
+              <DropDownMenu key={index} menu={menu} />
+            ))}
+          </nav>
         </nav>
-        <div className="border-t border-accent">
+      </div>
+
+      <div className="absolute z-40">
+        <div className="border-t border-accent fixed bottom-0 w-52 lg:w-60 transition-all duration-300 ease-in-out bg-black text-white h-24">
           <Link
             to="https://github.com/YashJunagade/Unknown"
             target="_blank"
@@ -124,8 +129,8 @@ function SideBar() {
             </div>
           </Link>
         </div>
-      </nav>
-    </div>
+      </div>
+    </>
   )
 }
 

@@ -24,7 +24,8 @@ export default {
 
         black: '#191919',
         offWhite: '#F6F6F6',
-        lightGray: 'E2E2E2',
+        lightGray: '#E2E2E2',
+        lightGreen: '#BEE0BE',
         orangeGray: '#E4DCCF',
         accent: '#F75708', // orange1 #F75708     // orange2 : #F97C18
       },
