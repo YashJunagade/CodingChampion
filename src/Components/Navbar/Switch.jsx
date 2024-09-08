@@ -68,8 +68,8 @@ const Switch = () => {
 
 const StyledWrapper = styled.div`
   .themeToggle {
-    width: 30px; /* Increase width */
-    height: 30px; /* Increase height */
+    width: 24px; /* Increase width */
+    height: 24px; /* Increase height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,15 +82,15 @@ const StyledWrapper = styled.div`
 
   .st-sunMoonThemeToggleBtn .themeToggleInput {
     opacity: 0;
-    width: 30px; /* Match the parent width */
-    height: 30px; /* Match the parent height */
+    width: 24px; /* Match the parent width */
+    height: 24px; /* Match the parent height */
   }
 
   .st-sunMoonThemeToggleBtn svg {
     position: absolute;
     left: 0;
-    width: 30px; /* Ensure this matches the parent */
-    height: 30px; /* Ensure this matches the parent */
+    width: 24px; /* Ensure this matches the parent */
+    height: 24px; /* Ensure this matches the parent */
     transition: transform 0.4s ease;
     transform: rotate(40deg);
   }

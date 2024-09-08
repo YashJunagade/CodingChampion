@@ -5,30 +5,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        black: '#000000',
-        primary: '#EFEFEF',
-        primary2: '#8cb4e9',
-        secondary: '#231F20',
-        secondary2: '#231F20',
-        accent: '#f51524', //rgb(245, 21, 36), // try yellow: #FFD6C   // red #f51524
-        whiteShade: '#EFEFEF', // whiteshade used for navbar.
-
-        //striver black ->
-        blackShade: '#0f181a',
-        // new color theme for light mode :
-
-        // latest color theme : Orange Black and white.
-        // do background black and text white for dark mode.
-        // do background white and text black for light mode.
-
+        // light theme
         //**************************************** */
-
         black: '#191919',
         offWhite: '#F6F6F6',
         lightGray: '#E2E2E2',
         lightGreen: '#BEE0BE',
         orangeGray: '#E4DCCF',
         accent: '#F51524', // orange1 #F75708     // orange2 : #F97C18   // red:  red #f51524
+
+        //dark theme
+        //**************************************** */
       },
       boxShadow: {
         'even-shadow': '0 0 8px rgba(0, 0, 0, 0.5)', // for even shadows on all sides of the box

@@ -7,9 +7,9 @@ const NavLink = React.memo(({ linkRoute, linkName }) => {
   const isActive = location.pathname === linkRoute
 
   return (
-    <li className="text-center md:mx-4 lg:mx-8 relative">
+    <li className="text-center md:mx-[5px] lg:mx-4 relative">
       <Link to={linkRoute}>
-        <motion.div className="px-2 py-2 lg:px-4 lg:py-2 cursor-pointer rounded-lg transition-colors hover:bg-accent hover:text-white duration-200">
+        <motion.div className="px-2 py-2 lg:px-4 xl:px-6 lg:py-2 cursor-pointer rounded-lg transition-colors hover:bg-accent hover:text-white duration-200">
           {linkName}
           {isActive && (
             <motion.div

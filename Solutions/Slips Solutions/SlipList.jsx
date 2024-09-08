@@ -83,7 +83,7 @@ const SlipList = () => {
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-black shadow-md  bg-black text-white  text-center font-bold "
+            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-black shadow-md  bg-black text-white dark:bg-white dark:text-black text-center font-bold "
           >
             <option value="">All Marks</option>
             {uniqueMarks.map((mark, index) => (
@@ -123,12 +123,12 @@ const SlipList = () => {
                   Slip No: {slip.slipId}
                 </h2>
               </div>
-              <ul className="divide-y divide-white">
+              <ul className="divide-y ">
                 {slip.questions.map((question, qIndex) => (
                   //bug: hover doesnt work on any other color than accent.
                   <li
                     key={qIndex}
-                    className="p-4 bg-white rounded mt-2 hover:bg-accent transition-colors duration-200"
+                    className="p-4  rounded-t-none rounded-b-custom mt-2 hover:bg-accent transition-colors duration-200"
                   >
                     <Link
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
@@ -142,7 +142,7 @@ const SlipList = () => {
                             __html: `Q. ${question.text}`,
                           }}
                         />
-                        <span className="inline-block h-full text-sm  px-2 py-2 font-semibold text-white bg-accent rounded-full w-[15%]">
+                        <span className="inline-block h-full text-sm  px-2 py-2 font-semibold text-white bg-black rounded-full w-[15%]">
                           {question.marks} Marks
                         </span>
                       </div>

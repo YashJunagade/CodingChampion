@@ -49,7 +49,7 @@ function ExpandingDiv({ subjects, title }) {
 
   return (
     <motion.div
-      className="bg-base1 bg-lightGray w-[94%] mx-auto mt-11 shadow-even-shadow sm:mt-16 md:mb-16 px-2 py-2 min-h-40 sm:min-h-48 rounded-custom cursor-pointer hover:border-accent border-2"
+      className="bg-base1 bg-lightGray w-[94%] mx-auto mt-11 shadow-even-shadow dark:bg-[#FF4533] sm:mt-16 md:mb-16 px-2 py-2 min-h-40 sm:min-h-48 rounded-custom cursor-pointer hover:border-accent border-2"
       onClick={toggleVisibility}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}

@@ -113,13 +113,13 @@ function SideBar() {
   return (
     <>
       {/* Hamburger icon for mobile (only visible on small screens) */}
-      <div className="sm:block md:hidden lg:hidden absolute top-1 left-1 z-50">
+      <div className="md:hidden lg:hidden z-50 pt-2 mr-2">
         {!isSidebarOpen && (
           <button
             onClick={toggleSidebar}
-            className="dark:text-white text:black p-2"
+            className="dark:text-white text:black py-2"
           >
-            <FaBars size={24} />
+            <FaBars size={22} />
           </button>
         )}
       </div>
