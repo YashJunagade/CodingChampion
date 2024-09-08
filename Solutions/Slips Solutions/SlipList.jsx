@@ -111,7 +111,7 @@ const SlipList = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="rounded-custom shadow-even-shadow mt-4 bg-white"
+              className="rounded-t-custom shadow-even-shadow mt-4 bg-white"
             >
               <div
                 style={{ background: '#E2E2E2' }}
@@ -121,7 +121,7 @@ const SlipList = () => {
                   Slip No: {slip.slipId}
                 </h2>
               </div>
-              <ul className="divide-y">
+              <ul className="divide-y" style={{ background: '#E2E2E2' }}>
                 {slip.questions.map((question, qIndex) => (
                   <li
                     key={qIndex}
@@ -131,10 +131,10 @@ const SlipList = () => {
                       backgroundColor:
                         hoveredIndex === `${index}-${qIndex}`
                           ? '#E2E2E2'
-                          : 'transparent',
+                          : '#FFFFFF',
                       transition: 'background-color 0.2s ease',
                     }}
-                    className="p-4 rounded-t-none rounded-b-custom mt-2"
+                    className="p-4 mt-2"
                   >
                     <Link
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
