@@ -9,7 +9,7 @@ import { auth, db } from '../../../config/firebase'
 import { setDoc, doc, getDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
-import NewLoader from '../../../Components/Loader/NewLoader'
+import Loader from '../../../Components/Loader/Loader'
 
 function Register() {
   const [email, setEmail] = useState('')
