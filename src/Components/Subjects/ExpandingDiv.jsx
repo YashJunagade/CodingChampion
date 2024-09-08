@@ -1,14 +1,37 @@
-import { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useAnimationControls } from 'framer-motion'
 import Subject from './Subject'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 
 function ExpandingDiv({ subjects, title }) {
   const [showSubjects, setShowSubjects] = useState(false)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
   const location = useLocation()
+  const divRef = useRef(null)
+  const controls = useAnimationControls()
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (divRef.current) {
+        setDimensions({
+          width: divRef.current.offsetWidth,
+          height: divRef.current.offsetHeight,
+        })
+      }
+    }
+
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [])
 
   const toggleVisibility = () => {
     setShowSubjects(!showSubjects)
+    controls.start({
+      scale: [1, 0.98, 1],
+      transition: { duration: 0.3, ease: 'easeInOut' },
+    })
   }
 
   const isLabbokRoute = location.pathname.includes('/labbook')
@@ -19,12 +42,7 @@ function ExpandingDiv({ subjects, title }) {
       opacity: 1,
       height: 'auto',
       transition: {
-        height: {
-          type: 'spring',
-          stiffness: 100,
-          damping: 15,
-          duration: 0.6,
-        },
+        height: { type: 'spring', stiffness: 300, damping: 30, duration: 0.4 },
         opacity: { duration: 0.3, ease: 'easeInOut' },
       },
     },
@@ -32,24 +50,18 @@ function ExpandingDiv({ subjects, title }) {
       opacity: 0,
       height: 0,
       transition: {
-        height: {
-          type: 'spring',
-          stiffness: 100,
-          damping: 15,
-          duration: 0.6,
-        },
+        height: { type: 'spring', stiffness: 300, damping: 30, duration: 0.4 },
         opacity: { duration: 0.3, ease: 'easeInOut' },
       },
     },
   }
 
   const contentVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, scale: 0.95 },
     visible: {
       opacity: 1,
-      y: 0,
+      scale: 1,
       transition: {
-        delay: 0.2,
         duration: 0.4,
         ease: [0.25, 0.1, 0.25, 1],
       },
@@ -63,23 +75,33 @@ function ExpandingDiv({ subjects, title }) {
       y: 0,
       transition: {
         delay: i * 0.05,
-        duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1],
+        duration: 0.3,
+        ease: 'easeOut',
       },
     }),
   }
 
+  const getYearWord = () => {
+    if (title.includes('FY')) return 'First  Year'
+    if (title.includes('SY')) return 'Second  Year'
+    if (title.includes('TY')) return 'Third  Year'
+    return title
+  }
+
+  const yearWord = getYearWord()
+
   return (
     <motion.div
-      className="bg-base1 bg-[#ffffff] w-[94%] mx-auto mt-11 shadow-even-shadow dark:bg-[#000000] sm:mt-16 md:mb-16 px-2 py-2 min-h-40 sm:min-h-48 rounded-custom cursor-pointer hover:border-accent border-2"
+      ref={divRef}
+      className="bg-white dark:bg-black w-[94%] mx-auto mt-11 shadow-lg dark:shadow-gray-700/30 sm:mt-16 md:mb-16 px-4 py-4 min-h-40 sm:min-h-48 md:min-h-56 lg:min-h-64 rounded-lg cursor-pointer border border-gray-200 dark:border-gray-700 relative overflow-hidden"
       onClick={toggleVisibility}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+      whileHover={{ boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
+      animate={controls}
     >
-      <AnimatePresence>
-        {showSubjects && (
+      <AnimatePresence mode="wait">
+        {showSubjects ? (
           <motion.div
+            key="subjects"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -100,20 +122,52 @@ function ExpandingDiv({ subjects, title }) {
                 </motion.div>
               ))}
             </motion.div>
+            <motion.div
+              className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ChevronUp className="w-6 h-6 text-black dark:text-white" />
+            </motion.div>
+          </motion.div>
+        ) : (
+          <motion.div
+            key="year-word"
+            className="flex flex-col items-center justify-center h-full"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            <motion.h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white text-center mb-4"
+              style={{
+                fontSize: `${Math.min(dimensions.width / 12, dimensions.height / 3)}px`,
+              }}
+            >
+              {yearWord}
+            </motion.h2>
+            <motion.div
+              className="text-lg sm:text-xl text-black dark:text-white text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              Explore your academic journey
+            </motion.div>
+            <motion.div
+              className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ChevronDown className="w-6 h-6 text-black dark:text-white" />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-      {!showSubjects && (
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
-        >
-          {title || 'Show Subjects'}
-        </motion.div>
-      )}
     </motion.div>
   )
 }
