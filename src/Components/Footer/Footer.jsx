@@ -9,7 +9,7 @@ function Footer() {
           <img src="" alt="Unknown logo" />
         </div>
         <div className="mt-4">
-          <p className="text-sm font-medium text-primary2">
+          <p className="text-sm font-medium text-primary2 text-center">
             © 2024 Unknown. All rights reserved.
           </p>
         </div>
