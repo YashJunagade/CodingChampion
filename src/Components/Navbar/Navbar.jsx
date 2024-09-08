@@ -7,6 +7,7 @@ import { toast } from 'react-toastify'
 import { motion, AnimatePresence } from 'framer-motion'
 import Switch from './Switch'
 import SideBar from '../SideBar/SideBar'
+import { matchPath } from 'react-router-dom'
 
 // Modal Component
 const ProfileModal = React.memo(({ userName, onLogout }) => {
@@ -51,8 +52,20 @@ const Navbar = React.memo(() => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const navigate = useNavigate()
   const modalRef = useRef(null)
-  const location = useLocation() // moved inside the component
-  const isHome = location.pathname === '/' // check if it's exactly the homepage
+  const location = useLocation()
+
+  // Array of routes where the sidebar should not appear
+  const noSidBarRoutes = [
+    '/slip',
+    '/labbook',
+    '/:subjectId/slipList',
+    '/:subjectId/labList',
+  ]
+
+  // Function to check if the current route matches any of the no-sidebar routes
+  const shouldDisplaySideBar = !noSidBarRoutes.some((route) =>
+    matchPath(route, location.pathname)
+  )
 
   const profilePicUrl = useMemo(() => {
     return userDetails?.profilePic
@@ -118,9 +131,9 @@ const Navbar = React.memo(() => {
         md:px-6 md:fixed top-0 left-0 right-0"
       >
         <div className="flex">
-          {!isHome && (
+          {!shouldDisplaySideBar && (
             <div className="">
-              <SideBar></SideBar>{' '}
+              <SideBar />
               {/* SideBar will only render if it's not the homepage */}
             </div>
           )}
