@@ -12,13 +12,13 @@ import {
 } from 'firebase/firestore'
 import { db } from '../../src/config/firebase'
 import { motion } from 'framer-motion'
-import { div } from 'framer-motion/client'
 
 const SlipList = () => {
   const { subjectId } = useParams()
   const [subject, setSubject] = useState(null)
   const [filterMarks, setFilterMarks] = useState('')
   const [sortOrder, setSortOrder] = useState('asc')
+  const [hoveredIndex, setHoveredIndex] = useState(null)
 
   useEffect(() => {
     const fetchSubject = async () => {
@@ -54,14 +54,9 @@ const SlipList = () => {
     }))
     .filter((slip) => slip.questions.length > 0)
     .sort((a, b) => {
-      //converting to num and insuring it is decimal for safety.
       const aNum = parseInt(a.slipId, 10)
       const bNum = parseInt(b.slipId, 10)
-      if (sortOrder === 'asc') {
-        return aNum - bNum
-      } else {
-        return bNum - aNum
-      }
+      return sortOrder === 'asc' ? aNum - bNum : bNum - aNum
     })
 
   const uniqueMarks = [
@@ -83,7 +78,7 @@ const SlipList = () => {
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-black shadow-md  bg-black text-white dark:bg-white dark:text-black text-center font-bold "
+            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-black shadow-md  bg-black text-white dark:bg-white dark:text-black text-center font-bold"
           >
             <option value="">All Marks</option>
             {uniqueMarks.map((mark, index) => (
@@ -123,18 +118,25 @@ const SlipList = () => {
                   Slip No: {slip.slipId}
                 </h2>
               </div>
-              <ul className="divide-y ">
+              <ul className="divide-y">
                 {slip.questions.map((question, qIndex) => (
-                  //bug: hover doesnt work on any other color than accent.
                   <li
                     key={qIndex}
-                    className="p-4  rounded-t-none rounded-b-custom mt-2 hover:bg-accent transition-colors duration-200"
+                    onMouseEnter={() => setHoveredIndex(`${index}-${qIndex}`)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    style={{
+                      backgroundColor:
+                        hoveredIndex === `${index}-${qIndex}`
+                          ? '#E2E2E2'
+                          : 'transparent',
+                      transition: 'background-color 0.2s ease',
+                    }}
+                    className="p-4 rounded-t-none rounded-b-custom mt-2"
                   >
                     <Link
                       to={`/${subjectId}/${slip.slipId}/${question.questionId}`}
-                      className=""
+                      className="block"
                     >
-                      {/* add flex when the md screen issue gets fixed  */}
                       <div className="md:flex justify-between h-full">
                         <div
                           className="text-black mb-2"
@@ -142,7 +144,7 @@ const SlipList = () => {
                             __html: `Q. ${question.text}`,
                           }}
                         />
-                        <span className="inline-block h-full text-sm  px-2 py-2 font-semibold text-white bg-black rounded-full w-[15%]">
+                        <span className="inline-block h-full text-sm px-2 py-2 font-semibold text-white bg-black rounded-full w-[15%]">
                           {question.marks} Marks
                         </span>
                       </div>
