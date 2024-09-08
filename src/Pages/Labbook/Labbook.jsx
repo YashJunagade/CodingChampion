@@ -8,7 +8,7 @@ function Labbook() {
       {/* <Navbar></Navbar> */}
       <div className="flex">
         {/* <div className="hidden md:inline relative"> */}
-        <SideBar></SideBar>
+        {/* <SideBar></SideBar> */}
         {/* </div> */}
         <div className="w-full">
           <Menu></Menu>
