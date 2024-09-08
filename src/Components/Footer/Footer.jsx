@@ -23,7 +23,7 @@ function Footer() {
             />
           </Link>
         </div>
-        <div className="-mt-4">
+        <div className="-mt-2">
           <p className="text-sm font-medium text-primary2">
             © 2024 Coding🏆Champion. All rights reserved.
           </p>
