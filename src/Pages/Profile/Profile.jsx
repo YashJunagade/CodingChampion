@@ -47,9 +47,12 @@ function Profile() {
   }
 
   return (
-    <div className="md:flex w-full h-full">
-      <Sidebar></Sidebar>
-      <div className="p-4">
+    <div className="md:ml-52 md:mt-16 lg:ml-60 md:flex dark:text-white text-black">
+      {/* Sidebar should have a fixed width */}
+      {/* <Sidebar className="w-1/4 md:w-1/5"></Sidebar> */}
+
+      {/* Main content adjusts to the remaining space */}
+      <div className="p-4 w-full md:w-4/5">
         {userDetails ? (
           <>
             <p>Email: {userDetails.email}</p>
@@ -57,26 +60,26 @@ function Profile() {
             <img
               src={`${selectedPic}?t=${new Date().getTime()}`}
               alt="Profile"
-              className="w-48 h-48 cursor-pointer rounded-full"
+              className="w-40 h-40 cursor-pointer rounded-full my-5"
               onClick={() => setModalOpen(true)}
             />
             <button
               onClick={handleSignOut}
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="mt-4 bg-accent text-white px-4 py-2 rounded"
             >
               Sign Out
             </button>
 
             {modalOpen && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+              <div className="fixed inset-0 text-black bg-black bg-opacity-50 flex justify-center items-center z-50">
                 <div className="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-lg relative">
                   <span
-                    className="absolute top-2 right-2 text-xl cursor-pointer"
+                    className="absolute top-2 right-3 text-xl cursor-pointer"
                     onClick={() => setModalOpen(false)}
                   >
                     &times;
                   </span>
-                  <h2 className="text-lg font-semibold mb-4">
+                  <h2 className="text-lg font-semibold mb-4 ">
                     Select Profile Picture
                   </h2>
                   <div className="flex flex-wrap gap-4">
@@ -98,7 +101,7 @@ function Profile() {
                         src={`${picName}`}
                         alt={picName}
                         onClick={() => handlePicSelect(picName)}
-                        className="w-24 h-24 cursor-pointer border-2 border-gray-300 rounded-[50%] hover:border-blue-500"
+                        className="w-16 h-16 md:w-28 md:h-28 cursor-pointer border-2 border-gray-300 rounded-[50%] hover:border-blue-500"
                       />
                     ))}
                   </div>
