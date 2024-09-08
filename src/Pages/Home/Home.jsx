@@ -20,7 +20,7 @@ const animations = [
 const ProfileCard = ({ name, title, photoUrl, socialLinks }) => {
   return (
     <motion.div
-      className="w-full max-w-sm bg-gradient-to-br lg:mx-24 from-purple-600 to-blue-500 rounded-2xl shadow-lg overflow-hidden m-4 mx-2 transition-all duration-500 ease-in-out transform hover:scale-105"
+      className="w-full max-w-[300px] bg-gradient-to-br lg:mx-24 from-purple-600 to-blue-500 rounded-custom shadow-lg overflow-hidden m-4 mx-2 transition-all duration-500 ease-in-out transform hover:scale-105"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -55,7 +55,7 @@ const ProfileCard = ({ name, title, photoUrl, socialLinks }) => {
             ))}
           </motion.h2>
           <motion.p
-            className="text-gray-200 mb-4 transition-all duration-500 ease-in-out opacity-80 hover:opacity-100"
+            className="text-gray-200 mb-2 transition-all duration-500 ease-in-out opacity-80 hover:opacity-100"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.8 }}
             whileHover={{ opacity: 1 }}
