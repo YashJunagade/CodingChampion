@@ -6,14 +6,12 @@ import { db } from '../../src/config/firebase'
 import Loader from '../../src/Components/Loader/Loader'
 import { motion } from 'framer-motion'
 
-// this comment is for reference: changin Name from SlipList to LabList :
-// import LabList from '../Solutions/Labbook Solutions/LabList'
-
 const LabList = () => {
   const { subjectId } = useParams()
   const [subject, setSubject] = useState(null)
   const [filterAssignment, setFilterAssignment] = useState('')
   const [sortOrder, setSortOrder] = useState('asc')
+  const [hoveredIndex, setHoveredIndex] = useState(null)
 
   useEffect(() => {
     const fetchSubject = async () => {
@@ -47,15 +45,9 @@ const LabList = () => {
         assignment.assignment.toString() === filterAssignment
     )
     .sort((a, b) => {
-      // assignment was a string converting it to no. to sort
-
       const aNum = parseInt(a.assignment, 10)
       const bNum = parseInt(b.assignment, 10)
-      if (sortOrder === 'asc') {
-        return aNum - bNum
-      } else {
-        return bNum - aNum
-      }
+      return sortOrder === 'asc' ? aNum - bNum : bNum - aNum
     })
 
   const uniqueAssignments = [
@@ -68,33 +60,40 @@ const LabList = () => {
   }
 
   return (
-    <div className="flex min-h-screen bg-primary md:mt-16 md:ml-52 lg:ml-60">
+    <div className="flex min-h-screen md:mt-16 md:ml-52 lg:ml-60 bg-offWhite dark:bg-black">
       <div className="hidden md:inline relative">
         <SideBar />
       </div>
       <div className="flex-grow p-4 lg:p8">
-        <h1 className="text-3xl; font-bold mb-6 text-black">
+        <h1 className="text-3xl font-bold mb-6 text-black">
           {subject.subject} Labbook
         </h1>
-        <div className="flex flex-col md:flex-row justify-between items-center ">
+        <div className="flex flex-col md:flex-row justify-between items-center">
           <select
             value={filterAssignment}
             onChange={(e) => setFilterAssignment(e.target.value)}
-            className="w-full sm:w-48 p-2 mb-2 sm:mb-0 rounded-md border border-primary2"
+            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-white shadow-md bg-accent text-white dark:bg-white dark:text-black text-center font-bold"
           >
-            <option value="">All Assignments</option>
+            <option value="" className="bg-black hover:bg-accent">
+              All Assignments
+            </option>
             {uniqueAssignments.map((assignment, index) => (
-              <option key={index} value={assignment}>
+              <option key={index} value={assignment} className="bg-black">
                 Assignment {assignment}
               </option>
             ))}
           </select>
-          <button
+          <motion.button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="w-full sm:w-auto px-4 py-2 bg-black text-white rounded hover:bg-accent transition-colors duration-300 mb-2"
+            className="bg-accent w-full md:w-60 px-4 py-2 rounded-md text-white font-bold m-4"
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
           >
             Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
-          </button>
+          </motion.button>
         </div>
 
         <motion.div
@@ -109,29 +108,48 @@ const LabList = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="rounded-custom overflow-hidden shadow-even-shadow mt-4"
+              className="rounded-t-custom shadow-even-shadow mt-4 bg-white"
             >
-              <div className="p-4 bg-secondary2 text-black">
-                <h2 className="text-xl font-semibold">
+              <div
+                style={{ background: '#A2A2A2' }}
+                className="p-4 rounded-t-custom bg-lightGray text-black"
+              >
+                <h2 className="text-xl font-bold">
                   Assignment {assignment.assignment}
                 </h2>
               </div>
               {assignment.sets.map((set, setIndex) => (
-                <div key={setIndex} className="p-4 bg-primary2 mt-2">
-                  <h3 className="text-lg font-semibold mb-2">
+                <div
+                  key={setIndex}
+                  className="mt-2"
+                  style={{ background: '#E2E2E2' }}
+                >
+                  <h3 className="text-lg font-semibold p-2">
                     Set: {setName(set.set)}
                   </h3>
-                  <ul className="divide-y divide-primary2">
+                  <ul className="divide-y">
                     {set.questions.map((question, qIndex) => (
                       <li
                         key={qIndex}
-                        className="py-2 hover:bg-accent transition-colors duration-200"
+                        onMouseEnter={() =>
+                          setHoveredIndex(`${index}-${setIndex}-${qIndex}`)
+                        }
+                        onMouseLeave={() => setHoveredIndex(null)}
+                        style={{
+                          backgroundColor:
+                            hoveredIndex === `${index}-${setIndex}-${qIndex}`
+                              ? '#E2E2E2'
+                              : '#FFFFFF',
+                          transition: 'background-color 0.2s ease',
+                        }}
+                        className="p-4 mt-2"
                       >
                         <Link
                           to={`/${subjectId}/${assignment.assignment}/${set.set}/${question.questionNo}`}
                           className="block"
                         >
                           <div
+                            style={style}
                             className="text-black mb-2"
                             dangerouslySetInnerHTML={{
                               __html: `Q${question.questionNo}. ${question.questionText}`,
@@ -152,3 +170,7 @@ const LabList = () => {
 }
 
 export default LabList
+
+const style = {
+  width: window.innerWidth >= 768 ? '90%' : '100%',
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Roadmaps() {
   return (
-    <div style={styles.container} className="md:mt-20 md:ml-56 lg:ml-64 mr-4">
+    <div style={styles.container} className="md:mt-20 m-2">
       <h1 style={styles.header}>🚧 Our team is working on this feature!</h1>
       <p style={styles.message}>Please try again after some time.</p>
       <a href="/" style={styles.link}>

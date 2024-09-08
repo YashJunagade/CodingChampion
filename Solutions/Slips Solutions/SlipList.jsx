@@ -116,7 +116,7 @@ const SlipList = () => {
               className="rounded-t-custom shadow-even-shadow mt-4 bg-white"
             >
               <div
-                style={{ background: '#E2E2E2' }}
+                style={{ background: '#A2A2A2' }}
                 className="p-4 rounded-t-custom bg-lightGray text-black"
               >
                 <h2 className="text-xl font-semibold">
