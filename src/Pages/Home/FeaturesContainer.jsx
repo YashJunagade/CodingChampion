@@ -2,7 +2,12 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
+function FeaturesContainer({
+  imgLink,
+  featureTitle,
+  featureDescription,
+  pageRoute,
+}) {
   return (
     <motion.div
       className="flex flex-col min-h-[260px] rounded-[15px] shadow-even-shadow overflow-hidden w-[72%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto"
@@ -26,7 +31,7 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
         transition={{ duration: 0.3 }}
       >
         <motion.img
-          src="test.webp"
+          src={imgLink}
           alt="feature"
           className=" w-full h-36 rounded-t-custom object-cover"
           whileHover={{ scale: 1.1 }}
