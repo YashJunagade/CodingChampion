@@ -116,7 +116,7 @@ const Navbar = React.memo(() => {
         md:px-6 md:fixed top-0 left-0 right-0"
       >
         <div className="flex">
-          <div className="md:hidden">
+          <div className="">
             <SideBar></SideBar>
           </div>
           <div className="w-40 pt-1">
