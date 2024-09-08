@@ -83,7 +83,7 @@ const SlipList = () => {
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className=" md:w-[50%] px-8 py-2 md:mb-0 rounded-md border-black shadow-md  bg-black text-white  text-center mb-2 font-bold"
+            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-black shadow-md  bg-black text-white  text-center font-bold "
           >
             <option value="">All Marks</option>
             {uniqueMarks.map((mark, index) => (
@@ -94,7 +94,7 @@ const SlipList = () => {
           </select>
           <motion.button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="bg-accent w-full md:w-[50%] px-4 py-2 rounded-md text-white font-bold"
+            className="bg-accent w-full md:w-60 px-4 py-2 rounded-md text-white font-bold m-4"
             whileHover={{
               scale: 1.05,
             }}

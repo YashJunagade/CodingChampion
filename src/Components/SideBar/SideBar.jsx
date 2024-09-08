@@ -125,8 +125,10 @@ function SideBar() {
       </div>
 
       {/* Sidebar (visible by default on md and lg, hidden on sm) */}
+
+      {/* changing the width of sidebar to 52 by default until the  size issue gets fixed  */}
       <div
-        className={`fixed md:mt-16 inset-y-0 left-0 z-40 w-60 bg-black text-white transform ${
+        className={`fixed md:mt-16 inset-y-0 left-0 z-40 w-52 lg:w-60 bg-black text-white transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out`}
       >

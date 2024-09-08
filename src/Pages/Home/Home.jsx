@@ -100,7 +100,7 @@ const MeetContributors = () => {
     },
     {
       name: 'Dipak Jadhav',
-      title: 'Software Engineer & Tech Innovator',
+      title: 'Software Engineer & Tech enthusiast',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1725769845/DipakJadhav_ifogkt.png',
       socialLinks: [
@@ -288,25 +288,25 @@ function Home() {
           ) : (
             <>
               <motion.span
-                className="text-xl block my-2"
+                className="text-xl block my-2  text-black dark:text-white"
                 variants={itemVariants}
               >
-                Crack Every <span className="text-accent"> Slip, </span>
+                Crack Every <span className="text-accent "> Slip, </span>
               </motion.span>
               <motion.span
-                className="text-xl block my-2"
+                className="text-xl block my-2  text-black dark:text-white"
                 variants={itemVariants}
               >
                 Master Every <span className="text-accent"> Lab, </span>
               </motion.span>
               <motion.span
-                className="text-xl block my-2"
+                className="text-xl block my-2  text-black dark:text-white"
                 variants={itemVariants}
               >
                 Solve Every<span className="text-accent"> Problem:</span>
               </motion.span>
               <motion.div
-                className="text-2xl md:text-3xl sm:mt-2 relative inline-block"
+                className="text-2xl md:text-3xl sm:mt-2 relative inline-block  text-black dark:text-white"
                 variants={lastLineVarient}
               >
                 <motion.span>Become a </motion.span>
