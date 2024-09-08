@@ -82,13 +82,65 @@ function ExpandingDiv({ subjects, title }) {
   }
 
   const getYearWord = () => {
-    if (title.includes('FY')) return 'First  Year'
-    if (title.includes('SY')) return 'Second  Year'
-    if (title.includes('TY')) return 'Third  Year'
+    if (title.includes('FY')) return 'First Year'
+    if (title.includes('SY')) return 'Second Year'
+    if (title.includes('TY')) return 'Third Year'
     return title
   }
 
   const yearWord = getYearWord()
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+  }
+
+  const subtitleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3,
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    },
+  }
+
+  const imageVariants = (index, isLeft) => ({
+    hidden: {
+      opacity: 0,
+      x: isLeft ? -100 : 100,
+      y: Math.random() * 200 - 100,
+      rotate: Math.random() * 360,
+      scale: 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 10,
+        delay: index * 0.1,
+        duration: 0.8,
+      },
+    },
+  })
+
+  const leftSubjects = subjects.slice(0, Math.ceil(subjects.length / 2))
+  const rightSubjects = subjects.slice(Math.ceil(subjects.length / 2))
 
   return (
     <motion.div
@@ -135,27 +187,60 @@ function ExpandingDiv({ subjects, title }) {
         ) : (
           <motion.div
             key="year-word"
-            className="flex flex-col items-center justify-center h-full"
+            className="flex flex-col items-center justify-center h-full relative"
             initial="hidden"
             animate="visible"
             exit="exit"
           >
-            <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white text-center mb-4"
-              style={{
-                fontSize: `${Math.min(dimensions.width / 12, dimensions.height / 3)}px`,
-              }}
-            >
-              {yearWord}
-            </motion.h2>
-            <motion.div
-              className="text-lg sm:text-xl text-black dark:text-white text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-            >
-              Explore your academic journey
-            </motion.div>
+            <div className="flex items-center justify-center w-full">
+              <div className="w-1/3 flex flex-col items-end justify-center">
+                {leftSubjects.map((subject, index) => (
+                  <motion.div
+                    key={index}
+                    className="mb-2"
+                    variants={imageVariants(index, true)}
+                  >
+                    <img
+                      src={subject.imgLink || '/api/placeholder/48/48'}
+                      alt={subject.sName}
+                      className="w-12 h-12 object-cover rounded-full"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+              <div className="w-2/3 flex flex-col items-center justify-center z-10">
+                <motion.h2
+                  variants={titleVariants}
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white text-center mb-4"
+                  style={{
+                    fontSize: `${Math.min(dimensions.width / 12, dimensions.height / 3)}px`,
+                  }}
+                >
+                  {yearWord}
+                </motion.h2>
+                <motion.div
+                  variants={subtitleVariants}
+                  className="text-lg sm:text-xl text-black dark:text-white text-center"
+                >
+                  Explore your academic journey
+                </motion.div>
+              </div>
+              <div className="w-1/3 flex flex-col items-start justify-center">
+                {rightSubjects.map((subject, index) => (
+                  <motion.div
+                    key={index}
+                    className="mb-2"
+                    variants={imageVariants(index, false)}
+                  >
+                    <img
+                      src={subject.imgLink || '/api/placeholder/48/48'}
+                      alt={subject.sName}
+                      className="w-12 h-12 object-cover rounded-full"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
             <motion.div
               className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
               initial={{ opacity: 0, y: -10 }}
