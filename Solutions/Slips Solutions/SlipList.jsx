@@ -71,7 +71,7 @@ const SlipList = () => {
         <SideBar />
       </div>
       <div className="flex-row p-4 lg:p8">
-        <h1 className="text-3xl font-bold mb-6 text-black">
+        <h1 className="text-2xl font-bold mb-6 text-black">
           {subject.subject} Slips
         </h1>
         <div className="flex flex-col md:flex-row justify-between items-center">
@@ -116,7 +116,7 @@ const SlipList = () => {
               className="rounded-t-custom shadow-even-shadow mt-4 bg-white"
             >
               <div
-                style={{ background: '#A2A2A2' }}
+                style={{ background: '#E2E2E2' }}
                 className="p-4 rounded-t-custom bg-lightGray text-black"
               >
                 <h2 className="text-xl font-semibold">
