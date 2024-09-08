@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
 import { Resizable } from 're-resizable'
 import AskDevaButton from './Deva/AskDeva'
+import { motion } from 'framer-motion'
 
 const apiKeys = [
   import.meta.env.VITE_GROQ_API_KEY_1,
@@ -238,23 +239,34 @@ function CodeEditor({ language, solution }) {
   return (
     <div className="flex flex-col h-full overflow-hidden">
       <div className="flex justify-between mb-1 md:mx-1">
-        <button
+        <motion.button
           onClick={fetchSolution}
           disabled={loading}
-          className={`px-4 py-2 rounded text-white font-semibold ${
-            loading
-              ? 'bg-[#D43212] cursor-not-allowed'
-              : 'bg-[#D43212] hover:bg-accent'
-          }`}
+          whileHover={{
+            scale: 1.05,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+          className={`bg-accent md:px-4 px-3 py-1 md:py-2 rounded-md text-white
+        font-semibold md:font-bold ${
+          loading ? 'bg-accent cursor-not-allowed' : 'bg-accent hover:bg-accent'
+        }`}
         >
           {loading ? 'Magic ...' : 'Explain Me'}
-        </button>
-        <button
+        </motion.button>
+
+        <motion.button
           onClick={copyToClipboard}
-          className="px-4 py-2 rounded bg-[#D43212] text-white font-semibold hover:bg-accent"
+          whileHover={{
+            scale: 1.05,
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
+          className="bg-accent md:px-4 px-3 py-1 md:py-2 rounded-md text-white
+        font-semibold md:font-bold "
         >
           Copy
-        </button>
+        </motion.button>
       </div>
 
       <Resizable
@@ -309,7 +321,7 @@ function CodeEditor({ language, solution }) {
               disabled={loading}
               className={`px-4 py-2 rounded text-white font-semibold ${
                 loading
-                  ? 'bg-primary2 cursor-not-allowed'
+                  ? 'bg-accent cursor-not-allowed'
                   : 'bg-black hover:bg-accent'
               }`}
             >

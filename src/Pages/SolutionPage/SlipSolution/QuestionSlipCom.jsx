@@ -6,7 +6,7 @@ function QuestionCom({ slipId, questionId, text, marks }) {
         Slip No : {slipId}
       </div>
       <div
-        className="text-base mb-4 text-primary"
+        className="text-white mb-4 text-primary"
         dangerouslySetInnerHTML={{
           __html: `Q. ${text}`,
         }}

@@ -78,7 +78,7 @@ const SlipList = () => {
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-black shadow-md  bg-accent text-white dark:text-black text-center font-bold"
+            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-white border-2 shadow-md  bg-black text-white dark:bg-white dark:text-black text-center font-bold"
           >
             <option value="">All Marks</option>
             {uniqueMarks.map((mark, index) => (
