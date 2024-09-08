@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
   return (
     <motion.div
-      className="flex flex-col min-h-[260px] rounded-[15px] shadow-even-shadow overflow-hidden w-[72%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto bg-white border-2 border-accent"
+      className="flex flex-col min-h-[260px] rounded-[15px] shadow-even-shadow overflow-hidden w-[72%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto"
       whileHover={{
         boxShadow: '0px 10px 20px rgba(247, 87, 8, 0.3)',
         scale: 1.05,
@@ -21,7 +21,7 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
       }}
     >
       <motion.div
-        className=" rounded-t-custom bg-accent"
+        className=" rounded-t-custom bg-black"
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
@@ -33,7 +33,7 @@ function FeaturesContainer({ featureTitle, featureDescription, pageRoute }) {
           transition={{ duration: 0.3 }}
         />
       </motion.div>
-      <div className="p-2 flex flex-col h-full">
+      <div className="p-2 flex flex-col h-full bg-white">
         <motion.h2
           className="items-center text-lg font-semibold text-black h-auto"
           initial={{ opacity: 0, y: 20 }}
