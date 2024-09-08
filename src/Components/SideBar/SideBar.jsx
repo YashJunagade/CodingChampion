@@ -117,7 +117,7 @@ function SideBar() {
         {!isSidebarOpen && (
           <button
             onClick={toggleSidebar}
-            className="dark:text-white text:black p-2 mt-2"
+            className="dark:text-white text-black p-2 mt-2"
           >
             <FaBars size={24} />
           </button>
@@ -140,7 +140,7 @@ function SideBar() {
             {isSidebarOpen && (
               <button
                 onClick={toggleSidebar}
-                className="absolute top-1/3 right-4 transform -translate-y-1/2 text-white sm:block md:hidden lg:hidden"
+                className="absolute top-1/3 right-4 transform -translate-y-1/2 dark:text-white text-black sm:block md:hidden lg:hidden"
               >
                 <FaTimes size={20} />
               </button>
