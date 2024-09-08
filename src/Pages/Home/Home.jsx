@@ -345,19 +345,19 @@ function Home() {
         </motion.h1>
         <div className="flex flex-col sm:grid md:grid-cols-2 gap-y-8 lg:gap-y-12 md:mt-6">
           <FeaturesContainer
-            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725817925/PracticalSlip.jpeg_uuk1bl.jpg"
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/PracticalWide.jpeg_ag6v9z.jpg"
             featureTitle="Practical Slips"
             featureDescription="FY, SY and TY BBA(C.A.) practical slips with solutions"
             pageRoute="/slip"
           />
           <FeaturesContainer
-            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725817925/Labbook.jpeg_ostqxb.jpg"
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
             featureTitle="Lab Book"
             featureDescription="FY, SY and TY BBA(C.A.) Lab book Assignments with solutions"
             pageRoute="/labbook"
           />
           <FeaturesContainer
-            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725817925/Labbook.jpeg_ostqxb.jpg"
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725819008/dsa_w2lzol.jpg"
             featureTitle="Data Structures & Algorithms"
             featureDescription="Practice your DSA skills with 1000+ selected questions"
             pageRoute="/dsa"
