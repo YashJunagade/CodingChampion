@@ -117,7 +117,7 @@ function SideBar() {
         {!isSidebarOpen && (
           <button
             onClick={toggleSidebar}
-            className="dark:text-white text:black p-2"
+            className="dark:text-white text:black p-2 mt-2"
           >
             <FaBars size={24} />
           </button>
@@ -128,7 +128,7 @@ function SideBar() {
 
       {/* changing the width of sidebar to 52 by default until the  size issue gets fixed  */}
       <div
-        className={`fixed md:mt-16 inset-y-0 left-0 z-40 w-52 lg:w-60 bg-black text-white transform ${
+        className={`fixed md:mt-16 inset-y-0 left-0 z-40 w-52 lg:w-60 text-black bg-moreWhite dark:bg-moreBlack dark:text-white  border-accent dark:ext-white transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out`}
       >

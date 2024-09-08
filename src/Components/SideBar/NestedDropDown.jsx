@@ -46,7 +46,7 @@ function NestedDropdown({ title, subjects, isLast }) {
                 <Link
                   key={index}
                   to={subject.link}
-                  className={`block px-6 py-2 hover:bg-accent hover:text-white transition-colors duration-200 rounded ${
+                  className={`block px-6 py-2 text-black dark:text-white hover:bg-accent hover:text-white transition-colors duration-200 rounded ${
                     isActive(subject.link) ? 'text-accent' : ''
                   } ${index === subjects.length - 1 ? 'last-subject' : ''}`}
                 >

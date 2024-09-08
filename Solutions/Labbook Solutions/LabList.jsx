@@ -65,7 +65,7 @@ const LabList = () => {
         <SideBar />
       </div>
       <div className="flex-grow p-4 lg:p8">
-        <h1 className="text-3xl font-bold mb-6 text-black">
+        <h1 className="text-2xl font-bold mb-6 text-black dark:text-white">
           {subject.subject} Labbook
         </h1>
         <div className="flex flex-col md:flex-row justify-between items-center">

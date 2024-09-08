@@ -19,6 +19,8 @@ export default {
 
         //dark theme
         //**************************************** */
+        moreBlack: '#161616',
+        moreWhite: '#F1F1F1',
       },
       boxShadow: {
         'even-shadow': '0 0 8px rgba(0, 0, 0, 0.5)', // for even shadows on all sides of the box
