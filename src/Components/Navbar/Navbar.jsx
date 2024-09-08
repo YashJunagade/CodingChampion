@@ -60,6 +60,7 @@ const Navbar = React.memo(() => {
     '/labbook',
     '/:subjectId/slipList',
     '/:subjectId/labList',
+    '/profile',
   ]
 
   // Function to check if the current route matches any of the no-sidebar routes
