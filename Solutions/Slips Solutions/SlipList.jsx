@@ -113,7 +113,10 @@ const SlipList = () => {
               transition={{ delay: index * 0.1 }}
               className="rounded-custom shadow-even-shadow mt-4 bg-white"
             >
-              <div className="p-4 rounded-t-custom bg-lightGray text-black">
+              <div
+                style={{ background: '#E2E2E2' }}
+                className="p-4 rounded-t-custom bg-lightGray text-black"
+              >
                 <h2 className="text-xl font-semibold">
                   Slip No: {slip.slipId}
                 </h2>
@@ -139,6 +142,7 @@ const SlipList = () => {
                     >
                       <div className="md:flex justify-between h-full">
                         <div
+                          style={style}
                           className="text-black mb-2"
                           dangerouslySetInnerHTML={{
                             __html: `Q. ${question.text}`,
@@ -161,3 +165,7 @@ const SlipList = () => {
 }
 
 export default SlipList
+
+const style = {
+  width: window.innerWidth >= 768 ? '90%' : '100%', // Adjust width for 'md' size (768px and above)
+}
