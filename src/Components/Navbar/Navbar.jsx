@@ -142,13 +142,13 @@ const Navbar = React.memo(() => {
               <img
                 className="hidden dark:block"
                 src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779658/DarkModeLogo_if19sr.svg"
-                alt="Unknown logo"
+                alt="CodingChampion logo"
                 width={200}
               />
               <img
                 className="dark:hidden"
                 src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779657/LightModeLogo_b4g7mj.svg"
-                alt="Unknown logo"
+                alt="CodingChampion logo"
                 width={200}
               />
             </Link>

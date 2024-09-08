@@ -12,20 +12,20 @@ function Footer() {
             <img
               className="hidden dark:block"
               src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779658/DarkModeLogo_if19sr.svg"
-              alt="Unknown logo"
+              alt="CodingChampion logo"
               width={200}
             />
             <img
               className="dark:hidden"
               src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779657/LightModeLogo_b4g7mj.svg"
-              alt="Unknown logo"
+              alt="CodingChampion logo"
               width={200}
             />
           </Link>
         </div>
         <div className="-mt-4">
           <p className="text-sm font-medium text-primary2">
-            © 2024 Unknown. All rights reserved.
+            © 2024 Coding🏆Champion. All rights reserved.
           </p>
         </div>
       </div>
