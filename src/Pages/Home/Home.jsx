@@ -89,7 +89,7 @@ const MeetContributors = () => {
   const profiles = [
     {
       name: 'Yash Junagade',
-      title: 'Web Developer & Tech enthusiast',
+      title: 'Software Engineer & Tech enthusiast',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1725769845/YashJunagade_inr9w4.jpg',
       socialLinks: [

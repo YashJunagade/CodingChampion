@@ -115,12 +115,32 @@ const Navbar = React.memo(() => {
         className="w-full h-14 md:h-16 bg-offWhite dark:bg-black dark:text-white text-black flex justify-between items-center px-4 
         md:px-6 md:fixed top-0 left-0 right-0"
       >
-        <div className="md:hidden pl-10">
+        <div className="md:hidden">
           <SideBar></SideBar>
         </div>
-        <div>
-          <img src="" alt="logo" />
+        <div className="w-40 ml-5 md:32">
+          <Link to="/">
+            <img
+              className="hidden dark:block"
+              src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779658/DarkModeLogo_if19sr.svg"
+              alt="Unknown logo"
+              width={200}
+            />
+            <img
+              className="dark:hidden"
+              src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779657/LightModeLogo_b4g7mj.svg"
+              alt="Unknown logo"
+              width={200}
+            />
+          </Link>
         </div>
+        {/* <div className="block lg:hidden">
+          <img
+            src="https://res.cloudinary.com/yashjunagade/image/upload/v1725780763/Trophy_ywgnca.svg"
+            alt="Unknown logo"
+            width={25}
+          />
+        </div> */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
