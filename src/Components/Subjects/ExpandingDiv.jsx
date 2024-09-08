@@ -30,11 +30,13 @@ function ExpandingDiv({ subjects, title }) {
     setShowSubjects(!showSubjects)
     controls.start({
       scale: [1, 0.98, 1],
-      transition: { duration: 0.3, ease: 'easeInOut' },
+      transition: { duration: 0.2, ease: 'easeInOut' },
     })
   }
 
   const isLabbokRoute = location.pathname.includes('/labbook')
+  const isFirstYear = title.includes('FY')
+  const isSecondYear = title.includes('SY')
 
   const containerVariants = {
     hidden: { opacity: 0, height: 0 },
@@ -42,40 +44,40 @@ function ExpandingDiv({ subjects, title }) {
       opacity: 1,
       height: 'auto',
       transition: {
-        height: { type: 'spring', stiffness: 300, damping: 30, duration: 0.4 },
-        opacity: { duration: 0.3, ease: 'easeInOut' },
+        height: { type: 'spring', stiffness: 500, damping: 30, duration: 0.2 },
+        opacity: { duration: 0.2, ease: 'easeInOut' },
       },
     },
     exit: {
       opacity: 0,
       height: 0,
       transition: {
-        height: { type: 'spring', stiffness: 300, damping: 30, duration: 0.4 },
-        opacity: { duration: 0.3, ease: 'easeInOut' },
+        height: { type: 'spring', stiffness: 500, damping: 30, duration: 0.2 },
+        opacity: { duration: 0.2, ease: 'easeInOut' },
       },
     },
   }
 
   const contentVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0, scale: 0.98 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 0.4,
-        ease: [0.25, 0.1, 0.25, 1],
+        duration: 0.2,
+        ease: 'easeOut',
       },
     },
   }
 
   const childVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: (i) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.05,
-        duration: 0.3,
+        delay: i * 0.03,
+        duration: 0.2,
         ease: 'easeOut',
       },
     }),
@@ -91,25 +93,25 @@ function ExpandingDiv({ subjects, title }) {
   const yearWord = getYearWord()
 
   const titleVariants = {
-    hidden: { opacity: 0, y: -20 },
+    hidden: { opacity: 0, y: -10 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: 'easeOut',
       },
     },
   }
 
   const subtitleVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.3,
-        duration: 0.5,
+        delay: 0.1,
+        duration: 0.3,
         ease: 'easeOut',
       },
     },
@@ -118,9 +120,9 @@ function ExpandingDiv({ subjects, title }) {
   const imageVariants = (index, isLeft) => ({
     hidden: {
       opacity: 0,
-      x: isLeft ? -100 : 100,
-      y: Math.random() * 200 - 100,
-      rotate: Math.random() * 360,
+      x: isLeft ? -50 : 50,
+      y: Math.random() * 100 - 50,
+      rotate: Math.random() * 180,
       scale: 0,
     },
     visible: {
@@ -131,10 +133,10 @@ function ExpandingDiv({ subjects, title }) {
       scale: 1,
       transition: {
         type: 'spring',
-        stiffness: 100,
-        damping: 10,
-        delay: index * 0.1,
-        duration: 0.8,
+        stiffness: 200,
+        damping: 15,
+        delay: index * 0.05,
+        duration: 0.3,
       },
     },
   })
@@ -145,7 +147,7 @@ function ExpandingDiv({ subjects, title }) {
   return (
     <motion.div
       ref={divRef}
-      className="bg-white dark:bg-black w-[94%] mx-auto mt-11 shadow-lg dark:shadow-gray-700/30 sm:mt-16 md:mb-16 px-4 py-4 min-h-40 sm:min-h-48 md:min-h-56 lg:min-h-64 rounded-lg cursor-pointer border border-gray-200 dark:border-gray-700 relative overflow-hidden"
+      className="bg-white dark:bg-black w-[94%] mx-auto mt-11 shadow-lg border border-accent dark:shadow-gray-700/30 sm:mt-16 md:mb-16 px-4 py-4 min-h-40 sm:min-h-48 md:min-h-56 lg:min-h-64 rounded-lg cursor-pointer dark:border-accent relative overflow-hidden"
       onClick={toggleVisibility}
       whileHover={{ boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}
       animate={controls}
@@ -179,7 +181,7 @@ function ExpandingDiv({ subjects, title }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <ChevronUp className="w-6 h-6 text-black dark:text-white" />
             </motion.div>
@@ -203,7 +205,7 @@ function ExpandingDiv({ subjects, title }) {
                     <img
                       src={subject.imgLink || '/api/placeholder/48/48'}
                       alt={subject.sName}
-                      className="w-12 h-12 object-cover rounded-full"
+                      className="w-10 h-10 md:w-14 md:h-14 object-cover rounded-full"
                     />
                   </motion.div>
                 ))}
@@ -220,7 +222,7 @@ function ExpandingDiv({ subjects, title }) {
                 </motion.h2>
                 <motion.div
                   variants={subtitleVariants}
-                  className="text-lg sm:text-xl text-black dark:text-white text-center"
+                  className="text-lg sm:text-xl text-black dark:text-white text-center hidden md:block"
                 >
                   Explore your academic journey
                 </motion.div>
@@ -235,18 +237,18 @@ function ExpandingDiv({ subjects, title }) {
                     <img
                       src={subject.imgLink || '/api/placeholder/48/48'}
                       alt={subject.sName}
-                      className="w-12 h-12 object-cover rounded-full"
+                      className="w-10 h-10 md:w-14 md:h-14 object-cover rounded-full"
                     />
                   </motion.div>
                 ))}
               </div>
             </div>
             <motion.div
-              className="absolute bottom-2 left-1/2 transform -translate-x-1/2"
+              className={`absolute left-1/2 transform -translate-x-1/2 ${isFirstYear ? '-bottom-12' : 'bottom-0'}`}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
               <ChevronDown className="w-6 h-6 text-black dark:text-white" />
             </motion.div>
