@@ -36,7 +36,7 @@ function CodeEditor({ language, solution }) {
   const [isResizable, setIsResizable] = useState(window.innerWidth > 768)
   const [editorWidth, setEditorWidth] = useState('100%')
   const editorRef = useRef(null)
-
+  const editorContainerRef = useRef(null)
   // State for user query and its response
   const [userQuery, setUserQuery] = useState('')
   const [queryResponse, setQueryResponse] = useState('')
@@ -168,14 +168,14 @@ function CodeEditor({ language, solution }) {
     const isAtBottom = visibleRange.endLineNumber === lineCount
 
     if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-      return
+      e.preventDefault()
+      window.scrollBy(0, e.deltaY)
+    } else {
+      e.preventDefault()
+      const scrollTop = editor.getScrollTop()
+      editor.setScrollTop(scrollTop + e.deltaY)
     }
-
-    e.preventDefault()
-    const scrollTop = editor.getScrollTop()
-    editor.setScrollTop(scrollTop + e.deltaY)
   }
-
   useEffect(() => {
     const updateEditorOptions = () => {
       const isMobile = window.innerWidth < 768
@@ -197,6 +197,7 @@ function CodeEditor({ language, solution }) {
           alwaysConsumeMouseWheel: false,
         },
         readOnly: isMobile,
+        domReadOnly: isMobile, // Prevent focusing on mobile
       })
     }
 
@@ -214,6 +215,7 @@ function CodeEditor({ language, solution }) {
 
   const editorComponent = (
     <div
+      ref={editorContainerRef}
       style={{
         width: '100%',
         height: '100%',
