@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import NavLink from '../../Components/Navbar/NavLink'
 import { useUser } from '../../store/UserContext'
 import { auth } from '../../config/firebase'
@@ -51,6 +51,8 @@ const Navbar = React.memo(() => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const navigate = useNavigate()
   const modalRef = useRef(null)
+  const location = useLocation() // moved inside the component
+  const isHome = location.pathname === '/' // check if it's exactly the homepage
 
   const profilePicUrl = useMemo(() => {
     return userDetails?.profilePic
@@ -116,9 +118,12 @@ const Navbar = React.memo(() => {
         md:px-6 md:fixed top-0 left-0 right-0"
       >
         <div className="flex">
-          <div className="">
-            <SideBar></SideBar>
-          </div>
+          {!isHome && (
+            <div className="">
+              <SideBar></SideBar>{' '}
+              {/* SideBar will only render if it's not the homepage */}
+            </div>
+          )}
           <div className="w-40 pt-1">
             <Link to="/">
               <img
@@ -136,13 +141,7 @@ const Navbar = React.memo(() => {
             </Link>
           </div>
         </div>
-        {/* <div className="block lg:hidden">
-          <img
-            src="https://res.cloudinary.com/yashjunagade/image/upload/v1725780763/Trophy_ywgnca.svg"
-            alt="Unknown logo"
-            width={25}
-          />
-        </div> */}
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
