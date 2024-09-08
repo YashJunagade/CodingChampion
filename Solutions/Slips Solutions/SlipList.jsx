@@ -78,11 +78,13 @@ const SlipList = () => {
           <select
             value={filterMarks}
             onChange={(e) => setFilterMarks(e.target.value)}
-            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-white border-2 shadow-md  bg-black text-white dark:bg-white dark:text-black text-center font-bold"
+            className="w-full px-8 py-2 m-4 md:mb-0 rounded-md border-white shadow-md  bg-accent text-white dark:bg-white dark:text-black text-center font-bold"
           >
-            <option value="">All Marks</option>
+            <option value="" className="bg-black hover:bg-accent">
+              All Marks
+            </option>
             {uniqueMarks.map((mark, index) => (
-              <option key={index} value={mark}>
+              <option key={index} value={mark} className="bg-black ">
                 {mark} marks
               </option>
             ))}
@@ -167,5 +169,5 @@ const SlipList = () => {
 export default SlipList
 
 const style = {
-  width: window.innerWidth >= 768 ? '90%' : '100%', // Adjust width for 'md' size (768px and above)
+  width: window.innerWidth >= 768 ? '90%' : '100%',
 }
