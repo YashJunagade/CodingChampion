@@ -176,6 +176,7 @@ function CodeEditor({ language, solution }) {
       editor.setScrollTop(scrollTop + e.deltaY)
     }
   }
+
   useEffect(() => {
     const updateEditorOptions = () => {
       const isMobile = window.innerWidth < 768
@@ -311,7 +312,7 @@ function CodeEditor({ language, solution }) {
         >
           <div className="flex flex-col">
             <textarea
-              className="p-2 rounded border mb-4"
+              className="p-2 rounded border mt-6 mb-4"
               placeholder="Type your query or doubt here..."
               value={userQuery}
               onChange={(e) => setUserQuery(e.target.value)}
