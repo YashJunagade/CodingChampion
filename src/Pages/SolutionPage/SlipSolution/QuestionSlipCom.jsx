@@ -14,7 +14,7 @@ function QuestionCom({ slipId, questionId, text, marks }) {
           __html: `Q. ${text}`,
         }}
       />
-      <div className="text-sm font-medium text-primary inline-block bg-accent rounded px-2 py-1">
+      <div className="text-sm font-medium text-white inline-block bg-accent rounded px-2 py-1">
         {marks} Marks
       </div>
     </div>
