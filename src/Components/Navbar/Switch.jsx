@@ -1,24 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import { useTheme } from '../../store/ThemeContext'
 
 const Switch = () => {
-  // Get the theme from localStorage or default to 'light'
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-
-  // Apply/remove the 'dark' class on the body
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.body.classList.add('dark') // Add 'dark' class to body
-    } else {
-      document.body.classList.remove('dark') // Remove 'dark' class from body
-    }
-    localStorage.setItem('theme', theme) // Store theme in localStorage
-  }, [theme])
-
-  // Toggle between light and dark themes
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <StyledWrapper>
@@ -32,7 +17,7 @@ const Switch = () => {
           id="themeToggle"
           className="themeToggleInput"
           checked={theme === 'dark'}
-          onChange={toggleTheme} // Toggle theme on click
+          onChange={toggleTheme}
         />
         <svg
           width="40"

@@ -8,6 +8,7 @@ import { toast } from 'react-toastify'
 import { Resizable } from 're-resizable'
 import AskDevaButton from './Deva/AskDeva'
 import { motion } from 'framer-motion'
+import { useTheme } from '../../store/ThemeContext'
 
 const apiKeys = [
   import.meta.env.VITE_GROQ_API_KEY_1,
@@ -34,12 +35,14 @@ function CodeEditor({ language, solution }) {
   const [loading, setLoading] = useState(false)
   const [editorOptions, setEditorOptions] = useState({})
   const [isResizable, setIsResizable] = useState(window.innerWidth > 768)
-  const [editorWidth, setEditorWidth] = useState('100%')
+  const [editorWidth, setEditorWidth] = useState('99%')
+  const [editorHeight, setEditorHeight] = useState('100%')
   const editorRef = useRef(null)
   const editorContainerRef = useRef(null)
   // State for user query and its response
   const [userQuery, setUserQuery] = useState('')
   const [queryResponse, setQueryResponse] = useState('')
+  const { theme } = useTheme()
 
   const fetchSolution = async () => {
     const apiKey = apiKeys[currentKeyIndex]
@@ -177,11 +180,14 @@ function CodeEditor({ language, solution }) {
     }
   }
 
+  let isMobile = null
+
   useEffect(() => {
     const updateEditorOptions = () => {
-      const isMobile = window.innerWidth < 768
+      isMobile = window.innerWidth < 768
       setIsResizable(!isMobile)
-      setEditorWidth(isMobile ? '100%' : editorWidth)
+      setEditorWidth(isMobile ? '98%' : editorWidth)
+      setEditorHeight(isMobile ? '40%' : editorHeight)
 
       setEditorOptions({
         minimap: { enabled: !isMobile },
@@ -192,7 +198,7 @@ function CodeEditor({ language, solution }) {
         tabSize: 2,
         automaticLayout: true,
         scrollbar: {
-          vertical: 'visible',
+          vertical: isMobile ? 'hidden' : 'visible',
           horizontal: 'visible',
           handleMouseWheel: true,
           alwaysConsumeMouseWheel: false,
@@ -212,26 +218,26 @@ function CodeEditor({ language, solution }) {
         editorElement.removeEventListener('wheel', handleEditorWheel)
       }
     }
-  }, [editorWidth])
+  }, [editorWidth, editorHeight])
 
   const editorComponent = (
     <div
       ref={editorContainerRef}
       style={{
         width: '100%',
-        height: '100%',
-        borderStartStartRadius: '10px',
-        borderEndStartRadius: '10px',
+        height: '94%',
+        borderRadius: '10px',
         overflow: 'hidden',
         margin: '0 5px',
         zIndex: '1',
         boxSizing: 'border-box',
+        border: '2px solid #F51524',
       }}
     >
       <Editor
         height="100%"
         language={language}
-        theme="vs-dark"
+        theme={theme === 'dark' ? 'vs-dark' : 'light'}
         value={solution}
         onMount={handleEditorDidMount}
         options={editorOptions}
@@ -240,7 +246,7 @@ function CodeEditor({ language, solution }) {
   )
 
   return (
-    <div className="flex flex-col h-full overflow-hidden">
+    <div className={`flex flex-col h-full overflow-hidden ${theme}`}>
       <div className="flex justify-between mb-1 md:mx-1">
         <motion.button
           onClick={fetchSolution}
@@ -278,7 +284,7 @@ function CodeEditor({ language, solution }) {
           width: '100%',
           height: '100%',
         }}
-        size={{ width: editorWidth, height: '100%' }}
+        size={{ width: editorWidth, height: editorHeight }}
         onResizeStop={(e, direction, ref, d) => {
           setEditorWidth((prevWidth) => {
             const newWidth = parseInt(prevWidth) + d.width

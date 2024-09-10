@@ -68,7 +68,7 @@ const SlipSolution = () => {
   }
 
   return (
-    <div className="flex flex-col h-auto mx-auto px-2 border-t-2 py-2 min-h-screen bg-black md:mt-16">
+    <div className="flex flex-col h-full mx-auto px-2 py-2 bg-white dark:bg-black md:mt-16">
       <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
         {/* question slip  div */}
         {/* // */}
