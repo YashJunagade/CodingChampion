@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState, Suspense } from 'react'
-
 import QuestionLabCom from './QuestionLabCom'
 import CodeEditor from '../CodeEditor'
 import { useParams } from 'react-router-dom'
@@ -19,6 +18,8 @@ function LabSolution() {
   const [solution, setSolution] = useState('')
   const [loading, setLoading] = useState(true)
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768)
+
+  const panelRef = useRef(null)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,10 +62,27 @@ function LabSolution() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  //format same as SlipSolution.jsx :->
+  const handleMouseDown = (e) => {
+    e.preventDefault()
+    document.addEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mouseup', handleMouseUp)
+  }
+
+  const handleMouseMove = (e) => {
+    if (panelRef.current) {
+      const newWidth = (e.clientX / window.innerWidth) * 100
+      setQuestionSlipWidth(`${newWidth}%`)
+    }
+  }
+
+  const handleMouseUp = () => {
+    document.removeEventListener('mousemove', handleMouseMove)
+    document.removeEventListener('mouseup', handleMouseUp)
+  }
+
   return (
-    <div className="flex flex-col h-auto mx-auto px-2 py-2 min-h-screen bg-primary">
-      <div className="flex flex-col md:flex-row w-full h-full">
+    <div className="flex flex-col h-full mx-auto px-2 py-2 bg-white dark:bg-black md:mt-16">
+      <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
         {isLargeScreen ? (
           <Resizable
             size={{ width: questionSlipWidth, height: 'auto' }}
@@ -75,7 +93,7 @@ function LabSolution() {
               setQuestionSlipWidth(ref.style.width)
             }}
           >
-            <div className="h-full overflow-y-auto">
+            <div className="h-full overflow-y-auto md:mr-1 md:rounded-lg">
               {loading ? (
                 <div className="flex justify-center items-center h-full">
                   <Loader />
@@ -101,15 +119,18 @@ function LabSolution() {
                 assignmentNo={assignmentNo}
                 setName={setName}
                 questionNo={questionNo}
-                questionTExt={questionText}
+                questionText={questionText}
               />
             )}
           </div>
         )}
-        {/* resizer line */}
-        {isLargeScreen && <div className="w-1 cursor-col-resize bg-accent" />}
 
-        {/* code editor div  */}
+        {isLargeScreen && (
+          <div
+            className="w-4 cursor-col-resize"
+            onMouseDown={handleMouseDown}
+          />
+        )}
 
         <div
           className={`overflow-y-auto ${
