@@ -187,7 +187,7 @@ function CodeEditor({ language, solution }) {
       isMobile = window.innerWidth < 768
       setIsResizable(!isMobile)
       setEditorWidth(isMobile ? '98%' : editorWidth)
-      setEditorHeight(isMobile ? '40%' : editorHeight)
+      setEditorHeight(isMobile ? '50%' : editorHeight)
 
       setEditorOptions({
         minimap: { enabled: !isMobile },
