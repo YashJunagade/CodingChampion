@@ -100,7 +100,7 @@ const SlipSolution = () => {
         ) : (
           <div className="w-full md:w-[35%] md:mt-11">
             {loading ? (
-              <div classname="flex justify-center items-center h-full">
+              <div className="flex justify-center items-center h-full">
                 <Loader />
               </div>
             ) : (

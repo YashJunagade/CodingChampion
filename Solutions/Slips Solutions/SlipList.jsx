@@ -12,6 +12,10 @@ import {
 } from 'firebase/firestore'
 import { db } from '../../src/config/firebase'
 import { motion } from 'framer-motion'
+import { uploadSlipData } from './SlipData'
+
+// console.log('Starting data upload...')
+// uploadSlipData().then(() => console.log('Data upload complete'))
 
 const SlipList = () => {
   const { subjectId } = useParams()
