@@ -1,5 +1,3 @@
-Here's a draft for the README file of your **CodingChampion** GitHub repository:
-
 ---
 
 # CodingChampion
@@ -57,6 +55,6 @@ We welcome contributions! If you have ideas or would like to contribute to **Cod
 
 This project is licensed under the MIT License.
 
----
+[Visit CodingChampion](https://codingchampion.in)
 
-Let me know if you'd like to modify or add anything!
+---
