@@ -1,32 +1,35 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
+import { Twitter, Instagram, Github } from 'lucide-react'
 
 function Footer() {
+  const socialLinks = [
+    { icon: Twitter, href: 'https://x.com/coding_champion' },
+    { icon: Instagram, href: 'https://www.instagram.com/codingchampion.in/' },
+    { icon: Github, href: 'https://github.com/YashJunagade/CodingChampion' },
+  ]
+
   return (
     <footer className="mt-4 py-4 bg-offWhite dark:bg-black dark:text-white">
-      {/* <div className="text-center font-bold">
-        Made with ❤️ by Yash and Dipak
-      </div> */}
-      <div className="mx-auto w-full items-center justify-between px-4 text-center">
-        <div className="inline-flex items-center">
-          <Link to="/">
-            <img
-              className="hidden dark:block"
-              src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779658/DarkModeLogo_if19sr.svg"
-              alt="CodingChampion logo"
-              width={200}
-            />
-            <img
-              className="dark:hidden"
-              src="https://res.cloudinary.com/yashjunagade/image/upload/v1725779657/LightModeLogo_b4g7mj.svg"
-              alt="CodingChampion logo"
-              width={200}
-            />
-          </Link>
-        </div>
-        <div className="-mt-2">
-          <p className="text-sm font-medium text-primary2">
-            © 2024 Coding🏆Champion. All rights reserved.
-          </p>
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center">
+          <div className="flex justify-center space-x-6 mb-6">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary2 dark:text-gray-300 hover:text-accent dark:hover:text-accent transition-colors duration-300"
+              >
+                <link.icon size={24} />
+              </a>
+            ))}
+          </div>
+
+          <div className="text-sm text-primary2">
+            © {new Date().getFullYear()} Coding🏆Champion. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
