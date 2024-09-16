@@ -4,7 +4,6 @@ import { Twitter, Instagram, Github } from 'lucide-react'
 
 function Footer() {
   const socialLinks = [
-    { icon: Twitter, href: 'https://x.com/coding_champion' },
     { icon: Instagram, href: 'https://www.instagram.com/codingchampion.in/' },
     { icon: Github, href: 'https://github.com/YashJunagade/CodingChampion' },
   ]

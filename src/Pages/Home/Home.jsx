@@ -95,7 +95,7 @@ const MeetContributors = () => {
       socialLinks: [
         'https://x.com/YashJunagade211',
         'https://github.com/YashJunagade',
-        'https://www.linkedin.com/in/yash-junagade/',
+        'https://www.linkedin.com/in/yashjunagade/',
       ],
     },
     {
