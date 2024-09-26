@@ -3,7 +3,7 @@ import { db } from '../../../config/firebase'
 import { useParams } from 'react-router-dom'
 import CodeEditor from '../CodeEditor'
 import { doc, getDoc } from 'firebase/firestore'
-import QuestionSlipCom from './QuestionSlipCom'
+import SlipQuestion from './SlipQuestion'
 import Loader from '../../../Components/Loader/Loader'
 import { Resizable } from 're-resizable'
 
@@ -88,7 +88,7 @@ const SlipSolution = () => {
                   <Loader />
                 </div>
               ) : (
-                <QuestionSlipCom
+                <SlipQuestion
                   slipId={slipId}
                   questionId={qId}
                   text={text}
@@ -104,7 +104,7 @@ const SlipSolution = () => {
                 <Loader />
               </div>
             ) : (
-              <QuestionSlipCom
+              <SlipQuestion
                 slipId={slipId}
                 questionId={qId}
                 text={text}
