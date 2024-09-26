@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, Suspense } from 'react'
-import QuestionLabCom from './QuestionLabCom'
+import LabbookQuestion from './LabbookQuestion'
 import CodeEditor from '../CodeEditor'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
@@ -99,7 +99,7 @@ function LabSolution() {
                   <Loader />
                 </div>
               ) : (
-                <QuestionLabCom
+                <LabbookQuestion
                   assignmentNo={assignmentNo}
                   setName={setName}
                   questionNo={questionNo}
@@ -115,7 +115,7 @@ function LabSolution() {
                 <Loader />
               </div>
             ) : (
-              <QuestionLabCom
+              <LabbookQuestion
                 assignmentNo={assignmentNo}
                 setName={setName}
                 questionNo={questionNo}

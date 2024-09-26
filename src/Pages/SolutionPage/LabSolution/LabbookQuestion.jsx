@@ -1,4 +1,4 @@
-function QuestionLabCom({ assignmentNo, setName, questionNo, questionText }) {
+function LabbookQuestion({ assignmentNo, setName, questionNo, questionText }) {
   function findName(setNo) {
     let setname = ''
     if (setNo === 1) {
@@ -36,4 +36,4 @@ function QuestionLabCom({ assignmentNo, setName, questionNo, questionText }) {
   )
 }
 
-export default QuestionLabCom
+export default LabbookQuestion
