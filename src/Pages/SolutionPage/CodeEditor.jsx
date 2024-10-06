@@ -9,6 +9,7 @@ import { Resizable } from 're-resizable'
 import AskDevaButton from './Deva/AskDeva'
 import { motion } from 'framer-motion'
 import { useTheme } from '../../store/ThemeContext'
+import { useUser } from '../../store/UserContext'
 
 const apiKeys = [
   import.meta.env.VITE_GROQ_API_KEY_1,
@@ -27,6 +28,7 @@ const models = [
 ]
 
 function CodeEditor({ language, solution }) {
+  const { isLoggedIn } = useUser()
   const [result, setResult] = useState('')
   const [isExplanationModalOpen, setIsExplanationModalOpen] = useState(false)
   const [isQueryModalOpen, setIsQueryModalOpen] = useState(false)
@@ -44,7 +46,20 @@ function CodeEditor({ language, solution }) {
   const [queryResponse, setQueryResponse] = useState('')
   const { theme } = useTheme()
 
+  const checkAuth = () => {
+    if (!isLoggedIn) {
+      toast.error('Please login to use this feature', {
+        position: 'bottom-right',
+        autoClose: 3000,
+      })
+      return false
+    }
+    return true
+  }
+
   const fetchSolution = async () => {
+    if (!checkAuth()) return
+
     const apiKey = apiKeys[currentKeyIndex]
     const model = models[currentModelIndex]
 
@@ -84,6 +99,7 @@ function CodeEditor({ language, solution }) {
   }
 
   const handleQuerySubmit = async () => {
+    if (!checkAuth()) return
     if (!userQuery.trim()) return
 
     const apiKey = apiKeys[currentKeyIndex]
@@ -120,6 +136,12 @@ function CodeEditor({ language, solution }) {
       setCurrentKeyIndex((prevIndex) => (prevIndex + 1) % apiKeys.length)
       setCurrentModelIndex(Math.floor(Math.random() * models.length))
       setLoading(false)
+    }
+  }
+
+  const handleAskDevaClick = () => {
+    if (checkAuth()) {
+      setIsQueryModalOpen(true)
     }
   }
 
