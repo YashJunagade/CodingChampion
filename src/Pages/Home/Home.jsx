@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Twitter, Github, Linkedin } from 'lucide-react'
 import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
+import MeetContributors from './MeetContributors'
 
 const socialIcons = [
   { Icon: Twitter, color: 'text-blue-400', animation: 'animate-bounce' },
@@ -16,135 +17,6 @@ const animations = [
   'animate-bounce',
   'animate-pulse',
 ]
-
-const ProfileCard = ({ name, title, photoUrl, socialLinks }) => {
-  return (
-    <motion.div
-      className="w-full max-w-[320px] bg-gradient-to-br lg:mx-24 from-purple-600 to-blue-500 rounded-custom shadow-lg overflow-hidden m-4 mx-8 transition-all duration-500 ease-in-out transform hover:scale-105"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="relative p-6 flex flex-col items-center">
-        <motion.div
-          className="relative w-40 h-40 mb-4 rounded-full overflow-hidden shadow-xl"
-          whileHover={{ scale: 1.1, rotate: 6 }}
-        >
-          <img
-            className="object-cover w-full h-full"
-            src={photoUrl}
-            alt={`${name}'s profile`}
-          />
-        </motion.div>
-        <div className="text-center z-10">
-          <motion.h2
-            className="text-2xl font-bold text-white mb-2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            {name.split('').map((char, index) => (
-              <motion.span
-                key={index}
-                className="inline-block"
-                whileHover={{ scale: 1.2, color: '#ffd700' }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                {char === ' ' ? '\u00A0' : char}
-              </motion.span>
-            ))}
-          </motion.h2>
-          <motion.p
-            className="text-gray-200 mb-2 transition-all duration-500 ease-in-out opacity-80 hover:opacity-100"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            {title}
-          </motion.p>
-        </div>
-      </div>
-      <div className="bg-white p-4 transition-all duration-500 ease-in-out transform">
-        <div className="flex justify-center space-x-8">
-          {socialIcons.map(({ Icon, color, animation }, index) => (
-            <motion.a
-              key={index}
-              href={socialLinks[index]}
-              target="_blank"
-              className={`${color} ${animation}`}
-              whileHover={{ scale: 1.2, rotate: 6 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Icon className="w-8 h-8" />
-            </motion.a>
-          ))}
-        </div>
-      </div>
-    </motion.div>
-  )
-}
-
-const MeetContributors = () => {
-  const profiles = [
-    {
-      name: 'Yash Junagade',
-      title: 'Software Engineer & Tech enthusiast',
-      photoUrl:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725769845/YashJunagade_inr9w4.jpg',
-      socialLinks: [
-        'https://x.com/YashJunagade211',
-        'https://github.com/YashJunagade',
-        'https://www.linkedin.com/in/yashjunagade/',
-      ],
-    },
-    {
-      name: 'Dipak Jadhav',
-      title: 'Software Engineer & Tech enthusiast',
-      photoUrl:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725769845/DipakJadhav_ifogkt.png',
-      socialLinks: [
-        'https://x.com/JustDipak',
-        'https://github.com/TheDevotion',
-        'https://www.linkedin.com/in/dipak-jadhav-6b0738250/',
-      ],
-    },
-  ]
-
-  return (
-    <section className="py-16">
-      <motion.div
-        className="container mx-auto px-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.h2
-          className="text-4xl font-bold text-center mb-12 dark:text-gray-300 text-gray-800"
-          initial={{ y: -50 }}
-          animate={{ y: 0 }}
-          transition={{ type: 'spring', stiffness: 100 }}
-        >
-          Meet Our Brilliant Minds
-        </motion.h2>
-        <motion.p
-          className="text-xl text-center mb-16 text-gray-500 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          The passionate developers behind this platform, dedicated to making
-          your coding journey smoother and more exciting!
-        </motion.p>
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch">
-          {profiles.map((profile, index) => (
-            <ProfileCard key={index} {...profile} />
-          ))}
-        </div>
-      </motion.div>
-    </section>
-  )
-}
 
 const containerVariants = {
   hidden: { opacity: 0 },
