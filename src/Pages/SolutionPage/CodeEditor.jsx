@@ -178,8 +178,41 @@ function CodeEditor({ language, solution }) {
 
     const editorElement = editor.getDomNode()
     if (editorElement) {
+      // Prevent keyboard shortcuts
+      editorElement.addEventListener(
+        'keydown',
+        (e) => {
+          if (
+            (e.ctrlKey || e.metaKey) &&
+            (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X')
+          ) {
+            e.preventDefault()
+            return false
+          }
+        },
+        true
+      )
+
+      // Prevent selection
+      editorElement.addEventListener('selectstart', (e) => {
+        e.preventDefault()
+        return false
+      })
+
+      // Prevent context menu
+      editorElement.addEventListener('contextmenu', (e) => {
+        e.preventDefault()
+        return false
+      })
+
+      // Add wheel event listener
       editorElement.addEventListener('wheel', handleEditorWheel, {
         passive: false,
+      })
+
+      // Apply additional security measures
+      editor.onDidChangeCursorSelection(() => {
+        editor.setSelection(new monaco.Selection(0, 0, 0, 0))
       })
     }
   }
@@ -209,7 +242,7 @@ function CodeEditor({ language, solution }) {
 
   useEffect(() => {
     const updateEditorOptions = () => {
-      isMobile = window.innerWidth < 768
+      const isMobile = window.innerWidth < 768
       setIsResizable(!isMobile)
       setEditorWidth(isMobile ? '98%' : editorWidth)
       setEditorHeight(isMobile ? '50%' : editorHeight)
@@ -228,16 +261,35 @@ function CodeEditor({ language, solution }) {
           handleMouseWheel: true,
           alwaysConsumeMouseWheel: false,
         },
-        readOnly: isMobile,
-        domReadOnly: isMobile, // Prevent focusing on mobile
+        readOnly: true,
+        domReadOnly: true,
+        selectionHighlight: false,
+        occurrencesHighlight: false,
+        contextmenu: false,
+        // Disable quick suggestions and other interactive features
+        quickSuggestions: false,
+        parameterHints: false,
+        suggestOnTriggerCharacters: false,
+        hover: false,
       })
     }
 
     updateEditorOptions()
     window.addEventListener('resize', updateEditorOptions)
 
+    // Disable copy functionality globally when editor mounts
+    const handleCopy = (e) => {
+      if (!e.target.closest('.allow-copy')) {
+        e.preventDefault()
+        return false
+      }
+    }
+
+    document.addEventListener('copy', handleCopy)
+
     return () => {
       window.removeEventListener('resize', updateEditorOptions)
+      document.removeEventListener('copy', handleCopy)
       const editorElement = editorRef.current?.getDomNode()
       if (editorElement) {
         editorElement.removeEventListener('wheel', handleEditorWheel)
@@ -248,6 +300,7 @@ function CodeEditor({ language, solution }) {
   const editorComponent = (
     <div
       ref={editorContainerRef}
+      className="relative"
       style={{
         width: '100%',
         height: '94%',
@@ -259,19 +312,76 @@ function CodeEditor({ language, solution }) {
         border: '2px solid #F51524',
       }}
     >
-      <Editor
-        height="100%"
-        language={language}
-        theme={theme === 'dark' ? 'vs-dark' : 'light'}
-        value={solution}
-        onMount={handleEditorDidMount}
-        options={editorOptions}
+      {/* Invisible overlay to prevent direct text selection */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 2,
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+          MozUserSelect: 'none',
+          msUserSelect: 'none',
+          pointerEvents: 'none',
+        }}
       />
+
+      <div
+        style={{
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+          MozUserSelect: 'none',
+          msUserSelect: 'none',
+          position: 'relative',
+          height: '100%',
+        }}
+      >
+        <Editor
+          height="100%"
+          language={language}
+          theme={theme === 'dark' ? 'vs-dark' : 'light'}
+          value={solution}
+          onMount={handleEditorDidMount}
+          options={editorOptions}
+          className="prevent-select"
+        />
+      </div>
     </div>
   )
 
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.textContent = `
+      .prevent-select {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      .monaco-editor .view-line {
+        user-select: none !important;
+        pointer-events: none !important;
+      }
+      
+      .monaco-editor .view-lines {
+        user-select: none !important;
+        pointer-events: none !important;
+      }
+    `
+    document.head.appendChild(style)
+    return () => document.head.removeChild(style)
+  }, [])
+
   return (
-    <div className={`flex flex-col h-full overflow-hidden ${theme}`}>
+    <div
+      className={`flex flex-col h-full overflow-hidden ${theme} prevent-select`}
+    >
       <div className="flex justify-between mb-1 md:mx-1">
         <motion.button
           onClick={fetchSolution}
@@ -375,5 +485,16 @@ function CodeEditor({ language, solution }) {
     </div>
   )
 }
+
+const globalStyles = `
+  .prevent-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+`
 
 export default CodeEditor
