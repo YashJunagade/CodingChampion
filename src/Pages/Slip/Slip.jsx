@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import Navbar from '../../Components/Navbar/Navbar'
 import SideBar from '../../Components/SideBar/SideBar'
 import Menu from '../../Components/Subjects/Menu'
@@ -11,6 +12,17 @@ function Slip() {
         {/* <SideBar></SideBar> */}
         {/* </div> */}
         <div className="w-full ">
+          <Helmet>
+            <title>
+              BBACA BCA Practical Slip Solution First Year Second Year Third
+              Year BBACA BCA
+            </title>
+            <meta
+              name="description"
+              content="BBACA BCA Practical Slip Solution First Year Second Year Third
+              Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
+            />
+          </Helmet>
           <Menu></Menu>
         </div>
       </div>
