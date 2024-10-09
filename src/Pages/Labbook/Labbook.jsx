@@ -8,8 +8,8 @@ function Labbook() {
     <>
       <Helmet>
         <title>
-          BBACA BCA Slip Labbook Solution First Year Second Year Third Year
-          BBACA BCA
+          BBACA BCA Slip Labbook Solution FY BBACA SY BBACA TY BBACA First Year
+          Second Year Third Year BBACA BCA
         </title>
         <meta
           name="description"
