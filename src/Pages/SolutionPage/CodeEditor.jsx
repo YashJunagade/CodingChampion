@@ -153,20 +153,23 @@ function CodeEditor({ language, solution }) {
   }
 
   const copyToClipboard = useCallback(() => {
-    const editorValue = editorRef.current?.getValue()
+    if (!checkAuth()) return
+    else {
+      const editorValue = editorRef.current?.getValue()
 
-    if (editorValue) {
-      window.navigator.clipboard
-        .writeText(editorValue)
-        .then(() => {
-          toast.success('Copied successfully!', {
-            position: 'bottom-right',
-            autoClose: 3000,
+      if (editorValue) {
+        window.navigator.clipboard
+          .writeText(editorValue)
+          .then(() => {
+            toast.success('Copied successfully!', {
+              position: 'bottom-right',
+              autoClose: 3000,
+            })
           })
-        })
-        .catch((err) => {
-          console.error('Failed to copy: ', err)
-        })
+          .catch((err) => {
+            console.error('Failed to copy: ', err)
+          })
+      }
     }
   }, [])
 
