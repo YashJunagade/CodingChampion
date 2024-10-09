@@ -6,6 +6,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../../../config/firebase'
 import Loader from '../../../Components/Loader/Loader'
 import { Resizable } from 're-resizable'
+import { Helmet } from 'react-helmet'
 
 function LabSolution() {
   const [questionSlipWidth, setQuestionSlipWidth] = useState('35%')
@@ -81,19 +82,48 @@ function LabSolution() {
   }
 
   return (
-    <div className="flex flex-col h-full mx-auto px-2 py-2 bg-white dark:bg-black md:mt-16">
-      <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
-        {isLargeScreen ? (
-          <Resizable
-            size={{ width: questionSlipWidth, height: 'auto' }}
-            minWidth="20%"
-            maxWidth="70%"
-            enable={{ right: true }}
-            onResizeStop={(e, direction, ref, d) => {
-              setQuestionSlipWidth(ref.style.width)
-            }}
-          >
-            <div className="h-full overflow-y-auto md:mr-1 md:rounded-lg">
+    <>
+      <Helmet>
+        <title>
+          {`Set:${set} Assignment No:${assignmentNo} Question No:${questionNo} ${subjectId} `}
+          BBACA BCA Labbook Solution Practical Slip SolutionFirst Year Second
+          Year Third Year BBACA BCA
+        </title>
+        <meta
+          name="description"
+          content="BBACA BCA Practical Slip Solution Labbook Solution First Year Second Year Third
+              Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
+        />
+      </Helmet>
+      <div className="flex flex-col h-full mx-auto px-2 py-2 bg-white dark:bg-black md:mt-16">
+        <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>
+          {isLargeScreen ? (
+            <Resizable
+              size={{ width: questionSlipWidth, height: 'auto' }}
+              minWidth="20%"
+              maxWidth="70%"
+              enable={{ right: true }}
+              onResizeStop={(e, direction, ref, d) => {
+                setQuestionSlipWidth(ref.style.width)
+              }}
+            >
+              <div className="h-full overflow-y-auto md:mr-1 md:rounded-lg">
+                {loading ? (
+                  <div className="flex justify-center items-center h-full">
+                    <Loader />
+                  </div>
+                ) : (
+                  <LabbookQuestion
+                    assignmentNo={assignmentNo}
+                    setName={setName}
+                    questionNo={questionNo}
+                    questionText={questionText}
+                  />
+                )}
+              </div>
+            </Resizable>
+          ) : (
+            <div className="w-full md:w-[35%] md:mt-11">
               {loading ? (
                 <div className="flex justify-center items-center h-full">
                   <Loader />
@@ -107,50 +137,35 @@ function LabSolution() {
                 />
               )}
             </div>
-          </Resizable>
-        ) : (
-          <div className="w-full md:w-[35%] md:mt-11">
-            {loading ? (
-              <div className="flex justify-center items-center h-full">
-                <Loader />
-              </div>
-            ) : (
-              <LabbookQuestion
-                assignmentNo={assignmentNo}
-                setName={setName}
-                questionNo={questionNo}
-                questionText={questionText}
-              />
-            )}
-          </div>
-        )}
+          )}
 
-        {isLargeScreen && (
+          {isLargeScreen && (
+            <div
+              className="w-4 cursor-col-resize"
+              onMouseDown={handleMouseDown}
+            />
+          )}
+
           <div
-            className="w-4 cursor-col-resize"
-            onMouseDown={handleMouseDown}
-          />
-        )}
-
-        <div
-          className={`overflow-y-auto ${
-            isLargeScreen
-              ? `w-[${100 - parseInt(questionSlipWidth)}]%`
-              : 'w-full h-screen mt-6 mb-2'
-          } md:w-[80%] md:h-screen md:flex-grow`}
-        >
-          <Suspense
-            fallback={
-              <div className="flex justify-center items-center h-full">
-                <Loader />
-              </div>
-            }
+            className={`overflow-y-auto ${
+              isLargeScreen
+                ? `w-[${100 - parseInt(questionSlipWidth)}]%`
+                : 'w-full h-screen mt-6 mb-2'
+            } md:w-[80%] md:h-screen md:flex-grow`}
           >
-            <CodeEditor language={language} solution={solution} />
-          </Suspense>
+            <Suspense
+              fallback={
+                <div className="flex justify-center items-center h-full">
+                  <Loader />
+                </div>
+              }
+            >
+              <CodeEditor language={language} solution={solution} />
+            </Suspense>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
