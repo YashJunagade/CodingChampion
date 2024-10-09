@@ -4,6 +4,7 @@ import { Twitter, Github, Linkedin } from 'lucide-react'
 import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
 import MeetContributors from './MeetContributors'
+import { Helmet } from 'react-helmet'
 
 const socialIcons = [
   { Icon: Twitter, color: 'text-blue-400', animation: 'animate-bounce' },
@@ -206,6 +207,13 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+        <title>BBACA BCA Practical Slip Solution Labbook Solution</title>
+        <meta
+          name="description"
+          content="BBACA BCA Practical Slip Solution Labbook Solution SPPU University Coding Champion"
+        />
+      </Helmet>
       <div className="pb-24 md:px-8 max-w-[1200px] mx-auto md:mt-16">
         <motion.h1
           className="text-xl font-bold text-black text-center pt-2 pb-8 sm:pt-8 sm:pb-8 md:pb-12"
