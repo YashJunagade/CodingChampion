@@ -6,20 +6,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     <!-- Homepage -->
-<url>
-    <loc>https://codingchampion.in/</loc>
-    <lastmod>2024-09-11T16:02:20+00:00</lastmod>
-    <changefreq>hourly</changefreq> <!-- Increased frequency -->
-    <priority>1.0</priority>
-</url>
-
+    <url>
+        <loc>https://codingchampion.in/</loc>
+        <lastmod>2024-10-10T00:00:00+00:00</lastmod> <!-- Ensure dynamic update -->
+        <changefreq>daily</changefreq> <!-- Daily as it's a key page -->
+        <priority>1.0</priority>
+    </url>
 
     <!-- Slip page -->
     <url>
         <loc>https://codingchampion.in/slip</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority> <!-- Adjusted priority -->
     </url>
 
     <!-- Labbook page -->
@@ -27,23 +26,23 @@
         <loc>https://codingchampion.in/labbook</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
 
-    <!-- dsa page -->
+    <!-- DSA page -->
     <url>
         <loc>https://codingchampion.in/dsa</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.5</priority> <!-- Adjusted priority -->
     </url>
 
-    <!-- roadmap page -->
+    <!-- Roadmap page -->
     <url>
         <loc>https://codingchampion.in/roadmaps</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.5</priority> <!-- Adjusted priority -->
     </url>
 
 </urlset>
