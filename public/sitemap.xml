@@ -9,7 +9,7 @@
     <url>
         <loc>https://codingchampion.in/</loc>
         <lastmod>2024-10-10T00:00:00+00:00</lastmod> <!-- Ensure dynamic update -->
-        <changefreq>daily</changefreq> <!-- Daily as it's a key page -->
+        <changefreq>hourly</changefreq> <!-- Hourly as it's a key page -->
         <priority>1.0</priority>
     </url>
 
@@ -43,6 +43,129 @@
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority> <!-- Adjusted priority -->
+    </url>
+
+    <!-- C Programming Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/C%20Programming/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+
+    <!-- DBMS Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/DBMS/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Web Technology Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Web%20Technology/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- RDBMS Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/RDBMS/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+
+    <!-- Data Structure Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Data%20Structure/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Big Data Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Big%20Data/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Php Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Php/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- CPP Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/CPP/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Angular JS Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Angular%20JS/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Advance Php Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Advance%20Php/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Node JS Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Node%20JS/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+
+    <!-- Core Java Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Core%20Java/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Python Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Python/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- MongoDB Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/MongoDB/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Advance Java Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Advance%20Java/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Android Programming Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Android%20Programming/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
+    </url>
+    <!-- Dot Net Framework Slip List page -->
+    <url>
+        <loc>https://www.codingchampion.in/Dot%20Net%20Framework/slipList</loc>
+        <lastmod>2024-09-11T16:02:20+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
 
 </urlset>
