@@ -47,7 +47,7 @@
 
     <!-- C Programming Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/C%20Programming/slipList</loc>
+        <loc>https://www.codingchampion.in/C%20Programming/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
@@ -55,21 +55,21 @@
 
     <!-- DBMS Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/DBMS/slipList</loc>
+        <loc>https://www.codingchampion.in/DBMS/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Web Technology Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Web%20Technology/slipList</loc>
+        <loc>https://www.codingchampion.in/Web%20Technology/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- RDBMS Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/RDBMS/slipList</loc>
+        <loc>https://www.codingchampion.in/RDBMS/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
@@ -77,49 +77,49 @@
 
     <!-- Data Structure Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Data%20Structure/slipList</loc>
+        <loc>https://www.codingchampion.in/Data%20Structure/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Big Data Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Big%20Data/slipList</loc>
+        <loc>https://www.codingchampion.in/Big%20Data/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Php Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Php/slipList</loc>
+        <loc>https://www.codingchampion.in/Php/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- CPP Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/CPP/slipList</loc>
+        <loc>https://www.codingchampion.in/CPP/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Angular JS Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Angular%20JS/slipList</loc>
+        <loc>https://www.codingchampion.in/Angular%20JS/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Advance Php Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Advance%20Php/slipList</loc>
+        <loc>https://www.codingchampion.in/Advance%20Php/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Node JS Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Node%20JS/slipList</loc>
+        <loc>https://www.codingchampion.in/Node%20JS/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
@@ -127,42 +127,42 @@
 
     <!-- Core Java Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Core%20Java/slipList</loc>
+        <loc>https://www.codingchampion.in/Core%20Java/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Python Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Python/slipList</loc>
+        <loc>https://www.codingchampion.in/Python/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- MongoDB Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/MongoDB/slipList</loc>
+        <loc>https://www.codingchampion.in/MongoDB/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Advance Java Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Advance%20Java/slipList</loc>
+        <loc>https://www.codingchampion.in/Advance%20Java/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Android Programming Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Android%20Programming/slipList</loc>
+        <loc>https://www.codingchampion.in/Android%20Programming/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
     </url>
     <!-- Dot Net Framework Slip List page -->
     <url>
-        <loc>https://www.codingchampion.in/Dot%20Net%20Framework/slipList</loc>
+        <loc>https://www.codingchampion.in/Dot%20Net%20Framework/labList</loc>
         <lastmod>2024-09-11T16:02:20+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority> <!-- Adjusted priority -->
