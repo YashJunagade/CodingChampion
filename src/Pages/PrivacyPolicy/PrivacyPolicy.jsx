@@ -169,6 +169,7 @@ const PrivacyPolicy = () => {
             that permit the Company to count users who have visited those pages.
           </li>
         </ul>
+        <span id="ezoic-privacy-policy-embed"></span>
       </div>
     </div>
   )
