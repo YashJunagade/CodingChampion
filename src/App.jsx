@@ -22,6 +22,7 @@ import Profile from './Pages/Profile/Profile'
 import ResetPassword from './Pages/Auth/ResetPassword/ResetPassword'
 import Navbar from '../src/Components/Navbar/Navbar'
 import PrivateRoute from './PrivateRoute'
+import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
 
 const App = () => {
   const location = useLocation()
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route
           path="/profile"
           element={<PrivateRoute element={<Profile />} />}
