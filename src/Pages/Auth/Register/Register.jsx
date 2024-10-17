@@ -4,8 +4,7 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
 } from 'firebase/auth'
-import { auth, db } from '../../../config/firebase'
-import { setDoc, doc, getDoc } from 'firebase/firestore'
+import { auth } from '../../../config/firebase'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -13,30 +12,14 @@ function Register() {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  const createUserDocument = async (user) => {
-    const userDoc = doc(db, 'Users', user.uid)
-    try {
-      const userSnapshot = await getDoc(userDoc)
-      if (!userSnapshot.exists()) {
-        await setDoc(userDoc, {
-          uid: user.uid,
-          email: user.email,
-          userName: user.displayName || user.email.split('@')[0],
-        })
-      }
-    } catch (error) {
-      console.error('Error creating user document:', error)
-      throw error
-    }
-  }
-
   const handleGithubSignIn = async (e) => {
     e.preventDefault()
     setLoading(true)
     try {
       const provider = new GithubAuthProvider()
-      const result = await signInWithPopup(auth, provider)
-      await createUserDocument(result.user)
+      provider.addScope('user')
+      provider.addScope('user:email')
+      await signInWithPopup(auth, provider)
       toast.success('Successfully registered with GitHub!', {
         position: 'bottom-right',
         autoClose: 3000,
@@ -55,8 +38,7 @@ function Register() {
     setLoading(true)
     try {
       const provider = new GoogleAuthProvider()
-      const result = await signInWithPopup(auth, provider)
-      await createUserDocument(result.user)
+      await signInWithPopup(auth, provider)
       toast.success('Successfully registered with Google!', {
         position: 'bottom-right',
         autoClose: 3000,

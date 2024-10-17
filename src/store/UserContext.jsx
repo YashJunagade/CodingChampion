@@ -31,20 +31,36 @@ export const UserProvider = ({ children }) => {
   const [loading, setLoading] = useState(true)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  const createUserDocument = async (user) => {
+  const createOrUpdateUserDocument = async (user) => {
     const userRef = doc(db, 'Users', user.uid)
-    const defaultUserData = {
-      email: user.email,
-      userName: user.displayName || user.email.split('@')[0],
-      profilePic: profilePicContainer[Math.floor(Math.random() * 11) + 1],
-    }
-
     try {
-      await setDoc(userRef, defaultUserData, { merge: true })
-      return defaultUserData
+      const docSnap = await getDoc(userRef)
+      if (!docSnap.exists()) {
+        const defaultUserData = {
+          uid: user.uid, // Add the UID here
+          email: user.email,
+          userName: user.displayName || user.email.split('@')[0],
+          profilePic:
+            profilePicContainer[
+              Math.floor(Math.random() * profilePicContainer.length)
+            ],
+        }
+        await setDoc(userRef, defaultUserData)
+        console.log('New user document created:', defaultUserData)
+        return defaultUserData
+      } else {
+        const existingData = docSnap.data()
+        // Ensure UID is included in existing data
+        if (!existingData.uid) {
+          await updateDoc(userRef, { uid: user.uid })
+          existingData.uid = user.uid
+        }
+        console.log('Existing user document found:', existingData)
+        return existingData
+      }
     } catch (error) {
-      console.error('Error creating user document:', error)
-      toast.error('Error creating user profile.', {
+      console.error('Error in createOrUpdateUserDocument:', error)
+      toast.error('Error managing user profile.', {
         position: 'bottom-right',
         autoClose: 3000,
       })
@@ -79,15 +95,9 @@ export const UserProvider = ({ children }) => {
       if (user) {
         setIsLoggedIn(true)
         try {
-          const docRef = doc(db, 'Users', user.uid)
-          const docSnap = await getDoc(docRef)
-          if (docSnap.exists()) {
-            setUserDetails(docSnap.data())
-          } else {
-            console.warn('No document found. Creating one...')
-            const newUserData = await createUserDocument(user)
-            setUserDetails(newUserData)
-          }
+          const userData = await createOrUpdateUserDocument(user)
+          setUserDetails(userData)
+          console.log('User data set:', userData)
         } catch (error) {
           console.error('Error fetching user data:', error)
           toast.error('Error fetching user data.', {

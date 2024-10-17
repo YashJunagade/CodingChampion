@@ -4,8 +4,7 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
 } from 'firebase/auth'
-import { doc, setDoc, getDoc } from 'firebase/firestore'
-import { auth, db } from '../../../config/firebase'
+import { auth } from '../../../config/firebase'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -13,40 +12,27 @@ function Login() {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
-  const createOrUpdateUserDocument = async (user) => {
-    const userDoc = doc(db, 'Users', user.uid)
-    try {
-      const userSnapshot = await getDoc(userDoc)
-      if (!userSnapshot.exists()) {
-        await setDoc(
-          userDoc,
-          {
-            uid: user.uid,
-            email: user.email,
-            userName: user.displayName || user.email.split('@')[0],
-          },
-          { merge: true }
-        )
-      }
-    } catch (error) {
-      console.error('Error creating/updating user document:', error)
-      throw error
-    }
-  }
-
   const handleGoogleSignIn = async () => {
     setLoading(true)
     try {
       const provider = new GoogleAuthProvider()
-      const result = await signInWithPopup(auth, provider)
-      await createOrUpdateUserDocument(result.user)
+      provider.addScope('email')
+      await signInWithPopup(auth, provider)
       toast.success('User Logged in Successfully with Google', {
         position: 'bottom-right',
         autoClose: 3000,
       })
       navigate('/')
     } catch (err) {
-      toast.error(err.message, {
+      console.error('Google Auth Error:', err)
+      let errorMessage = 'Authentication failed. Please try again.'
+      if (err.code === 'auth/popup-blocked') {
+        errorMessage = 'Please allow popups for authentication'
+      } else if (err.code === 'auth/account-exists-with-different-credential') {
+        errorMessage =
+          'An account already exists with the same email. Please try a different method.'
+      }
+      toast.error(errorMessage, {
         position: 'bottom-right',
         autoClose: 3000,
       })
@@ -59,15 +45,33 @@ function Login() {
     setLoading(true)
     try {
       const provider = new GithubAuthProvider()
+      provider.addScope('user')
+      provider.addScope('user:email')
+
       const result = await signInWithPopup(auth, provider)
-      await createOrUpdateUserDocument(result.user)
+
+      if (!result.user.email) {
+        throw new Error('No email provided from GitHub')
+      }
+
       toast.success('User Logged in Successfully with GitHub', {
         position: 'bottom-right',
         autoClose: 3000,
       })
       navigate('/')
     } catch (err) {
-      toast.error(err.message, {
+      console.error('GitHub Auth Error:', err)
+      let errorMessage = 'Authentication failed. Please try again.'
+      if (err.code === 'auth/popup-blocked') {
+        errorMessage = 'Please allow popups for authentication'
+      } else if (err.code === 'auth/account-exists-with-different-credential') {
+        errorMessage =
+          'An account already exists with the same email. Try signing in with Google.'
+      } else if (err.message === 'No email provided from GitHub') {
+        errorMessage =
+          'Could not get email from GitHub. Please make sure your GitHub account has a verified email.'
+      }
+      toast.error(errorMessage, {
         position: 'bottom-right',
         autoClose: 3000,
       })
@@ -75,7 +79,6 @@ function Login() {
       setLoading(false)
     }
   }
-
   return (
     <div className="flex justify-center items-center h-screen -mt-14 bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
