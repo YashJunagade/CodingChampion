@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
-import googleLogo from '../../../assets/google.png'
 import {
-  createUserWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  GithubAuthProvider,
 } from 'firebase/auth'
 import { auth, db } from '../../../config/firebase'
 import { setDoc, doc, getDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
-import Loader from '../../../Components/Loader/Loader'
 
 function Register() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
@@ -22,15 +18,11 @@ function Register() {
     try {
       const userSnapshot = await getDoc(userDoc)
       if (!userSnapshot.exists()) {
-        await setDoc(
-          userDoc,
-          {
-            uid: user.uid,
-            email: user.email,
-            userName: user.displayName || user.email.split('@')[0],
-          },
-          { merge: true }
-        )
+        await setDoc(userDoc, {
+          uid: user.uid,
+          email: user.email,
+          userName: user.displayName || user.email.split('@')[0],
+        })
       }
     } catch (error) {
       console.error('Error creating user document:', error)
@@ -38,27 +30,21 @@ function Register() {
     }
   }
 
-  const handleRegister = async (e) => {
+  const handleGithubSignIn = async (e) => {
     e.preventDefault()
     setLoading(true)
     try {
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        email,
-        password
-      )
-      await createUserDocument(userCredential.user)
-      toast.success('User Registered Successfully! Now logging you in...', {
+      const provider = new GithubAuthProvider()
+      const result = await signInWithPopup(auth, provider)
+      await createUserDocument(result.user)
+      toast.success('Successfully registered with GitHub!', {
         position: 'bottom-right',
         autoClose: 3000,
       })
       navigate('/')
     } catch (error) {
-      console.error('Registration Error:', error)
-      toast.error(error.message, {
-        position: 'bottom-right',
-        autoClose: 3000,
-      })
+      console.error('GitHub Registration Error:', error)
+      toast.error(error.message, { position: 'bottom-right', autoClose: 3000 })
     } finally {
       setLoading(false)
     }
@@ -71,85 +57,50 @@ function Register() {
       const provider = new GoogleAuthProvider()
       const result = await signInWithPopup(auth, provider)
       await createUserDocument(result.user)
-      toast.success('User Registered Successfully! Now logging you in...', {
+      toast.success('Successfully registered with Google!', {
         position: 'bottom-right',
         autoClose: 3000,
       })
       navigate('/')
     } catch (error) {
-      console.error('Google Sign-In Error:', error)
-      toast.error(error.message, {
-        position: 'bottom-right',
-        autoClose: 3000,
-      })
+      console.error('Google Registration Error:', error)
+      toast.error(error.message, { position: 'bottom-right', autoClose: 3000 })
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className="flex justify-center items-center h-screen -mt-10 bg-gray-100">
-      <form
-        onSubmit={handleRegister}
-        className="bg-white p-8 rounded-lg shadow-lg w-96 text-center"
-      >
-        <h2 className="text-2xl font-semibold mb-6">Sign Up</h2>
-
-        <div className="mb-4">
-          <label
-            className="block text-left text-sm font-medium mb-1"
-            htmlFor="email"
-          >
-            Email Address
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter Email"
-            className="w-full p-2 border rounded-md text-lg"
-            required
-          />
-        </div>
-
-        <div className="mb-6">
-          <label
-            className="block text-left text-sm font-medium mb-1"
-            htmlFor="password"
-          >
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter Password"
-            className="w-full p-2 border rounded-md text-lg"
-            required
-          />
-        </div>
+    <div className="flex justify-center items-center h-screen -mt-14 bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
+        <h2 className="text-2xl font-semibold mb-6">Create Account</h2>
 
         <button
-          type="submit"
-          className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
+          onClick={handleGithubSignIn}
+          className="flex items-center justify-center w-full border rounded-md py-2 px-4 mb-4 bg-gray-800 text-white hover:bg-gray-700"
         >
-          {loading ? 'Signing up...' : 'Sign Up'}
+          <svg
+            className="w-6 h-6 mr-2"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="text-lg">
+            {loading ? 'Creating account...' : 'Sign up with GitHub'}
+          </span>
         </button>
 
-        <div className="mt-4">
-          Already registered?{' '}
-          <Link to="/login" className="text-blue-500 font-bold text-md">
-            Login
-          </Link>
-        </div>
-
-        <div className="my-6 text-gray-600">----- Or continue with -----</div>
+        <div className="my-6 text-gray-600">----- Or -----</div>
 
         <button
           onClick={handleGoogleSignIn}
-          className="flex items-center justify-center w-full border rounded-md py-2 px-4"
+          className="flex items-center justify-center w-full border rounded-md py-2 px-4 hover:bg-gray-50"
         >
           <img
             src="https://res.cloudinary.com/yashjunagade/image/upload/v1725686275/googleLogo_yhe7ju.png"
@@ -157,10 +108,17 @@ function Register() {
             className="w-6 h-6 mr-2"
           />
           <span className="text-lg">
-            {loading ? 'Signing in...' : 'Sign in with Google'}
+            {loading ? 'Creating account...' : 'Sign up with Google'}
           </span>
         </button>
-      </form>
+
+        <div className="mt-6">
+          Already have an account?{' '}
+          <Link to="/login" className="text-blue-500 font-bold text-md">
+            Login
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

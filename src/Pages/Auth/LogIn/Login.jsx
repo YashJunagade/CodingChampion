@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import googleLogo from '../../../assets/google.png'
 import {
-  signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
-  sendPasswordResetEmail,
+  GithubAuthProvider,
 } from 'firebase/auth'
 import { doc, setDoc, getDoc } from 'firebase/firestore'
 import { auth, db } from '../../../config/firebase'
@@ -12,11 +10,7 @@ import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const [resetPasswordEmail, setResetPasswordEmail] = useState('')
-  const [resetPasswordMode, setResetPasswordMode] = useState(false)
   const navigate = useNavigate()
 
   const createOrUpdateUserDocument = async (user) => {
@@ -37,58 +31,6 @@ function Login() {
     } catch (error) {
       console.error('Error creating/updating user document:', error)
       throw error
-    }
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        email,
-        password
-      )
-      await createOrUpdateUserDocument(userCredential.user)
-      toast.success('User Logged in Successfully', {
-        position: 'bottom-right',
-        autoClose: 3000,
-      })
-      navigate('/')
-    } catch (err) {
-      switch (err.code) {
-        case 'auth/user-not-found':
-          toast.error('No user found with this email. Please register first.', {
-            position: 'bottom-right',
-            autoClose: 3000,
-          })
-          break
-        case 'auth/wrong-password':
-          toast.error('Incorrect password. Please try again.', {
-            position: 'bottom-right',
-            autoClose: 3000,
-          })
-          break
-        case 'auth/invalid-email':
-          toast.error('Invalid email format. Please check your email.', {
-            position: 'bottom-right',
-            autoClose: 3000,
-          })
-          break
-        case 'auth/invalid-credential':
-          toast.error('Try again check email and password or register first', {
-            position: 'bottom-right',
-            autoClose: 3000,
-          })
-          break
-        default:
-          toast.error(err.message, {
-            position: 'bottom-right',
-            autoClose: 3000,
-          })
-      }
-    } finally {
-      setLoading(false)
     }
   }
 
@@ -113,17 +55,19 @@ function Login() {
     }
   }
 
-  const handlePasswordReset = async () => {
+  const handleGithubSignIn = async () => {
     setLoading(true)
     try {
-      await sendPasswordResetEmail(auth, resetPasswordEmail)
-      toast.success('Password reset email sent. Check your inbox.', {
+      const provider = new GithubAuthProvider()
+      const result = await signInWithPopup(auth, provider)
+      await createOrUpdateUserDocument(result.user)
+      toast.success('User Logged in Successfully with GitHub', {
         position: 'bottom-right',
         autoClose: 3000,
       })
-      setResetPasswordMode(false)
+      navigate('/')
     } catch (err) {
-      toast.error('Error sending password reset email. Please try again.', {
+      toast.error(err.message, {
         position: 'bottom-right',
         autoClose: 3000,
       })
@@ -134,138 +78,62 @@ function Login() {
 
   return (
     <div className="flex justify-center items-center h-screen -mt-14 bg-gray-100">
-      <form
-        onSubmit={
-          resetPasswordMode
-            ? (e) => {
-                e.preventDefault()
-                handlePasswordReset()
-              }
-            : handleSubmit
-        }
-        className="bg-white p-8 rounded-lg shadow-lg w-96 text-center"
-      >
-        <h2 className="text-2xl font-semibold mb-6">
-          {resetPasswordMode ? 'Reset Password' : 'Login'}
-        </h2>
+      <div className="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
+        <h2 className="text-2xl font-semibold mb-6">Login</h2>
 
-        {resetPasswordMode ? (
-          <>
-            <div className="mb-4">
-              <label
-                className="block text-left text-sm font-medium mb-1"
-                htmlFor="reset-email"
-              >
-                Email address
-              </label>
-              <input
-                type="email"
-                id="reset-email"
-                value={resetPasswordEmail}
-                onChange={(e) => setResetPasswordEmail(e.target.value)}
-                placeholder="Enter email"
-                className="w-full p-2 border rounded-md text-lg"
-                required
-              />
-            </div>
+        {/* Added notice about authentication methods */}
+        <div className="bg-blue-50 p-3 rounded-md mb-6">
+          <p className="text-blue-800 text-sm">
+            We now support login exclusively through Google and GitHub for
+            enhanced security. If you previously used email/password, please
+            sign in with either service below.
+          </p>
+        </div>
 
-            <button
-              type="submit"
-              className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500' : 'bg-blue-500'} transition`}
-            >
-              {loading ? 'Sending...' : 'Send Password Reset Email'}
-            </button>
+        <button
+          onClick={handleGithubSignIn}
+          className="flex items-center justify-center w-full border rounded-md py-2 px-4 mb-4 bg-gray-800 text-white hover:bg-gray-700"
+        >
+          <svg
+            className="w-6 h-6 mr-2"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span className="text-lg">
+            {loading ? 'Logging in...' : 'Login with GitHub'}
+          </span>
+        </button>
 
-            <button
-              type="button"
-              onClick={() => setResetPasswordMode(false)}
-              className="mt-4 text-blue-500"
-            >
-              Back to Login
-            </button>
-          </>
-        ) : (
-          <>
-            <div className="mb-4">
-              <label
-                className="block text-left text-sm font-medium mb-1"
-                htmlFor="email"
-              >
-                Email address
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter email"
-                className="w-full p-2 border rounded-md text-lg"
-                required
-              />
-            </div>
+        <div className="my-6 text-gray-600">----- Or -----</div>
 
-            <div className="mb-6">
-              <label
-                className="block text-left text-sm font-medium mb-1"
-                htmlFor="password"
-              >
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter password"
-                className="w-full p-2 border rounded-md text-lg"
-                required
-              />
-            </div>
+        <button
+          onClick={handleGoogleSignIn}
+          className="flex items-center justify-center w-full border rounded-md py-2 px-4 hover:bg-gray-50"
+        >
+          <img
+            src="https://res.cloudinary.com/yashjunagade/image/upload/v1725686275/googleLogo_yhe7ju.png"
+            alt="Google logo"
+            className="w-6 h-6 mr-2"
+          />
+          <span className="text-lg">
+            {loading ? 'Logging in...' : 'Login with Google'}
+          </span>
+        </button>
 
-            <button
-              type="submit"
-              className={`w-full py-2 rounded-md text-white ${loading ? 'bg-gray-500 text-lg' : 'bg-blue-500 text-lg'} transition`}
-            >
-              {loading ? 'Logging in...' : 'Login'}
-            </button>
-
-            <div className="mt-4">
-              <Link
-                to="#"
-                onClick={() => setResetPasswordMode(true)}
-                className="text-blue-500"
-              >
-                Forgot Password?
-              </Link>
-            </div>
-
-            <div className="mt-4">
-              Don't have an account?{' '}
-              <Link to="/register" className="text-blue-500 font-bold text-md">
-                Register
-              </Link>
-            </div>
-
-            <div className="my-6 text-gray-600">
-              ----- Or continue with -----
-            </div>
-
-            <button
-              onClick={handleGoogleSignIn}
-              className="flex items-center justify-center w-full border rounded-md py-2 px-4"
-            >
-              <img
-                src="https://res.cloudinary.com/yashjunagade/image/upload/v1725686275/googleLogo_yhe7ju.png"
-                alt="Google logo"
-                className="w-6 h-6 mr-2"
-              />
-              <span className="text-lg">
-                {loading ? 'Logging in...' : 'Login with Google'}
-              </span>
-            </button>
-          </>
-        )}
-      </form>
+        <div className="mt-6">
+          Don't have an account?{' '}
+          <Link to="/register" className="text-blue-500 font-bold text-md">
+            Register
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }
