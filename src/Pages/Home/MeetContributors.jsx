@@ -325,13 +325,26 @@ const MeetContributors = () => {
       title: 'Java FullStack Developer',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1728277298/santosh_pic_xeppco.png',
-      description: 'Contributed to DSA compilation and UI.',
+      description: 'Contributing in DSA compilation and UI.',
       socialLinks: {
         github: 'https://github.com/sbhor007',
         linkedin: 'https://www.linkedin.com/in/santosh-bhor-a6436a327/',
       },
-      contributions: 1,
+      contributions: 4,
       rank: 1,
+    },
+    {
+      name: 'Nidhey Joshi',
+      title: 'Web Developer',
+      photoUrl:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1729237825/Nidhey_Joshi_Profile_Pic_cowvgh.jpg',
+      description: 'Contributing in Roadmap and handing social media.',
+      socialLinks: {
+        github: 'https://github.com/NidheyJoshi',
+        linkedin: 'https://www.linkedin.com/in/nidhey-joshi-15027b267',
+      },
+      contributions: 1,
+      rank: 2,
     },
   ]
 
