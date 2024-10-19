@@ -23,6 +23,7 @@ import ResetPassword from './Pages/Auth/ResetPassword/ResetPassword'
 import Navbar from '../src/Components/Navbar/Navbar'
 import PrivateRoute from './PrivateRoute'
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
+import Frontend from './Pages/RoadMaps/pages/Web Development/Frontend/Frontend'
 
 const App = () => {
   const location = useLocation()
@@ -53,6 +54,7 @@ const App = () => {
         <Route path="/labbook" element={<Labbook />} />
         <Route path="/roadmaps" element={<Roadmaps />} />
         <Route path="/dsa" element={<Dsa />} />
+        <Route path="/roadmaps/frontend" element={<Frontend />} />
         <Route
           path="/:subjectId/:slipId/:questionId"
           element={<SlipSolution />}
