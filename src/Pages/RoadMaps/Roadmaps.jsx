@@ -1,62 +1,65 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Track from './components/Track'
 
 const Roadmaps = () => {
   return (
-    <div className="md:mt-20 m-2 p-8 bg-white dark:bg-black rounded-lg shadow-md h-full md:h-screen">
-      <h1 className="text-4xl font-bold text-accent mb-6">
-        CodingChampion Roadmaps - Coming Soon!
-      </h1>
-      <p className="text-lg mb-6 dark:text-gray-300">
-        We're excited to announce that we're working on comprehensive roadmaps
-        to guide you through your BCA and BBACA journey. These roadmaps will
-        help you navigate your studies and prepare for a successful career in
-        tech.
-      </p>
-
-      <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-          What to expect from our roadmaps:
+    <div className="md:mt-16 m-2 p-8 bg-white dark:bg-black rounded-lg shadow-md min-h-screen">
+      <section className="mb-12">
+        <h2 className="dark:text-white mb-4 text-2xl font-bold">
+          Web Development
         </h2>
-        <ul className="list-disc list-inside space-y-2 dark:text-gray-300">
-          <li>Semester-wise study guides</li>
-          <li>Key topics and concepts to master</li>
-          <li>Recommended resources and practice materials</li>
-          <li>Career path suggestions based on your interests</li>
-          <li>Industry trends and skills in demand</li>
-        </ul>
-      </div>
 
-      <p className="text-lg mb-6 dark:text-gray-300">
-        While we're putting the finishing touches on this feature, why not
-        explore our other resources?
-      </p>
+        {/* line separation */}
+        <div className="w-full h-1 bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 animate-pulse my-8"></div>
 
-      <div className="flex flex-wrap gap-4 justify-center mb-6">
-        <Link
-          to="/slip"
-          className="bg-accent text-white px-6 py-3 rounded-md hover:bg-accent-dark transition duration-300"
-        >
-          Check out our Practical Slips
-        </Link>
-        <Link
-          to="/labbook"
-          className="bg-accent text-white px-6 py-3 rounded-md hover:bg-accent-dark transition duration-300"
-        >
-          Explore our Lab Book
-        </Link>
-      </div>
+        {/* tracks section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+          <Track
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
+            trackTitle="Frontend"
+            pageRoute="/frontend"
+          />
+          <Track
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
+            trackTitle="Backend"
+            pageRoute="/backend"
+          />
+          <Track
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
+            trackTitle="Fullstack"
+            pageRoute="/fullstack"
+          />
+          <Track
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
+            trackTitle="DevOps"
+            pageRoute="/devops"
+          />
+        </div>
+      </section>
 
-      <div className="mt-8">
-        <h3 className="text-xl font-semibold mb-4 dark:text-white">
-          Stay Updated
-        </h3>
-        <p className="dark:text-gray-300">
-          Want to be notified when our roadmaps are ready? Sign up for our
-          newsletter!
-        </p>
-        {/* Add a newsletter signup form here */}
-      </div>
+      <section>
+        <h2 className="dark:text-white mb-4 text-2xl font-bold">
+          Artificial Intelligence
+        </h2>
+
+        {/* line separation */}
+        <div className="w-full h-1 bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 animate-pulse my-8"></div>
+
+        {/* tracks section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+          <Track
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
+            trackTitle="Data Science"
+            pageRoute="/data-science"
+          />
+          <Track
+            imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
+            trackTitle="Machine Learning"
+            pageRoute="/machine-learning"
+          />
+        </div>
+      </section>
     </div>
   )
 }
