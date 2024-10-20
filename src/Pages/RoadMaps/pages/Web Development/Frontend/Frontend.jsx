@@ -8,7 +8,32 @@ const roadmapData = [
     name: 'frontend',
     beginner: {
       html: {
-        basic: ['topic1', 'topic2', 'topic3'],
+        basic: [
+          {
+            topic: 'topic1',
+            resources: {
+              free: ['yt video1', 'yt video2', 'article'],
+              premium: ['coursera', 'codemy'],
+            },
+            time: 100,
+          },
+          {
+            topic: 'topic2',
+            resources: {
+              free: ['yt video1', 'yt video2', 'article'],
+              premium: ['coursera', 'codemy'],
+            },
+            time: 100,
+          },
+          {
+            topic: 'topic3',
+            resources: {
+              free: ['yt video1', 'yt video2', 'article'],
+              premium: ['coursera', 'codemy'],
+            },
+            time: 100,
+          },
+        ],
         important: ['topic1', 'topic2', 'topic3'],
         needed: ['topic1', 'topic2', 'topic3'],
         ongo: ['topic1', 'topic2', 'topic3'],
@@ -134,6 +159,7 @@ const Frontend = () => {
   const [userLevel, setUserLevel] = useState(null)
   const [activeTopic, setActiveTopic] = useState(null)
   const [activeSubtopic, setActiveSubtopic] = useState(null)
+  const [activeResource, setActiveResource] = useState(null)
   const [userProgress, setUserProgress] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -320,29 +346,110 @@ const Frontend = () => {
             {activeTopic.toUpperCase()} -{' '}
             {activeSubtopic.charAt(0).toUpperCase() + activeSubtopic.slice(1)}
           </h2>
-          {subtopicData.map((topic) => (
-            <div key={topic} className="flex items-center mb-2">
-              <input
-                type="checkbox"
-                checked={
-                  userProgress[activeTopic]?.[activeSubtopic]?.[topic] || false
-                }
-                onChange={(e) =>
-                  updateProgress(
-                    activeTopic,
-                    activeSubtopic,
-                    topic,
-                    e.target.checked
-                  )
-                }
-                className="mr-2"
-              />
-              <span>{topic}</span>
-            </div>
-          ))}
+          <div className="space-y-4">
+            {subtopicData.map((topic, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50"
+              >
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={
+                      userProgress[activeTopic]?.[activeSubtopic]?.[
+                        topic.topic
+                      ] || false
+                    }
+                    onChange={(e) =>
+                      updateProgress(
+                        activeTopic,
+                        activeSubtopic,
+                        topic.topic,
+                        e.target.checked
+                      )
+                    }
+                    className="mr-3"
+                  />
+                  <span className="font-medium">{topic.topic}</span>
+                </div>
+                <button
+                  onClick={() => setActiveResource(topic)}
+                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                >
+                  View Resources
+                </button>
+              </div>
+            ))}
+          </div>
           <button
             onClick={() => setActiveSubtopic(null)}
             className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  const renderResourceModal = () => {
+    if (!activeResource) return null
+
+    return (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60]">
+        <div className="bg-white p-6 rounded-lg max-w-2xl w-full">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold">{activeResource.topic}</h2>
+            <span className="text-gray-600">
+              Estimated time: {activeResource.time} minutes
+            </span>
+          </div>
+
+          <div className="space-y-6">
+            {/* Free Resources Section */}
+            <div className="bg-green-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-green-700 mb-3">
+                Free Resources
+              </h3>
+              <ul className="space-y-2">
+                {activeResource.resources.free.map((resource, idx) => (
+                  <li key={idx} className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    <a
+                      href="#"
+                      className="text-green-700 hover:text-green-900 hover:underline"
+                    >
+                      {resource}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Premium Resources Section */}
+            <div className="bg-purple-50 p-4 rounded-lg">
+              <h3 className="text-lg font-semibold text-purple-700 mb-3">
+                Premium Resources
+              </h3>
+              <ul className="space-y-2">
+                {activeResource.resources.premium.map((resource, idx) => (
+                  <li key={idx} className="flex items-center">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                    <a
+                      href="#"
+                      className="text-purple-700 hover:text-purple-900 hover:underline"
+                    >
+                      {resource}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setActiveResource(null)}
+            className="mt-6 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
           >
             Close
           </button>
@@ -360,6 +467,7 @@ const Frontend = () => {
       {renderMainTopics()}
       {renderTopicModal()}
       {renderSubtopicModal()}
+      {renderResourceModal()}
     </>
   )
 }
