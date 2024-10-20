@@ -1,8 +1,10 @@
+// changes in name
+
 export const roadmapData = [
   {
     name: 'frontend',
     beginner: {
-      html: {
+      HTML: {
         basic: [
           {
             topic: 'topic1',
@@ -33,13 +35,13 @@ export const roadmapData = [
         needed: ['topic1', 'topic2', 'topic3'],
         ongo: ['topic1', 'topic2', 'topic3'],
       },
-      css: {
+      CSS: {
         basic: ['topic1', 'topic2', 'topic3'],
         important: ['topic1', 'topic2', 'topic3'],
         needed: ['topic1', 'topic2', 'topic3'],
         ongo: ['topic1', 'topic2', 'topic3'],
       },
-      js: {
+      JavaScript: {
         basic: ['topic1', 'topic2', 'topic3'],
         important: ['topic1', 'topic2', 'topic3'],
         needed: ['topic1', 'topic2', 'topic3'],
@@ -66,7 +68,7 @@ export const roadmapData = [
         },
       },
     },
-    Intermediater: {
+    Intermediate: {
       html: {
         basic: ['topic1', 'topic2', 'topic3'],
         important: ['topic1', 'topic2', 'topic3'],

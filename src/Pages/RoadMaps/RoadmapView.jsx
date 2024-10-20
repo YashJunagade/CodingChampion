@@ -269,7 +269,7 @@ const RoadmapView = () => {
               }}
             >
               <motion.button
-                className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer text-center"
+                className="w-20 h-20 bg-white rounded-full shadow-even-shadow flex items-center justify-center cursor-pointer text-center"
                 onClick={() => {
                   setActiveTopic(point.topic)
                   animateToPosition(index)
