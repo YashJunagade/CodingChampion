@@ -17,6 +17,8 @@ const RoadmapView = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [userPosition, setUserPosition] = useState(0)
+  const [animatingPosition, setAnimatingPosition] = useState(0) // required. dont delete.
+  const [isAnimating, setIsAnimating] = useState(false)
 
   const currentRoadmap = roadmapData.find(
     (roadmap) => roadmap.name === roadmapName
@@ -128,32 +130,26 @@ const RoadmapView = () => {
     }
   }
 
+  // this function will give main topics positions
+
   const getTopicPositions = (topics) => {
     const positions = []
-    const numTopics = topics.length
-    const horizontalMargin = 12 // Reduced margin to keep everything visible
-    const verticalMargin = 20 // Top margin
-    const rowGap = 20 // Gap between rows
-    const numRows = Math.ceil(numTopics / 2) // Calculate number of rows needed
-
-    // Calculate the total height needed
-    const totalHeight = verticalMargin * 2 + (numRows - 1) * rowGap
+    const numTopics = topics.length // number of topics we have in RodmapData.
+    const margin = 20 // Equal margin for all sides
 
     for (let i = 0; i < numTopics; i++) {
       const row = Math.floor(i / 2)
       const isEvenRow = row % 2 === 0
-      const isLastInRow = i % 2 === 1 || i === numTopics - 1
 
-      // Calculate y position based on row number
-      const y = verticalMargin + row * rowGap
+      // Calculate y position with equal spacing
+      const y =
+        margin + row * ((100 - 2 * margin) / (Math.ceil(numTopics / 2) - 1))
 
       let x
       if (isEvenRow) {
-        // Left to right
-        x = i % 2 === 0 ? horizontalMargin : 100 - horizontalMargin
+        x = i % 2 === 0 ? margin : 100 - margin
       } else {
-        // Right to left
-        x = i % 2 === 0 ? 100 - horizontalMargin : horizontalMargin
+        x = i % 2 === 0 ? 100 - margin : margin
       }
 
       positions.push({ x, y, topic: topics[i] })
@@ -162,31 +158,59 @@ const RoadmapView = () => {
     return positions
   }
 
+  // roadpath logic
+
   const getRoadPath = (positions) => {
-    if (positions.length < 2) return ''
+    if (positions.length < 2) return '' // if only one main topic we dont want road.
 
-    // Start the path from slightly before the first point
-    let path = `M ${positions[0].x - 5} ${positions[0].y}`
-
-    // Add curves between points
+    let path = ''
     for (let i = 0; i < positions.length - 1; i++) {
       const current = positions[i]
       const next = positions[i + 1]
-      const midX = (current.x + next.x) / 2
 
-      path += ` C ${midX} ${current.y}, ${midX} ${next.y}, ${next.x} ${next.y}`
+      // Start from the first point
+      if (i === 0) {
+        path += `M ${current.x} ${current.y}`
+      }
+
+      // Horizontal road
+      path += ` L ${next.x} ${current.y}`
+
+      // Vertical road
+      if (current.y !== next.y) {
+        path += ` L ${next.x} ${next.y}`
+      }
     }
-
-    // Add a small extension after the last point
-    const lastPoint = positions[positions.length - 1]
-    path += ` L ${lastPoint.x + 5} ${lastPoint.y}`
 
     return path
   }
 
+  // animating the user position from one topic to another,
+  // added stops so that the user stops between topics and do not directly jump.
+  const animateToPosition = async (targetPosition) => {
+    if (isAnimating) return
+    setIsAnimating(true)
+
+    const currentPos = userPosition
+    const direction = targetPosition > currentPos ? 1 : -1
+    let pos = currentPos
+
+    // move user yellow thing until we reach the target.
+    while (pos !== targetPosition) {
+      pos += direction
+      setUserPosition(pos)
+      setAnimatingPosition(pos)
+      // Wait for animation to complete
+      await new Promise((resolve) => setTimeout(resolve, 500)) // adjust this thing for animation duration.
+    }
+
+    setIsAnimating(false)
+  }
+
+  // function to get postion of the user.
   const getUserPosition = (positions, currentPosition) => {
     const position = positions[currentPosition]
-    const yOffset = 4 // Reduced offset to keep marker closer to the road
+    const yOffset = 10 // adjust this to make the yellow thing above or below the road.
 
     return {
       x: position.x,
@@ -203,87 +227,84 @@ const RoadmapView = () => {
     const userPos = getUserPosition(topicPositions, userPosition)
 
     return (
-      <div className="relative w-full h-[600px] bg-gradient-to-br from-blue-100 to-purple-100 overflow-hidden">
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          {/* Main road */}
-          <path
-            d={roadPath}
-            stroke="#666666"
-            strokeWidth="6"
-            strokeLinecap="round"
-            fill="none"
-          />
+      <div className="relative w-full h-screen flex items-center justify-center">
+        <div className="relative w-full h-[600px] bg-white">
+          {/* using svg to show the road  might change it to tailwind later. as i am having issues with the vertical road width  */}
+          <svg
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            {/* main road  */}
+            <path
+              d={roadPath}
+              stroke="#666666"
+              strokeWidth="6" // size of road.
+              strokeLinecap="butt"
+              strokeLinejoin="round"
+              fill="none"
+            />
 
-          {/* Road edges */}
-          <path
-            d={roadPath}
-            stroke="#ffffff"
-            strokeWidth="0.5"
-            strokeLinecap="round"
-            fill="none"
-            transform="translate(0, -1.5)"
-          />
-          <path
-            d={roadPath}
-            stroke="#ffffff"
-            strokeWidth="0.5"
-            strokeLinecap="round"
-            fill="none"
-            transform="translate(0, 1.5)"
-          />
+            {/* Dashed center line */}
+            {/* giving issues for vertical road  */}
+            <path
+              d={roadPath}
+              stroke="#ffffff"
+              strokeWidth="1"
+              strokeLinecap="butt"
+              strokeLinejoin="round"
+              strokeDasharray="2 3"
+              fill="none"
+            />
+          </svg>
 
-          {/* Dashed center line */}
-          <path
-            d={roadPath}
-            stroke="#ffffff"
-            strokeWidth="0.5"
-            strokeLinecap="round"
-            strokeDasharray="2 2"
-            fill="none"
-          />
-        </svg>
+          {/* main topic buttons */}
+          {topicPositions.map((point, index) => (
+            <div
+              key={index}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
+              style={{
+                left: `${point.x}%`,
+                top: `${point.y}%`,
+              }}
+            >
+              <motion.button
+                className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer text-center"
+                onClick={() => {
+                  setActiveTopic(point.topic)
+                  animateToPosition(index)
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                disabled={isAnimating}
+              >
+                <span className="text-sm font-bold">{point.topic}</span>
+              </motion.button>
+            </div>
+          ))}
 
-        {topicPositions.map((point, index) => (
-          <div
-            key={index}
-            className="absolute transform -translate-x-1/2 -translate-y-1/2"
+          {/* User position indicator*/}
+          {/* change this to profile picture later */}
+          <motion.div
+            className="absolute w-10 h-10 bg-yellow-400 rounded-full shadow-lg z-20 flex items-center justify-center"
+            animate={{
+              left: `${userPos.x}%`,
+              top: `${userPos.y}%`,
+            }}
+            initial={false}
+            transition={{
+              type: 'spring',
+              stiffness: 70,
+              damping: 15,
+              mass: 1.2,
+            }}
             style={{
-              left: `${point.x}%`,
-              top: `${point.y}%`,
+              transform: 'translate(-50%, -50%)',
             }}
           >
-            <motion.button
-              className="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center cursor-pointer text-center"
-              onClick={() => {
-                setActiveTopic(point.topic)
-                setUserPosition(index)
-              }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="text-sm font-bold">{point.topic}</span>
-            </motion.button>
-          </div>
-        ))}
-
-        <motion.div
-          className="absolute w-10 h-10 bg-yellow-400 rounded-full shadow-lg z-10 flex items-center justify-center"
-          animate={{
-            left: `${userPos.x}%`,
-            top: `${userPos.y}%`,
-          }}
-          initial={false}
-          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-          style={{
-            transform: 'translate(-50%, -50%)',
-          }}
-        >
-          <span className="text-white font-bold">You</span>
-        </motion.div>
+            <span className="text-white font-bold">You</span>
+          </motion.div>
+        </div>
       </div>
     )
   }
@@ -516,6 +537,7 @@ const RoadmapView = () => {
 
   if (!userLevel) return renderLevelSelection()
 
+  // deleted the main topic render function:
   return (
     <div className="relative">
       {renderRoadmap()}
