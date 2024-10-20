@@ -23,7 +23,7 @@ const Roadmaps = () => {
           <Track
             imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"
             trackTitle="Backend"
-            pageRoute="/backend"
+            pageRoute="/roadmaps/backend"
           />
           <Track
             imgLink="https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg"

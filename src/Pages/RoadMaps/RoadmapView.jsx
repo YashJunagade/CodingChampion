@@ -1,160 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { db, auth } from '../../../../../config/firebase'
+import { useParams } from 'react-router-dom'
+import { db, auth } from '../../config/firebase'
 import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 import { onAuthStateChanged } from 'firebase/auth'
+import { roadmapData } from './RoadmapData'
 
-const roadmapData = [
-  {
-    name: 'frontend',
-    beginner: {
-      html: {
-        basic: [
-          {
-            topic: 'topic1',
-            resources: {
-              free: ['yt video1', 'yt video2', 'article'],
-              premium: ['coursera', 'codemy'],
-            },
-            time: 100,
-          },
-          {
-            topic: 'topic2',
-            resources: {
-              free: ['yt video1', 'yt video2', 'article'],
-              premium: ['coursera', 'codemy'],
-            },
-            time: 100,
-          },
-          {
-            topic: 'topic3',
-            resources: {
-              free: ['yt video1', 'yt video2', 'article'],
-              premium: ['coursera', 'codemy'],
-            },
-            time: 100,
-          },
-        ],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      css: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      js: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      Framework: {
-        reactjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-        angularjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-        vue: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-      },
-    },
-    Intermediater: {
-      html: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      css: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      js: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      Framework: {
-        reactjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-        angularjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-        vue: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-      },
-    },
-    Champion: {
-      html: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      css: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      js: {
-        basic: ['topic1', 'topic2', 'topic3'],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
-      },
-      Framework: {
-        reactjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-        angularjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-        vue: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
-        },
-      },
-    },
-  },
-]
-
-const Frontend = () => {
+const RoadmapView = () => {
+  const { roadmapName } = useParams()
   const [user, setUser] = useState(null)
   const [userLevel, setUserLevel] = useState(null)
   const [activeTopic, setActiveTopic] = useState(null)
@@ -163,6 +15,12 @@ const Frontend = () => {
   const [userProgress, setUserProgress] = useState({})
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [selectedFramework, setSelectedFramework] = useState(null)
+  const [showFrameworkSelection, setShowFrameworkSelection] = useState(false)
+
+  const currentRoadmap = roadmapData.find(
+    (roadmap) => roadmap.name === roadmapName
+  )
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -173,12 +31,13 @@ const Frontend = () => {
         setUser(null)
         setUserLevel(null)
         setUserProgress({})
+        setSelectedFramework(null)
         setLoading(false)
       }
     })
 
     return () => unsubscribe()
-  }, [])
+  }, [roadmapName])
 
   const fetchUserData = async (userId) => {
     setLoading(true)
@@ -187,13 +46,17 @@ const Frontend = () => {
       const userDoc = await getDoc(doc(db, 'RoadmapProgress', userId))
       if (userDoc.exists()) {
         const data = userDoc.data()
-        if (data.level) {
-          setUserLevel(data.level)
-          localStorage.setItem('userLevel', data.level)
+        if (data[roadmapName]?.level) {
+          setUserLevel(data[roadmapName].level)
+          localStorage.setItem(
+            `userLevel_${roadmapName}`,
+            data[roadmapName].level
+          )
         }
-        setUserProgress(data.progress || {})
+        setUserProgress(data[roadmapName]?.progress || {})
+        setSelectedFramework(data[roadmapName]?.selectedFramework || null)
       } else {
-        const storedLevel = localStorage.getItem('userLevel')
+        const storedLevel = localStorage.getItem(`userLevel_${roadmapName}`)
         if (storedLevel) {
           setUserLevel(storedLevel)
         }
@@ -214,11 +77,18 @@ const Frontend = () => {
     try {
       await setDoc(
         doc(db, 'RoadmapProgress', user.uid),
-        { level, progress: {} },
+        {
+          [roadmapName]: {
+            level,
+            progress: {},
+            selectedFramework: null,
+          },
+        },
         { merge: true }
       )
       setUserLevel(level)
-      localStorage.setItem('userLevel', level)
+      setSelectedFramework(null)
+      localStorage.setItem(`userLevel_${roadmapName}`, level)
     } catch (err) {
       console.error('Error saving level:', err)
       setError('Failed to save level. Please try again.')
@@ -230,7 +100,6 @@ const Frontend = () => {
   const updateProgress = async (topic, subtopic, topicName, checked) => {
     if (!user) return
 
-    // Update local state immediately for responsive UI
     setUserProgress((prev) => ({
       ...prev,
       [topic]: {
@@ -242,16 +111,14 @@ const Frontend = () => {
       },
     }))
 
-    // Update Firestore in the background
     try {
       const userDocRef = doc(db, 'RoadmapProgress', user.uid)
       await updateDoc(userDocRef, {
-        [`progress.${topic}.${subtopic}.${topicName}`]: checked,
+        [`${roadmapName}.progress.${topic}.${subtopic}.${topicName}`]: checked,
       })
     } catch (err) {
       console.error('Error updating progress:', err)
       setError('Failed to update progress. Please try again.')
-      // Revert local state if Firestore update fails
       setUserProgress((prev) => ({
         ...prev,
         [topic]: {
@@ -265,11 +132,30 @@ const Frontend = () => {
     }
   }
 
+  const selectFramework = async (framework) => {
+    if (!user) return
+
+    setLoading(true)
+    setError(null)
+    try {
+      await updateDoc(doc(db, 'RoadmapProgress', user.uid), {
+        [`${roadmapName}.selectedFramework`]: framework,
+      })
+      setSelectedFramework(framework)
+      setShowFrameworkSelection(false)
+    } catch (err) {
+      console.error('Error saving framework:', err)
+      setError('Failed to save framework. Please try again.')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   const renderLevelSelection = () => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg max-w-md">
         <h2 className="text-2xl font-bold mb-4">Select Your Level</h2>
-        {Object.keys(roadmapData[0])
+        {Object.keys(currentRoadmap)
           .filter((key) => key !== 'name')
           .map((level) => (
             <button
@@ -287,18 +173,63 @@ const Frontend = () => {
   const renderMainTopics = () => (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">
-        Frontend Roadmap ({userLevel})
+        {currentRoadmap.name.charAt(0).toUpperCase() +
+          currentRoadmap.name.slice(1)}{' '}
+        Roadmap ({userLevel})
       </h1>
+      {selectedFramework && (
+        <div className="mb-4">
+          <span className="font-semibold">Selected Framework: </span>
+          {selectedFramework}
+          <button
+            onClick={() => setShowFrameworkSelection(true)}
+            className="ml-4 bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+          >
+            Change Framework
+          </button>
+        </div>
+      )}
       <div className="grid grid-cols-2 gap-4">
-        {Object.keys(roadmapData[0][userLevel]).map((topic) => (
+        {Object.keys(currentRoadmap[userLevel]).map((topic) => (
           <button
             key={topic}
-            onClick={() => setActiveTopic(topic)}
+            onClick={() => {
+              if (topic === 'Framework' && !selectedFramework) {
+                setShowFrameworkSelection(true)
+              } else {
+                setActiveTopic(topic)
+              }
+            }}
             className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
           >
-            {topic.toUpperCase()}
+            {topic === 'Framework' && selectedFramework
+              ? selectedFramework.toUpperCase()
+              : topic.toUpperCase()}
           </button>
         ))}
+      </div>
+    </div>
+  )
+
+  const renderFrameworkSelection = () => (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white p-6 rounded-lg max-w-2xl w-full">
+        <h2 className="text-2xl font-bold mb-4">Select a Framework</h2>
+        {Object.keys(currentRoadmap[userLevel].Framework).map((framework) => (
+          <button
+            key={framework}
+            onClick={() => selectFramework(framework)}
+            className="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 mb-2"
+          >
+            {framework.charAt(0).toUpperCase() + framework.slice(1)}
+          </button>
+        ))}
+        <button
+          onClick={() => setShowFrameworkSelection(false)}
+          className="mt-4 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+        >
+          Cancel
+        </button>
       </div>
     </div>
   )
@@ -306,15 +237,21 @@ const Frontend = () => {
   const renderTopicModal = () => {
     if (!activeTopic) return null
 
-    const topicData = roadmapData[0][userLevel][activeTopic]
+    const topicData = currentRoadmap[userLevel][activeTopic]
 
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div className="bg-white p-6 rounded-lg max-w-2xl w-full">
           <h2 className="text-2xl font-bold mb-4">
-            {activeTopic.toUpperCase()}
+            {activeTopic === 'Framework'
+              ? `${selectedFramework.toUpperCase()}`
+              : activeTopic.toUpperCase()}
           </h2>
-          {Object.keys(topicData).map((subtopic) => (
+          {Object.keys(
+            activeTopic === 'Framework'
+              ? topicData[selectedFramework]
+              : topicData
+          ).map((subtopic) => (
             <button
               key={subtopic}
               onClick={() => setActiveSubtopic(subtopic)}
@@ -337,14 +274,20 @@ const Frontend = () => {
   const renderSubtopicModal = () => {
     if (!activeSubtopic) return null
 
-    const subtopicData = roadmapData[0][userLevel][activeTopic][activeSubtopic]
+    const subtopicData =
+      activeTopic === 'Framework'
+        ? currentRoadmap[userLevel][activeTopic][selectedFramework][
+            activeSubtopic
+          ]
+        : currentRoadmap[userLevel][activeTopic][activeSubtopic]
 
     return (
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div className="bg-white p-6 rounded-lg max-w-2xl w-full">
           <h2 className="text-2xl font-bold mb-4">
-            {activeTopic.toUpperCase()} -{' '}
-            {activeSubtopic.charAt(0).toUpperCase() + activeSubtopic.slice(1)}
+            {activeTopic === 'Framework'
+              ? `${selectedFramework.toUpperCase()} - ${activeSubtopic.charAt(0).toUpperCase() + activeSubtopic.slice(1)}`
+              : `${activeTopic.toUpperCase()} - ${activeSubtopic.charAt(0).toUpperCase() + activeSubtopic.slice(1)}`}
           </h2>
           <div className="space-y-4">
             {subtopicData.map((topic, index) => (
@@ -356,14 +299,18 @@ const Frontend = () => {
                   <input
                     type="checkbox"
                     checked={
-                      userProgress[activeTopic]?.[activeSubtopic]?.[
-                        topic.topic
-                      ] || false
+                      userProgress[activeTopic]?.[
+                        activeTopic === 'Framework'
+                          ? selectedFramework
+                          : activeSubtopic
+                      ]?.[topic.topic] || false
                     }
                     onChange={(e) =>
                       updateProgress(
                         activeTopic,
-                        activeSubtopic,
+                        activeTopic === 'Framework'
+                          ? selectedFramework
+                          : activeSubtopic,
                         topic.topic,
                         e.target.checked
                       )
@@ -460,11 +407,13 @@ const Frontend = () => {
 
   if (loading) return <div>Loading...</div>
   if (!user) return <div>Please log in to view the roadmap.</div>
+  if (!currentRoadmap) return <div>Roadmap not found.</div>
   if (!userLevel) return renderLevelSelection()
 
   return (
     <>
       {renderMainTopics()}
+      {showFrameworkSelection && renderFrameworkSelection()}
       {renderTopicModal()}
       {renderSubtopicModal()}
       {renderResourceModal()}
@@ -472,4 +421,4 @@ const Frontend = () => {
   )
 }
 
-export default Frontend
+export default RoadmapView
