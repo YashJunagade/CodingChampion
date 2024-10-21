@@ -60,8 +60,8 @@ const RoadmapRenderer = ({
   return (
     <div className="relative w-full h-screen flex items-center justify-center">
       <div className="relative w-full h-[600px] bg-white">
+        <p className="ml-2 text-3xl">{currentRoadmap.name} Roadmap</p>
         <RoadPath positions={topicPositions} />
-
         {topicPositions.map((point, index) => (
           <TopicButton
             key={index}
