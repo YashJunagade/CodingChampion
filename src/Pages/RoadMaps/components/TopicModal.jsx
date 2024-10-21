@@ -10,78 +10,18 @@ const TopicModal = ({
   selectFramework,
   setActiveSubtopic,
   userProgress,
+  isFramework,
 }) => {
-  const isFramework = activeTopic?.endsWith('F')
   const selectedFramework = selectedFrameworks[activeTopic]
-
   // Calculate total progress for a subtopic
-  const calculateSubtopicProgress = (subtopicName) => {
-    // Early return if essential data is missing
-    if (!currentRoadmap?.[userLevel]?.[activeTopic]) {
-      return 0
-    }
-
-    let subtopicData
-    try {
-      if (isFramework && selectedFramework) {
-        subtopicData =
-          currentRoadmap[userLevel][activeTopic][selectedFramework]?.[
-            subtopicName
-          ]?.['topics']
-      } else {
-        subtopicData =
-          currentRoadmap[userLevel][activeTopic][subtopicName]?.['topics']
-      }
-    } catch (error) {
-      console.error('Error accessing subtopic data:', error)
-      return 0
-    }
-
-    // If subtopicData is undefined or empty, return 0
-    if (
-      !subtopicData ||
-      !Array.isArray(subtopicData) ||
-      subtopicData.length === 0
-    ) {
-      return 0
-    }
-
-    const totalTopics = subtopicData.length
-
-    if (!isFramework) {
-      const completedTopics = subtopicData
-        .map((topic) => topic?.topic)
-        .filter(
-          (topicName) =>
-            topicName &&
-            userProgress?.[activeTopic]?.[subtopicName]?.[topicName]
-        ).length
-      return Math.round((completedTopics / totalTopics) * 100)
-    }
-
-    // For framework-specific topics
-    const completedTopics = subtopicData
-      .map((topic) => topic?.topic)
-      .filter(
-        (topicName) =>
-          topicName &&
-          userProgress?.[activeTopic]?.frameworks?.[selectedFramework]?.[
-            subtopicName
-          ]?.[topicName]
-      ).length
-    return Math.round((completedTopics / totalTopics) * 100)
-  }
-
-  // Calculate overall topic progress and total suggested time
   const calculateOverallProgressAndTime = () => {
     if (!currentRoadmap?.[userLevel]?.[activeTopic]) {
       return { progress: 0, totalTime: 0 }
     }
 
-    const topicData =
-      isFramework && selectedFramework
-        ? currentRoadmap[userLevel][activeTopic][selectedFramework]
-        : currentRoadmap[userLevel][activeTopic]
+    const topicData = isFramework
+      ? currentRoadmap[userLevel][activeTopic][selectedFramework]
+      : currentRoadmap[userLevel][activeTopic]
 
     if (!topicData) {
       return { progress: 0, totalTime: 0 }
@@ -107,6 +47,49 @@ const TopicModal = ({
 
     const overallProgress = Math.round(totalProgress / subtopics.length)
     return { progress: overallProgress, totalTime }
+  }
+
+  const calculateSubtopicProgress = (subtopicName) => {
+    // Early return if essential data is missing
+    if (!currentRoadmap?.[userLevel]?.[activeTopic]) {
+      return 0
+    }
+
+    let subtopicData
+    try {
+      if (isFramework && selectedFramework) {
+        subtopicData =
+          currentRoadmap[userLevel][activeTopic][selectedFramework]?.[
+            subtopicName
+          ]?.topics
+      } else {
+        subtopicData =
+          currentRoadmap[userLevel][activeTopic][subtopicName]?.topics
+      }
+    } catch (error) {
+      console.error('Error accessing subtopic data:', error)
+      return 0
+    }
+
+    // If subtopicData is undefined or empty, return 0
+    if (
+      !subtopicData ||
+      !Array.isArray(subtopicData) ||
+      subtopicData.length === 0
+    ) {
+      return 0
+    }
+
+    const totalTopics = subtopicData.length
+    const completedTopics = subtopicData.filter((topic) =>
+      isFramework
+        ? userProgress?.[activeTopic]?.frameworks?.[selectedFramework]?.[
+            subtopicName
+          ]?.[topic.topic]
+        : userProgress?.[activeTopic]?.subtopics?.[subtopicName]?.[topic.topic]
+    ).length
+
+    return Math.round((completedTopics / totalTopics) * 100)
   }
 
   // Get frameworks if it's a framework topic
