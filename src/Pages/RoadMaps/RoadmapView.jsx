@@ -102,41 +102,58 @@ const RoadmapView = () => {
     }
   }
 
-  const updateProgress = async (topic, subtopic, topicName, checked) => {
+  const updateProgress = (topic, subtopic, topicName, checked) => {
     if (!user) return
 
+    const framework = selectedFrameworks[topic] || 'framework'
+
+    // Update local state with framework-specific progress
     setUserProgress((prev) => ({
       ...prev,
       [topic]: {
         ...prev[topic],
-        [subtopic]: {
-          ...prev[topic]?.[subtopic],
-          [topicName]: checked,
+        frameworks: {
+          ...(prev[topic]?.frameworks || {}),
+          [framework]: {
+            ...(prev[topic]?.frameworks?.[framework] || {}),
+            [subtopic]: {
+              ...(prev[topic]?.frameworks?.[framework]?.[subtopic] || {}),
+              [topicName]: checked,
+            },
+          },
         },
       },
     }))
 
+    // Update Firestore after updating local state
     try {
       const userDocRef = doc(db, 'RoadmapProgress', user.uid)
-      await updateDoc(userDocRef, {
-        [`${roadmapName}.progress.${topic}.${subtopic}.${topicName}`]: checked,
+      updateDoc(userDocRef, {
+        [`${roadmapName}.progress.${topic}.frameworks.${framework} .${subtopic}.${topicName}`]:
+          checked,
       })
     } catch (err) {
       console.error('Error updating progress:', err)
       setError('Failed to update progress. Please try again.')
+      // Revert local state on error
       setUserProgress((prev) => ({
         ...prev,
         [topic]: {
           ...prev[topic],
-          [subtopic]: {
-            ...prev[topic]?.[subtopic],
-            [topicName]: !checked,
+          frameworks: {
+            ...(prev[topic]?.frameworks || {}),
+            [framework]: {
+              ...(prev[topic]?.frameworks?.[framework] || {}),
+              [subtopic]: {
+                ...(prev[topic]?.frameworks?.[framework]?.[subtopic] || {}),
+                [topicName]: !checked,
+              },
+            },
           },
         },
       }))
     }
   }
-
   const selectFramework = async (topicName, framework) => {
     if (!user) return
 
@@ -187,6 +204,7 @@ const RoadmapView = () => {
           selectedFrameworks={selectedFrameworks}
           selectFramework={selectFramework}
           setActiveSubtopic={setActiveSubtopic}
+          userProgress={userProgress}
         />
       )}
 
