@@ -146,7 +146,7 @@ export const roadmapData = [
               },
             ],
           },
-          intermediate: {
+          important: {
             suggestedTime: 300,
             topics: [
               {
