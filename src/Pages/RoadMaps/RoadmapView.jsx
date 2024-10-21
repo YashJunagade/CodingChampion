@@ -105,7 +105,7 @@ const RoadmapView = () => {
   const updateProgress = (topic, subtopic, topicName, checked) => {
     if (!user) return
 
-    const framework = selectedFrameworks[topic] || 'framework'
+    const framework = selectedFrameworks[topic]
 
     // Update local state with framework-specific progress
     setUserProgress((prev) => ({
