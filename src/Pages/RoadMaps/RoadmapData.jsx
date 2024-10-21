@@ -4,37 +4,103 @@ export const roadmapData = [
   {
     name: 'frontend',
     beginner: {
-      start: {},
       HTML: {
-        basic: [
-          {
-            topic: 'topic1',
-            resources: {
-              free: ['yt video1', 'yt video2', 'article'],
-              premium: ['coursera', 'codemy'],
+        suggestedTime: 500, // Total suggested time for HTML in minutes
+        basic: {
+          suggestedTime: 300,
+          topics: [
+            {
+              topic: 'HTML Structure',
+              resources: {
+                free: [
+                  { ytVideo: 'https://music.youtube.com/listen_again' },
+                  { article: 'yt.com' },
+                ],
+                premium: [{ course1: 'coursera' }, { course2: 'codemy' }],
+              },
+              time: 100,
             },
-            time: 100,
-          },
-          {
-            topic: 'topic2',
-            resources: {
-              free: ['yt video1', 'yt video2', 'article'],
-              premium: ['coursera', 'codemy'],
+            {
+              topic: 'HTML Tags',
+              resources: {
+                free: [{ ytVideo: 'yt.com' }, { article: 'yt.com' }],
+                premium: [{ course1: 'coursera' }, { course2: 'codemy' }],
+              },
+              time: 100,
             },
-            time: 100,
-          },
-          {
-            topic: 'topic3',
-            resources: {
-              free: ['yt video1', 'yt video2', 'article'],
-              premium: ['coursera', 'codemy'],
+            {
+              topic: 'HTML Forms',
+              resources: {
+                free: [{ ytVideo: 'yt.com' }, { article: 'yt.com' }],
+                premium: [{ course1: 'coursera' }, { course2: 'codemy' }],
+              },
+              time: 100,
             },
-            time: 100,
-          },
-        ],
-        important: ['topic1', 'topic2', 'topic3'],
-        needed: ['topic1', 'topic2', 'topic3'],
-        ongo: ['topic1', 'topic2', 'topic3'],
+          ],
+        },
+        intermediate: {
+          suggestedTime: 300,
+          topics: [
+            {
+              topic: 'HTML Structure',
+              resources: {
+                free: ['yt video1', 'yt video2', 'article'],
+                premium: ['coursera', 'codemy'],
+              },
+              time: 100,
+            },
+            {
+              topic: 'HTML Tags',
+              resources: {
+                free: ['yt video1', 'yt video2', 'article'],
+                premium: ['coursera', 'codemy'],
+              },
+              time: 100,
+            },
+            {
+              topic: 'HTML Forms',
+              resources: {
+                free: ['yt video1', 'yt video2', 'article'],
+                premium: ['coursera', 'codemy'],
+              },
+              time: 100,
+            },
+          ],
+        },
+        needed: {
+          suggestedTime: 200,
+          topics: [
+            {
+              topic: 'Forms Validation',
+              resources: {
+                free: ['yt video1', 'yt video2', 'article'],
+                premium: ['coursera', 'codemy'],
+              },
+              time: 110,
+            },
+            {
+              topic: 'Media Elements',
+              resources: {
+                free: ['yt video1', 'yt video2', 'article'],
+                premium: ['coursera', 'codemy'],
+              },
+              time: 90,
+            },
+          ],
+        },
+        ongo: {
+          suggestedTime: 100,
+          topics: [
+            {
+              topic: 'Advanced HTML APIs',
+              resources: {
+                free: ['yt video1', 'yt video2', 'article'],
+                premium: ['coursera', 'codemy'],
+              },
+              time: 100,
+            },
+          ],
+        },
       },
       CSS: {
         basic: ['topic1', 'topic2', 'topic3'],
@@ -50,47 +116,289 @@ export const roadmapData = [
       },
       javascriptF: {
         reactjs: {
-          basic: [
-            {
-              topic: 'topic1',
-              resources: {
-                free: ['yt video1', 'yt video2', 'article'],
-                premium: ['coursera', 'codemy'],
+          suggestedTime: 500,
+          basic: {
+            suggestedTime: 300,
+            topics: [
+              {
+                topic: 'HTML Structure',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
               },
-              time: 100,
-            },
-            {
-              topic: 'topic2',
-              resources: {
-                free: ['yt video1', 'yt video2', 'article'],
-                premium: ['coursera', 'codemy'],
+              {
+                topic: 'HTML Tags',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
               },
-              time: 100,
-            },
-            {
-              topic: 'topic3',
-              resources: {
-                free: ['yt video1', 'yt video2', 'article'],
-                premium: ['coursera', 'codemy'],
+              {
+                topic: 'HTML Forms',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
               },
-              time: 100,
-            },
-          ],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
+            ],
+          },
+          intermediate: {
+            suggestedTime: 300,
+            topics: [
+              {
+                topic: 'HTML Structure',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Tags',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Forms',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
+          needed: {
+            suggestedTime: 200,
+            topics: [
+              {
+                topic: 'Forms Validation',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 110,
+              },
+              {
+                topic: 'Media Elements',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 90,
+              },
+            ],
+          },
+          ongo: {
+            suggestedTime: 100,
+            topics: [
+              {
+                topic: 'Advanced HTML APIs',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
         },
-        angularjs: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
+        angularJs: {
+          suggestedTime: 500,
+          basic: {
+            suggestedTime: 300,
+            topics: [
+              {
+                topic: 'HTML Structure1',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Tags2',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Forms3',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
+          intermediate: {
+            suggestedTime: 300,
+            topics: [
+              {
+                topic: 'HTML Structure',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Tags',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Forms',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
+          needed: {
+            suggestedTime: 200,
+            topics: [
+              {
+                topic: 'Forms Validation',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 110,
+              },
+              {
+                topic: 'Media Elements',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 90,
+              },
+            ],
+          },
+          ongo: {
+            suggestedTime: 100,
+            topics: [
+              {
+                topic: 'Advanced HTML APIs',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
         },
-        vue: {
-          basic: ['topic1', 'topic2', 'topic3'],
-          important: ['topic1', 'topic2', 'topic3'],
-          needed: ['topic1', 'topic2', 'topic3'],
-          ongo: ['topic1', 'topic2', 'topic3'],
+        vuejs: {
+          suggestedTime: 500,
+          basic: {
+            suggestedTime: 300,
+            topics: [
+              {
+                topic: 'HTML Structure',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Tags',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Forms',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
+          intermediate: {
+            suggestedTime: 300,
+            topics: [
+              {
+                topic: 'HTML Structure',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Tags',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+              {
+                topic: 'HTML Forms',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
+          needed: {
+            suggestedTime: 200,
+            topics: [
+              {
+                topic: 'Forms Validation',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 110,
+              },
+              {
+                topic: 'Media Elements',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 90,
+              },
+            ],
+          },
+          ongo: {
+            suggestedTime: 100,
+            topics: [
+              {
+                topic: 'Advanced HTML APIs',
+                resources: {
+                  free: ['yt video1', 'yt video2', 'article'],
+                  premium: ['coursera', 'codemy'],
+                },
+                time: 100,
+              },
+            ],
+          },
         },
       },
       cssF: {
