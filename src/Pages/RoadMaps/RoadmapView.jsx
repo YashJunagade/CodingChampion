@@ -122,16 +122,30 @@ const RoadmapView = () => {
             },
           },
         },
+        subtopics: {
+          ...(prev[topic]?.subtopics || {}),
+          [subtopic]: {
+            ...(prev[topic]?.subtopics?.[subtopic] || {}),
+            [topicName]: checked,
+          },
+        },
       },
     }))
 
     // Update Firestore after updating local state
     try {
       const userDocRef = doc(db, 'RoadmapProgress', user.uid)
-      updateDoc(userDocRef, {
-        [`${roadmapName}.progress.${topic}.frameworks.${framework} .${subtopic}.${topicName}`]:
-          checked,
-      })
+      if (isFramework) {
+        updateDoc(userDocRef, {
+          [`${roadmapName}.progress.${topic}.frameworks.${framework}.${subtopic}.${topicName}`]:
+            checked,
+        })
+      } else {
+        updateDoc(userDocRef, {
+          [`${roadmapName}.progress.${topic}.subtopics.${subtopic}.${topicName}`]:
+            checked,
+        })
+      }
     } catch (err) {
       console.error('Error updating progress:', err)
       setError('Failed to update progress. Please try again.')
@@ -148,6 +162,13 @@ const RoadmapView = () => {
                 ...(prev[topic]?.frameworks?.[framework]?.[subtopic] || {}),
                 [topicName]: !checked,
               },
+            },
+          },
+          subtopics: {
+            ...(prev[topic]?.subtopics || {}),
+            [subtopic]: {
+              ...(prev[topic]?.subtopics?.[subtopic] || {}),
+              [topicName]: !checked,
             },
           },
         },
@@ -183,6 +204,8 @@ const RoadmapView = () => {
   if (!userLevel)
     return <LevelSelection onSelect={selectLevel} roadmap={currentRoadmap} />
 
+  const isFramework = activeTopic?.endsWith('F')
+
   return (
     <div className="relative">
       <RoadmapRenderer
@@ -205,6 +228,7 @@ const RoadmapView = () => {
           selectFramework={selectFramework}
           setActiveSubtopic={setActiveSubtopic}
           userProgress={userProgress}
+          isFramework={isFramework}
         />
       )}
 

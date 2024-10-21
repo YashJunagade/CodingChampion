@@ -141,7 +141,6 @@ const SubtopicModal = ({
               className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50"
             >
               <div className="flex items-center flex-1">
-                {console.log(topic.topic)}
                 <input
                   type="checkbox"
                   checked={getTopicCheckedState(topic.topic)}
