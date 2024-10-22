@@ -217,8 +217,8 @@ const RoadmapView = () => {
         isAnimating={isAnimating}
         setIsAnimating={setIsAnimating}
         setActiveTopic={setActiveTopic}
+        selectedFrameworks={selectedFrameworks}
       />
-
       {activeTopic && (
         <TopicModal
           activeTopic={activeTopic}
@@ -232,7 +232,6 @@ const RoadmapView = () => {
           isFramework={isFramework}
         />
       )}
-
       {activeSubtopic && (
         <SubtopicModal
           activeSubtopic={activeSubtopic}
@@ -246,7 +245,6 @@ const RoadmapView = () => {
           setActiveResource={setActiveResource}
         />
       )}
-
       {activeResource && (
         <ResourceModal
           resource={activeResource}

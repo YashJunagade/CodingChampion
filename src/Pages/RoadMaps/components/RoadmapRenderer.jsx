@@ -12,6 +12,7 @@ const RoadmapRenderer = ({
   isAnimating,
   setIsAnimating,
   setActiveTopic,
+  selectedFrameworks,
 }) => {
   const getTopicPositions = (topics) => {
     const positions = []
@@ -68,6 +69,7 @@ const RoadmapRenderer = ({
             point={point}
             index={index}
             isAnimating={isAnimating}
+            selectedFrameworks={selectedFrameworks}
             onSelect={() => {
               setActiveTopic(point.topic)
               animateToPosition(index)
