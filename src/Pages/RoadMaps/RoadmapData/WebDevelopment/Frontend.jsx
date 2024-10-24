@@ -1407,7 +1407,7 @@ export const Frontend = {
       },
     },
     JavaScript: {
-      suggestedTime: 0,
+      suggestedTime: 10,
       Basic: {
         suggestedTime: 960,
         topics: [
@@ -1860,6 +1860,7 @@ export const Frontend = {
         ],
       },
       Advanced: {
+        suggestedTime: 990,
         topics: [
           {
             topic: 'Object-Oriented Programming (OOP)',
@@ -2109,8 +2110,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git & GitHub Tutorial in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=gwWKnnCMQ5c',
+                  'Git & GitHub Tutorial in Hindi - Apna College':
+                    'https://youtu.be/Ez8F0nW6S-w?si=p0XstoR1bidNWy7j',
                 },
                 {
                   'Git Tutorial for Beginners - freeCodeCamp':
@@ -2145,8 +2146,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Installation Tutorial Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=qkbK31dMNfM',
+                  'Git Installation Tutorial Hindi - Chai aur Code':
+                    'https://youtu.be/q8EevlEpQ2A?si=R6VK6v-_I_YGEVh5',
                 },
                 {
                   'Git & GitHub Setup - Traversy Media':
@@ -2183,8 +2184,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Basic Commands in Hindi - Codemy India':
-                    'https://www.youtube.com/watch?v=YP1Tg0Vw9FQ',
+                  'Git Basic Commands in Hindi - Cognitive Programmer':
+                    'https://youtu.be/Uz_mTOQL9Tw?si=LlICmni3rxuu2ywg',
                 },
                 {
                   'Git Basics Tutorial - Academind':
@@ -2225,7 +2226,7 @@ export const Frontend = {
               free: [
                 {
                   'Git Branching in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=cRlVpgAzKys',
+                    'https://youtu.be/7xhkEQS3dXw?si=AK_Zu3Xxaz8Bff_9',
                 },
                 {
                   'Git Branching & Merging - The Net Ninja':
@@ -2262,11 +2263,11 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Undo Changes in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=kLZTzDPh4V8',
+                  'Git Undo Changes in Hindi - Code Improve':
+                    'https://youtu.be/zhso2jOyyOk?si=SYdEuqFwsPyC3UaQ',
                 },
                 {
-                  'Git Reset & Revert - The Net Ninja':
+                  'Git Reset & Revert - Corey Schafer':
                     'https://www.youtube.com/watch?v=FdZecVxzJbk',
                 },
                 {
@@ -2299,11 +2300,11 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Remote in Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=6YbkZ1Y-LxQ',
+                  'Git Remote in Hindi - CodeWithHarry':
+                    'https://youtu.be/Thx5yerhlhs?si=lEN669qQV9imtDzx',
                 },
                 {
-                  'Git Remote Tutorial - freeCodeCamp':
+                  'Git Remote Tutorial - SuperSimpleDev':
                     'https://www.youtube.com/watch?v=1ibmWyt8hfw',
                 },
                 {
@@ -2342,11 +2343,11 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Rebase in Hindi - Love Babbar':
-                    'https://www.youtube.com/watch?v=3YzMq8xC1dE',
+                  'Git Rebase in Hindi - Hitesh Choudhary':
+                    'https://youtu.be/4aIazhclURE?si=AwCamNkVuNlJX-1W',
                 },
                 {
-                  'Git Rebase Tutorial - The Net Ninja':
+                  'Git Rebase Tutorial - The Mordern Coder':
                     'https://www.youtube.com/watch?v=f1wnYdLEpgI',
                 },
                 {
@@ -2380,12 +2381,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Stash in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=NHuHV3mG7l4',
+                  'Git Stash in Hindi - Aman Jat':
+                    'https://youtu.be/ts3qntjhgxI?si=QXBErW70_nvrW1zN',
                 },
                 {
-                  'Git Stash Tutorial - Corey Schafer':
-                    'https://www.youtube.com/watch?v=KLEDKgMmbBI',
+                  'Git Stash Tutorial - Hitesh Choudhary':
+                    'https://youtu.be/EYdIMAVFIk0?si=DjrUZlgk89z1zBUC',
                 },
                 {
                   'Git Stash Documentation':
@@ -2406,8 +2407,8 @@ export const Frontend = {
                     'https://www.udemy.com/course/git-advanced-commands/',
                 },
                 {
-                  'LinkedIn Learning - Git Advanced Techniques':
-                    'https://www.linkedin.com/learning/git-advanced-techniques',
+                  'LinkedIn Learning - Git Intermediate Techniques':
+                    'https://www.linkedin.com/learning/git-intermediate-techniques-16077011',
                 },
               ],
             },
@@ -2419,7 +2420,7 @@ export const Frontend = {
               free: [
                 {
                   'Git Conflict Resolution in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=Vn4QxYM5R7g',
+                    'https://youtu.be/nfOxUaA2trY?si=aR6gq71XiInOQ-QK',
                 },
                 {
                   'Git Merge Conflicts - freeCodeCamp':
@@ -2445,7 +2446,7 @@ export const Frontend = {
                 },
                 {
                   'Pluralsight - Managing Merge Conflicts in Git':
-                    'https://www.pluralsight.com/courses/managing-merge-conflicts-git',
+                    'https://www.pluralsight.com/courses/git-advanced-tips-tricks',
                 },
               ],
             },
@@ -2456,12 +2457,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Hooks in Hindi - Hitesh Choudhary':
-                    'https://www.youtube.com/watch?v=vxiOfmPGg_k',
-                },
-                {
-                  'Git Hooks Tutorial - Hussein Nasser':
-                    'https://www.youtube.com/watch?v=ZZGyuY-Emks',
+                  'Git Hooks Tutorial - GitGuardian':
+                    'https://youtu.be/1OFiiPretCM?si=u0PZlLpsrILpviYl',
                 },
                 {
                   'Git Hooks Documentation':
@@ -2478,11 +2475,11 @@ export const Frontend = {
               premium: [
                 {
                   'Udemy - Git Advanced Concepts':
-                    'https://www.udemy.com/course/git-advanced-concepts/',
+                    'https://www.udemy.com/course/git-and-github-bootcamp/',
                 },
                 {
-                  'Frontend Masters - Advanced Git':
-                    'https://frontendmasters.com/courses/advanced-git/',
+                  'Frontend Masters - Everthing about Git':
+                    'https://frontendmasters.com/courses/everything-git/',
                 },
               ],
             },
@@ -2493,12 +2490,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Bisect in Hindi - Technical Guftgu':
-                    'https://www.youtube.com/watch?v=D4Gy2yE8N9Y',
-                },
-                {
-                  'Git Bisect Tutorial - The Net Ninja':
-                    'https://www.youtube.com/watch?v=P3ZR_s3NFvM',
+                  'Git Bisect Tutorial - Joshua Morony':
+                    'https://youtu.be/Q-kqm0AgJZ8?si=2ET2kbrZ5QCY--gB',
                 },
                 {
                   'Git Bisect Documentation':
@@ -2515,8 +2508,8 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Git Tools and Techniques':
-                    'https://www.udemy.com/course/git-tools-and-techniques/',
+                  'Udemy - The Complete Git Guide':
+                    'https://www.udemy.com/course/git-and-github-complete-guide/',
                 },
                 {
                   'Pluralsight - Git Administration':
@@ -2531,12 +2524,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Git Tags in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=vExFJBwjqrE',
+                  'Git Tags in Hindi - S#CloudHub':
+                    'https://youtu.be/5DZJuVfKup0?si=hfz0LT4Hkq36bJTm',
                 },
                 {
-                  'Git Tags Tutorial - Corey Schafer':
-                    'https://www.youtube.com/watch?v=Yvy5PijsVZw',
+                  'Git Tags Tutorial - Automation Step by Step':
+                    'https://youtu.be/govmXpDGLpo?si=b8eyQSMpjMfWz4Ys',
                 },
                 {
                   'Git Tag Documentation':
@@ -2554,7 +2547,7 @@ export const Frontend = {
               premium: [
                 {
                   'Udemy - Git Mastery':
-                    'https://www.udemy.com/course/git-complete-mastery/',
+                    'https://www.udemy.com/course/git-mastery-beginner-to-expert-with-github-gitlab/',
                 },
                 {
                   'LinkedIn Learning - Git: Tags, Branches,':
@@ -2615,12 +2608,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'JSX in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=kDJocE-ueyo',
+                    'JSX in Hindi - CodeWithHarry':
+                      'https://youtu.be/JvC7aA24m4Q?si=eBVu0K_lkWokyTSw',
                   },
                   {
-                    'JSX in React - Academind':
-                      'https://www.youtube.com/watch?v=Qs9esjk4rXs',
+                    'JSX in React - Codevolution':
+                      'https://youtu.be/7fPXI_MnBOY?si=fyZd-CdMrp9H9_Tr',
                   },
                   {
                     'React JSX Documentation':
@@ -2642,7 +2635,7 @@ export const Frontend = {
                   },
                   {
                     'Educative - React for Beginners':
-                      'https://www.educative.io/path/react-for-front-end-developers',
+                      'https://www.educative.io/courses/react-beginner-to-advanced',
                   },
                 ],
               },
@@ -2653,8 +2646,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Components in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=Ff5BFLxGF6Y',
+                    'React Components in Hindi - CodeWithHarry':
+                      'https://youtu.be/S4VH8hddg8c?si=VNeIBH1lGQmPI9L-',
                   },
                   {
                     'React Components - Net Ninja':
@@ -2692,11 +2685,11 @@ export const Frontend = {
                 free: [
                   {
                     'Conditional Rendering in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=kY2LlYeMcy8',
+                      'https://youtu.be/96DGjqlAIxs?si=6K4FWdUaGtLaEOL4',
                   },
                   {
-                    'React Conditional Rendering - Ben Awad':
-                      'https://www.youtube.com/watch?v=4oCVDkb_EIs',
+                    'React Conditional Rendering - Bro Code':
+                      'https://youtu.be/XvURBpFxdGw?si=cShWixu0MVtyEiA5',
                   },
                   {
                     'React Rendering Documentation':
@@ -2717,7 +2710,7 @@ export const Frontend = {
                   },
                   {
                     'Level Up Tutorials - React':
-                      'https://leveluptutorials.com/tutorials/react-basics',
+                      'https://levelup.video/tutorials/react-for-everyone',
                   },
                 ],
               },
@@ -2728,12 +2721,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React State & Lifecycle in Hindi - Coders Gyan':
-                      'https://www.youtube.com/watch?v=KP5KGKIaR8E',
+                    'React State & Lifecycle in Hindi - CodeWithHarry':
+                      'https://youtu.be/abjeWy4sZiU?si=Lt6EuScuBeVcXLeq',
                   },
                   {
                     'React State & Lifecycle - Codevolution':
-                      'https://www.youtube.com/watch?v=4ORZ1GmjaMc',
+                      'https://youtu.be/qnN_FuFNq2g?si=FDHCr5zjoEMA9Y-T',
                   },
                   {
                     'React State Documentation':
@@ -2766,12 +2759,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Events in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=EUy0EQm6eXM',
+                    'React Events in Hindi - CodeWithHarry':
+                      'https://youtu.be/cXkwFjBrWfk?si=hipAdf2PdxlCuTGX',
                   },
                   {
-                    'React Event Handling - Web Dev Simplified':
-                      'https://www.youtube.com/watch?v=0XSDAup85SA',
+                    'React Event Handling - Codevolution':
+                      'https://youtu.be/Znqv84xi8Vs?si=H9WaUJ6QSWnnhcT6',
                   },
                   {
                     'React Events Documentation':
@@ -2804,12 +2797,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Forms in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=sO-RB2Z_Uew',
+                    'React Forms in Hindi - CodeHelp by Babbar':
+                      'https://youtu.be/wB3Jf7yyvfU?si=yXyvipliFL2t31_S',
                   },
                   {
-                    'React Forms - Ben Awad':
-                      'https://www.youtube.com/watch?v=7Vo_VCcWupQ',
+                    'React Forms - Cosden Solutions':
+                      'https://youtu.be/cc_xmawJ8Kg?si=-MMBHeEE5KmtNPiH',
                   },
                   {
                     'React Forms Documentation':
@@ -2825,12 +2818,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - React Forms & Form Validation':
-                      'https://www.udemy.com/course/react-forms-validation/',
+                    'Udemy - React Hooj Form':
+                      'https://www.udemy.com/course/react-hook-form-the-complete-guide-with-react-js/?couponCode=MTST7102224A2',
                   },
                   {
-                    'Level Up Tutorials - React Forms':
-                      'https://leveluptutorials.com/tutorials/react-forms',
+                    'Level Up Tutorials - React for everyone':
+                      'https://levelup.video/tutorials/redux-and-react-for-everyone',
                   },
                 ],
               },
@@ -2841,12 +2834,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React DevTools in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=rb1GWqCJid4',
+                    'React DevTools in Hindi - Thapa Technical':
+                      'https://youtu.be/EG0LhIfmUSo?si=gP1BwwfYhzgwvv09',
                   },
                   {
-                    'React DevTools - Kent C. Dodds':
-                      'https://www.youtube.com/watch?v=DQjMiKEwl_E',
+                    'React DevTools - Web Dev Simplified':
+                      'https://youtu.be/l8knG0BPr-o?si=5VCsZOLMQVkmyStB',
                   },
                   {
                     'React DevTools Documentation':
@@ -2867,8 +2860,8 @@ export const Frontend = {
                       'https://frontendmasters.com/courses/react-performance/',
                   },
                   {
-                    'Udemy - React Developer Tools Masterclass':
-                      'https://www.udemy.com/course/react-developer-tools-debugging/',
+                    'Udemy - React 25 Debugging Exercises':
+                      'https://www.udemy.com/course/react-beginner-challenges/?couponCode=MTST7102224A2',
                   },
                 ],
               },
@@ -2876,7 +2869,7 @@ export const Frontend = {
             },
           ],
         },
-        GoodToKnow: {
+        'Good To Know': {
           suggestedTime: 930,
           topics: [
             {
@@ -2884,12 +2877,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Hooks in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=HZKnGqrF9-Y',
+                    'React Hooks in Hindi - Chai aur Code':
+                      'https://youtu.be/lI7IIOWM0Mo?si=ncR8eGXT6ZtnlFEP',
                   },
                   {
-                    'React Hooks - Web Dev Simplified':
-                      'https://www.youtube.com/watch?v=O6P86uwfdR0',
+                    'React Hooks - GreatStack':
+                      'https://youtu.be/6wf5dIrryoQ?si=urrvIQSfMhrgZIsn',
                   },
                   {
                     'React Hooks Documentation':
@@ -2910,8 +2903,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/react-hooks/',
                   },
                   {
-                    'Frontend Masters - React Hooks':
-                      'https://frontendmasters.com/courses/react-hooks/',
+                    'Frontend Masters - Complete Into To React ':
+                      'https://frontendmasters.com/courses/complete-react-v8/',
                   },
                 ],
               },
@@ -2922,12 +2915,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Router in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=F5eDWtJRYaI',
+                    'React Router in Hindi - Chai aur Code':
+                      'https://youtu.be/VJov5QWEKE4?si=IpwunqyJlbAVcWxf',
                   },
                   {
-                    'React Router - Net Ninja':
-                      'https://www.youtube.com/watch?v=Law7wfdg_ls',
+                    'React Router - Hitesh Choudhary':
+                      'https://youtu.be/eLT2uiV7D8g?si=WX0pKIFzrZHkk5PN',
                   },
                   {
                     'React Router Documentation':
@@ -2944,12 +2937,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - React Router 6':
-                      'https://www.udemy.com/course/react-router-6/',
+                    'Udemy - React - The Complete Guide 2024':
+                      'https://www.udemy.com/course/react-the-complete-guide-incl-redux/',
                   },
                   {
-                    'Level Up Tutorials - React Router':
-                      'https://leveluptutorials.com/tutorials/pro-react-router-6',
+                    'Level Up Tutorials - Redux & React For Everyone':
+                      'https://levelup.video/tutorials/redux-and-react-for-everyone',
                   },
                 ],
               },
@@ -2960,12 +2953,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Styling in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=j5P9FHiBVNo',
+                    'React Styling in Hindi - Thapa Technical':
+                      'https://youtu.be/HIZBe2c4M1c?si=uM0rsOnAXM3klpsn',
                   },
                   {
-                    'React Styling - Traversy Media':
-                      'https://www.youtube.com/watch?v=0afZj1G0BIE',
+                    'React Styling - Bro Code':
+                      'https://youtu.be/r3SMd0YTSZs?si=jQnoQZv3pexFcK0B',
                   },
                   {
                     'Styling Documentation':
@@ -2986,8 +2979,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/styled-components-tutorial-and-project-course/',
                   },
                   {
-                    'Frontend Masters - CSS in React':
-                      'https://frontendmasters.com/courses/react-css/',
+                    'Frontend Masters - React':
+                      'https://frontendmasters.com/courses/react-performance/',
                   },
                 ],
               },
@@ -2998,12 +2991,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Context API in Hindi - Coders Gyan':
-                      'https://www.youtube.com/watch?v=jEXsqJgpeDU',
+                    'Context API in Hindi - Chai aur Code':
+                      'https://youtu.be/JQVBGtZMqgU?si=j3FWMDv3BwVdWAnf',
                   },
                   {
-                    'Context API - Ben Awad':
-                      'https://www.youtube.com/watch?v=lhMKvyLRWo0',
+                    'Context API - Hitesh Choudhary':
+                      'https://youtu.be/aAcI_FdfkA8?si=tBOV4n907f1mE01i',
                   },
                   {
                     'Context Documentation':
@@ -3036,12 +3029,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Error Boundaries in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=DNYXgtZBRPE',
+                    'Error Boundaries in Hindi - Coder Dost':
+                      'https://youtu.be/cRIFppRVpUQ?si=G5IIhBY0ksZdsLOd',
                   },
                   {
-                    'Error Boundaries - Ben Awad':
-                      'https://www.youtube.com/watch?v=N0GyMFGXr-o',
+                    'Error Boundaries - Web Dev Simplified':
+                      'https://youtu.be/_FuDMEgIy7I?si=H-ou8HzUZKvbXTg2',
                   },
                   {
                     'Error Boundaries Documentation':
@@ -3074,12 +3067,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Performance in Hindi - Coders Gyan':
-                      'https://www.youtube.com/watch?v=IZ3Y_L7GS6c',
+                    'React Performance in Hindi - Piyush Garg':
+                      'https://youtu.be/nrIAVhs3PmQ?si=YfOVVuVE5FKR2cw6',
                   },
                   {
                     'React Performance - Web Dev Simplified':
-                      'https://www.youtube.com/watch?v=YpqKrVcth8Y',
+                      'https://youtu.be/Qwb-Za6cBws?si=jtexJmOi33iwErC_',
                   },
                   {
                     'Performance Documentation':
@@ -3096,8 +3089,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - React Performance':
-                      'https://frontendmasters.com/courses/react-performance/',
+                    'Frontend Masters - Advanced React':
+                      'https://www.udemy.com/course/advanced-react/',
                   },
                   {
                     'Udemy - React Performance':
@@ -3112,12 +3105,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Form Validation in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=UbWL_Y2VOGY',
+                    'React Form Validation in Hindi - Technical Suneja':
+                      'https://youtu.be/Ta5aBdTyRTc?si=mMA7VTqQQn-JLt7w',
                   },
                   {
-                    'React Form Validation - Traversy Media':
-                      'https://www.youtube.com/watch?v=4CeTFW4agRw',
+                    'React Form Validation - RoadsideCoder':
+                      'https://youtu.be/9rp_1TYDlkY?si=BDxIVBfqR_YZZS-E',
                   },
                   {
                     'Form Validation Documentation':
@@ -3134,11 +3127,11 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - React Forms Masterclass':
-                      'https://www.udemy.com/course/react-hook-form/',
+                      'https://www.udemy.com/course/react-hook-form-the-complete-guide-with-react-js/',
                   },
                   {
-                    'Frontend Masters - Form Validation':
-                      'https://frontendmasters.com/courses/web-forms/',
+                    'Frontend Masters - Intro React':
+                      'https://frontendmasters.com/courses/complete-react-v8/',
                   },
                 ],
               },
@@ -3154,12 +3147,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Custom Hooks in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=qh_g9_pivC8',
+                    'Custom Hooks in Hindi - Chai aur Code':
+                      'https://youtu.be/AFDYnd-XPa8?si=lsfTvB6BUondH_i0',
                   },
                   {
-                    'Custom Hooks - Jack Herrington':
-                      'https://www.youtube.com/watch?v=J-g9ZJha8FE',
+                    'Custom Hooks - Hitesh Choudhary':
+                      'https://youtu.be/0B6_GWvT2vs?si=Uk_kloHc4dMXYDIL',
                   },
                   {
                     'Custom Hooks Documentation':
@@ -3175,12 +3168,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Advanced React Hooks':
-                      'https://frontendmasters.com/courses/advanced-react-hooks/',
+                    'Frontend Masters - Intermediate React v5':
+                      'https://frontendmasters.com/courses/intermediate-react-v5/',
                   },
                   {
-                    'Udemy - React Custom Hooks':
-                      'https://www.udemy.com/course/react-custom-hooks/',
+                    'Udemy - Complete React':
+                      'https://www.udemy.com/course/react-tutorial-and-projects-course/',
                   },
                 ],
               },
@@ -3191,12 +3184,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'useReducer in Hindi - Coders Gyan':
-                      'https://www.youtube.com/watch?v=BM_Bz-BXW_Y',
+                    'useReducer in Hindi - Thapa Technical':
+                      'https://youtu.be/VdXGIEYZuCw?si=hS6yOgOQSBn8jKn7',
                   },
                   {
                     'useReducer Hook - Web Dev Simplified':
-                      'https://www.youtube.com/watch?v=kK_Wqx3RnHk',
+                      'https://youtu.be/kK_Wqx3RnHk?si=5KtStaJpe6sNp8Ag',
                   },
                   {
                     'useReducer Documentation':
@@ -3230,11 +3223,11 @@ export const Frontend = {
                 free: [
                   {
                     'React TypeScript in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=Hrf_5yXrXSE',
+                      'https://youtu.be/N_fm1B0k5k0?si=YVoMH7LQrQkvcYPe',
                   },
                   {
-                    'React TypeScript - Ben Awad':
-                      'https://www.youtube.com/watch?v=Z5iWr6Srsj8',
+                    'React TypeScript - FreeCodeCamp':
+                      'https://youtu.be/FJDVKeh7RJI?si=5Qtfb5WCYG_ePfIj',
                   },
                   {
                     'TypeScript React Documentation':
@@ -3256,7 +3249,7 @@ export const Frontend = {
                   },
                   {
                     'Frontend Masters - TypeScript with React':
-                      'https://frontendmasters.com/courses/typescript-react/',
+                      'https://frontendmasters.com/courses/react-typescript-v2/',
                   },
                 ],
               },
@@ -3267,12 +3260,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Next.js in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=KvoFvmu5eRo',
+                    'Next.js in Hindi - Greeky Shows':
+                      'https://youtu.be/yN8VXmncvRU?si=8N4ARdskYh18KKGf',
                   },
                   {
-                    'Next.js Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=mTz0GXj8NN0',
+                    'Next.js Tutorial - Programming wiht Mosh':
+                      'https://youtu.be/ZVnjOPwW4ZA?si=CESC-Klfcto86IFO',
                   },
                   {
                     'Next.js Documentation': 'https://nextjs.org/docs',
@@ -3304,11 +3297,11 @@ export const Frontend = {
                 free: [
                   {
                     'Redux in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=RZ8wXUxj0LY',
+                      'https://youtu.be/J5By-Q4ZhZs?si=Zq3zuN2Th0WRcIQO',
                   },
                   {
-                    'Redux Tutorial - Net Ninja':
-                      'https://www.youtube.com/watch?v=9boMnm5X9ak',
+                    'Redux Tutorial - Programming with Mosh':
+                      'https://youtu.be/poQXNp9ItL4?si=HE0hFattLlG3YAp0',
                   },
                   {
                     'Redux Documentation': 'https://redux.js.org/',
@@ -3323,8 +3316,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Modern Redux with Redux Toolkit':
-                      'https://www.udemy.com/course/redux-toolkit/',
+                    'Udemy - The Ultimate Redux Course [LATEST Redux-toolkit]':
+                      'https://www.udemy.com/course/the-ultimate-redux-course-state-management-library/',
                   },
                   {
                     'Frontend Masters - Redux Fundamentals':
@@ -3339,12 +3332,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Performance in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=UL65eKWHqok',
+                    'React Performance in Hindi - Piyush Garg':
+                      'https://youtu.be/nrIAVhs3PmQ?si=LIan2X61MaxX9UCX',
                   },
                   {
-                    'React Performance - Jack Herrington':
-                      'https://www.youtube.com/watch?v=U5XxoO1WC3c',
+                    'React Performance - Web Dev Simplified':
+                      'https://youtu.be/Qwb-Za6cBws?si=G3sh_jLpgXhJT-Vy',
                   },
                   {
                     'Performance Documentation':
@@ -3365,8 +3358,8 @@ export const Frontend = {
                       'https://frontendmasters.com/courses/react-performance/',
                   },
                   {
-                    'Udemy - React Performance Optimization':
-                      'https://www.udemy.com/course/react-performance-optimization/',
+                    'Udemy - Advanced React':
+                      'https://www.udemy.com/course/advanced-react/',
                   },
                 ],
               },
@@ -3377,12 +3370,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'React Testing in Hindi - Coders Gyan':
-                      'https://www.youtube.com/watch?v=T0i0zHyryrs',
+                    'React Testing in Hindi - Coders Never Quit':
+                      'https://youtu.be/pV9Dl4XUWug?si=3w57ngf6kNPnbYzx',
                   },
                   {
-                    'React Testing - Traversy Media':
-                      'https://www.youtube.com/watch?v=OVNjsIto9xM',
+                    'React Testing - Programming with Mosh':
+                      'https://youtu.be/8Xwq35cPwYg?si=ISpyp8f54IQSA5Aw',
                   },
                   {
                     'Testing Documentation': 'https://react.dev/learn/testing',
@@ -3414,12 +3407,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'PWA with React in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=IaJqMcOMuDM',
+                    'PWA with React in Hindi - WsCube Tech':
+                      'https://youtu.be/QUPbFnTSHso?si=phQqQip_BQtowsPh',
                   },
                   {
-                    'React PWA Tutorial - Web Dev Simplified':
-                      'https://www.youtube.com/watch?v=sFsRylCQblw',
+                    'React PWA Tutorial - JavaScript Mastery':
+                      'https://youtu.be/IaJqMcOMuDM?si=USHjYxWUL1oQMH24',
                   },
                   {
                     'PWA Documentation':
@@ -3461,11 +3454,11 @@ export const Frontend = {
                 free: [
                   {
                     'Angular Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=0LhBvp8qpro',
+                      'https://youtu.be/0LhBvp8qpro?si=i33vAym6eZHlPqJR',
                   },
                   {
-                    'Angular Crash Course - Traversy Media':
-                      'https://www.youtube.com/watch?v=3dHNOWTI7H8',
+                    'Angular Crash Course - Programming With Mosh':
+                      'https://youtu.be/k5E2AVpwsko?si=QXDqW13tpLQbLWgB',
                   },
                   {
                     'Angular.io Official Documentation':
@@ -3498,8 +3491,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Components in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=23o0evRtrFI',
+                    'Angular Components in Hindi - Learn Code With Durgesh':
+                      'https://youtu.be/nHF4nuyskBM?si=fOPP_eRcJ1EYXiLn',
                   },
                   {
                     'Angular Components - Programming with Mosh':
@@ -3520,8 +3513,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Core Deep Dive':
-                      'https://www.udemy.com/course/angular-core-deep-dive/',
+                    'Udemy - Angular Deep Dive':
+                      'https://www.udemy.com/course/angular-course',
                   },
                   {
                     'Frontend Masters - Angular 13 Fundamentals':
@@ -3536,8 +3529,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Data Binding in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=nXkv6s1pDE4',
+                    'Data Binding in Hindi - CodeEasy':
+                      'https://youtu.be/YRMWVGqSSyM?si=8LGV94fr-iqbI8Hb',
                   },
                   {
                     'Angular Data Binding - Academind':
@@ -3562,8 +3555,8 @@ export const Frontend = {
                       'https://www.linkedin.com/learning/angular-essential-training-2',
                   },
                   {
-                    'Udemy - Angular Masterclass':
-                      'https://www.udemy.com/course/angular-masterclass/',
+                    'Udemy - Mastering Angular + Ang 17 - 18 + Interview':
+                      'https://www.udemy.com/course/mastering-angular-interview-questions-e-commerce-project/',
                   },
                 ],
               },
@@ -3574,12 +3567,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Directives in Hindi - GeekyShows':
-                      'https://www.youtube.com/watch?v=LyMjgxqpF0U',
+                    'Angular Directives in Hindi - CodeEasy':
+                      'https://youtu.be/2CP4E6uoZeU?si=l49uSqOVnzQIozQ2',
                   },
                   {
-                    'Angular Directives - Angular University':
-                      'https://www.youtube.com/watch?v=0Uf_-Ao7dY4',
+                    'Angular Directives - Programming With Mosh':
+                      'https://youtu.be/LtT01ZCHRjk?si=A3LxUuFmeJWPcljo',
                   },
                   {
                     'Angular.io Directives Guide':
@@ -3600,8 +3593,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/angular-advanced-masterclass/',
                   },
                   {
-                    'Pluralsight - Angular Directives Fundamentals':
-                      'https://www.pluralsight.com/courses/angular-directives-fundamentals',
+                    'Pluralsight - Angular Fundamentals':
+                      'https://www.pluralsight.com/courses/fundamentals-angular',
                   },
                 ],
               },
@@ -3612,12 +3605,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Services & DI in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=69VeYoKzL6I',
+                    'Services & DI in Hindi - Code Step by Step':
+                      'https://youtu.be/SPVY_VTYD7k?si=QFGuL4ibWQxk4Hzg',
                   },
                   {
-                    'Angular Services - Academind':
-                      'https://www.youtube.com/watch?v=X2vS0DMnNPC',
+                    'Angular Services - Angular':
+                      'https://youtu.be/-jRxG84AzCI?si=aztToj3IdUYigtev',
                   },
                   {
                     'Angular.io Dependency Injection Guide':
@@ -3638,8 +3631,8 @@ export const Frontend = {
                       'https://ultimatecourses.com/learn/angular-fundamentals',
                   },
                   {
-                    'Pluralsight - Angular Services In Depth':
-                      'https://www.pluralsight.com/courses/angular-services-in-depth',
+                    'Pluralsight - Angular Services':
+                      'https://www.pluralsight.com/courses/services-angular',
                   },
                 ],
               },
@@ -3651,11 +3644,11 @@ export const Frontend = {
                 free: [
                   {
                     'Angular Routing in Hindi - CodeStepByStep':
-                      'https://www.youtube.com/watch?v=Nehk4tBxD4o',
+                      'https://youtu.be/lsWZh9ohDgM?si=qaxlLwoVoSOHcZaz',
                   },
                   {
-                    'Angular Router - Angular University':
-                      'https://www.youtube.com/watch?v=zWsZcBiwgVE',
+                    'Angular Router - Angular':
+                      'https://youtu.be/r5DEBMuStPw?si=25KZ1QS-ZwXM6Cn5',
                   },
                   {
                     'Angular.io Routing Guide':
@@ -3673,11 +3666,11 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - Angular Router In Depth':
-                      'https://www.udemy.com/course/angular-router-in-depth/',
+                      'https://www.udemy.com/course/angular-router-course/',
                   },
                   {
-                    'Frontend Masters - Angular Router':
-                      'https://frontendmasters.com/courses/angular-router/',
+                    'Frontend Masters - Dynamic Routes & Router Link':
+                      'https://frontendmasters.com/courses/angular-fundamentals/dynamic-routes-router-link/',
                   },
                 ],
               },
@@ -3688,12 +3681,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Forms in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=vFs9E7ROqSw',
+                    'Angular Forms in Hindi - Code Step By Step':
+                      'https://youtu.be/7gte--l3Uxo?si=5VtCbMU5VZ6lT5yY',
                   },
                   {
-                    'Angular Forms - Academind':
-                      'https://www.youtube.com/watch?v=JeeUY6WaXiA',
+                    'Angular Forms - Angular':
+                      'https://youtu.be/kWbk-dOJaNQ?si=WHTGzTiXdgoiY1rQ',
                   },
                   {
                     'Angular.io Forms Guide':
@@ -3723,7 +3716,7 @@ export const Frontend = {
             },
           ],
         },
-        GoodToKnow: {
+        'Good To Know': {
           suggestedTime: 1110,
           topics: [
             {
@@ -3731,12 +3724,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Pipes in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=I6ZOBv_ZKKw',
+                    'Angular Pipes in Hindi - Code Step By Step':
+                      'https://youtu.be/sm_3RD_BGms?si=lO4lcuaRL_T-A7Nh',
                   },
                   {
-                    'Angular Pipes - Angular University':
-                      'https://www.youtube.com/watch?v=hG5PJqE0g8Q',
+                    'Angular Pipes - Simplilearn':
+                      'https://youtu.be/4xSj9jUEJFY?si=qMslYUozl7AjkNzf',
                   },
                   {
                     'Angular.io Pipes Guide': 'https://angular.io/guide/pipes',
@@ -3756,8 +3749,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/angular-advanced-masterclass/',
                   },
                   {
-                    'Pluralsight - Angular Pipes':
-                      'https://www.pluralsight.com/courses/angular-pipes',
+                    'Pluralsight - Angular Fundamentals':
+                      'https://www.pluralsight.com/courses/fundamentals-angulars',
                   },
                 ],
               },
@@ -3768,12 +3761,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'RxJS in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=UqsM4z_PuYo',
+                    'RxJS in Hindi - Coders Never Quit':
+                      'https://youtu.be/FSQIJtG6Ne8?si=Yn6jHIWo9Wg3e-qZ',
                   },
                   {
-                    'RxJS Crash Course - Academind':
-                      'https://www.youtube.com/watch?v=jgWnccjXR4I',
+                    'RxJS Crash Course - Laith Academy':
+                      'https://youtu.be/tGWBy6Vqq9w?si=yoqE0n9GbrRNCCaL',
                   },
                   {
                     'RxJS Official Documentation':
@@ -3793,8 +3786,8 @@ export const Frontend = {
                       'https://ultimatecourses.com/learn/rxjs-basics',
                   },
                   {
-                    'Frontend Masters - RxJS in Angular':
-                      'https://frontendmasters.com/courses/rx-angular/',
+                    'Frontend Masters - Angular Fundamentals':
+                      'https://frontendmasters.com/courses/angular-fundamentals/',
                   },
                 ],
               },
@@ -3805,12 +3798,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular HTTP Client in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=rdLJNGZvlAA',
+                    'Angular HTTP Client in Hindi - Learning Partner':
+                      'https://youtu.be/IXcMAHdJy3o?si=0c-zb4FCSy9NF7g-',
                   },
                   {
-                    'HTTP in Angular - Traversy Media':
-                      'https://www.youtube.com/watch?v=LmIsbzt-S_E',
+                    'HTTP in Angular - Fireship':
+                      'https://youtu.be/_05v0mrNLh0?si=aPRYf8dGN2_FAuV1',
                   },
                   {
                     'Angular.io HTTP Guide': 'https://angular.io/guide/http',
@@ -3827,7 +3820,7 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - Angular HTTP Masterclass':
-                      'https://www.udemy.com/course/angular-http-course/',
+                      'https://www.udemy.com/course/angular-http-communication/',
                   },
                   {
                     'Pluralsight - Angular HTTP Communication':
@@ -3842,8 +3835,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Lifecycle Hooks in Hindi - GeekyShows':
-                      'https://www.youtube.com/watch?v=_kJZuZKg5fU',
+                    'Angular Lifecycle Hooks in Hindi - Code Step by Step':
+                      'https://youtu.be/9YiDUUtAxYY?si=WkWxeRiJDWAI0wk5',
                   },
                   {
                     'Angular Lifecycle Hooks - Angular University':
@@ -3864,12 +3857,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Component Lifecycle':
-                      'https://www.udemy.com/course/angular-components-in-depth/',
+                    'Udemy - Angular':
+                      'https://www.udemy.com/course/rxjs-reactive-angular-course/',
                   },
                   {
-                    'Frontend Masters - Angular Component Patterns':
-                      'https://frontendmasters.com/courses/angular-components/',
+                    'Frontend Masters - Angular fundamentals':
+                      'https://frontendmasters.com/courses/angular-fundamentals/',
                   },
                 ],
               },
@@ -3880,8 +3873,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Component Communication in Hindi - CodeStepByStep':
-                      'https://www.youtube.com/watch?v=cH_1UHd1YS4',
+                    'Component Communication in Hindi - UX Trendz':
+                      'https://youtu.be/3srOOe_hI-I?si=Y6Vm8WY74wgjTMNJ',
                   },
                   {
                     'Angular Component Communication - Deborah Kurata':
@@ -3902,12 +3895,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Component Communication':
-                      'https://www.udemy.com/course/angular-components-communication/',
+                    'Udemy - Angular Deep Dive':
+                      'https://www.udemy.com/course/angular-course/',
                   },
                   {
-                    'Pluralsight - Angular Components In-depth':
-                      'https://www.pluralsight.com/courses/angular-components-in-depth',
+                    'Pluralsight - Angular Components':
+                      'https://www.pluralsight.com/courses/angular-component-communication',
                   },
                 ],
               },
@@ -3918,12 +3911,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Route Guards in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=WVeo1OD30jY',
+                    'Route Guards in Hindi - UX Trendz':
+                      'https://youtu.be/ovnYGCwUe7U?si=oUpUyd3KgajLj30y',
                   },
                   {
-                    'Angular Route Guards - Academind':
-                      'https://www.youtube.com/watch?v=0XXnovxr7qc',
+                    'Angular Route Guards - Programming With Umair':
+                      'https://youtu.be/xPRr_9BaJv4?si=Rsr7hcRcnkD6EKff',
                   },
                   {
                     'Angular.io Route Guards':
@@ -3944,8 +3937,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/angular-security/',
                   },
                   {
-                    'Pluralsight - Angular Route Guards':
-                      'https://www.pluralsight.com/courses/angular-routing-guards',
+                    'Pluralsight - Angular Routing':
+                      'https://www.pluralsight.com/courses/angular-routing-navigation-playbook',
                   },
                 ],
               },
@@ -3956,12 +3949,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Animations in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=ra5qNKNc95U',
+                    'Angular Animations in Hindi - CodeToDo':
+                      'https://youtu.be/46VNqe3KLgA?si=8nvqnVi-sTypHEMo',
                   },
                   {
                     'Angular Animations - Fireship':
-                      'https://www.youtube.com/watch?v=7JBNEUXpqXg',
+                      'https://youtu.be/7JA90VI9fAI?si=Dh8Hhpzi989b-n1x',
                   },
                   {
                     'Angular.io Animations Guide':
@@ -3978,12 +3971,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Animations Masterclass':
-                      'https://www.udemy.com/course/angular-animations/',
+                    'Udemy - Angular Styling & Animations':
+                      'https://www.udemy.com/course/angular-styling-animations-for-angular-2-and-angular-4/',
                   },
                   {
-                    'Frontend Masters - Angular Animations':
-                      'https://frontendmasters.com/courses/angular-animations/',
+                    'Frontend Masters - Angular Fundamentals':
+                      'https://frontendmasters.com/courses/angular-fundamentals/',
                   },
                 ],
               },
@@ -3994,12 +3987,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Lazy Loading in Hindi - Angular Tutorial':
-                      'https://www.youtube.com/watch?v=JnBrR3SHJ3c',
+                    'Lazy Loading in Hindi - Code Step By Step':
+                      'https://youtu.be/ATC_PY0igfg?si=5ZzhLvGHvTaN29dN',
                   },
                   {
-                    'Angular Lazy Loading - Angular University':
-                      'https://www.youtube.com/watch?v=HX3v0I1x9Jw',
+                    'Angular Lazy Loading - Nisha Singla':
+                      'https://youtu.be/H_brFChpgt0?si=CYKhRi91NaoeKGxc',
                   },
                   {
                     'Angular.io NgModules Guide':
@@ -4016,8 +4009,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Performance':
-                      'https://www.udemy.com/course/angular-performance/',
+                    'Udemy - Angular Complete Guide':
+                      'https://www.udemy.com/course/the-complete-guide-to-angular-2/',
                   },
                   {
                     'Pluralsight - Angular Architecture':
@@ -4037,12 +4030,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'NgRx Tutorial in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=8ux7eHf6yJY',
+                    'NgRx Tutorial in Hindi - Coders Never Quit':
+                      'https://youtu.be/PvL7TULFxoE?si=2vt0qxJgQEaMXoUs',
                   },
                   {
-                    'NgRx Course - Angular University':
-                      'https://www.youtube.com/watch?v=f97ICOaekNU',
+                    'NgRx Course - Lets Program':
+                      'https://youtu.be/a3_GW3RBqn0?si=ABiNwmR448aOTjHX',
                   },
                   {
                     'NgRx Official Documentation': 'https://ngrx.io/docs',
@@ -4073,12 +4066,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Universal in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=Tn7kNqsW9Jw',
+                    'Angular Universal in Hindi - truecodex':
+                      'https://youtu.be/s6-G0TWZkvg?si=womsqwg8VnsOfa74',
                   },
                   {
-                    'Angular Universal Tutorial - Academind':
-                      'https://www.youtube.com/watch?v=LU_HF9jP_oo',
+                    'Angular Universal Tutorial - Angular University':
+                      'https://youtu.be/aaCWxZhj6CY?si=9qqLXEqVm6y-zIaQ',
                   },
                   {
                     'Angular.io Universal Guide':
@@ -4099,8 +4092,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/angular-universal-course/',
                   },
                   {
-                    'Pluralsight - Server-Side Rendering with Angular':
-                      'https://www.pluralsight.com/courses/angular-server-side-rendering',
+                    'Pluralsight - Angular The Big Picture':
+                      'https://www.pluralsight.com/courses/angular-14-big-picture',
                   },
                 ],
               },
@@ -4111,12 +4104,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Testing in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=8LJ_5BqF5CM',
+                    'Angular Testing in Hindi - Coders Never Quit':
+                      'https://youtu.be/sINBfk0nBd8?si=PzTYRXgQR39bg8Oh',
                   },
                   {
-                    'Angular Testing Tutorial - Fireship':
-                      'https://www.youtube.com/watch?v=kQB1PcqCYCc',
+                    'Angular Testing Tutorial - Lets Program':
+                      'https://youtu.be/66o_Th-FT7w?si=kDaOdHgMVW088-ia',
                   },
                   {
                     'Angular.io Testing Guide':
@@ -4133,12 +4126,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Unit Testing Masterclass':
-                      'https://www.udemy.com/course/angular-unit-testing/',
+                    'Udemy - Angular Testing Masterclass':
+                      'https://www.udemy.com/course/angular-testing-course//',
                   },
                   {
-                    'Pluralsight - Angular Testing Masterclass':
-                      'https://www.pluralsight.com/courses/angular-testing-masterclass',
+                    'Pluralsight - Angular Unit Testing':
+                      'https://www.pluralsight.com/courses/angular--unit-testing',
                   },
                 ],
               },
@@ -4149,12 +4142,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Performance in Hindi - Angular Tutorial':
-                      'https://www.youtube.com/watch?v=iIBk0pYhOj4',
-                  },
-                  {
                     'Angular Performance - Angular University':
-                      'https://www.youtube.com/watch?v=HKv8Qc-pR9E',
+                      'https://youtu.be/d5eIU5PEH8A?si=2F9mJVInQf-ceh70',
                   },
                   {
                     'Angular.io Performance Guide':
@@ -4170,12 +4159,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Angular Performance Masterclass':
-                      'https://www.udemy.com/course/angular-performance-optimization/',
+                    'Udemy - Angular The Complete Guide':
+                      'https://www.udemy.com/course/the-complete-guide-to-angular-2/',
                   },
                   {
-                    'Frontend Masters - Angular Performance':
-                      'https://frontendmasters.com/courses/angular-performance/',
+                    'Frontend Masters - Angular Fundamentals':
+                      'https://frontendmasters.com/courses/angular-fundamentals//',
                   },
                 ],
               },
@@ -4186,12 +4175,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Custom Directives in Hindi - GeekyShows':
-                      'https://www.youtube.com/watch?v=PXq1bH1hFeU',
+                    'Custom Directives in Hindi - Code Step by Step':
+                      'https://youtu.be/aG7pbk6ov5s?si=Rme7wSSEBxGwPQvk',
                   },
                   {
-                    'Advanced Angular Directives - Angular University':
-                      'https://www.youtube.com/watch?v=yXqyDuvAWI4',
+                    'Advanced Angular Directives - Mehul - Codedamn':
+                      'https://youtu.be/lxts9If94xA?si=4IEYqFNn1pGzT52n',
                   },
                   {
                     'Angular.io Custom Directives':
@@ -4209,11 +4198,11 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - Advanced Angular Directives':
-                      'https://www.udemy.com/course/advanced-angular-directives/',
+                      'https://www.udemy.com/course/advanced-angular-directives-course/',
                   },
                   {
-                    'Pluralsight - Angular Custom Directives':
-                      'https://www.pluralsight.com/courses/angular-custom-directives',
+                    'Pluralsight - Angular':
+                      'https://www.pluralsight.com/courses/angular-2-getting-started-update',
                   },
                 ],
               },
@@ -4224,12 +4213,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Angular Material in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=jUfEn4Y4GQs',
+                    'Angular Material in Hindi - UX Trendz':
+                      'https://youtu.be/-_AsCoaN1dU?si=8ccCVyUB3nqzCcBB',
                   },
                   {
-                    'Angular Material Tutorial - Design Course':
-                      'https://www.youtube.com/watch?v=jGz6tNsgHhM',
+                    'Angular Material Tutorial - Brogrammers':
+                      'https://youtu.be/MGnLrim_WnM?si=CUywwihpsBpjOUIB',
                   },
                   {
                     'Angular Material Documentation':
@@ -4265,8 +4254,8 @@ export const Frontend = {
                       'https://www.youtube.com/watch?v=F_v_88IzCZY',
                   },
                   {
-                    'Angular PWA Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=5SHC_1QZERY',
+                    'Angular PWA Tutorial - Isreal Quiroz':
+                      'https://youtu.be/LRvZYCE3Qvw?si=gOKKBAEr5X69Wosm',
                   },
                   {
                     'Angular.io PWA Guide':
@@ -4287,8 +4276,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/angular-pwa-course/',
                   },
                   {
-                    'Pluralsight - Building Progressive Web Apps with Angular':
-                      'https://www.pluralsight.com/courses/angular-progressive-web-apps',
+                    'Pluralsight - Building PWAs with Angular and Ionic':
+                      'https://www.pluralsight.com/courses/angular-denver-2019-session-45',
                   },
                 ],
               },
@@ -4307,12 +4296,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue.js Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=k4lWPmFc8-k',
+                    'Vue.js Tutorial in Hindi - Code Step By Step':
+                      'https://youtu.be/s_7LPrBRCaY?si=u0QZjG4hyi2C2Btc',
                   },
                   {
                     'Vue.js Crash Course 2024 - Traversy Media':
-                      'https://www.youtube.com/watch?v=qZXt1Aom3Cs',
+                      'https://youtu.be/qZXt1Aom3Cs?si=MMSAZEcLcLeUPtQB',
                   },
                   {
                     'Vue.js Official Documentation':
@@ -4346,11 +4335,11 @@ export const Frontend = {
                 free: [
                   {
                     'Vue Instance in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=9U5WYBxoL7A',
+                      'https://youtu.be/FBP-9XLCzcg?si=mZggXhyw0tD5Wje9',
                   },
                   {
-                    'Vue 3 Setup & Instance - Program With Erik':
-                      'https://www.youtube.com/watch?v=52pEihWDQ9A',
+                    'Vue 3 Setup & Instance - Codevolution':
+                      'https://youtu.be/4dGUwsP41i0?si=M3fhODPdhLcH7w5Q',
                   },
                   {
                     'Vue.js Instance Documentation':
@@ -4368,7 +4357,7 @@ export const Frontend = {
                   },
                   {
                     'Udemy - Building Applications with Vue':
-                      'https://www.udemy.com/course/building-applications-with-vue-and-vuex/',
+                      'https://www.udemy.com/course/vuejs-2-the-complete-guide/',
                   },
                 ],
               },
@@ -4379,12 +4368,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue.js Data Binding in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=6L0GyxKxc5w',
+                    'Vue.js Data Binding in Hindi - Code Step By Step':
+                      'https://youtu.be/rOg9sKse_1E?si=idJFmV0SMqnd36Xs',
                   },
                   {
                     'Vue 3 Data Binding - The Net Ninja':
-                      'https://www.youtube.com/watch?v=CYPZBK8zUik',
+                      'https://youtu.be/xIOwFTCBBDg?si=zHnlUmcxD1UK_2iW',
                   },
                   {
                     'Vue.js Data Properties Documentation':
@@ -4397,8 +4386,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Vue.js Apps':
-                      'https://frontendmasters.com/courses/building-vue-applications/',
+                    'Frontend Masters - Vue.js Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                   {
                     'Vue Mastery - Real World Vue 3':
@@ -4413,8 +4402,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Directives in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=c4Q5Vk1cXvc',
+                    'Vue Directives in Hindi - Code Step by step':
+                      'https://youtu.be/LeN6-LzFpqU?si=ljXrU00WmKg4F8kb',
                   },
                   {
                     'Vue 3 Directives - Vue Mastery':
@@ -4431,8 +4420,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Advanced Vue.js Features':
-                      'https://www.udemy.com/course/advanced-vue-js-features-from-the-ground-up/',
+                    'Udemy - Vue JS 3 For Modern Web Development':
+                      'https://www.udemy.com/course/vue-js-v3-super-fast-course-from-zero-to-advanced-web-development/',
                   },
                   {
                     'Vue Mastery - Advanced Components':
@@ -4447,12 +4436,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Computed Properties in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=J0uZrB6QGEI',
+                    'Computed Properties in Hindi - Code Step by step':
+                      'https://youtu.be/dTefGX3SSYE?si=FiUjtF7Tp0rELMpZ',
                   },
                   {
-                    'Vue 3 Computed Properties - LearnVue':
-                      'https://www.youtube.com/watch?v=3nYlioo9Ta4',
+                    'Vue 3 Computed Properties - Vue Mastery':
+                      'https://youtu.be/NK-Cy4IHwI4?si=mROUD7qs5Ldf86Ux',
                   },
                   {
                     'Vue.js Computed Properties Documentation':
@@ -4481,12 +4470,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue.js Events in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=j97QtHf0CHY',
+                    'Vue.js Events in Hindi - Code step by step':
+                      'https://youtu.be/7jcszmO2SQg?si=hkc56TZ5EjuFLejz',
                   },
                   {
                     'Vue 3 Event Handling - Vue Mastery':
-                      'https://www.youtube.com/watch?v=EEeaG0BTBQo',
+                      'https://youtu.be/0ihM6TD1ABo?si=NKN18kq7Od1fe1gA',
                   },
                   {
                     'Vue.js Event Handling Documentation':
@@ -4515,12 +4504,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Class Bindings in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=4Gh5YcJ_Zms',
+                    'Class Bindings in Hindi - Code step by step':
+                      'https://youtu.be/JqcVuya6cN4?si=hEINgRonPX6ERSAo',
                   },
                   {
-                    'Vue 3 Style Guide - Program With Erik':
-                      'https://www.youtube.com/watch?v=QuR3H3o9-jw',
+                    'Vue 3 Style Guide - Vue Mastery':
+                      'https://youtu.be/Hr9AJf4DTlA?si=VuN_9h_O-0KTw-r2',
                   },
                   {
                     'Vue.js Class and Style Documentation':
@@ -4533,8 +4522,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Vue 3 Styles':
-                      'https://frontendmasters.com/courses/vue-3/styling/',
+                    'Frontend Masters - Vue 3':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                   {
                     'Vue Mastery - Component Design':
@@ -4546,7 +4535,7 @@ export const Frontend = {
             },
           ],
         },
-        GoodToKnow: {
+        'Good To Know': {
           suggestedTime: 1080,
           topics: [
             {
@@ -5345,7 +5334,7 @@ export const Frontend = {
             },
           ],
         },
-        GoodToKnow: {
+        'Good To Know': {
           suggestedTime: 690,
           topics: [
             {
@@ -6194,7 +6183,7 @@ export const Frontend = {
             },
           ],
         },
-        GoodToKnow: {
+        'Good To Know': {
           suggestedTime: 660,
           topics: [
             {
@@ -7009,7 +6998,7 @@ export const Frontend = {
           ],
         },
 
-        GoodToKnow: {
+        'Good To Know': {
           suggestedTime: 420,
           topics: [
             {
