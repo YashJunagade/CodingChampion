@@ -643,8 +643,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Tutorial for Beginners in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=Edsxf_NBFrw',
+                  'CSS Tutorial for Beginners in Hindi - Apna College':
+                    'https://youtu.be/ESnrn1kAD4E?si=0B6wRJaKXHQFcihK',
                 },
                 {
                   'CSS Tutorial for Beginners in English - Traversy Media':
@@ -680,7 +680,7 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Selectors in Hindi - Thapa Technical':
+                  'CSS Selectors in Hindi - CodeWithHarry':
                     'https://www.youtube.com/watch?v=oPPym7UaSIo',
                 },
                 {
@@ -706,8 +706,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/css-in-depth-v2/',
                 },
                 {
-                  'Pluralsight - CSS Selectors':
-                    'https://www.pluralsight.com/courses/css-selectors',
+                  'Pluralsight - CSS Intro':
+                    'https://www.pluralsight.com/courses/css-intro',
                 },
               ],
             },
@@ -756,10 +756,10 @@ export const Frontend = {
               free: [
                 {
                   'CSS Colors in Hindi - Yahoo Baba':
-                    'https://www.youtube.com/watch?v=GKRQC4fLNHs',
+                    'https://youtu.be/nPYuVfdJPaQ?si=ZleKoVEQnSVYidGy',
                 },
                 {
-                  'CSS Colors & Backgrounds in English - Dev Ed':
+                  'CSS Colors & Backgrounds in English - Web Dev Simplified':
                     'https://www.youtube.com/watch?v=1PnVor36_40',
                 },
                 {
@@ -780,8 +780,8 @@ export const Frontend = {
                     'https://www.udemy.com/course/advanced-css-and-sass/',
                 },
                 {
-                  'Skillshare - CSS Colors Masterclass':
-                    'https://www.skillshare.com/classes/CSS-Masterclass-Colors',
+                  'Skillshare - CSS Masterclass':
+                    'https://www.classcentral.com/course/skillshare-css-masterclass-the-only-css-course-you-ll-ever-need-to-take-46452',
                 },
               ],
             },
@@ -792,12 +792,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Typography in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=yM1Mz1H1SVE',
+                  'CSS Typography in Hindi - Coding Shuttle':
+                    'https://youtu.be/hUydgrCN0WQ?si=1n226-m65UjwjOMU',
                 },
                 {
                   'CSS Typography in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=kcmtNavH6Xg',
+                    'https://youtu.be/WdBNYcWG0Yg?si=3izVyClIdgJTHGe6',
                 },
                 {
                   'MDN Styling Text':
@@ -814,11 +814,11 @@ export const Frontend = {
               premium: [
                 {
                   'Frontend Masters - Typography in Design Systems':
-                    'https://frontendmasters.com/courses/design-systems/',
+                    'https://frontendmasters.com/courses/figma-v2/styles-typography/',
                 },
                 {
-                  'Udemy - Web Typography':
-                    'https://www.udemy.com/course/web-typography/',
+                  'Udemy - Typography for Designers & Developers':
+                    'https://www.udemy.com/course/typography-mastery-for-ui-designers-and-developers/',
                 },
               ],
             },
@@ -829,8 +829,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Units in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=_nt0g-qN4c4',
+                  'CSS Units in Hindi - CodeHelp - by Babbar':
+                    'https://youtu.be/APhPNDikwRE?si=DzFm8fx8IHIJRX_H',
                 },
                 {
                   'CSS Units in English - Kevin Powell':
@@ -888,7 +888,7 @@ export const Frontend = {
               premium: [
                 {
                   'Frontend Masters - CSS Layout':
-                    'https://frontendmasters.com/courses/css-layout/',
+                    'https://frontendmasters.com/courses/css-grid/',
                 },
                 {
                   'Udemy - Advanced CSS Layouts':
@@ -903,12 +903,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Display Property in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=YJtlXrzXXFk',
+                  'CSS Display Property in Hindi - CodeWithHarry':
+                    'https://youtu.be/hRHV5cjEB1w?si=5_GWo1vrK3MuV1oL',
                 },
                 {
-                  'CSS Display in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=Qf-wVa9y9V4',
+                  'CSS Display in English - Bro Code':
+                    'https://youtu.be/9T8uxp5hQ60?si=Pp0VR3mZ04XlUP7j',
                 },
                 {
                   'MDN Display Property':
@@ -930,7 +930,7 @@ export const Frontend = {
                 },
                 {
                   'Pluralsight - CSS Display Properties':
-                    'https://www.pluralsight.com/courses/css-positioning-layout',
+                    'https://www.pluralsight.com/courses/css-creating-page-layouts',
                 },
               ],
             },
@@ -983,8 +983,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Grid in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=Qbh8FGrQ4Nk',
+                  'CSS Grid in Hindi - Coding Shuttle':
+                    'https://youtu.be/ii_Ykb2DqZc?si=kVnLqUXJAjfQ7rnK',
                 },
                 {
                   'CSS Grid in English - Kevin Powell':
@@ -1020,12 +1020,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Responsive Design in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=Wf3dpQIiK-A',
+                  'Responsive Design in Hindi - Sheryians Coding School':
+                    'https://youtu.be/HG10yrq1pbk?si=q21KV9LHtlT2Rt-V',
                 },
                 {
                   'Responsive Design in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=VQraviuwbzU',
+                    'https://youtu.be/x4u1yp3Msao?si=MqyeVlyT37NKmOWz',
                 },
                 {
                   'MDN Responsive Design':
@@ -1054,12 +1054,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Pseudo Classes in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=PkODM-MnPz4',
+                  'Pseudo Classes in Hindi - Coding Shuttle':
+                    'https://youtu.be/x0prF61CpHY?si=xj0jA0jKhM3X-Xkj',
                 },
                 {
-                  'Pseudo Classes in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=zGiirUiWslI',
+                  'Pseudo Classes in English - Bro Code':
+                    'https://youtu.be/Nrsy_2ogRfQ?si=6QLRxH9uIYlDh_LZ',
                 },
                 {
                   'MDN Pseudo-classes':
@@ -1073,7 +1073,7 @@ export const Frontend = {
               premium: [
                 {
                   'Frontend Masters - CSS In-Depth v2':
-                    'https://frontendmasters.com/courses/css-in-depth-v2/',
+                    'https://frontendmasters.com/courses/css-grid/',
                 },
               ],
             },
@@ -1084,12 +1084,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Animations in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=jiK6Mf-ILSg',
+                  'CSS Animations in Hindi - Love Babbar':
+                    'https://youtu.be/n8cTHW_VxBw?si=BmyrwE3s-bOuCpn1',
                 },
                 {
-                  'CSS Animations in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=YszONjKpgg4',
+                  'CSS Animations in English - Slaying The Dragon':
+                    'https://youtu.be/SgmNxE9lWcY?si=0ggtWmVbXNaC7URz',
                 },
                 {
                   'MDN Using CSS Animations':
@@ -1107,7 +1107,7 @@ export const Frontend = {
                 },
                 {
                   'Level Up - Animation With CSS':
-                    'https://leveluptutorials.com/tutorials/animation-with-css',
+                    'https://levelup.video/tutorials/css-animations-transitions',
                 },
               ],
             },
@@ -1118,12 +1118,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Variables in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=ghlm_94oR90',
+                  'CSS Variables in Hindi - CodeWithHarry':
+                    'https://youtu.be/ovRU9xHfly4?si=FzJyfQk8u9Cdf1Iu',
                 },
                 {
-                  'CSS Variables in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=NtRmIp4eMjs',
+                  'CSS Variables in English - Slaying The Dragon':
+                    'https://youtu.be/5wLrz_zUwoU?si=zraoN7Elzh7kN-YE',
                 },
                 {
                   'MDN Using CSS Custom Properties':
@@ -1148,12 +1148,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Compatibility in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=TXm0GKUXqTs',
+                  'CSS Compatibility in Hindi - ScoreShala':
+                    'https://youtu.be/rZIpOZe_FK8?si=y5cGoWe36NU6Vi86',
                 },
                 {
-                  'Browser Compatibility in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=YK8GZBx3hpg',
+                  'Browser Compatibility in English - Coding in Public':
+                    'https://youtu.be/adEwlFHLWd4?si=LWoNlRIBBwxTQm6e',
                 },
                 {
                   'MDN Cross Browser Testing':
@@ -1168,8 +1168,8 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - Cross-Browser Web Development':
-                    'https://frontendmasters.com/courses/cross-browser-testing/',
+                  'Frontend Masters - Web App Testing':
+                    'https://frontendmasters.com/courses/web-app-testing/',
                 },
               ],
             },
@@ -1190,7 +1190,7 @@ export const Frontend = {
                 },
                 {
                   'Advanced Selectors in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=Bcr70LIJcOk',
+                    'https://youtu.be/Bcr70LIJcOk?si=ZLO9MCF_Jm7fV8wI',
                 },
                 {
                   'MDN Advanced Selectors':
@@ -1212,7 +1212,7 @@ export const Frontend = {
                 },
                 {
                   'CSS Selectors Mastery - Udemy':
-                    'https://www.udemy.com/course/css-selectors-mastery/',
+                    'https://www.udemy.com/course/advanced-css-functions-selector-grid-flex-sass-and-more/',
                 },
               ],
             },
@@ -1223,12 +1223,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Transforms in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=C6D3fR_NMxk',
+                  'CSS Transforms in Hindi - CodeWithHarry':
+                    'https://youtu.be/GGlzzLTLzxs?si=lfY9A1ofFgPRRpbi',
                 },
                 {
-                  'CSS 3D Transforms in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=RxnV9Xcw914',
+                  'Learn CSS Transforms in English - Bro Code':
+                    'https://youtu.be/qdeIy9_fbxE?si=sf18j2CaCvioIzi6',
                 },
                 {
                   'MDN Using CSS Transforms':
@@ -1249,8 +1249,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/motion-design-css/',
                 },
                 {
-                  'Advanced CSS Animations - Udemy':
-                    'https://www.udemy.com/course/advanced-css-animations/',
+                  'The Modern Flexbox & Animations Developer Course - Udemy':
+                    'https://www.udemy.com/course/the-modern-flexbox-grid-sass-animations-developer-course//',
                 },
               ],
             },
@@ -1261,12 +1261,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'CSS Shapes in Hindi - WsCube Tech':
-                    'https://www.youtube.com/watch?v=HqNm8kCW0x4',
+                  'CSS Shapes in Hindi - Thapa Technical':
+                    'https://youtu.be/cYyIRmRWjG0?si=R3-nrbfRu0QVWrfK',
                 },
                 {
-                  'CSS Clip-path in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=u9bDe3Bw0sA',
+                  'How to make shapes With CSS - Kevin Powell':
+                    'https://youtu.be/QY7Rj8aZcZk?si=bIm0OA04hh8dVlDH',
                 },
                 {
                   'MDN CSS Shapes':
@@ -1303,8 +1303,8 @@ export const Frontend = {
                     'https://www.youtube.com/watch?v=BNmxUzPRYdw',
                 },
                 {
-                  'Advanced Grid in English - Kevin Powell':
-                    'https://www.youtube.com/watch?v=lNIyhUQEYCg',
+                  'Learn CSS Grid Deep Dive in English - Slaying The Dragon':
+                    'https://youtu.be/EiNiSFIPIQE?si=HRAXhKWqskp7jvg2',
                 },
                 {
                   'MDN Advanced Grid':
@@ -1336,11 +1336,11 @@ export const Frontend = {
               free: [
                 {
                   'Sass Tutorial in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=tEQOdFgUXI4',
+                    'https://youtu.be/tEQOdFgUXI4?si=Ahy_3JNE9hdHbvKu',
                 },
                 {
                   'Sass Tutorial in English - Net Ninja':
-                    'https://www.youtube.com/watch?v=_a5j7KoflTs',
+                    'https://youtu.be/_a5j7KoflTs?si=ZA56Bwqy7wVBNG1w',
                 },
                 {
                   'Official Sass Documentation':
@@ -1360,7 +1360,7 @@ export const Frontend = {
                 },
                 {
                   'Frontend Masters - Advanced CSS and Sass':
-                    'https://frontendmasters.com/courses/advanced-css-sass/',
+                    'https://frontendmasters.com/courses/vite/configure-postcss-css-preprocessors',
                 },
               ],
             },
@@ -1372,11 +1372,11 @@ export const Frontend = {
               free: [
                 {
                   'CSS Performance in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=jZkB7oP_YeE',
+                    'https://www.youtube.com/playlist?list=PLwGdqUZWnOp1xJWvy3dkkKEh65MvyWSb0',
                 },
                 {
-                  'CSS Performance in English - Harry Roberts':
-                    'https://www.youtube.com/watch?v=yZukwF7GNDc',
+                  'CSS Performance in English - Codey McCodeFace':
+                    'https://youtu.be/mP-BeYAnVCc?si=EMrmoZuLRoYS2WhK',
                 },
                 {
                   'MDN Performance':
@@ -1396,8 +1396,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/web-performance/',
                 },
                 {
-                  'CSS Performance Optimization - Udemy':
-                    'https://www.udemy.com/course/web-performance-optimization-with-webpack/',
+                  'CSS Optimizing web performance - Udemy':
+                    'https://www.udemy.com/course/optimizing-web-performance-and-critical-rendering-path/',
                 },
               ],
             },
@@ -1416,12 +1416,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'JavaScript Tutorial in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=hKB-YGF14SY',
+                  'JavaScript Tutorial in Hindi - Chai aur Code':
+                    'https://youtu.be/Hr5iLG7sUa0?si=fNpb0XPJweOHrQa5',
                 },
                 {
-                  'JavaScript Tutorial in English - Traversy Media':
-                    'https://www.youtube.com/watch?v=hdI2bqOjy3c',
+                  'JavaScript Tutorial in English - SuperSimpleDev':
+                    'https://youtu.be/EerdGm-ehJQ?si=X2aAw1IrcM8pfX3I',
                 },
                 {
                   'MDN JavaScript Guide':
@@ -1453,12 +1453,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'JavaScript Variables in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=pEKf-0cg_gk',
+                  'JavaScript Variables in Hindi - Chai aur Code':
+                    'https://youtu.be/yY0bKZNYmJs?si=xVmq4DOPunOWWjys',
                 },
                 {
-                  'JavaScript Data Types in English - Web Dev Simplified':
-                    'https://www.youtube.com/watch?v=9M4XKi25I2M',
+                  'JavaScript Data Types in English - Bro Code':
+                    'https://youtu.be/nbX0MIV7-Ek?si=7iXepBNsQqx2x15M',
                 },
                 {
                   'MDN Data Types':
@@ -1486,12 +1486,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'JavaScript Operators in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=K148nqz_k7c',
+                  'JavaScript Operators in Hindi - Apna College':
+                    'https://youtu.be/Zg4-uSjxosE?si=7IO5ZzrWXiiEQNLT',
                 },
                 {
-                  'JavaScript Operators in English - Programming with Mosh':
-                    'https://www.youtube.com/watch?v=FZzyij43A54',
+                  'JavaScript Operators in English - Telusko':
+                    'https://youtu.be/ULNJSTSJc7s?si=ekG3zOta0lkYAAgF',
                 },
                 {
                   'MDN Operators':
@@ -1509,7 +1509,7 @@ export const Frontend = {
                 },
                 {
                   'Pluralsight - JavaScript Fundamentals':
-                    'https://www.pluralsight.com/courses/javascript-fundamentals',
+                    'https://www.pluralsight.com/paths/javascript-2022',
                 },
               ],
             },
@@ -1520,12 +1520,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Control Flow in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=JloLGV9DmtQ',
+                  'Control Flow in Hindi - Chai aur Code':
+                    'https://youtu.be/0P_YvC6Gg0c?si=n4mgB6SfDl4NEXxX',
                 },
                 {
-                  'JavaScript Control Flow in English - Dev Ed':
-                    'https://www.youtube.com/watch?v=FSs_JYwnAdI',
+                  'JavaScript Control Flow in English - Net Ninja':
+                    'https://youtu.be/JloLGV9DmtQ?si=RqjJtcn9v8-G8jDa',
                 },
                 {
                   'MDN Control Flow':
@@ -1554,12 +1554,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'JavaScript Functions in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=gQojMIhELvM',
+                  'JavaScript Functions in Hindi - Apna College':
+                    'https://youtu.be/P0XMXqDGttU?si=f1RpRdwPTHJbWIsl',
                 },
                 {
-                  'JavaScript Functions in English - Traversy Media':
-                    'https://www.youtube.com/watch?v=xUI5Tsl2JpY',
+                  'JavaScript Functions in English - Bro Code':
+                    'https://youtu.be/HFaxylC7bUc?si=gHilDNYC8qWWAiW5',
                 },
                 {
                   'MDN Functions Guide':
@@ -1588,12 +1588,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Objects & Arrays in Hindi - Yahoo Baba':
-                    'https://www.youtube.com/watch?v=hUFUkRmhN6k',
+                  'Objects & Arrays in Hindi - CodeWithHarry':
+                    'https://youtu.be/-oVdqCaL3DQ?si=s6yDw3NRs8EJER1H',
                 },
                 {
-                  'JavaScript Objects & Arrays in English - Net Ninja':
-                    'https://www.youtube.com/watch?v=0LB3FSfjvao',
+                  'JavaScript Objects & Arrays in English - Bro Code':
+                    'https://youtu.be/lo7o91qLzxc?si=z7dw7lW2Jmypdy-4',
                 },
                 {
                   'MDN Arrays':
@@ -1621,12 +1621,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'DOM Manipulation in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=v7rSSy8CaYE',
+                  'DOM Manipulation in Hindi - Apna College':
+                    'https://youtu.be/7zcXPCt8Ck0?si=GyU-Qaf9l15BB_hV',
                 },
                 {
-                  'DOM Manipulation in English - Web Dev Simplified':
-                    'https://www.youtube.com/watch?v=y17RuWkWdn8',
+                  'DOM Manipulation in English - FreeCodeCamp':
+                    'https://youtu.be/5fb2aPlgoys?si=rWf0sdyoizOEIfvg',
                 },
                 {
                   'MDN DOM Introduction':
@@ -1639,7 +1639,7 @@ export const Frontend = {
               premium: [
                 {
                   'Frontend Masters - DOM Manipulation in JavaScript':
-                    'https://frontendmasters.com/courses/javascript-hard-parts-dom/',
+                    'https://frontendmasters.com/courses/javascript-hard-parts-v2/',
                 },
                 {
                   'Udemy - Build 15 JavaScript Projects':
@@ -1654,12 +1654,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Event Handling in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=iKo9pDKKHnc',
+                  'Event Handling in Hindi - Shradha Khapra':
+                    'https://youtu.be/_i-uLJAh79U?si=IlfUCNs_0bz9E19d',
                 },
                 {
-                  'JavaScript Events in English - Dev Ed':
-                    'https://www.youtube.com/watch?v=e57ReoUn6kM',
+                  'JavaScript Events in English - Web Dev Simplified':
+                    'https://youtu.be/XF1_MlZ5l6M?si=j38Ef1N1ma1z7w_q',
                 },
                 {
                   'MDN Events':
@@ -1673,11 +1673,11 @@ export const Frontend = {
               premium: [
                 {
                   'Frontend Masters - JavaScript: Event Driven Development':
-                    'https://frontendmasters.com/courses/javascript-events/',
+                    'https://frontendmasters.com/courses/web-development-v3/project-javascript-event-listene',
                 },
                 {
-                  'Udemy - Advanced DOM Manipulation':
-                    'https://www.udemy.com/course/advanced-dom-manipulation/',
+                  'Udemy - Mastering Modern JavaScript':
+                    'https://www.udemy.com/course/mastering-modern-javascript/',
                 },
               ],
             },
@@ -1685,7 +1685,7 @@ export const Frontend = {
           },
         ],
       },
-      GoodToKnow: {
+      'Good To Know': {
         suggestedTime: 870,
         topics: [
           {
@@ -1693,12 +1693,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Advanced Functions in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=kFb0uHcP5-Y',
+                  'Advanced Functions in Hindi - Chai aur Code':
+                    'https://youtu.be/Bn56WahG_t0?si=JRDqZ5zUiHiX6qrX',
                 },
                 {
-                  'Advanced Functions in English - Fun Fun Function':
-                    'https://www.youtube.com/watch?v=qtvi6sA1E5Q',
+                  'Advanced Functions in English - FreeCodeCamp':
+                    'https://youtu.be/j1laALb8OVM?si=KVHMhX66uvJI_DEK',
                 },
                 {
                   'MDN Advanced Functions':
@@ -1727,12 +1727,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Promises in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=3P3JaDVz_C4',
+                  'Promises in Hindi - Chai aur Code':
+                    'https://youtu.be/NJwRQgsu1Q8?si=C_b5u5psElJ9amQZ',
                 },
                 {
-                  'JavaScript Promises in English - Traversy Media':
-                    'https://www.youtube.com/watch?v=PoRJizFvM7s',
+                  'JavaScript Promises in English - Bro Code':
+                    'https://youtu.be/NOzi4wBHn0o?si=rLZveHZuGlJgRV0c',
                 },
                 {
                   'MDN Promises':
@@ -1762,11 +1762,11 @@ export const Frontend = {
               free: [
                 {
                   'Async/Await in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=rKK1q7nFt7M',
+                    'https://youtu.be/gRLdHSabW3o?si=kha7i4wZjJDTHRDB',
                 },
                 {
-                  'Async/Await in English - Web Dev Simplified':
-                    'https://www.youtube.com/watch?v=V_Kr9OSfDeU',
+                  'Async/Await in English - Software Developer Diaries':
+                    'https://youtu.be/wKY4-WMmbZw?si=fs9kk9ObsjbMP9V2',
                 },
                 {
                   'MDN Async/Await':
@@ -1795,12 +1795,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Debugging in Hindi - Yahoo Baba':
-                    'https://www.youtube.com/watch?v=2oFKNL7vYV8',
+                  'Debugging in Hindi - Cheezy Code':
+                    'https://youtu.be/kwFwN1M0M98?si=i4S7br3SfDomoxQ6',
                 },
                 {
-                  'JavaScript Debugging in English - Dev Ed':
-                    'https://www.youtube.com/watch?v=ABlaMXkUwzY',
+                  'JavaScript Debugging in English - Alex Ziskind':
+                    'https://youtu.be/68wO-sl5vXg?si=1nhOx9ftJeFNU3lO',
                 },
                 {
                   'MDN Debugging':
@@ -1817,8 +1817,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/debugging-javascript/',
                 },
                 {
-                  'Udemy - JavaScript Debugging':
-                    'https://www.udemy.com/course/javascript-debugging-for-beginners/',
+                  'Udemy - JavaScript The Complete Guide 2024':
+                    'https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/',
                 },
               ],
             },
@@ -1829,12 +1829,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'JSON in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=ZxB7uzKou3c',
+                  'JSON in Hindi - Chai aur Code':
+                    'https://youtu.be/AViTh83k-IE?si=1vPmb_Uz2oA3qOgy',
                 },
                 {
-                  'JSON in English - Traversy Media':
-                    'https://www.youtube.com/watch?v=wI1CWzNtE-M',
+                  'JSON in English - Web Dev Simplified':
+                    'https://youtu.be/iiADhChRriM?si=t0k4gTQeHP4MJB9S',
                 },
                 {
                   'MDN JSON':
@@ -1850,8 +1850,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/api-design-nodejs-v4/',
                 },
                 {
-                  'Udemy - Working with APIs':
-                    'https://www.udemy.com/course/working-with-apis/',
+                  'Udemy - JavaScript Pro':
+                    'https://www.udemy.com/course/pro-javascript/?couponCode=MTST7102224A2',
                 },
               ],
             },
@@ -1866,12 +1866,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'OOP in JavaScript Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=4yh8B4UJXbk',
+                  'OOP in JavaScript Hindi - Chai aur Code':
+                    'https://youtu.be/pN-Qmv4zBcI?si=0bEX-PUivZd7pNMF',
                 },
                 {
-                  'OOP in JavaScript English - Mosh Hamedani':
-                    'https://www.youtube.com/watch?v=PFmuCDHHpwk',
+                  'OOP in JavaScript English - Programming with Mosh':
+                    'https://youtu.be/PFmuCDHHpwk?si=r3GZoxiJ-bqzZQrq',
                 },
                 {
                   'MDN OOP Guide':
@@ -1899,12 +1899,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Prototypes in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=9NwR2YGzHNs',
+                  'Prototypes in Hindi - Chai aur Code':
+                    'https://youtu.be/uMI5cNeHTOc?si=uw_kqFk_2XtuUCHq',
                 },
                 {
-                  'JavaScript Prototypes English - Fun Fun Function':
-                    'https://www.youtube.com/watch?v=GhbhD1HR5vk',
+                  'JavaScript Prototypes English - GreatStack':
+                    'https://youtu.be/583MGxjypgU?si=CV5-2lRGQGNmPL8w',
                 },
                 {
                   'MDN Inheritance and Prototype Chain':
@@ -1955,8 +1955,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/javascript-hard-parts-v2/',
                 },
                 {
-                  'Udemy - Understanding the JavaScript Event Loop':
-                    'https://www.udemy.com/course/understanding-javascript-the-event-loop/',
+                  'Udemy - Advanced Theoretical JavaScript':
+                    'https://www.udemy.com/course/advanced-theoretical-javascript/',
                 },
               ],
             },
@@ -1968,11 +1968,11 @@ export const Frontend = {
               free: [
                 {
                   'ES6 Modules Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=7P5JUMc1cI4',
+                    'https://youtu.be/wCkHbaLG5cw?si=PwMUZyKur-HcOKI4',
                 },
                 {
                   'ES6 Modules English - Web Dev Simplified':
-                    'https://www.youtube.com/watch?v=cRHQNNcYf6s',
+                    'https://youtu.be/cRHQNNcYf6s?si=9ZDgE5iqdyAcj2vL',
                 },
                 {
                   'MDN JavaScript Modules':
@@ -1985,7 +1985,7 @@ export const Frontend = {
               premium: [
                 {
                   'Frontend Masters - JavaScript Modules Fundamentals':
-                    'https://frontendmasters.com/courses/js-fundamentals/',
+                    'https://frontendmasters.com/courses/deep-javascript-v3/',
                 },
                 {
                   'Udemy - Modern JavaScript for React JS':
@@ -2000,12 +2000,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Advanced Promises Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=RvYYCGs45L4',
+                  'Advanced Promises Hindi - Chai aur Code':
+                    'https://youtu.be/NJwRQgsu1Q8?si=edgVsvS6mEiFPFRU',
                 },
                 {
-                  'JavaScript Promises Deep Dive - Traversy Media':
-                    'https://www.youtube.com/watch?v=_8gHHBlbziw',
+                  'JavaScript Promises Deep Dive - Roberts Dev Talk':
+                    'https://youtu.be/li7FzDHYZpc?si=ydIrjSo-cjQETFOx',
                 },
                 {
                   'MDN Promise Guide':
@@ -2035,11 +2035,11 @@ export const Frontend = {
               free: [
                 {
                   'RegEx in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=9RksQ5YT7FM',
+                    'https://youtu.be/zeMPry3ak6Y?si=YROyjnkM7l-q71xf',
                 },
                 {
-                  'Regular Expressions English - Net Ninja':
-                    'https://www.youtube.com/watch?v=r6I-Ahc0HB4',
+                  'Regular Expressions English - Web Dev Simplified':
+                    'https://youtu.be/rhzKDrUiJVk?si=il5HXcBqZywSsREf',
                 },
                 {
                   'MDN Regular Expressions':
@@ -2051,8 +2051,8 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - JavaScript Regular Expressions':
-                    'https://frontendmasters.com/courses/regex/',
+                  'Frontend Masters - JavaScript: The Recent Parts':
+                    'https://frontendmasters.com/courses/js-recent-parts/',
                 },
                 {
                   'Udemy - Regular Expressions Masterclass':
@@ -2067,12 +2067,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Fetch API Hindi - Yahoo Baba':
-                    'https://www.youtube.com/watch?v=pFMgAWkrk8o',
+                  'Fetch API Hindi - Shradha Khapra':
+                    'https://youtu.be/CyGodpqcid4?si=cln3zGd834oEKxWy',
                 },
                 {
-                  'Fetch API English - Traversy Media':
-                    'https://www.youtube.com/watch?v=Oive66jrwBs',
+                  'Fetch API English - Bro Code':
+                    'https://youtu.be/37vxWr0WgQk?si=dE_gTYGr2txyGFC2',
                 },
                 {
                   'MDN Fetch API':
@@ -2085,8 +2085,8 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - JavaScript and the DOM':
-                    'https://frontendmasters.com/courses/javascript-dom/',
+                  'Frontend Masters - The Hard Parts V2':
+                    'https://frontendmasters.com/courses/javascript-hard-parts-v2/',
                 },
                 {
                   'Udemy - Modern JavaScript From The Beginning':
