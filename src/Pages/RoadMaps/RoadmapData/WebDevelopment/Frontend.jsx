@@ -5900,12 +5900,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind CSS Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=L4_jarMnB0c',
+                    'Tailwind CSS Tutorial in Hindi - College Wallah':
+                      'https://youtu.be/_9mTJ84uL1Q?si=iFls3ivPqMg3Xb9a',
                   },
                   {
-                    'Tailwind CSS Crash Course - Traversy Media':
-                      'https://www.youtube.com/watch?v=UBOj6rqRUME',
+                    'Tailwind CSS Crash Course - PW Skills Tech':
+                      'https://youtu.be/MiR1dyW45Uw?si=jr9fGMh8VbZ-QSGf',
                   },
                   {
                     'Tailwind CSS Documentation':
@@ -5922,7 +5922,7 @@ export const Frontend = {
                 premium: [
                   {
                     'Tailwind CSS: From Zero to Production - Laracasts':
-                      'https://laracasts.com/series/tailwind-css-from-scratch',
+                      'https://laracasts.com/series/build-html-emails-with-maizzle/episodes/1',
                   },
                   {
                     'Tailwind CSS 3 Essential Training - LinkedIn Learning':
@@ -5937,12 +5937,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Utility First Workflow in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=OZy86p7w4H0',
+                    'Tailwind Utility First Workflow in Hindi - CodeWithHarry':
+                      'https://youtu.be/L4_jarMnB0c?si=2lvKeMkXiFzIrC-k',
                   },
                   {
-                    'Utility First Fundamentals - Net Ninja':
-                      'https://www.youtube.com/watch?v=4wGmylafgM4',
+                    'Utility First Fundamentals - Tailwind Labs':
+                      'https://youtu.be/UvF56fPGVt4?si=fxKsd21DjFyUeHiC',
                   },
                   {
                     'Tailwind CSS Utility First Documentation':
@@ -5962,8 +5962,8 @@ export const Frontend = {
                       'https://masteringtailwind.com/',
                   },
                   {
-                    'Building UI with Tailwind CSS - Udemy':
-                      'https://www.udemy.com/course/building-ui-with-tailwind-css/',
+                    'Tailwind CSS From Scratch - Udemy':
+                      'https://www.udemy.com/course/tailwind-from-scratch/',
                   },
                 ],
               },
@@ -5975,11 +5975,11 @@ export const Frontend = {
                 free: [
                   {
                     'Tailwind CSS Responsive Design in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=YASvfNHHCeY',
+                      'https://youtu.be/WGsiW_-2rZg?si=3kF-S2c5OyIK5JVr',
                   },
                   {
-                    'Tailwind CSS Responsive Design - Raddy':
-                      'https://www.youtube.com/watch?v=h9Zun41-Ozc',
+                    'Tailwind CSS Responsive Design - Lukas':
+                      'https://youtu.be/PuovsjZN11Y?si=pOPQg2CAzQ1qrx_n',
                   },
                   {
                     'Tailwind Responsive Design Docs':
@@ -6000,8 +6000,8 @@ export const Frontend = {
                       'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
-                    'Responsive Web Design with Tailwind - Skillshare':
-                      'https://www.skillshare.com/classes/Responsive-Web-Design-with-Tailwind-CSS',
+                    'Introduction To Tailwind CSS - Skillshare':
+                      'https://www.skillshare.com/en/classes/introduction-to-tailwind-css/1784420695?via=search-layout-grid',
                   },
                 ],
               },
@@ -6012,12 +6012,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind CSS Spacing in Hindi - Technical Thapa':
-                      'https://www.youtube.com/watch?v=0xLN7dKTR5I',
+                    'Tailwind CSS Spacing in Hindi - WsCube Tech':
+                      'https://youtu.be/kkIiqwZT5rA?si=Iyms0AsJoNZcex4D',
                   },
                   {
                     'Tailwind CSS Spacing - Net Ninja':
-                      'https://www.youtube.com/watch?v=DD5cQq_V_KE',
+                      'https://youtu.be/1g4W2U-l350?si=oN9FBRcFKQttvMa9',
                   },
                   {
                     'Tailwind Spacing Documentation':
@@ -6035,11 +6035,11 @@ export const Frontend = {
                 premium: [
                   {
                     'Tailwind CSS Mastery - Udemy':
-                      'https://www.udemy.com/course/tailwind-css-mastery/',
+                      'https://www.udemy.com/course/tailwind-from-scratch/',
                   },
                   {
-                    'Advanced Tailwind CSS - Laracasts':
-                      'https://laracasts.com/series/advanced-tailwind',
+                    'Tailwind CSS - Laracasts':
+                      'https://laracasts.com/series/build-html-emails-with-maizzle/',
                   },
                 ],
               },
@@ -6050,12 +6050,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Typography in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=XG8SofkqDvM',
+                    'Tailwind Typography in Hindi - Thapa Technical':
+                      'https://youtu.be/lkX5oQc8f3s?si=E2sN6MAtaG3dAckb',
                   },
                   {
-                    'Tailwind Typography - Kevin Powell':
-                      'https://www.youtube.com/watch?v=cZc4Jn5nK3k',
+                    'Tailwind Typography - Tailwind Labs':
+                      'https://youtu.be/GEYkwfYytAM?si=YbH-Fgs_MVRWeBWV',
                   },
                   {
                     'Tailwind Typography Documentation':
@@ -6072,12 +6072,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Modern Web Typography with Tailwind - Frontend Masters':
-                      'https://frontendmasters.com/courses/web-typography/',
+                    'Modern Web Typography with Tailwind - Tailwind CSS':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
                     'Typography Mastery in Tailwind CSS - Skillshare':
-                      'https://www.skillshare.com/classes/Typography-Mastery-in-Tailwind-CSS',
+                      'https://www.skillshare.com/en/classes/introduction-to-tailwind-css/1784420695',
                   },
                 ],
               },
@@ -6088,12 +6088,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Colors Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=Mn0Cr2V5Ung',
+                    'Tailwind Colors Tutorial in Hindi - Code Step by step':
+                      'https://youtu.be/VcZ9Fvb1fjU?si=uwSumz0dhzM8FgsE',
                   },
                   {
-                    'Tailwind Colors and Backgrounds - Traversy Media':
-                      'https://www.youtube.com/watch?v=JUxPyBQ7d8c',
+                    'Tailwind Colors and Backgrounds - WsCube Tech':
+                      'https://youtu.be/hA7IfPjXeoI?si=c6QxmJzhove34oiq',
                   },
                   {
                     'Tailwind Colors Documentation':
@@ -6110,11 +6110,11 @@ export const Frontend = {
                 premium: [
                   {
                     'Color Theory for Tailwind CSS - Udemy':
-                      'https://www.udemy.com/course/color-theory-for-tailwind-css/',
+                      'https://www.udemy.com/course/tailwind-from-scratch/',
                   },
                   {
                     'Advanced Color Systems in Tailwind - LinkedIn Learning':
-                      'https://www.linkedin.com/learning/advanced-tailwind-css',
+                      'https://www.linkedin.com/learning/tailwind-css-essential-training',
                   },
                 ],
               },
@@ -6125,12 +6125,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Flexbox in Hindi - Technical Thapa':
-                      'https://www.youtube.com/watch?v=GDYIs3ZACqE',
+                    'Tailwind Flexbox in Hindi - CodeWithHarry':
+                      'https://youtu.be/5qVuORLniwM?si=cYdjD8D6ObgnNCsM',
                   },
                   {
-                    'Tailwind CSS Flexbox - Net Ninja':
-                      'https://www.youtube.com/watch?v=JyRfCsA2veg',
+                    'Tailwind CSS Flexbox - Daily Tuition':
+                      'https://youtu.be/2b1wwncor6E?si=7ML4_47QCLg9YxQ5',
                   },
                   {
                     'Tailwind Flexbox Documentation':
@@ -6146,12 +6146,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Tailwind CSS Layout Mastery - Frontend Masters':
-                      'https://frontendmasters.com/courses/tailwind-css-layout/',
+                    'Tailwind CSS - Frontend Masters':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
-                    'Advanced Flexbox in Tailwind - Laracasts':
-                      'https://laracasts.com/series/advanced-tailwind-flexbox',
+                    'Tailwind - Laracasts':
+                      'https://laracasts.com/topics/tailwind',
                   },
                 ],
               },
@@ -6167,12 +6167,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind CSS Grid in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=X6FIydgCrOE',
+                    'Tailwind CSS Grid in Hindi - WsCube Tech':
+                      'https://youtu.be/i_HWJN5snAI?si=1Kpf664SLhkazS2m',
                   },
                   {
-                    'Tailwind CSS Grid Tutorial - Kevin Powell':
-                      'https://www.youtube.com/watch?v=8KtJ0JQdKR0',
+                    'Tailwind CSS Grid Tutorial - Net Ninja':
+                      'https://youtu.be/_r2qB44o_Fs?si=gl4cQbTklj8hz5h6',
                   },
                   {
                     'Tailwind Grid Documentation':
@@ -6188,12 +6188,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'CSS Grid & Tailwind Masterclass - Frontend Masters':
-                      'https://frontendmasters.com/courses/css-grid-tailwind/',
+                    'Tailwind - Frontend Masters':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
-                    'Modern CSS Layouts with Tailwind - Udemy':
-                      'https://www.udemy.com/course/modern-css-layouts-with-tailwind/',
+                    'Tailwind CSS From Scratch - Udemy':
+                      'https://www.udemy.com/course/tailwind-from-scratch/',
                   },
                 ],
               },
@@ -6205,11 +6205,11 @@ export const Frontend = {
                 free: [
                   {
                     'Tailwind Borders & Shadows in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=aSlK3GhRuXA',
+                      'https://youtu.be/4G8QcNVAhCg?si=TrCerxsddNSZ-tl2',
                   },
                   {
-                    'Tailwind CSS Borders & Shadows - Net Ninja':
-                      'https://www.youtube.com/watch?v=21HuwjmuS7A',
+                    'Tailwind CSS Borders - Net Ninja':
+                      'https://youtu.be/Vlyrob0uXHs?si=sHXdsMK74EUWXl3b',
                   },
                   {
                     'Tailwind Borders Documentation':
@@ -6226,12 +6226,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Advanced UI Effects with Tailwind - Laracasts':
-                      'https://laracasts.com/series/advanced-tailwind-ui-effects',
+                    'Tailwind CSS - Laracasts':
+                      'https://laracasts.com/topics/tailwind',
                   },
                   {
-                    'Tailwind CSS Design Systems - Skillshare':
-                      'https://www.skillshare.com/classes/Tailwind-CSS-Design-Systems',
+                    'Introduction to Tailwind CSS - Skillshare':
+                      'https://www.skillshare.com/en/classes/introduction-to-tailwind-css/1784420695',
                   },
                 ],
               },
@@ -6242,12 +6242,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Positioning in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=gOYxDlBqVhE',
+                    'Tailwind Positioning in Hindi - Code step by step':
+                      'https://youtu.be/0HMDcnZGLec?si=yyf0sArDnBVoregY',
                   },
                   {
-                    'Tailwind CSS Position Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=VsZAh7g8V8E',
+                    'Tailwind CSS Position Tutorial - Web Dev Simplified':
+                      'https://youtu.be/jx5jmI0UlXU?si=SKH6krn87AeODYjf',
                   },
                   {
                     'Tailwind Position Documentation':
@@ -6264,12 +6264,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Tailwind CSS Layout Pro - Frontend Masters':
-                      'https://frontendmasters.com/courses/tailwind-layout/',
+                    'Tailwind CSS - Frontend Masters':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
-                    'Advanced Positioning with Tailwind - LinkedIn Learning':
-                      'https://www.linkedin.com/learning/advanced-tailwind-css-positioning',
+                    'Tailwind CSS 3 - LinkedIn Learning':
+                      'https://www.linkedin.com/learning/tailwind-css-3-essential-training',
                   },
                 ],
               },
@@ -6280,12 +6280,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Gradients in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=3JB_qEk39w0',
+                    'Tailwind Gradients in Hindi - Anuj Bhaiya':
+                      'https://youtu.be/EoOuP65doaE?si=FpsbVOrxYVHcDgkI',
                   },
                   {
-                    'Tailwind CSS Gradients - Kevin Powell':
-                      'https://www.youtube.com/watch?v=1J_Y12RqGVw',
+                    'Tailwind CSS Gradients - Tailwind CSS':
+                      'https://youtu.be/1Rs5Kml8qMM?si=3-N01yCFlWmDhB9Q',
                   },
                   {
                     'Tailwind Gradients Documentation':
@@ -6302,12 +6302,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Advanced Color & Gradients in Tailwind - Udemy':
-                      'https://www.udemy.com/course/advanced-tailwind-gradients/',
+                    'Tailwind CSS Beginner to Pro - Udemy':
+                      'https://www.udemy.com/course/tailwind-css-zero-to-hero/',
                   },
                   {
                     'Mastering Tailwind Backgrounds - Skillshare':
-                      'https://www.skillshare.com/classes/Mastering-Tailwind-CSS-Backgrounds',
+                      'https://www.skillshare.com/en/classes/tailwind-css-fundamentals/1733977463',
                   },
                 ],
               },
@@ -6318,12 +6318,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind States in Hindi - Technical Thapa':
-                      'https://www.youtube.com/watch?v=5_BPWwzVj10',
+                    'Tailwind States in Hindi - CodeWithHarry':
+                      'https://youtu.be/R6d5pRFulIk?si=KZbQwnwCKBEZ3_Ou',
                   },
                   {
-                    'Tailwind CSS States Tutorial - Net Ninja':
-                      'https://www.youtube.com/watch?v=vOT3UkPUbvE',
+                    'Tailwind CSS States Tutorial - Tailwind Labs':
+                      'https://youtu.be/5_BPDve5-3M?si=yvbQ87B_YPLt9C7Y',
                   },
                   {
                     'Tailwind States Documentation':
@@ -6356,12 +6356,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Forms in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=91evwKVzGRE',
+                    'Tailwind Forms in Hindi - WsCube Tech':
+                      'https://youtu.be/BTyDQRil9s4?si=jDNVX_0_hLc0ZkMy',
                   },
                   {
-                    'Tailwind CSS Forms - Traversy Media':
-                      'https://www.youtube.com/watch?v=J3RYV1VWxQ8',
+                    'Tailwind CSS Forms - Tailwind Labs':
+                      'https://youtu.be/pONeWAzDsQg?si=MG4l3QejkApgH2p2',
                   },
                   {
                     'Tailwind Forms Documentation':
@@ -6394,12 +6394,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Configuration in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=Ymj1XCqmrGw',
+                    'Tailwind Configuration in Hindi - Shreyians Coding School':
+                      'https://youtu.be/hgNMVZcL83o?si=GVpu0rf1gabD0VcV',
                   },
                   {
                     'Tailwind CSS Config Tutorial - Net Ninja':
-                      'https://www.youtube.com/watch?v=TrftauE2Vyk',
+                      'https://youtu.be/6UVQlB1eo5A?si=GXMRlrUhBQfpRHcX',
                   },
                   {
                     'Tailwind Configuration Documentation':
@@ -6416,12 +6416,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Advanced Tailwind Configuration - Frontend Masters':
-                      'https://frontendmasters.com/courses/tailwind-css-config/',
+                    'Tailwind CSS - Frontend Masters':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
-                    'Tailwind CSS Customization Masterclass - Laracasts':
-                      'https://laracasts.com/series/tailwind-css-customization',
+                    'Tailwind CSS - Laracasts':
+                      'https://laracasts.com/topics/tailwind',
                   },
                 ],
               },
@@ -6430,19 +6430,19 @@ export const Frontend = {
           ],
         },
         Advanced: {
-          suggestedTime: 810,
+          suggestedTime: 690,
           topics: [
             {
               topic: 'Animations and Transitions',
               resources: {
                 free: [
                   {
-                    'Tailwind Animations in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=aWgJz8aCT6E',
+                    'Tailwind Animations in Hindi - WsCube Tech':
+                      'https://youtu.be/7NMF_FgkcdU?si=fww6iGPsSssvfOcI',
                   },
                   {
-                    'Tailwind CSS Animations - Sam Selikoff':
-                      'https://www.youtube.com/watch?v=z9sHOXheE_M',
+                    'Tailwind CSS Animations - Tom Is Loading':
+                      'https://youtu.be/DSneWikjH5E?si=Di996gwb1eR9xOKc',
                   },
                   {
                     'Tailwind Animation Documentation':
@@ -6459,12 +6459,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Mastering CSS Animations with Tailwind - Frontend Masters':
+                    'Tailwind CSS - Frontend Masters':
                       'https://frontendmasters.com/courses/tailwind-animations/',
                   },
                   {
-                    'Advanced Motion Design with Tailwind - Udemy':
-                      'https://www.udemy.com/course/advanced-tailwind-animations/',
+                    'Tailwind CSS From Scratch - Udemy':
+                      'https://www.udemy.com/course/tailwind-from-scratch/',
                   },
                 ],
               },
@@ -6475,12 +6475,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Dark Mode in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=VylXkPy-MIc',
+                    'Tailwind Dark Mode in Hindi - Code Step by step':
+                      'https://youtu.be/Ikwq7utMdoI?si=xG_mGaJPN3pO5fyY',
                   },
                   {
-                    'Tailwind CSS Dark Mode - Net Ninja':
-                      'https://www.youtube.com/watch?v=MAtaT8BZEAo',
+                    'Tailwind CSS Dark Mode - Built With Code':
+                      'https://youtu.be/NxIBnvb8B7Y?si=877aUf9L2I_vNyTJ',
                   },
                   {
                     'Tailwind Dark Mode Documentation':
@@ -6497,66 +6497,28 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Dark Mode Mastery in Tailwind - Laracasts':
-                      'https://laracasts.com/series/dark-mode-with-tailwind',
+                    'Tailwind CSS - Laracasts':
+                      'https://laracasts.com/topics/tailwind',
                   },
                   {
-                    'Advanced Theme Switching - Skillshare':
-                      'https://www.skillshare.com/classes/Advanced-Theme-Switching-with-Tailwind-CSS',
+                    'Introduction To Tailwind CSS - Skillshare':
+                      'https://www.skillshare.com/en/classes/introduction-to-tailwind-css/1784420695',
                   },
                 ],
               },
               time: 90,
             },
             {
-              topic: 'Plugins in Tailwind CSS',
-              resources: {
-                free: [
-                  {
-                    'Tailwind Plugins in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=hBk6ZV_Hpcs',
-                  },
-                  {
-                    'Tailwind CSS Plugins Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=O4XGJRJhPXw',
-                  },
-                  {
-                    'Tailwind Plugins Documentation':
-                      'https://tailwindcss.com/docs/plugins',
-                  },
-                  {
-                    'Official Tailwind Plugin Directory':
-                      'https://github.com/tailwindlabs/tailwindcss-plugins',
-                  },
-                  {
-                    'Creating Tailwind Plugins - freeCodeCamp':
-                      'https://www.freecodecamp.org/news/learn-tailwind-css-plugins/',
-                  },
-                ],
-                premium: [
-                  {
-                    'Advanced Plugin Development - Frontend Masters':
-                      'https://frontendmasters.com/courses/tailwind-plugins/',
-                  },
-                  {
-                    'Building Custom Tailwind Plugins - Udemy':
-                      'https://www.udemy.com/course/building-tailwind-plugins/',
-                  },
-                ],
-              },
-              time: 120,
-            },
-            {
               topic: 'Tailwind with JavaScript Frameworks',
               resources: {
                 free: [
                   {
-                    'Tailwind with React in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=k-Pi5ZMxHWY',
+                    'Tailwind with React in Hindi - Chai aur Code':
+                      'https://youtu.be/bB6707XzCNc?si=5T3E7jLZPLPBi86Q',
                   },
                   {
-                    'Tailwind CSS with Next.js - Jack Herrington':
-                      'https://www.youtube.com/watch?v=T-Zv73yZ_QI',
+                    'Tailwind CSS with Next.js - Etisha Garg':
+                      'https://youtu.be/L3wJe66tlBk?si=6LvyyaBtl6szw0Hb',
                   },
                   {
                     'Tailwind Framework Guides':
@@ -6573,12 +6535,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Full Stack Applications with Tailwind - Frontend Masters':
-                      'https://frontendmasters.com/courses/tailwind-react/',
+                    'Tailwind CSS - Frontend Masters':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
                     'Modern Web Apps with Tailwind - Laracasts':
-                      'https://laracasts.com/series/modern-web-apps-with-tailwind',
+                      'https://laracasts.com/series/build-a-voting-app',
                   },
                 ],
               },
@@ -6589,12 +6551,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Theming in Hindi - Technical Thapa':
-                      'https://www.youtube.com/watch?v=1q5oOZE6o4c',
+                    'Tailwind Theming in Hindi - College Wallah':
+                      'https://youtu.be/_9mTJ84uL1Q?si=AEgS3bRou2Od0olX',
                   },
                   {
-                    'Custom Theming in Tailwind CSS - Kevin Powell':
-                      'https://www.youtube.com/watch?v=MWL0LQNS7L8',
+                    'Custom Theming in Tailwind CSS - Built With Code':
+                      'https://youtu.be/vg4g68oJNGM?si=nsDHvAusF0Rysofo',
                   },
                   {
                     'Tailwind Theme Configuration':
@@ -6611,12 +6573,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Advanced Theme Creation - Frontend Masters':
-                      'https://frontendmasters.com/courses/tailwind-themes/',
+                    'Tailwind CSS - Frontend Masters':
+                      'https://frontendmasters.com/courses/tailwind-css/',
                   },
                   {
-                    'Building Design Systems with Tailwind - Skillshare':
-                      'https://www.skillshare.com/classes/Building-Design-Systems-with-Tailwind-CSS',
+                    'Modern Web Apps with Tailwind - Laracasts':
+                      'https://laracasts.com/series/build-a-voting-app',
                   },
                 ],
               },
@@ -6627,12 +6589,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Tailwind Optimization in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=6Hh0eqPqiDs',
+                    'Tailwind CSS in Hindi - WsCube Tech':
+                      'https://youtu.be/BTyDQRil9s4?si=IfGrfAZHcNrm-rEH',
                   },
                   {
-                    'Tailwind CSS Production Setup - Net Ninja':
-                      'https://www.youtube.com/watch?v=HZn2LtBT59w',
+                    'Tailwind CSS Production Setup - Tailwind Labs':
+                      'https://youtu.be/HZn2LtBT59w?si=URbWypc_3LcuXgYN',
                   },
                   {
                     'Tailwind Optimization Documentation':
@@ -6650,11 +6612,11 @@ export const Frontend = {
                 premium: [
                   {
                     'Production-Ready Tailwind - Laracasts':
-                      'https://laracasts.com/series/production-ready-tailwind',
+                      'https://laracasts.com/topics/tailwind',
                   },
                   {
-                    'Advanced Tailwind Optimization - Udemy':
-                      'https://www.udemy.com/course/advanced-tailwind-optimization/',
+                    'Tailwind CSS From Scratch - Udemy':
+                      'https://www.udemy.com/course/tailwind-from-scratch/',
                   },
                 ],
               },
@@ -6665,12 +6627,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Build Portfolio with Tailwind in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=KqZ5Q8xlHKE',
+                    'Build Portfolio with Tailwind in Hindi - Anurag Singh ProCodrr':
+                      'https://youtu.be/kLEBM1_7fWY?si=PQuf86uVAWYbOAhe',
                   },
                   {
-                    'Build Landing Page with Tailwind - Traversy Media':
-                      'https://www.youtube.com/watch?v=dFgzHOX84xQ',
+                    'Build and Deploy A Nike Website - JavaScript Mastery':
+                      'https://youtu.be/tS7upsfuxmo?si=O5qZ_KjKuzl6qcIB',
                   },
                   {
                     'Tailwind Component Examples':
@@ -6710,12 +6672,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize CSS Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=0Caz6dO0Ues',
+                    'Materialize CSS Tutorial in Hindi - Thapa Technical':
+                      'https://youtu.be/dMqv3BAPsI8?si=pjOUkiNBCcg2Wx-c',
                   },
                   {
-                    'Materialize CSS Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=4wgiLLFxQD0',
+                    'Materialize CSS Tutorial - Hitesh Choudhary':
+                      'https://youtu.be/hD3blgVYMtQ?si=g-nbpuD4JRFpTpRP',
                   },
                   {
                     'Official Materialize Documentation':
@@ -6736,8 +6698,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Material Design with Materialize':
-                      'https://www.skillshare.com/classes/Web-Design-with-Materialize-CSS-Framework',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6748,12 +6710,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Grid System in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=5BLbZRPSX7A',
+                    'Materialize Grid System in Hindi - Toofani Coder':
+                      'https://youtu.be/UOXLatNzH94?si=EF2RAouXwNxY1eZ4',
                   },
                   {
-                    'Materialize Grid System - Net Ninja':
-                      'https://www.youtube.com/watch?v=HuYKx9KqAWQ',
+                    'Materialize Grid System - Hitesh Choudhary':
+                      'https://youtu.be/_8Lg_JWshwk?si=7eZOYuMpVt085NsJ',
                   },
                   {
                     'Materialize Grid Documentation':
@@ -6770,12 +6732,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Modern Material Design':
-                      'https://www.udemy.com/course/materialize-css-responsive-design/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - Materialize Essential Training':
-                      'https://www.linkedin.com/learning/materialize-essential-training',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6786,12 +6748,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Typography in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=vB4cqjHHuLU',
+                    'Materialize Typography in Hindi - Arun Mishra':
+                      'https://youtu.be/ssBPgbyAUqM?si=JvLaiRySCYcH16yO',
                   },
                   {
-                    'Materialize Typography Tutorial - Academind':
-                      'https://www.youtube.com/watch?v=0W7x4w7SCqg',
+                    'Materialize Typography Tutorial - Traversy Media':
+                      'https://youtu.be/nqT8c5OFjEQ?si=Ekr7zWO5-N_SeQ7y',
                   },
                   {
                     'Materialize Typography Documentation':
@@ -6808,12 +6770,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Complete Materialize CSS Course':
-                      'https://www.udemy.com/course/materializecss/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Pluralsight - Materialize CSS Fundamentals':
-                      'https://www.pluralsight.com/courses/materialize-css-fundamentals',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6824,12 +6786,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Colors in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=5dpIAGZLySY',
+                    'Materialize Colors in Hindi - Xpert Coding':
+                      'https://youtu.be/Es6s9MmXgJc?si=0i9awHmnjCeIsz8i',
                   },
                   {
-                    'Materialize Color System - The Net Ninja':
-                      'https://www.youtube.com/watch?v=LuYqsX0y6Kw',
+                    'Materialize Color - The Net Ninja':
+                      'https://youtu.be/J-U19082o98?si=tXWILMYLm6MUXErP',
                   },
                   {
                     'Materialize Color Documentation':
@@ -6846,12 +6808,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Material Design Masterclass':
-                      'https://www.udemy.com/course/material-design-and-materialize-css-course/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Material Design Implementation':
-                      'https://www.skillshare.com/classes/material-design-implementation',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6862,12 +6824,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Buttons in Hindi - Great Learning':
-                      'https://www.youtube.com/watch?v=S6B_lxtBeXQ',
+                    'Materialize Buttons in Hindi - Xpert Coding':
+                      'https://youtu.be/gWCV9OXv4hE?si=PImDmN0o_-fpDTdH',
                   },
                   {
-                    'Materialize Buttons Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=63Kk8nkUwU8',
+                    'Materialize Buttons Tutorial - Net Ninja':
+                      'https://youtu.be/j6y1UVxr3jg?si=ue4GdzAZXsHzt_cO',
                   },
                   {
                     'Materialize Buttons Documentation':
@@ -6884,12 +6846,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Material UI Masterclass':
-                      'https://www.udemy.com/course/implement-high-fidelity-designs-with-material-design/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - Materialize Components':
-                      'https://www.linkedin.com/learning/materialize-essential-training',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6900,12 +6862,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Forms in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=4wh3F8R4rf8',
+                    'Materialize Forms in Hindi - Xpert Coding':
+                      'https://youtu.be/dnnFUeiRjWw?si=eqX40jR3XRHDyYgN',
                   },
                   {
                     'Materialize Forms Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=4kRX9xh8Zkk',
+                      'https://youtu.be/UDgYhFndjvM?si=JVG_PqlMbK2Sdj88',
                   },
                   {
                     'Materialize Forms Documentation':
@@ -6922,12 +6884,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Complete Material Design Course':
-                      'https://www.udemy.com/course/material-design-for-web-developers/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Pluralsight - Material Design Forms':
-                      'https://www.pluralsight.com/courses/material-design-forms',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6938,12 +6900,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Navbar in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=Dq7xbvGT5Yg',
+                    'Materialize Navbar in Hindi - Xpert Coding':
+                      'https://youtu.be/q8NzVw7e7nA?si=UT-iRz3IAAa4YdJG',
                   },
                   {
-                    'Materialize Navbar Tutorial - Academind':
-                      'https://www.youtube.com/watch?v=O9QE6OySid4',
+                    'Materialize Navbar Tutorial - Net Ninja':
+                      'https://youtu.be/5gHr8RfB0zs?si=CD1-yXGWKnnyTzvJ',
                   },
                   {
                     'Materialize Navbar Documentation':
@@ -6960,12 +6922,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Materialize CSS Navigation Mastery':
+                    'Udemy - Materialize CSS From Scratch':
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Building Navigation with Materialize':
-                      'https://www.skillshare.com/classes/web-development-navigation',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -6982,12 +6944,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Cards in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=vzXPVK3Fj78',
+                    'Materialize Cards in Hindi - Code House':
+                      'https://youtu.be/eYIDi2pDYyo?si=-SbszQb7W60ICfaG',
                   },
                   {
-                    'Materialize Cards Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=dZCF_hVF6Ks',
+                    'Materialize Cards Tutorial - Hitesh Choudhary':
+                      'https://youtu.be/Bu_Nc0knIa0?si=a5lkOX1Ksbot3SyC',
                   },
                   {
                     'Materialize Cards Documentation':
@@ -7004,12 +6966,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Materialize CSS Components Masterclass':
+                    'Udemy - Materialize CSS From Scratch':
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - Materialize Card Components':
-                      'https://www.linkedin.com/learning/materialize-essential-training',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7020,12 +6982,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Modals in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=9FVtiJHFCSU',
+                    'Materialize Modals in Hindi - Arun Mishra':
+                      'https://youtu.be/pBUeDteAp3o?si=q9Bm3DySwUf1_UIh',
                   },
                   {
-                    'Materialize Modal Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=RABjhqKOOTw',
+                    'Materialize Modal Tutorial - Net Ninja':
+                      'https://youtu.be/OImBxPnTLZw?si=FaZsdHphcV_6JfKm',
                   },
                   {
                     'Materialize Modals Documentation':
@@ -7042,12 +7004,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - JavaScript & Materialize Projects':
-                      'https://www.udemy.com/course/50-projects-50-days/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Pluralsight - Material Design Components':
-                      'https://www.pluralsight.com/courses/material-design-implementation',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7058,12 +7020,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Icons in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=FHb9JobDs2o',
+                    'Materialize Icons in Hindi - Code House':
+                      'https://youtu.be/cSf57RFld-s?si=TUBfmTw73o6vsBPT',
                   },
                   {
-                    'Material Icons Tutorial - Academind':
-                      'https://www.youtube.com/watch?v=4S0hYlYIlWw',
+                    'Material Icons Tutorial - Net Ninja':
+                      'https://youtu.be/wwUV0YaqNsg?si=fRvFHFnQc0c3ZyEY',
                   },
                   {
                     'Materialize Icons Documentation':
@@ -7080,12 +7042,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Material Design Icons Masterclass':
-                      'https://www.udemy.com/course/material-design-and-materialize-css-course/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Icon Design for Web':
-                      'https://www.skillshare.com/classes/icon-design-for-web',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7096,12 +7058,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Preloaders in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=MtOXxlR0kBk',
+                    'Materialize Preloaders in Hindi - toofani coder':
+                      'https://youtu.be/UV441_bfL-s?si=9f6hiMxYyI2-DHP0',
                   },
                   {
-                    'Materialize Progress Bars - Dev Ed':
-                      'https://www.youtube.com/watch?v=LQdxAUxs3OY',
+                    'Materialize Progress Bars - frontendworkshop':
+                      'https://youtu.be/IdVDCwuM3aU?si=PuFrhmG_Tgtzmxq-',
                   },
                   {
                     'Materialize Preloaders Documentation':
@@ -7118,12 +7080,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Advanced Materialize CSS':
-                      'https://www.udemy.com/course/advanced-materialize-css/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - UX Patterns':
-                      'https://www.linkedin.com/learning/ux-patterns-for-web-design',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7134,12 +7096,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Tabs in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=v7wZydECXpY',
+                    'Materialize in Hindi - Yahoo Baba':
+                      'https://youtu.be/dMqv3BAPsI8?si=JxCw6Wkr0xS1eD39',
                   },
                   {
-                    'Materialize Tabs & Collapsible - Traversy Media':
-                      'https://www.youtube.com/watch?v=4HGcUKwg-Ls',
+                    'Materialize Tabs & Collapsible - Net Ninja':
+                      'https://youtu.be/4kN5lW4PNEs?si=atltBipxxeVWwrQV',
                   },
                   {
                     'Materialize Tabs Documentation':
@@ -7156,12 +7118,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Complete Materialize Course':
+                    'Udemy - Materialize CSS From Scratch':
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Pluralsight - Material Design Navigation':
-                      'https://www.pluralsight.com/courses/material-design-nav-patterns',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7172,12 +7134,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Chips in Hindi - Great Learning':
-                      'https://www.youtube.com/watch?v=xhWHf_92gCA',
+                    'Materialize Chips in Hindi - Arun Mishra':
+                      'https://youtu.be/oTGXRyw9a3g?si=TC7aXH-Nj8XvxDsq',
                   },
                   {
-                    'Materialize Chips Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=4TEKd4r7QZw',
+                    'Materialize Chips Tutorial - Learn Google Sheets':
+                      'https://youtu.be/RX9JPEOkf6Q?si=AmDw9uolr67jcwKR',
                   },
                   {
                     'Materialize Chips Documentation':
@@ -7194,12 +7156,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Material UI Components':
-                      'https://www.udemy.com/course/implement-high-fidelity-designs-with-material-design/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Interactive Web Components':
-                      'https://www.skillshare.com/classes/web-components-masterclass',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7210,12 +7172,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Media Components in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=kp3fY_tvX7Q',
+                    'Materialize Media Components in Hindi - Arun Mishra':
+                      'https://youtu.be/oTGXRyw9a3g?si=SyPJa8SJCxKt9kC2',
                   },
                   {
-                    'Materialize Media Tutorial - Academind':
-                      'https://www.youtube.com/watch?v=Xt5_PLeR8KA',
+                    'Materialize Media Tutorial - Traversy Media':
+                      'https://youtu.be/nqT8c5OFjEQ?si=-b_FeYIsj758nzQ_',
                   },
                   {
                     'Materialize Media Documentation':
@@ -7232,12 +7194,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Responsive Design with Materialize':
-                      'https://www.udemy.com/course/materialize-css-responsive-design/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - Responsive Media':
-                      'https://www.linkedin.com/learning/responsive-images',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7254,12 +7216,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Sidenav in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=MaP3vO-2nLc',
+                    'Materialize Sidenav in Hindi - Arun Mishra':
+                      'https://youtu.be/0OobIEAtssY?si=Qk_GQeid6MXlSXVP',
                   },
                   {
-                    'Materialize Sidenav Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=uZqKCyZg7lE',
+                    'Materialize Sidenav Tutorial - Mathhew Lin':
+                      'https://youtu.be/1Qj53kxUp3M?si=5Z-ZMVrmEiM-xEy0',
                   },
                   {
                     'Materialize Sidenav Documentation':
@@ -7276,12 +7238,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Advanced Materialize Navigation':
+                    'Udemy - Materialize CSS From Scratch':
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - Navigation Patterns':
-                      'https://www.linkedin.com/learning/materialize-essential-training',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7292,12 +7254,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Dropdowns in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=eJSpIKVqZKg',
+                    'Materialize Dropdowns in Hindi - Arun Mishra':
+                      'https://youtu.be/tLVk7vMQIAU?si=98mJdtxh_yOeWCLT',
                   },
                   {
-                    'Materialize Dropdown Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=4DMEan2T3aE',
+                    'Materialize Dropdown Tutorial - Praroz':
+                      'https://youtu.be/xRuWA7Yu6eU?si=XHWAJzC87N3lnIAz',
                   },
                   {
                     'Materialize Dropdown Documentation':
@@ -7314,12 +7276,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - JavaScript & Materialize Projects':
-                      'https://www.udemy.com/course/50-projects-50-days/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Pluralsight - Interactive Components':
-                      'https://www.pluralsight.com/courses/material-design-implementation',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7330,12 +7292,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Parallax in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=JdH8Js_aZn4',
+                    'Materialize Parallax in Hindi - Arun Mishra':
+                      'https://youtu.be/rc7l4NpvCpI?si=AzcrGy9WJUry92ph',
                   },
                   {
-                    'Materialize Parallax Tutorial - Dev Ed':
-                      'https://www.youtube.com/watch?v=JB5vhSOj9ko',
+                    'Materialize Parallax Tutorial - Net Ninja':
+                      'https://youtu.be/yHAxSHEuRRI?si=QyXh44Uufonj0Mln',
                   },
                   {
                     'Materialize Parallax Documentation':
@@ -7352,12 +7314,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Creative Web Animation':
-                      'https://www.udemy.com/course/creative-advanced-css-animations/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Parallax Web Design':
-                      'https://www.skillshare.com/classes/web-design-parallax',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7368,12 +7330,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Tooltips in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=L0jR6RrVxfQ',
+                    'Materialize Tooltips in Hindi - Web Tech In Depth':
+                      'https://youtu.be/x6k87LIu5Fw?si=4AQyiHMcXk5sMXXT',
                   },
                   {
-                    'Materialize Tooltips Tutorial - Academind':
-                      'https://www.youtube.com/watch?v=5Vi2Nq4T6w0',
+                    'Materialize Tooltips Tutorial - Net Ninja':
+                      'https://youtu.be/YSKtsppGOFQ?si=TNQ8DrAiFCs0tYe-',
                   },
                   {
                     'Materialize Tooltips Documentation':
@@ -7390,12 +7352,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Materialize CSS Masterclass':
+                    'Udemy - Materialize CSS From Scratch':
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'LinkedIn Learning - UI Components':
-                      'https://www.linkedin.com/learning/ui-components',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7406,12 +7368,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize Advanced Forms in Hindi - Learn Code With Durgesh':
-                      'https://www.youtube.com/watch?v=hG6ZrWKq0TE',
+                    'Materialize in Hindi - Thapa Technical':
+                      'https://youtu.be/dMqv3BAPsI8?si=wAYGY9731iFIdEoU',
                   },
                   {
-                    'Materialize Form Validation - Traversy Media':
-                      'https://www.youtube.com/watch?v=q8Stk7hN4Tc',
+                    'Materialize Form Validation - Net Ninja':
+                      'https://youtu.be/UDgYhFndjvM?si=YQH46zB3lDxDzrxA',
                   },
                   {
                     'Materialize Forms Documentation':
@@ -7428,12 +7390,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Complete Form Development':
-                      'https://www.udemy.com/course/advanced-css-and-sass/',
+                    'Udemy - Materialize CSS From Scratch':
+                      'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Pluralsight - Form Validation Patterns':
-                      'https://www.pluralsight.com/courses/form-validation-patterns',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
@@ -7444,12 +7406,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Materialize JavaScript in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=wlodtyBzBOg',
+                    'Materialize in Hindi - Thapa Technical':
+                      'https://youtu.be/dMqv3BAPsI8?si=PH3AKz7x4uZmiLSL',
                   },
                   {
-                    'Materialize JavaScript Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=7J2HYT9sxrc',
+                    'Materialize Tutorial - The Net Ninja':
+                      'https://youtu.be/ZpduVPHZ5Aw?si=0V6cPDeiap8dZ76z',
                   },
                   {
                     'Materialize JavaScript Documentation':
@@ -7466,88 +7428,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Modern JavaScript From Scratch':
-                      'https://www.udemy.com/course/modern-javascript-from-the-beginning/',
-                  },
-                  {
-                    'LinkedIn Learning - JavaScript Essential Training':
-                      'https://www.linkedin.com/learning/javascript-essential-training',
-                  },
-                ],
-              },
-              time: 120,
-            },
-            {
-              topic: 'Responsive Design & Breakpoints',
-              resources: {
-                free: [
-                  {
-                    'Materialize Responsive Design in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=ZeDP-rzOnAA',
-                  },
-                  {
-                    'Materialize Breakpoints Tutorial - Dev Ed':
-                      'https://www.youtube.com/watch?v=WTz4A8IdeEQ',
-                  },
-                  {
-                    'Materialize Grid Documentation':
-                      'https://materializecss.com/grid.html',
-                  },
-                  {
-                    'Material Design Responsive Layout':
-                      'https://material.io/design/layout/responsive-layout-grid.html',
-                  },
-                  {
-                    'freeCodeCamp - Responsive Web Design':
-                      'https://www.freecodecamp.org/learn/responsive-web-design/',
-                  },
-                ],
-                premium: [
-                  {
-                    'Udemy - Responsive Web Design Masterclass':
-                      'https://www.udemy.com/course/advanced-css-and-sass/',
-                  },
-                  {
-                    'Pluralsight - Responsive Design Patterns':
-                      'https://www.pluralsight.com/courses/responsive-web-design',
-                  },
-                ],
-              },
-              time: 90,
-            },
-            {
-              topic: 'Project: Build a Responsive Web Page',
-              resources: {
-                free: [
-                  {
-                    'Build Portfolio with Materialize in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=HguAyYnWBuU',
-                  },
-                  {
-                    'Build Landing Page - Traversy Media':
-                      'https://www.youtube.com/watch?v=MaP3vO-2nLc',
-                  },
-                  {
-                    'Materialize Components Documentation':
-                      'https://materializecss.com/getting-started.html',
-                  },
-                  {
-                    'Material Design Implementation':
-                      'https://material.io/develop/web',
-                  },
-                  {
-                    'freeCodeCamp - Responsive Web Design Projects':
-                      'https://www.freecodecamp.org/learn/responsive-web-design/#responsive-web-design-projects',
-                  },
-                ],
-                premium: [
-                  {
-                    'Udemy - Build 20 Materialize Projects':
+                    'Udemy - Materialize CSS From Scratch':
                       'https://www.udemy.com/course/materialize-css-from-scratch-with-5-projects/',
                   },
                   {
-                    'Skillshare - Portfolio Building with Materialize':
-                      'https://www.skillshare.com/classes/portfolio-materialize',
+                    'Linkedin - Learning Materialize CSS':
+                      'https://www.linkedin.com/learning/learning-materialize-css',
                   },
                 ],
               },
