@@ -4543,12 +4543,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Components in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=Qf4A3PhsUU4',
+                    'Vue Components in Hindi - Code Step by step':
+                      'https://youtu.be/E-yyUKo-FVY?si=nsXntFgpQlhP0HG5',
                   },
                   {
-                    'Vue 3 Components - The Net Ninja':
-                      'https://www.youtube.com/watch?v=YrxBCBibVo0',
+                    'Vue 3 Components - Codevolution':
+                      'https://youtu.be/jIB1bE57JQg?si=y5qrnWbB1OLUf71k',
                   },
                   {
                     'Vue.js Components Documentation':
@@ -4565,8 +4565,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Vue Components Masterclass':
-                      'https://www.udemy.com/course/vue-components-masterclass/',
+                    'Udemy - Vue Masterclass':
+                      'https://www.udemy.com/course/vue-masterclass/',
                   },
                   {
                     'Frontend Masters - Advanced Vue Components':
@@ -4581,12 +4581,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Router in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=BGkQej1_4XI',
+                    'Vue Router in Hindi - Code Step by step':
+                      'https://youtu.be/mgnzxhFdCzY?si=nNrLMeVTwZu6cuoN',
                   },
                   {
-                    'Vue Router 4 Tutorial - Program With Erik':
-                      'https://www.youtube.com/watch?v=juocv4AtrHo',
+                    'Vue Router 4 Tutorial - Net Ninja':
+                      'https://youtu.be/juocv4AtrHo?si=xR0s0SdsptEWYM6w',
                   },
                   {
                     'Vue Router Official Documentation':
@@ -4604,7 +4604,7 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - Vue Router Complete Guide':
-                      'https://www.udemy.com/course/vue-router-complete-guide/',
+                      'https://www.udemy.com/course/vuejs-2-the-complete-guide/',
                   },
                   {
                     'Vue Mastery - Token-Based Authentication':
@@ -4619,12 +4619,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Forms in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=v0BPkB4kQ8s',
+                    'Vue Forms in Hindi - Code step by step':
+                      'https://youtu.be/d-i8o05CMiI?si=9QOZnik8-I2J2T_K',
                   },
                   {
-                    'Vue 3 Form Validation - LearnVue':
-                      'https://www.youtube.com/watch?v=5-wK2CKp8hM',
+                    'Vue 3 Form - Vue Mastery':
+                      'https://youtu.be/x5ikRZVPMJY?si=l09Kib3ODVteg1fD',
                   },
                   {
                     'Vue.js Forms Documentation':
@@ -4657,12 +4657,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue CLI in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=wXyfKNyYt_E',
+                    'Vue CLI in Hindi - Code step by step':
+                      'https://youtu.be/ZuH8QXNDkBo?si=s-_lGBc6gihgZPv0',
                   },
                   {
-                    'Vue CLI Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=ArWDIw5vWk0',
+                    'Vue CLI Tutorial English- Code Step by step':
+                      'https://youtu.be/GArgxNOYF_o?si=Ap4F0y0hj2f0nJdY',
                   },
                   {
                     'Vue CLI Official Documentation': 'https://cli.vuejs.org/',
@@ -4678,12 +4678,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Vue Development':
-                      'https://frontendmasters.com/courses/vue-dev-tools/',
+                    'Frontend Masters - Vue 3 in Action':
+                      'https://www.udemy.com/course/vue-in-action/',
                   },
                   {
-                    'Udemy - Vue CLI & Tooling':
-                      'https://www.udemy.com/course/vue-cli-and-tooling/',
+                    'Udemy - Vue Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                 ],
               },
@@ -4694,12 +4694,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Custom Directives in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=f7wagWuBMjM',
+                    'Vue Custom Directives in Hindi - Greeky Shows':
+                      'https://youtu.be/56XDOho9RVQ?si=QAFJtjK7tgIZpH22',
                   },
                   {
-                    'Vue 3 Custom Directives - Vue Mastery':
-                      'https://www.youtube.com/watch?v=xKyT0z5xc4s',
+                    'Vue 3 Custom Directives - Code step by step':
+                      'https://youtu.be/HJHKSNA6HU0?si=N_f5F9FIYnjonOZH',
                   },
                   {
                     'Custom Directives Documentation':
@@ -4716,8 +4716,8 @@ export const Frontend = {
                       'https://www.vuemastery.com/courses/advanced-components/',
                   },
                   {
-                    'Udemy - Advanced Vue.js Features':
-                      'https://www.udemy.com/course/advanced-vue-js-features-from-the-ground-up/',
+                    'Udemy - Vue JS 3':
+                      'https://www.udemy.com/course/vue-js-v3-super-fast-course-from-zero-to-advanced-web-development/',
                   },
                 ],
               },
@@ -4728,12 +4728,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Filters in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=h4vd3CHGSQ4',
+                    'Vue Filters in Hindi - Code step by step':
+                      'https://youtu.be/9bZDkuWXM-w?si=HCRCTtBId_UFVQ-a',
                   },
                   {
-                    'Vue 3 Filters and Computed - Vue Mastery':
-                      'https://www.youtube.com/watch?v=Sg0HdrcG8pU',
+                    'Vue 3 Filter- Net Ninja':
+                      'https://youtu.be/o8UspKnsV_0?si=80JP1kD9ZTm-LUSb',
                   },
                   {
                     'Vue 2 to 3 Migration - Filters':
@@ -4746,8 +4746,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Vue 3 Patterns':
-                      'https://frontendmasters.com/courses/vue-3-patterns/',
+                    'Frontend Masters - Vue 3 Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                   {
                     'Udemy - Vue.js Complete Guide':
@@ -4762,12 +4762,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Axios in Vue.js Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=YB_BM_0QHNI',
+                    'Axios in Vue.js Hindi - Code step by step':
+                      'https://youtu.be/i3TktIsq47U?si=oOZm7CwZulBjy54U',
                   },
                   {
-                    'Vue 3 + Axios Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=9iVjt4wXs9M',
+                    'Vue 3 + Axios Tutorial - KoderHQ':
+                      'https://youtu.be/MHgWNd0iKso?si=ivM5xoiFoCTNaub-',
                   },
                   {
                     'Axios Documentation': 'https://axios-http.com/docs/intro',
@@ -4783,12 +4783,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Vue.js & REST API Development':
-                      'https://www.udemy.com/course/vue-js-rest-api-development/',
+                    'Udemy - Vue JS 3 For Modern Web Development':
+                      'https://www.udemy.com/course/vue-js-v3-super-fast-course-from-zero-to-advanced-web-development/',
                   },
                   {
-                    'Frontend Masters - Full Stack Vue':
-                      'https://frontendmasters.com/courses/fullstack-vue-3/',
+                    'Frontend Masters - Vue 3 Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                 ],
               },
@@ -4804,12 +4804,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vuex Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=B8hbS4z47nk',
+                    'Vuex Tutorial in Hindi - CodeChit Hindi':
+                      'https://youtu.be/MbR1L2_90Ws?si=g46OJi3YPTtvrooT',
                   },
                   {
-                    'Vuex 4 Crash Course - Program With Erik':
-                      'https://www.youtube.com/watch?v=y7DQhNs9Azw',
+                    'Vuex Crash Course - Traversy Media':
+                      'https://youtu.be/5lVQgZzLMHc?si=p5jVh__2QSvwBinx',
                   },
                   {
                     'Vuex Official Documentation': 'https://vuex.vuejs.org/',
@@ -4825,12 +4825,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Vue 3 State Management':
-                      'https://frontendmasters.com/courses/vuex-state-management/',
+                    'Frontend Masters - Vue - The Complete Guide':
+                      'https://www.udemy.com/course/vuejs-2-the-complete-guide/',
                   },
                   {
-                    'Udemy - Vuex Complete Guide':
-                      'https://www.udemy.com/course/vuex-mastery/',
+                    'Udemy - Vue Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                 ],
               },
@@ -4841,12 +4841,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Animations in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=Cz2o-tkh3q0',
+                    'Vue Animations in Hindi - Geeky Shows':
+                      'https://youtu.be/FoHbYOOVg8Y?si=c5kHpBK_-cux2NO7',
                   },
                   {
-                    'Vue 3 Transitions Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=RIApQjn9fvw',
+                    'Intro to Vue Animation - Vue mastery':
+                      'https://youtu.be/NRF43uPd-Wg?si=A-6pbexHROWZFwv-',
                   },
                   {
                     'Vue.js Transitions Documentation':
@@ -4867,8 +4867,8 @@ export const Frontend = {
                       'https://www.vuemastery.com/courses/animating-vue/',
                   },
                   {
-                    'Udemy - Vue Animations Masterclass':
-                      'https://www.udemy.com/course/vue-js-2-animation-tutorial/',
+                    'Udemy - Vue Masterclass':
+                      'https://www.udemy.com/course/vue-masterclass/',
                   },
                 ],
               },
@@ -4879,12 +4879,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Mixins in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=1vm0I-9jZHg',
+                    'Vue Mixins in Hindi - CodeByKd':
+                      'https://youtu.be/TXouRfTtMP4?si=apc-M3EvQtInzV1l',
                   },
                   {
-                    'Vue 3 Mixins Guide - Vue Mastery':
-                      'https://www.youtube.com/watch?v=0WXQc3d_H7k',
+                    'Vue 3 Mixins Guide - Codevolution':
+                      'https://youtu.be/LyG_l5UoeHI?si=lC3GXmMtKBqbORaw',
                   },
                   {
                     'Vue.js Mixins Documentation':
@@ -4897,12 +4897,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Frontend Masters - Advanced Vue Patterns':
-                      'https://frontendmasters.com/courses/advanced-vue-3/',
+                    'Frontend Masters - Vue 3 Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                   {
-                    'Udemy - Vue.js Advanced Features':
-                      'https://www.udemy.com/course/advanced-vue-js-features-from-the-ground-up/',
+                    'Udemy - Vue JS 3 For Modern Web Development':
+                      'https://www.udemy.com/course/vue-js-v3-super-fast-course-from-zero-to-advanced-web-development/',
                   },
                 ],
               },
@@ -4913,12 +4913,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Composition API in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=1v3AaHy5Sl4',
+                    'Composition API in Hindi - CodeChit Hindi':
+                      'https://youtu.be/yUju1GDRer4?si=ijNMMbLW0G955OKc',
                   },
                   {
-                    'Vue 3 Composition API - Vue Mastery':
-                      'https://www.youtube.com/watch?v=bwItFdPt-6M',
+                    'Vue 3 Composition API - Traversy Media':
+                      'https://youtu.be/hNPwdOZ3qFU?si=KscGZT0zPW88wH0x',
                   },
                   {
                     'Composition API Documentation':
@@ -4938,8 +4938,8 @@ export const Frontend = {
                       'https://www.vuemastery.com/courses/vue-3-essentials/',
                   },
                   {
-                    'Frontend Masters - Vue 3 Composition API':
-                      'https://frontendmasters.com/courses/vue-composition-api/',
+                    'Frontend Masters - Vue 3 Fundamentals':
+                      'https://frontendmasters.com/courses/vue-fundamentals/',
                   },
                 ],
               },
@@ -4950,12 +4950,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Testing in Hindi - Technical Suneja':
-                      'https://www.youtube.com/watch?v=Yh4PVP_7Sjk',
+                    'Vue Testing - WebDevWithArtisan':
+                      'https://youtu.be/mnX85rnlqaM?si=GEMSOJWIcgUKPmvV',
                   },
                   {
-                    'Vue Testing Guide - Program With Erik':
-                      'https://www.youtube.com/watch?v=QIDhzBg5eWY',
+                    'Vue Testing Guide - Vue Mastery':
+                      'https://youtu.be/DT0p2EFTm9U?si=jibFXMDifsezPCSq',
                   },
                   {
                     'Vue Test Utils Documentation':
@@ -4976,8 +4976,8 @@ export const Frontend = {
                       'https://www.vuemastery.com/courses/unit-testing/',
                   },
                   {
-                    'Udemy - Testing Vue.js Applications':
-                      'https://www.udemy.com/course/testing-vue-js-applications/',
+                    'Udemy - Unit testing for Vue.js components':
+                      'https://www.udemy.com/course/unit-testing-for-vuejs-components/',
                   },
                 ],
               },
@@ -4988,12 +4988,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue DevTools in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=k8HXZ_-C5KI',
-                  },
-                  {
                     'Vue DevTools Guide - Vue Mastery':
-                      'https://www.youtube.com/watch?v=jiFJeHUK_WM',
+                      'https://youtu.be/ZBkZ7apIA_Y?si=qRbPXuV7hEeOzG8t',
                   },
                   {
                     'Vue DevTools Documentation': 'https://devtools.vuejs.org/',
@@ -5025,12 +5021,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Nuxt.js Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=KR_mVWslKOw',
+                    'Nuxt.js Tutorial in Hindi - Awais Kazmi':
+                      'https://youtu.be/Opa1b-oEpRg?si=6ufg8HbGQs-AiiaF',
                   },
                   {
                     'Nuxt 3 Crash Course - Traversy Media':
-                      'https://www.youtube.com/watch?v=dZC4T4UiU1c',
+                      'https://youtu.be/ltzlhAxJr74?si=-YgO3H0KQNHkewWZ',
                   },
                   {
                     'Nuxt.js Official Documentation': 'https://nuxt.com/docs',
@@ -5061,12 +5057,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Vue Deployment in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=Ul_7pRxGJRk',
-                  },
-                  {
-                    'Vue Deploy Guide - LearnVue':
-                      'https://www.youtube.com/watch?v=U6SWCTrPtn8',
+                    'Vue Deploy Guide - Codeevolution':
+                      'https://youtu.be/qduayAPJK9A?si=pmCc_5ICO9chpL0-',
                   },
                   {
                     'Vue.js Deployment Guide':
@@ -5087,8 +5079,8 @@ export const Frontend = {
                       'https://frontendmasters.com/courses/production-vue/',
                   },
                   {
-                    'Udemy - Vue Deployment Masterclass':
-                      'https://www.udemy.com/course/vue-js-deployment/',
+                    'Udemy - Build Web Apps with Vue JS 3 & Firebase':
+                      'https://www.udemy.com/course/build-web-apps-with-vuejs-firebase/',
                   },
                 ],
               },
