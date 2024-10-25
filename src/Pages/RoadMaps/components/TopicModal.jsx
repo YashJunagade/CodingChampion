@@ -180,7 +180,7 @@ const TopicModal = ({
             </div>
             <div className="relative h-4 bg-gray-200 rounded-full overflow-hidden">
               <div
-                className="absolute left-0 top-0 h-full bg-blue-500 transition-all duration-300"
+                className="absolute left-0 top-0 h-full bg-accent transition-all duration-300"
                 style={{ width: `${overallProgress}%` }}
               />
             </div>
@@ -193,7 +193,7 @@ const TopicModal = ({
             {getSubtopics().map(([subtopic, data]) => (
               <div
                 key={subtopic}
-                className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 cursor-pointer"
+                className="flex items-center justify-between p-4 border rounded-lg cursor-pointer hover:border-accent"
                 onClick={() => setActiveSubtopic(subtopic)}
               >
                 <div className="flex-1">
@@ -203,7 +203,7 @@ const TopicModal = ({
                   <div className="mt-2">
                     <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
                       <div
-                        className="absolute left-0 top-0 h-full bg-blue-500 transition-all duration-300"
+                        className="absolute left-0 top-0 h-full bg-accent transition-all duration-300"
                         style={{
                           width: `${calculateSubtopicProgress(subtopic)}%`,
                         }}
@@ -227,7 +227,7 @@ const TopicModal = ({
 
         <button
           onClick={() => setActiveTopic(null)}
-          className="mt-6 w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
+          className="mt-6 w-full bg-accent text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
         >
           Close
         </button>

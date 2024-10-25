@@ -110,9 +110,8 @@ const SubtopicModal = ({
             activeSubtopic.charAt(0).toUpperCase() + activeSubtopic.slice(1)
           }`}
         </h2>
-
         {/* Progress Section */}
-        <div className="mb-6 bg-gray-50 p-4 rounded-lg">
+        <div className="mb-6 p-4 rounded-lg border">
           <div className="flex justify-between items-center mb-2">
             <span className="font-semibold">Overall Progress</span>
             <span className="text-sm text-gray-600">
@@ -121,7 +120,7 @@ const SubtopicModal = ({
           </div>
           <div className="relative h-4 bg-gray-200 rounded-full overflow-hidden">
             <div
-              className="absolute left-0 top-0 h-full bg-blue-500 transition-all duration-300"
+              className="absolute left-0 top-0 h-full bg-accent transition-all duration-300"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -138,7 +137,7 @@ const SubtopicModal = ({
           {subtopicData.map((topic, index) => (
             <div
               key={index}
-              className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50"
+              className="flex items-center justify-between p-4 border rounded-lg hover:border-accent"
             >
               <div className="flex items-center flex-1">
                 <input
@@ -152,7 +151,7 @@ const SubtopicModal = ({
                       e.target.checked
                     )
                   }
-                  className="mr-3 h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  className="mr-3 h-5 w-5 rounder"
                 />
                 <div className="flex flex-col">
                   <span className="font-medium">{topic.topic}</span>
@@ -163,7 +162,7 @@ const SubtopicModal = ({
               </div>
               <button
                 onClick={() => setActiveResource(topic)}
-                className="ml-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+                className="ml-4 bg-accent text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
               >
                 View Resources
               </button>
@@ -173,7 +172,7 @@ const SubtopicModal = ({
 
         <button
           onClick={() => setActiveSubtopic(null)}
-          className="mt-6 w-full bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
+          className="mt-6 w-full bg-accent text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
         >
           Close
         </button>
