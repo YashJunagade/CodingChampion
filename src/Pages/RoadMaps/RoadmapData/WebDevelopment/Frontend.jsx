@@ -7453,12 +7453,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'TypeScript Tutorial in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=RvYYCGs45L4',
+                  'TypeScript Tutorial in Hindi - Sheryians Coding School':
+                    'https://youtu.be/qYP2P8ipa-Y?si=BJBM3G7uCh8Seesq',
                 },
                 {
-                  'TypeScript Crash Course - Traversy Media':
-                    'https://www.youtube.com/watch?v=BCg4U1FzODs',
+                  'TypeScript Crash Course - Hitesh Choudhary':
+                    'https://youtu.be/ZchBYjHFCC4?si=D5ReiRUxCrNjQJ5-',
                 },
                 {
                   'TypeScript Handbook':
@@ -7491,8 +7491,8 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'TypeScript Types in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=WlxcujsvcIY',
+                  'TypeScript Types in Hindi - WsCube Tech':
+                    'https://youtu.be/Jcc65zXaoPc?si=qDqTqd19KBAO1dLd',
                 },
                 {
                   'TypeScript Types Tutorial - Programming with Mosh':
@@ -7525,12 +7525,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'TypeScript Functions in Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=k8pnhUU-OBo',
+                  'TypeScript Functions in Hindi - Thapa Technical':
+                    'https://youtu.be/yYgLCHSyw7Q?si=M_RrzJgCruSnRAz4',
                 },
                 {
-                  'TypeScript Functions - Ben Awad':
-                    'https://www.youtube.com/watch?v=giRb1Bl1KVY',
+                  'TypeScript Functions - Net Ninja':
+                    'https://youtu.be/34xpwykL4Uc?si=lfcVQKy_7LLT75NO',
                 },
                 {
                   'Functions Documentation':
@@ -7547,8 +7547,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/production-typescript/',
                 },
                 {
-                  'Udemy - Advanced TypeScript Functions':
-                    'https://www.udemy.com/course/typescript-functions-and-types/',
+                  'Udemy - Advanced TypeScript':
+                    'https://www.udemy.com/course/advanced-typescript-bible/',
                 },
               ],
             },
@@ -7559,12 +7559,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Interfaces in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=VbW6vWTaHOY',
+                  'TypeScript Interfaces in Hindi - Thapa Technical':
+                    'https://youtu.be/VjWNfPF0nwY?si=plhws3djK94EdFW8',
                 },
                 {
-                  'TypeScript Interfaces Tutorial - Academind':
-                    'https://www.youtube.com/watch?v=VbW6vWTaHOY',
+                  'TypeScript Interfaces Tutorial - Net Ninja':
+                    'https://youtu.be/VbW6vWTaHOY?si=x648CA9t5Rrdx6J2',
                 },
                 {
                   'Interfaces Documentation':
@@ -7594,11 +7594,11 @@ export const Frontend = {
               free: [
                 {
                   'TypeScript OOP in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=hRSwSAr-gok',
+                    'https://youtu.be/UhFvPzq7isQ?si=x19hDgADf0CfV91p',
                 },
                 {
-                  'TypeScript Classes - Net Ninja':
-                    'https://www.youtube.com/watch?v=n3zrCxB8sj8',
+                  'TypeScript Classes - Fireship':
+                    'https://youtu.be/fsVL_xrYO0w?si=8bq_QSJvLCL8V1SF',
                 },
                 {
                   'Classes Documentation':
@@ -7616,7 +7616,7 @@ export const Frontend = {
                 },
                 {
                   'Udemy - TypeScript OOP Masterclass':
-                    'https://www.udemy.com/course/typescript-object-oriented-programming/',
+                    'https://www.udemy.com/course/typescript-course/',
                 },
               ],
             },
@@ -7627,12 +7627,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Generics in Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=vL194CGc1Zk',
+                  'Generics in Hindi - Thapa Technical':
+                    'https://youtu.be/Gw-0ZlFkvFI?si=fGz2_gmgRGGma46o',
                 },
                 {
-                  'TypeScript Generics - Matt Pocock':
-                    'https://www.youtube.com/watch?v=dLPgQRbVquo',
+                  'TypeScript Generics - Web Dev Simplified':
+                    'https://youtu.be/EcCTIExsqmI?si=_awzyq5AqjkYB0Qt',
                 },
                 {
                   'Generics Documentation':
@@ -7645,12 +7645,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - TypeScript Generics':
-                    'https://frontendmasters.com/courses/typescript-generics/',
+                  'Frontend Masters - TypeScript 5+ Fundamentals':
+                    'https://frontendmasters.com/courses/typescript-v4/',
                 },
                 {
-                  'Udemy - Advanced TypeScript':
-                    'https://www.udemy.com/course/advanced-typescript-programming/',
+                  'Udemy - Typescript: The Complete Developer Guide':
+                    'https://www.udemy.com/course/typescript-the-complete-developers-guide/',
                 },
               ],
             },
@@ -7661,12 +7661,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'TypeScript Modules in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=k8P1qhHFQtA',
+                  'TypeScript Modules in Hindi - Code step by step':
+                    'https://youtu.be/CM1oOp2wTvc?si=8aEq8YjnwP6QJrg3',
                 },
                 {
-                  'TypeScript Modules - Academind':
-                    'https://www.youtube.com/watch?v=EpG1J3j5VBE',
+                  'TypeScript Modules - Net Ninja':
+                    'https://youtu.be/EpOPR03z4Vw?si=sUwSHKeOiXQ67LqP',
                 },
                 {
                   'Modules Documentation':
@@ -7679,8 +7679,8 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - TypeScript Architecture':
-                    'https://frontendmasters.com/courses/typescript-practice/',
+                  'Frontend Masters - Understanding TypeScript':
+                    'https://www.udemy.com/course/understanding-typescript/',
                 },
                 {
                   'Udemy - TypeScript Project Structure':
@@ -7695,12 +7695,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Advanced TypeScript in Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=Qw6zPBOyKFY',
+                  'Advanced TypeScript in Hindi - Sheriyans Coding School':
+                    'https://youtu.be/lVzb6pmel_E?si=dwqPQU-_9ODqIfFD',
                 },
                 {
-                  'Advanced TypeScript Features - Matt Pocock':
-                    'https://www.youtube.com/watch?v=F7O4gA0GXqI',
+                  'Advanced TypeScript Features - CoderOne':
+                    'https://youtu.be/Y4u97vJqmhM?si=8oXQrN13xDPZoJOD',
                 },
                 {
                   'Advanced Types Documentation':
@@ -7713,12 +7713,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - Advanced TypeScript Patterns':
-                    'https://frontendmasters.com/courses/advanced-typescript/',
+                  'Frontend Masters - TypeScript Fundamentals':
+                    'https://frontendmasters.com/courses/typescript-v4/',
                 },
                 {
-                  'Udemy - TypeScript Advanced Concepts':
-                    'https://www.udemy.com/course/typescript-advanced-concepts/',
+                  'Udemy - TypeScript Advanced':
+                    'https://www.udemy.com/course/advanced-typescript-bible/',
                 },
               ],
             },
@@ -7730,11 +7730,11 @@ export const Frontend = {
               free: [
                 {
                   'React TypeScript in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=Ll6X5N-jqLM',
+                    'https://youtu.be/N_fm1B0k5k0?si=ZTeBbL5vtX5ITUCR',
                 },
                 {
-                  'React TypeScript Tutorial - Ben Awad':
-                    'https://www.youtube.com/watch?v=Z5iWr6Srsj8',
+                  'React TypeScript Tutorial - FreeCodeCamp':
+                    'https://youtu.be/FJDVKeh7RJI?si=XI2k8Y7JjZXcYFsj',
                 },
                 {
                   'React TypeScript Documentation':
@@ -7763,12 +7763,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'TypeScript Best Practices Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=YPShu0H3RXM',
+                  'TypeScript Hindi - Sheryians Coding School':
+                    'https://youtu.be/lVzb6pmel_E?si=QOcaoA__owwUknJg',
                 },
                 {
-                  'TypeScript Tips and Tricks - Matt Pocock':
-                    'https://www.youtube.com/watch?v=F7O4gA0GXqI',
+                  'TypeScript Tips and Tricks - CoderOne':
+                    'https://youtu.be/ZCllX1p763U?si=dLHuatjSFo-FQpSu',
                 },
                 {
                   'TypeScript Style Guide':
@@ -7785,8 +7785,8 @@ export const Frontend = {
                     'https://frontendmasters.com/courses/enterprise-typescript/',
                 },
                 {
-                  'Udemy - TypeScript Clean Code':
-                    'https://www.udemy.com/course/writing-clean-code-with-typescript/',
+                  'Udemy - Clean architecture with Typescript and NodeJs (Express)':
+                    'https://www.udemy.com/course/clean-architecture-with-typescript-and-nodejs-express/',
                 },
               ],
             },
@@ -7802,12 +7802,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'JavaScript Testing in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=BjiSbO34Xkg',
+                  'JavaScript Testing in Hindi - Programming Path':
+                    'https://youtu.be/QfSmvIeGwMw?si=XjSZJEfeigw6gQRl',
                 },
                 {
-                  'JavaScript Testing Tutorial - Net Ninja':
-                    'https://www.youtube.com/watch?v=7r4xVDI2vho',
+                  'JavaScript Testing Tutorial - FreeCodeCamp':
+                    'https://youtu.be/IPiUDhwnZxA?si=TwbbvdhyRS-OsyAl',
                 },
                 {
                   'Jest Documentation':
@@ -7840,12 +7840,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Jest Setup in Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=x1rQ61otgtU',
+                  'Jest Setup in Hindi - Code step by step':
+                    'https://www.youtube.com/watch?v=eZQNTVEPDe4',
                 },
                 {
-                  'Jest Setup Complete Guide - Traversy Media':
-                    'https://www.youtube.com/watch?v=7r4xVDI2vho',
+                  'Jest Setup Complete Guide - Dev Mate':
+                    'https://youtu.be/oz20WC5G868?si=LcoDZZH40SdlsU09',
                 },
                 {
                   'Jest Configuration Guide':
@@ -7858,12 +7858,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Testing JavaScript Applications':
-                    'https://www.udemy.com/course/testing-javascript-applications/',
+                  'Udemy - JavaScript Unit Testing':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
                 {
-                  'Frontend Masters - Testing Web Apps':
-                    'https://frontendmasters.com/courses/testing-web-apps/',
+                  'Frontend Masters - JavaScript Testing Practices and Principles':
+                    'https://frontendmasters.com/courses/testing-practices-principles/',
                 },
               ],
             },
@@ -7874,12 +7874,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Unit Testing in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=Kr4e2Ws5H0k',
+                  'Unit Testing in Hindi - Gate Smashers':
+                    'https://youtu.be/9gu4BsqjQrA?si=hCoCZBuYqhLyaKmp',
                 },
                 {
                   'Jest Crash Course - Traversy Media':
-                    'https://www.youtube.com/watch?v=7r4xVDI2vho',
+                    'https://youtu.be/7r4xVDI2vho?si=li0os-g6OAHUnYDQ',
                 },
                 {
                   'Jest Getting Started Guide':
@@ -7897,7 +7897,7 @@ export const Frontend = {
                 },
                 {
                   'Udemy - JavaScript Testing Bootcamp':
-                    'https://www.udemy.com/course/javascript-testing-bootcamp/',
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
@@ -7908,12 +7908,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Jest Matchers in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=WkF-nR7F9Xw',
+                  'Jest Matchers in Hindi - Techinfo YT':
+                    'https://youtu.be/38pTKzaiXBk?si=y0FXNLD2CVMaUQLJ',
                 },
                 {
-                  'Jest Matchers Tutorial - Academind':
-                    'https://www.youtube.com/watch?v=7r4xVDI2vho',
+                  'Jest Matchers Tutorial - Laith Academy':
+                    'https://youtu.be/ajiAl5UNzBU?si=oYp0q2YiO6iobrNH',
                 },
                 {
                   'Jest Expect API': 'https://jestjs.io/docs/expect',
@@ -7925,12 +7925,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - Testing Practices':
-                    'https://frontendmasters.com/courses/testing-practices-principles/',
+                  'Testing JavaScript - Kent C. Dodds':
+                    'https://testingjavascript.com/',
                 },
                 {
-                  'Udemy - Modern Testing with Jest':
-                    'https://www.udemy.com/course/modern-testing-with-jest/',
+                  'Udemy - JavaScript Testing Bootcamp':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
@@ -7941,12 +7941,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Test Coverage in Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=9mSO3QKqBxM',
+                  'Test Coverage in Hindi - Exam Aasaan Hai':
+                    'https://youtu.be/ItZVFsuAg_Y?si=tkxAiSY4dC_e32oB',
                 },
                 {
-                  'JavaScript Test Coverage - Dev Ed':
-                    'https://www.youtube.com/watch?v=6BQECtXEkF8',
+                  'JavaScript Test Coverage - Paul Gerrard':
+                    'https://youtu.be/T-TIY9qaiXc?si=WdyHKGG0qAuC9MI4',
                 },
                 {
                   'Jest Coverage Documentation':
@@ -7959,12 +7959,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - JavaScript Testing':
-                    'https://frontendmasters.com/courses/testing-javascript/',
+                  'Testing JavaScript - Kent C. Dodds':
+                    'https://testingjavascript.com/',
                 },
                 {
-                  'Udemy - Complete Testing Masterclass':
-                    'https://www.udemy.com/course/javascript-testing-masterclass/',
+                  'Udemy - JavaScript Testing Bootcamp':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
@@ -7975,12 +7975,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Mocking in Jest Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=OS5mVVM5vAg',
+                  'Mocking in Jest Hindi - Code with Shoaib':
+                    'https://youtu.be/x7X7CMgeExE?si=ImKx5oLia2hAot9Y',
                 },
                 {
-                  'Jest Mocking Tutorial - Academind':
-                    'https://www.youtube.com/watch?v=Ngj2f1n9pUw',
+                  'Jest Mocking Tutorial - Codevolution':
+                    'https://youtu.be/TuxmnyhPdhA?si=zaMKR3Dt1X3P7RtM',
                 },
                 {
                   'Jest Mock Functions':
@@ -7993,12 +7993,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - Advanced Testing Concepts':
-                    'https://frontendmasters.com/courses/advanced-testing-concepts/',
+                  'Testing JavaScript - Kent C. Dodds':
+                    'https://testingjavascript.com/',
                 },
                 {
-                  'Udemy - Advanced Jest Testing':
-                    'https://www.udemy.com/course/advanced-jest-testing/',
+                  'Udemy - JavaScript Testing Bootcamp':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
@@ -8009,12 +8009,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Snapshot Testing Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=tYMLXpOJtng',
+                  'Snapshot Testing Hindi - Code step by step':
+                    'https://youtu.be/tu8thOjb_S8?si=oTvmib8kU8wtGz3C',
                 },
                 {
-                  'Jest Snapshot Testing - Ben Awad':
-                    'https://www.youtube.com/watch?v=yUlfFMhVfZo',
+                  'Jest Snapshot Testing - ScaffoldHub':
+                    'https://youtu.be/A6gP7LNQqco?si=wY8gOLyRSk2Li7kO',
                 },
                 {
                   'Jest Snapshot Testing Docs':
@@ -8027,12 +8027,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - Testing React Applications':
-                    'https://frontendmasters.com/courses/testing-react/',
+                  'Testing JavaScript - Kent C. Dodds':
+                    'https://testingjavascript.com/',
                 },
                 {
-                  'Udemy - React Testing Masterclass':
-                    'https://www.udemy.com/course/react-testing-masterclass/',
+                  'Udemy - JavaScript Testing Bootcamp':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
@@ -8043,12 +8043,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'E2E Testing Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=HD4kAQVs6F8',
+                  'E2E Testing Hindi - Software Testing By Rahul Pal':
+                    'https://youtu.be/_zXVBxg0gKg?si=AkN2ID63csSd-kD3',
                 },
                 {
-                  'Cypress Complete Tutorial - Traversy Media':
-                    'https://www.youtube.com/watch?v=7N63cMKosIE',
+                  'Cypress Complete Tutorial - Mehul - Codedamn':
+                    'https://youtu.be/68xvfrxlEYo?si=hqLxxzmmZsn96Ad8',
                 },
                 {
                   'Cypress Documentation': 'https://docs.cypress.io/',
@@ -8060,12 +8060,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Testing JavaScript with Cypress':
+                  'Testing JavaScript - Kent C. Dodds':
                     'https://testingjavascript.com/',
                 },
                 {
-                  'Udemy - Cypress Testing Bootcamp':
-                    'https://www.udemy.com/course/cypress-web-automation-testing-from-zero-to-hero/',
+                  'Udemy - JavaScript Testing Bootcamp':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
@@ -8077,11 +8077,11 @@ export const Frontend = {
               free: [
                 {
                   'CI/CD Testing Hindi - Technical Suneja':
-                    'https://www.youtube.com/watch?v=zGFrBxpJ_q0',
+                    'https://youtu.be/NzcEx2ZsE9U?si=VbjDH_-qSdEXSAXO',
                 },
                 {
-                  'GitHub Actions for Testing - Traversy Media':
-                    'https://www.youtube.com/watch?v=R8_veQiYBjI',
+                  'GitHub Actions for Testing - Dev Leonardo':
+                    'https://youtu.be/WW6ZUw9IExA?si=Voj638kuPEWNWX0O',
                 },
                 {
                   'GitHub Actions Documentation':
@@ -8093,12 +8093,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Frontend Masters - CI/CD for Frontend':
-                    'https://frontendmasters.com/courses/ci-cd/',
+                  'Testing JavaScript - Kent C. Dodds':
+                    'https://testingjavascript.com/',
                 },
                 {
-                  'Udemy - CI/CD Masterclass':
-                    'https://www.udemy.com/course/ci-cd-automation-using-jenkins-and-github-actions/',
+                  'Udemy - JavaScript Testing Bootcamp':
+                    'https://www.udemy.com/course/javascript-unit-testing-the-practical-guide/',
                 },
               ],
             },
