@@ -5101,12 +5101,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap 5 Tutorial in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=vpAJ0s5S2t0',
+                    'Bootstrap 5 Tutorial in Hindi - WsCube Tech':
+                      'https://youtu.be/fB00t4At0rk?si=vFHSJylckJWaYsVA',
                   },
                   {
-                    'Bootstrap 5 Crash Course - Traversy Media':
-                      'https://www.youtube.com/watch?v=4sosXZsdy-s',
+                    'Bootstrap 5 Crash Course - FreeCodeCamp':
+                      'https://youtu.be/-qfEOE4vtxE?si=0AtDgS4u-0cNrcnVwatch?v=4sosXZsdy-s',
                   },
                   {
                     'Bootstrap 5 Documentation':
@@ -5124,7 +5124,7 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - Bootstrap 5 From Scratch':
-                      'https://www.udemy.com/course/bootstrap-5-from-scratch-build-5-modern-websites/',
+                      'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                   {
                     'LinkedIn Learning - Bootstrap 5 Essential Training':
@@ -5139,12 +5139,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Grid System in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=Wqu-d_b3K-0',
+                    'Bootstrap Grid System in Hindi - Apna College':
+                      'https://www.youtube.com/watch?v=5NxYn0GiApg',
                   },
                   {
-                    'Bootstrap 5 Grid Tutorial - Net Ninja':
-                      'https://www.youtube.com/watch?v=O_9u1P5YjVc',
+                    'Bootstrap 5 Grid Tutorial - Adrian Twarog':
+                      'https://youtu.be/Wqu-d_b3K-0?si=OTfI1zLnO13sCXbR',
                   },
                   {
                     'Bootstrap Grid Documentation':
@@ -5165,8 +5165,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/bootstrap-4-tutorials/',
                   },
                   {
-                    'Pluralsight - Bootstrap Layout and Responsive Design':
-                      'https://www.pluralsight.com/courses/bootstrap-layout-responsive-design',
+                    'Pluralsight - Creating a Site with CSS Grid and Bootstrap 4':
+                      'https://www.pluralsight.com/courses/css-grid-bootstrap-4-creating-site',
                   },
                 ],
               },
@@ -5177,12 +5177,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Typography in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=nCpNsMgyzh4',
+                    'Bootstrap Typography in Hindi - Yahoo Baba':
+                      'https://youtu.be/_MYS9406CJE?si=e9gPtvIMxQkGLiq2',
                   },
                   {
-                    'Bootstrap 5 Typography - Design Course':
-                      'https://www.youtube.com/watch?v=v6_wwqH1Agw',
+                    'Bootstrap 5 Typography - Net Ninja':
+                      'https://youtu.be/iUCyU_U0J2E?si=Se7rV0DOQTeHfO3C',
                   },
                   {
                     'Bootstrap Typography Documentation':
@@ -5199,12 +5199,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Skillshare - Web Typography with Bootstrap':
-                      'https://www.skillshare.com/classes/Web-Typography-with-Bootstrap',
-                  },
-                  {
-                    'Frontend Masters - Bootstrap Fundamentals':
-                      'https://frontendmasters.com/courses/bootstrap-4/',
+                    'Skillshare -Bootstrap Bootcamp':
+                      'https://www.skillshare.com/en/classes/bootstrap-bootcamp-for-bootstrap-5/1896312266?via=search-layout-grid',
                   },
                 ],
               },
@@ -5216,11 +5212,11 @@ export const Frontend = {
                 free: [
                   {
                     'Bootstrap Colors & Background in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=V5xINbA-z9o',
+                      'https://youtu.be/6SKRyMqNPZw?si=pr834la_dXw1KGXV',
                   },
                   {
-                    'Bootstrap 5 Colors Tutorial - Dev Ed':
-                      'https://www.youtube.com/watch?v=Wqu-d_b3K-0',
+                    'Bootstrap 5 Colors Tutorial - ByteGrad':
+                      'https://youtu.be/4VO6W551gHA?si=c7GMQyxB5mmpKuAa',
                   },
                   {
                     'Bootstrap Colors Documentation':
@@ -5253,12 +5249,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Utilities in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=rb1GWqCJid4',
+                    'Bootstrap Utilities in Hindi - WsCube Tech':
+                      'https://youtu.be/Od8gmQQUAsg?si=ifvzN4xaVpCSubuW',
                   },
                   {
-                    'Bootstrap 5 Utilities - Traversy Media':
-                      'https://www.youtube.com/watch?v=sK4gDPIn9Q0',
+                    'Bootstrap 5 Utilities - Net Ninja':
+                      'https://youtu.be/nCeHeA7IsvU?si=-y-HB8gNKOQsEVcw',
                   },
                   {
                     'Bootstrap Utilities Documentation':
@@ -5279,8 +5275,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                   {
-                    'Pluralsight - Bootstrap Layout Fundamentals':
-                      'https://www.pluralsight.com/courses/bootstrap-layout-fundamentals',
+                    'Pluralsight - Bootstrap 5 Fundamentals':
+                      'https://www.pluralsight.com/courses/bootstrap-5-fundamentals',
                   },
                 ],
               },
@@ -5291,12 +5287,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Forms in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=4pRAHG7YG8c',
+                    'Bootstrap Forms in Hindi - Yahoo Baba':
+                      'https://youtu.be/CoaW1DWli_c?si=iqjh_XctNKpzd02R',
                   },
                   {
                     'Bootstrap 5 Forms - Net Ninja':
-                      'https://www.youtube.com/watch?v=dKVX22GR7zQ',
+                      'https://youtu.be/dKVX22GR7zQ?si=ZsVYQz3HXYLuawpj',
                   },
                   {
                     'Bootstrap Forms Documentation':
@@ -5313,12 +5309,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Complete Bootstrap Form Development':
-                      'https://www.udemy.com/course/bootstrap-forms-from-scratch/',
+                    'Udemy - Bootstrap 5 Course':
+                      'https://www.udemy.com/course/the-complete-bootstrap-5-course-for-beginners-step-by-step/',
                   },
                   {
-                    'Skillshare - Mastering Bootstrap Forms':
-                      'https://www.skillshare.com/classes/Bootstrap-Forms-Mastery',
+                    'Skillshare - Bootstrap Bootcamp':
+                      'https://www.skillshare.com/en/classes/bootstrap-bootcamp-for-bootstrap-5/1896312266',
                   },
                 ],
               },
@@ -5334,12 +5330,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Buttons in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=0LYqyxW5Yg0',
+                    'Bootstrap Buttons in Hindi - Yahoo Baba':
+                      'https://youtu.be/5WMCdooE_AE?si=Ap2vFFRPDXr55_4B',
                   },
                   {
-                    'Bootstrap 5 Buttons - Traversy Media':
-                      'https://www.youtube.com/watch?v=Qf-wVa9y9V4',
+                    'Bootstrap 5 Buttons - Net Ninja':
+                      'https://youtu.be/ZZXGmoQ4PdI?si=cWelr3h4mWztrxqb',
                   },
                   {
                     'Bootstrap Official Docs - Buttons':
@@ -5357,7 +5353,7 @@ export const Frontend = {
                 premium: [
                   {
                     'Udemy - Bootstrap 5 From Scratch':
-                      'https://www.udemy.com/course/bootstrap-5-from-scratch/',
+                      'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                   {
                     'LinkedIn Learning - Bootstrap 5 Essential Training':
@@ -5372,8 +5368,8 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Tables in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=0dehy6wrTzE',
+                    'Bootstrap Tables in Hindi - Yahoo Baba':
+                      'https://youtu.be/OHZlWNGie1E?si=fWliEhywwH2JCN2N',
                   },
                   {
                     'Bootstrap 5 Tables Tutorial - The Net Ninja':
@@ -5411,11 +5407,11 @@ export const Frontend = {
                 free: [
                   {
                     'Bootstrap Images & Icons in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=YeRIuYfqhJo',
+                      'https://youtu.be/Ic0ezwzrXTg?si=xIGrlVX5ZWhYlZy9',
                   },
                   {
-                    'Bootstrap 5 Images & Icons - Traversy Media':
-                      'https://www.youtube.com/watch?v=DZKf9l42WCo',
+                    'Bootstrap 5 Images & Icons - KenBro Tech':
+                      'https://youtu.be/mcut-Dvam00?si=ssntRya6SOgCup1-',
                   },
                   {
                     'Bootstrap Official Docs - Images':
@@ -5436,8 +5432,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/bootstrap-5-responsive-web-design-and-development/',
                   },
                   {
-                    'Skillshare - Bootstrap 5 Masterclass':
-                      'https://www.skillshare.com/classes/Bootstrap-5-Masterclass',
+                    'Skillshare - Bootstrap 5':
+                      'https://www.skillshare.com/en/classes/bootstrap-bootcamp-for-bootstrap-5/1896312266',
                   },
                 ],
               },
@@ -5448,12 +5444,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Navigation in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=GVQp3YnkZLM',
+                    'Bootstrap Navigation in Hindi - Yahoo Baba':
+                      'https://youtu.be/AvFVoDoy18s?si=NwJBt6IcAOzyZlMY',
                   },
                   {
-                    'Bootstrap 5 Navigation - Dev Ed':
-                      'https://www.youtube.com/watch?v=zE9ag_c-0Cs',
+                    'Bootstrap 5 Navigation - Codz Sword':
+                      'https://youtu.be/ZZ0gvY-4IKA?si=ZRpkfPo-ojx-tfWe',
                   },
                   {
                     'Bootstrap Official Docs - Navbar':
@@ -5470,12 +5466,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Master Bootstrap 5':
-                      'https://www.udemy.com/course/bootstrap-5-master-class/',
-                  },
-                  {
-                    'Frontend Masters - Bootstrap Fundamentals':
-                      'https://frontendmasters.com/courses/bootstrap-5/',
+                    'Udemy - Master Bootstrap 5 with 6 projects':
+                      'https://www.udemy.com/course/bootstrap-5-responsive-web-design-and-development/?kw=Master+Bootstrap+5&src=sac',
                   },
                 ],
               },
@@ -5486,12 +5478,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Dropdowns in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=dH6GxG4RyGE',
+                    'Bootstrap Dropdowns in Hindi - Geeky Shows':
+                      'https://youtu.be/ss4NYFcagKk?si=I6x3U56L2g6hBRYV',
                   },
                   {
                     'Bootstrap 5 Dropdowns - The Net Ninja':
-                      'https://www.youtube.com/watch?v=LlYWzOh0S1o',
+                      'https://youtu.be/lu4HFx3bzy8?si=FdJ6XIUUuAnDnWZx',
                   },
                   {
                     'Bootstrap Official Docs - Dropdowns':
@@ -5508,8 +5500,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - The Complete Bootstrap 5 Course':
-                      'https://www.udemy.com/course/the-complete-bootstrap-5-course/',
+                    'Udemy - Bootstrap 5 Course':
+                      'https://www.udemy.com/course/the-complete-bootstrap-5-course-for-beginners-step-by-step/',
                   },
                   {
                     'LinkedIn Learning - Bootstrap Essential Training':
@@ -5525,11 +5517,11 @@ export const Frontend = {
                 free: [
                   {
                     'Bootstrap Modals in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=cqD6nWqf5Jw',
+                      'https://youtu.be/XtJoLMqHidw?si=eyKPJijF-AQqSfI2',
                   },
                   {
-                    'Bootstrap 5 Modals - Traversy Media':
-                      'https://www.youtube.com/watch?v=lqmabl5ZfXU',
+                    'Bootstrap 5 Modals - Net Ninja':
+                      'https://youtu.be/tt5uUMQgzl0?si=IulaQ917QE58K13I',
                   },
                   {
                     'Bootstrap Official Docs - Modal':
@@ -5546,8 +5538,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Bootstrap 5 Projects':
-                      'https://www.udemy.com/course/bootstrap-5-responsive-web-development/',
+                    'Udemy - Bootstrap 5 From Scratch':
+                      'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                   {
                     'Pluralsight - Bootstrap Components':
@@ -5562,12 +5554,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Cards in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=jrIh4K3bqRk',
+                    'Bootstrap Cards in Hindi - Yahoo Baba':
+                      'https://youtu.be/5wbO-WKEXws?si=C6g6ccigt1gadiJs',
                   },
                   {
-                    'Bootstrap 5 Cards - Kevin Powell':
-                      'https://www.youtube.com/watch?v=5lyfH_S5P1U',
+                    'Bootstrap 5 Cards - Net Ninja':
+                      'https://youtu.be/NRoET8-8cbw?si=toPyEyVnFWtGA9Tw',
                   },
                   {
                     'Bootstrap Official Docs - Cards':
@@ -5584,12 +5576,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Bootstrap 5 Advanced':
-                      'https://www.udemy.com/course/advanced-bootstrap-5/',
+                    'Udemy - Bootstrap 5 From Scratch':
+                      'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                   {
-                    'Skillshare - Bootstrap 5 Components':
-                      'https://www.skillshare.com/classes/Bootstrap-5-Components',
+                    'Skillshare - Bootstrap Bootcamp (for Bootstrap 5)':
+                      'https://www.skillshare.com/en/classes/bootstrap-bootcamp-for-bootstrap-5/1896312266',
                   },
                 ],
               },
@@ -5600,12 +5592,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Alerts in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=cGMZmVjn8YI',
+                    'Bootstrap Alerts in Hindi - Yahoo baba':
+                      'https://youtu.be/Hbejr69_ZGM?si=HpIS5-mbi0FUmhWQ',
                   },
                   {
-                    'Bootstrap 5 Components - The Net Ninja':
-                      'https://www.youtube.com/watch?v=WU6q_OwLjls',
+                    'Bootstrap Alerts and Modals - Academind':
+                      'https://youtu.be/N3RK2dZpQXs?si=1f3t0osYkj6wnuIa',
                   },
                   {
                     'Bootstrap Official Docs - Alerts':
@@ -5625,10 +5617,6 @@ export const Frontend = {
                     'Udemy - Complete Bootstrap Course':
                       'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
-                  {
-                    'Frontend Masters - Bootstrap Complete Guide':
-                      'https://frontendmasters.com/courses/bootstrap-5/',
-                  },
                 ],
               },
               time: 90,
@@ -5643,12 +5631,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Tooltips in Hindi - WsCube Tech':
-                      'https://www.youtube.com/watch?v=MM3fFYaZeEE',
+                    'Bootstrap Tooltips in Hindi - Yahoo Baba':
+                      'https://youtu.be/UzkB5P_gsCs?si=IvG5_ywPd1-t8BWC',
                   },
                   {
                     'Bootstrap 5 Tooltips & Popovers - The Net Ninja':
-                      'https://www.youtube.com/watch?v=KtVl-qLkzc4',
+                      'https://youtu.be/WTrW-1JsDYE?si=fT1xgjmaoRbwglH2',
                   },
                   {
                     'Bootstrap Official Docs - Tooltips':
@@ -5665,12 +5653,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Advanced Bootstrap 5 Mastery':
-                      'https://www.udemy.com/course/advanced-bootstrap-5-course/',
+                    'Udemy - Bootstrap 5 From Scratch':
+                      'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                   {
-                    'LinkedIn Learning - Bootstrap Advanced Concepts':
-                      'https://www.linkedin.com/learning/bootstrap-5-advanced-ui-components',
+                    'LinkedIn Learning - Bootstrap 5 Essential Training':
+                      'https://www.linkedin.com/learning/bootstrap-5-essential-training',
                   },
                 ],
               },
@@ -5681,12 +5669,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Carousel in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=k-RtYiiB47E',
+                    'Bootstrap Carousel in Hindi - Yahoo Baba':
+                      'https://youtu.be/x3zPuOPBW28?si=ROonTh8fy_hBE0DK',
                   },
                   {
-                    'Bootstrap 5 Carousel Tutorial - Traversy Media':
-                      'https://www.youtube.com/watch?v=7ZAqn0NBnr0',
+                    'Bootstrap 5 Carousel Tutorial - Lun Dev':
+                      'https://youtu.be/1XXY_5k8Nok?si=MzRpAq92Td1JseUj',
                   },
                   {
                     'Bootstrap Official Docs - Carousel':
@@ -5703,8 +5691,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Bootstrap 5 Projects Course':
-                      'https://www.udemy.com/course/bootstrap-5-create-modern-projects/',
+                    'Udemy - Bootstrap 5 Course':
+                      'https://www.udemy.com/course/the-complete-bootstrap-5-course-for-beginners-step-by-step/',
                   },
                   {
                     'Pluralsight - Bootstrap Components Deep Dive':
@@ -5719,12 +5707,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Scrollspy in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=yH5jF8snT2U',
+                    'Bootstrap Scrollspy in Hindi - Yahoo Baba':
+                      'https://youtu.be/SaRiza3I7AA?si=VRq-tiIEZynZ9A_F',
                   },
                   {
-                    'Bootstrap 5 Scrollspy Tutorial - Dev Ed':
-                      'https://www.youtube.com/watch?v=JS0z6kvw2Ts',
+                    'Bootstrap 5 Scrollspy Tutorial - Learn Code Tuts':
+                      'https://youtu.be/59eowKdLSY4?si=x9cMMZCi2ZzPik3O',
                   },
                   {
                     'Bootstrap Official Docs - Scrollspy':
@@ -5741,12 +5729,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - The Complete Bootstrap 5 Course':
-                      'https://www.udemy.com/course/the-complete-bootstrap-5-course/',
+                    'Udemy - Bootstrap 5 Course':
+                      'https://www.udemy.com/course/the-complete-bootstrap-5-course-for-beginners-step-by-step',
                   },
                   {
-                    'Skillshare - Advanced Bootstrap Techniques':
-                      'https://www.skillshare.com/classes/Advanced-Bootstrap-5-Techniques',
+                    'Skillshare - Bootstrap':
+                      'https://www.skillshare.com/en/classes/bootstrap-bootcamp-for-bootstrap-5/1896312266',
                   },
                 ],
               },
@@ -5757,12 +5745,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap Responsive Design in Hindi - Yahoo Baba':
-                      'https://www.youtube.com/watch?v=Xc00CMv_rXM',
+                    'Bootstrap Responsive Design in Hindi - WsCube Tech':
+                      'https://youtu.be/EFbGAmnMGc8?si=gNiLw1JWNiRpti0h',
                   },
                   {
-                    'Bootstrap 5 Breakpoints - Kevin Powell':
-                      'https://www.youtube.com/watch?v=VQdxkuMHVYw',
+                    'Bootstrap 5 Breakpoints - Raddy':
+                      'https://youtu.be/eow125xV5-c?si=asdQ9T87qcFo2KBe',
                   },
                   {
                     'Bootstrap Official Docs - Breakpoints':
@@ -5779,12 +5767,8 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Responsive Design with Bootstrap 5':
-                      'https://www.udemy.com/course/responsive-web-design-bootstrap-5/',
-                  },
-                  {
-                    'Frontend Masters - Bootstrap Layout':
-                      'https://frontendmasters.com/courses/bootstrap-5/',
+                    'Udemy - Responsive Web Design Bootstrap 5':
+                      'https://www.udemy.com/course/responsive-web-design-tutorial-course-html5-css3-bootstrap/',
                   },
                 ],
               },
@@ -5795,12 +5779,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Bootstrap SASS Customization in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=4qBKwVxkYvI',
+                    'Bootstrap SASS Customization in Hindi - Desi Programmer':
+                      'https://youtu.be/DktjwrtLNWw?si=sIZiJsPWPfRWRJh-',
                   },
                   {
                     'Bootstrap 5 Sass Tutorial - The Net Ninja':
-                      'https://www.youtube.com/watch?v=iJKCj8uAHz8',
+                      'https://youtu.be/nCX3QVl_PiI?si=poBv2G5XVSVKOwAA',
                   },
                   {
                     'Bootstrap Official Docs - Customize':
@@ -5817,12 +5801,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - Bootstrap 5 & Sass: The Complete Guide':
-                      'https://www.udemy.com/course/bootstrap-5-and-sass-the-complete-guide/',
+                    'Udemy - Complete Guide to Bootstrap 5 with 6 Real World Projects':
+                      'https://www.udemy.com/course/complete-guide-to-bootstrap/',
                   },
                   {
-                    'LinkedIn Learning - Bootstrap: Customization with Sass':
-                      'https://www.linkedin.com/learning/bootstrap-customization-with-sass',
+                    'LinkedIn Learning - Bootstrap 5 Essential Training':
+                      'https://www.linkedin.com/learning/bootstrap-5-essential-training',
                   },
                 ],
               },
@@ -5834,11 +5818,11 @@ export const Frontend = {
                 free: [
                   {
                     'Bootstrap JS Plugins in Hindi - Thapa Technical':
-                      'https://www.youtube.com/watch?v=YQRmczOdB_Y',
+                      'https://youtu.be/tKfhczeQpKw?si=OBgFxZuRrn0t0VcD',
                   },
                   {
-                    'Bootstrap 5 JavaScript - Traversy Media':
-                      'https://www.youtube.com/watch?v=dCrLwWdju68',
+                    'Bootstrap 5 JavaScript - ByteGrad':
+                      'https://youtu.be/Y6jY2L_u_TE?si=rVaWaY_XNw9Idolt',
                   },
                   {
                     'Bootstrap Official Docs - JavaScript':
@@ -5855,12 +5839,12 @@ export const Frontend = {
                 ],
                 premium: [
                   {
-                    'Udemy - JavaScript and Bootstrap Projects':
-                      'https://www.udemy.com/course/javascript-and-bootstrap-projects/',
+                    'Udemy - Full Stack Web Development':
+                      'https://www.udemy.com/course/full-stack-web-development-with-vue-js-nodejs-mongodb-js/',
                   },
                   {
-                    'Pluralsight - Bootstrap JavaScript Components':
-                      'https://www.pluralsight.com/courses/bootstrap-5-javascript-components',
+                    'Pluralsight - Bootstrap 5: Fundamentals':
+                      'https://www.pluralsight.com/courses/bootstrap-5-fundamentals',
                   },
                 ],
               },
@@ -5871,12 +5855,12 @@ export const Frontend = {
               resources: {
                 free: [
                   {
-                    'Complete Website Using Bootstrap in Hindi - CodeWithHarry':
-                      'https://www.youtube.com/watch?v=vpAJ0s5S2t0',
+                    'Complete Website Using Bootstrap in Hindi - Thapa Technical':
+                      'https://youtu.be/cfg9_cp4zGk?si=FswS_jPJc7Rg97PU',
                   },
                   {
-                    'Bootstrap 5 Crash Course Website - Traversy Media':
-                      'https://www.youtube.com/watch?v=4sosXZsdy-s',
+                    'Bootstrap 5 Crash Course Website - Coding with sharan':
+                      'https://youtu.be/UgfjTV5pEC4?si=LQDv8IZ4kNifXEer',
                   },
                   {
                     'Bootstrap Examples':
@@ -5896,8 +5880,8 @@ export const Frontend = {
                       'https://www.udemy.com/course/bootstrap-5-responsive-web-design-and-development/',
                   },
                   {
-                    'Frontend Masters - Building Websites With Bootstrap':
-                      'https://frontendmasters.com/courses/bootstrap-5/',
+                    'Udemy - Bootstrap 5 From Scratch':
+                      'https://www.udemy.com/course/bootstrap-from-scratch/',
                   },
                 ],
               },
@@ -5994,7 +5978,7 @@ export const Frontend = {
                       'https://www.youtube.com/watch?v=YASvfNHHCeY',
                   },
                   {
-                    'Tailwind CSS Responsive Design - Kevin Powell':
+                    'Tailwind CSS Responsive Design - Raddy':
                       'https://www.youtube.com/watch?v=h9Zun41-Ozc',
                   },
                   {
