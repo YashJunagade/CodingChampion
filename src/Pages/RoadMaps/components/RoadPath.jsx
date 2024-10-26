@@ -10,6 +10,7 @@ export const RoadPath = ({ positions }) => {
       const prev = positions[i - 1]
       const curr = positions[i]
 
+      // changed cureve control points:
       const controlPoint1X = prev.x
       const controlPoint1Y = (prev.y + curr.y) / 2 // using midpoint logic
       const controlPoint2X = curr.x
@@ -33,11 +34,11 @@ export const RoadPath = ({ positions }) => {
         <path
           d={getRoadPath(positions)}
           stroke="#000000"
-          strokeWidth="6"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="none"
-          className="opacity-10"
+          className="opacity-10 md:stroke-[3]" // increase this for md +
           transform="translate(0, 0.5)"
         />
 
@@ -45,25 +46,27 @@ export const RoadPath = ({ positions }) => {
         <path
           d={getRoadPath(positions)}
           stroke="#374151"
-          strokeWidth="5"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="none"
+          className="md:stroke-[3]"
         />
 
-        {/* road middle white white markings  */}
+        {/* road middle white markings */}
         <path
           d={getRoadPath(positions)}
           stroke="white"
-          strokeWidth="1"
+          strokeWidth="0.3"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeDasharray="2 6"
+          strokeDasharray="2 8"
           fill="none"
-          className="opacity-60"
+          className="opacity-60 md:stroke-[0.6]"
         />
       </svg>
     </div>
   )
 }
+
 export default RoadPath

@@ -18,11 +18,12 @@ const RoadmapRenderer = ({
     const numTopics = topics.length
 
     // change spacing here:
-    const totalHeight = numTopics * 180
-    const verticalSpacing = 300
+    const verticalSpacing = 500
+    const totalHeight = numTopics * verticalSpacing
 
     topics.forEach((topic, i) => {
-      // Alternate between left (20%) and right (80%)
+      // to change curve, change the percentages here:
+      // Alternate between left (%) and right (%)
       const x = i % 2 === 0 ? 20 : 80
       // Distribute topics evenly
 
@@ -55,12 +56,12 @@ const RoadmapRenderer = ({
   const userPos = topicPositions[userPosition]
 
   return (
-    <div className="w-full md:mt-10 p-8 bg-white dark:bg-black h-full">
-      <div className="w-full md:w-[80%] p-4 md:p-8 relative mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black text-center">
+    <div className="w-full md:mt-10 p-8 bg-white dark:bg-black min-h-screen">
+      <div className="w-full md:w-[80%] lg:w-[60%]  p-4 md:p-8 relative mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black dark:text-white text-center">
           {currentRoadmap.name} Roadmap
         </h1>
-        <div className="relative w-full " style={{ minHeight: '800px' }}>
+        <div className="relative w-full " style={{ minHeight: '1500px' }}>
           <RoadPath positions={topicPositions} />
           {topicPositions.map((point, index) => (
             <TopicButton
