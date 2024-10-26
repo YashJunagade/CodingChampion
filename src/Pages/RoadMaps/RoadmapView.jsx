@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom'
 import { db, auth } from '../../config/firebase'
 import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 import { onAuthStateChanged } from 'firebase/auth'
-import { roadmapData } from './RoadmapData/RoadmapData'
 import RoadmapRenderer from './components/RoadmapRenderer'
 import LevelSelection from './components/LevelSelection'
 import TopicModal from './components/TopicModal'
@@ -16,6 +15,7 @@ const RoadmapView = () => {
   const { roadmapName } = useParams()
   const [user, setUser] = useState(null)
   const [userLevel, setUserLevel] = useState(null)
+  const [isUserDataLoading, setIsUserDataLoading] = useState(true)
   const [activeTopic, setActiveTopic] = useState(null)
   const [activeSubtopic, setActiveSubtopic] = useState(null)
   const [activeResource, setActiveResource] = useState(null)
@@ -25,12 +25,46 @@ const RoadmapView = () => {
   const [userPosition, setUserPosition] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const [selectedFrameworks, setSelectedFrameworks] = useState({})
-
-  const currentRoadmap = roadmapData.find(
-    (roadmap) => roadmap.name === roadmapName
-  )
+  const [currentRoadmap, setCurrentRoadmap] = useState(null)
 
   useEffect(() => {
+    const fetchRoadmapData = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(
+          `https://cdn.jsdelivr.net/gh/YashJunagade/roadmap-data@main/${roadmapName.toLowerCase()}.json`
+        )
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const roadmapData = await response.json()
+
+        if (!roadmapData) {
+          throw new Error('No roadmap data found')
+        }
+
+        setCurrentRoadmap(roadmapData)
+        setError(null)
+      } catch (err) {
+        console.error('Error fetching roadmap data:', err)
+        setError(
+          'Failed to fetch roadmap data. Please check if the roadmap name is correct and try again.'
+        )
+        setCurrentRoadmap(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    if (roadmapName) {
+      fetchRoadmapData()
+    }
+  }, [roadmapName])
+
+  useEffect(() => {
+    setIsUserDataLoading(true) // Reset loading state when roadmap changes
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user)
@@ -39,7 +73,7 @@ const RoadmapView = () => {
         setUser(null)
         setUserLevel(null)
         setUserProgress({})
-        setLoading(false)
+        setIsUserDataLoading(false)
       }
     })
 
@@ -47,8 +81,6 @@ const RoadmapView = () => {
   }, [roadmapName])
 
   const fetchUserData = async (userId) => {
-    setLoading(true)
-    setError(null)
     try {
       const userDoc = await getDoc(doc(db, 'RoadmapProgress', userId))
       if (userDoc.exists()) {
@@ -59,20 +91,22 @@ const RoadmapView = () => {
             `userLevel_${roadmapName}`,
             data[roadmapName].level
           )
+        } else {
+          // Check localStorage only if no level in Firestore
+          const storedLevel = localStorage.getItem(`userLevel_${roadmapName}`)
+          setUserLevel(storedLevel)
         }
         setUserProgress(data[roadmapName]?.progress || {})
         setSelectedFrameworks(data[roadmapName]?.frameworks || {})
       } else {
         const storedLevel = localStorage.getItem(`userLevel_${roadmapName}`)
-        if (storedLevel) {
-          setUserLevel(storedLevel)
-        }
+        setUserLevel(storedLevel)
       }
     } catch (err) {
       console.error('Error fetching user data:', err)
       setError('Failed to fetch user data. Please try again.')
     } finally {
-      setLoading(false)
+      setIsUserDataLoading(false)
     }
   }
 
@@ -107,7 +141,6 @@ const RoadmapView = () => {
 
     const framework = selectedFrameworks[topic]
 
-    // Update local state with framework-specific progress
     setUserProgress((prev) => ({
       ...prev,
       [topic]: {
@@ -132,7 +165,6 @@ const RoadmapView = () => {
       },
     }))
 
-    // Update Firestore after updating local state
     try {
       const userDocRef = doc(db, 'RoadmapProgress', user.uid)
       if (isFramework) {
@@ -149,7 +181,6 @@ const RoadmapView = () => {
     } catch (err) {
       console.error('Error updating progress:', err)
       setError('Failed to update progress. Please try again.')
-      // Revert local state on error
       setUserProgress((prev) => ({
         ...prev,
         [topic]: {
@@ -202,8 +233,14 @@ const RoadmapView = () => {
       <ErrorAlert message="Please log in to view the roadmap." type="warning" />
     )
   if (!currentRoadmap) return <ErrorAlert message="Roadmap not found." />
-  if (!userLevel)
+
+  // Only show LevelSelection if we're sure user data is loaded and no level is set
+  if (!isUserDataLoading && !userLevel) {
     return <LevelSelection onSelect={selectLevel} roadmap={currentRoadmap} />
+  }
+
+  // Show loading spinner while checking user data
+  if (isUserDataLoading) return <LoadingSpinner />
 
   const isFramework = activeTopic?.endsWith('F')
 
