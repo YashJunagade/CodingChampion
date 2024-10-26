@@ -1,44 +1,48 @@
+import React from 'react'
 import { motion } from 'framer-motion'
 
-const TopicButton = ({
+export const TopicButton = ({
   point,
   index,
   isAnimating,
   selectedFrameworks,
   onSelect,
 }) => {
-  // Function to get display text based on topic and selected frameworks
   const getDisplayText = () => {
-    // Check if the topic ends with 'F' (indicating it's a framework topic)
     if (point.topic.endsWith('F')) {
-      // Get the base topic name without the 'F' suffix
       const baseTopic = point.topic.slice(0, -1) + ' Framework'
-      // Return the selected framework for this topic if it exists, otherwise return the base topic
       return selectedFrameworks[baseTopic] || baseTopic
     }
-    // If it's not a framework topic, return the original topic name
     return point.topic
   }
 
   return (
     <div
-      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
+      className="absolute transform -translate-x-1/2 -translate-y-1/2 z-20"
       style={{
         left: `${point.x}%`,
         top: `${point.y}%`,
       }}
     >
       <motion.button
-        className="w-20 h-20 bg-white rounded-full shadow-even-shadow flex items-center justify-center cursor-pointer text-center"
+        className="min-w-[140px] md:min-w-[180px] px-3 md:px-4 py-2 md:py-3 
+                   bg-white rounded-lg shadow-md hover:shadow-lg 
+                   transition-all duration-300 flex flex-col items-center 
+                   justify-center gap-1 border border-gray-100"
         onClick={onSelect}
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.95 }}
         disabled={isAnimating}
       >
-        <span className="text-sm font-bold">{getDisplayText()}</span>
+        <span className="text-sm md:text-base font-bold text-gray-800 leading-tight">
+          {getDisplayText()}
+        </span>
+
+        {/* added steps count  */}
+        <span className="text-xs md:text-sm text-gray-500">
+          Step {index + 1}
+        </span>
       </motion.button>
     </div>
   )
 }
-
-export default TopicButton

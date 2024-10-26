@@ -1,8 +1,7 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import RoadPath from './RoadPath'
-import TopicButton from './TopicButton'
-import UserIndicator from './UserIndicator'
+import { RoadPath } from './RoadPath'
+import { TopicButton } from './TopicButton'
+import { UserIndicator } from './UserIndicator'
 
 const RoadmapRenderer = ({
   currentRoadmap,
@@ -17,22 +16,19 @@ const RoadmapRenderer = ({
   const getTopicPositions = (topics) => {
     const positions = []
     const numTopics = topics.length
-    const margin = 20
 
-    for (let i = 0; i < numTopics; i++) {
-      const row = Math.floor(i / 2)
-      const isEvenRow = row % 2 === 0
-      const y =
-        margin + row * ((100 - 2 * margin) / (Math.ceil(numTopics / 2) - 1))
-      let x = isEvenRow
-        ? i % 2 === 0
-          ? margin
-          : 100 - margin
-        : i % 2 === 0
-          ? 100 - margin
-          : margin
-      positions.push({ x, y, topic: topics[i] })
-    }
+    // change spacing here:
+    const totalHeight = numTopics * 180
+    const verticalSpacing = 300
+
+    topics.forEach((topic, i) => {
+      // Alternate between left (20%) and right (80%)
+      const x = i % 2 === 0 ? 20 : 80
+      // Distribute topics evenly
+
+      const y = ((i * verticalSpacing) / totalHeight) * 100
+      positions.push({ x, y: Math.max(5, y), topic: topics[i] })
+    })
 
     return positions
   }
@@ -59,25 +55,28 @@ const RoadmapRenderer = ({
   const userPos = topicPositions[userPosition]
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-center">
-      <div className="relative w-full h-[600px] bg-white">
-        <p className="ml-2 text-3xl">{currentRoadmap.name} Roadmap</p>
-        <RoadPath positions={topicPositions} />
-        {topicPositions.map((point, index) => (
-          <TopicButton
-            key={index}
-            point={point}
-            index={index}
-            isAnimating={isAnimating}
-            selectedFrameworks={selectedFrameworks}
-            onSelect={() => {
-              setActiveTopic(point.topic)
-              animateToPosition(index)
-            }}
-          />
-        ))}
-
-        <UserIndicator position={userPos} />
+    <div className="w-full md:mt-10 p-8 bg-white dark:bg-black h-full">
+      <div className="w-full md:w-[80%] p-4 md:p-8 relative mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black text-center">
+          {currentRoadmap.name} Roadmap
+        </h1>
+        <div className="relative w-full " style={{ minHeight: '800px' }}>
+          <RoadPath positions={topicPositions} />
+          {topicPositions.map((point, index) => (
+            <TopicButton
+              key={index}
+              point={point}
+              index={index}
+              isAnimating={isAnimating}
+              selectedFrameworks={selectedFrameworks}
+              onSelect={() => {
+                setActiveTopic(point.topic)
+                animateToPosition(index)
+              }}
+            />
+          ))}
+          <UserIndicator position={userPos} />
+        </div>
       </div>
     </div>
   )
