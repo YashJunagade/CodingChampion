@@ -8114,12 +8114,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Web Deployment Basics in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=4Gt_YyGf6B0',
+                  'Web Deployment Basics in Hindi - Coding Shuttle':
+                    'https://youtu.be/4eMnz8VbgyM?si=6Xiz4vDoPzywMmhp',
                 },
                 {
-                  'Web Deployment Fundamentals - Traversy Media':
-                    'https://www.youtube.com/watch?v=W6NZfCO5SIk',
+                  'Web Deployment Fundamentals - Hitesh Choudhary':
+                    'https://youtu.be/VT099T4Feb0?si=uaLcxeNA0ieMBwzK',
                 },
                 {
                   'Netlify Deployment Guide':
@@ -8141,7 +8141,7 @@ export const Frontend = {
                 },
                 {
                   'Frontend Masters - Full Stack Deployment':
-                    'https://frontendmasters.com/courses/fullstack-app-next-v2/',
+                    'https://www.udemy.com/course/node-with-react-build-deploy-a-fullstack-web-application/',
                 },
               ],
             },
@@ -8152,12 +8152,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Static Site Deployment in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=xiUTqnI6xk8',
+                  'Static Site Deployment in Hindi - Apna College':
+                    'https://youtu.be/Dm0K3x9yCkg?si=iz0FnZIQLcbA9ugZ',
                 },
                 {
-                  'Static Site Deployment - Dev Ed':
-                    'https://www.youtube.com/watch?v=yo2bMGnIKE8',
+                  'Static Site Deployment - Wolfgangs Channel':
+                    'https://youtu.be/ATenAnk8eX4?si=mM4Yc5hz_98slAQ_',
                 },
                 {
                   'GitHub Pages Documentation':
@@ -8174,12 +8174,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Static Site Deployment Mastery':
-                    'https://www.udemy.com/course/static-site-deployment/',
+                  'Udemy - Web Deployment Masterclass':
+                    'https://www.udemy.com/course/web-deployment-masterclass/',
                 },
                 {
-                  'LinkedIn Learning - Deploying Static Websites':
-                    'https://www.linkedin.com/learning/learning-static-site-deployment',
+                  'Frontend Masters - Full Stack Deployment':
+                    'https://www.udemy.com/course/node-with-react-build-deploy-a-fullstack-web-application/',
                 },
               ],
             },
@@ -8190,12 +8190,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'DNS & Hosting in Hindi - Yahoo Baba':
-                    'https://www.youtube.com/watch?v=2WtYKIDgm4c',
+                  'DNS & Hosting in Hindi - Marketing Fundas':
+                    'https://youtu.be/tkDsQO4OAgE?si=Kpqv5-1IiKAC_Uk3',
                 },
                 {
-                  'DNS & Hosting Explained - Traversy Media':
-                    'https://www.youtube.com/watch?v=htbY9-yggB0',
+                  'DNS & Hosting Explained - FreeCodeCamp':
+                    'https://youtu.be/NQP89ish9t8?si=RQk_23E_xw0JeNfJ',
                 },
                 {
                   'Cloudflare Learning Center':
@@ -8212,12 +8212,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Web Hosting & DNS Masterclass':
-                    'https://www.udemy.com/course/web-hosting-dns-complete-guide/',
+                  'Udemy - Web Deployment Masterclass':
+                    'https://www.udemy.com/course/web-deployment-masterclass/',
                 },
                 {
-                  'Pluralsight - DNS and Web Hosting Fundamentals':
-                    'https://www.pluralsight.com/courses/dns-web-hosting-fundamentals',
+                  'Frontend Masters - Full Stack Deployment':
+                    'https://www.udemy.com/course/node-with-react-build-deploy-a-fullstack-web-application/',
                 },
               ],
             },
@@ -8229,11 +8229,11 @@ export const Frontend = {
               free: [
                 {
                   'CI/CD in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=Y9KE_MXaXXE',
+                    'https://youtu.be/57dkyTmOCmE?si=QDFho1rBDiH_sIy3',
                 },
                 {
                   'Continuous Deployment - Fireship':
-                    'https://www.youtube.com/watch?v=scEDHsr3APg',
+                    'https://youtu.be/scEDHsr3APg?si=c2hXBokS6VqAoK8X',
                 },
                 {
                   'GitHub Actions Documentation':
@@ -8249,12 +8249,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - CI/CD Pipelines with GitHub Actions':
-                    'https://www.udemy.com/course/github-actions/',
+                  'Udemy - Web Deployment Masterclass':
+                    'https://www.udemy.com/course/web-deployment-masterclass/',
                 },
                 {
-                  'Frontend Masters - Continuous Deployment':
-                    'https://frontendmasters.com/courses/continuous-deployment/',
+                  'Frontend Masters - Full Stack Deployment':
+                    'https://www.udemy.com/course/node-with-react-build-deploy-a-fullstack-web-application/',
                 },
               ],
             },
@@ -8265,12 +8265,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Node.js Deployment in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=oNSMZzWtJ2M',
+                  'Node.js Deployment in Hindi - CodeWithHarry':
+                    'https://youtu.be/WUt7oi81oVY?si=jOcO_bxBgEt_AKtN',
                 },
                 {
-                  'Deploy Node.js - Traversy Media':
-                    'https://www.youtube.com/watch?v=oykl1Zh9JMM',
+                  'Deploy Node.js - Fireship':
+                    'https://youtu.be/uEVmD6n8Il0?si=6bvtRkmFt44Bxt0W',
                 },
                 {
                   'Heroku Node.js Guide':
@@ -8287,12 +8287,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Node.js Deployment Masterclass':
-                    'https://www.udemy.com/course/nodejs-deployment-masterclass/',
+                  'Udemy - Web Deployment Masterclass':
+                    'https://www.udemy.com/course/web-deployment-masterclass/',
                 },
                 {
-                  'Frontend Masters - Production Node.js':
-                    'https://frontendmasters.com/courses/production-node-aws/',
+                  'Frontend Masters - Full Stack Deployment':
+                    'https://www.udemy.com/course/node-with-react-build-deploy-a-fullstack-web-application/',
                 },
               ],
             },
@@ -8303,12 +8303,12 @@ export const Frontend = {
             resources: {
               free: [
                 {
-                  'Docker Tutorial in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=Gw2Jrid4SaQ',
+                  'Docker Tutorial in Hindi - M Prashant':
+                    'https://youtu.be/zoQgXoQMCHc?si=9PjRI5wlv9LeLfns',
                 },
                 {
-                  'Docker Crash Course - Traversy Media':
-                    'https://www.youtube.com/watch?v=p28piYY_wv8',
+                  'Docker Crash Course - Fireship':
+                    'https://youtu.be/gAkwW2tuIqE?si=bS5_iCGcZqpUcoE0',
                 },
                 {
                   'Docker Documentation':
@@ -8324,12 +8324,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Docker & Kubernetes: The Complete Guide':
-                    'https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/',
+                  'Udemy - Web Deployment Masterclass':
+                    'https://www.udemy.com/course/web-deployment-masterclass/',
                 },
                 {
-                  'Frontend Masters - Complete Intro to Containers':
-                    'https://frontendmasters.com/courses/complete-intro-containers/',
+                  'Frontend Masters - Full Stack Deployment':
+                    'https://www.udemy.com/course/node-with-react-build-deploy-a-fullstack-web-application/',
                 },
               ],
             },
@@ -8341,11 +8341,11 @@ export const Frontend = {
               free: [
                 {
                   'Advanced CI/CD in Hindi - Tech Guide Hindi':
-                    'https://www.youtube.com/watch?v=HSV-Kz5Ee8c',
+                    'https://youtu.be/57dkyTmOCmE?si=G2HwLJK1E6-6xBHG',
                 },
                 {
-                  'Advanced CI/CD Pipeline - DevOps Directive':
-                    'https://www.youtube.com/watch?v=R8_veQiYBjI',
+                  'Advanced CI/CD Pipeline - Tech Tutorial With Piyush':
+                    'https://youtu.be/jZYrxk2WMbY?si=9Ye448pICgPugGGI',
                 },
                 {
                   'Jenkins Documentation': 'https://www.jenkins.io/doc/',
@@ -8360,278 +8360,12 @@ export const Frontend = {
               ],
               premium: [
                 {
-                  'Udemy - Advanced CI/CD with Jenkins':
-                    'https://www.udemy.com/course/advanced-jenkins-ci-cd/',
+                  'Udemy - Jenkins CI/CD Bootcamp':
+                    'https://www.udemy.com/course/jenkins-cicd-25-jenkinsfile-3-projects-interview-prep/',
                 },
                 {
-                  'Pluralsight - Advanced CI/CD Implementation':
-                    'https://www.pluralsight.com/courses/advanced-continuous-delivery-implementation',
-                },
-              ],
-            },
-            time: 60,
-          },
-        ],
-      },
-      'Best Practices': {
-        suggestedTime: 390,
-        topics: [
-          {
-            topic: 'Coding Standards and Conventions',
-            resources: {
-              free: [
-                {
-                  'JavaScript Coding Standards in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=JvoOijDRuHA',
-                },
-                {
-                  'JavaScript Best Practices - Traversy Media':
-                    'https://www.youtube.com/watch?v=Mus_vwhTCq0',
-                },
-                {
-                  'Google JavaScript Style Guide':
-                    'https://google.github.io/styleguide/jsguide.html',
-                },
-                {
-                  'Airbnb JavaScript Style Guide':
-                    'https://github.com/airbnb/javascript',
-                },
-                {
-                  'freeCodeCamp - JavaScript Best Practices':
-                    'https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript',
-                },
-              ],
-              premium: [
-                {
-                  'Udemy - Clean Code in JavaScript':
-                    'https://www.udemy.com/course/writing-clean-code/',
-                },
-                {
-                  'Frontend Masters - JavaScript: The Hard Parts of Coding Standards':
-                    'https://frontendmasters.com/courses/javascript-hard-parts-v2/',
-                },
-              ],
-            },
-            time: 60,
-          },
-          {
-            topic: 'Code Documentation',
-            resources: {
-              free: [
-                {
-                  'Code Documentation in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=YK-GurROGIg',
-                },
-                {
-                  'JavaScript Documentation Best Practices - Web Dev Simplified':
-                    'https://www.youtube.com/watch?v=UCW6T5dw8HE',
-                },
-                {
-                  'JSDoc Documentation': 'https://jsdoc.app/',
-                },
-                {
-                  'Documentation.js Guide': 'https://documentation.js.org/',
-                },
-                {
-                  'freeCodeCamp - Technical Documentation':
-                    'https://www.freecodecamp.org/learn/responsive-web-design/technical-documentation-page/',
-                },
-              ],
-              premium: [
-                {
-                  'Udemy - JavaScript Documentation Mastery':
-                    'https://www.udemy.com/course/javascript-documentation-masterclass/',
-                },
-                {
-                  'Pluralsight - JavaScript Documentation Patterns':
-                    'https://www.pluralsight.com/courses/javascript-documentation-patterns',
-                },
-              ],
-            },
-            time: 45,
-          },
-          {
-            topic: 'Error Handling',
-            resources: {
-              free: [
-                {
-                  'Error Handling in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=2S_4yM_9jBs',
-                },
-                {
-                  'JavaScript Error Handling - Academind':
-                    'https://www.youtube.com/watch?v=r9HdJ8P6GQI',
-                },
-                {
-                  'MDN Error Handling':
-                    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling',
-                },
-                {
-                  'JavaScript.info Error Handling':
-                    'https://javascript.info/error-handling',
-                },
-                {
-                  'freeCodeCamp - Debugging Challenges':
-                    'https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#debugging',
-                },
-              ],
-              premium: [
-                {
-                  'Frontend Masters - JavaScript Error Handling':
-                    'https://frontendmasters.com/courses/javascript-error-handling/',
-                },
-                {
-                  'Udemy - Error Handling in JavaScript':
-                    'https://www.udemy.com/course/error-handling-in-javascript/',
-                },
-              ],
-            },
-            time: 60,
-          },
-          {
-            topic: 'Code Optimization',
-            resources: {
-              free: [
-                {
-                  'JavaScript Optimization in Hindi - Yahoo Baba':
-                    'https://www.youtube.com/watch?v=fL9qxFR0pNQ',
-                },
-                {
-                  'JavaScript Performance & Optimization - Dev Ed':
-                    'https://www.youtube.com/watch?v=xbZzahWakGs',
-                },
-                {
-                  'Google Web Dev - JavaScript Performance':
-                    'https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/javascript-startup-optimization',
-                },
-                {
-                  'MDN Performance Tips':
-                    'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Performance_Tips',
-                },
-                {
-                  'freeCodeCamp - Coding Interview Prep':
-                    'https://www.freecodecamp.org/learn/coding-interview-prep/',
-                },
-              ],
-              premium: [
-                {
-                  'Frontend Masters - JavaScript Performance':
-                    'https://frontendmasters.com/courses/web-performance/',
-                },
-                {
-                  'Udemy - JavaScript Performance Optimization':
-                    'https://www.udemy.com/course/javascript-performance/',
-                },
-              ],
-            },
-            time: 45,
-          },
-          {
-            topic: 'Version Control Best Practices',
-            resources: {
-              free: [
-                {
-                  'Git & GitHub in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=gwWKnnCMQ5c',
-                },
-                {
-                  'Git & GitHub Crash Course - Traversy Media':
-                    'https://www.youtube.com/watch?v=SWYqp7iY_Tc',
-                },
-                {
-                  'Git Documentation': 'https://git-scm.com/doc',
-                },
-                {
-                  'GitHub Guides': 'https://guides.github.com/',
-                },
-                {
-                  'freeCodeCamp - Git Course':
-                    'https://www.freecodecamp.org/learn/git-and-github/',
-                },
-              ],
-              premium: [
-                {
-                  'Udemy - Git & GitHub Bootcamp':
-                    'https://www.udemy.com/course/git-and-github-bootcamp/',
-                },
-                {
-                  'Frontend Masters - Git In-depth':
-                    'https://frontendmasters.com/courses/git-in-depth/',
-                },
-              ],
-            },
-            time: 60,
-          },
-          {
-            topic: 'Refactoring for Clean Code',
-            resources: {
-              free: [
-                {
-                  'Code Refactoring in Hindi - Thapa Technical':
-                    'https://www.youtube.com/watch?v=p10d6F_2UyM',
-                },
-                {
-                  'JavaScript Refactoring - Fun Fun Function':
-                    'https://www.youtube.com/watch?v=DC471a9qrU4',
-                },
-                {
-                  'Refactoring.guru': 'https://refactoring.guru/refactoring',
-                },
-                {
-                  'Clean Code JavaScript':
-                    'https://github.com/ryanmcdermott/clean-code-javascript',
-                },
-                {
-                  'freeCodeCamp - Refactoring Challenges':
-                    'https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/',
-                },
-              ],
-              premium: [
-                {
-                  'Frontend Masters - JavaScript Code Patterns':
-                    'https://frontendmasters.com/courses/javascript-patterns/',
-                },
-                {
-                  'Udemy - Clean Code with JavaScript':
-                    'https://www.udemy.com/course/writing-clean-code/',
-                },
-              ],
-            },
-            time: 60,
-          },
-          {
-            topic: 'Security Best Practices',
-            resources: {
-              free: [
-                {
-                  'JavaScript Security in Hindi - CodeWithHarry':
-                    'https://www.youtube.com/watch?v=x5gLL8-M9Fo',
-                },
-                {
-                  'JavaScript Security - Traversy Media':
-                    'https://www.youtube.com/watch?v=0dgmeTy7X3I',
-                },
-                {
-                  'OWASP JavaScript Security Guide':
-                    'https://cheatsheetseries.owasp.org/cheatsheets/JavaScript_Security_Cheat_Sheet.html',
-                },
-                {
-                  'MDN Security Best Practices':
-                    'https://developer.mozilla.org/en-US/docs/Web/Security',
-                },
-                {
-                  'freeCodeCamp - Information Security':
-                    'https://www.freecodecamp.org/learn/information-security/',
-                },
-              ],
-              premium: [
-                {
-                  'Udemy - JavaScript Security Bootcamp':
-                    'https://www.udemy.com/course/javascript-security-bootcamp/',
-                },
-                {
-                  'Frontend Masters - Web Security':
-                    'https://frontendmasters.com/courses/web-security/',
+                  'Pluralsight - Implementing CI/CD with GitHub Actions':
+                    'https://www.pluralsight.com/courses/devops-github-azure-implementing-cicd-github-actions',
                 },
               ],
             },
