@@ -18,7 +18,7 @@ const RoadmapRenderer = ({
     const numTopics = topics.length
 
     // change spacing here:
-    const verticalSpacing = 500
+    const verticalSpacing = 500 // set it to 18 in modular approach
     const totalHeight = numTopics * verticalSpacing
 
     topics.forEach((topic, i) => {
@@ -28,6 +28,9 @@ const RoadmapRenderer = ({
       // Distribute topics evenly
 
       const y = ((i * verticalSpacing) / totalHeight) * 100
+      // for modular approach :
+      // const y = (i * verticalSpacing)
+
       positions.push({ x, y: Math.max(5, y), topic: topics[i] })
     })
 
@@ -55,13 +58,22 @@ const RoadmapRenderer = ({
   const topicPositions = getTopicPositions(topics)
   const userPos = topicPositions[userPosition]
 
+  // for modular version:
+  // const minHeight =
+  //   topicPositions.length > 0
+  //     ? Math.max(1200, topicPositions[topicPositions.length - 1].y + 200)
+  //     : 1200
+
   return (
-    <div className="w-full md:mt-10 p-8 bg-white dark:bg-black min-h-screen">
+    <div className="w-full md:mt-10 p-8 bg-offWhite dark:bg-black min-h-screen">
       <div className="w-full md:w-[80%] lg:w-[60%]  p-4 md:p-8 relative mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black dark:text-white text-center">
           {currentRoadmap.name} Roadmap
         </h1>
-        <div className="relative w-full " style={{ minHeight: '1500px' }}>
+        <div className="relative w-full min-h-[1200px] md:min-h-[2000px] xl:min-h-[2500px]">
+          {/* modular approach: */}
+          {/* <div className="relative w-full" style={{ minHeight: `${minHeight}px` }}></div> */}
+
           <RoadPath positions={topicPositions} />
           {topicPositions.map((point, index) => (
             <TopicButton

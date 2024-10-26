@@ -26,11 +26,23 @@ export const TopicButton = ({
     >
       <motion.button
         className="min-w-[140px] md:min-w-[180px] px-3 md:px-4 py-2 md:py-3 
-                   bg-white rounded-lg shadow-md hover:shadow-lg 
-                   transition-all duration-300 flex flex-col items-center 
-                   justify-center gap-1 border border-gray-100"
+                   bg-white rounded-lg shadow-md 
+                 flex flex-col items-center 
+                   justify-center gap-1 border "
         onClick={onSelect}
-        whileHover={{ scale: 1.05, y: -2 }}
+        whileHover={{
+          boxShadow: '0px 5px 10px rgba(245, 21, 36, 0.3)',
+          scale: 1.05,
+          y: -10,
+          transition: {
+            stype: 'spring',
+            stiffness: 300,
+            damping: 20,
+          },
+        }}
+        transition={{
+          boxShadow: { duration: 0.3 },
+        }}
         whileTap={{ scale: 0.95 }}
         disabled={isAnimating}
       >

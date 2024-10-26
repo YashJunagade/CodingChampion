@@ -162,7 +162,7 @@ const SubtopicModal = ({
               </div>
               <button
                 onClick={() => setActiveResource(topic)}
-                className="ml-4 bg-accent text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
+                className="ml-4 bg-black text-white px-4 py-2 rounded hover:bg-accent transition-colors"
               >
                 View Resources
               </button>

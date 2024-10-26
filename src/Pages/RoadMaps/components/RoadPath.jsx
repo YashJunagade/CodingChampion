@@ -29,16 +29,16 @@ export const RoadPath = ({ positions }) => {
         className="w-full h-full"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
+        strokeLinecap="square"
       >
         {/* shadow of road  */}
         <path
           d={getRoadPath(positions)}
           stroke="#000000"
           strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinejoin="miter"
           fill="none"
-          className="opacity-10 md:stroke-[3]" // increase this for md +
+          className="opacity-10 md:stroke-[2.5]"
           transform="translate(0, 0.5)"
         />
 
@@ -46,11 +46,11 @@ export const RoadPath = ({ positions }) => {
         <path
           d={getRoadPath(positions)}
           stroke="#374151"
-          strokeWidth="2.5"
+          strokeWidth="2.6"
           strokeLinecap="round"
           strokeLinejoin="round"
           fill="none"
-          className="md:stroke-[3]"
+          className="md:stroke-[2.75]" // increase this for md +
         />
 
         {/* road middle white markings */}
@@ -60,9 +60,9 @@ export const RoadPath = ({ positions }) => {
           strokeWidth="0.3"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeDasharray="2 8"
+          strokeDasharray="1.5 5"
           fill="none"
-          className="opacity-60 md:stroke-[0.6]"
+          className="opacity-60 md:stroke-[0.5] "
         />
       </svg>
     </div>

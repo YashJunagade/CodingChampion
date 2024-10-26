@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 
 export const UserIndicator = ({ position }) => (
   <motion.div
-    className="absolute w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-full shadow-lg flex items-center justify-center border-2 border-white"
+    className="absolute w-8 h-8 md:w-10 md:h-10 bg-accent rounded-full shadow-lg flex items-center justify-center border-2 border-white"
     animate={{
       left: `${position.x}%`,
-      top: `${position.y + 8}%`, // change position here.
+      top: `${position.y + 3.8}%`, // change position here.
     }}
     initial={false}
     transition={{
