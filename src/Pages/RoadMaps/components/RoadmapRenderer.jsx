@@ -24,7 +24,7 @@ const RoadmapRenderer = ({
     topics.forEach((topic, i) => {
       // to change curve, change the percentages here:
       // Alternate between left (%) and right (%)
-      const x = i % 2 === 0 ? 20 : 80
+      const x = i % 2 === 0 ? 15 : 85
       // Distribute topics evenly
 
       const y = ((i * verticalSpacing) / totalHeight) * 100
@@ -66,11 +66,11 @@ const RoadmapRenderer = ({
 
   return (
     <div className="w-full md:mt-10 p-8 bg-offWhite dark:bg-black min-h-screen">
-      <div className="w-full md:w-[80%] lg:w-[60%]  p-4 md:p-8 relative mx-auto">
+      <div className="w-full md:w-[80%] lg:w-[75%]  p-4 md:p-8 relative mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black dark:text-white text-center">
           {currentRoadmap.name} Roadmap
         </h1>
-        <div className="relative w-full min-h-[1200px] md:min-h-[2000px] xl:min-h-[2500px]">
+        <div className="relative w-full min-h-[1200px] md:min-h-[1700px] xl:min-h-[2200px]">
           {/* modular approach: */}
           {/* <div className="relative w-full" style={{ minHeight: `${minHeight}px` }}></div> */}
 
