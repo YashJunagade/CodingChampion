@@ -70,7 +70,7 @@ const RoadmapRenderer = ({
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black dark:text-white text-center">
           {currentRoadmap.name} Roadmap
         </h1>
-        <div className="relative w-full min-h-[1200px] md:min-h-[1700px] xl:min-h-[2200px]">
+        <div className="relative w-full min-h-[1200px] md:min-h-[1800px] xl:min-h-[2200px]">
           {/* modular approach: */}
           {/* <div className="relative w-full" style={{ minHeight: `${minHeight}px` }}></div> */}
 
