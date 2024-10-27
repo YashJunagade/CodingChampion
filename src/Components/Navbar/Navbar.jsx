@@ -138,7 +138,7 @@ const Navbar = React.memo(() => {
               {/* SideBar will only render if it's not the homepage */}
             </div>
           )}
-          <div className="w-40 pt-1">
+          <div className="w-40 pt-1 ml-8">
             <Link to="/">
               <img
                 className="hidden dark:block"
