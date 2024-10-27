@@ -1,11 +1,21 @@
 import React from 'react'
+import { X } from 'lucide-react'
 
 const ResourceModal = ({ resource, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60]">
-      <div className="bg-white p-6 rounded-lg max-w-2xl w-full">
+      <div className="bg-white p-6 rounded-lg max-w-2xl w-full relative">
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 p-1 hover:bg-gray-100 rounded-full transition-colors"
+          aria-label="Close modal"
+        >
+          <X className="h-6 w-6 text-black" />
+        </button>
+
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">{resource.topic}</h2>
+          <h2 className="text-2xl font-bold pr-8">{resource.topic}</h2>
         </div>
 
         <div className="space-y-6">

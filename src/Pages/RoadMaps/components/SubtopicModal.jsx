@@ -1,4 +1,5 @@
 import React from 'react'
+import { X } from 'lucide-react'
 
 const SubtopicModal = ({
   activeSubtopic,
@@ -104,12 +105,22 @@ const SubtopicModal = ({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <h2 className="text-2xl font-bold mb-4">
+      <div className="bg-white p-6 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+        {/* Close button */}
+        <button
+          onClick={() => setActiveSubtopic(null)}
+          className="absolute top-4 right-4 p-1 hover:bg-gray-100 rounded-full transition-colors"
+          aria-label="Close modal"
+        >
+          <X className="h-6 w-6 text-black" />
+        </button>
+
+        <h2 className="text-2xl font-bold mb-4 pr-8">
           {`${activeTopic.toUpperCase()}${isFramework ? ` - ${selectedFramework}` : ''} - ${
             activeSubtopic.charAt(0).toUpperCase() + activeSubtopic.slice(1)
           }`}
         </h2>
+
         {/* Progress Section */}
         <div className="mb-6 p-4 rounded-lg border">
           <div className="flex justify-between items-center mb-2">
@@ -162,7 +173,7 @@ const SubtopicModal = ({
               </div>
               <button
                 onClick={() => setActiveResource(topic)}
-                className="ml-4 bg-accent text-white px-4 py-2 rounded hover:bg-red-600 transition-colors"
+                className="ml-4  px-4 py-2 bg-accent text-sm md:text-base text-white rounded hover:bg-red-600 transition-colors"
               >
                 View Resources
               </button>

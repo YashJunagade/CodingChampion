@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRightIcon } from 'lucide-react'
+import { ArrowRightIcon, X } from 'lucide-react'
 
 const TopicModal = ({
   activeTopic,
@@ -138,8 +138,17 @@ const TopicModal = ({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        <h2 className="text-2xl font-bold mb-4">
+      <div className="bg-white p-6 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+        {/* Close button */}
+        <button
+          onClick={() => setActiveTopic(null)}
+          className="absolute top-4 right-4 p-1 hover:bg-gray-100 rounded-full transition-colors"
+          aria-label="Close modal"
+        >
+          <X className="h-6 w-6 text-black" />
+        </button>
+
+        <h2 className="text-2xl font-bold mb-4 pr-8">
           {activeTopic.toUpperCase()}
           {isFramework && selectedFramework && ` - ${selectedFramework}`}
         </h2>
