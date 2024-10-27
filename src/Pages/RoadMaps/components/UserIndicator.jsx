@@ -20,7 +20,7 @@ export const UserIndicator = ({ position }) => {
 
   return (
     <motion.div
-      className="absolute mt-2 w-12 h-12 md:w-14 md:h-14 md:-mt-3 bg-accent rounded-full shadow-lg flex items-center justify-center border-2 border-white"
+      className="absolute mt-2 w-12 h-12 md:w-14 md:h-14 lg:-mt-3 bg-accent rounded-full shadow-lg flex items-center justify-center border-2 border-white"
       animate={{
         left: `${position.x}%`,
         top: `${position.y + 3.8}%`, // change position here.
