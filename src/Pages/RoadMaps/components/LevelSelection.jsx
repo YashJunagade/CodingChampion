@@ -4,14 +4,14 @@ import { Trophy, GraduationCap, Target } from 'lucide-react'
 const LevelCard = ({ icon: Icon, title, description, onClick }) => (
   <button
     onClick={onClick}
-    className="group relative w-full bg-white rounded-xl shadow-lg p-6 mb-4 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-100 hover:border-blue-500"
+    className="group relative w-full bg-white rounded-xl shadow-lg p-6 mb-4 transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-100 hover:border-accent"
   >
     <div className="flex items-center space-x-4">
-      <div className="p-3 rounded-full bg-blue-100 group-hover:bg-blue-500 transition-colors duration-300">
-        <Icon className="w-8 h-8 text-blue-500 group-hover:text-white transition-colors duration-300" />
+      <div className="p-3 rounded-full bg-blue-100 group-hover:bg-accent transition-colors duration-300">
+        <Icon className="w-8 h-8 text-accent group-hover:text-white transition-colors duration-300" />
       </div>
       <div className="text-left">
-        <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-500 transition-colors duration-300">
+        <h3 className="text-lg font-semibold text-gray-800 group-hover:text-accent transition-colors duration-300">
           {title}
         </h3>
         <p className="text-sm text-gray-500">{description}</p>
@@ -19,7 +19,7 @@ const LevelCard = ({ icon: Icon, title, description, onClick }) => (
     </div>
     <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       <svg
-        className="w-6 h-6 text-blue-500"
+        className="w-6 h-6 text-accent"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
