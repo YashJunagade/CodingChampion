@@ -107,7 +107,7 @@ function SideBar() {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-screen z-40 w-52 lg:w-60 text-black bg-moreWhite dark:bg-moreBlack dark:text-white border-r border-accent transform ${
+        className={`fixed top-0 sm:top-16 left-0 h-screen z-40 w-52 lg:w-60 text-black bg-moreWhite dark:bg-moreBlack dark:text-white transform ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 lg:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col`}
       >
@@ -130,7 +130,7 @@ function SideBar() {
         <div className="flex-1 overflow-y-auto">
           <div className="py-4 flex flex-col items-center w-full">
             {dropDownList.map((menu, index) => (
-              <div key={index} className="w-full px-4">
+              <div key={index} className="w-full">
                 <DropDownMenu menu={menu} closeSidebar={closeSidebar} />
               </div>
             ))}
@@ -138,7 +138,7 @@ function SideBar() {
         </div>
 
         {/* Contribute Button - Fixed at bottom */}
-        <div className="border-t border-accent py-4 px-4">
+        <div className="border-t border-accent py-4 px-4 mb-16">
           <Link
             to="https://github.com/YashJunagade/Unknown"
             target="_blank"
@@ -153,7 +153,7 @@ function SideBar() {
       {/* Mobile Overlay */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-0 z-30 md:hidden lg:hidden"
           onClick={toggleSidebar}
         />
       )}
