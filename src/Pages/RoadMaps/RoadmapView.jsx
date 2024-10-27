@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { db, auth } from '../../config/firebase'
 import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore'
 import { onAuthStateChanged } from 'firebase/auth'
+import Groq from 'groq-sdk'
 import RoadmapRenderer from './components/RoadmapRenderer'
 import LevelSelection from './components/LevelSelection'
 import TopicModal from './components/TopicModal'
@@ -10,6 +11,9 @@ import SubtopicModal from './components/SubtopicModal'
 import ResourceModal from './components/ResourceModal'
 import LoadingSpinner from './components/LoadingSpinner'
 import ErrorAlert from './components/ErrorAlert'
+import Modal from '../SolutionPage/Modal'
+import FormattedText from '../SolutionPage/FormattedText'
+import AskDevaButton from '../SolutionPage/Deva/AskDeva'
 
 const RoadmapView = () => {
   const { roadmapName } = useParams()
@@ -20,17 +24,66 @@ const RoadmapView = () => {
   const [activeSubtopic, setActiveSubtopic] = useState(null)
   const [activeResource, setActiveResource] = useState(null)
   const [userProgress, setUserProgress] = useState({})
-  const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [userPosition, setUserPosition] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const [selectedFrameworks, setSelectedFrameworks] = useState({})
   const [currentRoadmap, setCurrentRoadmap] = useState(null)
+  const [isQueryModalOpen, setIsQueryModalOpen] = useState(false)
+  const [userQuery, setUserQuery] = useState('')
+  const [queryResponse, setQueryResponse] = useState('')
+
+  // Separate loading states
+  const [isRoadmapLoading, setIsRoadmapLoading] = useState(false)
+  const [isDevaLoading, setIsDevaLoading] = useState(false)
+
+  const handleQuerySubmit = async () => {
+    if (!user) {
+      toast.error('Please login to use this feature', {
+        position: 'bottom-right',
+        autoClose: 3000,
+      })
+      return
+    }
+    if (!userQuery.trim()) return
+
+    setIsDevaLoading(true)
+    const groq = new Groq({
+      apiKey: import.meta.env.VITE_GROQ_API_KEY_1,
+      dangerouslyAllowBrowser: true,
+    })
+
+    try {
+      const chatCompletion = await groq.chat.completions.create({
+        messages: [
+          {
+            role: 'user',
+            content: `Given this roadmap context: ${roadmapName}\n\nUser's question: ${userQuery}\n\nPlease provide a well-formatted response using Markdown syntax for headings, lists, and code blocks where appropriate.`,
+          },
+        ],
+        model: import.meta.env.VITE_MODAL1,
+      })
+
+      setQueryResponse(chatCompletion.choices[0]?.message?.content || '')
+    } catch (error) {
+      console.error('Error fetching query response:', error)
+      setQueryResponse('An error occurred while fetching the response.')
+    } finally {
+      setIsDevaLoading(false)
+    }
+  }
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleQuerySubmit()
+    }
+  }
 
   useEffect(() => {
     const fetchRoadmapData = async () => {
       try {
-        setLoading(true)
+        setIsRoadmapLoading(true)
         const response = await fetch(
           `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
         )
@@ -54,7 +107,7 @@ const RoadmapView = () => {
         )
         setCurrentRoadmap(null)
       } finally {
-        setLoading(false)
+        setIsRoadmapLoading(false)
       }
     }
 
@@ -64,7 +117,7 @@ const RoadmapView = () => {
   }, [roadmapName])
 
   useEffect(() => {
-    setIsUserDataLoading(true) // Reset loading state when roadmap changes
+    setIsUserDataLoading(true)
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user)
@@ -92,7 +145,6 @@ const RoadmapView = () => {
             data[roadmapName].level
           )
         } else {
-          // Check localStorage only if no level in Firestore
           const storedLevel = localStorage.getItem(`userLevel_${roadmapName}`)
           setUserLevel(storedLevel)
         }
@@ -113,7 +165,7 @@ const RoadmapView = () => {
   const selectLevel = async (level) => {
     if (!user) return
 
-    setLoading(true)
+    setIsRoadmapLoading(true)
     setError(null)
     try {
       await setDoc(
@@ -132,7 +184,7 @@ const RoadmapView = () => {
       console.error('Error saving level:', err)
       setError('Failed to save level. Please try again.')
     } finally {
-      setLoading(false)
+      setIsRoadmapLoading(false)
     }
   }
 
@@ -226,7 +278,7 @@ const RoadmapView = () => {
     }
   }
 
-  if (loading) return <LoadingSpinner />
+  if (isRoadmapLoading) return <LoadingSpinner />
   if (error) return <ErrorAlert message={error} />
   if (!user)
     return (
@@ -234,12 +286,10 @@ const RoadmapView = () => {
     )
   if (!currentRoadmap) return <ErrorAlert message="Roadmap not found." />
 
-  // Only show LevelSelection if we're sure user data is loaded and no level is set
   if (!isUserDataLoading && !userLevel) {
     return <LevelSelection onSelect={selectLevel} roadmap={currentRoadmap} />
   }
 
-  // Show loading spinner while checking user data
   if (isUserDataLoading) return <LoadingSpinner />
 
   const isFramework = activeTopic?.endsWith('F')
@@ -288,6 +338,50 @@ const RoadmapView = () => {
           onClose={() => setActiveResource(null)}
         />
       )}
+
+      {/* Ask Deva Modal */}
+      {isQueryModalOpen && (
+        <Modal
+          isOpen={isQueryModalOpen}
+          title="Ask Your Doubt to Deva"
+          onClose={() => {
+            setIsQueryModalOpen(false)
+            setUserQuery('')
+            setQueryResponse('')
+          }}
+        >
+          <div className="flex flex-col">
+            <textarea
+              className="p-2 rounded border mt-6 mb-4"
+              placeholder="Type your query or doubt here..."
+              value={userQuery}
+              onChange={(e) => setUserQuery(e.target.value)}
+              onKeyPress={handleKeyPress}
+              rows={4}
+            />
+            <button
+              onClick={handleQuerySubmit}
+              disabled={isDevaLoading}
+              className={`px-4 py-2 rounded text-white font-semibold ${
+                isDevaLoading
+                  ? 'bg-accent cursor-not-allowed'
+                  : 'bg-black hover:bg-accent'
+              }`}
+            >
+              {isDevaLoading ? 'Fetching Response...' : 'Submit Query'}
+            </button>
+
+            {queryResponse && (
+              <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
+                <h3 className="font-semibold mb-2">Deva : </h3>
+                <FormattedText text={queryResponse} />
+              </div>
+            )}
+          </div>
+        </Modal>
+      )}
+
+      <AskDevaButton onOpen={() => setIsQueryModalOpen(true)} />
     </div>
   )
 }
