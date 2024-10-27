@@ -32,7 +32,7 @@ const RoadmapView = () => {
       try {
         setLoading(true)
         const response = await fetch(
-          `https://cdn.jsdelivr.net/gh/YashJunagade/roadmap-data@main/${roadmapName.toLowerCase()}.json`
+          `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
         )
 
         if (!response.ok) {
