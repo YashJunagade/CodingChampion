@@ -56,6 +56,8 @@ const Navbar = React.memo(() => {
 
   // Array of routes where the sidebar should not appear
   const noSidBarRoutes = [
+    '/slip',
+    '/labbook',
     '/:subjectId/slipList',
     '/:subjectId/labList',
     '/profile',
@@ -132,7 +134,7 @@ const Navbar = React.memo(() => {
         <div className="flex">
           {!shouldDisplaySideBar && (
             <div className="">
-              {/* <SideBar /> */}
+              <SideBar />
               {/* SideBar will only render if it's not the homepage */}
             </div>
           )}
