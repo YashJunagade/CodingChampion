@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Track from './components/Track'
+import SideBar from '../../Components/SideBar/SideBar'
 
 const Roadmaps = () => {
   const webDevTracks = [
@@ -65,6 +66,7 @@ const Roadmaps = () => {
 
   return (
     <div className="mx-auto md:mt-10 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
+      <SideBar></SideBar>
       <div className="space-y-12">
         <TrackSection title="Web Development" tracks={webDevTracks} />
         <TrackSection title="Artificial Intelligence" tracks={aiTracks} />
