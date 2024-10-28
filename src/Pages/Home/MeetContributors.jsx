@@ -321,6 +321,19 @@ const MeetContributors = () => {
 
   const additionalContributors = [
     {
+      name: 'Niranjan Majgavkar',
+      title: 'Full Stack Developer',
+      photoUrl:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730122152/niranjan_profile_pic_2_1_xdsxsz.jpg',
+      description: 'Constributing in Roadmap Feature',
+      socialLinks: {
+        github: 'https://github.com/Niranjanmajgaonkar',
+        linkedin: 'https://www.linkedin.com/in/niranjanmajgaonkar',
+      },
+      contributions: 11,
+      rank: 1,
+    },
+    {
       name: 'Santosh Bhor',
       title: 'Java FullStack Developer',
       photoUrl:
@@ -331,7 +344,7 @@ const MeetContributors = () => {
         linkedin: 'https://www.linkedin.com/in/santosh-bhor-a6436a327/',
       },
       contributions: 4,
-      rank: 1,
+      rank: 2,
     },
     {
       name: 'Nidhey Joshi',
@@ -344,7 +357,7 @@ const MeetContributors = () => {
         linkedin: 'https://www.linkedin.com/in/nidhey-joshi-15027b267',
       },
       contributions: 1,
-      rank: 2,
+      rank: 3,
     },
   ]
 
