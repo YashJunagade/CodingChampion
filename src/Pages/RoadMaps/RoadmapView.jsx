@@ -84,18 +84,29 @@ const RoadmapView = () => {
     const fetchRoadmapData = async () => {
       try {
         setIsRoadmapLoading(true)
-        const response = await fetch(
-          `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
-        )
+        let roadmapData = null
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
+        // Check if roadmap data is already in localStorage
+        const storedRoadmapData = localStorage.getItem(`roadmap_${roadmapName}`)
+        if (storedRoadmapData) {
+          roadmapData = JSON.parse(storedRoadmapData)
+        } else {
+          // Fetch roadmap data from the server
+          const response = await fetch(
+            `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
+          )
 
-        const roadmapData = await response.json()
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+          }
 
-        if (!roadmapData) {
-          throw new Error('No roadmap data found')
+          roadmapData = await response.json()
+
+          // Save the roadmap data to localStorage
+          localStorage.setItem(
+            `roadmap_${roadmapName}`,
+            JSON.stringify(roadmapData)
+          )
         }
 
         setCurrentRoadmap(roadmapData)
