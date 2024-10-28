@@ -321,7 +321,7 @@ const MeetContributors = () => {
 
   const additionalContributors = [
     {
-      name: 'Niranjan Majgavkar',
+      name: 'Niranjan Majgaonkar',
       title: 'Full Stack Developer',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1730122152/niranjan_profile_pic_2_1_xdsxsz.jpg',
