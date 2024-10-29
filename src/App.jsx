@@ -25,6 +25,7 @@ import PrivateRoute from './PrivateRoute'
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
 import RoadmapView from './Pages/RoadMaps/RoadmapView'
 import UnderConstruction from './Pages/RoadMaps/UnderConstruction'
+import { useEffect } from 'react'
 
 const App = () => {
   const location = useLocation()
@@ -34,6 +35,11 @@ const App = () => {
 
   // Determine if Navbar should be displayed based on the current path
   const shouldDisplayNavbar = !noNavbarRoutes.includes(location.pathname)
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
 
   return (
     <>
