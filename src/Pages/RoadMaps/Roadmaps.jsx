@@ -21,13 +21,13 @@ const Roadmaps = () => {
       imgLink:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
       trackTitle: 'Fullstack',
-      pageRoute: '/fullstack',
+      pageRoute: '/roadmaps/fullstack',
     },
     {
       imgLink:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
       trackTitle: 'DevOps',
-      pageRoute: '/devops',
+      pageRoute: '/UnderContruction',
     },
   ]
 
@@ -36,13 +36,13 @@ const Roadmaps = () => {
       imgLink:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
       trackTitle: 'Data Science',
-      pageRoute: '/data-science',
+      pageRoute: '/UnderContruction',
     },
     {
       imgLink:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
       trackTitle: 'Machine Learning',
-      pageRoute: '/machine-learning',
+      pageRoute: '/UnderContruction',
     },
   ]
 

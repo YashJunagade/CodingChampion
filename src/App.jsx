@@ -24,6 +24,7 @@ import Navbar from '../src/Components/Navbar/Navbar'
 import PrivateRoute from './PrivateRoute'
 import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
 import RoadmapView from './Pages/RoadMaps/RoadmapView'
+import UnderConstruction from './Pages/RoadMaps/UnderConstruction'
 
 const App = () => {
   const location = useLocation()
@@ -48,6 +49,7 @@ const App = () => {
           path="/profile"
           element={<PrivateRoute element={<Profile />} />}
         />
+        <Route path="/UnderContruction" element={<UnderConstruction />} />
         <Route path="/slip" element={<Slip />} />
         <Route path="/:subjectId/slipList" element={<SlipList />} />
         <Route path="/:subjectId/labList" element={<LabList />} />
