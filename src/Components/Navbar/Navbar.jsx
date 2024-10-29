@@ -56,6 +56,7 @@ const Navbar = React.memo(() => {
 
   // Array of routes where the sidebar should not appear
   const noSidBarRoutes = [
+    '/roadmaps',
     '/slip',
     '/labbook',
     '/:subjectId/slipList',

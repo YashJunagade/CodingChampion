@@ -65,7 +65,7 @@ const Roadmaps = () => {
   )
 
   return (
-    <div className="mx-auto md:mt-10 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
+    <div className="mx-auto md:mt-10 md:ml-52 lg:ml-60 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
       <div className="space-y-12">
         <TrackSection title="Web Development" tracks={webDevTracks} />
         <TrackSection title="Artificial Intelligence" tracks={aiTracks} />
