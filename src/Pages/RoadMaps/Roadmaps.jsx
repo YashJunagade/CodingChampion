@@ -7,25 +7,25 @@ const Roadmaps = () => {
   const webDevTracks = [
     {
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/frontend_mle4if.jpg',
       trackTitle: 'Frontend',
       pageRoute: '/roadmaps/frontend',
     },
     {
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/backend_othlwi.jpg',
       trackTitle: 'Backend',
       pageRoute: '/roadmaps/backend',
     },
     {
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/fullstack_irdxnw.jpg',
       trackTitle: 'Fullstack',
       pageRoute: '/roadmaps/fullstack',
     },
     {
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/devops_tyvpqs.jpg',
       trackTitle: 'DevOps',
       pageRoute: '/UnderContruction',
     },
@@ -34,13 +34,13 @@ const Roadmaps = () => {
   const aiTracks = [
     {
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/Datascience_atvozk.jpg',
       trackTitle: 'Data Science',
       pageRoute: '/UnderContruction',
     },
     {
       imgLink:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725818598/LabBookWide.jpeg_nqt9hr.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/machinelearning_c9i646.jpg',
       trackTitle: 'Machine Learning',
       pageRoute: '/UnderContruction',
     },
