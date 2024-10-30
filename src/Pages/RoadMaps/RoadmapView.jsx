@@ -94,9 +94,8 @@ const RoadmapView = () => {
         } else {
           // Fetch roadmap data from the server
           const response = await fetch(
-            `https://cdn.jsdelivr.net/gh/YashJunagade/roadmap-data@main/f.json`
+            `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
           )
-
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`)
           }
