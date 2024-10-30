@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Track from './components/Track'
 import SideBar from '../../Components/SideBar/SideBar'
+import { Helmet } from 'react-helmet'
 
 const Roadmaps = () => {
   const webDevTracks = [
@@ -65,12 +66,40 @@ const Roadmaps = () => {
   )
 
   return (
-    <div className="mx-auto md:mt-10 md:ml-52 lg:ml-60 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
-      <div className="space-y-12">
-        <TrackSection title="Web Development" tracks={webDevTracks} />
-        <TrackSection title="Artificial Intelligence" tracks={aiTracks} />
+    <>
+      <Helmet>
+        <title>
+          Complete Learning Roadmap: Web Development & AI Programming Path |
+          BBACA BCA Guide
+        </title>
+        <meta
+          name="description"
+          content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students. Free practical solutions and lab guides for SPPU University."
+        />
+        <meta
+          name="keywords"
+          content="programming roadmap, web development path, artificial intelligence course, BBACA, BCA, SPPU University, programming tutorials, coding guide, full stack development, machine learning path, practical solutions, lab solutions, computer science education, learning path, technology roadmap, programming career guide"
+        />
+        <meta
+          property="og:title"
+          content="Complete Learning Roadmap: Web Development & AI Programming Path | BBACA BCA Guide"
+        />
+        <meta
+          property="og:description"
+          content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students."
+        />
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="subject" content="Programming Education Roadmap" />
+        <link rel="canonical" href="/roadmaps" />
+      </Helmet>
+      <div className="mx-auto md:mt-10 md:ml-52 lg:ml-60 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
+        <div className="space-y-12">
+          <TrackSection title="Web Development" tracks={webDevTracks} />
+          <TrackSection title="Artificial Intelligence" tracks={aiTracks} />
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
