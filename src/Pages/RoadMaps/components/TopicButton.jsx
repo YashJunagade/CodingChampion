@@ -10,7 +10,7 @@ export const TopicButton = ({
 }) => {
   const getDisplayText = () => {
     if (point.topic.endsWith('F')) {
-      const baseTopic = point.topic.slice(0, -1) + ' Framework'
+      const baseTopic = point.topic.slice(0, -1)
       return selectedFrameworks[baseTopic] || baseTopic
     }
     return point.topic
