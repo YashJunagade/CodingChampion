@@ -265,7 +265,10 @@ const TopicModal = ({
           </button>
           <h2 className="text-lg sm:text-2xl font-bold text-gray-800 flex items-center gap-2 pr-8">
             <BookOpen className="h-4 w-4 sm:h-6 sm:w-6 text-accent shrink-0" />
-            <span className="truncate">{activeTopic.toUpperCase()}</span>
+            <span className="truncate">
+              {!isFramework && activeTopic.toUpperCase()}
+              {isFramework && activeTopic.toUpperCase().slice(0, -1)}
+            </span>
             {isFramework && selectedFramework && (
               <>
                 <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 shrink-0" />
