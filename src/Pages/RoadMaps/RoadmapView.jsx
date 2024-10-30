@@ -14,6 +14,7 @@ import ErrorAlert from './components/ErrorAlert'
 import Modal from '../SolutionPage/Modal'
 import FormattedText from '../SolutionPage/FormattedText'
 import AskDevaButton from '../SolutionPage/Deva/AskDeva'
+import { Helmet } from 'react-helmet'
 
 const RoadmapView = () => {
   const { roadmapName } = useParams()
@@ -93,7 +94,7 @@ const RoadmapView = () => {
         } else {
           // Fetch roadmap data from the server
           const response = await fetch(
-            `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
+            `https://cdn.jsdelivr.net/gh/YashJunagade/roadmap-data@main/f.json`
           )
 
           if (!response.ok) {
@@ -306,94 +307,119 @@ const RoadmapView = () => {
   const isFramework = activeTopic?.endsWith('F')
 
   return (
-    <div className="relative">
-      <RoadmapRenderer
-        currentRoadmap={currentRoadmap}
-        userLevel={userLevel}
-        userPosition={userPosition}
-        setUserPosition={setUserPosition}
-        isAnimating={isAnimating}
-        setIsAnimating={setIsAnimating}
-        setActiveTopic={setActiveTopic}
-        selectedFrameworks={selectedFrameworks}
-      />
-      {activeTopic && (
-        <TopicModal
-          activeTopic={activeTopic}
+    <>
+      <Helmet>
+        <title>{currentRoadmap.name} Complete Learning Roadmap</title>
+        <meta
+          name="description"
+          content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students. Free practical solutions and lab guides for SPPU University."
+        />
+        <meta
+          name="keywords"
+          content="programming roadmap, web development path, artificial intelligence course, BBACA, BCA, SPPU University, programming tutorials, coding guide, full stack development, machine learning path, practical solutions, lab solutions, computer science education, learning path, technology roadmap, programming career guide"
+        />
+        <meta
+          property="og:title"
+          content="Complete Learning Roadmap: Web Development & AI Programming Path | BBACA BCA Guide"
+        />
+        <meta
+          property="og:description"
+          content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students."
+        />
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="subject" content="Programming Education Roadmap" />
+        <link rel="canonical" href="/roadmaps" />
+      </Helmet>
+      <div className="relative">
+        <RoadmapRenderer
+          currentRoadmap={currentRoadmap}
+          userLevel={userLevel}
+          userPosition={userPosition}
+          setUserPosition={setUserPosition}
+          isAnimating={isAnimating}
+          setIsAnimating={setIsAnimating}
           setActiveTopic={setActiveTopic}
-          currentRoadmap={currentRoadmap}
-          userLevel={userLevel}
           selectedFrameworks={selectedFrameworks}
-          selectFramework={selectFramework}
-          setActiveSubtopic={setActiveSubtopic}
-          userProgress={userProgress}
-          isFramework={isFramework}
         />
-      )}
-      {activeSubtopic && (
-        <SubtopicModal
-          activeSubtopic={activeSubtopic}
-          setActiveSubtopic={setActiveSubtopic}
-          activeTopic={activeTopic}
-          currentRoadmap={currentRoadmap}
-          userLevel={userLevel}
-          selectedFrameworks={selectedFrameworks}
-          userProgress={userProgress}
-          updateProgress={updateProgress}
-          setActiveResource={setActiveResource}
-        />
-      )}
-      {activeResource && (
-        <ResourceModal
-          resource={activeResource}
-          onClose={() => setActiveResource(null)}
-        />
-      )}
+        {activeTopic && (
+          <TopicModal
+            activeTopic={activeTopic}
+            setActiveTopic={setActiveTopic}
+            currentRoadmap={currentRoadmap}
+            userLevel={userLevel}
+            selectedFrameworks={selectedFrameworks}
+            selectFramework={selectFramework}
+            setActiveSubtopic={setActiveSubtopic}
+            userProgress={userProgress}
+            isFramework={isFramework}
+          />
+        )}
+        {activeSubtopic && (
+          <SubtopicModal
+            activeSubtopic={activeSubtopic}
+            setActiveSubtopic={setActiveSubtopic}
+            activeTopic={activeTopic}
+            currentRoadmap={currentRoadmap}
+            userLevel={userLevel}
+            selectedFrameworks={selectedFrameworks}
+            userProgress={userProgress}
+            updateProgress={updateProgress}
+            setActiveResource={setActiveResource}
+          />
+        )}
+        {activeResource && (
+          <ResourceModal
+            resource={activeResource}
+            onClose={() => setActiveResource(null)}
+          />
+        )}
 
-      {/* Ask Deva Modal */}
-      {isQueryModalOpen && (
-        <Modal
-          isOpen={isQueryModalOpen}
-          title="Ask Your Doubt to Deva"
-          onClose={() => {
-            setIsQueryModalOpen(false)
-            setUserQuery('')
-            setQueryResponse('')
-          }}
-        >
-          <div className="flex flex-col">
-            <textarea
-              className="p-2 rounded border mt-6 mb-4"
-              placeholder="Type your query or doubt here..."
-              value={userQuery}
-              onChange={(e) => setUserQuery(e.target.value)}
-              onKeyPress={handleKeyPress}
-              rows={4}
-            />
-            <button
-              onClick={handleQuerySubmit}
-              disabled={isDevaLoading}
-              className={`px-4 py-2 rounded text-white font-semibold ${
-                isDevaLoading
-                  ? 'bg-accent cursor-not-allowed'
-                  : 'bg-black hover:bg-accent'
-              }`}
-            >
-              {isDevaLoading ? 'Fetching Response...' : 'Submit Query'}
-            </button>
+        {/* Ask Deva Modal */}
+        {isQueryModalOpen && (
+          <Modal
+            isOpen={isQueryModalOpen}
+            title="Ask Your Doubt to Deva"
+            onClose={() => {
+              setIsQueryModalOpen(false)
+              setUserQuery('')
+              setQueryResponse('')
+            }}
+          >
+            <div className="flex flex-col">
+              <textarea
+                className="p-2 rounded border mt-6 mb-4"
+                placeholder="Type your query or doubt here..."
+                value={userQuery}
+                onChange={(e) => setUserQuery(e.target.value)}
+                onKeyPress={handleKeyPress}
+                rows={4}
+              />
+              <button
+                onClick={handleQuerySubmit}
+                disabled={isDevaLoading}
+                className={`px-4 py-2 rounded text-white font-semibold ${
+                  isDevaLoading
+                    ? 'bg-accent cursor-not-allowed'
+                    : 'bg-black hover:bg-accent'
+                }`}
+              >
+                {isDevaLoading ? 'Fetching Response...' : 'Submit Query'}
+              </button>
 
-            {queryResponse && (
-              <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
-                <h3 className="font-semibold mb-2">Deva : </h3>
-                <FormattedText text={queryResponse} />
-              </div>
-            )}
-          </div>
-        </Modal>
-      )}
+              {queryResponse && (
+                <div className="mt-4 p-4 border rounded bg-white shadow-md overflow-auto max-h-96">
+                  <h3 className="font-semibold mb-2">Deva : </h3>
+                  <FormattedText text={queryResponse} />
+                </div>
+              )}
+            </div>
+          </Modal>
+        )}
 
-      <AskDevaButton onOpen={() => setIsQueryModalOpen(true)} />
-    </div>
+        <AskDevaButton onOpen={() => setIsQueryModalOpen(true)} />
+      </div>
+    </>
   )
 }
 
