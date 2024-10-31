@@ -299,7 +299,7 @@ const MeetContributors = () => {
       name: 'Yash Junagade',
       title: 'Software Engineer & Tech enthusiast',
       photoUrl:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1725769845/YashJunagade_inr9w4.jpg',
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730287595/Yash_Profile_Pic_1_wuubqc.jpg',
       socialLinks: {
         twitter: 'https://x.com/YashJunagade211',
         github: 'https://github.com/YashJunagade',
