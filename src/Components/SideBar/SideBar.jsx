@@ -77,8 +77,20 @@ function SideBar() {
       },
     },
     {
-      name: 'RoadMaps',
-      title: ['Frontend', 'Backend', 'Full Stack', 'DevOps'],
+      name: 'Roadmaps',
+      years: ['Web Development', 'Artificial Intelligence'],
+      subjects: {
+        'Web Development': [
+          { name: 'Frontend Development', link: '/roadmaps/frontend' },
+          { name: 'Backend Development', link: '/roadmaps/backend' },
+          { name: 'Full Stack Development', link: '/roadmaps/fullstack' },
+          { name: 'DevOps', link: '/UnderContruction' },
+        ],
+        'Artificial Intelligence': [
+          { name: 'Data Science', link: '/UnderContruction' },
+          { name: 'Machine Learning', link: '/UnderContruction' },
+        ],
+      },
     },
     {
       name: 'DSA',
