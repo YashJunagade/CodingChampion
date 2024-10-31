@@ -325,7 +325,7 @@ const MeetContributors = () => {
       title: 'Full Stack Developer',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1730122152/niranjan_profile_pic_2_1_xdsxsz.jpg',
-      description: 'Constributing in Roadmap Feature',
+      description: 'Contributing in Roadmap Feature',
       socialLinks: {
         github: 'https://github.com/Niranjanmajgaonkar',
         linkedin: 'https://www.linkedin.com/in/niranjanmajgaonkar',
