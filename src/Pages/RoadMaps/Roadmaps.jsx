@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Track from './components/Track'
 import SideBar from '../../Components/SideBar/SideBar'
 import { Helmet } from 'react-helmet'
+import BirthdayPromo from '../BirthdayPromo'
 
 const Roadmaps = () => {
   const webDevTracks = [
@@ -67,6 +68,7 @@ const Roadmaps = () => {
 
   return (
     <>
+      <BirthdayPromo />
       <Helmet>
         <title>
           Complete Learning Roadmap: Web Development & AI Programming Path |
