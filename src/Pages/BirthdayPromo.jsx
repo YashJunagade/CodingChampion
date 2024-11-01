@@ -27,7 +27,6 @@ const BirthdayPromo = () => {
     seconds: 59,
   })
 
-  // Use the UserContext to get login status
   const { isLoggedIn } = useUser()
 
   const floatingIcons = [
@@ -38,7 +37,6 @@ const BirthdayPromo = () => {
   ]
 
   useEffect(() => {
-    // Check if user has seen the modal today using session storage instead
     const hasSeenModal = sessionStorage.getItem('birthdayPromoSeen')
     const today = new Date().toDateString()
 
@@ -80,49 +78,51 @@ const BirthdayPromo = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.95 }}
-        className="relative w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden"
+        className="relative w-full mx-4 max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+          className="absolute right-2 sm:right-4 top-2 sm:top-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
 
-        {/* Floating Icons */}
-        {floatingIcons.map(({ Icon, delay, left }, index) => (
-          <motion.div
-            key={index}
-            className="absolute top-0"
-            style={{ left }}
-            initial={{ y: -20, opacity: 0 }}
-            animate={{
-              y: [0, -15, 0],
-              opacity: 1,
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              y: {
-                duration: 2,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                delay,
-              },
-              opacity: { duration: 0.3, delay },
-              scale: {
-                duration: 2,
-                repeat: Infinity,
-                repeatType: 'reverse',
-                delay,
-              },
-            }}
-          >
-            <Icon className="w-5 h-5 text-accent" />
-          </motion.div>
-        ))}
+        {/* Floating Icons - Hidden on mobile */}
+        <div className="hidden sm:block">
+          {floatingIcons.map(({ Icon, delay, left }, index) => (
+            <motion.div
+              key={index}
+              className="absolute top-0"
+              style={{ left }}
+              initial={{ y: -20, opacity: 0 }}
+              animate={{
+                y: [0, -15, 0],
+                opacity: 1,
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                y: {
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                  delay,
+                },
+                opacity: { duration: 0.3, delay },
+                scale: {
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: 'reverse',
+                  delay,
+                },
+              }}
+            >
+              <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+            </motion.div>
+          ))}
+        </div>
 
-        <div className="p-6">
+        <div className="p-4 sm:p-6">
           {/* Birthday Message */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -130,18 +130,18 @@ const BirthdayPromo = () => {
             transition={{ delay: 0.3 }}
             className="text-center mb-4"
           >
-            <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-1">
-              <Cake className="w-4 h-4 text-accent animate-pulse" />
-              <span className="text-sm text-accent">
+            <div className="inline-flex items-center gap-1 sm:gap-2 bg-accent/10 rounded-full px-3 sm:px-4 py-1">
+              <Cake className="w-3 h-3 sm:w-4 sm:h-4 text-accent animate-pulse" />
+              <span className="text-xs sm:text-sm text-accent">
                 Founder's (Yash) Birthday Special! 🎉
               </span>
             </div>
           </motion.div>
 
           {/* Timer Section */}
-          <div className="flex justify-center items-center gap-2 mb-6">
-            <Clock className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-            <div className="flex gap-4">
+          <div className="flex justify-center items-center gap-1 sm:gap-2 mb-4 sm:mb-6">
+            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 dark:text-gray-300" />
+            <div className="flex gap-2 sm:gap-4">
               {[
                 { value: timeLeft.hours, label: 'Hours' },
                 { value: timeLeft.minutes, label: 'Minutes' },
@@ -152,10 +152,10 @@ const BirthdayPromo = () => {
                   className="text-center"
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="bg-accent text-white rounded px-2 py-1 min-w-[40px]">
+                  <div className="bg-accent text-white rounded px-2 py-1 min-w-[32px] sm:min-w-[40px] text-sm sm:text-base">
                     {String(time.value).padStart(2, '0')}
                   </div>
-                  <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">
+                  <p className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-300 mt-1">
                     {time.label}
                   </p>
                 </motion.div>
@@ -164,21 +164,23 @@ const BirthdayPromo = () => {
           </div>
 
           {/* Content */}
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-3 sm:space-y-4">
             <motion.h3
-              className="font-semibold text-black dark:text-white flex items-center justify-center gap-2"
+              className="font-semibold text-sm sm:text-base text-black dark:text-white flex items-center justify-center gap-1 sm:gap-2 px-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Sparkles className="w-5 h-5 text-accent animate-pulse" />
-              Free Access to All Roadmaps!
-              <Sparkles className="w-5 h-5 text-accent animate-pulse" />
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent animate-pulse" />
+              {isLoggedIn
+                ? 'You Have Free Access to All Roadmaps!'
+                : 'Login to Get Free Access to All Roadmaps'}
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent animate-pulse" />
             </motion.h3>
 
             {/* Benefits */}
             <motion.div
-              className="flex justify-center gap-6 text-sm text-black dark:text-white"
+              className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-6 text-xs sm:text-sm text-black dark:text-white"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -187,7 +189,7 @@ const BirthdayPromo = () => {
                 (benefit) => (
                   <motion.div
                     key={benefit}
-                    className="flex items-center gap-1"
+                    className="flex items-center justify-center gap-1"
                     whileHover={{ scale: 1.05 }}
                   >
                     <span className="text-accent animate-pulse">✨</span>
@@ -198,10 +200,10 @@ const BirthdayPromo = () => {
             </motion.div>
 
             {/* Action Buttons */}
-            <div className="flex justify-center gap-4 mt-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-4 sm:mt-6">
               <motion.button
                 onClick={handlePrimaryAction}
-                className="px-6 py-2 bg-accent text-white rounded-lg font-medium"
+                className="px-4 sm:px-6 py-2 bg-accent text-white rounded-lg text-sm sm:text-base font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -209,7 +211,7 @@ const BirthdayPromo = () => {
               </motion.button>
               <motion.button
                 onClick={() => setIsOpen(false)}
-                className="px-6 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium"
+                className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg text-sm sm:text-base font-medium"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
