@@ -133,7 +133,7 @@ const BirthdayPromo = () => {
             <div className="inline-flex items-center gap-1 sm:gap-2 bg-accent/10 rounded-full px-3 sm:px-4 py-1">
               <Cake className="w-3 h-3 sm:w-4 sm:h-4 text-accent animate-pulse" />
               <span className="text-xs sm:text-sm text-accent">
-                Founder's (Yash) Birthday Special! 🎉
+                Founder's (Yash Junagade) Birthday Special! 🎉
               </span>
             </div>
           </motion.div>
