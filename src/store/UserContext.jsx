@@ -55,7 +55,6 @@ export const UserProvider = ({ children }) => {
           await updateDoc(userRef, { uid: user.uid })
           existingData.uid = user.uid
         }
-        console.log('Existing user document found:', existingData)
         return existingData
       }
     } catch (error) {
@@ -97,7 +96,6 @@ export const UserProvider = ({ children }) => {
         try {
           const userData = await createOrUpdateUserDocument(user)
           setUserDetails(userData)
-          console.log('User data set:', userData)
         } catch (error) {
           console.error('Error fetching user data:', error)
           toast.error('Error fetching user data.', {

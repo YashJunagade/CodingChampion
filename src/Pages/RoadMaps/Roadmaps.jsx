@@ -1,63 +1,107 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Track from './components/Track'
+import SideBar from '../../Components/SideBar/SideBar'
+import { Helmet } from 'react-helmet'
+import BirthdayPromo from '../BirthdayPromo'
 
 const Roadmaps = () => {
+  const webDevTracks = [
+    {
+      imgLink:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/frontend_mle4if.jpg',
+      trackTitle: 'Frontend',
+      pageRoute: '/roadmaps/frontend',
+    },
+    {
+      imgLink:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/backend_othlwi.jpg',
+      trackTitle: 'Backend',
+      pageRoute: '/roadmaps/backend',
+    },
+    {
+      imgLink:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/fullstack_irdxnw.jpg',
+      trackTitle: 'Fullstack',
+      pageRoute: '/roadmaps/fullstack',
+    },
+    {
+      imgLink:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/devops_tyvpqs.jpg',
+      trackTitle: 'DevOps',
+      pageRoute: '/UnderContruction',
+    },
+  ]
+
+  const aiTracks = [
+    {
+      imgLink:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/Datascience_atvozk.jpg',
+      trackTitle: 'Data Science',
+      pageRoute: '/UnderContruction',
+    },
+    {
+      imgLink:
+        'https://res.cloudinary.com/yashjunagade/image/upload/v1730286622/machinelearning_c9i646.jpg',
+      trackTitle: 'Machine Learning',
+      pageRoute: '/UnderContruction',
+    },
+  ]
+
+  const TrackSection = ({ title, tracks }) => (
+    <section className="mb-16">
+      <h2 className="dark:text-white text-2xl font-bold mb-6">{title}</h2>
+
+      {/* Separator line */}
+      <div className="w-full h-1 bg-accent my-6"></div>
+
+      {/* Tracks container */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+        {tracks.map((track, index) => (
+          <div key={index} className="w-full max-w-[280px]">
+            <Track {...track} />
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+
   return (
-    <div className="md:mt-20 m-2 p-8 bg-white dark:bg-black rounded-lg shadow-md h-full md:h-screen">
-      <h1 className="text-4xl font-bold text-accent mb-6">
-        CodingChampion Roadmaps - Coming Soon!
-      </h1>
-      <p className="text-lg mb-6 dark:text-gray-300">
-        We're excited to announce that we're working on comprehensive roadmaps
-        to guide you through your BCA and BBACA journey. These roadmaps will
-        help you navigate your studies and prepare for a successful career in
-        tech.
-      </p>
-
-      <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-6 mb-6">
-        <h2 className="text-2xl font-semibold mb-4 dark:text-white">
-          What to expect from our roadmaps:
-        </h2>
-        <ul className="list-disc list-inside space-y-2 dark:text-gray-300">
-          <li>Semester-wise study guides</li>
-          <li>Key topics and concepts to master</li>
-          <li>Recommended resources and practice materials</li>
-          <li>Career path suggestions based on your interests</li>
-          <li>Industry trends and skills in demand</li>
-        </ul>
+    <>
+      <BirthdayPromo />
+      <Helmet>
+        <title>
+          Complete Learning Roadmap: Web Development & AI Programming Path |
+          BBACA BCA Guide
+        </title>
+        <meta
+          name="description"
+          content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students. Free practical solutions and lab guides for SPPU University."
+        />
+        <meta
+          name="keywords"
+          content="programming roadmap, web development path, artificial intelligence course, BBACA, BCA, SPPU University, programming tutorials, coding guide, full stack development, machine learning path, practical solutions, lab solutions, computer science education, learning path, technology roadmap, programming career guide"
+        />
+        <meta
+          property="og:title"
+          content="Complete Learning Roadmap: Web Development & AI Programming Path | BBACA BCA Guide"
+        />
+        <meta
+          property="og:description"
+          content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students."
+        />
+        {/* Additional Meta Tags */}
+        <meta name="robots" content="index, follow" />
+        <meta name="subject" content="Programming Education Roadmap" />
+        <link rel="canonical" href="/roadmaps" />
+      </Helmet>
+      <div className="mx-auto md:mt-10 md:ml-52 lg:ml-60 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
+        <div className="space-y-12">
+          <TrackSection title="Web Development" tracks={webDevTracks} />
+          <TrackSection title="Artificial Intelligence" tracks={aiTracks} />
+        </div>
       </div>
-
-      <p className="text-lg mb-6 dark:text-gray-300">
-        While we're putting the finishing touches on this feature, why not
-        explore our other resources?
-      </p>
-
-      <div className="flex flex-wrap gap-4 justify-center mb-6">
-        <Link
-          to="/slip"
-          className="bg-accent text-white px-6 py-3 rounded-md hover:bg-accent-dark transition duration-300"
-        >
-          Check out our Practical Slips
-        </Link>
-        <Link
-          to="/labbook"
-          className="bg-accent text-white px-6 py-3 rounded-md hover:bg-accent-dark transition duration-300"
-        >
-          Explore our Lab Book
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <h3 className="text-xl font-semibold mb-4 dark:text-white">
-          Stay Updated
-        </h3>
-        <p className="dark:text-gray-300">
-          Want to be notified when our roadmaps are ready? Sign up for our
-          newsletter!
-        </p>
-        {/* Add a newsletter signup form here */}
-      </div>
-    </div>
+    </>
   )
 }
 

@@ -16,7 +16,8 @@ function Subject({ subRoute, subName, imgLink }) {
     >
       <Link to={subRoute} className="mx-auto block">
         <motion.div
-          className="flex flex-col h-44 w-32 bg-white shadow-even-shadow  rounded-custom text-center sm:h-48  sm:w-36 lg:h-52 lg:w-40 mx-auto dark:border-2 dark:border-accent"
+          // removed the slight white bleed in subjet in dark mode.
+          className="flex flex-col h-44 w-32 bg-white shadow-even-shadow  rounded-t-custom rounded-b-[0.88rem] text-center sm:h-48  sm:w-36 lg:h-52 lg:w-40 mx-auto dark:border-2 dark:border-accent"
           whileHover={{
             boxShadow: '0px 10px 20px rgba(245, 21, 36, 0.3)',
             scale: 1.1,
