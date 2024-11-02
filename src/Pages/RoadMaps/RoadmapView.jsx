@@ -99,7 +99,7 @@ const RoadmapView = () => {
         }
 
         // jsDelivr CDN URL with cache busting
-        const jsdelivrUrl = `https://cdn.jsdelivr.net/gh/YashJunagade/r@main/${roadmapName.toLowerCase()}.json`
+        const jsdelivrUrl = `https://cdn.jsdelivr.net/gh/YashJunagade/data@main/${roadmapName.toLowerCase()}.json`
 
         // Add a timestamp to bust cache if needed
         const timestamp = new Date().getTime()
