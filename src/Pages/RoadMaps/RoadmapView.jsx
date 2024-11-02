@@ -15,6 +15,7 @@ import Modal from '../SolutionPage/Modal'
 import FormattedText from '../SolutionPage/FormattedText'
 import AskDevaButton from '../SolutionPage/Deva/AskDeva'
 import { Helmet } from 'react-helmet'
+import { toast } from 'react-toastify'
 
 const RoadmapView = () => {
   const { roadmapName } = useParams()
@@ -83,40 +84,54 @@ const RoadmapView = () => {
 
   useEffect(() => {
     const fetchRoadmapData = async () => {
+      if (!roadmapName) return
+
+      setIsRoadmapLoading(true)
+      setError(null)
+
       try {
-        setIsRoadmapLoading(true)
-        let roadmapData = null
-
-        // Check if roadmap data is already in localStorage
-        const storedRoadmapData = localStorage.getItem(`roadmap_${roadmapName}`)
-        if (storedRoadmapData) {
-          roadmapData = JSON.parse(storedRoadmapData)
-        } else {
-          // Fetch roadmap data from the server
-          const response = await fetch(
-            `${import.meta.env.VITE_JSDELIVR}${roadmapName.toLowerCase()}.json`
-          )
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
-          }
-
-          roadmapData = await response.json()
-
-          // Save the roadmap data to localStorage
-          localStorage.setItem(
-            `roadmap_${roadmapName}`,
-            JSON.stringify(roadmapData)
-          )
+        // First try to get from localStorage to avoid unnecessary CDN calls
+        const cachedData = localStorage.getItem(`roadmap_${roadmapName}`)
+        if (cachedData) {
+          setCurrentRoadmap(JSON.parse(cachedData))
+          setIsRoadmapLoading(false)
+          return
         }
 
+        // jsDelivr CDN URL with cache busting
+        const jsdelivrUrl = `https://cdn.jsdelivr.net/gh/YashJunagade/r@main/${roadmapName.toLowerCase()}.json`
+
+        // Add a timestamp to bust cache if needed
+        const timestamp = new Date().getTime()
+        const urlWithCacheBust = `${jsdelivrUrl}?t=${timestamp}`
+
+        const response = await fetch(urlWithCacheBust)
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const roadmapData = await response.json()
+
+        // Validate the roadmap data structure
+        if (!roadmapData || !roadmapData.name) {
+          throw new Error('Invalid roadmap data structure')
+        }
+
+        // Save to localStorage for future use
+        localStorage.setItem(
+          `roadmap_${roadmapName}`,
+          JSON.stringify(roadmapData)
+        )
         setCurrentRoadmap(roadmapData)
-        setError(null)
       } catch (err) {
         console.error('Error fetching roadmap data:', err)
         setError(
-          'Failed to fetch roadmap data. Please check if the roadmap name is correct and try again.'
+          `Failed to load the ${roadmapName} roadmap. Please check if the roadmap file exists at the CDN and try again.`
         )
-        setCurrentRoadmap(null)
+
+        // Clear potentially corrupted cache
+        localStorage.removeItem(`roadmap_${roadmapName}`)
       } finally {
         setIsRoadmapLoading(false)
       }
@@ -203,6 +218,7 @@ const RoadmapView = () => {
     if (!user) return
 
     const framework = selectedFrameworks[topic]
+    const isFramework = topic.endsWith('F')
 
     setUserProgress((prev) => ({
       ...prev,
@@ -244,29 +260,6 @@ const RoadmapView = () => {
     } catch (err) {
       console.error('Error updating progress:', err)
       setError('Failed to update progress. Please try again.')
-      setUserProgress((prev) => ({
-        ...prev,
-        [topic]: {
-          ...prev[topic],
-          frameworks: {
-            ...(prev[topic]?.frameworks || {}),
-            [framework]: {
-              ...(prev[topic]?.frameworks?.[framework] || {}),
-              [subtopic]: {
-                ...(prev[topic]?.frameworks?.[framework]?.[subtopic] || {}),
-                [topicName]: !checked,
-              },
-            },
-          },
-          subtopics: {
-            ...(prev[topic]?.subtopics || {}),
-            [subtopic]: {
-              ...(prev[topic]?.subtopics?.[subtopic] || {}),
-              [topicName]: !checked,
-            },
-          },
-        },
-      }))
     }
   }
 
@@ -325,7 +318,6 @@ const RoadmapView = () => {
           property="og:description"
           content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students."
         />
-        {/* Additional Meta Tags */}
         <meta name="robots" content="index, follow" />
         <meta name="subject" content="Programming Education Roadmap" />
         <link rel="canonical" href="/roadmaps" />
