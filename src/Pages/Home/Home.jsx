@@ -5,7 +5,6 @@ import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
 import MeetContributors from './MeetContributors'
 import { Helmet } from 'react-helmet'
-import BirthdayPromo from '../BirthdayPromo'
 
 const socialIcons = [
   { Icon: Twitter, color: 'text-blue-400', animation: 'animate-bounce' },
@@ -208,7 +207,6 @@ function Home() {
 
   return (
     <>
-      <BirthdayPromo />
       <Helmet>
         <title>BBACA BCA Practical Slip Solution Labbook Solution</title>
         <meta
