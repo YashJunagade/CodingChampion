@@ -78,6 +78,10 @@ const SlipList = () => {
           content="BBACA BCA bbaca bba ca bca Practical Slip Solution Labbook Solution First Year Second Year Third
               Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
         />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1487916517080617"
+        ></meta>
       </Helmet>
       <div className="flex min-h-screen md:mt-16 md:ml-52 lg:ml-60">
         <div className="hidden md:inline relative">

@@ -321,6 +321,10 @@ const RoadmapView = () => {
         <meta name="robots" content="index, follow" />
         <meta name="subject" content="Programming Education Roadmap" />
         <link rel="canonical" href="/roadmaps" />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1487916517080617"
+        ></meta>
       </Helmet>
       <div className="relative">
         <RoadmapRenderer

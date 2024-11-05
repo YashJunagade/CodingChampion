@@ -77,6 +77,10 @@ const Roadmaps = () => {
           content="Comprehensive programming roadmaps for Web Development and AI. Master MERN stack, Python, Java, Data Structures, Machine Learning. Perfect for BBACA/BCA students. Free practical solutions and lab guides for SPPU University."
         />
         <meta
+          name="google-adsense-account"
+          content="ca-pub-1487916517080617"
+        ></meta>
+        <meta
           name="keywords"
           content="programming roadmap, web development path, artificial intelligence course, BBACA, BCA, SPPU University, programming tutorials, coding guide, full stack development, machine learning path, practical solutions, lab solutions, computer science education, learning path, technology roadmap, programming career guide"
         />
