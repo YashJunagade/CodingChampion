@@ -69,6 +69,19 @@ const SlipList = () => {
   return (
     <>
       <Helmet>
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617`}
+          crossOrigin="anonymous"
+        />
+        <script>
+          {`
+            (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-1487916517080617",
+              enable_page_level_ads: true
+            });
+          `}
+        </script>
         <title>
           {subject.subject} Slips BBACA BCA Slip Solution First Year Second Year
           Third Year BBACA BCA
