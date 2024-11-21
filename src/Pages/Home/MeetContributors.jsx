@@ -325,7 +325,7 @@ const MeetContributors = () => {
       title: 'Full Stack Developer',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1730122152/niranjan_profile_pic_2_1_xdsxsz.jpg',
-      description: 'Contributing in Roadmap Feature',
+      description: 'Contributing in Roadmap Data(MEAN stack, php, laravel)',
       socialLinks: {
         github: 'https://github.com/Niranjanmajgaonkar',
         linkedin: 'https://www.linkedin.com/in/niranjanmajgaonkar',
@@ -338,7 +338,7 @@ const MeetContributors = () => {
       title: 'Java FullStack Developer',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1728277298/santosh_pic_xeppco.png',
-      description: 'Contributing in DSA compilation and UI.',
+      description: 'Contributing in Roadmap Data(Java, Spring boot, SQL).',
       socialLinks: {
         github: 'https://github.com/sbhor007',
         linkedin: 'https://www.linkedin.com/in/santosh-bhor-a6436a327/',
@@ -351,7 +351,7 @@ const MeetContributors = () => {
       title: 'Web Developer',
       photoUrl:
         'https://res.cloudinary.com/yashjunagade/image/upload/v1729237825/Nidhey_Joshi_Profile_Pic_cowvgh.jpg',
-      description: 'Contributing in Roadmap and handing social media.',
+      description: 'Contributing in handing social media.',
       socialLinks: {
         github: 'https://github.com/NidheyJoshi',
         linkedin: 'https://www.linkedin.com/in/nidhey-joshi-15027b267',
