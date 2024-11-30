@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet'
 import Navbar from '../../Components/Navbar/Navbar'
 import SideBar from '../../Components/SideBar/SideBar'
 import Menu from '../../Components/Subjects/Menu'
+import GoogleAdSense from '../../GoogleAdSense'
 
 function Labbook() {
   return (
