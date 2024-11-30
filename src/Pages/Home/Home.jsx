@@ -214,6 +214,11 @@ function Home() {
           content="BBACA BCA bbaca bba ca bca Practical Slip Solution Labbook Solution First Year Second Year Third
               Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617"
+          crossorigin="anonymous"
+        ></script>
       </Helmet>
       <div className="pb-24 md:px-8 max-w-[1200px] mx-auto md:mt-16">
         <motion.h1
