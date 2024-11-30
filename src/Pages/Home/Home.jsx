@@ -259,9 +259,9 @@ function Home() {
       </div>
       <GoogleAds
         adSlot="3195881308"
+        uniqueKey="above-meet-contributor"
         baseWidth={1000}
-        baseHeight={300}
-        className="custom-ad-class"
+        baseHeight={400}
       />
       <MeetContributors />
       <Footer />

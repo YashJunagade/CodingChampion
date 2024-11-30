@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 const GoogleAds = ({
   adSlot,
@@ -7,11 +7,14 @@ const GoogleAds = ({
   baseHeight = 90,
   className = '',
   style = {},
+  uniqueKey = '', // Add a unique identifier
 }) => {
   const [adSize, setAdSize] = useState({
     width: baseWidth,
     height: baseHeight,
   })
+  const adRef = useRef(null)
+  const [isAdLoaded, setIsAdLoaded] = useState(false)
 
   useEffect(() => {
     const calculateResponsiveSize = () => {
@@ -54,16 +57,35 @@ const GoogleAds = ({
   }, [baseWidth, baseHeight])
 
   useEffect(() => {
-    try {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
-    } catch (error) {
-      console.error('AdSense loading error:', error)
+    // Ensure we only try to load the ad once
+    if (isAdLoaded || !adRef.current) return
+
+    const loadAd = () => {
+      try {
+        // Check if the ad element exists and hasn't been loaded
+        if (adRef.current && !adRef.current.hasChildNodes()) {
+          ;(window.adsbygoogle = window.adsbygoogle || []).push({
+            // Additional configuration if needed
+            google_ad_client: adClient,
+            google_ad_slot: adSlot,
+          })
+          setIsAdLoaded(true)
+        }
+      } catch (error) {
+        console.error('AdSense loading error:', error)
+      }
     }
-  }, [adSize])
+
+    // Delay ad loading to prevent immediate errors
+    const timer = setTimeout(loadAd, 100)
+
+    // Cleanup
+    return () => clearTimeout(timer)
+  }, [adSlot, adClient, isAdLoaded])
 
   return (
     <div
-      className={`responsive-adsense ${className} `}
+      className={`responsive-adsense ${className}`}
       style={{
         display: 'flex',
         justifyContent: 'center',
@@ -73,6 +95,8 @@ const GoogleAds = ({
       }}
     >
       <ins
+        ref={adRef}
+        key={`ad-${adSlot}-${uniqueKey}`}
         className="adsbygoogle border-2 border-black"
         style={{
           display: 'inline-block',
