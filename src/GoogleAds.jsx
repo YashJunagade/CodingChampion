@@ -97,7 +97,7 @@ const GoogleAds = ({
       <ins
         ref={adRef}
         key={`ad-${adSlot}-${uniqueKey}`}
-        className="adsbygoogle border-2 border-black"
+        className="adsbygoogle"
         style={{
           display: 'inline-block',
           width: `${adSize.width}px`,
