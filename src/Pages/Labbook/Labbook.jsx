@@ -42,6 +42,7 @@ function Labbook() {
           {/* </div> */}
           <div className="w-full">
             <Menu></Menu>
+            <GoogleAdSense adSlot="3195881308" />
           </div>
         </div>
       </section>

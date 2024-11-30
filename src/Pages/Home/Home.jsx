@@ -5,6 +5,7 @@ import FeaturesContainer from './FeaturesContainer'
 import Footer from '../../Components/Footer/Footer'
 import MeetContributors from './MeetContributors'
 import { Helmet } from 'react-helmet'
+import GoogleAdSense from '../../GoogleAdSense'
 
 const socialIcons = [
   { Icon: Twitter, color: 'text-blue-400', animation: 'animate-bounce' },
@@ -268,6 +269,15 @@ function Home() {
           />
         </div>
       </div>
+      {/* <GoogleAdSense adSlot="3195881308" /> */}
+
+      {/* Custom base size for laptop/desktop */}
+      <GoogleAdSense
+        adSlot="3195881308"
+        baseWidth={800} // Set your desired laptop width
+        baseHeight={400} // Set your desired laptop height
+        className="custom-ad-class"
+      />
       <MeetContributors />
       <Footer />
     </>
