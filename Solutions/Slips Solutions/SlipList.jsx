@@ -120,12 +120,6 @@ const SlipList = () => {
               Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
             </motion.button>
           </div>
-          <GoogleAds
-            adSlot="7884444663"
-            uniqueKey="sliplist-attop"
-            baseWidth={1000}
-            baseHeight={300}
-          />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
