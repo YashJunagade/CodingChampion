@@ -6,6 +6,7 @@ import { db } from '../../src/config/firebase'
 import Loader from '../../src/Components/Loader/Loader'
 import { motion } from 'framer-motion'
 import { Helmet } from 'react-helmet'
+import GoogleAds from '../../src/GoogleAds'
 
 const LabList = () => {
   const { subjectId } = useParams()
@@ -72,6 +73,11 @@ const LabList = () => {
           content="BBACA BCA bbaca bba ca bca Practical Slip Solution Labbook Solution First Year Second Year Third
               Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
         />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617"
+          crossorigin="anonymous"
+        ></script>
       </Helmet>
       <div className="flex min-h-screen md:mt-16 md:ml-52 lg:ml-60 bg-offWhite dark:bg-black">
         <div className="hidden md:inline relative">
@@ -108,7 +114,12 @@ const LabList = () => {
               Sort {sortOrder === 'asc' ? 'Descending' : 'Ascending'}
             </motion.button>
           </div>
-
+          <GoogleAds
+            adSlot="7884444663"
+            uniqueKey="lablist-attop"
+            baseWidth={1000}
+            baseHeight={80}
+          />
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
