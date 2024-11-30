@@ -124,7 +124,7 @@ const SlipList = () => {
             adSlot="7884444663"
             uniqueKey="sliplist-attop"
             baseWidth={1000}
-            baseHeight={80}
+            baseHeight={300}
           />
           <motion.div
             initial={{ opacity: 0 }}

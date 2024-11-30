@@ -118,7 +118,7 @@ const LabList = () => {
             adSlot="7884444663"
             uniqueKey="lablist-attop"
             baseWidth={1000}
-            baseHeight={80}
+            baseHeight={300}
           />
           <motion.div
             initial={{ opacity: 0 }}
