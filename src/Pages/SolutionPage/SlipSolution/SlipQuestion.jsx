@@ -1,3 +1,5 @@
+import GoogleAds from '../../../GoogleAds'
+
 function QuestionCom({ slipId, questionId, text, marks }) {
   return (
     // custom color here ( change when we have dark/light mode options)
@@ -17,6 +19,12 @@ function QuestionCom({ slipId, questionId, text, marks }) {
       <div className="text-sm font-medium text-white inline-block bg-accent rounded px-2 py-1">
         {marks} Marks
       </div>
+      <GoogleAds
+        adSlot="7884444663"
+        uniqueKey="SlipQuestionFromSolutionPage-attop"
+        baseWidth={800}
+        baseHeight={300}
+      />
     </div>
   )
 }
