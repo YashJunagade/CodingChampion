@@ -301,19 +301,6 @@ const RoadmapView = () => {
   return (
     <>
       <Helmet>
-        <script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617`}
-          crossOrigin="anonymous"
-        />
-        <script>
-          {`
-            (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "ca-pub-1487916517080617",
-              enable_page_level_ads: true
-            });
-          `}
-        </script>
         <title>{currentRoadmap.name} Complete Learning Roadmap</title>
         <meta
           name="description"
@@ -334,10 +321,6 @@ const RoadmapView = () => {
         <meta name="robots" content="index, follow" />
         <meta name="subject" content="Programming Education Roadmap" />
         <link rel="canonical" href="/roadmaps" />
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-1487916517080617"
-        ></meta>
       </Helmet>
       <div className="relative">
         <RoadmapRenderer
