@@ -34,7 +34,7 @@ function Labbook() {
             <GoogleAds
               adSlot="3195881308"
               uniqueKey="labbok-atbottom"
-              baseWidth={800}
+              baseWidth={1000}
               baseHeight={300}
             />
           </div>

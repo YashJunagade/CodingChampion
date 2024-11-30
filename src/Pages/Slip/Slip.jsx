@@ -34,7 +34,7 @@ function Slip() {
             <GoogleAds
               adSlot="3195881308"
               uniqueKey="slip-atbottom"
-              baseWidth={800}
+              baseWidth={1000}
               baseHeight={300}
             />
           </div>
