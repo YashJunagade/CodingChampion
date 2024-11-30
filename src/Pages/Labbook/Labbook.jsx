@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet'
 import Navbar from '../../Components/Navbar/Navbar'
 import SideBar from '../../Components/SideBar/SideBar'
 import Menu from '../../Components/Subjects/Menu'
-import GoogleAdSense from '../../GoogleAdSense'
 
 function Labbook() {
   return (
@@ -43,7 +42,6 @@ function Labbook() {
           {/* </div> */}
           <div className="w-full">
             <Menu></Menu>
-            <GoogleAdSense adSlot="3195881308" />
           </div>
         </div>
       </section>
