@@ -346,19 +346,6 @@ const MeetContributors = () => {
       contributions: 4,
       rank: 2,
     },
-    {
-      name: 'Nidhey Joshi',
-      title: 'Web Developer',
-      photoUrl:
-        'https://res.cloudinary.com/yashjunagade/image/upload/v1729237825/Nidhey_Joshi_Profile_Pic_cowvgh.jpg',
-      description: 'Contributing in handing social media.',
-      socialLinks: {
-        github: 'https://github.com/NidheyJoshi',
-        linkedin: 'https://www.linkedin.com/in/nidhey-joshi-15027b267',
-      },
-      contributions: 1,
-      rank: 3,
-    },
   ]
 
   return (
