@@ -26,6 +26,7 @@ import PrivacyPolicy from './Pages/PrivacyPolicy/PrivacyPolicy'
 import RoadmapView from './Pages/RoadMaps/RoadmapView'
 import UnderConstruction from './Pages/RoadMaps/UnderConstruction'
 import { useEffect } from 'react'
+import Celebration from './Components/Celebration'
 
 const App = () => {
   const location = useLocation()
@@ -44,6 +45,7 @@ const App = () => {
   return (
     <>
       <ToastContainer />
+      <Celebration></Celebration>
       {shouldDisplayNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
