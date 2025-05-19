@@ -18,13 +18,10 @@ const apiKeys = [
 ]
 
 const models = [
-  import.meta.env.VITE_MODAL1,
   import.meta.env.VITE_MODAL2,
-  import.meta.env.VITE_MODAL3,
   import.meta.env.VITE_MODAL4,
   import.meta.env.VITE_MODAL5,
   import.meta.env.VITE_MODAL6,
-  import.meta.env.VITE_MODAL7,
 ]
 
 function CodeEditor({ language, solution }) {
