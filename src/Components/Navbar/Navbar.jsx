@@ -168,6 +168,7 @@ const Navbar = React.memo(() => {
             <NavLink linkRoute="/labbook" linkName="Lab Book" />
             <NavLink linkRoute="/roadmaps" linkName="Roadmaps" />
             <NavLink linkRoute="/dsa" linkName="DSA" />
+            <NavLink linkRoute="/ai-tools" linkName="AI Tools" />
           </ul>
         </motion.div>
 
