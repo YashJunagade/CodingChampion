@@ -167,16 +167,19 @@ const surpriseTools = [
     id: 1,
     logo: 'https://www.google.com/s2/favicons?domain=groq.com&sz=128',
     url: import.meta.env.VITE_SURPRISE_TOOL_1_URL,
+    hint: 'Get AI responses 10x faster than ChatGPT — built for developers who hate waiting. Zero lag, instant output.',
   },
   {
     id: 2,
     logo: 'https://www.google.com/s2/favicons?domain=gemini.google.com&sz=128',
     url: import.meta.env.VITE_SURPRISE_TOOL_2_URL,
+    hint: 'Access real-time web info, analyze images, and run deep research — all inside one powerful AI.',
   },
   {
     id: 3,
     logo: 'https://www.google.com/s2/favicons?domain=opencode.ai&sz=128',
     url: import.meta.env.VITE_SURPRISE_TOOL_3_URL,
+    hint: 'AI that lives right inside your terminal — write, fix, and ship code without leaving your workflow.',
   },
 ]
 
@@ -296,14 +299,19 @@ function SurpriseCard({ tool }) {
         </span>
       </div>
 
-      {/* Logo in place of description */}
-      <div className="flex-1 flex items-center justify-center py-4 mb-4">
+      {/* Blurred logo */}
+      <div className="flex justify-center mb-3">
         <img
           src={tool.logo}
           alt="surprise tool"
-          className="w-16 h-16 object-contain rounded-xl blur-lg"
+          className="w-12 h-12 object-contain rounded-xl blur-lg"
         />
       </div>
+
+      {/* Visible hint — the "special twist" */}
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 flex-1 text-center italic">
+        "{tool.hint}"
+      </p>
 
       {/* Clickable button — user fills URL later */}
       <a
