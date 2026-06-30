@@ -1,4 +1,5 @@
 import React from 'react'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 export const RoadPath = ({ positions }) => {
   const getRoadPath = (positions) => {
@@ -48,7 +49,8 @@ export const RoadPath = ({ positions }) => {
   }
 
   return (
-    <div className="absolute inset-0">
+      <div className="absolute inset-0">
+      <MonetAd />
       <svg
         className="w-full h-full"
         viewBox="0 0 100 100"

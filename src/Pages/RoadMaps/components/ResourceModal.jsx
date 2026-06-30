@@ -1,9 +1,10 @@
 import React from 'react'
 import { X, BookOpen, ExternalLink, Gift, Crown } from 'lucide-react'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 const ResourceModal = ({ resource, onClose }) => {
   return (
-    <div
+      <div
       className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[60] p-2 sm:p-4 md:p-6 "
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
@@ -49,6 +50,7 @@ const ResourceModal = ({ resource, onClose }) => {
                 const [name, link] = Object.entries(resourceItem)[0]
                 return (
                   <li key={idx} className="flex items-center group">
+      <MonetAd />
                     <div className="w-1 sm:w-1.5 h-1 sm:h-1.5 bg-green-400 rounded-full mr-2 sm:mr-3 group-hover:scale-125 transition-transform duration-200"></div>
                     <a
                       href={link}

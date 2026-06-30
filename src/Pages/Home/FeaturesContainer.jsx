@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import MonetAd from '../../Components/MonetAd/MonetAd'
 
 function FeaturesContainer({
   imgLink,
@@ -9,7 +10,7 @@ function FeaturesContainer({
   pageRoute,
 }) {
   return (
-    <motion.div
+      <motion.div
       className="flex flex-col min-h-[260px] rounded-[15px] shadow-even-shadow overflow-hidden w-[72%] md:w-[90%] md:max-w-[360px] max-w-[320px] mx-auto"
       whileHover={{
         boxShadow: '0px 10px 20px rgba(245, 21, 36, 0.3)',

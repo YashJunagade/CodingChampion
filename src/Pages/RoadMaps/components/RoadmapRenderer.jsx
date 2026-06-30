@@ -2,6 +2,7 @@ import React from 'react'
 import { RoadPath } from './RoadPath'
 import { TopicButton } from './TopicButton'
 import { UserIndicator } from './UserIndicator'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 const RoadmapRenderer = ({
   currentRoadmap,
@@ -65,7 +66,8 @@ const RoadmapRenderer = ({
   //     : 1200
 
   return (
-    <div className="w-full md:mt-10 p-8 bg-offWhite dark:bg-black min-h-screen">
+      <div className="w-full md:mt-10 p-8 bg-offWhite dark:bg-black min-h-screen">
+      <MonetAd />
       <div className="w-full md:w-[80%] lg:w-[75%]  p-4 md:p-8 relative mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold mb-8 text-black dark:text-white text-center">
           {currentRoadmap.name} Roadmap

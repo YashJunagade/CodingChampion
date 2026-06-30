@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { motion, AnimatePresence, useAnimationControls } from 'framer-motion'
 import Subject from './Subject'
 import { ChevronDown, ChevronUp } from 'lucide-react'
+import MonetAd from '../MonetAd/MonetAd'
 
 function ExpandingDiv({ subjects, title }) {
   const [showSubjects, setShowSubjects] = useState(false)
@@ -145,7 +146,7 @@ function ExpandingDiv({ subjects, title }) {
   const rightSubjects = subjects.slice(Math.ceil(subjects.length / 2))
 
   return (
-    <motion.div
+      <motion.div
       ref={divRef}
       className="bg-white dark:bg-black w-[94%] mx-auto mt-11 shadow-lg border border-accent dark:shadow-gray-700/30 sm:mt-16 md:mb-16 px-4 py-4 min-h-40 sm:min-h-48 md:min-h-56 lg:min-h-64 rounded-lg cursor-pointer dark:border-accent relative overflow-hidden"
       onClick={toggleVisibility}

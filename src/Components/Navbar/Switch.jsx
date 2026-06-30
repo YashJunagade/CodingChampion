@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useTheme } from '../../store/ThemeContext'
+import MonetAd from '../MonetAd/MonetAd'
 
 const Switch = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <StyledWrapper>
+      <StyledWrapper>
+      <MonetAd />
       <label
         htmlFor="themeToggle"
         className="themeToggle st-sunMoonThemeToggleBtn"

@@ -1,8 +1,10 @@
 import React from 'react'
+import MonetAd from '../../Components/MonetAd/MonetAd'
 
 const Privacy = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-5 md:px-20">
+      <div className="min-h-screen bg-gray-100 py-10 px-5 md:px-20">
+      <MonetAd />
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 md:p-16">
         <h1 className="text-3xl font-bold mb-4 text-center text-gray-800">
           Privacy Policy

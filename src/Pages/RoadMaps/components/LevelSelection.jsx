@@ -1,5 +1,6 @@
 import React from 'react'
 import { Trophy, GraduationCap, Target } from 'lucide-react'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 const LevelCard = ({ icon: Icon, title, description, onClick }) => (
   <button
@@ -58,7 +59,7 @@ const LevelSelection = ({ onSelect, roadmap }) => {
   ]
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn">
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn">
       <div className="bg-white/90 p-8 rounded-2xl max-w-lg w-full m-4 shadow-2xl animate-slideIn">
         <h2 className="text-3xl font-bold mb-2 text-gray-800 text-center">
           Select Your Level

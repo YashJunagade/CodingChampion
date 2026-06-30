@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 export const TopicButton = ({
   point,
@@ -17,7 +18,7 @@ export const TopicButton = ({
   }
 
   return (
-    <div
+      <div
       className="absolute transform -translate-x-1/2 -translate-y-1/2 z-20"
       style={{
         left: `${point.x}%`,

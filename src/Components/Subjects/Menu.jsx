@@ -1,4 +1,5 @@
 import ExpandingDiv from './ExpandingDiv'
+import MonetAd from '../MonetAd/MonetAd'
 
 function Menu() {
   const fySubjects = [
@@ -94,7 +95,8 @@ function Menu() {
   ]
 
   return (
-    <>
+      <>
+      <MonetAd />
       <div className="sm:mt-36 md:ml-52 lg:ml-60 pb-36 sm:pb-[62px]">
         <ExpandingDiv subjects={fySubjects} title="FY Subjects" />
         <ExpandingDiv subjects={sySubjects} title="SY Subjects" />

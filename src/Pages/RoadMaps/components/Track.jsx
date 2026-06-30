@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 function Track({ imgLink, trackTitle, pageRoute }) {
   return (
-    <Link to={pageRoute} className="block w-full">
+      <Link to={pageRoute} className="block w-full">
+      <MonetAd />
       <motion.div
         className="aspect-square w-full max-w-[240px] sm:max-w-[260px] mx-auto bg-white rounded-custom shadow-lg overflow-hidden"
         whileHover={{

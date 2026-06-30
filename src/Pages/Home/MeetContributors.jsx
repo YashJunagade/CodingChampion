@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
+import MonetAd from '../../Components/MonetAd/MonetAd'
   Github,
   Linkedin,
   Twitter,
@@ -48,7 +49,7 @@ const RankBadge = ({ rank }) => {
 
   const Icon = badgeProps.icon
   return (
-    <motion.div
+      <motion.div
       className={`absolute -top-2 -right-2 ${badgeProps.bgColor} ${badgeProps.borderColor} border-2 rounded-full p-1.5`}
       whileHover={{ scale: 1.1, rotate: 12 }}
     >
@@ -350,6 +351,7 @@ const MeetContributors = () => {
 
   return (
     <section className="py-8 sm:py-16">
+      <MonetAd />
       <motion.div
         className="container mx-auto px-4"
         initial={{ opacity: 0 }}

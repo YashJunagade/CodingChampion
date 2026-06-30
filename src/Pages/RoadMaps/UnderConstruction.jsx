@@ -1,8 +1,10 @@
 import React from 'react'
+import MonetAd from '../../Components/MonetAd/MonetAd'
 
 const UnderConstruction = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4 md:p-8 dark:bg-black dark:text-white">
+      <div className="flex flex-col items-center justify-center h-screen bg-gray-100 p-4 md:p-8 dark:bg-black dark:text-white">
+      <MonetAd />
       <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center">
         This Roadmap is Under Construction
       </h1>

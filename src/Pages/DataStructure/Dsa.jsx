@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import MonetAd from '../../Components/MonetAd/MonetAd'
 
 const Dsa = () => {
   return (
-    <div className="md:mt-10 p-8 bg-white dark:bg-black rounded-lg shadow-md h-full md:h-screen">
+      <div className="md:mt-10 p-8 bg-white dark:bg-black rounded-lg shadow-md h-full md:h-screen">
+      <MonetAd />
       <h1 className="text-4xl font-bold text-accent mb-6">
         Data Structures and Algorithms - Coming Soon!
       </h1>

@@ -7,6 +7,7 @@ import {
 import { auth } from '../../../config/firebase'
 import { toast } from 'react-toastify'
 import { Link, useNavigate } from 'react-router-dom'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 function Login() {
   const [loading, setLoading] = useState(false)
@@ -80,7 +81,8 @@ function Login() {
     }
   }
   return (
-    <div className="flex justify-center items-center h-screen -mt-14 bg-gray-100">
+      <div className="flex justify-center items-center h-screen -mt-14 bg-gray-100">
+      <MonetAd />
       <div className="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
         <h2 className="text-2xl font-semibold mb-6">Login</h2>
 

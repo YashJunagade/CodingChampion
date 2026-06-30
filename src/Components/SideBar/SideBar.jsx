@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaGithub, FaBars, FaTimes } from 'react-icons/fa'
 import DropDownMenu from './DropDownMenu'
+import MonetAd from '../MonetAd/MonetAd'
 
 function SideBar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -104,7 +105,8 @@ function SideBar() {
   ]
 
   return (
-    <>
+      <>
+      <MonetAd />
       {/* Hamburger icon for mobile */}
       <div className="md:hidden lg:hidden fixed top-2 left-2 z-50">
         {!isSidebarOpen && (

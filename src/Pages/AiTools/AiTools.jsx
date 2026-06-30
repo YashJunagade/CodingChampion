@@ -349,6 +349,7 @@ function AiTools() {
           name="description"
           content="Curated list of the best free AI tools for BCA and BBACA students. Find AI tools for coding, study, writing, design, and productivity."
         />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="254807" async data-cfasync="false"></script>
       </Helmet>
 
       <div className="min-h-screen bg-offWhite dark:bg-black pb-16 md:mt-16">

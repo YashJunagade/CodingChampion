@@ -92,6 +92,7 @@ const Roadmaps = () => {
         <meta name="robots" content="index, follow" />
         <meta name="subject" content="Programming Education Roadmap" />
         <link rel="canonical" href="/roadmaps" />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="254807" async data-cfasync="false"></script>
       </Helmet>
       <div className="mx-auto md:mt-10 md:ml-52 lg:ml-60 p-4 md:p-8 bg-offWhite dark:bg-black rounded-lg shadow-md min-h-screen">
         <div className="space-y-12">

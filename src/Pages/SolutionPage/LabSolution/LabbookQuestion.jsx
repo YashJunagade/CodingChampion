@@ -1,3 +1,4 @@
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 function LabbookQuestion({ assignmentNo, setName, questionNo, questionText }) {
   function findName(setNo) {
     let setname = ''
@@ -13,7 +14,7 @@ function LabbookQuestion({ assignmentNo, setName, questionNo, questionText }) {
   }
 
   return (
-    <div
+      <div
       className="h-[100%] overflow-y-auto p-4 bg-moreWhite dark:bg-[#1e1e1e] border-[2px] border-accent rounded-[10px]"
       style={{ color: 'black' }}
     >

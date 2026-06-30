@@ -27,6 +27,7 @@ import AiTools from './Pages/AiTools/AiTools'
 import RoadmapView from './Pages/RoadMaps/RoadmapView'
 import UnderConstruction from './Pages/RoadMaps/UnderConstruction'
 import { useEffect } from 'react'
+import MonetAd from './Components/MonetAd/MonetAd'
 
 const App = () => {
   const location = useLocation()
@@ -43,7 +44,8 @@ const App = () => {
   }, [location])
 
   return (
-    <>
+      <>
+      <MonetAd />
       <ToastContainer />
       {shouldDisplayNavbar && <Navbar />}
       <Routes>

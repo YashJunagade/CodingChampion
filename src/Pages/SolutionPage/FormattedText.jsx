@@ -2,10 +2,12 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import MonetAd from '../../Components/MonetAd/MonetAd'
 
 const FormattedText = ({ text }) => {
   return (
-    <div className="formatted-text prose prose-sm max-w-none space-y-4">
+      <div className="formatted-text prose prose-sm max-w-none space-y-4">
+      <MonetAd />
       <ReactMarkdown
         components={{
           code({ node, inline, className, children, ...props }) {

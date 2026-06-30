@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Twitter, Instagram, Github } from 'lucide-react'
+import MonetAd from '../MonetAd/MonetAd'
 
 function Footer() {
   const socialLinks = [
@@ -9,7 +10,8 @@ function Footer() {
   ]
 
   return (
-    <footer className="mt-4 py-4 bg-offWhite dark:bg-black dark:text-white">
+      <footer className="mt-4 py-4 bg-offWhite dark:bg-black dark:text-white">
+      <MonetAd />
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center">
           <div className="flex justify-center space-x-6 mb-6">

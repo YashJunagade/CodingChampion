@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+import MonetAd from '../../../Components/MonetAd/MonetAd'
   X,
   Clock,
   BookOpen,
@@ -115,7 +116,7 @@ const SubtopicModal = ({
   const suggestedTime = getSuggestedTime()
 
   return (
-    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn p-4 sm:p-6 md:p-8">
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 animate-fadeIn p-4 sm:p-6 md:p-8">
       <div className="bg-white rounded-2xl w-full max-w-xs sm:max-w-lg md:max-w-2xl max-h-[90vh] overflow-hidden shadow-2xl">
         {/* Header */}
         <div className="p-4 sm:p-6 border-b relative bg-gradient-to-r from-accent/10 to-transparent">

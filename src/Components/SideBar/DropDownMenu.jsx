@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './CurvedLines.css'
+import MonetAd from '../MonetAd/MonetAd'
 
 function DropDownMenu({ menu }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +19,8 @@ function DropDownMenu({ menu }) {
   }
 
   return (
-    <div className="menu-item">
+      <div className="menu-item">
+      <MonetAd />
       <div
         className={`flex items-center justify-between p-4 cursor-pointer hover:bg-accent transition-colors duration-200 rounded hover:text-white ${
           isOpen ? 'text-accent' : ''

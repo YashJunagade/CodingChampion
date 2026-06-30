@@ -7,6 +7,7 @@ import {
 } from 'firebase/auth'
 import { toast } from 'react-toastify'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 function ResetPassword() {
   const [newPassword, setNewPassword] = useState('')
@@ -72,7 +73,8 @@ function ResetPassword() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+      <div className="flex justify-center items-center h-screen bg-gray-100">
+      <MonetAd />
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-lg shadow-lg w-96 text-center"

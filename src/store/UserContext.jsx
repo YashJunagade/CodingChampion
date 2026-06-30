@@ -9,6 +9,7 @@ import React, {
 import { auth, db } from '../config/firebase'
 import { doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
 import { toast } from 'react-toastify'
+import MonetAd from '../Components/MonetAd/MonetAd'
 
 const profilePicContainer = [
   'https://res.cloudinary.com/yashjunagade/image/upload/v1725552109/1_e5x60h.jpg',

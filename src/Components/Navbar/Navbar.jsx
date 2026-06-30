@@ -8,11 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Switch from './Switch'
 import SideBar from '../SideBar/SideBar'
 import { matchPath } from 'react-router-dom'
+import MonetAd from '../MonetAd/MonetAd'
 
 // Modal Component
 const ProfileModal = React.memo(({ userName, onLogout }) => {
   return (
-    <motion.div
+      <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
@@ -125,6 +126,7 @@ const Navbar = React.memo(() => {
 
   return (
     <div className="relative z-40">
+      <MonetAd />
       <motion.nav
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

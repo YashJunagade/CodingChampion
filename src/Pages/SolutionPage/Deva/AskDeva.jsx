@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { MessageCircle } from 'lucide-react'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 const messages = [
   'Stuck somewhere? Ask me!',
@@ -34,7 +35,8 @@ const AskDevaButton = ({ onOpen }) => {
   }, [])
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+      <div className="fixed bottom-4 right-4 z-50">
+      <MonetAd />
       <div className="flex flex-col items-end">
         <div
           className={`bg-white text-black text-sm py-1 px-3 rounded-lg shadow-md whitespace-nowrap mb-2 transition-opacity duration-500 ${

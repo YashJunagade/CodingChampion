@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useUser } from '../../../store/UserContext'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 export const UserIndicator = ({ position }) => {
   const { userDetails, isLoggedIn } = useUser()
@@ -19,7 +20,7 @@ export const UserIndicator = ({ position }) => {
   }, [userDetails?.profilePic])
 
   return (
-    <motion.div
+      <motion.div
       className="absolute mt-2 w-12 h-12 md:w-14 md:h-14 md:mt-1 lg:-mt-3 bg-accent rounded-full shadow-lg flex items-center justify-center border-2 border-white"
       animate={{
         left: `${position.x}%`,

@@ -321,6 +321,7 @@ const RoadmapView = () => {
         <meta name="robots" content="index, follow" />
         <meta name="subject" content="Programming Education Roadmap" />
         <link rel="canonical" href="/roadmaps" />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="254807" async data-cfasync="false"></script>
       </Helmet>
       <div className="relative">
         <RoadmapRenderer

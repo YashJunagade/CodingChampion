@@ -80,6 +80,7 @@ const SlipSolution = () => {
           content="BBACA BCA bbaca bba ca bca Practical Slip Solution Labbook Solution First Year Second Year Third
               Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
         />
+        <script src="https://quge5.com/88/tag.min.js" data-zone="254807" async data-cfasync="false"></script>
       </Helmet>
       <div className="flex flex-col h-full mx-auto px-2 py-2 bg-white dark:bg-black md:mt-16">
         <div className="flex flex-col md:flex-row w-full h-full" ref={panelRef}>

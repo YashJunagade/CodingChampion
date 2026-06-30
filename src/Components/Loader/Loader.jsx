@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import MonetAd from '../MonetAd/MonetAd'
 
 const Loader = () => {
   return (
-    <StyledWrapper>
+      <StyledWrapper>
+      <MonetAd />
       <div className="loader">
         <div className="bar1" />
         <div className="bar2" />

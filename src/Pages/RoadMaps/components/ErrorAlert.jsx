@@ -1,3 +1,4 @@
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 const ErrorAlert = ({ message, type = 'error' }) => {
   const styles = {
     error: 'bg-red-100 border-red-400 text-red-700',
@@ -5,7 +6,8 @@ const ErrorAlert = ({ message, type = 'error' }) => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen">
+      <div className="flex justify-center items-center h-screen">
+      <MonetAd />
       <div
         className={`${styles[type]} border px-4 py-3 rounded relative`}
         role="alert"

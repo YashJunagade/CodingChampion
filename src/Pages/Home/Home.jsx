@@ -220,6 +220,7 @@ function Home() {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617"
           crossorigin="anonymous"
         ></script> */}
+        <script src="https://quge5.com/88/tag.min.js" data-zone="254807" async data-cfasync="false"></script>
       </Helmet>
       <div className="pb-24 md:px-8 max-w-[1200px] mx-auto md:mt-16">
         <motion.h1
