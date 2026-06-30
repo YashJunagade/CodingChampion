@@ -17,11 +17,11 @@ function Slip() {
           content="BBACA BCA bbaca bba ca bca Practical Slip Solution Labbook Solution First Year Second Year Third
               Year BBACA BCA SPPU University Coding Champion C DBMS RDBMS Web Technology data structure Big Data Php Cpp Angular JS Advance Php Node JS Core Java Python MongoDB Advance Java Android Programming Dot Net Framework"
         />
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617"
           crossorigin="anonymous"
-        ></script>
+        ></script> */}
       </Helmet>
       <section className="">
         {/* <Navbar></Navbar> */}

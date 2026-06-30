@@ -27,11 +27,11 @@ function QuestionCom({ slipId, questionId, text, marks }) {
         baseHeight={300}
       />
       <Helmet>
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1487916517080617"
           crossorigin="anonymous"
-        ></script>
+        ></script> */}
       </Helmet>
     </div>
   )
