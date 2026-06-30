@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-import MonetAd from '../../Components/MonetAd/MonetAd'
   Github,
   Linkedin,
   Twitter,
@@ -11,6 +10,7 @@ import MonetAd from '../../Components/MonetAd/MonetAd'
   ChevronDown,
   ChevronUp,
 } from 'lucide-react'
+import MonetAd from '../../Components/MonetAd/MonetAd'
 
 const RankBadge = ({ rank }) => {
   const getBadgeProps = () => {

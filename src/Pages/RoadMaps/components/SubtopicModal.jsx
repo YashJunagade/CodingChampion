@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-import MonetAd from '../../../Components/MonetAd/MonetAd'
   X,
   Clock,
   BookOpen,
@@ -8,6 +7,7 @@ import MonetAd from '../../../Components/MonetAd/MonetAd'
   ExternalLink,
   AlertCircle,
 } from 'lucide-react'
+import MonetAd from '../../../Components/MonetAd/MonetAd'
 
 const ProgressBar = ({ progress, className = '' }) => (
   <div
